@@ -1,4 +1,4 @@
-image: kennethreitz/pipenv
+image: python:3.8-buster
 
 stages:
   - deploy
@@ -6,6 +6,7 @@ stages:
 pages:
   stage: deploy
   script:
+    - pip install pipenv
     - pipenv sync
     - pipenv run mkdocs build --strict --verbose --site-dir public
   artifacts:
