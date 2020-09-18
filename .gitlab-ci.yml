@@ -7,7 +7,7 @@ pages:
   stage: deploy
   script:
     - pipenv sync
-    - mkdocs build --strict --verbose --site-dir public
+    - pipenv run mkdocs build --strict --verbose --site-dir public
   artifacts:
     paths:
     - public
