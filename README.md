@@ -11,3 +11,5 @@
 pipenv sync
 pipenv run mkdocs serve
 ```
+
+Access http://localhost:8000
