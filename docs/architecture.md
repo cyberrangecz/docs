@@ -1,1 +1,3 @@
-![Architecture](img/kypo-architecture.pdf)
+![Architecture](img/kypo-architecture.png)
+
+

@@ -10,47 +10,41 @@ nav:
             - Creation: installation/base-infrastructure/creation.md
             - Configuration: installation/base-infrastructure/configuration.md
         - KYPO Platform prerequisites: installation/kypo-platform-prerequisites.md
-        - KYPO Platform configuration: 
-            - Angular Frontentd: installation/kypo-platform-configuration/angular-frontend.md
-            - Training service: installation/kypo-platform-configuration/training-service.md
-            - User And Group service: installation/kypo-platform-configuration/user-and-group-service.md
-            - Elasticsearch service: installation/kypo-platform-configuration/elasticsearch-service.md
-            - Sandbox service: installation/kypo-platform-configuration/sandbox-service.md
+        - KYPO Platform configuration: installation/kypo-platform-configuration.md 
         - KYPO Platform deployment: installation/kypo-platform-deployment.md
-    - GUI: 
-        - Login & logout: gui/login-and-logout.md
-        - Administration: gui/administration.md
-        - Trainee: gui/trainee.md
-        - Training designer: gui/sandbox-designer.md  
-        - Training organizer: gui/training-organizer.md
-        - Sandbox designer: gui/sandbox-designer.md
-        - Sandbox organizer: gui/sandbox-organizer.md
+    - KYPO Portal: 
+        - Login & logout: kypo-portal/login-and-logout.md
+        - Administration: 
+            - User: kypo-portal/administration/user.md
+            - Group: kypo-portal/administration/group.md
+            - Microservices: kypo-portal/administration/microservices.md
+        - Sandboxes: 
+            - Sandbox Definition: kypo-portal/sandboxes/sandbox-definition.md
+            - Pool: kypo-portal/sandboxes/pool.md
+        - Trainings: 
+            - Training Definition: kypo-portal/trainings/training-definition.md
+            - Training Instance: kypo-portal/trainings/training-instance.md
+            - Training Run: kypo-portal/trainings/training-run.md
     - Sandboxes: 
         - Sandbox Topology: 
             - Topology Definition: sandboxes/sandbox-topology/topology-definition.md
             - Topology Instance: sandboxes/sandbox-topology/topology-instance.md
         - Sandbox Definition: sandboxes/sandbox-definition.md
         - Sandbox Manipulation Process: sandboxes/sandbox-manipulation-process.md
-        - Sandbox SSH Access: sandboxes/sandbox-ssh-access.md
-    - Logging:
-        - Architecture: logging/architecture.md
-        - How to use it: logging/how-to-use-it.md
-        - Events: logging/events.md
-        - Commands: logging/commands.md
-    - Ansible Roles: ansible-roles.md
-    - OIDC Issuer: oidc-issuer.md
-    - Visualizations: visualizations.md
-    - Technical documentation:
-      - Microservices API: 
-          - Training: 
-              - Table of permissions: about.md
-              - Endpoints: about.md
-          - User and group: about.md
-          - Sandbox service: about.md 
+        - Sandbox SSH Access: sandboxes/sandbox-ssh-access.md   
+    - API: 
+        - Training: api/training-swagger-open-api.yml
+        - User and group: api/user-and-group-swagger-open-api.yml
+        - Elasticsearch: api/elasticsearch-swagger-open-api.yml
+        - Sandbox service: api/sandbox-service-swagger-open-api.yml 
     - GDPR: gdpr.md
     - License: license.md
     - FAQ: faq.md
-    - About: about.md
+    - Extras:
+        - Logging:
+            - Architecture: extras/logging/architecture.md
+            - How to use it: extras/logging/how-to-use-it.md 
+        - Writing documentation - MkDocs: extras/writing-documentation-mkdocs.md
 copyright: Copyright © 2020 Institute of Computer Science, Masaryk University
 
 markdown_extensions:
@@ -63,3 +57,4 @@ markdown_extensions:
     - extra
     - nl2br
     - fenced_code
+    - codehilite
