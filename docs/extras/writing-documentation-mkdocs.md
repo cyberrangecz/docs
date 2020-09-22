@@ -7,14 +7,13 @@ MkDocs require to have installed:
 * python3.8
 * pipenv
 
-Clone [repository](https://gitlab.ics.muni.cz/kypo-crp/kypo-crp-project-docs) from Gitlab. To use local server, go to `kypo-crp-project-docs` and enter following commands: 
+Clone [repository](https://gitlab.ics.muni.cz/kypo-crp/kypo-crp-project-docs) from Gitlab. To use the local server, go to `kypo-crp-project-docs` directory and in the command line enter the following commands:
 ```
 pipenv sync
 pipenv run mkdocs serve
 ```
 
-Acces the page http://localhost:8000.
-
+Acces the page [http://localhost:8000](http://localhost:8000).
 
 ### Pages
 To add new page, open file `mkdocs.yml`:
