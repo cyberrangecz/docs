@@ -13,6 +13,7 @@ nav:
         - KYPO Platform configuration: installation/kypo-platform-configuration.md 
         - KYPO Platform deployment: installation/kypo-platform-deployment.md
     - KYPO Portal: 
+        - Roles: kypo-portal/roles.md
         - Login & logout: kypo-portal/login-and-logout.md
         - Administration: 
             - User: kypo-portal/administration/user.md
@@ -33,9 +34,9 @@ nav:
         - Sandbox Manipulation Process: sandboxes/sandbox-manipulation-process.md
         - Sandbox SSH Access: sandboxes/sandbox-ssh-access.md   
     - API: 
-        - Training: api/training-swagger-open-api.yml
-        - User and group: api/user-and-group-swagger-open-api.yml
-        - Elasticsearch: api/elasticsearch-swagger-open-api.yml
+        - Training service: api/training-swagger-open-api.yml
+        - User and Group service: api/user-and-group-swagger-open-api.yml
+        - Elasticsearch service: api/elasticsearch-swagger-open-api.yml
         - Sandbox service: api/sandbox-service-swagger-open-api.yml 
     - GDPR: gdpr.md
     - License: license.md
