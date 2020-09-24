@@ -1,7 +1,7 @@
 # Roles 
 
-Privileges and access rights of each KYPO user are determined by the **roles** appointed to their user [group](./administration/group.md).
-All roles are imported into KYPO portal by registering a [microservice](./administration/microservices.md). Current roles that are used in the KYPO portal can be divided between categories based on microservice that imported them:
+Privileges and access rights of each KYPO user are determined by the **roles** appointed to their user [group](./administration.md#group-overview).
+All roles are imported into KYPO portal by registering a [microservice](./administration.md#microservice-registration). Current roles that are used in the KYPO portal can be divided between categories based on microservice that imported them:
 1. [Training roles](#training-roles)
 2. [User and group roles](#user-and-group-roles)
 3. [Sandbox roles](#sandbox-roles)
