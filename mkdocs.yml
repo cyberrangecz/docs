@@ -15,10 +15,7 @@ nav:
     - KYPO Portal: 
         - Roles: kypo-portal/roles.md
         - Login & logout: kypo-portal/login-and-logout.md
-        - Administration: 
-            - User: kypo-portal/administration/user.md
-            - Group: kypo-portal/administration/group.md
-            - Microservices: kypo-portal/administration/microservices.md
+        - Administration: kypo-portal/administration.md
         - Sandboxes: 
             - Sandbox Definition: kypo-portal/sandboxes/sandbox-definition.md
             - Pool: kypo-portal/sandboxes/pool.md
@@ -59,5 +56,13 @@ markdown_extensions:
     - nl2br
     - fenced_code
     - codehilite
+    - pymdownx.details
+    - attr_list
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+        options:
+          custom_icons:
+            - overrides/.icons
 extra_css: 
     - stylesheets/extra.css
