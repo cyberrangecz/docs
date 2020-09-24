@@ -64,5 +64,6 @@ markdown_extensions:
         options:
           custom_icons:
             - overrides/.icons
+    - pymdownx.superfences
 extra_css: 
     - stylesheets/extra.css
