@@ -59,5 +59,13 @@ markdown_extensions:
     - nl2br
     - fenced_code
     - codehilite
+    - pymdownx.details
+    - attr_list
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+        options:
+          custom_icons:
+            - overrides/.icons
 extra_css: 
     - stylesheets/extra.css
