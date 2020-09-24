@@ -15,10 +15,7 @@ nav:
     - KYPO Portal: 
         - Roles: kypo-portal/roles.md
         - Login & logout: kypo-portal/login-and-logout.md
-        - Administration: 
-            - User: kypo-portal/administration/user.md
-            - Group: kypo-portal/administration/group.md
-            - Microservices: kypo-portal/administration/microservices.md
+        - Administration: kypo-portal/administration.md
         - Sandboxes: 
             - Sandbox Definition: kypo-portal/sandboxes/sandbox-definition.md
             - Pool: kypo-portal/sandboxes/pool.md
