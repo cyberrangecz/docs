@@ -24,10 +24,11 @@ nav:
             - Training Instance: kypo-portal/trainings/training-instance.md
             - Training Run: kypo-portal/trainings/training-run.md
     - Sandboxes: 
+        - Sandbox Definition: sandboxes/sandbox-definition.md
         - Sandbox Topology: 
             - Topology Definition: sandboxes/sandbox-topology/topology-definition.md
             - Topology Instance: sandboxes/sandbox-topology/topology-instance.md
-        - Sandbox Definition: sandboxes/sandbox-definition.md
+        - User Ansible: sandboxes/user-ansible.md
         - Sandbox SSH Access: sandboxes/sandbox-ssh-access.md   
     - API: 
         - Training service: api/training-swagger-open-api.yml
