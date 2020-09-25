@@ -31,7 +31,8 @@ The page is used to list all groups created in the KYPO platform. Groups are imp
 
 ![group-overview](../img/kypo-portal/administration/group-overview.png) 
 
-To create a new group, the administrator must click on ![create-button](../img/buttons/create-button.png) button that redirects him to the page [Create Group](#createedit-group). A group that already exists can be edited by clicking on edit button :material-pencil:{: .icon .blue } that redirects administrator to page [Edit Group](#createedit-group). One group can be deleted by clicking on :material-delete:{: .red .icon } button or multiple groups can be deleted by checking groups with checkboxes situated on the left side of the row and by clicking on ![delete-button](../img/buttons/big-delete-button.png) button.  
+To create a new group, the administrator must click on ![create-button](../img/buttons/create-button.png) button that redirects him to the page [Create Group](#createedit-group). A group that already exists can be edited by clicking on edit button :material-pencil:{: .icon .blue } that redirects administrator to page [Edit Group](#createedit-group). One group can be deleted by clicking on delete button :material-delete:{: .red .icon } or multiple groups can be deleted by checking groups with checkboxes situated on the left side of the row and by clicking on ![delete-button](../img/buttons/big-delete-button.png) button.  
+
 
 ### Create or Edit Group
 
@@ -39,7 +40,7 @@ The page consists of three panels:
 
 [1. Create/Edit Group](#1-createedit-group) 
 [2. Edit members](#2-edit-members) 
-[3. Edit roles](#3-edit-roles)
+[3. Edit roles](#3-edit-roles) 
 
 During the creation of a group, the second and third panels are disabled. To make them accessible, the administrator must fill the required fields in the first panel and either click on: 
 1. ![create-button](../img/buttons/create-button.png) that will create the new group and redirect the administrator back to Group Overview.  
