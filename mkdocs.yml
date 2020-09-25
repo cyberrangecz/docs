@@ -29,7 +29,6 @@ nav:
             - Topology Definition: sandboxes/sandbox-topology/topology-definition.md
             - Topology Instance: sandboxes/sandbox-topology/topology-instance.md
         - User Ansible: sandboxes/user-ansible.md
-        - Sandbox Manipulation Process: sandboxes/sandbox-manipulation-process.md
         - Sandbox SSH Access: sandboxes/sandbox-ssh-access.md   
     - API: 
         - Training service: api/training-swagger-open-api.yml
@@ -58,6 +57,7 @@ markdown_extensions:
     - fenced_code
     - codehilite
     - pymdownx.details
+    - pymdownx.superfences
     - attr_list
     - pymdownx.emoji:
         emoji_index: !!python/name:materialx.emoji.twemoji
@@ -65,5 +65,6 @@ markdown_extensions:
         options:
           custom_icons:
             - overrides/.icons
+    - pymdownx.superfences
 extra_css: 
     - stylesheets/extra.css
