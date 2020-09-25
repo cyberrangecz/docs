@@ -31,10 +31,10 @@ nav:
         - User Ansible: sandboxes/user-ansible.md
         - Sandbox SSH Access: sandboxes/sandbox-ssh-access.md   
     - API: 
-        - Training service: api/training-swagger-open-api.yml
-        - User and Group service: api/user-and-group-swagger-open-api.yml
-        - Elasticsearch service: api/elasticsearch-swagger-open-api.yml
-        - Sandbox service: api/sandbox-service-swagger-open-api.yml
+        - Training service: api/training-swagger-open-api.md
+        - User and Group service: api/user-and-group-swagger-open-api.md
+        - Elasticsearch service: api/elasticsearch-swagger-open-api.md
+        - Sandbox service: api/sandbox-service-swagger-open-api.md
     - License: license.md
     - FAQ: faq.md
     - Extras:
