@@ -34,8 +34,7 @@ nav:
         - Training service: api/training-swagger-open-api.yml
         - User and Group service: api/user-and-group-swagger-open-api.yml
         - Elasticsearch service: api/elasticsearch-swagger-open-api.yml
-        - Sandbox service: api/sandbox-service-swagger-open-api.yml 
-    - GDPR: gdpr.md
+        - Sandbox service: api/sandbox-service-swagger-open-api.yml
     - License: license.md
     - FAQ: faq.md
     - Extras:
