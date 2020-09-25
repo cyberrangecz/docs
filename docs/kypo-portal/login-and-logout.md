@@ -7,11 +7,11 @@ Access the KYPO portal via the web browser entering the page address, e.g. [http
 
 This will redirect you to the selected OIDC provider, in the case of local OIDC provider, the login page would be as follows: 
 
-![csirt-mu-issuer](../../img/kypo-portal/login-and-logout/local-oidc-provider-login-window.png)
+![csirt-mu-issuer](../img/kypo-portal/login-and-logout/local-oidc-provider-login-window.png)
 
 After successful login you will be redirected to the main page that should look similar to the following figure:
 
-![kypo-front-page](../../img/kypo-portal/login-and-logout/kypo-portal-home-page.png)
+![kypo-front-page](../img/kypo-portal/login-and-logout/kypo-portal-home-page.png)
 
 !!! Note
     Based on roles you have, some buttons might be disabled. 
