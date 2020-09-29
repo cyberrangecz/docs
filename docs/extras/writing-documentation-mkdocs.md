@@ -148,7 +148,19 @@ Footnotes[^1] have a label[^@#$%] and the footnote's content.
 A footnote label must start with a caret ^ and may contain any inline text (including spaces) between a set of square brackets []. Only the first caret has any special meaning.
 
 A footnote content must start with the label followed by a colon and at least one space. The label used to define the content must exactly match the label used in the body (including capitalization and white space). The content would then follow the label either on the same line or on the next line. The content may contain multiple lines, paragraphs, code blocks, blockquotes and most any other markdown syntax. The additional lines must be indented one level (four spaces or one tab).
+
+### Icons
+
+The following icon sets are bundled with Material for MkDocs:
  
+* [Material Design](https://materialdesignicons.com/) -- usage: `:material-(name of the icon):`, e.g. `:material-alarm:`
+* [FontAwesome](https://fontawesome.com/icons?d=gallery&m=free) -- usage: `:fontawesome-(bundle)-(name of the icon):`, e.g. `:fontawesome-brands-accusoft:`
+* [Octicons](https://primer.style/octicons/) -- usage: `:octicons-(name of the icon):`, e.g. `:octicons-bell-24:`
+
+To change the style of the icon (change color or size) add following code after the icon definition `{: .class1 .class2 }` and then in file `extra.css` define style of classes `class1` and `class2`. The whole icon definition would be `:material-(name of the icon):{: .class1 .class2 }`.
+
+In order to add additional icons, create a `*.svg` icon in folder `overrides/.icons/bootstrap/`. Then use this icon as follows: `:bootstrap-(name of the icon/name of the .svg file):`.
+
 
 ### Notes
 Thanks to Admonition extension you are able to create a notes. Following text: 
@@ -161,6 +173,30 @@ will be renedered as:
 
 !!! note
     You should note that the title will be automatically capitalized.
+
+In order to create custom note panel with custom icon you need to do the following steps: 
+
+1. Find svg description of the icon `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17a2 2 0 002-2 2 2 0 00-2-2 2 2 0 00-2 2 2 2 0 002 2m6-9a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V10a2 2 0 012-2h1V6a5 5 0 015-5 5 5 0 015 5v2h1m-6-5a3 3 0 00-3 3v2h6V6a3 3 0 00-3-3z"/></svg>`.
+2. In file `/docs/stylesheets/extra.css` add to `:root` block the following line: 
+```markdown
+--md-admonition-icon--(name of note panel): url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17a2 2 0 002-2 2 2 0 00-2-2 2 2 0 00-2 2 2 2 0 002 2m6-9a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V10a2 2 0 012-2h1V6a5 5 0 015-5 5 5 0 015 5v2h1m-6-5a3 3 0 00-3 3v2h6V6a3 3 0 00-3-3z"/></svg>');
+```
+
+
+3. Then add folowing lines under the `:root` block: 
+```
+.md-typeset .(name of note panel) > summary::before {
+  background-color: (color of the icon, e.g. rgb(119, 119, 119));
+  -webkit-mask-image: var(--md-admonition-icon--(name of note panel));
+          mask-image: var(--md-admonition-icon--(name of note panel));
+}
+```
+4. Use custom note panel `!!! (name of note panel) "Text displayed in note header"`
+
+
+
+
+
 
 ### More extensions
 To know more about markdown extension see the MkDocs' [markdown_extensions](https://www.mkdocs.org/user-guide/configuration/#markdown_extensions) configuration setting for details on how to enable extensions.
