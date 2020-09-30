@@ -19,6 +19,7 @@ nav:
         - Sandboxes: 
             - Sandbox Definition: kypo-portal/sandboxes/sandbox-definition.md
             - Pool: kypo-portal/sandboxes/pool.md
+            - Resources: kypo-portal/sandboxes/resources.md
         - Trainings: 
             - Training Definition: kypo-portal/trainings/training-definition.md
             - Training Instance: kypo-portal/trainings/training-instance.md
