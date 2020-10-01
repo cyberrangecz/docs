@@ -31,6 +31,9 @@ img {
     font-size: 18px;  
 }
 
+details p, details summary, .admonition p {
+   font-size: 14px !important; 
+
 .md-logo img {
    transform: scale(1.5); 
 }
