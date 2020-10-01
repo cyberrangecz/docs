@@ -2,6 +2,7 @@ site_name: KYPO CRP
 theme:
   name: material
   logo: 'img/kypo-simple.svg'
+  favicon: 'img/kypo-simple.svg'
   
 
 nav:
