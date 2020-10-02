@@ -1,35 +1,37 @@
 # Roles 
 
 Privileges and access rights of each KYPO user are determined by the **roles** appointed to their user [group](./administration.md#group-overview).
-All roles are imported into KYPO portal by registering a [microservice](./administration.md#microservice-registration). Current roles that are used in the KYPO portal can be divided between categories based on microservice that imported them:
+All roles are imported into the KYPO portal by registering a [microservice](./administration.md#microservice-registration), where each microservice has exactly one default role. Current roles that are used in the KYPO portal can be divided into categories based on microservice that register them:
 1. [Training roles](#training-roles)
 2. [User and group roles](#user-and-group-roles)
 3. [Sandbox roles](#sandbox-roles)
 
+These roles are then internally used by individual microservices to restrict access to their functionalities.
+
 ## Training roles
 
-``ROLE_TRAINING_TRAINEE`` -- **Trainees** are allowed to start, resume and play the [training run](./trainings/training-run.md). After the training is complete trainees can also check and compare their scores. Role of trainee is the default role of each KYPO platform user.
+``ROLE_TRAINING_TRAINEE``: **Trainees** are allowed to start, resume and play the [training run](./trainings/training-run.md). After the training is complete trainees can also check and compare their scores. The role of the trainee is the default role of each KYPO user.
 
-``ROLE_TRAINING_ORGANIZER`` -- **Training organizers** can create and manage [training instances](./trainings/training-instance.md). Each organizer  can only access training instances in which they are set as organizer.
+``ROLE_TRAINING_ORGANIZER``: **Training organizers** can create and manage [training instances](./trainings/training-instance.md), see the progress of trainees during the game, or see the results in form of graphs and tables. Each organizer can only access training instances in which they are set as an organizer.
 
-``ROLE_TRAINING_DESIGNER`` -- **Training designers** can create and manage [training definitions](./trainings/training-definition.md). In similar manner to the organizers, these users can only access training definitions that have them set as their designer.
+``ROLE_TRAINING_DESIGNER``: **Training designers** can create and manage [training definitions](./trainings/training-definition.md), that can be used to create training instances by organizers. In a similar manner to the organizers, these users can only access training definitions that have them set as their designer.
 
-``ROLE_TRAINING_ADMINISTRATOR`` -- **Training administrators** have all the privileges of the above roles with the exception being that they are not restricted by ownership of the training instances and definitions. This means that training administrator can access all definitions and instances that exist on the KYPO platform.
+``ROLE_TRAINING_ADMINISTRATOR``: **Training administrators** have all the privileges of the above roles with the exception being that they are not restricted by ownership of the training instances and definitions. This means that the training administrator can access all definitions and instances that exist on the KYPO platform.
 
 ## User and group roles
 
-``ROLE_USER_AND_GROUP_GUEST`` -- **Guest** is the default role for every user of the KYPO platform and does not allow any actions in the **User and Group** agenda.
+``ROLE_USER_AND_GROUP_GUEST``: **Guest** can only see information about himself or basic information about other users. It is the default role for every user of the KYPO platform.
 
-``ROLE_USER_AND_GROUP_USER`` -- At this moment the **User** role has same access rights as the **Guest**.
+``ROLE_USER_AND_GROUP_USER``: **User** has at this moment the same access rights as the previous role **guest**.
 
-``ROLE_USER_AND_GROUP_ADMINISTRATOR`` -- Users with the role **Administrator** can fully access and manage users, groups and microservices in the user and group agenda.
+``ROLE_USER_AND_GROUP_ADMINISTRATOR``: **Administrators** can fully access and manage users, groups, and microservices in the user and group agenda.
 
 ## Sandbox roles
 
-``ROLE_KYPO-SANDBOX-SERVICE_TRAINEE`` -- Role of the **Sandbox trainee** is the default role of all KYPO users. Trainees cannot access any part of the sandbox agenda.
+``ROLE_KYPO-SANDBOX-SERVICE_TRAINEE``: **Sandbox trainees** cannot access any part of the sandbox agenda, but they can access sandbox topology during the game. This role is the default role of all KYPO users.
 
-``ROLE_KYPO-SANDBOX-SERVICE_DESIGNER`` -- Role of the **Sandbox designer** allows the user to create and manage [sandbox definitions](./sandboxes/sandbox-definition.md).
+``ROLE_KYPO-SANDBOX-SERVICE_ORGANIZER``: **Sandbox organizers** gains access to the management of the sandbox [pools](./sandboxes/pool.md). These pools contain sandboxes that are assigned to specific trainee at the start of the game. 
 
-``ROLE_KYPO-SANDBOX-SERVICE_ORGANIZER`` -- Role of the **Sandbox organizer** grants access to the management of the sandbox [pools](./sandboxes/pool.md).
+``ROLE_KYPO-SANDBOX-SERVICE_DESIGNER``: **Sandbox designers** can create and manage [sandbox definitions](./sandboxes/sandbox-definition.md), that can be used by sandbox organizer to create pool of sandboxes. 
 
-``ROLE_KYPO-SANDBOX-SERVICE_ADMIN`` -- **Sandbox admin** combines access rights of the above roles to grant the full access to the sandbox agenda of the KYPO portal.
+``ROLE_KYPO-SANDBOX-SERVICE_ADMIN``: **Sandbox admin** combines access rights of the above roles to grant full access to the sandbox agenda of the KYPO portal.
