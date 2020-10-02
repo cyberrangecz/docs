@@ -18,56 +18,57 @@ Defines the name of the definition ([name restrictions](#names)).
 
 The list of end hosts to be deployed. A host has the following attributes.
 
-* **name** -- name of end host VM ([names restriction](#names), [unique names restriction](#unique-names))
-* **flavor** -- name of flavor (see [how to chose flavor](#flavor))
-* **base_box** (see [how to define base_box](#base_box))
-    * **image** -- name of image
-    * **man_user** -- name of user with sudo privileges
-    * **mng_protocol** (Optional) -- protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
-* **hidden** (Optional) -- Whether the host should be hidden in a topology visualization (default: `False`)
+* **name**: name of end host VM ([names restriction](#names), [unique names restriction](#unique-names))
+* **flavor**: name of flavor (see [how to chose flavor](#flavor))
+* **base_box**: (see [how to define base_box](#base_box))
+    * **image**: name of image
+    * **man_user**: name of user with sudo privileges
+    * **mng_protocol (optional)**: protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
+* **hidden (optional)**: whether the host should be hidden in a topology visualization (default: `False`)
+
 
 ### routers
 
 The list of routers. Routers are the only nodes through which hosts can communicate with the internet or with hosts in networks connected to different Routers. Every router should be connected to some [networks](#networks). A connection can be achieved by [router_mappings](#router_mappings). A router has the following attributes.
 
-* **name** -- name of router VM ([names restriction](#names), [unique names restriction](#unique-names)) 
-* **flavor** -- name of flavor (see [how to chose flavor](#flavor))
-* **base_box** (see [how to define base_box](#base_box))
-    * **image** -- name of image
-    * **man_user** -- name of user with sudo privileges
-    * **mng_protocol** (Optional) -- protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
-* **cidr** -- for network between router and BR ([more about management nodes](/sandboxes/sandbox-topology/topology-instance#topology-instance-management), the recommended range of the network is `/29`, [unique cidrs restriction](#disjunkt-cidrs))
+* **name**: name of router VM ([names restriction](#names), [unique names restriction](#unique-names)) 
+* **flavor**: name of flavor (see [how to chose flavor](#flavor))
+* **base_box**: (see [how to define base_box](#base_box))
+    * **image**: name of image
+    * **man_user**: name of user with sudo privileges
+    * **mng_protocol (optional)**: protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
+* **cidr**: for network between router and BR ([more about management nodes](/sandboxes/sandbox-topology/topology-instance#topology-instance-management), the recommended range of the network is `/29`, [unique cidrs restriction](#disjunkt-cidrs))
    
 ### networks
 
 The list of networks. A network is used to connect router with end host. It has the following attributes.
 
-* **name** -- name of network ([names restriction](#names), [unique names restriction](#unique-names))
-* **cidr** -- IP address range in CIDR notation ([unique cidrs restriction](#disjunkt-cidrs))
-* **accessible_by_user** -- optional attribute specifies whether the UAN ([more about management nodes](/sandboxes/sandbox-topology/topology-instance#topology-instance-management)) should be connected to this network (default: `True`).
+* **name**: name of network ([names restriction](#names), [unique names restriction](#unique-names))
+* **cidr**: IP address range in CIDR notation ([unique cidrs restriction](#disjunkt-cidrs))
+* **accessible_by_user**: optional attribute specifies whether the UAN ([more about management nodes](/sandboxes/sandbox-topology/topology-instance#topology-instance-management)) should be connected to this network (default: `True`).
 
 ### net_mappings
 
 The list of net_mappings. A net_mapping is used to connect host to network. Each host should be connected to one network (more are possible but not recommended). A net_mapping has the following attributes.
 
-* **host** -- name of host defined in [hosts](#hosts) 
-* **network** -- name of the network defined in [networks](#networks)
-* **ip** -- IP address for the host, must be from IP address range of the network [address restriction](#adress-restriction)
+* **host**: name of host defined in [hosts](#hosts) 
+* **network**: name of the network defined in [networks](#networks)
+* **ip**: IP address for the host, must be from IP address range of the network [address restriction](#adress-restriction)
 
 ### router_mappings
 
 The list of router_mappings. A router_mapping is used to connect router to network. Each network should be connected to one router, but one router can be connected to multiple networks. A router_mapping has the following attributes.
 
-* **router** -- name of router defined in [routers](#routers) 
-* **network** -- name of network defined in [networks](#networks)
-* **ip** -- IP address for the router, must be from IP address range of the network [address restriction](#adress-restriction)
+* **router**: name of router defined in [routers](#routers) 
+* **network**: name of network defined in [networks](#networks)
+* **ip**: IP address for the router, must be from IP address range of the network [address restriction](#adress-restriction)
  
 ### groups
 
 The list of groups. An ansible group is used for better management of nodes. It has the following attributes.
 
-* **name** -- name of the group
-* **nodes** -- list of node names defined in [hosts](#hosts), or [routers](#routers).
+* **name**: name of the group
+* **nodes**: list of node names defined in [hosts](#hosts), or [routers](#routers).
 
 ## Glossary
 
@@ -131,6 +132,9 @@ Network and routers CIDRs shouldn't overlap with [management networks](/sandboxe
 
 During a network creation, the OpenStack will take the first IP address of the specified IP address range for a gateway (a Router), the second IP address for DHCP, and the rest for hosts. The OpenStack will non-deterministically take the first address of the network or the first address after a gateway (a Router) address and if any of net_mappings has an IP address set to one of these addresses, sandbox creation may fail.
 
+*[VM]: Virtual machine
+*[BR]: Border router
+*[UAN]: User Access Node 
 ## Example
 
 An example sandbox definition with the name `small-sandbox` contains the following.
