@@ -2,13 +2,13 @@ The User Ansible is for [Topology Instance](/sandboxes/sandbox-topology/topology
 
 The content of the **provisioning** directory is the same as any other [Ansible](https://docs.ansible.com/ansible/latest/index.html).
 
-* **playbook.yml** - The Ansible playbook that is used for provisioning of the sandbox,
+* **playbook.yml**: the Ansible playbook that is used for provisioning of the sandbox,
 see Ansible documentation on [playbooks](https://docs.ansible.com/ansible/latest/user_guide/playbooks.html).
-* **pre-playbook.yml** (optional) - The Ansible playbook that is expected to be used to install packages necessary for **playbook.yml**.
-* **requirements.yml** (optional) - The Ansible Galaxy requirements file that contains Ansible role dependencies, see Ansible documentation on [installing roles from a file](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#installing-multiple-roles-from-a-file).
-* **roles** (optional) - The directory for Ansible roles, see Ansible documentation on [roles](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html).
-* **group_vars** (optional) - The directory for group variables, see Ansible documentation [host and group variables](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#organizing-host-and-group-variables).
-* **host_vars** (optional) - The directory for host variables, see Ansible documentation on [host and group variables](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#organizing-host-and-group-variables).
+* **pre-playbook.yml (optional)**: the Ansible playbook that is expected to be used to install packages necessary for **playbook.yml**.
+* **requirements.yml (optional)**: the Ansible Galaxy requirements file that contains Ansible role dependencies, see Ansible documentation on [installing roles from a file](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#installing-multiple-roles-from-a-file).
+* **roles (optional)**: the directory for Ansible roles, see Ansible documentation on [roles](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html).
+* **group_vars (optional)**: the directory for group variables, see Ansible documentation [host and group variables](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#organizing-host-and-group-variables).
+* **host_vars (optional)**: the directory for host variables, see Ansible documentation on [host and group variables](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#organizing-host-and-group-variables).
 
 ### Minimal Ansible Playbook
 
@@ -22,9 +22,9 @@ The KYPO requires presence User Ansible, but if you do not need any provisioning
 
 On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#default-groups), the KYPO sandbox-service defines three more default host groups.
 
-* **management** - The group containing all the [sandbox management nodes](/sandboxes/sandbox-topology/topology-instance#topology-instance-management), i.e., MAN, BR, and UAN node.
-* **routers** - The group containing all the routers defined in [Topology definition](/sandboxes/sandbox-topology/topology-definition#routers).
-* **hosts** - The group containing all the hosts defined in [Topology definition](/sandboxes/sandbox-topology/topology-definition#hosts).
+* **management**: the group containing all the [sandbox management nodes](/sandboxes/sandbox-topology/topology-instance#topology-instance-management), i.e., MAN, BR, and UAN node.
+* **routers**: the group containing all the routers defined in [Topology definition](/sandboxes/sandbox-topology/topology-definition#routers).
+* **hosts**: the group containing all the hosts defined in [Topology definition](/sandboxes/sandbox-topology/topology-definition#hosts).
 
 You can specify additional Ansible host groups in [Topology definition](/sandboxes/sandbox-topology/topology-definition#groups) and then use them in a `playbook.yml` file of the [User Ansible](#user-ansible).
 
@@ -32,12 +32,12 @@ You can specify additional Ansible host groups in [Topology definition](/sandbox
 
 On top of [Ansible special variables](https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html), the KYPO sandbox-service defines more special variables.
 
-* **kypo_global_openstack_stack_id** - The ID of sandbox representation in OpenStack cloud.
-* **kypo_global_pool_id** - The ID of the pool for which the sandbox was created.
-* **kypo_global_sandbox_allocation_unit_id** - The ID of the sandbox allocation unit. Once the sandbox is fully provisioned, it is the same ID as the sandbox ID.
-* **kypo_global_sandbox_ip** - The sandbox IPv4 address.
-* **kypo_global_sandbox_name** - The sandbox name, which is the compound of [stack_name_prefix](/installation/kypo-platform-configuration#sandbox-service), pool ID and sandbox allocation unit ID.
-* **kypo_global_head_ip** - The KYPO head server IP address.
+* **kypo_global_openstack_stack_id**: the ID of sandbox representation in OpenStack cloud.
+* **kypo_global_pool_id**: the ID of the pool for which the sandbox was created.
+* **kypo_global_sandbox_allocation_unit_id**: the ID of the sandbox allocation unit. Once the sandbox is fully provisioned, it is the same ID as the sandbox ID.
+* **kypo_global_sandbox_ip**: the sandbox IPv4 address.
+* **kypo_global_sandbox_name**: the sandbox name, which is the compound of [stack_name_prefix](/installation/kypo-platform-configuration#sandbox-service), pool ID and sandbox allocation unit ID.
+* **kypo_global_head_ip**: the KYPO head server IP address.
 
 ### Ansible Inventory
 
