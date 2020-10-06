@@ -1,6 +1,6 @@
 # License 
 
-KYPO Cyber Range Platform is an open-source software developed by **Masaryk University**, and it is distributed under **MIT license**.
+KYPO Cyber Range Platform is open-source software developed by **Masaryk University**, and it is distributed under **MIT license**.
 
 ## License Terms
 
