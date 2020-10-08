@@ -77,8 +77,10 @@ log {source(s_host); destination(d_kypo_head);};
 **5. Restart the syslog-ng service on MAN:**
 
 As the last step you need to the restart syslog-ng service on the MAN by using the following command:
+
 ```
 sudo systemctl restart syslog-ng.service 
 ```
+
 !!! note
-    Wait a few seconds until the syslog-ng restarts.  
+    Wait a few seconds until the syslog-ng restarts.
