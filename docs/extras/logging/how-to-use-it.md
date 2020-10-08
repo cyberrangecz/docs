@@ -11,7 +11,7 @@ Command logging is enabled on host VMs by using a number of Ansible roles. If th
 ## Accessing logged data
 The training organizer can access all logged data (training events or commands) by exporting the training instance in the [Training Instance Overview](User-documentation/Training-Organizer#training-instance-overview). All data can be found in the exported archive in the corresponding files stored in the JSON format. 
 
-![Archive](/img/extras/logging/accessed-logged-data-structure.png)
+![Archive](../../img/extras/logging/accessed-logged-data-structure.png)
 
 
 ## Local deployment with vagrant
@@ -21,11 +21,11 @@ If you are using the local  vagrant deployment configuration from the [kypo-crp-
 **1. Create new port forwarding rule in VirtualBox Manager:**
    
 Open the VirtualBox Manager and in the `Advanced Network settings` of your KYPO VM session click on the **Port Forwarding** button:
-![VirtualBox settings](/img/extras/logging/port-forwarding-rule.png)
+![VirtualBox settings](../../img/extras/logging/port-forwarding-rule.png)
 
-In the `Port Forwarding Rules` create a new rule for log forwarding with `Guest IP` of `172.19.0.22` and `Guest Port` of `515`. For example the `Log Forwarding` rule:
+In the `Port Forwarding Rules` create a new rule for log forwarding with `Guest IP` of `172.19.0.22`, `Guest Port` of `515`, and with any `Host port`, e.g. `8015`. For example the `Log Forwarding` rule:
 
-![PortForwardingRules](/img/extras/logging/port-forwarding-rule2.png) 
+![PortForwardingRules](../../img/extras/logging/port-forwarding-rule2.png) 
  
 **2. Set the KYPO Head IP for sandbox service:**
 
