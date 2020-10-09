@@ -27,8 +27,16 @@ img {
     color: rgb(119, 119, 119);
 }
 
+.green {
+    color: green;
+}
+
 .icon {
     font-size: 18px;  
+}
+
+td, th {
+    vertical-align: middle !important;
 }
 
 details p, details summary, .admonition p {
