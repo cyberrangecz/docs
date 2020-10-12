@@ -40,6 +40,7 @@ nav:
         - Elasticsearch service: api/elasticsearch-swagger-open-api.md
         - Sandbox service: api/sandbox-service-swagger-open-api.md
     - License: license.md
+    - Is it done yet?: is-it-done-yet.md
     - FAQ: faq.md
     - Extras:
         - Logging:
