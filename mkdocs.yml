@@ -7,7 +7,6 @@ theme:
 
 nav:
     - Home: index.md
-    - Architecture: architecture.md
     - Installation:
         - Base infrastructure: 
             - Creation: installation/base-infrastructure/creation.md
@@ -16,6 +15,7 @@ nav:
         - KYPO Platform configuration: installation/kypo-platform-configuration.md 
         - KYPO Platform deployment: installation/kypo-platform-deployment.md
     - KYPO Portal: 
+        - Microservices overview: kypo-portal/microservices-overview.md
         - Roles: kypo-portal/roles.md
         - Login & logout: kypo-portal/login-and-logout.md
         - Administration: kypo-portal/administration.md

@@ -1,7 +1,7 @@
 KYPO Platform has been designed as a web application that uses the microservice architecture style. The concept of microservices consists in the separation of individual logical units into separate parts, which provide certain specific functionality. The architecture of the KYPO platform is displayed in the picture below.
 
 
-![Architecture](img/kypo-architecture.png)
+![microservices](../img/kypo-portal/microservices-overview/kypo-microservices.png)
 
 Among the main components of the KYPO platform belongs: 
 
