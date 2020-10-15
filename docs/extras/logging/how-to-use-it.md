@@ -34,6 +34,12 @@ Open the [kypo-sandbox-service-config.yml](https://gitlab.ics.muni.cz/kypo-crp/p
 !!! note 
     If you don't uncomment the `kypo_head_ip` attribute all logs will be stored on the **MAN** in the `/data/idm-logs/man.log` file. 
 
+!!! note
+    You can check if your data are getting into the ELK infrastructure by using the following command inside the `elasticsearch` docker container to list all data stored in the Elasticsearch:
+    ```
+    curl -XGET "http://localhost:9200/kypo*/_search?pretty=true"
+    ```
+
 **3. Start the KYPO platform:**
 
 After the `kypo-sandbox-service-config.yml` is updated you can start the KYPO platform (if platform is already running you must restart it) using the following command in `/vagrant` directory:
