@@ -9,9 +9,7 @@ nav:
     - Home: index.md
     - Core principles: core-principles.md
     - Installation:
-        - Base infrastructure: 
-            - Creation: installation/base-infrastructure/creation.md
-            - Configuration: installation/base-infrastructure/configuration.md
+        - Base infrastructure: installation/base-infrastructure.md
         - KYPO Platform prerequisites: installation/kypo-platform-prerequisites.md
         - KYPO Platform configuration: installation/kypo-platform-configuration.md 
         - KYPO Platform deployment: installation/kypo-platform-deployment.md
