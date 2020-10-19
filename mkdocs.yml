@@ -41,6 +41,7 @@ nav:
         - User and Group service: api/user-and-group-swagger-open-api.md
         - Elasticsearch service: api/elasticsearch-swagger-open-api.md
         - Sandbox service: api/sandbox-service-swagger-open-api.md
+    - Report bugs: report-bugs.md
     - License: license.md
     - Features: features.md
     - FAQ: faq.md
