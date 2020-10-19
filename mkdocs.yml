@@ -35,6 +35,7 @@ nav:
             - Topology Instance: sandboxes/sandbox-topology/topology-instance.md
         - User Ansible: sandboxes/user-ansible.md
         - Sandbox SSH Access: sandboxes/sandbox-ssh-access.md   
+    - Acknowledgements: acknowledgements.md
     - API: 
         - Training service: api/training-swagger-open-api.md
         - User and Group service: api/user-and-group-swagger-open-api.md
