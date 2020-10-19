@@ -7,6 +7,7 @@ theme:
 
 nav:
     - Home: index.md
+    - Core principles: core-principles.md
     - Installation:
         - Base infrastructure: 
             - Creation: installation/base-infrastructure/creation.md
