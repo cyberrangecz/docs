@@ -3,74 +3,88 @@ theme:
   name: material
   logo: 'img/kypo-simple.svg'
   favicon: 'img/kypo-simple.svg'
-  
+
+
 
 nav:
-    - Home: index.md
-    - Core principles: core-principles.md
-    - Installation:
-        - Base infrastructure: installation/base-infrastructure.md
-        - KYPO Platform prerequisites: installation/kypo-platform-prerequisites.md
-        - KYPO Platform configuration: installation/kypo-platform-configuration.md 
-        - KYPO Platform deployment: installation/kypo-platform-deployment.md
-    - KYPO Portal: 
-        - Microservices overview: kypo-portal/microservices-overview.md
-        - Roles: kypo-portal/roles.md
-        - Login & logout: kypo-portal/login-and-logout.md
-        - Administration: kypo-portal/administration.md
-        - Sandboxes: 
-            - Sandbox Definition: kypo-portal/sandboxes/sandbox-definition.md
-            - Pool: kypo-portal/sandboxes/pool.md
-            - Resources: kypo-portal/sandboxes/resources.md
-        - Trainings: 
-            - Training Definition: kypo-portal/trainings/training-definition.md
-            - Training Instance: kypo-portal/trainings/training-instance.md
-            - Training Run: kypo-portal/trainings/training-run.md
-    - Sandboxes: 
-        - Sandbox Definition: sandboxes/sandbox-definition.md
-        - Sandbox Topology: 
-            - Topology Definition: sandboxes/sandbox-topology/topology-definition.md
-            - Topology Instance: sandboxes/sandbox-topology/topology-instance.md
-        - User Ansible: sandboxes/user-ansible.md
-        - Sandbox SSH Access: sandboxes/sandbox-ssh-access.md   
-    - Acknowledgements: acknowledgements.md
-    - API: 
-        - Training service: api/training-swagger-open-api.md
-        - User and Group service: api/user-and-group-swagger-open-api.md
-        - Elasticsearch service: api/elasticsearch-swagger-open-api.md
-        - Sandbox service: api/sandbox-service-swagger-open-api.md
-    - Report bugs: report-bugs.md
-    - License: license.md
-    - Features: features.md
-    - FAQ: faq.md
-    - Extras:
-        - Logging:
-            - Architecture: extras/logging/architecture.md
-            - How to use it: extras/logging/how-to-use-it.md 
-        - Writing documentation - MkDocs: extras/writing-documentation-mkdocs.md
-copyright: Copyright © 2020 Institute of Computer Science, Masaryk University
+  - Home: index.md
+  - Core principles: core-principles.md
+  - User guide:
+      - Overview: user-guide/overview.md
+      - Login & logout: user-guide/login-and-logout.md
+      - Administration: user-guide/administration.md
+      - Sandbox Agenda:
+          - Overview: user-guide/sandbox-agenda/sandbox-agenda-overview.md
+          - Sandbox Definition: user-guide/sandbox-agenda/sandbox-definition.md
+          - Pool: user-guide/sandbox-agenda/pool.md
+          - Resources: user-guide/sandbox-agenda/resources.md
+      - Training Agenda:
+          - Overview: user-guide/training-agenda/training-agenda-overview.md
+          - Training Definition: user-guide/training-agenda/training-definition.md
+          - Training Instance: user-guide/training-agenda/training-instance.md
+          - Training Run: user-guide/training-agenda/training-run.md
+      - User and Group Agenda:
+          - Overview: user-guide/user-and-group-agenda/user-and-group-agenda-overview.md
+  - Operator guide:
+      - Overview: operator-guide/operator-guide-overview.md
+      - Platform Components: operator-guide/platform-components.md
+      - Sandboxes:
+          - Overview: operator-guide/sandboxes/sandboxes-overview.md
+          - Sandbox Definition: operator-guide/sandboxes/sandbox-definition.md
+          - Sandbox Topology:
+              - Topology Definition: operator-guide/sandboxes/sandbox-topology/topology-definition.md
+              - Topology Instance: operator-guide/sandboxes/sandbox-topology/topology-instance.md
+          - User Ansible: operator-guide/sandboxes/user-ansible.md
+          - Sandbox SSH Access: operator-guide/sandboxes/sandbox-ssh-access.md
+      - Trainings:
+          - Overview: operator-guide/trainings/trainings-overview.md
+      - Users and Groups:
+          - Overview: operator-guide/users-and-groups/users-and-groups-overview.md
+          - Roles: operator-guide/users-and-groups/roles.md
+  - Installation guide:
+      - Overview: installation-guide/installation-guide-overview.md
+      - Base infrastructure: installation-guide/base-infrastructure.md
+      - KYPO Platform prerequisites: installation-guide/kypo-platform-prerequisites.md
+      - KYPO Platform configuration: installation-guide/kypo-platform-configuration.md
+      - KYPO Platform deployment: installation-guide/kypo-platform-deployment.md
+  - Available features: available-features.md
+  - FAQ: faq.md
+  - API:
+      - Training service: api/training-swagger-open-api.md
+      - User and Group service: api/user-and-group-swagger-open-api.md
+      - Elasticsearch service: api/elasticsearch-swagger-open-api.md
+      - Sandbox service: api/sandbox-service-swagger-open-api.md
+  - Extras:
+      - Logging:
+          - Architecture: extras/logging/architecture.md
+          - How to use it: extras/logging/how-to-use-it.md
+      - Writing documentation - MkDocs: extras/writing-documentation-mkdocs.md
+  - Report bugs: report-bugs.md
+  - Acknowledgements: acknowledgements.md
+  - License: license.md
+copyright: Copyright © 2020 KYPO CRP Team, Masaryk University
 
 markdown_extensions:
-    - admonition
-    - sane_lists
-    - smarty
-    - toc:
-        permalink: "#"
-    - wikilinks
-    - extra
-    - nl2br
-    - fenced_code
-    - codehilite
-    - pymdownx.details
-    - pymdownx.superfences
-    - pymdownx.tasklist
-    - attr_list
-    - pymdownx.emoji:
-        emoji_index: !!python/name:materialx.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
-        options:
-          custom_icons:
-            - overrides/.icons
-    - pymdownx.superfences
-extra_css: 
-    - stylesheets/extra.css
+  - admonition
+  - sane_lists
+  - smarty
+  - toc:
+      permalink: "#"
+  - wikilinks
+  - extra
+  - nl2br
+  - fenced_code
+  - codehilite
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+  - pymdownx.superfences
+extra_css:
+  - stylesheets/extra.css

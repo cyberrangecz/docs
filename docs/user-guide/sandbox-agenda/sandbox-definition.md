@@ -16,7 +16,7 @@ This page is used to list all sandbox definitions that can be used by sandbox or
 ![sandbox-definition-overview](../../img/kypo-portal/sandboxes/sandbox-definition/sandbox-definition-overview.png) 
 
 ## Create Sandbox Definition
-Before creating a sandbox, the topology of the sandbox and user configuration of the machines in the sandbox needs to be described. To do that, the sandbox definition is used. It contains every information needed to create a sandbox instance in a cloud. In the current version, the sandbox definition is created outside the KYPO platform and then stored as a GIT repository. The process of creation is described [here](../../sandboxes/sandbox-definition.md). 
+Before creating a sandbox, the topology of the sandbox and user configuration of the machines in the sandbox needs to be described. To do that, the sandbox definition is used. It contains every information needed to create a sandbox instance in a cloud. In the current version, the sandbox definition is created outside the KYPO platform and then stored as a GIT repository. The process of creation is described [here](../../operator-guide/sandboxes/sandbox-definition.md). 
 
 The page in the KYPO portal contains only one panel with two required fields: 
 

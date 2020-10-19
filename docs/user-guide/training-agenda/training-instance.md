@@ -53,7 +53,7 @@ On this page, the organizer can do the following actions:
 
     ??? key "Get Access"
     
-        Click the button, pop up will be displayed to download the ZIP archive. The archive contains configuration with SSH access to the respective sandbox. More about SSH access can be found in [Sandbox SSH Access](../../sandboxes/sandbox-ssh-access.md).
+        Click the button, pop up will be displayed to download the ZIP archive. The archive contains configuration with SSH access to the respective sandbox. More about SSH access can be found in [Sandbox SSH Access](../../operator-guide/sandboxes/sandbox-ssh-access.md).
     
     
 
@@ -79,7 +79,7 @@ An organizer can use this panel to edit basic information about the training ins
 * All definitions (released/unreleased), if they also have the administrator role. 
 
 ### 2. Assign pool 
-An organizer can use this panel to assign a pool with sandboxes to the training instance. The organizer chooses from the list of [pools](../sandboxes/pool.md) created by the sandbox organizer. It is necessary to properly choose the pool. A locked pool cannot be assigned to the training instance.
+An organizer can use this panel to assign a pool with sandboxes to the training instance. The organizer chooses from the list of [pools](../../operator-guide/sandboxes/pool.md) created by the sandbox organizer. It is necessary to properly choose the pool. A locked pool cannot be assigned to the training instance.
 
 ### 3. Edit Organizers 
 Allows the organizer to add other organizers to participate in managing training instances. Those organizers have the same rights against the training instance as the author, e.g. co-organizers can edit training instance or see the progress of trainees and results of training instance.

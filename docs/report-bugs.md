@@ -66,11 +66,11 @@ Steps like “Open App” and “Login,” aren’t necessary either, unless the
 
 Take a Screenshot of the instance of failure with proper captioning to highlight the defect. Highlight unexpected error messages with light red color if not obvious. This draws attention to the required area. Also, try to reproduce a bug with the opened `Network` tab in the browser console (F12). If you notice some error, take a screenshot of the response as follows: 
 
-![network-tab-response](../img/report-bugs/network-tab-response.png)
+![network-tab-response](img/report-bugs/network-tab-response.png)
 
 If everything is OK, try also check `Console` tab for error on the frontend side. If so take a screenshot. 
 
-![console-tab](../img/report-bugs/console-tab.png)
+![console-tab](img/report-bugs/console-tab.png)
 
 #### Additional information (optional)
 Provide information that doesn't match the previous features, e.g., in short, describe steps you have already taken to work around the bug.
