@@ -47,7 +47,7 @@ Organizers can click on the title of each pool to see a more [detailed view](#po
         All sandboxes must be unlocked and all allocation requests must be finished/stopped.   
 
 ??? download "Download"
-    Click the button to display a pop-up window to download the ZIP archive. The archive contains configuration with the SSH access to a respective sandbox. More about SSH access can be found [here](../../sandboxes/sandbox-ssh-access.md).
+    Click the button to display a pop-up window to download the ZIP archive. The archive contains configuration with the SSH access to a respective sandbox. More about SSH access can be found [here](../../operator-guide/sandboxes/sandbox-ssh-access.md).
 
 
 ??? lock "Lock"

@@ -6,7 +6,7 @@ A Topology Instance of a Sandbox is created in the cloud platform and connected 
 * **KYPO Proxy**: The server used only for SSH access to all sandboxes.
 * **KYPO Base Network**: The network where both servers and all sandboxes are connected through MAN ([more about management nodes](/sandboxes/sandbox-topology/topology-instance#topology-instance-management)).
 
-![topology-instance-blank](../img/sandboxes/topology-instance-blank.png)
+![topology-instance-blank](../../img/sandboxes/topology-instance-blank.png)
 
 ## Sandbox SSH access
 

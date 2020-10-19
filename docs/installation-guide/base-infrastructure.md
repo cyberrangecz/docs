@@ -25,9 +25,9 @@ There are 3 configuration files. Each for different OpenStack project.
 
 | OpenStack project     | Configuration file                       |
 | -----------------     | ------------------                       |
-| kypo-platform-devel   | [devel-params.yml](devel-params.yml)     |
-| kypo-platform-staging | [staging-params.yml](staging-params.yml) |
-| kypo-platform-testing | [testing-params.yml](testing-params.yml) |
+| kypo-platform-devel   | [devel-params.yml](configuration-files/devel-params.yml)     |
+| kypo-platform-staging | [staging-params.yml](configuration-files/staging-params.yml) |
+| kypo-platform-testing | [testing-params.yml](configuration-files/testing-params.yml) |
 
 Before you get to the deployment choose one of the configuration files and follow the next steps.
 
@@ -71,13 +71,13 @@ Before you get to the deployment choose one of the configuration files and follo
 
 There are 4 files of HEAT templates. Each of them is used to create a different part of the base infrastructure. 
 
-* [kypo-base-networking.yml](kypo-base-networking.yml) - Creates a base network where all sandboxes, KYPO-head and KYPO-proxy will be connected to.
+* [kypo-base-networking.yml](heat-templates/kypo-base-networking.yml) - Creates a base network where all sandboxes, KYPO-head and KYPO-proxy will be connected to.
     This template is designed for KYPO-head and KYPO-proxy to have public IP addresses.
-* [kypo-base-networking-private.yml](kypo-base-networking-private.yml) - Almost the same as the previous one but
+* [kypo-base-networking-private.yml](heat-templates/kypo-base-networking-private.yml) - Almost the same as the previous one but
     this template is designed for KYPO-head and KYPO-proxy to have private IP addresses.    
     **NOTE**: Do not use both networking templates.
-* [kypo-head.yml](kypo-head.yml) - Creates the KYPO-head server where KYPO platform will be installed.
-* [kypo-proxy-jump.yml](kypo-proxy-jump.yml) - Creates the KYPO-proxy server which is used for users to access sandboxes.
+* [kypo-head.yml](heat-templates/kypo-head.yml) - Creates the KYPO-head server where KYPO platform will be installed.
+* [kypo-proxy-jump.yml](heat-templates/kypo-proxy-jump.yml) - Creates the KYPO-proxy server which is used for users to access sandboxes.
 
 ### Create
 
