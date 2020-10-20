@@ -2,20 +2,20 @@
 Users with the role `ROLE_TRAINING_ORGANIZER` can use the training agenda to create and manage training instances. An organizer can access the page [Training Instance Overview](#training-instance-overview) by clicking the **Training Instance** button on the front page of the KYPO Portal:
 
 <p align="center">
-  <img src="../../../img/kypo-portal/trainings/training-instance/TI-agenda-button.png">
+  <img src="../../../img/user-guide/training-agenda/training-instance/TI-agenda-button.png">
 </p>
 
 or by clicking the **Instance** button in the left panel in the section Trainings.
 
 <p align="center">
-  <img src="../../../img/kypo-portal/trainings/training-instance/TI-agenda-sidebar.png">
+  <img src="../../../img/user-guide/training-agendas/training-instance/TI-agenda-sidebar.png">
 </p>
 
 ## Training Instance Overview
 This page lists all training instances that are available to the organizer (ones that the given organizer created or is a co-author of). 
 
 <p align="center">
-  <img src="../../../img/kypo-portal/trainings/training-instance/TI-overview.png">
+  <img src="../../../img/user-guide/training-agenda/training-instance/TI-overview.png">
 </p>
 
 On this page, the organizer can do the following actions:
@@ -69,7 +69,7 @@ During the creation of the training instance, the second and third panels are di
 2. ![create-and-continue-button](../../img/buttons/create-and-continue-button.png) that will allow the organizer to edit **co-organizers** and assing **pools** to the instance.
 
 <p align="center">
-  <img src="../../../img/kypo-portal/trainings/training-instance/TI-edit.png">
+  <img src="../../../img/user-guide/training-agenda/training-instance/TI-edit.png">
 </p>
 
 ### 1. Create/Edit Training Instance 
@@ -79,7 +79,7 @@ An organizer can use this panel to edit basic information about the training ins
 * All definitions (released/unreleased), if they also have the administrator role. 
 
 ### 2. Assign pool 
-An organizer can use this panel to assign a pool with sandboxes to the training instance. The organizer chooses from the list of [pools](../../operator-guide/sandboxes/pool.md) created by the sandbox organizer. It is necessary to properly choose the pool. A locked pool cannot be assigned to the training instance.
+An organizer can use this panel to assign a pool with sandboxes to the training instance. The organizer chooses from the list of [pools](../../user-guide/sandbox-agenda/pool.md) created by the sandbox organizer. It is necessary to properly choose the pool. A locked pool cannot be assigned to the training instance.
 
 ### 3. Edit Organizers 
 Allows the organizer to add other organizers to participate in managing training instances. Those organizers have the same rights against the training instance as the author, e.g. co-organizers can edit training instance or see the progress of trainees and results of training instance.
@@ -94,7 +94,7 @@ The page consists of three panels:
 3. [**Archived Training Runs**](#3-archived-training-runs)
 
 <p align="center">
-  <img src="../../../img/kypo-portal/trainings/training-instance/TI-summary.png">
+  <img src="../../../img/user-guide/training-agenda/training-instance/TI-summary.png">
 </p>
 
 ### 1. Overview
@@ -112,7 +112,7 @@ Lists training runs whose references to sandboxes in OpenStack were removed and 
 Page visualize individual progress of trainees in training runs. The organizer can see the time of particular events made by trainees, like the start of the training run, taken hints, completed level, etc. It is also possible to filter finished and unfinished training runs. 
 
 <p align="center">
-  <img src="../../../img/kypo-portal/trainings/training-instance/TI-progress.png">
+  <img src="../../../img/user-guide/training-agenda/training-instance/TI-progress.png">
 </p>
 
 ## Results of Training Instance 
@@ -128,25 +128,25 @@ The page displays a panel with five tabs:
 The tab displays a graph with a real-time development of the score of the trainees that are marked in the table under the graph. The graph also displays various types of events (displayed by a small circle). To visualize events taken by trainees, check/uncheck a checkbox displayed next to the table with participants. 
 
 <p align="center">
-  <img src="../../../img/kypo-portal/trainings/training-instance/TI-score-dev.png">
+  <img src="../../../img/user-guide/training-agenda/training-instance/TI-score-dev.png">
 </p>
 
 
 ### 2. Score Scatter Plot 
 <p align="center">
-  <img src="../../../img/kypo-portal/trainings/training-instance/TI-score-scatter.png">
+  <img src="../../../img/user-guide/training-agenda/training-instance/TI-score-scatter.png">
 </p>
 
 ### 3. Progress 
 <p align="center">
-  <img src="../../../img/kypo-portal/trainings/training-instance/TI-score-progress.png">
+  <img src="../../../img/user-guide/training-agenda/training-instance/TI-score-progress.png">
 </p>
 
 ### 4. Assessments 
 Displays statistics of individual assessment answers.
  
 <p align="center">
-  <img src="../../../img/kypo-portal/trainings/training-instance/TI-assessment.png">
+  <img src="../../../img/user-guide/training-agenda/training-instance/TI-assessment.png">
 </p>
 
 ### 5. Overview 
