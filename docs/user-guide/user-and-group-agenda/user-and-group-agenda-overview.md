@@ -9,12 +9,12 @@ Administration agenda is divided into three sections:
 To acess the above-mentioned sections, click the respective button on the front page of the KYPO portal.
 
 <p align="center">
-  <img src="../../../img/user-guide/administration/administration-agenda.png">
+  <img src="/img/user-guide/administration/administration-agenda.png">
 </p>
 
 
 Or click the button in the left panel in the section Administration:
 
 <p align="center">
-  <img src="../../../img/user-guide/administration/administration-left-panel.png">
+  <img src="/img/user-guide/administration/administration-left-panel.png">
 </p>

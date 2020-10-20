@@ -1,26 +1,13 @@
-# Training Instance
-Users with the role `ROLE_TRAINING_ORGANIZER` can use the training agenda to create and manage training instances. An organizer can access the page [Training Instance Overview](#training-instance-overview) by clicking the **Training Instance** button on the front page of the KYPO Portal:
-
-<p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-instance/TI-agenda-button.png">
-</p>
-
-or by clicking the **Instance** button in the left panel in the section Trainings.
-
-<p align="center">
-  <img src="../../../img/user-guide/training-agendas/training-instance/TI-agenda-sidebar.png">
-</p>
-
 ## Training Instance Overview
 This page lists all training instances that are available to the organizer (ones that the given organizer created or is a co-author of). 
 
 <p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-instance/TI-overview.png">
+  <img src="/img/user-guide/training-agenda/training-instance/TI-overview.png">
 </p>
 
 On this page, the organizer can do the following actions:
 
-* Click ![create-button](../../img/buttons/create-button.png) to redirect to the page [Create/Edit Training Instance](#1-createedit-training-instance).
+* Click ![create-button](/img/buttons/create-button.png) to redirect to the page [Create/Edit Training Instance](#1-createedit-training-instance).
 * Click on the name of the training instance to redirect to the [Summary of Training Instance](#summary-of-training-instance) page.
 * Click the name of the pool (if training instance has assigned pool) to redirect to the page with pool detail). 
 * Click the access token to redirect to the page where the access token is displayed and is easily copyable. 
@@ -35,7 +22,7 @@ On this page, the organizer can do the following actions:
         Click the button to delete the training instance. In the case, some conflict occurs (active training instance with assigned training runs, training instance with an assigned pool), the following confirmation window will be opened:
     
         <p align="center">
-          <img src="../../../img/kypo-portal/trainings/training-instance/TI-delete-confirmation.png">
+          <img src="/img/kypo-portal/trainings/training-instance/TI-delete-confirmation.png">
         </p>
     
         Either click the **Ok** button and solve the problems that do not allow the deletion of the training instance, or use the **Force** button which will delete all data about training instance.
@@ -53,7 +40,7 @@ On this page, the organizer can do the following actions:
 
     ??? key "Get Access"
     
-        Click the button, pop up will be displayed to download the ZIP archive. The archive contains configuration with SSH access to the respective sandbox. More about SSH access can be found in [Sandbox SSH Access](../../operator-guide/sandboxes/sandbox-ssh-access.md).
+        Click the button, pop up will be displayed to download the ZIP archive. The archive contains configuration with SSH access to the respective sandbox. More about SSH access can be found in [Sandbox SSH Access](/operator-guide/sandboxes/sandbox-ssh-access).
     
     
 
@@ -65,11 +52,11 @@ This page consists of three panels:
 3. [**Edit Organizers**](#3-edit-organizers) 
 
 During the creation of the training instance, the second and third panels are disabled. To make them accessible, the organizer must fill the required fields in the first panel and either click: 
-1. ![create-button](../../img/buttons/create-button.png) that will create the new training instance and redirect the organizer back to the [Training Instance Overview](#training-instance-overview). 
-2. ![create-and-continue-button](../../img/buttons/create-and-continue-button.png) that will allow the organizer to edit **co-organizers** and assing **pools** to the instance.
+1. ![create-button](/img/buttons/create-button.png) that will create the new training instance and redirect the organizer back to the [Training Instance Overview](#training-instance-overview). 
+2. ![create-and-continue-button](/img/buttons/create-and-continue-button.png) that will allow the organizer to edit **co-organizers** and assing **pools** to the instance.
 
 <p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-instance/TI-edit.png">
+  <img src="/img/user-guide/training-agenda/training-instance/TI-edit.png">
 </p>
 
 ### 1. Create/Edit Training Instance 
@@ -79,7 +66,7 @@ An organizer can use this panel to edit basic information about the training ins
 * All definitions (released/unreleased), if they also have the administrator role. 
 
 ### 2. Assign pool 
-An organizer can use this panel to assign a pool with sandboxes to the training instance. The organizer chooses from the list of [pools](../../user-guide/sandbox-agenda/pool.md) created by the sandbox organizer. It is necessary to properly choose the pool. A locked pool cannot be assigned to the training instance.
+An organizer can use this panel to assign a pool with sandboxes to the training instance. The organizer chooses from the list of [pools](/user-guide/sandbox-agenda/pool) created by the sandbox organizer. It is necessary to properly choose the pool. A locked pool cannot be assigned to the training instance.
 
 ### 3. Edit Organizers 
 Allows the organizer to add other organizers to participate in managing training instances. Those organizers have the same rights against the training instance as the author, e.g. co-organizers can edit training instance or see the progress of trainees and results of training instance.
@@ -94,11 +81,11 @@ The page consists of three panels:
 3. [**Archived Training Runs**](#3-archived-training-runs)
 
 <p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-instance/TI-summary.png">
+  <img src="/img/user-guide/training-agenda/training-instance/TI-summary.png">
 </p>
 
 ### 1. Overview
-Displays basic information about training instance as shown in the above figure. Provides links to display token and link to the detail of the assigned pool. Click on the ![show-progress](../../img/buttons/show-progess-button.png) button to redirect to the [Progress of Training Instance](#progress-of-training-instance) page to see the game progress of participants in time. Click on another button ![show-results](../../img/buttons/show-results-button.png) to redirect to the [Results of Training Instance](#results-of-training-instance)  page to see summary results of training instance visualized on various graphs and in tables. 
+Displays basic information about training instance as shown in the above figure. Provides links to display token and link to the detail of the assigned pool. Click on the ![show-progress](/img/buttons/show-progess-button.png) button to redirect to the [Progress of Training Instance](#progress-of-training-instance) page to see the game progress of participants in time. Click on another button ![show-results](/img/buttons/show-results-button.png) to redirect to the [Results of Training Instance](#results-of-training-instance)  page to see summary results of training instance visualized on various graphs and in tables. 
 
 ### 2. Active Training Runs
 Lists active training runs. Runs are either in the running state or finished state (trainee completed all levels).   All active training runs have assigned sandboxes from the pool. The organizer is able to delete the assigned sandbox from OpenStack by clicking :material-delete:{: .red .icon}. Be careful when deleting the sandbox from a training run in the running state. The trainee will not be able to complete the remaining levels. Those training runs should be archived after that, so trainees could not resume training run. 
@@ -112,7 +99,7 @@ Lists training runs whose references to sandboxes in OpenStack were removed and 
 Page visualize individual progress of trainees in training runs. The organizer can see the time of particular events made by trainees, like the start of the training run, taken hints, completed level, etc. It is also possible to filter finished and unfinished training runs. 
 
 <p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-instance/TI-progress.png">
+  <img src="/img/user-guide/training-agenda/training-instance/TI-progress.png">
 </p>
 
 ## Results of Training Instance 
@@ -128,25 +115,25 @@ The page displays a panel with five tabs:
 The tab displays a graph with a real-time development of the score of the trainees that are marked in the table under the graph. The graph also displays various types of events (displayed by a small circle). To visualize events taken by trainees, check/uncheck a checkbox displayed next to the table with participants. 
 
 <p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-instance/TI-score-dev.png">
+  <img src="/img/user-guide/training-agenda/training-instance/TI-score-dev.png">
 </p>
 
 
 ### 2. Score Scatter Plot 
 <p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-instance/TI-score-scatter.png">
+  <img src="/img/user-guide/training-agenda/training-instance/TI-score-scatter.png">
 </p>
 
 ### 3. Progress 
 <p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-instance/TI-score-progress.png">
+  <img src="/img/user-guide/training-agenda/training-instance/TI-score-progress.png">
 </p>
 
 ### 4. Assessments 
 Displays statistics of individual assessment answers.
  
 <p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-instance/TI-assessment.png">
+  <img src="/img/user-guide/training-agenda/training-instance/TI-assessment.png">
 </p>
 
 ### 5. Overview 
