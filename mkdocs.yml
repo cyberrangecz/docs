@@ -50,6 +50,7 @@ nav:
   - Available features: available-features.md
   - FAQ: faq.md
   - API:
+      - Tables of permissions: api/tables-of-permissions.md
       - Training service: api/training-swagger-open-api.md
       - User and Group service: api/user-and-group-swagger-open-api.md
       - Elasticsearch service: api/elasticsearch-swagger-open-api.md
