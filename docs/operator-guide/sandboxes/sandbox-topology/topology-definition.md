@@ -1,4 +1,4 @@
-Topology Definition is used for the description of [Topology Instance](/sandboxes/sandbox-topology/topology-instance). See the following image to help you visualize what you can define in the topology definition.
+Topology Definition is used for the description of [Topology Instance](../../sandbox-topology/topology-instance). See the following image to help you visualize what you can define in the topology definition.
 
 ![topology-definition-color](../../../img/operator-guide/sandboxes/topology-definition-color.png)
 
@@ -37,15 +37,15 @@ The list of routers. Routers are the only nodes through which hosts can communic
     * **image**: name of image
     * **man_user**: name of user with sudo privileges
     * **mng_protocol (optional)**: protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
-* **cidr**: for network between router and BR ([more about management nodes](/sandboxes/sandbox-topology/topology-instance#topology-instance-management), the recommended range of the network is `/29`, [unique cidrs restriction](#disjunkt-cidrs))
+* **cidr**: for network between router and BR ([more about management nodes](../topology-instance#topology-instance-management), the recommended range of the network is `/29`, [unique cidrs restriction](#disjunkt-cidrs))
    
 ### networks
 
 The list of networks. A network is used to connect router with end host. It has the following attributes.
 
 * **name**: name of network ([names restriction](#names), [unique names restriction](#unique-names))
-* **cidr**: IP address range in CIDR notation ([unique cidrs restriction](#disjunkt-cidrs))
-* **accessible_by_user**: optional attribute specifies whether the UAN ([more about management nodes](/sandboxes/sandbox-topology/topology-instance#topology-instance-management)) should be connected to this network (default: `True`).
+* **cidr**: IP address range in CIDR notation ([unique cidrs restriction](#disjunct-cidrs))
+* **accessible_by_user**: optional attribute specifies whether the UAN ([more about management nodes](../topology-instance#topology-instance-management)) should be connected to this network (default: `True`).
 
 ### net_mappings
 
@@ -90,7 +90,7 @@ ubuntu-bionic-x86_64                        | ubuntu
   
 For routers it is strongly recommended to use `debian-9-x86_64` image.
 
-[How to list OpenStack images](/installation/base-infrastructure/configuration)
+[How to list OpenStack images](../../../../installation-guide/base-infrastructure#configuration)
 
 ### Flavor
 
@@ -109,7 +109,7 @@ csirtmu.large8x32  | 8  | 32 | 80
 csirtmu.jumbo16x32 | 16 | 32 | 100
 csirtmu.jumbo16x64 | 16 | 64 | 100
 
-[How to list OpenStack flavors](/installation/base-infrastructure/configuration)
+[How to list OpenStack flavors](../../../../installation-guide/base-infrastructure#configuration)
 
 ## Restrictions
 
@@ -124,9 +124,9 @@ Names of hosts, networks, and routers should be unique in the context of a Topol
 ### Disjunct CIDRs
 
 Networks and routers CIDRs should be disjunct (not overlapping) and in `network_mappings` and `router_mappings` IP address should be from the IP address range of the network, other way networking wouldn't work.
-Network and routers CIDRs shouldn't overlap with [management networks](/sandboxes/sandbox-topology/topology-instance#topology-instance-management) CIDRs too.
+Network and routers CIDRs shouldn't overlap with [management networks](../topology-instance#topology-instance-management) CIDRs too.
 
-[How to set CIDRs of management networks](/installation/kypo-platform-configuration#sandbox-service).
+[How to set CIDRs of management networks](../../../../installation-guide/kypo-platform-configuration#sandbox-service).
         
 ### Address restriction
 

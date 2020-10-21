@@ -1,4 +1,4 @@
-The User Ansible is for [Topology Instance](/sandboxes/sandbox-topology/topology-instance) customizations. Use it to set up your environment, create users, install packages, etc.
+The User Ansible is for [Topology Instance](../sandbox-topology/topology-instance) customizations. Use it to set up your environment, create users, install packages, etc.
 
 The content of the **provisioning** directory is the same as any other [Ansible](https://docs.ansible.com/ansible/latest/index.html).
 
@@ -22,11 +22,11 @@ The KYPO requires presence User Ansible, but if you do not need any provisioning
 
 On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#default-groups), the KYPO sandbox-service defines three more default host groups.
 
-* **management**: the group containing all the [sandbox management nodes](/sandboxes/sandbox-topology/topology-instance#topology-instance-management), i.e., MAN, BR, and UAN node.
-* **routers**: the group containing all the routers defined in [Topology definition](/sandboxes/sandbox-topology/topology-definition#routers).
-* **hosts**: the group containing all the hosts defined in [Topology definition](/sandboxes/sandbox-topology/topology-definition#hosts).
+* **management**: the group containing all the [sandbox management nodes](../sandbox-topology/topology-instance#topology-instance-management), i.e., MAN, BR, and UAN node.
+* **routers**: the group containing all the routers defined in [Topology definition](../sandbox-topology/topology-definition#routers).
+* **hosts**: the group containing all the hosts defined in [Topology definition](../sandbox-topology/topology-definition#hosts).
 
-You can specify additional Ansible host groups in [Topology definition](/sandboxes/sandbox-topology/topology-definition#groups) and then use them in a `playbook.yml` file of the [User Ansible](#user-ansible).
+You can specify additional Ansible host groups in [Topology definition](../sandbox-topology/topology-definition#groups) and then use them in a `playbook.yml` file of the [User Ansible](#user-ansible).
 
 ### Ansible Special Variables
 
@@ -36,7 +36,7 @@ On top of [Ansible special variables](https://docs.ansible.com/ansible/latest/re
 * **kypo_global_pool_id**: the ID of the pool for which the sandbox was created.
 * **kypo_global_sandbox_allocation_unit_id**: the ID of the sandbox allocation unit. Once the sandbox is fully provisioned, it is the same ID as the sandbox ID.
 * **kypo_global_sandbox_ip**: the sandbox IPv4 address.
-* **kypo_global_sandbox_name**: the sandbox name, which is the compound of [stack_name_prefix](/installation/kypo-platform-configuration#sandbox-service), pool ID and sandbox allocation unit ID.
+* **kypo_global_sandbox_name**: the sandbox name, which is the compound of [stack_name_prefix](../../../installation-guide/kypo-platform-configuration#sandbox-service), pool ID and sandbox allocation unit ID.
 * **kypo_global_head_ip**: the KYPO head server IP address.
 
 ### Ansible Inventory

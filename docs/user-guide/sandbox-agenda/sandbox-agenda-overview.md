@@ -19,12 +19,12 @@ The purpose of the Sandbox Agenda is to create and manage sandbox definitions, p
 To access the above-mentioned pages, click the respective button on the front page of the KYPO portal. 
 
 <p align="center">
-  <img src="/img/user-guide/sandbox-agenda/overview/sandbox-agenda-overview.png">
+  <img src="../../../img/user-guide/sandbox-agenda/overview/sandbox-agenda-overview.png">
 </p>
 
 Or by clicking the respective button in the left panel in the section Sandboxes:
 
 <p align="center">
-  <img src="/img/user-guide/sandbox-agenda/overview/sandbox-agenda-overview-panel.png">
+  <img src="../../../img/user-guide/sandbox-agenda/overview/sandbox-agenda-overview-panel.png">
 </p>
 

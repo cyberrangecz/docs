@@ -1,13 +1,13 @@
 # Resources
 A user with the role `ROLE_KYPO-SANDBOX-SERVICE_ORGANIZER` can see resources that are available in cloud service. An organizer can access the [Resources Overview](#pool-overview) by clicking on the **Resources** button on the front page of KYPO Portal:
 <p align="center">
-  <img src="/img/kypo-portal/sandboxes/resources/sandboxes-agenda-resources.png">
+  <img src="../../../img/user-guide/sandbox-agenda/resources/sandboxes-agenda-resources.png">
 </p>
 
 or by clicking **Resources** button in the left panel in the section Sandboxes: 
 
 <p align="center">
-  <img src="/img/kypo-portal/sandboxes/resources/resources-sidebar.png">
+  <img src="../../../img/user-guide/sandbox-agenda/resources/resources-sidebar.png">
 </p>
 
 ## Resources Overview
@@ -23,7 +23,7 @@ Resources Overview consist of two panels:
 * **VCPUs**: Virtual CPUs currently in use by all instances,
 * **RAM**: The amount of the main memory currently in use by all instances.
 
-![usage-statistics](/img/user-guide/sandbox-agenda/resources/usage-stats.png)
+![usage-statistics](../../img/user-guide/sandbox-agenda/resources/usage-stats.png)
 
 ### 2. Overview of OS images
 Provides a list of available OS images that can be installed on VMs. Each row contains the following values of image parameters:
@@ -46,4 +46,4 @@ Click extend button :material-chevron-down:{: .icon .grey} to show **detailed in
 * **Created At**: Time of the creation.
 * **Tags**: Used to filter images.
 
-![overview-images](/img/user-guide/sandbox-agenda/resources/overview-images.png)
+![overview-images](../../img/user-guide/sandbox-agenda/resources/overview-images.png)
