@@ -1,10 +1,10 @@
 ## Sandbox
 
-A Topology Instance of a Sandbox is created in the cloud platform and connected to the [KYPO Base Infrastructure](/installation/base-infrastructure/creation) which mainly consists of 2 servers and a network.
+A Topology Instance of a Sandbox is created in the cloud platform and connected to the [KYPO Base Infrastructure](../../../installation-guide/base-infrastructure) which mainly consists of 2 servers and a network.
 
 * **KYPO Head**: The server where the KYPO platform is installed.
 * **KYPO Proxy**: The server used only for SSH access to all sandboxes.
-* **KYPO Base Network**: The network where both servers and all sandboxes are connected through MAN ([more about management nodes](/sandboxes/sandbox-topology/topology-instance#topology-instance-management)).
+* **KYPO Base Network**: The network where both servers and all sandboxes are connected through MAN ([more about management nodes](../sandbox-topology/topology-instance#topology-instance-management)).
 
 ![topology-instance-blank](../../img/operator-guide/sandboxes/topology-instance-blank.png)
 
@@ -19,7 +19,7 @@ We differentiate between 2 types of SSH access based on privileges.
 
 Access to the sandbox nodes is through the **KYPO proxy** and a **MAN** node as jump hosts and a **mng-network**.
 
-1. Download the SSH access zip file from [Pool Overview](/operator-guide/sandboxes/pool/#pool-overview) page.
+1. Download the SSH access zip file from [Pool Overview](../../../user-guide/sandbox-agenda/pool/#pool-overview) page.
 
 2. Extract the `ssh-access.zip` file to the `~/.ssh/` directory.
 
@@ -56,14 +56,14 @@ Access to the sandbox nodes is through the **KYPO proxy**, a **MAN** node, and a
 !!! warning "Sandbox definition set up"
     You will not be able to use this approach if you did not set up the sandbox definition correctly!
 
-    * Set user access to networks in the sandbox definition file `sandbox.yml`, e.g., set an attribute `accessible_by_user` of the network to value `True` or leave it undefined as it is a default value. See [Topology Definition](/sandboxes/sandbox-topology/topology-definition#networks).
+    * Set user access to networks in the sandbox definition file `sandbox.yml`, e.g., set an attribute `accessible_by_user` of the network to value `True` or leave it undefined as it is a default value. See [Topology Definition](../sandbox-topology/topology-definition#networks).
 
     * Set user access to hosts connected to user-accessible networks, e.g., apply Ansible role [kypo-user-access](https://gitlab.ics.muni.cz/CSIRT-MU-public/ansible-roles/kypo-user-access/-/tree/master/) to specified hosts in the file `provisioning/playbook.yml` of the sandbox definition.
 
     !!! warning
         The SSH config file will be generated with the hosts directive `User` set to `user-access`, therefore set variable `kypo_user_access_username` to value `user-access` or modify the SSH config file later.
 
-1. Download the SSH access zip file from [Training Run](/user-guide/training-agenda/training-run) page with topology visualization.
+1. Download the SSH access zip file from [Training Run](../../../user-guide/training-agenda/training-run) page with topology visualization.
 
 2. Extract the `ssh-access.zip` file to the `~/.ssh/` directory.
 
