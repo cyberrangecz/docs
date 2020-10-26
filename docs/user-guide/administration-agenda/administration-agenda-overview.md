@@ -1,4 +1,3 @@
-# Administration overview
 That administration agenda is available only for KYPO portal users with the role of `ROLE_USER_AND_GROUP_ADMINISTRATOR`. This agenda is used for assigning roles (e.g., designer, organizer, or administrator) to the other users to be able to work in the KYPO portal as expected. By default, all the logged-in users are assigned to `DEFAULT-GROUP` that contains all the basic roles that are essential to play a game (for that reason it is not required to do some extra step for students that enroll in the class for playing a game in KYPO portal).
 Administration agenda is divided into three sections: 
 

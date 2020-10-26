@@ -22,11 +22,11 @@ nav:
           - Training Definition: user-guide/training-agenda/training-definition.md
           - Training Instance: user-guide/training-agenda/training-instance.md
           - Training Run: user-guide/training-agenda/training-run.md
-      - User and Group Agenda:
-          - Overview: user-guide/user-and-group-agenda/user-and-group-agenda-overview.md
-          - Users: user-guide/user-and-group-agenda/users.md
-          - Groups: user-guide/user-and-group-agenda/groups.md
-          - Microservices: user-guide/user-and-group-agenda/microservices.md
+      - Administration Agenda:
+          - Overview: user-guide/administration-agenda/administration-agenda-overview.md
+          - Users: user-guide/administration-agenda/users.md
+          - Groups: user-guide/administration-agenda/groups.md
+          - Microservices: user-guide/administration-agenda/microservices.md
   - Operator guide:
       - Overview: operator-guide/operator-guide-overview.md
       - Platform Components: operator-guide/platform-components.md
