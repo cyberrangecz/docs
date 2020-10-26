@@ -7,7 +7,7 @@ User guide functions as a manual on how to operate all of the functions that KYP
 
  1. [Training agenda](./training-agenda/training-agenda-overview.md) with main focus on creation and organization of trainings.
  2. [Sandbox agenda](./sandbox-agenda/sandbox-agenda-overview.md) that specifies guide lines for sandbox creation and realization. 
- 3. [User agenda](./administration-agenda/user-and-group-agenda-overview.md) that deals with the administration of users and their access to the specific parts of the KYPO portal based on user access roles. 
+ 3. [User agenda](./administration-agenda/administration-agenda-overview.md) that deals with the administration of users and their access to the specific parts of the KYPO portal based on user access roles. 
  
 ## Who can benefit from this section?
 
