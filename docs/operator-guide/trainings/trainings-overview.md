@@ -22,7 +22,7 @@ The content of the whole exercise is described using so-called training definiti
 ## Training Run
  Represents a single run of the training of the particular player. The run is accessed based on the access token obtained from the training instance instructor. The player enters the access token to the particular field and if the token is valid, the training run starts (behind the scenes, a sandbox is assigned to that training run from the pool that is associated with the particular training instance).
 
-## Graphical representation
+## Graphical Representation
 
 ![kypo-basic-elements-training](/img/KYPO-basic-elements-training.png)
 

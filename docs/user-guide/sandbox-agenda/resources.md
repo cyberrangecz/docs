@@ -5,7 +5,7 @@ Resources Overview consist of two panels:
 1. [**Usage statistics of cloud server**](#1-usage-statistics-of-cloud-server)
 2. [**Overview of OS images**](#2-overview-of-os-images)
 
-### 1. Usage statistics of cloud server
+### 1. Usage Statistics of Cloud Server
 * **kypo-platform-testing**: the name of a cloud server,
 * **Instances**: Created VMs in cloud server,
 * **VCPUs**: Virtual CPUs currently in use by all instances,
@@ -13,7 +13,7 @@ Resources Overview consist of two panels:
 
 ![usage-statistics](../../img/user-guide/sandbox-agenda/resources/usage-stats.png)
 
-### 2. Overview of OS images
+### 2. Overview of OS Images
 Provides a list of available OS images that can be installed on VMs. Each row contains the following values of image parameters:
 
 * **Name**: The unique name of the OS image.

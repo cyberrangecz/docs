@@ -65,7 +65,7 @@ An organizer can use this panel to edit basic information about the training ins
 * Released training definitions and definitions created by the organizer, if they also have the designer role. 
 * All definitions (released/unreleased), if they also have the administrator role. 
 
-### 2. Assign pool 
+### 2. Assign Pool 
 An organizer can use this panel to assign a pool with sandboxes to the training instance. The organizer chooses from the list of [pools](/user-guide/sandbox-agenda/pool) created by the sandbox organizer. It is necessary to properly choose the pool. A locked pool cannot be assigned to the training instance.
 
 ### 3. Edit Organizers 

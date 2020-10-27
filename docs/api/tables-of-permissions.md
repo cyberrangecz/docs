@@ -1,10 +1,10 @@
 The following tables display the actions that can perform the users with the specified role. To be specific it displays all endpoints available across KYPO microservices that can be called. Because of that tables are divided based on individual microservices and then divided based on the resource to which they relate. The more detailed description of the endpoints are in the pages in this section. 
 
 
-### User and Group microservice
+### User and Group Microservice
 
 
-#### Users endpoints  
+#### Users Endpoints  
 | Action | CRUD operation |  Guest | User | Administrator |
 | ------ | :------------: |  :---: | :--: | :-----------: |
 | Get users | READ | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
@@ -17,7 +17,7 @@ The following tables display the actions that can perform the users with the spe
 | Delete user | DELETE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Delete users | DELETE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 
-#### Groups endpoints
+#### Groups Endpoints
 | Action | CRUD operation | Guest | User | Administrator |
 | ------ | :------------: | :---: | :--: | :-----------: |
 | Create new group | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
@@ -32,7 +32,7 @@ The following tables display the actions that can perform the users with the spe
 | Delete group | DELETE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Delete groups | DELETE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 
-#### Roles endpoints
+#### Roles Endpoints
 | Action | CRUD operation | Guest | User | Administrator |
 | ------ | :------------: | :---: | :--: | :-----------: |
 | Get roles | READ | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
@@ -41,7 +41,7 @@ The following tables display the actions that can perform the users with the spe
 | Get users with given role type | READ | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Get users with given role type and not with given IDs | READ | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 
-#### Microservices endpoints
+#### Microservices Endpoints
 | Action | CRUD operation | Guest | User | Administrator |
 | ------ | :------------: | :---: | :--: | :-----------: |
 | Get Microservices | READ | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
@@ -50,9 +50,9 @@ The following tables display the actions that can perform the users with the spe
 !!! warning
     Registration of a microservice is not secured at all.
 
-### Training microservice 
+### Training Microservice 
 
-#### Training Definitions endpoints
+#### Training Definitions Endpoints
 
 !!! note
     The symbol :material-hexagram:{: .green } means that action can be performed only by the designer of that particular training definition.
@@ -84,7 +84,7 @@ The following tables display the actions that can perform the users with the spe
 | Delete one level | DELETE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
 
 
-#### Training Instances endpoints
+#### Training Instances Endpoints
 
 !!! note
     The symbol :material-hexagram:{: .green } means that action can be performed only by the organizer of that particular training instance.
@@ -103,7 +103,7 @@ The following tables display the actions that can perform the users with the spe
 | Edit organizers | UPDATE |  :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Delete training instance | DELETE |  :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 
-#### Training Runs endpoints
+#### Training Runs Endpoints
 
 !!! note
     The symbols: 
@@ -128,7 +128,7 @@ The following tables display the actions that can perform the users with the spe
 | Delete training runs | DELETE |  :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Delete training run | DELETE |  :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 
-#### Export & Import endpoints
+#### Export & Import Endpoints
 
 | Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
@@ -137,7 +137,7 @@ The following tables display the actions that can perform the users with the spe
 | Archive training instance | READ |  :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 
 
-#### Visualizations endpoints
+#### Visualizations Endpoints
 
 !!! note
     The symbols: 
@@ -152,4 +152,4 @@ The following tables display the actions that can perform the users with the spe
 | Get users by IDs| READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 
 
-### Sandbox microservice 
+### Sandbox Microservice 

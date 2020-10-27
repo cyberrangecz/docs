@@ -59,7 +59,7 @@ This page contains a short form that needs to be filled out before creating a ne
 ![create-pool](../../img/user-guide/sandbox-agenda/pool/create-pool.png)
 
 
-## Pool detail
+## Pool Detail
 When the organizer clicks the title of a given pool in **Pool Overview** they will be redirected to the **Pool Detail** page.
   
 ![pool-detail](../../img/user-guide/sandbox-agenda/pool/pool-detail.png)
