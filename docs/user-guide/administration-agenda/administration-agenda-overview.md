@@ -12,7 +12,7 @@ To acess the above-mentioned sections, click the respective button on the front 
 </p>
 
 
-Or click the button in the left panel in the section Administration:
+Or click the button in the global navigation in the section Administration:
 
 <p align="center">
   <img src="/img/user-guide/administration-agenda/administration-left-panel.png">

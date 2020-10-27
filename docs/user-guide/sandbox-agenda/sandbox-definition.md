@@ -1,15 +1,3 @@
-# Sandbox Definitions 
-A user with the role `ROLE_KYPO-SANDBOX-SERVICE_DESIGNER` is responsible for creating sandbox definitions that are used to allocate sandboxes in the cloud. A sandbox designer can access the [Sandbox Definition Overview](#Sandbox Definition Overview) by clicking on the **Sandbox Definition** button on the front page of the KYPO portal:
-
-<p align="center">
-  <img src="../../../img/user-guide/sandbox-agenda/sandbox-definition/sandbox-agenda-definition.png">
-</p>
-or by clicking the **Definition** button in the left panel in the section Sandboxes: 
-<p align="center">
-  <img src="../../../img/user-guide/sandbox-agenda/sandbox-definition/sandbox-definition-sidebar.png">
-</p>
-
-z
 ## Sandbox Definition Overview
 This page is used to list all sandbox definitions that can be used by sandbox organizers to create a pool of sandboxes for training instances. It consists of a table where each row represents one sandbox definition. Click the expand button :material-chevron-down:{: .icon} to show detailed info about the sandbox definition. The definition that is not assigned to any pool can be deleted using the delete button :material-delete:{: .red .icon }. A new sandbox definition can be added by clicking on the ![create-button](../../img/buttons/create-button.png) button that redirects the designer to the [Create Sandbox Definition](#create-sandbox-definition) page. 
 

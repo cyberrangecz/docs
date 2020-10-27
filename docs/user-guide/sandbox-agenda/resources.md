@@ -1,15 +1,3 @@
-# Resources
-A user with the role `ROLE_KYPO-SANDBOX-SERVICE_ORGANIZER` can see resources that are available in cloud service. An organizer can access the [Resources Overview](#pool-overview) by clicking on the **Resources** button on the front page of KYPO Portal:
-<p align="center">
-  <img src="../../../img/user-guide/sandbox-agenda/resources/sandboxes-agenda-resources.png">
-</p>
-
-or by clicking **Resources** button in the left panel in the section Sandboxes: 
-
-<p align="center">
-  <img src="../../../img/user-guide/sandbox-agenda/resources/resources-sidebar.png">
-</p>
-
 ## Resources Overview
 
 Resources Overview consist of two panels:

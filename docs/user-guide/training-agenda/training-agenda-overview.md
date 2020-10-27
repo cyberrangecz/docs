@@ -18,7 +18,7 @@ To access the above-mentioned pages, click the respective button on the front pa
   <img src="../../../img/user-guide/training-agenda/training-agenda.png">
 </p>
 
-Or click the button in the left panel in the section Trainings.
+Or click the button in the global navigation in the section Trainings.
 
 <p align="center">
   <img src="../../../img/user-guide/training-agenda/training-agenda-left-panel.png">

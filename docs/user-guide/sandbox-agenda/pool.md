@@ -1,14 +1,3 @@
-# Pool
-A user with the role `ROLE_KYPO-SANDBOX-SERVICE_ORGANIZER` uses sandbox agenda to create and manage so-called sandbox pools. Pools are groups of sandbox instances created according to the sandbox definition associated with the pool. The process of creation of sandboxes in the pool is called allocation. An organizer can access the [Pool Overview](#pool-overview) by clicking on the **Pool** button on the front page of the KYPO portal:
-<p align="center">
-  <img src="../../../img/user-guide/sandbox-agenda/pool/sandbox-agenda-pool.png">
-</p>
-
-or by clicking **Pool** button in the left panel in the section Sandboxes: 
-<p align="center">
-  <img src="../../../img/user-guide/sandbox-agenda/pool/sandbox-pool-sidebar.png">
-</p>
-
 ## Pool Overview
 
 This page is used to list all sandbox pools that are accessible in the KYPO portal. In the following table, each row represents one pool: 
