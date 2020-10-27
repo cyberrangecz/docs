@@ -24,9 +24,9 @@ The content of the whole exercise is described using so-called training definiti
 
 ## Graphical Representation
 
-![kypo-basic-elements-training](/img/KYPO-basic-elements-training.png)
+![kypo-basic-elements-training](../../img/KYPO-basic-elements-training.png)
 
 
-The following picture displays interconnection between trainings and [sandboxes](/operator-guide/sandboxes/sandboxes-overview).
+The following picture displays interconnection between trainings and [sandboxes](../operator-guide/sandboxes/sandboxes-overview).
 
-![kypo-basic-elements-training](/img/KYPO-basic-elements.png)
+![kypo-basic-elements-training](../../img/KYPO-basic-elements.png)
