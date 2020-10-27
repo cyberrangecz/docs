@@ -56,7 +56,7 @@ sudo vim /etc/syslog-ng/conf.d/forward-rfc5424-messages.conf
 
 Here in the `destination d_kypo_head` section change the `port(515)` to the Host port you set in the VirtualBox Manager in the first step and save your changes. Following example from the first step your configuration should look like this (with exception in IP address which should be the one you set in second step):
 ```
-# EVENTS log source
+# EVENTS Log Source
 source s_host {
     network(
        ip(0.0.0.0) 
@@ -76,7 +76,7 @@ destination d_kypo_head {
     );
 };
 
-# EVENTS Log pairing
+# EVENTS Log Pairing
 log {source(s_host); destination(d_kypo_head);};
 ```
 

@@ -7,7 +7,7 @@ All roles are imported into the KYPO portal by registering a [microservice](../.
 2. [User and group roles](#user-and-group-roles)
 3. [Sandbox roles](#sandbox-roles)
 
-### Training roles
+### Training Roles
 
 ``ROLE_TRAINING_TRAINEE``: **Trainees** are allowed to start, resume and play the [training run](../../user-guide/training-agenda/training-run.md). After the training is complete trainees can also check and compare their scores. The role of the trainee is the default role of each KYPO user.
 
@@ -17,7 +17,7 @@ All roles are imported into the KYPO portal by registering a [microservice](../.
 
 ``ROLE_TRAINING_ADMINISTRATOR``: **Training administrators** have all the privileges of the above roles with the exception being that they are not restricted by ownership of the training instances and definitions. This means that the training administrator can access all definitions and instances that exist on the KYPO platform.
 
-### User and group roles
+### User and Group Roles
 
 ``ROLE_USER_AND_GROUP_GUEST``: **Guest** can only see information about himself or basic information about other users. It is the default role for every user of the KYPO platform.
 
@@ -25,7 +25,7 @@ All roles are imported into the KYPO portal by registering a [microservice](../.
 
 ``ROLE_USER_AND_GROUP_ADMINISTRATOR``: **Administrators** can fully access and manage users, groups, and microservices in the user and group agenda.
 
-### Sandbox roles
+### Sandbox Roles
 
 ``ROLE_KYPO-SANDBOX-SERVICE_TRAINEE``: **Sandbox trainees** cannot access any part of the sandbox agenda, but they can access sandbox topology during the game. This role is the default role of all KYPO users.
 

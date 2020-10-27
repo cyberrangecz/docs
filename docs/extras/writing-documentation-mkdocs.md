@@ -96,7 +96,7 @@ Left         | Center        | Right
 Left         | Center        | Right
 ```
 
-### Fenced code blocks
+### Fenced Code Blocks
 The first line should contain 3 or more backtick (\`) characters, and the last line should contain the same number of backtick characters (\`). The language can optionally be specified on the first line after the backticks which informs any syntax highlighters of the language used: 
 ~~~~~~~~~~~~~~~~~~~~~
 ```python
@@ -198,5 +198,5 @@ In order to create custom note panel with custom icon you need to do the followi
 
 
 
-### More extensions
+### More Extensions
 To know more about markdown extension see the MkDocs' [markdown_extensions](https://www.mkdocs.org/user-guide/configuration/#markdown_extensions) configuration setting for details on how to enable extensions.

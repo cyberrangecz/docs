@@ -8,14 +8,14 @@ A Topology Instance of a Sandbox is created in the cloud platform and connected 
 
 ![topology-instance-blank](../../img/operator-guide/sandboxes/topology-instance-blank.png)
 
-## Sandbox SSH access
+## Sandbox SSH Access
 
 We differentiate between 2 types of SSH access based on privileges.
 
 * [**Management access**](#management-access): For those who manages sandboxes or KYPO platform (role `organizer`).
 * [**User access**](#user-access): For everyone else (role `trainee`).
 
-### Management access
+### Management Access
 
 Access to the sandbox nodes is through the **KYPO proxy** and a **MAN** node as jump hosts and a **mng-network**.
 
@@ -49,7 +49,7 @@ Access to the sandbox nodes is through the **KYPO proxy** and a **MAN** node as 
     $ ssh man
     ```
 
-### User access
+### User Access
 
 Access to the sandbox nodes is through the **KYPO proxy**, a **MAN** node, and a **UAN** node as jump hosts and an `accessible_by_user` networks.
 

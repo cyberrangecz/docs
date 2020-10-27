@@ -4,7 +4,7 @@ The objective of the **User guide** is to provide a basic guidelines to the user
 
 The portal is divided into three **KYPO agendas** and user guide functions as a manual on how to operate all of the functions that these agendas offers.
 
-## KYPO Portal page
+## KYPO Portal Page
 
 ![KYPO-home-page](../img/user-guide/KYPO-home-page.png)
 
@@ -19,7 +19,7 @@ The portal is divided into three **KYPO agendas** and user guide functions as a 
  2. [Sandboxes agenda](./sandbox-agenda/sandbox-agenda-overview.md) that specifies guide lines for sandbox creation and realization. 
  3. [Administration agenda](./administration-agenda/administration-agenda-overview.md) that deals with the administration of users and their access to the specific parts of the KYPO portal based on user access roles.
  
-## Who can benefit from this section?
+## Who Can Benefit From This Section?
 
 * **Training Designers** can find information about management of [Training definitions](./training-agenda/training-definition.md).
 * **Training Organizers** can find information on how to manage [Training instances](./training-agenda/training-instance.md), [Sandbox pools](./sandbox-agenda/pool.md) and [Resources](./sandbox-agenda/resources.md) needed for Sandbox initialization.

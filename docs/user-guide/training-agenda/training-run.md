@@ -14,7 +14,7 @@ Enter the access token prefix and PIN provided by the organizer of the training 
 !!! note
     If trainee already accessed training run in particular training instance and haven't finished it yet, the training run will be resumed. 
 
-### 2. Table with the list of training runs
+### 2. Table With the List of Training Runs
 Lists all training runs of the logged-in trainee. Each row of the table represents a training run of a particular training instance (trainee can access multiple training runs within training instance). The training run can be unfinished or finished. An unfinished run can be resumed using the :material-launch:{: .blue .icon} button or entering the access token in the Access Training panel.   
 A trainee can view the results of the finished training run by clicking the :material-poll-box:{: .blue .icon} button.  
 
@@ -58,7 +58,7 @@ At the game level, the trainee must complete the assignment specified on the lef
 </p>
 
 
-#### VM manipulation
+#### VM Manipulation
 Right click on the selected network node (host or router), the following menu will be opened:
 
 <p align="center">

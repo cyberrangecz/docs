@@ -45,9 +45,9 @@ During the creation of a group, the second and third panels are disabled. To mak
 Here, the administrator is required to fill up all the necessary fields before creating a new group. The `Expiration Date` field is optional and is useful in the cases when the administrator will create a group of designers, e.g., for a particular semester. After filling up fields, click on the ![create-button](/img/buttons/create-button.png) button to save the group. Then panels **Edit members** and **Edit roles** will be rolled down. 
 
 ![create-group-panel](/img/user-guide/administration-agenda/create-group.png)
-### 2. Edit members
+### 2. Edit Members
 Here, the administrator can add users individually or import all users from the group. The part **Add users** provide an easy way to search for users whose administrator would like to add to the group. Administrators can also add all users from the specific group in the part **Import users**. Click on the ![add-button](/img/buttons/add-button.png) button to add selected users to the group. All users will be added to the group and will be present in the list in the part **Members of group**. A user or multiple users can be removed via the common way mentioned before.
 
 ![edit-members-panel](/img/user-guide/administration-agenda/edit-members.png)
-### 3. Edit roles 
+### 3. Edit Roles 
 Here, the administrator can assign roles to the group. The part **Add roles** provide an easy way to search for roles which the administrator would like to assign to the group. Click on the ![add-button](/img/buttons/add-button.png) button to assign all selected roles to the group. Assigned roles will be present in the list in the part **Roles of group**. A role or multiple roles can be removed via the common way mentioned before.

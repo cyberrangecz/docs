@@ -117,7 +117,7 @@ csirtmu.jumbo16x64 | 16 | 64 | 100
 
 All names should have only characters: `a-z`, `A-Z`, `1-9`, and `-` and the first character should be a lower case letter.
 
-### Unique names
+### Unique Names
 
 Names of hosts, networks, and routers should be unique in the context of a Topology Definition (they are used for instance identification).
 
@@ -128,7 +128,7 @@ Network and routers CIDRs shouldn't overlap with [management networks](../topolo
 
 [How to set CIDRs of management networks](../../../../installation-guide/kypo-platform-configuration#sandbox-service).
         
-### Address restriction
+### Address Restriction
 
 During a network creation, the OpenStack will take the first IP address of the specified IP address range for a gateway (a Router), the second IP address for DHCP, and the rest for hosts. The OpenStack will non-deterministically take the first address of the network or the first address after a gateway (a Router) address and if any of net_mappings has an IP address set to one of these addresses, sandbox creation may fail.
 

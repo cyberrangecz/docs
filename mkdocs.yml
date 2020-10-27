@@ -8,10 +8,10 @@ theme:
 
 nav:
   - Home: index.md
-  - Core principles: core-principles.md
-  - User guide:
+  - Core Principles: core-principles.md
+  - User Guide:
       - Overview: user-guide/overview.md
-      - Login & logout: user-guide/login-and-logout.md
+      - Login & Logout: user-guide/login-and-logout.md
       - Sandbox Agenda:
           - Overview: user-guide/sandbox-agenda/sandbox-agenda-overview.md
           - Sandbox Definition: user-guide/sandbox-agenda/sandbox-definition.md
@@ -27,7 +27,7 @@ nav:
           - Users: user-guide/administration-agenda/users.md
           - Groups: user-guide/administration-agenda/groups.md
           - Microservices: user-guide/administration-agenda/microservices.md
-  - Operator guide:
+  - Operator Guide:
       - Overview: operator-guide/operator-guide-overview.md
       - Platform Components: operator-guide/platform-components.md
       - Sandboxes:
@@ -43,26 +43,26 @@ nav:
       - Users and Groups:
           - Overview: operator-guide/users-and-groups/users-and-groups-overview.md
           - Roles: operator-guide/users-and-groups/roles.md
-  - Installation guide:
+  - Installation Guide:
       - Overview: installation-guide/installation-guide-overview.md
-      - Base infrastructure: installation-guide/base-infrastructure.md
-      - KYPO Platform prerequisites: installation-guide/kypo-platform-prerequisites.md
-      - KYPO Platform configuration: installation-guide/kypo-platform-configuration.md
-      - KYPO Platform deployment: installation-guide/kypo-platform-deployment.md
-  - Available features: available-features.md
+      - Base Infrastructure: installation-guide/base-infrastructure.md
+      - KYPO Platform Prerequisites: installation-guide/kypo-platform-prerequisites.md
+      - KYPO Platform Configuration: installation-guide/kypo-platform-configuration.md
+      - KYPO Platform Deployment: installation-guide/kypo-platform-deployment.md
+  - Available Features: available-features.md
   - FAQ: faq.md
   - API:
-      - Tables of permissions: api/tables-of-permissions.md
-      - Training service: api/training-swagger-open-api.md
-      - User and Group service: api/user-and-group-swagger-open-api.md
-      - Elasticsearch service: api/elasticsearch-swagger-open-api.md
-      - Sandbox service: api/sandbox-service-swagger-open-api.md
+      - Tables of Permissions: api/tables-of-permissions.md
+      - Training Service: api/training-swagger-open-api.md
+      - User and Group Service: api/user-and-group-swagger-open-api.md
+      - Elasticsearch Service: api/elasticsearch-swagger-open-api.md
+      - Sandbox Service: api/sandbox-service-swagger-open-api.md
   - Extras:
       - Logging:
           - Architecture: extras/logging/architecture.md
-          - How to use it: extras/logging/how-to-use-it.md
-      - Writing documentation - MkDocs: extras/writing-documentation-mkdocs.md
-  - Report bugs: report-bugs.md
+          - How to Use It: extras/logging/how-to-use-it.md
+      - Writing Documentation - MkDocs: extras/writing-documentation-mkdocs.md
+  - Report Bugs: report-bugs.md
   - Acknowledgements: acknowledgements.md
   - License: license.md
 copyright: Copyright © 2020 KYPO CRP Team, Masaryk University
