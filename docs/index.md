@@ -6,7 +6,7 @@ KYPO CRP uses the same open approach for the content as for its architecture to 
 
 ## Getting Started
 
-We are glad that you are interested in our KYPO Cyber Range Platform. Please check the chapter [Core Principles](core-principles.md) if you want to read more about the platform. It contains all supported use-cases and also the philosophy of the platform. Please also consult [Available Features](available-features.md) for what is done for now and what is not.
+We are glad that you are interested in our KYPO Cyber Range Platform. Please check the chapter ~~[Basic Concepts](index.md)~~ if you want to read more about the platform. It contains all supported use-cases and also the philosophy of the platform. Please also consult [Available Features](available-features.md) for what is done for now and what is not.
 
 If you decide to deploy KYPO CRP in your organization, please check our Installation Guide and pay attention to a page describing [KYPO CRP Prerequisities](installation-guide/kypo-platform-prerequisites.md). All information you need for work with our platform should be available in this documentation. If you think you missed something, please, check [FAQ](faq.md) before contacting us.
 
