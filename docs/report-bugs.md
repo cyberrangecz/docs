@@ -1,4 +1,4 @@
-Reporting bugs is a great way for anyone to help improve the KYPO platform. To report bugs we use the GitLab lightweight issue tracker system in the [kypo-crp-issues-public](https://gitlab.ics.muni.cz/kypo-crp/kypo-crp-project-issues) repository. Before reporting a bug, please consider the following points:
+Reporting bugs is a great way for anyone to help improve the KYPO platform. To report bugs we use the GitLab lightweight issue tracker system in the [kypo-crp-issues-public](https://gitlab.ics.muni.cz/kypo-crp/kypo-crp-issues-public) repository. Before reporting a bug, please consider the following points:
   
   * Read the [FAQ](faq.md) to see if your issue isn't already a well-known question.
   * Ask on the kypo-users first if you’re not sure that what you’re seeing is a bug.
@@ -12,7 +12,7 @@ Reporting bugs is a great way for anyone to help improve the KYPO platform. To r
 A good bug report should be clear and concise without any missing key points. Any lack of clarity may lead to misunderstanding and may slow down the development process as well. Well-written bug reports are incredibly helpful. If you find a bug please create a bug report.
 
 
-  1.  Go to GitLab repository [kypo-crp-issues-public](https://gitlab.ics.muni.cz/kypo-crp/kypo-crp-project-issues).
+  1.  Go to GitLab repository [kypo-crp-issues-public](https://gitlab.ics.muni.cz/kypo-crp/kypo-crp-issues-public).
   2.  In the menu on the left side, click `Issues`.
   ![gitlab-issue-repository-left-menu](img/report-bugs/issues-repository-left-menu.png)
   3.  In the top menu above the list of issues click `New issue`.
@@ -79,5 +79,5 @@ Provide information that doesn't match the previous features, e.g., in short, de
 TODO -- will be there someone who will distribute issues among developers? 
 
 ### Labels 
-Choose `bug` label. 
+Choose the appropriate `bug` label. 
 
