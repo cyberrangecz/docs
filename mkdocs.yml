@@ -52,6 +52,7 @@ nav:
       - KYPO Platform Prerequisites: installation-guide/kypo-platform-prerequisites.md
       - KYPO Platform Configuration: installation-guide/kypo-platform-configuration.md
       - KYPO Platform Deployment: installation-guide/kypo-platform-deployment.md
+      - Setting up OIDC Provider: installation-guide/setting-up-oidc-provider.md
   - Available Features: available-features.md
   - FAQ: faq.md
   - API:
