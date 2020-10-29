@@ -1,19 +1,21 @@
-# Welcome to MkDocs for KYPO CRP
+# KYPO Cyber Range Platform
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+KYPO Cyber Range Platform (KYPO CRP) is developed by Masaryk University since 2013, and it represents several years of our experience with cyber ranges in education, cyber defense exercises, and trainings. KYPO CRP is entirely based on state-of-the-art approaches such as containers, infrastructures as code, microservices, and open-source software, including cloud provider technology - OpenStack. With practical applications in mind, team emphasized repeatability, scalability, automation, and interoperability to minimize human tasks and make cyber trainings affordable and cost-efficient.
 
-## Commands
+KYPO CRP uses the same open approach for the content as for its architecture to encourage creating a community of trainers and supporting the sharing of training building blocks. For that reason, virtual machines, networks, and trainings are entirely defined in human-readable data-serialization languages JSON and YAML or use open-source software Packer to build virtual machines and Ansible for describing machine content.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Getting Started
 
+We are glad that you are interested in our KYPO Cyber Range Platform. Please check the chapter [Core Principles](core-principles.md) if you want to read more about the platform. It contains all supported use-cases and also the philosophy of the platform. Please also consult [Available Features](available-features.md) for what is done for now and what is not.
 
+If you decide to deploy KYPO CRP in your organization, please check our Installation Guide and pay attention to a page describing [KYPO CRP Prerequisities](installation-guide/kypo-platform-prerequisites.md). All information you need for work with our platform should be available in this documentation. If you think you missed something, please, check [FAQ](faq.md) before contacting us.
 
-## Project layout
+## Get Professional Support
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+We tried our best to create the KYPO Cyber Range Platform as simple as is possible for such complex software. We made all our documentation public here to help you with deployment and running the platform.
+
+But if you need professional support or just looking for someone who will help you pick up the OpenStack cluster and deploy the KYPO CRP for you, [let us know](https://www.crp.kypo.muni.cz).
+
+## Help us with KYPO Cyber Range Platform
+
+KYPO Cyber Range Platform is an open-source project. We walked a long way with the support of projects and institutions listed below. If you are considering supporting our KYPO CRP or contributing to it, please [contact us](https://www.crp.kypo.muni.cz).
