@@ -2,7 +2,7 @@ Reporting bugs is a great way for anyone to help improve the KYPO platform. To r
   
   * Read the [FAQ](faq.md) to see if your issue isn't already a well-known question.
   * Ask on the kypo-users first if you’re not sure that what you’re seeing is a bug.
-  * Check if someone hasn’t already filed the bug by searching or running custom queries in the issues repository.
+  * Check if someone hasn’t already filed the bug by searching or running custom queries in the issues repository. If so, put "**thumb up**" on the bug.
   * Don’t use the issue system to ask support questions. Use the **support@kypo.cz** for that.
   * Don’t reopen issues that have been marked **"wontfix"** without finding consensus to do so on kypo-developers.
 
@@ -19,6 +19,9 @@ A good bug report should be clear and concise without any missing key points. An
   ![gitlab-issue-repository-top-menu](img/report-bugs/issues-repository-top-menu.png)
   4.  Add a detailed [description](#bug-description).
   5.  Submit the issue.
+
+!!! warning "Bug fix" 
+    Bug should be fixed as soon as possible, but it doesn’t mean it will be fixed in the next release. Depends on the severity and priority of the reported bug. 
 
 
 ## Bug description
@@ -46,8 +49,9 @@ If title isn’t enough, you can add a short defect report summary/description. 
 
 The environment for the KYPO platform instance can vary widely, but be as specific as you can. You should always follow the given bug report environment template and put in as much information as you can unless otherwise specified — it helps cut down on unnecessary information.
 
-  * **Versions of Microservices**: Which versions of the microservices are you using? Provide a list of microservices with their version. 
-  * **Technologies**:  What are your versions of used technologies (Docker, Docker Compose, etc.)? Which browser did you use when you experienced the error?
+  * **Versions of Microservices**: Which versions of the microservices are you using? Provide a list of microservices with their version.
+  * **Web browser**: Which browser and its version did you use when you experienced the error? 
+  * **Technologies**:  What are your versions of used technologies (Docker, Docker Compose, etc.)? 
   * **Reproducibility Rate**: How many times have you been able to reproduce the error, using the exact steps you’ve taken to activate the bug? It’s also useful to report how many times the bug has been reproduced vs. the number of attempts it’s taken to reproduce the issue, in case it’s an intermittent occurrence.
 
 #### Steps to reproduce
@@ -76,7 +80,7 @@ If everything is OK, try also check `Console` tab for error on the frontend side
 Provide information that doesn't match the previous features, e.g., in short, describe steps you have already taken to work around the bug.
 
 ### Assignee
-TODO -- will be there someone who will distribute issues among developers? 
+Do not assign anybody!!! The bugs will be assigned by the designated member. 
 
 ### Labels 
 Choose the appropriate `bug` label. 
