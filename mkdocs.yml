@@ -8,7 +8,7 @@ theme:
 
 nav:
   - Home: index.md
-  - Basic concepts: 
+  - Basic concepts:
     - Use cases: basic-concepts/use-cases.md
     - Terminology: basic-concepts/terminology.md
     - Conceptual architecture: basic-concepts/conceptual-architecture.md
@@ -66,6 +66,7 @@ nav:
           - How to Use It: extras/logging/how-to-use-it.md
       - Writing Documentation - MkDocs: extras/writing-documentation-mkdocs.md
   - Report Bugs: report-bugs.md
+  - Authors: authors.md
   - Acknowledgements: acknowledgements.md
   - License: license.md
 copyright: Copyright © 2020 KYPO CRP Team, Masaryk University
@@ -84,6 +85,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tasklist
+  - pymdownx.tilde
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
