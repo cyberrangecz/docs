@@ -4,7 +4,7 @@ Before you start with the KYPO CRP, you need to have a general understanding of 
 When creating and using an emulated virtual environment we use the following terminology:
 
 * **Sandbox:** It is an isolated virtual testing environment that enables users to run programs or execute files without affecting the external infrastructure. Sandbox is created using cloud service.
-* **[Sandbox Definition](../../operation-guide/sandboxes/sandbox-definition):** Definition of the internal structure of the sandboxes (networks and hosts) and user customization of the hosts. It consists of two parts: [Topology Definition](../../operation-guide/sandboxes/sandbox-topology/topology-definition) and [User Ansible](../../operation-guide/sandboxes/user-ansible).
+* **[Sandbox Definition](../../operation-guide/sandboxes/sandbox-definition):** Definition of the internal structure of the sandboxes (networks and hosts) and user customization of the hosts. It consists of two parts: [Topology Definition](../../operation-guide/sandboxes/sandbox-topology/topology-definition) and [Sandbox Provisioning](../../operation-guide/sandboxes/sandbox-provisioning).
 * **Pool:** A group of sandboxes created based on the same sandbox definition.
 
 For more detailed information check the section [Sandboxes](../../operation-guide/sandboxes/sandboxes-overview/).
