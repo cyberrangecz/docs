@@ -7,7 +7,7 @@ As mentioned above a KYPO Topology Instance is defined by 2 parts:
 * [**Topology Definition**](../topology-definition): A user-defined topology.
 * [**Topology Instance Management**](#topology-instance-management): The KYPO OpenStack Driver defined sub-infrastructure.
 
-![topology-instance-color](../../../img/operator-guide/sandboxes/topology-instance-color.png)
+![topology-instance-color](../../../img/operation-guide/sandboxes/topology-instance-color.png)
 
 !!! note
     For clarity reasons, there are missing links from **mng-network** to **UAN**, left **Router**, and left **Host**.

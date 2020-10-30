@@ -49,7 +49,7 @@ docker-compose up
 
 **4. Update syslog-ng configuration in the MAN:** 
 
-After you have build your sandbox you need to change the forwarding of the syslog-ng in the MAN. Access the MAN via ssh (How to access MAN: [Sandbox SSH Access](../../../operator-guide/sandboxes/sandbox-ssh-access)). When you are in the MAN open the syslog-ng log forwarding configuration:
+After you have build your sandbox you need to change the forwarding of the syslog-ng in the MAN. Access the MAN via ssh (How to access MAN: [Sandbox SSH Access](../../../operation-guide/sandboxes/sandbox-ssh-access)). When you are in the MAN open the syslog-ng log forwarding configuration:
 ```
 sudo vim /etc/syslog-ng/conf.d/forward-rfc5424-messages.conf
 ```

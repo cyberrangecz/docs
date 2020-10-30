@@ -30,22 +30,22 @@ nav:
           - Users: user-guide/administration-agenda/users.md
           - Groups: user-guide/administration-agenda/groups.md
           - Microservices: user-guide/administration-agenda/microservices.md
-  - Operator Guide:
-      - Overview: operator-guide/operator-guide-overview.md
-      - Platform Components: operator-guide/platform-components.md
+  - Operation Guide:
+      - Overview: operation-guide/operation-guide-overview.md
+      - Platform Components: operation-guide/platform-components.md
       - Sandboxes:
-          - Overview: operator-guide/sandboxes/sandboxes-overview.md
-          - Sandbox Definition: operator-guide/sandboxes/sandbox-definition.md
+          - Overview: operation-guide/sandboxes/sandboxes-overview.md
+          - Sandbox Definition: operation-guide/sandboxes/sandbox-definition.md
           - Sandbox Topology:
-              - Topology Definition: operator-guide/sandboxes/sandbox-topology/topology-definition.md
-              - Topology Instance: operator-guide/sandboxes/sandbox-topology/topology-instance.md
-          - User Ansible: operator-guide/sandboxes/user-ansible.md
-          - Sandbox SSH Access: operator-guide/sandboxes/sandbox-ssh-access.md
+              - Topology Definition: operation-guide/sandboxes/sandbox-topology/topology-definition.md
+              - Topology Instance: operation-guide/sandboxes/sandbox-topology/topology-instance.md
+          - User Ansible: operation-guide/sandboxes/user-ansible.md
+          - Sandbox SSH Access: operation-guide/sandboxes/sandbox-ssh-access.md
       - Trainings:
-          - Overview: operator-guide/trainings/trainings-overview.md
+          - Overview: operation-guide/trainings/trainings-overview.md
       - Users and Groups:
-          - Overview: operator-guide/users-and-groups/users-and-groups-overview.md
-          - Roles: operator-guide/users-and-groups/roles.md
+          - Overview: operation-guide/users-and-groups/users-and-groups-overview.md
+          - Roles: operation-guide/users-and-groups/roles.md
   - Installation Guide:
       - Overview: installation-guide/installation-guide-overview.md
       - Base Infrastructure: installation-guide/base-infrastructure.md
