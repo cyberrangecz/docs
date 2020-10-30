@@ -13,7 +13,7 @@ The permission system is based on 4 concepts:
 * Microservices
 
 
-![KYPO-permission-system](../../img/operator-guide/users-and-groups/KYPO-permission-system.png)
+![KYPO-permission-system](../../img/operation-guide/users-and-groups/KYPO-permission-system.png)
 
 A **user** can be part of **one or more** groups. Each user is part of the special **default group**. 
 

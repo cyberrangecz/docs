@@ -8,7 +8,7 @@ Here you can find the **Frequently asked questions** and answers regarding the *
 
 ## Sandboxes
 ### 1. **Q:** Can I connect to the VMs in my sandbox via ssh?
-**A: Yes!** Detailed instructions can be found in [Sandbox SSH Access](./operator-guide/sandboxes/sandbox-ssh-access.md). 
+**A: Yes!** Detailed instructions can be found in [Sandbox SSH Access](./operation-guide/sandboxes/sandbox-ssh-access.md). 
 
 ### 2. **Q:** Are there any remote management tools on the sandbox machines? SSH, RDP, or WinRM? How are they set up? Is it possible to use them for my scenario?
 

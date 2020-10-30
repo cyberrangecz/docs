@@ -23,4 +23,4 @@ Before creating sandboxes, it is essential to create in system so-called pools. 
 3. **User Ansible**: Customization of virtual machines already above-mentioned. 
  
 
-![kypo-basic-elements-sandboxes](/img/operator-guide/sandboxes/KYPO-basic-elements-sandboxes.png)
+![kypo-basic-elements-sandboxes](/img/operation-guide/sandboxes/KYPO-basic-elements-sandboxes.png)

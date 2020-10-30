@@ -7,7 +7,7 @@ When creating and using an emulated environment we use the following terminology
 * **Sandbox Definition:** Definition of the internal structure of the sandboxes (networks and hosts) and user customization of the hosts. It consists of two parts: Topology Definition and User Ansible.
 * **Pool:** A group of sandboxes created based on the same sandbox definition.
 
-For more detailed information check the section [Sandboxes](../operator-guide/sandboxes/sandboxes-overview).
+For more detailed information check the section [Sandboxes](../operation-guide/sandboxes/sandboxes-overview).
 
 ### Training
 The principle of ​​the KYPO CRP training is built on the previous idea of the emulated environment. Users can solve predefined cybersecurity tasks without interfering with the real infrastructure. In the context of the training we use the following terminology:
@@ -16,4 +16,4 @@ The principle of ​​the KYPO CRP training is built on the previous idea of th
 * **Training Instance:** Specify the time period in which the players can access training. Each training instance also must be assigned a pool of sandboxes.
 * **Training Run:** Single run of training of the particular player. Each run has an assigned sandbox from the pool.
 
-For more detailed information about the trainings, check the section [Trainings](../operator-guide/trainings/trainings-overview).
+For more detailed information about the trainings, check the section [Trainings](../operation-guide/trainings/trainings-overview).
