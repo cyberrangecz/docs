@@ -1,4 +1,4 @@
-The User Ansible is for [Topology Instance](../sandbox-topology/topology-instance) customizations. Use it to set up your environment, create users, install packages, etc.
+The Sandbox Provisioning is for [Topology Instance](../sandbox-topology/topology-instance) customizations. Use it to set up your environment, create users, install packages, etc.
 
 The content of the **provisioning** directory is the same as any other [Ansible](https://docs.ansible.com/ansible/latest/index.html).
 
@@ -12,7 +12,7 @@ see Ansible documentation on [playbooks](https://docs.ansible.com/ansible/latest
 
 ### Minimal Ansible Playbook
 
-The KYPO requires presence User Ansible, but if you do not need any provisioning, you can use a dummy `playbook.yml` file containing only the following line.
+The KYPO requires presence Sandbox Provisioning, but if you do not need any provisioning, you can use a dummy `playbook.yml` file containing only the following line.
 
 ```yaml
 - hosts: all
@@ -26,7 +26,7 @@ On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/
 * **routers**: the group containing all the routers defined in [Topology definition](../sandbox-topology/topology-definition#routers).
 * **hosts**: the group containing all the hosts defined in [Topology definition](../sandbox-topology/topology-definition#hosts).
 
-You can specify additional Ansible host groups in [Topology definition](../sandbox-topology/topology-definition#groups) and then use them in a `playbook.yml` file of the [User Ansible](#user-ansible).
+You can specify additional Ansible host groups in [Topology definition](../sandbox-topology/topology-definition#groups) and then use them in a `playbook.yml` file of the Sandbox Provisioning.
 
 ### Ansible Special Variables
 
@@ -41,7 +41,7 @@ On top of [Ansible special variables](https://docs.ansible.com/ansible/latest/re
 
 ### Ansible Inventory
 
-For each sandbox, the KYPO sandbox-service generates an `inventory.yml` file. It adds some networking data to it, which you might find useful in your [User Ansible](#user-ansible).
+For each sandbox, the KYPO sandbox-service generates an `inventory.yml` file. It adds some networking data to it, which you might find useful in your Sandbox Provisioning.
 
 Example of inventory file for [small sandbox](https://gitlab.ics.muni.cz/kypo-crp/prototypes-and-examples/sandbox-definitions/small-sandbox).
 

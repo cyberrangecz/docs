@@ -39,7 +39,7 @@ nav:
           - Sandbox Topology:
               - Topology Definition: operation-guide/sandboxes/sandbox-topology/topology-definition.md
               - Topology Instance: operation-guide/sandboxes/sandbox-topology/topology-instance.md
-          - User Ansible: operation-guide/sandboxes/user-ansible.md
+          - Sandbox Provisioning: operation-guide/sandboxes/sandbox-provisioning.md
           - Sandbox SSH Access: operation-guide/sandboxes/sandbox-ssh-access.md
       - Trainings:
           - Overview: operation-guide/trainings/trainings-overview.md

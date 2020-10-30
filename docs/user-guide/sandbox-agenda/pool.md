@@ -132,7 +132,7 @@ In the **Cleanup Requests** table, the organizer can see all cleanup requests. W
     Click the button to delete the cleanup request. Only canceled cleanup requests can be deleted.
 
 ## Allocation Request Stages 
-The page consists of three panels. Each represents one stage of allocation (allocation of a sandbox in the cloud, Ansible networking, user Ansible) and can be in one of the following states: 
+The page consists of three panels. Each represents one stage of allocation (allocation of a sandbox in the cloud, sandbox networking, sandbox provisioning) and can be in one of the following states: 
 
 * **In Queue**: Stage is waiting to start.
 * **Running**: Stage in progress.
