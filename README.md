@@ -25,4 +25,4 @@ python swagger-yaml-to-html.py < /path/to/api.yaml > /path/to/generated/file.md
 ```
 
 ## GitLab Pages
-https://kypo-crp.gitlab-pages.ics.muni.cz/kypo-crp-project-docs/
+https://muni-kypo-crp.gitlab-pages.ics.muni.cz/kypo-crp-project-docs/
