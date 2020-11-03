@@ -1,4 +1,4 @@
-# KYPO Operation Guide
+# overview
 
 The objective of the **Operation Guide** is to provide a detailed description of the KYPO CRP areas to the users who are supposed to have a better knowledge of how the platform works. The section is divided into four parts: 
 
