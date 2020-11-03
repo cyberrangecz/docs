@@ -10,7 +10,7 @@ Each user who can log into the KYPO CRP automatically acquires this role. It is 
 ### Instructor
 The user who is responsible for creating exercises for trainees and for their management is called the instructor. Each instructor should have access to sandbox definitions, pools, cloud resources, training definitions, and training instances. Because of that, the instructor must have assigned the following roles: ``ROLE_TRAINING_ORGANIZER``, ``ROLE_TRAINING_DESIGNER``, ``ROLE_KYPO-SANDBOX-SERVICE_ORGANIZER``, and ``ROLE_KYPO-SANDBOX-SERVICE_DESIGNER``. The role of the trainee is assigned by default. 
 
-### Super Administrator
+### Administrator
 User who is responsible for managing the whole KYPO CRP instance. The administrator must have assigned all the [microservice roles](#microservice-roles) described below. 
 
 This is the preferable option to use the roles in the KYPO Platform. But it is possible to use bigger granularity by assigning only some roles of microservices. See the meaning of the individual roles in the next part of the page. 
