@@ -1,0 +1,19 @@
+The purpose of the Administration agenda is to assign roles (e.g., trainee, instructor, or super administrator) to the other users to be able to work in the KYPO portal as expected. The administration agenda is available only for KYPO portal users with the role [administrator](../../../user-guide-advanced/users-and-groups/roles/#super-administrator). By default, all the logged-in users are assigned a role [trainee](../../../user-guide-advanced/users-and-groups/roles/#trainee) that is essential to play a game (for that reason it is not required to do some extra step for students that enroll in the class for playing a game in KYPO portal).
+Administration agenda is divided into three sections: 
+
+* **[User Overview](./users.md)** section is used for management of the users. 
+* **[Group Overview](./groups.md)** section is used for management of the user groups and assignment of roles and users to them.
+* **[Microservice Registration](microservices.md)** section is used for registration of new microservices into the KYPO portal. 
+
+To acess the above-mentioned sections, click the respective button on the front page of the KYPO portal.
+
+<p align="center">
+  <img src="../../../img/user-guide-basic/administration-agenda/administration-agenda.png">
+</p>
+
+
+Or click the button in the global navigation in the section Administration:
+
+<p align="center">
+  <img src="../../../img/user-guide-basic/administration-agenda/administration-left-panel.png">
+</p>

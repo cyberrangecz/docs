@@ -17,7 +17,7 @@ The content of the whole exercise is described using so-called training definiti
 
 ## Training Instance
 
- A time-limited period in which players can participate in training which is specified by the assigned training definition. The whole progress of training instance is managed by  instructors who can monitor events made by players that are displayed in various graphs and tables. Each training instance has an assigned [pool](../../../operation-guide/sandboxes/sandboxes-overview#pool) with sandboxes. 
+ A time-limited period in which players can participate in training which is specified by the assigned training definition. The whole progress of training instance is managed by  instructors who can monitor events made by players that are displayed in various graphs and tables. Each training instance has an assigned [pool](../../../user-guide-advanced/sandboxes/sandboxes-overview#pool) with sandboxes. 
 
 ## Training Run
  Represents a single run of the training of the particular player. The run is accessed based on the access token obtained from the training instance instructor. The player enters the access token to the particular field and if the token is valid, the training run starts (behind the scenes, a sandbox is assigned to that training run from the pool that is associated with the particular training instance).

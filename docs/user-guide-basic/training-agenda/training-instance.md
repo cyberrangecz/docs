@@ -2,7 +2,7 @@
 This page lists all training instances that are available to the instructor (ones that the given instructor created or is a co-author of). 
 
 <p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-instance/TI-overview.png">
+  <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-overview.png">
 </p>
 
 On this page, the instructor can do the following actions:
@@ -22,7 +22,7 @@ On this page, the instructor can do the following actions:
         Click the button to delete the training instance. In the case, some conflict occurs (active training instance with assigned training runs, training instance with an assigned pool), the following confirmation window will be opened:
     
         <p align="center">
-          <img src="../../../img/user-guide/training-agenda/training-instance/TI-delete-confirmation.png">
+          <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-delete-confirmation.png">
         </p>
     
         Either click the **Ok** button and solve the problems that do not allow the deletion of the training instance, or use the **Force** button which will delete all data about training instance.
@@ -40,7 +40,7 @@ On this page, the instructor can do the following actions:
 
     ??? key "Get Access"
     
-        Click the button, pop up will be displayed to download the ZIP archive. The archive contains configuration with SSH access to the respective sandbox. More about SSH access can be found in [Sandbox SSH Access](../../../operation-guide/sandboxes/sandbox-ssh-access).
+        Click the button, pop up will be displayed to download the ZIP archive. The archive contains configuration with SSH access to the respective sandbox. More about SSH access can be found in [Sandbox SSH Access](../../../user-guide-advanced/sandboxes/sandbox-ssh-access).
     
     
 
@@ -56,7 +56,7 @@ During the creation of the training instance, the second and third panels are di
 2. ![create-and-continue-button](../../img/buttons/create-and-continue-button.png) that will allow the instructor to edit **co-instructors** and assing **pools** to the instance.
 
 <p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-instance/TI-edit.png">
+  <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-edit.png">
 </p>
 
 ### 1. Create/Edit Training Instance 
@@ -81,7 +81,7 @@ The page consists of three panels:
 3. [**Archived Training Runs**](#3-archived-training-runs)
 
 <p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-instance/TI-summary.png">
+  <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-summary.png">
 </p>
 
 ### 1. Overview
@@ -99,7 +99,7 @@ Lists training runs whose references to sandboxes in OpenStack were removed and 
 Page visualize individual progress of trainees in training runs. The instructor can see the time of particular events made by trainees, like the start of the training run, taken hints, completed level, etc. It is also possible to filter finished and unfinished training runs. 
 
 <p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-instance/TI-progress.png">
+  <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-progress.png">
 </p>
 
 ## Results of Training Instance 
@@ -115,25 +115,25 @@ The page displays a panel with five tabs:
 The tab displays a graph with a real-time development of the score of the trainees that are marked in the table under the graph. The graph also displays various types of events (displayed by a small circle). To visualize events taken by trainees, check/uncheck a checkbox displayed next to the table with participants. 
 
 <p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-instance/TI-score-dev.png">
+  <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-score-dev.png">
 </p>
 
 
 ### 2. Score Scatter Plot 
 <p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-instance/TI-score-scatter.png">
+  <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-score-scatter.png">
 </p>
 
 ### 3. Progress 
 <p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-instance/TI-score-progress.png">
+  <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-score-progress.png">
 </p>
 
 ### 4. Assessments 
 Displays statistics of individual assessment answers.
  
 <p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-instance/TI-assessment.png">
+  <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-assessment.png">
 </p>
 
 ### 5. Overview 

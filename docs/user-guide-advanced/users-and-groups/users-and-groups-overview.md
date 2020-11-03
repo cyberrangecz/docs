@@ -13,12 +13,12 @@ The permission system is based on 4 concepts:
 * Microservices
 
 
-![KYPO-permission-system](../../img/operation-guide/users-and-groups/KYPO-permission-system.png)
+![KYPO-permission-system](../../img/user-guide-advanced/users-and-groups/KYPO-permission-system.png)
 
 A **user** can be part of **one or more** groups. Each user is part of the special **default group**. 
 
 **Groups** have assigned **one or more** roles. The above-mentioned default group has assigned each role that is marked as default. 
 
-**Roles** are part of the individual **microservices**. They are internally used by microservices to restrict access to their functionalities. Roles are imported into the KYPO CRP by registering a [microservice](../../user-guide/administration-agenda/microservices.md), where each microservice has exactly one default role. 
+**Roles** are part of the individual **microservices**. They are internally used by microservices to restrict access to their functionalities. Roles are imported into the KYPO CRP by registering a [microservice](../../user-guide-basic/administration-agenda/microservices.md), where each microservice has exactly one default role. 
 
 The roles of the users are determined based on the groups they are assigned to and roles appointed to these groups. The overview of the roles and rights they provide are on the [next page](../roles).
