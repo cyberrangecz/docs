@@ -12,40 +12,40 @@ nav:
     - Use Cases: basic-concepts/use-cases.md
     - Terminology: basic-concepts/terminology.md
     - Conceptual Architecture: basic-concepts/conceptual-architecture.md
-    - Workflow: basic-concepts/workflow.md
-  - User Guide:
-      - Overview: user-guide/overview.md
-      - Login & Logout: user-guide/login-and-logout.md
+    - Typical Workflow: basic-concepts/typical-workflow.md
+  - User Guide (Basic):
+      - Overview: user-guide-basic/overview.md
+      - Login & Logout: user-guide-basic/login-and-logout.md
       - Sandbox Agenda:
-          - Overview: user-guide/sandbox-agenda/sandbox-agenda-overview.md
-          - Sandbox Definition: user-guide/sandbox-agenda/sandbox-definition.md
-          - Pool: user-guide/sandbox-agenda/pool.md
-          - Resources: user-guide/sandbox-agenda/resources.md
+          - Overview: user-guide-basic/sandbox-agenda/sandbox-agenda-overview.md
+          - Sandbox Definition: user-guide-basic/sandbox-agenda/sandbox-definition.md
+          - Pool: user-guide-basic/sandbox-agenda/pool.md
+          - Resources: user-guide-basic/sandbox-agenda/resources.md
       - Training Agenda:
-          - Overview: user-guide/training-agenda/training-agenda-overview.md
-          - Training Definition: user-guide/training-agenda/training-definition.md
-          - Training Instance: user-guide/training-agenda/training-instance.md
-          - Training Run: user-guide/training-agenda/training-run.md
+          - Overview: user-guide-basic/training-agenda/training-agenda-overview.md
+          - Training Definition: user-guide-basic/training-agenda/training-definition.md
+          - Training Instance: user-guide-basic/training-agenda/training-instance.md
+          - Training Run: user-guide-basic/training-agenda/training-run.md
       - Administration Agenda:
-          - Overview: user-guide/administration-agenda/administration-agenda-overview.md
-          - Users: user-guide/administration-agenda/users.md
-          - Groups: user-guide/administration-agenda/groups.md
-          - Microservices: user-guide/administration-agenda/microservices.md
-  - Operation Guide:
-      - Overview: operation-guide/operation-guide-overview.md
+          - Overview: user-guide-basic/administration-agenda/administration-agenda-overview.md
+          - Users: user-guide-basic/administration-agenda/users.md
+          - Groups: user-guide-basic/administration-agenda/groups.md
+          - Microservices: user-guide-basic/administration-agenda/microservices.md
+  - User Guide (Advanced):
+      - Overview: user-guide-advanced/user-guide-advanced-overview.md
       - Sandboxes:
-          - Overview: operation-guide/sandboxes/sandboxes-overview.md
-          - Sandbox Definition: operation-guide/sandboxes/sandbox-definition.md
+          - Overview: user-guide-advanced/sandboxes/sandboxes-overview.md
+          - Sandbox Definition: user-guide-advanced/sandboxes/sandbox-definition.md
           - Sandbox Topology:
-              - Topology Definition: operation-guide/sandboxes/sandbox-topology/topology-definition.md
-              - Topology Instance: operation-guide/sandboxes/sandbox-topology/topology-instance.md
-          - Sandbox Provisioning: operation-guide/sandboxes/sandbox-provisioning.md
-          - Sandbox SSH Access: operation-guide/sandboxes/sandbox-ssh-access.md
+              - Topology Definition: user-guide-advanced/sandboxes/sandbox-topology/topology-definition.md
+              - Topology Instance: user-guide-advanced/sandboxes/sandbox-topology/topology-instance.md
+          - Sandbox Provisioning: user-guide-advanced/sandboxes/sandbox-provisioning.md
+          - Sandbox SSH Access: user-guide-advanced/sandboxes/sandbox-ssh-access.md
       - Trainings:
-          - Overview: operation-guide/trainings/trainings-overview.md
+          - Overview: user-guide-advanced/trainings/trainings-overview.md
       - Users and Groups:
-          - Overview: operation-guide/users-and-groups/users-and-groups-overview.md
-          - Roles: operation-guide/users-and-groups/roles.md
+          - Overview: user-guide-advanced/users-and-groups/users-and-groups-overview.md
+          - Roles: user-guide-advanced/users-and-groups/roles.md
   - Installation Guide:
       - Overview: installation-guide/installation-guide-overview.md
       - Base Infrastructure: installation-guide/base-infrastructure.md
@@ -56,12 +56,12 @@ nav:
       - Platform Components: installation-guide/platform-components.md
   - Available Features: available-features.md
   - FAQ: faq.md
-  - API:
-      - Tables of Permissions: api/tables-of-permissions.md
-      - Training Service: api/training-swagger-open-api.md
-      - User and Group Service: api/user-and-group-swagger-open-api.md
-      - Elasticsearch Service: api/elasticsearch-swagger-open-api.md
-      - Sandbox Service: api/sandbox-service-swagger-open-api.md
+  - Reference:
+      - Tables of Permissions: reference/tables-of-permissions.md
+      - Training Service: reference/training-swagger-open-api.md
+      - User and Group Service: reference/user-and-group-swagger-open-api.md
+      - Elasticsearch Service: reference/elasticsearch-swagger-open-api.md
+      - Sandbox Service: reference/sandbox-service-swagger-open-api.md
   - Extras:
       - Logging:
           - Architecture: extras/logging/architecture.md

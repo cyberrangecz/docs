@@ -6,7 +6,7 @@ A Topology Instance of a Sandbox is created in the cloud platform and connected 
 * **KYPO Proxy**: The server used only for SSH access to all sandboxes.
 * **KYPO Base Network**: The network where both servers and all sandboxes are connected through MAN ([more about management nodes](../sandbox-topology/topology-instance#topology-instance-management)).
 
-![topology-instance-blank](../../img/operation-guide/sandboxes/topology-instance-blank.png)
+![topology-instance-blank](../../img/user-guide-advanced/sandboxes/topology-instance-blank.png)
 
 ## Sandbox SSH Access
 
@@ -19,7 +19,7 @@ We differentiate between 2 types of SSH access based on privileges.
 
 Access to the sandbox nodes is through the **KYPO proxy** and a **MAN** node as jump hosts and a **mng-network**.
 
-1. Download the SSH access zip file from [Pool Overview](../../../user-guide/sandbox-agenda/pool/#pool-overview) page.
+1. Download the SSH access zip file from [Pool Overview](../../../user-guide-basic/sandbox-agenda/pool/#pool-overview) page.
 
 2. Extract the `ssh-access.zip` file to the `~/.ssh/` directory.
 
@@ -63,7 +63,7 @@ Access to the sandbox nodes is through the **KYPO proxy**, a **MAN** node, and a
     !!! warning
         The SSH config file will be generated with the hosts directive `User` set to `user-access`, therefore set variable `kypo_user_access_username` to value `user-access` or modify the SSH config file later.
 
-1. Download the SSH access zip file from [Game Level](../../../user-guide/training-agenda/training-run/#3-game-level) of the Training Run page with topology visualization.
+1. Download the SSH access zip file from [Game Level](../../../user-guide-basic/training-agenda/training-run/#3-game-level) of the Training Run page with topology visualization.
 
 2. Extract the `ssh-access.zip` file to the `~/.ssh/` directory.
 

@@ -1,5 +1,5 @@
 ## Enable command logging
-Command logging is enabled on host VMs by using a number of Ansible roles. If the organizer wants to log terminal commands, these roles must be added to the playbook of the sandbox definition. (More about sandbox definition creation: [Sandbox definition creation process](../../../user-guide/sandbox-agenda/sandbox-definition/#create-sandbox-definition))
+Command logging is enabled on host VMs by using a number of Ansible roles. If the organizer wants to log terminal commands, these roles must be added to the playbook of the sandbox definition. (More about sandbox definition creation: [Sandbox definition creation process](../../../user-guide-basic/sandbox-agenda/sandbox-definition/#create-sandbox-definition))
 
 * **Bash command logging** can be enabled by using the [KYPO Sandbox Logging Commands](https://gitlab.ics.muni.cz/muni-kypo-crp/useful-ansible-roles/kypo-sandbox-logging-bash) Ansible role. 
 
@@ -9,14 +9,14 @@ Command logging is enabled on host VMs by using a number of Ansible roles. If th
     To forward logs from `host` VM to the `MAN` the [KYPO Sandbox Forward to MAN](https://gitlab.ics.muni.cz/muni-kypo-crp/useful-ansible-roles/kypo-sandbox-logging-forward) Ansible role must be enabled with any combination of before mentioned roles. If this role is not added to the sandbox definition, logged data will **not** be accessible.
 
 ## Accessing logged data
-The training organizer can access all logged data (training events or commands) by exporting the training instance in the [Training Instance Overview](../../../user-guide/training-agenda/training-instance#training-instance-overview). All data can be found in the exported archive in the corresponding files stored in the JSON format. 
+The training organizer can access all logged data (training events or commands) by exporting the training instance in the [Training Instance Overview](../../../user-guide-basic/training-agenda/training-instance#training-instance-overview). All data can be found in the exported archive in the corresponding files stored in the JSON format. 
 
 ![Archive](../../img/extras/logging/accessed-logged-data-structure.png)
 
 
 ## Local deployment with vagrant
 
-If you are using the local  vagrant deployment configuration from the [kypo-crp-local-demo](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo) project and want to access logged data via the [Training Instance Overview](../../../user-guide/training-agenda/training-instance#training-instance-overview), you need to additionally set up the forwarding from `MAN` to your local machine. To manually set up this forwarding follow these steps. 
+If you are using the local  vagrant deployment configuration from the [kypo-crp-local-demo](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo) project and want to access logged data via the [Training Instance Overview](../../../user-guide-basic/training-agenda/training-instance#training-instance-overview), you need to additionally set up the forwarding from `MAN` to your local machine. To manually set up this forwarding follow these steps. 
 
 **1. Create new port forwarding rule in VirtualBox Manager:**
    
@@ -49,7 +49,7 @@ docker-compose up
 
 **4. Update syslog-ng configuration in the MAN:** 
 
-After you have build your sandbox you need to change the forwarding of the syslog-ng in the MAN. Access the MAN via ssh (How to access MAN: [Sandbox SSH Access](../../../operation-guide/sandboxes/sandbox-ssh-access)). When you are in the MAN open the syslog-ng log forwarding configuration:
+After you have build your sandbox you need to change the forwarding of the syslog-ng in the MAN. Access the MAN via ssh (How to access MAN: [Sandbox SSH Access](../../../user-guide-advanced/sandboxes/sandbox-ssh-access)). When you are in the MAN open the syslog-ng log forwarding configuration:
 ```
 sudo vim /etc/syslog-ng/conf.d/forward-rfc5424-messages.conf
 ```

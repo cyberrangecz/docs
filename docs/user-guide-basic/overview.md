@@ -15,7 +15,7 @@ Access to KYPO Portal depends a lot on the role you hold as a user. There are th
 * **Super Administrators:** Users who are responsible for managing the whole KYPO CRP instance. They have access to every above-mentioned page in the KYPO Portal. Moreover, they can also have rights to manage entities like users, groups, and microservices in [Administration Agenda](../administration-agenda/administration-agenda-overview). 
 
 !!! note
-    To better understand the meaning of the roles, see the chapter [Users and Groups](../../operation-guide/users-and-groups/roles).
+    To better understand the meaning of the roles, see the chapter [Users and Groups](../../user-guide-advanced/users-and-groups/roles).
 
 
 ## KYPO Portal Home Page
@@ -25,7 +25,7 @@ After a successful login, the home page of the KYPO Portal contains the elements
 !!! warning "Trainee"
     A trainee cannot see the home page. See [The Trainee's Point of View](#the-trainees-point-of-view).
 
-![KYPO-home-page](../img/user-guide/KYPO-home-page.png)
+![KYPO-home-page](../img/user-guide-basic/KYPO-home-page.png)
 
 
 **Global navigation:** A persistent navigation menu, displayed on all pages. The menu is divided based on the agendas and contains links to concrete pages.
@@ -41,17 +41,17 @@ After a successful login, the home page of the KYPO Portal contains the elements
 ### The Trainee's Point of View
 Each trainee will be after a successful log-in directly redirected to the [Training Run Overview](../training-agenda/training-run/#training-runs-overview) page. 
 
-![KYPO-home-page-trainee](../img/user-guide/KYPO-home-page-trainee.png)
+![KYPO-home-page-trainee](../img/user-guide-basic/KYPO-home-page-trainee.png)
 
 
 ### The Instructor's Point of View
 The instructor can access both Trainings Agenda and Sandboxes Agenda. 
 
-![KYPO-home-page-trainee](../img/user-guide/KYPO-home-page-instructor.png)
+![KYPO-home-page-trainee](../img/user-guide-basic/KYPO-home-page-instructor.png)
 
 ### The Super Administrator's Point of View 
 
 A super administrator can access any page. 
 
-![KYPO-home-page-admin](../img/user-guide/KYPO-home-page-admin.png)
+![KYPO-home-page-admin](../img/user-guide-basic/KYPO-home-page-admin.png)
 

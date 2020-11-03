@@ -1,7 +1,7 @@
 KYPO Platform has been designed as a web application that uses the microservice architecture style. The concept of microservices consists in the separation of individual logical units into separate parts, which provide certain specific functionality. The architecture of the KYPO platform is displayed in the picture below.
 
 
-![microservices](../img/operation-guide/platform-components/kypo-microservices.png)
+![microservices](../img/user-guide-advanced/platform-components/kypo-microservices.png)
 
 ## KYPO Head
 
@@ -15,7 +15,7 @@ It is used to create, manage, and perform cybersecurity trainings in form of mul
 The purpose of this service is to communicate with Elasticsearch where all recorded events during the games are stored and obtain queried data. Microservice provides several endpoints to obtain different portions of data, e.g. events per one game or events per multiple games.
 
 ### Sandbox Service
-Provides functionality to manage the lifecycle of sandboxes in the KYPO platform. It includes managing sandbox definitions, creating sandboxes, their removal, configuration, networking inside of sandboxes, or user configuration of machines. Description of sandbox topology can be found in section [Sandboxes](../../operation-guide/sandboxes/sandbox-topology/topology-definition)
+Provides functionality to manage the lifecycle of sandboxes in the KYPO platform. It includes managing sandbox definitions, creating sandboxes, their removal, configuration, networking inside of sandboxes, or user configuration of machines. Description of sandbox topology can be found in section [Sandboxes](../../user-guide-advanced/sandboxes/sandbox-topology/topology-definition)
 
 ### OIDC Provider
 Service realized by OpenID Connect, which is used to authenticate the users logged into the KYPO platform, as well as to obtain basic profile information about the end-user in an interoperable and REST-like manner. It provides a secure authentication mechanism for microservices and protection of their APIs.

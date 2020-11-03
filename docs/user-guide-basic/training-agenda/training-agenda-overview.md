@@ -1,5 +1,5 @@
 # Overview
-The purpose of the Training Agenda is to create and manage trainings that are only available to users with the role [instructor](../../../operation-guide/users-and-groups/roles/#instructor). Another purpose of the agenda is accessing training runs which is available for all users with the role [trainee](../../../operation-guide/users-and-groups/roles/#trainee). These activities are mapping onto the [Training Creation](../../../basic-concepts/workflow/#training-creation) workflow. The training agenda is divided into three sections:
+The purpose of the Training Agenda is to create and manage trainings that are only available to users with the role [instructor](../../../user-guide-advanced/users-and-groups/roles/#instructor). Another purpose of the agenda is accessing training runs which is available for all users with the role [trainee](../../../user-guide-advanced/users-and-groups/roles/#trainee). These activities are mapped onto the [Training Creation](../../../basic-concepts/typical-workflow/#training-creation) workflow. The training agenda is divided into three sections:
 
 * **[Training Definition](training-definition.md)** section is used to create and manage training definitions (the content of trainings).
  
@@ -10,13 +10,13 @@ The purpose of the Training Agenda is to create and manage trainings that are on
 To access the above-mentioned pages, click the respective button on the front page of the KYPO portal. 
 
 <p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-agenda.png">
+  <img src="../../../img/user-guide-basic/training-agenda/training-agenda.png">
 </p>
 
 Or click the button in the global navigation in the section Trainings.
 
 <p align="center">
-  <img src="../../../img/user-guide/training-agenda/training-agenda-left-panel.png">
+  <img src="../../../img/user-guide-basic/training-agenda/training-agenda-left-panel.png">
 </p>
 
 !!! note

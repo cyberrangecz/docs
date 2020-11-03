@@ -11,7 +11,7 @@ Resources Overview consist of two panels:
 * **VCPUs**: Virtual CPUs currently in use by all instances,
 * **RAM**: The amount of the main memory currently in use by all instances.
 
-![usage-statistics](../../img/user-guide/sandbox-agenda/resources/usage-stats.png)
+![usage-statistics](../../img/user-guide-basic/sandbox-agenda/resources/usage-stats.png)
 
 ### 2. Overview of OS Images
 Provides a list of available OS images that can be installed on VMs. Each row contains the following values of image parameters:
@@ -34,4 +34,4 @@ Click extend button :material-chevron-down:{: .icon .grey} to show **detailed in
 * **Created At**: Time of the creation.
 * **Tags**: Used to filter images.
 
-![overview-images](../../img/user-guide/sandbox-agenda/resources/overview-images.png)
+![overview-images](../../img/user-guide-basic/sandbox-agenda/resources/overview-images.png)

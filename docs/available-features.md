@@ -11,7 +11,7 @@
 
 # What needs to be done
 
-* [ ] Total isolation of *SSH jump-host tunnels* for trainee access ([More information](./operation-guide/sandboxes/sandbox-ssh-access.md))
+* [ ] Total isolation of *SSH jump-host tunnels* for trainee access ([More information](./user-guide-advanced/sandboxes/sandbox-ssh-access.md))
 
 !!! warning
     Some of the unfinished features prohibit the use of the platform in unrestricted and untrusted environments. Use carefully in production.
