@@ -80,7 +80,7 @@ If everything is OK, try also check `Console` tab for error on the frontend side
 Provide information that doesn't match the previous features, e.g., in short, describe steps you have already taken to work around the bug.
 
 ### Assignee
-Do not assign anybody!!! The bugs will be assigned by the designated member. 
+Please, do not assign anybody! The bugs will be assigned to developers by the designated member. 
 
 ### Labels 
 Choose the appropriate `bug` label. 
