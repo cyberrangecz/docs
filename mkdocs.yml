@@ -13,7 +13,7 @@ nav:
     - Terminology: basic-concepts/terminology.md
     - Conceptual Architecture: basic-concepts/conceptual-architecture.md
     - Workflow: basic-concepts/workflow.md
-  - User guide:
+  - User Guide:
       - Overview: user-guide/overview.md
       - Login & Logout: user-guide/login-and-logout.md
       - Sandbox Agenda:
