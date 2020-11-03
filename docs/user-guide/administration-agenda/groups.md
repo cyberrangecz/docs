@@ -42,7 +42,7 @@ During the creation of a group, the second and third panels are disabled. To mak
 2. ![create-and-edit-button](../../img/buttons/create-and-continue-button.png) that will stay on the page and allow the administrator to edit **members** and **roles** of the group.
 
 ### 1. Create/Edit Group
-Here, the administrator is required to fill up all the necessary fields before creating a new group. The `Expiration Date` field is optional and is useful in the cases when the administrator will create a group of designers, e.g., for a particular semester. After filling up fields, click on the ![create-button](/img/buttons/create-button.png) button to save the group. Then panels **Edit members** and **Edit roles** will be rolled down. 
+Here, the administrator is required to fill up all the necessary fields before creating a new group. The `Expiration Date` field is optional and is useful in the cases when the administrator will create a group of instructors, e.g., for a particular semester. After filling up fields, click on the ![create-button](/img/buttons/create-button.png) button to save the group. Then panels **Edit members** and **Edit roles** will be rolled down. 
 
 ![create-group-panel](../../img/user-guide/administration-agenda/create-group.png)
 ### 2. Edit Members
