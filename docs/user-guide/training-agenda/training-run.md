@@ -9,7 +9,7 @@ This page consists of two panels:
 </p>
 
 ### 1. Access Training
-Enter the access token prefix and PIN provided by the organizer of the training instance into the two fields shown in the above figure. By clicking on ![access-button](../../img/buttons/access-button.png) the button the system checks if there are any active training instances with a corresponding access token and if there are any available sandboxes. If those conditions are fulfilled the trainee will access the training run (particular game) with an assigned unique sandbox.
+Enter the access token prefix and PIN provided by the instructor of the training instance into the two fields shown in the above figure. By clicking on ![access-button](../../img/buttons/access-button.png) the button the system checks if there are any active training instances with a corresponding access token and if there are any available sandboxes. If those conditions are fulfilled the trainee will access the training run (particular game) with an assigned unique sandbox.
 
 !!! note
     If trainee already accessed training run in particular training instance and haven't finished it yet, the training run will be resumed. 

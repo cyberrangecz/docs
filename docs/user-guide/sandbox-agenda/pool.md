@@ -4,7 +4,7 @@ This page is used to list all sandbox pools that are accessible in the KYPO port
 
 ![pool-overview](../../img/user-guide/sandbox-agenda/pool/pool-overview.png)
 
-Organizers can click on the title of each pool to see a more [detailed view](#pool-detail) of the given pool. The last column of this table contains actions :material-delete:{: .red .icon} &nbsp; :material-youtube-subscription:{: .blue .icon} &nbsp; :material-dots-vertical:{: .grey .icon}  that can be executed on the given pool: 
+Instructors can click on the title of each pool to see a more [detailed view](#pool-detail) of the given pool. The last column of this table contains actions :material-delete:{: .red .icon} &nbsp; :material-youtube-subscription:{: .blue .icon} &nbsp; :material-dots-vertical:{: .grey .icon}  that can be executed on the given pool: 
 
 ??? trash-can "Delete"
     Click the button, the following confirmation window will be opened:
@@ -50,17 +50,17 @@ Organizers can click on the title of each pool to see a more [detailed view](#po
 !!! Note
     Actions 3. - 6. can be accessed in the menu shown after clicking on the **more options** :material-dots-vertical:{: .grey .icon} button.
 
- To create a new pool, click on the ![create-button](../../img/buttons/create-button.png) button. The organizer will be redirected to the page [Create Pool](#create-pool).
+ To create a new pool, click on the ![create-button](../../img/buttons/create-button.png) button. The instructor will be redirected to the page [Create Pool](#create-pool).
 
 
 ## Create Pool
-This page contains a short form that needs to be filled out before creating a new pool. The field **Sandbox Pool Size** specifies the maximal number of sandboxes that can be created inside the pool. The organizer must also select one of the available [sandbox definitions](./sandbox-definition.md) created by the sandbox designer. Sandbox definitions define the topology of sandboxes and user configuration of virtual machines created in a sandbox. After filling out all the fields, confirm the creation of a new pool by clicking on the ![create-button](../../img/buttons/create-button.png) button.
+This page contains a short form that needs to be filled out before creating a new pool. The field **Sandbox Pool Size** specifies the maximal number of sandboxes that can be created inside the pool. The instructor must also select one of the available [sandbox definitions](./sandbox-definition.md) created by the instructor. Sandbox definitions define the topology of sandboxes and user configuration of virtual machines created in a sandbox. After filling out all the fields, confirm the creation of a new pool by clicking on the ![create-button](../../img/buttons/create-button.png) button.
  
 ![create-pool](../../img/user-guide/sandbox-agenda/pool/create-pool.png)
 
 
 ## Pool Detail
-When the organizer clicks the title of a given pool in **Pool Overview** they will be redirected to the **Pool Detail** page.
+When the instructor clicks the title of a given pool in **Pool Overview** they will be redirected to the **Pool Detail** page.
   
 ![pool-detail](../../img/user-guide/sandbox-agenda/pool/pool-detail.png)
 
@@ -77,7 +77,7 @@ In the top right corner, there is the ![allocate-button](../../img/buttons/alloc
 
 ![sandbox-instances](../../img/user-guide/sandbox-agenda/pool/sandbox-instances-overview.png)
 
-The organizer can see all of the allocated sandboxes in the **Sandbox Instances** table. The last column of this table contains actions :material-delete:{: .red .icon} &nbsp; :bootstrap-topology:{: .blue .icon} &nbsp; :material-dots-vertical:{: .grey .icon} that can be executed on the given sandbox:
+The instructor can see all of the allocated sandboxes in the **Sandbox Instances** table. The last column of this table contains actions :material-delete:{: .red .icon} &nbsp; :bootstrap-topology:{: .blue .icon} &nbsp; :material-dots-vertical:{: .grey .icon} that can be executed on the given sandbox:
 
 ??? trash-can "Delete"
     Click the button, the following confirmation window will be opened:
@@ -115,7 +115,7 @@ Each sandbox that is allocating or has been allocated is tied with the allocatio
 ### 3. Allocation Requests
 
 ![allocation-request](../../img/user-guide/sandbox-agenda/pool/allocation-requests.png)
-In the **Allocation Requests** table, the organizer can see all allocation requests. Click on the title of the request will redirect to the [request detail](#allocation-request-stages) page. The last column of the table contains **cancel** button :material-close-circle:{: .red .icon }. If the organizer clicks the button, the ongoing allocation will be canceled and a given sandbox will not be allocated. 
+In the **Allocation Requests** table, the instructor can see all allocation requests. Click on the title of the request will redirect to the [request detail](#allocation-request-stages) page. The last column of the table contains **cancel** button :material-close-circle:{: .red .icon }. If the instructor clicks the button, the ongoing allocation will be canceled and a given sandbox will not be allocated. 
 
 !!! warning
     Canceling finished allocation request will cause an error.
@@ -123,7 +123,7 @@ In the **Allocation Requests** table, the organizer can see all allocation reque
 ### 4. Cleanup Requests
 ![cleanup-requests](../../img/user-guide/sandbox-agenda/pool/cleanup-requests.png)
 
-In the **Cleanup Requests** table, the organizer can see all cleanup requests. With the completion of cleanup requests the associated **sandbox instance**, **allocation request** and, **allocation unit** are deleted from the KYPO portal. There can be only one cleanup request per a sandbox. The last column of the table contains actions :material-close-circle:{: .red .icon } &nbsp; :material-delete:{: .red .icon }:
+In the **Cleanup Requests** table, the instructor can see all cleanup requests. With the completion of cleanup requests the associated **sandbox instance**, **allocation request** and, **allocation unit** are deleted from the KYPO portal. There can be only one cleanup request per a sandbox. The last column of the table contains actions :material-close-circle:{: .red .icon } &nbsp; :material-delete:{: .red .icon }:
 
 ??? cancel "Cancel request"
     Click the button to cancel the ongoing cleanup request. Respective sandbox won't be removed.
