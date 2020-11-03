@@ -1,4 +1,4 @@
-# KYPO User Guide
+# Overview
 
 The objective of the **User guide** is to provide a basic guidelines to the users of the KYPO Portal. KYPO Portal is a graphical user interface that mediates access to the platform for the end-users by providing them with interactive visual tools. In particular, the portal is designed to cover the microservices that manage the different areas of the KYPO platform that provide core functionalities.
 
