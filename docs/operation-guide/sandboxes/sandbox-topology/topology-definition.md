@@ -37,7 +37,7 @@ The list of routers. Routers are the only nodes through which hosts can communic
     * **image**: name of image
     * **man_user**: name of user with sudo privileges
     * **mng_protocol (optional)**: protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
-* **cidr**: for network between router and BR ([more about management nodes](../topology-instance#topology-instance-management), the recommended range of the network is `/29`, [unique cidrs restriction](#disjunkt-cidrs))
+* **cidr**: for network between router and BR ([more about management nodes](../topology-instance#topology-instance-management), the recommended range of the network is `/29`, [unique cidrs restriction](#disjunct-cidrs))
    
 ### networks
 
@@ -53,7 +53,7 @@ The list of net_mappings. A net_mapping is used to connect host to network. Each
 
 * **host**: name of host defined in [hosts](#hosts) 
 * **network**: name of the network defined in [networks](#networks)
-* **ip**: IP address for the host, must be from IP address range of the network [address restriction](#adress-restriction)
+* **ip**: IP address for the host, must be from IP address range of the network [address restriction](#address-restriction)
 
 ### router_mappings
 
@@ -61,7 +61,7 @@ The list of router_mappings. A router_mapping is used to connect router to netwo
 
 * **router**: name of router defined in [routers](#routers) 
 * **network**: name of network defined in [networks](#networks)
-* **ip**: IP address for the router, must be from IP address range of the network [address restriction](#adress-restriction)
+* **ip**: IP address for the router, must be from IP address range of the network [address restriction](#address-restriction)
  
 ### groups
 

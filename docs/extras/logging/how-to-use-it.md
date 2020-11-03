@@ -1,12 +1,12 @@
 ## Enable command logging
 Command logging is enabled on host VMs by using a number of Ansible roles. If the organizer wants to log terminal commands, these roles must be added to the playbook of the sandbox definition. (More about sandbox definition creation: [Sandbox definition creation process](../../../user-guide/sandbox-agenda/sandbox-definition/#create-sandbox-definition))
 
-* **Bash command logging** can be enabled by using the [KYPO Sandbox Logging Commands](https://gitlab.ics.muni.cz/kypo-crp/useful-ansible-roles/kypo-sandbox-logging-bash) Ansible role. 
+* **Bash command logging** can be enabled by using the [KYPO Sandbox Logging Commands](https://gitlab.ics.muni.cz/muni-kypo-crp/useful-ansible-roles/kypo-sandbox-logging-bash) Ansible role. 
 
-* **Metasploit framework command logging** can be enabled by using the [KYPO Sandbox Logging Msfconsole Commands](https://gitlab.ics.muni.cz/kypo-crp/useful-ansible-roles/kypo-sandbox-logging-msf) Ansible role.
+* **Metasploit framework command logging** can be enabled by using the [KYPO Sandbox Logging Msfconsole Commands](https://gitlab.ics.muni.cz/muni-kypo-crp/useful-ansible-roles/kypo-sandbox-logging-msf) Ansible role.
 
 !!! warning
-    To forward logs from `host` VM to the `MAN` the [KYPO Sandbox Forward to MAN](https://gitlab.ics.muni.cz/kypo-crp/useful-ansible-roles/kypo-sandbox-logging-forward) Ansible role must be enabled with any combination of before mentioned roles. If this role is not added to the sandbox definition, logged data will **not** be accessible.
+    To forward logs from `host` VM to the `MAN` the [KYPO Sandbox Forward to MAN](https://gitlab.ics.muni.cz/muni-kypo-crp/useful-ansible-roles/kypo-sandbox-logging-forward) Ansible role must be enabled with any combination of before mentioned roles. If this role is not added to the sandbox definition, logged data will **not** be accessible.
 
 ## Accessing logged data
 The training organizer can access all logged data (training events or commands) by exporting the training instance in the [Training Instance Overview](../../../user-guide/training-agenda/training-instance#training-instance-overview). All data can be found in the exported archive in the corresponding files stored in the JSON format. 
@@ -16,7 +16,7 @@ The training organizer can access all logged data (training events or commands) 
 
 ## Local deployment with vagrant
 
-If you are using the local  vagrant deployment configuration from the [kypo-crp-local-demo](url) project and want to access logged data via the [Training Instance Overview](../../../user-guide/training-agenda/training-instance#training-instance-overview), you need to additionally set up the forwarding from `MAN` to your local machine. To manually set up this forwarding follow these steps. 
+If you are using the local  vagrant deployment configuration from the [kypo-crp-local-demo](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo) project and want to access logged data via the [Training Instance Overview](../../../user-guide/training-agenda/training-instance#training-instance-overview), you need to additionally set up the forwarding from `MAN` to your local machine. To manually set up this forwarding follow these steps. 
 
 **1. Create new port forwarding rule in VirtualBox Manager:**
    
@@ -29,7 +29,7 @@ In the `Port Forwarding Rules` create a new rule for log forwarding with `Guest 
  
 **2. Set the KYPO Head IP for sandbox service:**
 
-Open the [kypo-sandbox-service-config.yml](https://gitlab.ics.muni.cz/kypo-crp/prototypes-and-examples/kypo-crp-local-demo/-/blob/master/docker-config-files/kypo-sandbox-service-config.yml) file (located in the `/vagrant/configuration/sandbox-service/kypo-sandbox-service-config.yml`) and under the `application_configuration` uncomment and set the `kypo_head_ip` to the IP address of your local machine. 
+Open the [kypo-sandbox-service-config.yml](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo/-/blob/master/docker-config-files/kypo-sandbox-service-config.yml) file (located in the `/vagrant/configuration/sandbox-service/kypo-sandbox-service-config.yml`) and under the `application_configuration` uncomment and set the `kypo_head_ip` to the IP address of your local machine. 
 
 !!! note 
     If you don't uncomment the `kypo_head_ip` attribute all logs will be stored on the **MAN** in the `/data/idm-logs/man.log` file. 

@@ -8,14 +8,14 @@ The portal is divided into three **KYPO agendas** and user guide functions as a 
 
 Access to KYPO Portal depends a lot on the role you hold as a user. There are three main roles we differentiated and depending on them you can access different pages and perform various functionalities in the KYPO Portal.
 
-* **Trainees:** Everybody who has access to the KYPO Portal and is interested in participating in the training can perform actions inside of the [Traning run](./training-agenda/training-run.md).
+* **Trainees:** Everybody who has access to the KYPO Portal and is interested in participating in the training can perform actions inside of the [Traning run](../training-agenda/training-run).
 * **Instructors:** Users who are responsible for preparing and creating trainings and corresponding sandboxes can access the following pages: 
-    * [Training definitions](./training-agenda/training-definition.md) and [Training instances](./training-agenda/training-instance.md) for overview and management of trainings. 
-    * [Sandbox definitions](./sandbox-agenda/sandbox-definition.md) and [Sandbox pools](./sandbox-agenda/pool.md) needed for management of sandboxes, and [Resources](./sandbox-agenda/resources.md) for cloud resources overview.
-* **Super Administrators:** Users who are responsible for managing the whole KYPO CRP instance. They have access to every above-mentioned page in the KYPO Portal. Moreover, they can also have rights to manage entities like users, groups, and microservices in [Administration Agenda](./administration-agenda/administration-agenda-overview). 
+    * [Training definitions](../training-agenda/training-definition) and [Training instances](../training-agenda/training-instance) for overview and management of trainings. 
+    * [Sandbox definitions](../sandbox-agenda/sandbox-definition) and [Sandbox pools](../sandbox-agenda/pool) needed for management of sandboxes, and [Resources](../sandbox-agenda/resources) for cloud resources overview.
+* **Super Administrators:** Users who are responsible for managing the whole KYPO CRP instance. They have access to every above-mentioned page in the KYPO Portal. Moreover, they can also have rights to manage entities like users, groups, and microservices in [Administration Agenda](../administration-agenda/administration-agenda-overview). 
 
 !!! note
-    To better understand the meaning of the roles, see the chapter [Users and Groups](../../operator-guide/users-and-groups/roles).
+    To better understand the meaning of the roles, see the chapter [Users and Groups](../../operation-guide/users-and-groups/roles).
 
 
 ## KYPO Portal Home Page
