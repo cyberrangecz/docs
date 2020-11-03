@@ -1,4 +1,4 @@
-The purpose of the Training Agenda is to create and manage trainings performed using the KYPO platform. To create and manage trainings user with role [instructor](../../operation-guide/users-and-groups/roles/#how-the-roles-are-used) is needed. To access training role [trainee](../../operation-guide/users-and-groups/roles/#how-the-roles-are-used) is needed. The training agenda is divided into three sections: 
+The purpose of the Training Agenda is to create and manage trainings that are only available to users with the role [instructor](../../../operation-guide/users-and-groups/roles/#instructor). Another purpose of the agenda is accessing training runs which is available for all users with the role [trainee](../../../operation-guide/users-and-groups/roles/#trainee). The training agenda is divided into three sections:  
 
 * **[Training Definition](training-definition.md)** section is used to create and manage training definitions (the content of trainings).
  
@@ -19,4 +19,4 @@ Or click the button in the global navigation in the section Trainings.
 </p>
 
 !!! note
-    In the case, that you have only the role `ROLE_TRAINING_TRAINEE` you will be after a successful login directly forwarded to the page [Training Runs Overview](#training-runs-overview) without any further action.
+    In the case, that you have only the role `ROLE_TRAINING_TRAINEE` you will be after a successful login directly forwarded to the page [Training Runs Overview](../training-run/#training-runs-overview) without any further action.

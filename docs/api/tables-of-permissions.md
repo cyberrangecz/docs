@@ -8,7 +8,7 @@ The following tables display the actions that can perform the users with the spe
 | Action | CRUD operation |  Guest | User | Administrator |
 | ------ | :------------: |  :---: | :--: | :-----------: |
 | Get users | READ | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
-| Get users In Groups | READ | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get users In groups | READ | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Get user | READ | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Get all users not in given group | READ | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Get roles of user | READ | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |

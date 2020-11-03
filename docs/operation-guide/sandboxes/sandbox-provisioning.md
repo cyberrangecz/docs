@@ -43,7 +43,7 @@ On top of [Ansible special variables](https://docs.ansible.com/ansible/latest/re
 
 For each sandbox, the KYPO sandbox-service generates an `inventory.yml` file. It adds some networking data to it, which you might find useful in your Sandbox Provisioning.
 
-Example of inventory file for [small sandbox](https://gitlab.ics.muni.cz/kypo-crp/prototypes-and-examples/sandbox-definitions/small-sandbox).
+Example of inventory file for [small sandbox](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/sandbox-definitions/small-sandbox).
 
 ```yaml
 all:

@@ -22,7 +22,7 @@ On this page, the instructor can do the following actions:
         Click the button to delete the training instance. In the case, some conflict occurs (active training instance with assigned training runs, training instance with an assigned pool), the following confirmation window will be opened:
     
         <p align="center">
-          <img src="../../../img/kypo-portal/trainings/training-instance/TI-delete-confirmation.png">
+          <img src="../../../img/user-guide/training-agenda/training-instance/TI-delete-confirmation.png">
         </p>
     
         Either click the **Ok** button and solve the problems that do not allow the deletion of the training instance, or use the **Force** button which will delete all data about training instance.
@@ -66,7 +66,7 @@ An instructor can use this panel to edit basic information about the training in
 * All definitions (released/unreleased), if they also have the administrator role. 
 
 ### 2. Assign Pool 
-An instructor can use this panel to assign a pool with sandboxes to the training instance. The instructor chooses from the list of [pools](/user-guide/sandbox-agenda/pool) created by the sandbox instructor. It is necessary to properly choose the pool. A locked pool cannot be assigned to the training instance.
+An instructor can use this panel to assign a pool with sandboxes to the training instance. The instructor chooses from the list of [pools](../../sandbox-agenda/pool) created by the sandbox instructor. It is necessary to properly choose the pool. A locked pool cannot be assigned to the training instance.
 
 ### 3. Edit Instructors 
 Allows the instructor to add other instructors to participate in managing training instances. Those instructors have the same rights against the training instance as the author, e.g. co-instructors can edit training instance or see the progress of trainees and results of training instance.
@@ -88,7 +88,7 @@ The page consists of three panels:
 Displays basic information about training instance as shown in the above figure. Provides links to display token and link to the detail of the assigned pool. Click on the ![show-progress](../../img/buttons/show-progess-button.png) button to redirect to the [Progress of Training Instance](#progress-of-training-instance) page to see the game progress of participants in time. Click on another button ![show-results](../../img/buttons/show-results-button.png) to redirect to the [Results of Training Instance](#results-of-training-instance)  page to see summary results of training instance visualized on various graphs and in tables. 
 
 ### 2. Active Training Runs
-Lists active training runs. Runs are either in the running state or finished state (trainee completed all levels).   All active training runs have assigned sandboxes from the pool. The instructor is able to delete the assigned sandbox from OpenStack by clicking :material-delete:{: .red .icon}. Be careful when deleting the sandbox from a training run in the running state. The trainee will not be able to complete the remaining levels. Those training runs should be archived after that, so trainees could not resume training run. 
+Lists active training runs. Runs are either in the running state or finished state (trainee completed all levels). All active training runs have assigned sandboxes from the pool. The instructor is able to delete the assigned sandbox from OpenStack by clicking :material-delete:{: .red .icon}. Be careful when deleting the sandbox from a training run in the running state. The trainee will not be able to complete the remaining levels. Those training runs should be archived after that, so trainees could not resume training run. 
 
 Click the archive button :material-package-down:{: .icon .blue } to change the state of a training run to archived, reference to sandbox is removed and the training run is displayed among archived training runs.
 

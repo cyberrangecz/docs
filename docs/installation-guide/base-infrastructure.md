@@ -12,7 +12,7 @@
     $ sudo pip install "openstacksdk==0.43.0" "python-openstackclient==5.2.1" "python-heatclient==1.18.0"
     ```
     
-* [Obtain Application Credentials](https://gitlab.ics.muni.cz/kypo-crp/devops/kypo2-openstack-deploy/-/wikis/how-to/Obtain-Application-Credentials)
+* [Obtain Application Credentials](https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo2-openstack-deploy/-/wikis/how-to/Obtain-Application-Credentials)
     and source `app-cred-<name>-openrc.sh` file before the first use of a new terminal session.
 
     ```shell
