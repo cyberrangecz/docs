@@ -2,23 +2,33 @@
 
 ## Core Contributors
 
-| Surname | Name | Role | Contact |
+| Surname | Name | Role | Active |
 | ------ | ------ | ------ | ------ |
-| Andoniadis | Kamil | Python lead | <374100@mail.muni.cz> |
-| Dočkalová Burská | Karolína | UI/UX dev | <396296@mail.muni.cz> |
-| Hamerník| Martin | Angular lead | <445720@mail.muni.cz> |
-| Jaduš | Boris | Java dev | <445343@mail.muni.cz> |
-| Kočamba | Erik | Angular dev | <445661@mail.muni.cz> |
-| Paluba | Juraj | Python dev | <492988@mail.muni.cz> |
-| Pilár | Dominik | Java dev | <445537@mail.muni.cz> |
-| Šeda | Pavel | Java lead | <441048@mail.muni.cz> |
-| Tovarňák| Daniel | project/tech lead | <172673@mail.muni.cz> |
-| ~~Duda~~ | ~~Jan~~ | ~~Java dev~~ | ~~retired~~ |
-| ~~Hai Duong~~ | ~~Tran~~ | ~~Angular dev~~ | ~~retired~~ |
-| ~~Rusňák~~ | ~~Vít~~ | ~~UI/UX prototyping~~ |~~retired~~ |
-| ~~Staněk~~ | ~~Miloslav~~ | ~~Python lead~~ | ~~retired~~ |
-| ~~Zbončáková~~ | ~~Tatiana~~ | ~~Python dev~~ | ~~retired~~ |
+| Andoniadis | Kamil | Python leader | :material-check-bold:{: .icon .green } |
+| Dočkalová Burská | Karolína | UI/UX developer | :material-check-bold:{: .icon .green } |
+| *Duda* | *Jan* | *Java developer* | :material-close-thick:{: .icon .red } |
+| *Hai Duong* | *Tran* | *Angular developer* | :material-close-thick:{: .icon .red } |
+| Hamerník| Martin | Angular leader | :material-check-bold:{: .icon .green } |
+| Jaduš | Boris | Java developer | :material-check-bold:{: .icon .green } |
+| Kočamba | Erik | Angular developer | :material-check-bold:{: .icon .green } |
+| Paluba | Juraj | Python developer | :material-check-bold:{: .icon .green } |
+| Pilár | Dominik | Java developer | :material-check-bold:{: .icon .green } |
+| *Staněk* | *Miloslav* | *Python developer* | :material-close-thick:{: .icon .red } |
+| Šeda | Pavel | Java leader | :material-check-bold:{: .icon .green } |
+| Tovarňák| Daniel | project leader | :material-check-bold:{: .icon .green } |
+| *Zbončáková* | *Tatiana* | *Python developer* | :material-close-thick:{: .icon .red } |
 
+## The Executive Board / Board of Advisors
+
+| Surname | Name | Role |
+| ------ | ------ | ------ |
+| Čegan | Jakub | project management |
+| **Čeleda** | **Pavel** | **research director** |
+| Horák| Martin | communication specialist |
+| Ošlejšek| Radek | visualisation research |
+| Rusňák | Vít | UI/UX research |
+| Tovarňák| Daniel | architecture |
+| Vykopal | Jan | educational research |
 
 ## Special Recognition
 
@@ -26,20 +36,21 @@
     Here goes a list of people (surely not complete), whose invaluable help allowed us to make the current version of KYPO CRP into what it is today.
 
 - Čermák Milan
-- Čegan Jakub
-- Čeleda Pavel
+- Čermák Roman
 - Eichler Zdeněk
 - Hašák Šimon
+- Klimentová Lucie
 - Košuth Jakub Bartolomej
 - Kouřil Daniel
 - Lago Dušan
 - Laštovička Martin
 - Macháč Martin
 - Nutár Ivo
-- Ošlejšek Radek
 - Plesník  Tomáš
 - Procházka Michal
+- Račanský Václav
+- Sliacka Silvia
 - Švábenský Valdemar
 - Toth Dalibor
 - Vizváry Martin
-- Vykopal Jan
+- Vydra Zdeněk
