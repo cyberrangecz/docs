@@ -1,4 +1,4 @@
-We have designed the KYPO cyber range as a cloud platform, which allows for achieving maximum flexibility, scalability, and cost-effectiveness. A lot of development effort has been dedicated to user interactions within KYPO CRP – that allows us to offer access through a web browser. The following conceptual architecture displays the key architectural constructs in the designed system.
+We have designed the KYPO cyber range as a cloud platform for achieving maximum flexibility, scalability, and cost-effectiveness. A lot of development effort has been dedicated to user interactions within KYPO CRP – that allows us to offer access through a web browser. The following conceptual architecture displays the key architectural constructs in the designed system.
 
 
 ![KYPO-portal-diagram](../img/basic-concepts/KYPO-portal-diagram.png)
