@@ -8,7 +8,8 @@
 | Dočkalová Burská | Karolína | UI/UX developer | :material-check-bold:{: .icon .green } |
 | *Duda* | *Jan* | *Java developer* | :material-close-thick:{: .icon .red } |
 | *Hai Duong* | *Tran* | *Angular developer* | :material-close-thick:{: .icon .red } |
-| Hamerník| Martin | Angular leader | :material-check-bold:{: .icon .green } |
+| Hamerník | Martin | Angular leader | :material-check-bold:{: .icon .green } |
+| Ignác | Igor | Angular developer | :material-check-bold:{: .icon .green } |
 | Jaduš | Boris | Java developer | :material-check-bold:{: .icon .green } |
 | Kočamba | Erik | Angular developer | :material-check-bold:{: .icon .green } |
 | Paluba | Juraj | Python developer | :material-check-bold:{: .icon .green } |
