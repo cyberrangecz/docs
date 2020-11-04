@@ -16,6 +16,6 @@ We tried our best to create the KYPO Cyber Range Platform as simple as is possib
 
 But if you need professional support or just looking for someone who will help you pick up the OpenStack cluster and deploy the KYPO CRP for you, [let us know](https://www.crp.kypo.muni.cz).
 
-## Help us with KYPO Cyber Range Platform
+## Be a part of our KYPO CRP community
 
 KYPO Cyber Range Platform is an open-source project. We walked a long way with the support of projects and institutions listed below. If you are considering supporting our KYPO CRP or contributing to it, please [contact us](https://www.crp.kypo.muni.cz).
