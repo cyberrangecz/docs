@@ -1,9 +1,9 @@
-Before you start with the KYPO CRP, you need to have a general understanding of the objects used in the context of the platform. This topic briefly introduces you to a few basic terms which help you get started with KYPO CRP faster.
+Before you start with the KYPO CRP, you need to have a general understanding of the terminology used in the context of the platform. This topic briefly introduces you to a few basic terms which help you get started with KYPO CRP faster.
 
 ## Emulated Virtual Environment
 When creating and using an emulated virtual environment we use the following terminology:
 
-* **[Sandbox](../../user-guide-advanced/sandboxes/sandboxes-overview/#sandbox):** It is an isolated testing environment with virtual networks that enable users to connect to the virtual machines (VMs) and communicate with the rest of the network, the host machine, and other VMs. At the VMs, the user can run programs, use network services, or monitor the network traffic. Everything without affecting the external infrastructure. Sandbox is created using cloud service.
+* **[Sandbox](../../user-guide-advanced/sandboxes/sandboxes-overview/#sandbox):** It is an isolated testing environment with virtual networks that enable users to connect to the virtual machines (VMs) and communicate with the rest of the network, the host machine, and other VMs. At the VMs, the user can run programs, use network services, or monitor the network traffic. Everything without affecting the external infrastructure.
 * **[Sandbox Definition](../../user-guide-advanced/sandboxes/sandboxes-overview/#sandbox-definition):** Definition of the internal structure of the sandboxes (networks and hosts) and user customization of the hosts. It consists of two parts: [Topology Definition](../../user-guide-advanced/sandboxes/sandbox-topology/topology-definition) and [Sandbox Provisioning](../../user-guide-advanced/sandboxes/sandbox-provisioning).
 * **[Pool](../../user-guide-advanced/sandboxes/sandboxes-overview/#pool):** A group of sandboxes created based on the same sandbox definition.
 
