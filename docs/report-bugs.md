@@ -1,4 +1,4 @@
-Reporting bugs is a great way for anyone to help improve the KYPO platform. To report bugs we use the GitLab lightweight issue tracker system in the [kypo-crp-issues-public](https://gitlab.ics.muni.cz/muni-kypo-crp/kypo-crp-issues-public) repository. Before reporting a bug, please consider the following points:
+Reporting bugs is a great way for anyone to help improve the KYPO platform. To report bugs we use the GitLab lightweight issue tracker system. Before reporting a bug, please consider the following points:
   
   * Read the [FAQ](faq.md) to see if your issue isn't already a well-known question.
   * Ask on the kypo-users first if you’re not sure that what you’re seeing is a bug.
