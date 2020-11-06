@@ -10,12 +10,12 @@ We are glad that you are interested in our KYPO Cyber Range Platform. Please che
 
 If you decide to deploy KYPO CRP in your organization, please check our Installation Guide and pay attention to a page describing [KYPO CRP Prerequisities](installation-guide/kypo-platform-prerequisites.md). All information you need for work with our platform should be available in this documentation. If you think you missed something, please, check [FAQ](faq.md) before contacting us.
 
+## Be a part of our KYPO CRP community
+
+KYPO Cyber Range Platform is an open-source project. We walked a long way with the support of projects and institutions listed below. If you are considering supporting our KYPO CRP or contributing to it, please [contact us](https://www.crp.kypo.muni.cz).
+
 ## Get Professional Support
 
 We tried our best to create the KYPO Cyber Range Platform as simple as is possible for such complex software. We made all our documentation public here to help you with deployment and running the platform.
 
 But if you need professional support or just looking for someone who will help you pick up the OpenStack cluster and deploy the KYPO CRP for you, [let us know](https://www.crp.kypo.muni.cz).
-
-## Be a part of our KYPO CRP community
-
-KYPO Cyber Range Platform is an open-source project. We walked a long way with the support of projects and institutions listed below. If you are considering supporting our KYPO CRP or contributing to it, please [contact us](https://www.crp.kypo.muni.cz).
