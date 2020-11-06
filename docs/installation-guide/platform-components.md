@@ -4,6 +4,7 @@ KYPO Platform has been designed as a web application that uses the microservice 
 ![microservices](../img/user-guide-advanced/platform-components/kypo-microservices.png)
 
 ## KYPO Head
+KYPO Head is a host on which all essential services are running.
 
 ### User And Group Service
 Provides functionality to manage users, groups, roles in the KYPO platform and allows registration of other microservices with other specific roles. Those entities are managed by an administrator. Admin can manipulate with users (add/remove them to/from created groups) and groups (create or remove them, assign/unassign roles to/from groups), and can register new external microservices.
