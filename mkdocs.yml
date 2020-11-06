@@ -57,11 +57,11 @@ nav:
   - Available Features: available-features.md
   - FAQ: faq.md
   - Reference:
-      - Tables of Permissions: reference/tables-of-permissions.md
+      - Sandbox Service: reference/sandbox-service-swagger-open-api.md
       - Training Service: reference/training-swagger-open-api.md
       - User and Group Service: reference/user-and-group-swagger-open-api.md
       - Elasticsearch Service: reference/elasticsearch-swagger-open-api.md
-      - Sandbox Service: reference/sandbox-service-swagger-open-api.md
+      - Tables of Permissions: reference/tables-of-permissions.md
   - Extras:
       - Logging:
           - Architecture: extras/logging/architecture.md
