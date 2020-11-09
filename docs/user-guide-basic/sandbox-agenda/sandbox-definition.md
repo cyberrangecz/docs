@@ -8,7 +8,7 @@ Before creating a sandbox, the topology of the sandbox and user configuration of
 
 The page in the KYPO portal contains only one panel with two required fields: 
 
-* **GitLab URL**: Git clone SSH URL of sandbox definition, 
+* **Git URL**: Git clone SSH URL of the sandbox definition. See the picture below.
 * **Revision**: A revision parameter typically, but not necessarily, names a commit object (mostly master).
 
 If these fields are correct, a new sandbox definition is created by clicking the ![create-button](../../img/buttons/create-button.png) button. 

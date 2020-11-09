@@ -100,7 +100,7 @@ In the first panel of the training definition editor, the instructor can edit fi
 </p>
 
 #### Edit Authors Panel
-In the second panel of training definition editor, the instructor can add and remove authors from this definition.
+In the second panel of training definition editor, the instructor can add and remove authors from the definition.
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-definition/TD-edit-authors.png">
@@ -123,13 +123,13 @@ To add a new level the instructor can click ![Add-button](../../img/buttons/add-
     To change the order of levels, use drag-and-drop mechanism. Select a level in level bar by "grabbing" it and dragging it to a different position.
 
 ##### I. Game Level
-At the game level, a player can access a virtual network inside the sandbox to find a solution to the problem assigned by level content. The instructor can fill this form to specify details of the new level (when the instructor is done editing level they must save changes with the ![save](../../img/buttons/save-button.png) button.
+At the game level, a trainee can access a virtual network inside the sandbox to find a solution to the assignment. The instructor can fill this form to specify details of the new level (when the instructor is done editing level they must save changes with the ![save](../../img/buttons/save-button.png) button.
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-definition/TD-GL-panel.png">
 </p>
 
-Under the game level editing form, there is a fourth additional panel that the instructor can use to create, delete and, edit **hints** that are associated with a given game level.
+Under the game level editing form, there is a fourth additional **Hints** panel that the instructor can use to create, delete and, edit hints that are associated with a given game level.
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-definition/TD-hint-panel.png">
@@ -142,7 +142,7 @@ A new hint can be added with the ![add-button](../../img/buttons/add-button.png)
 </p>
 
 ##### II. Assessment Level
-In the assessment level, the players answer a list of questions. Content of this level can be edited with the following form (when the instructors finish the editing of this level they must save changes with the ![save](../../img/buttons/save-button.png) button:
+In the assessment level, the trainees answer a list of questions. Content of this level can be edited with the following form (when the instructors finish the editing of this level they must save changes with the ![save](../../img/buttons/save-button.png) button:
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-definition/TD-AL-panel.png">
@@ -160,26 +160,26 @@ The instructor can choose to create a test or questionnaire, so the creation of 
   <img src="../../../img/user-guide-basic/training-agenda/training-definition/TD-question.png">
 </p>
 
-Each type has its specific editing form (when the instructors finish the questions they must save changes with the ![save](../../img/buttons/save-button.png) button):
+Each type has its specific editing form. Each change that has been made must be saved with the ![save](../../img/buttons/save-button.png) button.
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-definition/TD-questions-edit.png">
 </p>
 
 ##### III. Info Level
-In the info level the player can only read content specified by the instructor in the following form:
+In the info level the trainees read the content of the information written by the instructor in the following form:
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-definition/TD-IL-panel.png">
 </p>
 
 
-### 2. Upload a Definition From Json File
-To upload a training definition the instructor can click in the **Training Definition Overview** on the top right ![upload-button](../../img/buttons/upload-button.png) button. This will open the following window:
+### 2. Upload a Definition From JSON File
+To upload a training definition, click in the **Training Definition Overview** on the top right ![upload-button](../../img/buttons/upload-button.png) button. This will open the following window:
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-definition/TD-upload-panel.png">
 </p>
 
 
-The instructor can upload training definitions that were stored in the JSON file. This use-case is useful in the situation when the instructor wants to re-use the training definition stored in the past.
+Upload training definition that has been downloaded as a file in JSON format. This use-case is useful in the situation when the instructor wants to re-use the training definition stored in the past.

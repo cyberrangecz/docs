@@ -14,11 +14,11 @@ Then the User Guide (Basic) section then serves as a manual on how to operate al
 
 Access to KYPO Portal depends a lot on the role you hold as a user. There are three main roles we differentiated and depending on them you can access different pages of agendas and perform various functionalities in the KYPO Portal.
 
-* **Trainees:** Everybody who has access to the KYPO Portal and is interested in participating in the training can perform actions inside of the [Traning run](../training-agenda/training-run).
-* **Instructors:** Users who are responsible for preparing and creating trainings and corresponding sandboxes can access the following pages: 
+* **[Trainees](#trainees-view):** Everybody who has access to the KYPO Portal and is interested in participating in the training can perform actions inside of the [Traning run](../training-agenda/training-run).
+* **[Instructors](#instructors-view):** Users who are responsible for preparing and creating trainings and corresponding sandboxes can access the following pages: 
     * [Training definitions](../training-agenda/training-definition) and [Training instances](../training-agenda/training-instance) for overview and management of trainings. 
     * [Sandbox definitions](../sandbox-agenda/sandbox-definition) and [Pools](../sandbox-agenda/pool) needed for management of sandboxes, and [Resources](../sandbox-agenda/resources) for cloud resources overview.
-* **Administrators:** Users who are responsible for managing the whole KYPO CRP instance. They have access to every above-mentioned page in the KYPO Portal. Moreover, they can also have the rights to manage entities like users, groups, and microservices in [Administration Agenda](../administration-agenda/administration-agenda-overview). 
+* **[Administrators](#administrators-view):** Users who are responsible for managing the whole KYPO CRP instance. They have access to every above-mentioned page in the KYPO Portal. Moreover, they can also have the rights to manage entities like users, groups, and microservices in [Administration Agenda](../administration-agenda/administration-agenda-overview). 
 
 !!! note
     See the page [Roles](../../user-guide-advanced/users-and-groups/roles) for a better explanation of the meaning of roles.
@@ -42,18 +42,18 @@ After a successful login, the home page of the KYPO Portal contains the elements
 
 
 
-### Trainee's Point of View
+### Trainee's View
 Each trainee will be after a successful log-in directly redirected to the [Training Run Overview](../training-agenda/training-run/#training-runs-overview) page. 
 
 ![KYPO-home-page-trainee](../img/user-guide-basic/KYPO-home-page-trainee.png)
 
 
-### Instructor's Point of View
+### Instructor's View
 The instructor can access both Trainings Agenda and Sandboxes Agenda. 
 
 ![KYPO-home-page-trainee](../img/user-guide-basic/KYPO-home-page-instructor.png)
 
-### Administrator's Point of View 
+### Administrator's View 
 
 An administrator can access any page. 
 

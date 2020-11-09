@@ -1,11 +1,11 @@
 ## Login
 
-Access the KYPO Portal via the web browser entering the page address, e.g. [https://hostname.domain.cz](https://hostname.domain.cz). Users can log in to the KYPO CRP using one OIDC provider. There can be more than one, depends on how many OIDC providers you have configured. Any provider which is using OpenID Connect specification can be used, e.g. [MUNI Unified Login](https://it.muni.cz/en/services/jednotne-prihlaseni-na-muni/navody/how-to-connect-a-service-to-muni-unified-login). If you don't have an OIDC provider you can use the local OIDC provider which is part of the KYPO Platform. In this case, users must be registered by the administrator of the KYPO Platform, who will provide a username and password to users. If you have more than one OIDC provider, you can select a preferable login option.
+Enter a URL of the KYPO CRP to your web browser to navigate to the KYPO Portal web page. Log in using one of the available OIDC providers. If you have to use a local OIDC provider **(local issuer)** which is a part of the KYPO CRP, the administrator must provide credentials (username and password) to you.
 <p align="center">
   <img height="130" src="../../img/user-guide-basic/login-and-logout/login-muni-or-local-issuer.png">
 </p>
 
-This will redirect you to the selected OIDC provider, in the case of a local OIDC provider, the login page would be as follows: 
+This will redirect you to the selected OIDC provider to sign in. In the case of a local OIDC provider, the login page would be as follows: 
 
 ![csirt-mu-issuer](../img/user-guide-basic/login-and-logout/local-oidc-provider-login-window.png)
 

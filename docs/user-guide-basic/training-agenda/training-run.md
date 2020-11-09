@@ -2,7 +2,7 @@
 This page consists of two panels: 
 
 1. [**Access Training**](#1-access-training)
-2. [**Table with the list of training runs**](#2-table-with-the-list-of-training-runs) 
+2. [**Training Runs**](#2-training-runs) 
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-run/TR-overview.png">
@@ -14,7 +14,7 @@ Enter the access token prefix and PIN provided by the instructor of the training
 !!! note
     If trainee already accessed training run in particular training instance and haven't finished it yet, the training run will be resumed. 
 
-### 2. Table With the List of Training Runs
+### 2. Training Runs
 Lists all training runs of the logged-in trainee. Each row of the table represents a training run of a particular training instance (trainee can access multiple training runs within training instance). The training run can be unfinished or finished. An unfinished run can be resumed using the :material-launch:{: .blue .icon} button or entering the access token in the Access Training panel.   
 A trainee can view the results of the finished training run by clicking the :material-poll-box:{: .blue .icon} button.  
 
