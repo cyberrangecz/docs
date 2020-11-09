@@ -1,5 +1,5 @@
 # Acknowledgements
-Several research activities helped us to create this open-source project. The official acknowledgements follow below.
+Several research activities helped us to create this open-source project. The official acknowledgments follow below.
 
 * This activity is supported by [CONCORDIA project](https://www.muni.cz/en/research/projects/43025) which has received funding from the European Union’s Horizon 2020 Research and Innovation program under Grant Agreement No 830927. 
 
