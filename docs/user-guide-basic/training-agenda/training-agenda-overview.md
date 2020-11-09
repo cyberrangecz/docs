@@ -1,5 +1,5 @@
 # Overview
-The purpose of the Training Agenda is to create and manage trainings that are only available to users with the role [instructor](../../../user-guide-advanced/users-and-groups/roles/#instructor). Another purpose of the agenda is accessing training runs which is available for all users with the role [trainee](../../../user-guide-advanced/users-and-groups/roles/#trainee). These activities are mapped onto the [Training Creation](../../../basic-concepts/typical-workflow/#training-creation) workflow. The training agenda is divided into three sections:
+The purpose of the Training Agenda is to create and manage trainings that are only available to users with the role [instructor](../../../user-guide-advanced/users-and-groups/roles/#instructor). Another purpose of the agenda is accessing training runs which is available for all users with the role [trainee](../../../user-guide-advanced/users-and-groups/roles/#trainee). These activities are mapped onto the [Training Creation](../../../basic-concepts/typical-workflow-for-training/#training-creation) workflow. The training agenda is divided into three sections:
 
 * **[Training Definition](training-definition.md)** section is used to create and manage training definitions (the content of trainings).
  

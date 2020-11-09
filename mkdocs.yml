@@ -12,7 +12,7 @@ nav:
     - Use Cases: basic-concepts/use-cases.md
     - Terminology: basic-concepts/terminology.md
     - Conceptual Architecture: basic-concepts/conceptual-architecture.md
-    - Typical Workflow: basic-concepts/typical-workflow.md
+    - Typical Workflow for Training: basic-concepts/typical-workflow-for-training.md
   - User Guide (Basic):
       - Overview: user-guide-basic/overview.md
       - Login & Logout: user-guide-basic/login-and-logout.md

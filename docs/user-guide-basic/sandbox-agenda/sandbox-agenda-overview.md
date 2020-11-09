@@ -1,5 +1,5 @@
 # Overview
-The purpose of the Sandbox Agenda is to create and manage sandbox definitions, pools, instances and resources. These activities are mapped onto the [Sandbox Creation](../../../basic-concepts/typical-workflow/#sandboxes-creation) workflow. User with role [instructor](../../../user-guide-advanced/users-and-groups/roles/#instructor) can access this agenda. The sandbox agenda is divided into three parts:
+The purpose of the Sandbox Agenda is to create and manage sandbox definitions, pools, instances and resources. These activities are mapped onto the [Sandbox Creation](../../../basic-concepts/typical-workflow-for-training/#sandboxes-creation) workflow. User with role [instructor](../../../user-guide-advanced/users-and-groups/roles/#instructor) can access this agenda. The sandbox agenda is divided into three parts:
 
 * **[Sandbox Definition](sandbox-definition.md)** section is used to create Sandbox definitions.
 
