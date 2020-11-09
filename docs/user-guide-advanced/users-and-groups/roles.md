@@ -16,7 +16,7 @@ User who is responsible for managing the whole KYPO CRP instance. The administra
 This is the preferable option to use the roles in the KYPO Platform. But it is possible to use bigger granularity by assigning only some roles of microservices. See the meaning of the individual roles in the next part of the page. 
 
 !!! warning 
-    The used concept of roles so far will be probably changed in the next release.
+    The used concept of roles so far will be probably changed in one of the following release.
 
 
 ## Microservice Roles 

@@ -1,4 +1,4 @@
-The Sandbox Definition is a Gitlab repository managed by KYPO organizers to define a sandbox topology and provisioning of sandbox nodes.
+The Sandbox Definition is a directory structure stored as a Git repository managed by KYPO instructors to define a sandbox topology and provisioning of sandbox nodes.
 
 The simplest directory structure of Sandbox Definition:
 

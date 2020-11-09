@@ -12,7 +12,7 @@ A Topology Instance of a Sandbox is created in the cloud platform and connected 
 
 We differentiate between 2 types of SSH access based on privileges.
 
-* [**Management access**](#management-access): For those who manages sandboxes or KYPO platform (role `organizer`).
+* [**Management access**](#management-access): For those who manages sandboxes or KYPO platform (role `instructor`).
 * [**User access**](#user-access): For everyone else (role `trainee`).
 
 ### Management Access

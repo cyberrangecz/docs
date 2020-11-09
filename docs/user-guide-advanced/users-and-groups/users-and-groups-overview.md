@@ -3,7 +3,7 @@ Privileges and access rights to pages in the KYPO portal, resources in microserv
 When accessing the KYPO portal, users are asked to log in via the OIDC Provider. After successful login, an access token is obtained from OIDC Provider and the roles of the user are determined by User And Group microservice. That information is stored and available during the whole session.
 
 !!! note
-    Refresh the page to apply changes in roles of the user made by an administrator.
+    Refresh the KYPO Portal page to apply changes in the roles of the user that have been made by an administrator.
 
 The permission system is based on 4 concepts:
 
