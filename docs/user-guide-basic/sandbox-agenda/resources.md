@@ -8,7 +8,7 @@ Resources Overview consist of two panels:
 ### 1. Usage Statistics of Cloud Server
 * **kypo-platform-testing**: the name of a cloud server,
 * **Instances**: Created VMs in cloud server,
-* **VCPUs**: Virtual CPUs currently in use by all instances,
+* **vCPUs**: Virtual CPUs currently in use by all instances,
 * **RAM**: The amount of the main memory currently in use by all instances.
 
 ![usage-statistics](../../img/user-guide-basic/sandbox-agenda/resources/usage-stats.png)
@@ -20,7 +20,7 @@ Provides a list of available OS images that can be installed on VMs. Each row co
 * **Default User**: User used to login to VM, or connect via SSH.
 * **Updated At**: Last time image was updated.
 * **Min Disk**: Minimum amount of disk memory to boot image, in gigabytes.
-* **Min Ram**: Minimum amount of main memory to boot image, in megabytes.
+* **Min RAM**: Minimum amount of main memory to boot image, in megabytes.
 * **Status**
 * **Visibility**: Public, private, community, shared.
 

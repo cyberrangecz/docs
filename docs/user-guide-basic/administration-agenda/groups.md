@@ -1,8 +1,8 @@
 This section is used to list all groups created in the KYPO platform. Groups are essential to the user-access, as the access roles are not assigned to specific users but to groups. The user acquires access to the KYPO portal agendas based on the roles of the groups they belong to.
 
-![group-overview](/img/user-guide-basic/administration-agenda/group-overview.png) 
+![group-overview](../../img/user-guide-basic/administration-agenda/group-overview.png) 
 
-To create a new group, the administrator must click on ![create-button](/img/buttons/create-button.png) button that redirects him to the page [Create Group](#create-or-edit-group). The last column of the table contains actions :material-pencil:{: .icon .blue } &nbsp; :material-delete:{: .red .icon }: 
+To create a new group, the administrator must click on ![create-button](../../img/buttons/create-button.png) button that redirects him to the page [Create Group](#create-or-edit-group). The last column of the table contains actions :material-pencil:{: .icon .blue } &nbsp; :material-delete:{: .red .icon }: 
 
 
 ??? pencil "Edit"
@@ -20,7 +20,7 @@ To create a new group, the administrator must click on ![create-button](/img/but
     After confirming, the group will be deleted from the KYPO portal.
     
     !!! info
-        Multiple groups can be deleted by checking groups with checkboxes situated on the left side of the table row and by clicking on ![delete-button](/img/buttons/big-delete-button.png) button.
+        Multiple groups can be deleted by checking groups with checkboxes situated on the left side of the table row and by clicking on ![delete-button](../../img/buttons/big-delete-button.png) button.
 
 
 ## Create or Edit Group
@@ -42,11 +42,11 @@ During the creation of a group, the second and third panels are disabled. To mak
 2. ![create-and-edit-button](../../img/buttons/create-and-continue-button.png) that will stay on the page and allow the administrator to edit **members** and **roles** of the group.
 
 ### 1. Create/Edit Group
-Here, the administrator is required to fill up all the necessary fields before creating a new group. The `Expiration Date` field is optional and is useful in the cases when the administrator will create a group of instructors, e.g., for a particular semester. After filling up fields, click on the ![create-button](/img/buttons/create-button.png) button to save the group. Then panels **Edit members** and **Edit roles** will be rolled down. 
+Here, the administrator is required to fill up all the necessary fields before creating a new group. The `Expiration Date` field is optional and is useful in the cases when the administrator will create a group of instructors, e.g., for a particular semester. After filling up fields, click on the ![create-button](../../img/buttons/create-button.png) button to save the group. Then panels **Edit members** and **Edit roles** will be rolled down. 
 
 ![create-group-panel](../../img/user-guide-basic/administration-agenda/create-group.png)
 ### 2. Edit Members
-Here, the administrator can add users individually or import all users from the group. The part **Add users** provide an easy way to search for users whose administrator would like to add to the group. Administrators can also add all users from the specific group in the part **Import users**. Click on the ![add-button](/img/buttons/add-button.png) button to add selected users to the group. All users will be added to the group and will be present in the list in the part **Members of group**. A user or multiple users can be removed via the common way mentioned before.
+Here, the administrator can add users individually or import all users from the group. The part **Add users** provide an easy way to search for users whose administrator would like to add to the group. Administrators can also add all users from the specific group in the part **Import users**. Click on the ![add-button](../../img/buttons/add-button.png) button to add selected users to the group. All users will be added to the group and will be present in the list in the part **Members of group**. A user or multiple users can be removed via the common way mentioned before.
 
 ![edit-members-panel](../../img/user-guide-basic/administration-agenda/edit-members.png)
 ### 3. Edit Roles 
