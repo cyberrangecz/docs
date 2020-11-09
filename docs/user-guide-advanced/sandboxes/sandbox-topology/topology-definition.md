@@ -137,7 +137,7 @@ During a network creation, the OpenStack will take the first IP address of the s
 *[UAN]: User Access Node 
 ## Example
 
-An example sandbox definition with the name `small-sandbox` contains the following.
+An example topology definition in the sandbox definition with the name `small-sandbox` contains the following.
 
 * Two hosts. The host server will not be visible in the topology.
 * Two routers.
