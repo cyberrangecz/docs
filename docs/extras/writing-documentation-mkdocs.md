@@ -1,6 +1,6 @@
 [TOC]
 
-MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file `mkdocs.yml`. 
+For the creation of the KYPO portal documentation, we have chosen MkDocs. MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file `mkdocs.yml`. Information about MkDocs syntax and functions can be found further down on this page.
 
 MkDocs require to have installed: 
 
