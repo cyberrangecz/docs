@@ -10,13 +10,21 @@ The purpose of the Training Agenda is to create and manage trainings that are on
 To access the above-mentioned pages, click the respective button on the front page of the KYPO portal. 
 
 <p align="center">
-  <img src="../../../img/user-guide-basic/training-agenda/training-agenda.png">
+  <img src="../../../img/user-guide-basic/training-agenda/overview/home-page-training-definition-button.png">
+</p>
+
+<p align="center">
+  <img src="../../../img/user-guide-basic/training-agenda/overview/home-page-training-instance-button.png">
+</p>
+
+<p align="center">
+  <img src="../../../img/user-guide-basic/training-agenda/overview/home-page-training-run-button.png">
 </p>
 
 Or click the button in the global navigation in the section Trainings.
 
 <p align="center">
-  <img src="../../../img/user-guide-basic/training-agenda/training-agenda-left-panel.png">
+  <img src="../../../img/user-guide-basic/training-agenda/overview/training-agenda-left-panel.png">
 </p>
 
 !!! note
