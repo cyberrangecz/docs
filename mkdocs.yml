@@ -28,8 +28,8 @@ nav:
           - Training Run: user-guide-basic/training-agenda/training-run.md
       - Administration Agenda:
           - Overview: user-guide-basic/administration-agenda/administration-agenda-overview.md
-          - Users: user-guide-basic/administration-agenda/users.md
           - Groups: user-guide-basic/administration-agenda/groups.md
+          - Users: user-guide-basic/administration-agenda/users.md
           - Microservices: user-guide-basic/administration-agenda/microservices.md
   - User Guide (Advanced):
       - Overview: user-guide-advanced/user-guide-advanced-overview.md

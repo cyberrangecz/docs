@@ -38,7 +38,7 @@ After a successful login, the home page of the KYPO Portal contains the elements
 **User menu:** User-specific information such as name and e-mail, and a logout button.
 **Breadcrumbs:** Full path to the current page. Represents the folder structure.
 **Notifications:** The list of the latest notifications.
-**Agendas:** Buttons that allow to access specific pages of the individual three above-mentioned KYPO agendas.
+**Agendas:** Buttons that allow to access specific pages of the individual three above-mentioned KYPO agendas. 
 
 
 
