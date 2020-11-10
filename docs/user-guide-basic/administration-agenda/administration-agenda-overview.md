@@ -8,20 +8,20 @@ The administration agenda is divided into three sections:
 To access the above-mentioned sections, click the respective button on the front page of the KYPO portal.
 
 <p align="center">
-  <img src="../../../img/user-guide-basic/administration-agenda/home-page-groups-button.png">
+  <img src="../../../img/user-guide-basic/administration-agenda/overview/home-page-groups-button.png">
 </p>
 
 <p align="center">
-  <img src="../../../img/user-guide-basic/administration-agenda/home-page-users-button.png">
+  <img src="../../../img/user-guide-basic/administration-agenda/overview/home-page-users-button.png">
 </p>
 
 <p align="center">
-  <img src="../../../img/user-guide-basic/administration-agenda/home-page-microservices-button.png">
+  <img src="../../../img/user-guide-basic/administration-agenda/overview/home-page-microservices-button.png">
 </p>
 
 
 Or click the button in the global navigation in the section Administration:
 
 <p align="center">
-  <img src="../../../img/user-guide-basic/administration-agenda/administration-left-panel.png">
+  <img src="../../../img/user-guide-basic/administration-agenda/overview/administration-left-panel.png">
 </p>
