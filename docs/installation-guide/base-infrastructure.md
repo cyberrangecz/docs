@@ -41,12 +41,7 @@ Before you get to the deployment choose one of the configuration files and follo
     
     For each missing floating IP, create a new one and update IDs in the configuration file.
     
-    Use the following command with parameter `kypo_base_external_public_network_name` or `kypo_base_external_private_network_name`
-    respectively from the configuration file. Both of them are OpenStack external networks,
-    where the first one can be used to allocate a public IP address and the second
-    one to allocate a private IP address of your company. The choice depends on your
-    needs but, typically only servers on kypo-platform-production and kypo-platform-devel
-    OpenStack projects should have public IP addresses.
+    Use the following command with parameter `kypo_base_external_public_network_name` or `kypo_base_external_private_network_name` respectively from the configuration file. Both of them are OpenStack external networks, where the first one can be used to allocate a public IP address and the second one to allocate a private IP address of your company. The choice depends on your needs but, typically only servers on kypo-platform-production and kypo-platform-devel OpenStack projects should have public IP addresses.
     
     ```shell
     $ openstack floating ip create <kypo_base_external_<public/private>_network_name>
@@ -71,17 +66,17 @@ Before you get to the deployment choose one of the configuration files and follo
 
 There are 4 files of HEAT templates. Each of them is used to create a different part of the base infrastructure. 
 
-* [kypo-base-networking.yml](heat-templates/kypo-base-networking.yml) - Creates a base network where all sandboxes, KYPO-head, and KYPO-proxy will be connected to.
+* [kypo-base-networking.yml](heat-templates/kypo-base-networking.yml): Creates a base network where all sandboxes, KYPO-head, and KYPO-proxy will be connected to.
     This template is designed for KYPO-head and KYPO-proxy to have public IP addresses.
-* [kypo-base-networking-private.yml](heat-templates/kypo-base-networking-private.yml) - Almost the same as the previous one but
+* [kypo-base-networking-private.yml](heat-templates/kypo-base-networking-private.yml): Almost the same as the previous one but
     this template is designed for KYPO-head and KYPO-proxy to have private IP addresses.    
     **NOTE**: Do not use both networking templates.
-* [kypo-head.yml](heat-templates/kypo-head.yml) - Creates the KYPO-head server where KYPO platform will be installed.
-* [kypo-proxy-jump.yml](heat-templates/kypo-proxy-jump.yml) - Creates the KYPO-proxy server which is used for users to access sandboxes.
+* [kypo-head.yml](heat-templates/kypo-head.yml): Creates the KYPO-head server where the KYPO platform will be installed.
+* [kypo-proxy-jump.yml](heat-templates/kypo-proxy-jump.yml): Creates the KYPO-proxy server which is used for users to access sandboxes.
 
 ### Create
 
-1. Create KYPO-base networking, KYPO-head, and KYPO-proxy. First, choose the right networking template and OpenStack project configuration. Then run the following commands.
+1. Create KYPO-base networking, KYPO-head, and KYPO-proxy. First, choose the right networking template and the OpenStack project configuration. Then run the following commands.
 
     ```bash
     $ openstack stack create --wait -e <project>-params.yml -t <kypo-base-networking<-private>>.yml kypo-base-networking-stack
@@ -132,7 +127,7 @@ There are 4 files of HEAT templates. Each of them is used to create a different 
     $ openstack port list | grep "subnet_id='$(openstack subnet list | grep kypo-base-subnet | awk '{print $2}')'"
     ```
     
-2. Destroy the whole base infrastructure.    
+2. Destroy the whole base infrastructure.
     **NOTE**: Delete the base networking last.
     
     ```bash
