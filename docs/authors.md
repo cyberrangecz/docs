@@ -4,7 +4,7 @@
 
 | Surname | Name | Role | Active |
 | ------ | ------ | ------ | ------ |
-| Andoniadis | Kamil | Python leader | :material-check-bold:{: .icon .green } |
+| Andoniadis | Kamil | Python & DevOps leader | :material-check-bold:{: .icon .green } |
 | Dočkalová Burská | Karolína | UI/UX developer | :material-check-bold:{: .icon .green } |
 | *Duda* | *Jan* | *Java developer* | :material-close-thick:{: .icon .red } |
 | *Hai Duong* | *Tran* | *Angular developer* | :material-close-thick:{: .icon .red } |
@@ -12,24 +12,23 @@
 | Ignác | Igor | Angular developer | :material-check-bold:{: .icon .green } |
 | Jaduš | Boris | Java developer | :material-check-bold:{: .icon .green } |
 | Kočamba | Erik | Angular developer | :material-check-bold:{: .icon .green } |
+| Ošlejšek | Radek |  Visualisation R&D | :material-check-bold:{: .icon .green } |
 | Paluba | Juraj | Python developer | :material-check-bold:{: .icon .green } |
 | Pilár | Dominik | Java developer | :material-check-bold:{: .icon .green } |
+| Rusňák | Vít | UI/UX R&D | :material-check-bold:{: .icon .green } |
 | *Staněk* | *Miloslav* | *Python developer* | :material-close-thick:{: .icon .red } |
 | Šeda | Pavel | Java leader | :material-check-bold:{: .icon .green } |
-| Tovarňák| Daniel | project leader | :material-check-bold:{: .icon .green } |
+| Tovarňák| Daniel | Technical leader | :material-check-bold:{: .icon .green } |
 | *Zbončáková* | *Tatiana* | *Python developer* | :material-close-thick:{: .icon .red } |
 
-## The Executive Board / Board of Advisors
+## Advisory Board
 
 | Surname | Name | Role |
 | ------ | ------ | ------ |
-| Čegan | Jakub | project management |
-| **Čeleda** | **Pavel** | **research director** |
-| Horák| Martin | communication specialist |
-| Ošlejšek| Radek | visualisation research |
-| Rusňák | Vít | UI/UX research |
-| Tovarňák| Daniel | architecture |
-| Vykopal | Jan | educational research |
+| Čegan | Jakub | Project management |
+| Čeleda | Pavel | KYPO principal investigator |
+| Tovarňák| Daniel |  Architecture & Design |
+| Vykopal | Jan | Educational research & User testing |
 
 ## Special Recognition
 
@@ -40,6 +39,7 @@
 - Čermák Roman
 - Eichler Zdeněk
 - Hašák Šimon
+- Horák Martin
 - Klimentová Lucie
 - Košuth Jakub Bartolomej
 - Kouřil Daniel
@@ -50,6 +50,7 @@
 - Plesník  Tomáš
 - Procházka Michal
 - Račanský Václav
+- Rebok Tomáš
 - Sliacka Silvia
 - Švábenský Valdemar
 - Toth Dalibor
