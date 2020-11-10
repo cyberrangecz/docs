@@ -1,5 +1,5 @@
 ## Enable command logging
-Command logging is enabled on host VMs by using a number of Ansible roles. If the organizer wants to log terminal commands, these roles must be added to the playbook of the sandbox definition. (More about sandbox definition creation: [Sandbox definition creation process](../../../user-guide-basic/sandbox-agenda/sandbox-definition/#create-sandbox-definition))
+Command logging is enabled on host VMs by using several Ansible roles. If the organizer wants to log terminal commands, these roles must be added to the playbook of the sandbox definition. (More about sandbox definition creation: [Sandbox definition creation process](../../../user-guide-basic/sandbox-agenda/sandbox-definition/#create-sandbox-definition))
 
 * **Bash command logging** can be enabled by using the [KYPO Sandbox Logging Commands](https://gitlab.ics.muni.cz/muni-kypo-crp/useful-ansible-roles/kypo-sandbox-logging-bash) Ansible role. 
 
@@ -16,9 +16,9 @@ The training organizer can access all logged data (training events or commands) 
 
 ## Local deployment with vagrant
 
-If you are using the local  vagrant deployment configuration from the [kypo-crp-local-demo](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo) project and want to access logged data via the [Training Instance Overview](../../../user-guide-basic/training-agenda/training-instance#training-instance-overview), you need to additionally set up the forwarding from `MAN` to your local machine. To manually set up this forwarding follow these steps. 
+If you are using the local vagrant deployment configuration from the [kypo-crp-local-demo](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo) project and want to access logged data via the [Training Instance Overview](../../../user-guide-basic/training-agenda/training-instance#training-instance-overview), you need to additionally set up the forwarding from `MAN` to your local machine. To manually set up this forwarding follow these steps. 
 
-**1. Create new port forwarding rule in VirtualBox Manager:**
+**1. Create a new port forwarding rule in VirtualBox Manager:**
    
 Open the VirtualBox Manager and in the `Advanced Network settings` of your KYPO VM session click on the **Port Forwarding** button:
 ![VirtualBox settings](../../img/extras/logging/port-forwarding-rule.png)
@@ -42,19 +42,19 @@ Open the [kypo-sandbox-service-config.yml](https://gitlab.ics.muni.cz/muni-kypo-
 
 **3. Start the KYPO platform:**
 
-After the `kypo-sandbox-service-config.yml` is updated you can start the KYPO platform (if platform is already running you must restart it) using the following command in `/vagrant` directory:
+After the `kypo-sandbox-service-config.yml` is updated you can start the KYPO platform (if the platform is already running you must restart it) using the following command in `/vagrant` directory:
 ```
 docker-compose up
 ```
 
 **4. Update syslog-ng configuration in the MAN:** 
 
-After you have build your sandbox you need to change the forwarding of the syslog-ng in the MAN. Access the MAN via ssh (How to access MAN: [Sandbox SSH Access](../../../user-guide-advanced/sandboxes/sandbox-ssh-access)). When you are in the MAN open the syslog-ng log forwarding configuration:
+After you have built your sandbox you need to change the forwarding of the syslog-ng in the MAN. Access the MAN via ssh (How to access MAN: [Sandbox SSH Access](../../../user-guide-advanced/sandboxes/sandbox-ssh-access)). When you are in the MAN open the syslog-ng log forwarding configuration:
 ```
 sudo vim /etc/syslog-ng/conf.d/forward-rfc5424-messages.conf
 ```
 
-Here in the `destination d_kypo_head` section change the `port(515)` to the Host port you set in the VirtualBox Manager in the first step and save your changes. Following example from the first step your configuration should look like this (with exception in IP address which should be the one you set in second step):
+Here in the `destination d_kypo_head` section change the `port(515)` to the Host port you set in the VirtualBox Manager in the first step and save your changes. Following the example from the first step your configuration should look like this (with an exception in IP address which should be the one you set in the second step):
 ```
 # EVENTS Log Source
 source s_host {

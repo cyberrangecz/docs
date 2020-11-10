@@ -5,7 +5,7 @@ The purpose of the Sandbox Agenda is to create and manage sandbox definitions, p
 
 * **[Pool](pool.md)** section is used to create Pools from Sandbox definitions and manage created Pools. 
 
-* **[Resources](resources.md)** section is used to display available Instances, vCPUs and RAM in cloud service. It also provides a list of available OS images.
+* **[Resources](resources.md)** section is used to display available Instances, vCPUs, and RAM in cloud service. It also provides a list of available OS images.
 
 To access the above-mentioned pages, click the respective button on the front page of the KYPO portal. 
 

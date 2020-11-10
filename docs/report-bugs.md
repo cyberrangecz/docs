@@ -21,7 +21,7 @@ A good bug report should be clear and concise without any missing key points. An
   5.  Submit the issue.
 
 !!! warning "Bug fix" 
-    Bug should be fixed as soon as possible, but it doesn’t mean it will be fixed in the next release. Depends on the severity and priority of the reported bug. 
+    A bug should be fixed as soon as possible, but it doesn’t mean it will be fixed in the next release. Depends on the severity and priority of the reported bug. 
 
 
 ## Bug description
@@ -43,7 +43,7 @@ The following information is requested for bug reports to save time for develope
 
 #### Summary (optional)
 
-If title isn’t enough, you can add a short defect report summary/description. Few words if possible, including when and how the bug occurred, what is actual (what actually happens), and expected (what you should see instead) behavior.
+If the title isn’t enough, you can add a short defect report summary/description. Few words if possible, including when and how the bug occurred, what is actual (what actually happens), and expected (what you should see instead) behavior.
 
 #### Environment
 
@@ -72,7 +72,7 @@ Take a Screenshot of the instance of failure with proper captioning to highlight
 
 ![network-tab-response](img/report-bugs/network-tab-response.png)
 
-If everything is OK, try also check `Console` tab for error on the frontend side. If so take a screenshot. 
+If everything is OK, try also check the `Console` tab for error on the frontend side. If so take a screenshot. 
 
 ![console-tab](img/report-bugs/console-tab.png)
 

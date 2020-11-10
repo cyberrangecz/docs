@@ -29,9 +29,9 @@
         https://<YOUR-SERVER-ADDRESS>/logout-confirmed
         ```
 
-7. Hit **Save** button.
+7. Hit the **Save** button.
 8. Then got to tab "**JSON**", copy the JSON file and save it to file. **IMPORTANT STEP**
-9. Now create new Resource in "**Self-service Protected Resource Registration**".
+9. Now create a new Resource in "**Self-service Protected Resource Registration**".
 10. Again insert client Name and save JSON to an external file in the "**JSON**" tab.
 11. In the tab "**Access**" again choose which information about the user you will be getting, so-called `scopes`.
 12. Hit **Save** button.

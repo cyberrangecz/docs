@@ -1,4 +1,4 @@
-Privileges and access rights to pages in the KYPO portal, resources in microservices, or possibility do specific actions are restricted by roles of users. KYPO CRP has a permission system with fine grained control over what users can see and do. All of this is managed through the **User And Group microservice** and **OIDC Provider**. 
+Privileges and access rights to pages in the KYPO portal, resources in microservices, or the possibility do specific actions are restricted by the roles of users. KYPO CRP has a permission system with fine-grained control over what users can see and do. All of this is managed through the **User And Group microservice** and **OIDC Provider**. 
 
 When accessing the KYPO portal, users are asked to log in via the OIDC Provider. After successful login, an access token is obtained from OIDC Provider and the roles of the user are determined by User And Group microservice. That information is stored and available during the whole session.
 

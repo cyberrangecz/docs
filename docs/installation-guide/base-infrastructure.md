@@ -21,7 +21,7 @@
 
 ## Configuration
 
-There are 3 configuration files. Each for different OpenStack project.
+There are 3 configuration files. Each for a different OpenStack project.
 
 | OpenStack project     | Configuration file                       |
 | -----------------     | ------------------                       |
@@ -33,16 +33,16 @@ Before you get to the deployment choose one of the configuration files and follo
 
 1. Check that both floating IP IDs exists in the OpenStack project (i.e. `kypo_base_head_floating_ip_id` and `kypo_base_proxy_floating_ip_id`).
 
-    List Floating IP addresses in OpenStack project.
+    List Floating IP addresses in the OpenStack project.
 
     ```shell
     $ openstack floating ip list
     ```
     
-    For each missing floating IP, create a new one and update IDs in configuration file.
+    For each missing floating IP, create a new one and update IDs in the configuration file.
     
     Use the following command with parameter `kypo_base_external_public_network_name` or `kypo_base_external_private_network_name`
-    respectively from configuration file. Both of them are OpenStack external networks,
+    respectively from the configuration file. Both of them are OpenStack external networks,
     where the first one can be used to allocate a public IP address and the second
     one to allocate a private IP address of your company. The choice depends on your
     needs but, typically only servers on kypo-platform-production and kypo-platform-devel
@@ -55,13 +55,13 @@ Before you get to the deployment choose one of the configuration files and follo
 2. Set both KeyPair names to OpenStack SSH KeyPair that you own private part of (i.e. `kypo_base_head_keypair_name` and `kypo_base_proxy_keypair_name`).
     It can be the same KeyPair for both servers KYPO-head and KYPO-proxy.
 
-    List KeyPairs in OpenStack project.
+    List KeyPairs in the OpenStack project.
 
     ```shell
     $ openstack keypair list
     ```
     
-    If you do not own private part of any of the KeyPairs, add public part of any of your SSH keys to OpenStack KeyPairs.
+    If you do not own the private part of any of the KeyPairs, add the public part of any of your SSH keys to OpenStack KeyPairs.
     
     ```shell
     $ openstack keypair create --public-key </path/to/id_rsa.pub> <kypo_base_<head/proxy>_keypair_name>
@@ -71,7 +71,7 @@ Before you get to the deployment choose one of the configuration files and follo
 
 There are 4 files of HEAT templates. Each of them is used to create a different part of the base infrastructure. 
 
-* [kypo-base-networking.yml](heat-templates/kypo-base-networking.yml) - Creates a base network where all sandboxes, KYPO-head and KYPO-proxy will be connected to.
+* [kypo-base-networking.yml](heat-templates/kypo-base-networking.yml) - Creates a base network where all sandboxes, KYPO-head, and KYPO-proxy will be connected to.
     This template is designed for KYPO-head and KYPO-proxy to have public IP addresses.
 * [kypo-base-networking-private.yml](heat-templates/kypo-base-networking-private.yml) - Almost the same as the previous one but
     this template is designed for KYPO-head and KYPO-proxy to have private IP addresses.    
@@ -81,7 +81,7 @@ There are 4 files of HEAT templates. Each of them is used to create a different 
 
 ### Create
 
-1. Create KYPO-base networking, KYPO-head and KYPO-proxy. First choose the right networking template and OpenStack project configuration. Then run the following commands.
+1. Create KYPO-base networking, KYPO-head, and KYPO-proxy. First, choose the right networking template and OpenStack project configuration. Then run the following commands.
 
     ```bash
     $ openstack stack create --wait -e <project>-params.yml -t <kypo-base-networking<-private>>.yml kypo-base-networking-stack
@@ -89,7 +89,7 @@ There are 4 files of HEAT templates. Each of them is used to create a different 
     $ openstack stack create --wait -e <project>-params.yml -t kypo-proxy-jump.yml kypo-proxy-jump-stack 
     ```
     
-2. All communication to OpenStack project is prohibited by default.
+2. All communication to the OpenStack project is prohibited by default.
     Set OpenStack [Firewall](#firewall) rules to enable communication.
 
 3. Test SSH connection.
@@ -145,7 +145,7 @@ There are 4 files of HEAT templates. Each of them is used to create a different 
 
 The firewall rules within OpenStack are grouped in Security Groups.
 Currently, we are using only the default Security Group called `default`.
-By default all egress communication is allowed, but ingress communication is allowed only within the same Security Group.
+By default, all egress communication is allowed, but ingress communication is allowed only within the same Security Group.
 
 List all Security Group rules.
 

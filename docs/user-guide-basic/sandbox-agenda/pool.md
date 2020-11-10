@@ -84,7 +84,7 @@ The instructor can see all of the allocated sandboxes in the **Sandbox Instances
 
     ![delete-sb](../../img/user-guide-basic/sandbox-agenda/pool/delete-sandbox.png)
 
-    After the confirmation, new [cleanup request](#4-cleanup-requests) for a given sandbox instance will be created.
+    After the confirmation, a new [cleanup request](#4-cleanup-requests) for a given sandbox instance will be created.
 
     !!! info 
         Only unlocked sandboxes can be deleted.
@@ -109,7 +109,7 @@ The instructor can see all of the allocated sandboxes in the **Sandbox Instances
 ### 2. Allocation Units
 
 ![sandbox-instances](../../img/user-guide-basic/sandbox-agenda/pool/allocation-units.png)
-Each sandbox that is allocating or has been allocated is tied with the allocation unit. It is the object which manages allocation requests and cleanup requests. Allocation is composed of [three stages](#allocation-request-stages). If one of these stages fails, the sandbox cannot be used. The last column of the table contains the **create cleanup request** button :bootstrap-cleaning-services:{: .blue .icon}. In case that all stages of the allocation request are successfully finished, the button works the same as the delete button in the Sandbox Instances table. Otherwise, the respective [allocation request](#3-allocation-requests) must be canceled (to invalidate other stages) and then **create a cleanup request** button can be used.
+Each sandbox that is allocating or has been allocated is tied with the allocation unit. It is the object which manages allocation requests and cleanup requests. Allocation is composed of [three stages](#allocation-request-stages). If one of these stages fails, the sandbox cannot be used. The last column of the table contains the **create cleanup request** button :bootstrap-cleaning-services:{: .blue .icon}. In case that all stages of the allocation request are successfully finished, the button works the same as the delete button in the Sandbox Instances table. Otherwise, the respective [allocation request](#3-allocation-requests) must be canceled (to invalidate other stages), and then **create a cleanup request** button can be used.
 
 
 ### 3. Allocation Requests
@@ -118,15 +118,15 @@ Each sandbox that is allocating or has been allocated is tied with the allocatio
 In the **Allocation Requests** table, the instructor can see all allocation requests. Click on the title of the request will redirect to the [request detail](#allocation-request-stages) page. The last column of the table contains **cancel** button :material-close-circle:{: .red .icon }. If the instructor clicks the button, the ongoing allocation will be canceled and a given sandbox will not be allocated. 
 
 !!! warning
-    Canceling finished allocation request will cause an error.
+    Canceling a finished allocation request will cause an error.
 
 ### 4. Cleanup Requests
 ![cleanup-requests](../../img/user-guide-basic/sandbox-agenda/pool/cleanup-requests.png)
 
-In the **Cleanup Requests** table, the instructor can see all cleanup requests. With the completion of cleanup requests the associated **sandbox instance**, **allocation request** and, **allocation unit** are deleted from the KYPO portal. There can be only one cleanup request per a sandbox. The last column of the table contains actions :material-close-circle:{: .red .icon } &nbsp; :material-delete:{: .red .icon }:
+In the **Cleanup Requests** table, the instructor can see all cleanup requests. With the completion of cleanup requests the associated **sandbox instance**, **allocation request** and, **allocation unit** are deleted from the KYPO portal. There can be only one cleanup request per sandbox. The last column of the table contains actions :material-close-circle:{: .red .icon } &nbsp; :material-delete:{: .red .icon }:
 
 ??? cancel "Cancel request"
-    Click the button to cancel the ongoing cleanup request. Respective sandbox won't be removed.
+    Click the button to cancel the ongoing cleanup request. The respective sandbox won't be removed.
 
 ??? trash-can "Delete request"
     Click the button to delete the cleanup request. Only canceled cleanup requests can be deleted.

@@ -8,7 +8,7 @@ Attributes of a Topology Definition (an [example](#example)).
 
 ### provider
 
-The provider attribute in a Topology Definition should always have value `OpenStack` for OpenStack definitions.
+The provider attribute in a Topology Definition should always have the value `OpenStack` for OpenStack definitions.
 
 ### name
 
@@ -41,7 +41,7 @@ The list of routers. Routers are the only nodes through which hosts can communic
    
 ### networks
 
-The list of networks. A network is used to connect router with end host. It has the following attributes.
+The list of networks. A network is used to connect the router with the end host. It has the following attributes.
 
 * **name**: name of network ([names restriction](#names), [unique names restriction](#unique-names))
 * **cidr**: IP address range in CIDR notation ([unique cidrs restriction](#disjunct-cidrs))
@@ -49,7 +49,7 @@ The list of networks. A network is used to connect router with end host. It has 
 
 ### net_mappings
 
-The list of net_mappings. A net_mapping is used to connect host to network. Each host should be connected to one network (more are possible but not recommended). A net_mapping has the following attributes.
+The list of net_mappings. A net_mapping is used to connect the host to the network. Each host should be connected to one network (more are possible but not recommended). A net_mapping has the following attributes.
 
 * **host**: name of host defined in [hosts](#hosts) 
 * **network**: name of the network defined in [networks](#networks)
@@ -57,7 +57,7 @@ The list of net_mappings. A net_mapping is used to connect host to network. Each
 
 ### router_mappings
 
-The list of router_mappings. A router_mapping is used to connect router to network. Each network should be connected to one router, but one router can be connected to multiple networks. A router_mapping has the following attributes.
+The list of router_mappings. A router_mapping is used to connect the router to the network. Each network should be connected to one router, but one router can be connected to multiple networks. A router_mapping has the following attributes.
 
 * **router**: name of router defined in [routers](#routers) 
 * **network**: name of network defined in [networks](#networks)
@@ -74,7 +74,7 @@ The list of groups. An ansible group is used for better management of nodes. It 
 
 ### Base_box
 
-Base_box specifies the `image` of the node boot disk, its default user `man_user` with sudo permissions and a protocol that is needed to communicate with the machine.
+Base_box specifies the `image` of the node boot disk, its default user `man_user` with sudo permissions, and a protocol that is needed to communicate with the machine.
 
 Now (24.9.2020) possible options are as follows.
 
@@ -88,7 +88,7 @@ debian-10-x86_64                            | debian
 kali-linux-2019.4-amd64                     | debian
 ubuntu-bionic-x86_64                        | ubuntu
   
-For routers it is strongly recommended to use `debian-9-x86_64` image.
+For routers, it is strongly recommended to use the `debian-9-x86_64` image.
 
 [How to list OpenStack images](../../../../installation-guide/base-infrastructure#configuration)
 
@@ -142,7 +142,7 @@ An example topology definition in the sandbox definition with the name `small-sa
 * Two hosts. The host server will not be visible in the topology.
 * Two routers.
 * Two networks. Only one is user-accessible and therefore connected to the UAN node.
-* One group, which contains only two nodes accessible by user.
+* One group, which contains only two nodes accessible by the user.
 
 ```yaml
 name: small-sandbox

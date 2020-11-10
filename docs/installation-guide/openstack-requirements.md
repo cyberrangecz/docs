@@ -3,20 +3,20 @@ KYPO Platform requires several OpenStack resources and components, that can be
 installed or configured only by OpenStack administrator.
 
 ## OpenStack Services
-Kypo Platform requires following OpenStack services:
+Kypo Platform requires the following OpenStack services:
 * Nova with SPICE console support
-* Neutron with user defined internal networks and floating IPs (provider
+* Neutron with user-defined internal networks and floating IPs (provider
   networks are not supported)
 * Keystone with Application Credentials
 * Heat
 
-Floating IPs needs to be unrestricted on any firewalls.
+Floating IPs need to be unrestricted on any firewalls.
 
 ## OpenStack Resources
 
 ### Flavors
-All flavors used by KYPO Platform can be customized in it's configuration. It is
-recommended to create following flavor with command (OpenStack admin only):
+All flavors used by KYPO Platform can be customized in its configuration. It is
+recommended to create the following flavor with a command (OpenStack admin only):
 ```
 openstack flavor create --ram 2048 --disk 20 --vcpus 1 csirtmu.tiny1x2
 ```

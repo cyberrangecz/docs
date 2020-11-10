@@ -25,7 +25,7 @@ On this page, the instructor can do the following actions:
           <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-delete-confirmation.png">
         </p>
     
-        Either click the **Ok** button and solve the problems that do not allow the deletion of the training instance, or use the **Force** button which will delete all data about training instance.
+        Either click the **Ok** button and solve the problems that do not allow the deletion of the training instance, or use the **Force** button which will delete all data about the training instance.
 
     ??? download "Download"
     
@@ -60,7 +60,7 @@ During the creation of the training instance, the second and third panels are di
 </p>
 
 ### 1. Create/Edit Training Instance 
-An instructor can use this panel to edit basic information about the training instance. The title is used to identify training instance among others but doesn't have to be unique. The start time and end time defines the time frame when trainees can access training run of the appropriate training instance. Both time values must be in the future and start time must be before the end time. The access token is used by the trainees to access a game. The instructor must also choose a Training Definition, but they can only choose from:
+An instructor can use this panel to edit basic information about the training instance. The title is used to identify training instance among others but doesn't have to be unique. The start time and end time defines the time frame when trainees can access training run of the appropriate training instance. Both time values must be in the future and the start time must be before the end time. The access token is used by the trainees to access a game. The instructor must also choose a Training Definition, but they can only choose from:
 
 * Released training definitions and definitions created by the instructor, if they also have the instructor role. 
 * All definitions (released/unreleased), if they also have the administrator role. 
@@ -90,7 +90,7 @@ Displays basic information about training instance as shown in the above figure.
 ### 2. Active Training Runs
 Lists active training runs. Runs are either in the running state or finished state (trainee completed all levels). All active training runs have assigned sandboxes from the pool. The instructor is able to delete the assigned sandbox from OpenStack by clicking :material-delete:{: .red .icon}. Be careful when deleting the sandbox from a training run in the running state. The trainee will not be able to complete the remaining levels. Those training runs should be archived after that, so trainees could not resume training run. 
 
-Click the archive button :material-package-down:{: .icon .blue } to change the state of a training run to archived, reference to sandbox is removed and the training run is displayed among archived training runs.
+Click the archive button :material-package-down:{: .icon .blue } to change the state of a training run to archived, the reference to sandbox is removed and the training run is displayed among archived training runs.
 
 ### 3. Archived Training Runs 
 Lists training runs whose references to sandboxes in OpenStack were removed and their state has been changed to archived. 
