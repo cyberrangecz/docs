@@ -2,6 +2,7 @@
 
 * [x] Basic user management
 * [x] Basic sandbox management
+* [x] Support for simple network topologies (hierarchical, acyclic)
 * [x] Advanced management of trainings
 
 # What's not done
