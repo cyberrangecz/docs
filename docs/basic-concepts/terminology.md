@@ -8,7 +8,7 @@ When creating and using an emulated virtual environment we use the following ter
 * **[Pool](../../user-guide-advanced/sandboxes/sandboxes-overview/#pool):** A group of sandboxes created based on the same sandbox definition.
 
 ## Training
-KYPO training is centred around the sandbox, where trainees solve tasks presented in KYPO GUI. KYPO training can also contain questionnaires to collect feedback from trainees or test to asses their knowledge. In the context of the training we use the following terminology:
+KYPO training is centered around the sandbox, where trainees solve tasks presented in KYPO GUI. KYPO training can also contain questionnaires to collect feedback from trainees or tests to assess their knowledge. In the context of the training we use the following terminology:
 
 * **[Training Definition](../../user-guide-advanced/trainings/trainings-overview#training-definition):** Defines the scenario of the training. It is composed of several levels. Each level can be of different types: Game level, Assessment level, Info level.
 * **[Training Instance](../../user-guide-advanced/trainings/trainings-overview#training-instance):** Specify the time period in which the players can access training. Each training instance also must be assigned a pool of sandboxes.

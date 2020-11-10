@@ -7,7 +7,7 @@ Resources Overview consist of two panels:
 
 ### 1. Usage Statistics of Cloud Server
 * **kypo-platform-testing**: the name of a cloud server,
-* **Instances**: Created VMs in cloud server,
+* **Instances**: Created VMs in the cloud server,
 * **vCPUs**: Virtual CPUs currently in use by all instances,
 * **RAM**: The amount of the main memory currently in use by all instances.
 

@@ -5,7 +5,7 @@ We have designed the KYPO cyber range as a cloud platform for achieving maximum 
 </p>
 
 ### Cloud
-The engine of the KYPO CRP environment is based on the cloud platform OpenStack. It controls large pools of compute, storage, and networking resources, all managed through APIs or a dashboard. It is mostly deployed as infrastructure-as-a-service in both public and private clouds where virtual servers and other resources are made available to users.
+The engine of the KYPO CRP environment is based on the cloud platform OpenStack. It controls large pools of computing, storage, and networking resources, all managed through APIs or a dashboard. It is mostly deployed as infrastructure-as-a-service in both public and private clouds where virtual servers and other resources are made available to users.
 
 ### KYPO Portal
 A graphical user interface for simple interaction of users with the KYPO CRP, easy access to sandboxes, and to the other functionalities. Represents the mediator between users and microservices that are running in the background. For more detailed information about microservices see [Platform Components](../../installation-guide/platform-components/). 

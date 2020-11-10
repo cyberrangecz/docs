@@ -7,7 +7,7 @@ To create a new group, the administrator must click on ![create-button](../../im
 
 ??? pencil "Edit"
     
-    Click the button will redirect to [Edit Group](#create-or-edit-group) page.
+    Click the button will redirect to the [Edit Group](#create-or-edit-group) page.
     
 ??? trash-can "Delete"
     
@@ -34,7 +34,7 @@ The page consists of three panels:
 ![create-group](../../img/user-guide-basic/administration-agenda/groups/create-group-all.png)
 
 !!! note 
-    Create Group and Edit Group pages are same but Edit Group page has some fields pre-filled. 
+    Create Group and Edit Group pages are the same but the Edit Group page has some fields pre-filled. 
 
 During the creation of a group, the second and third panels are disabled. To make them accessible, the administrator must fill the required fields in the first panel and either click on: 
 

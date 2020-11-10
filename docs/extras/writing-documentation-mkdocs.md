@@ -1,13 +1,13 @@
 [TOC]
 
-For the creation of the KYPO portal documentation, we have chosen MkDocs. MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file `mkdocs.yml`. Information about MkDocs syntax and functions can be found further down on this page.
+For the creation of the KYPO portal documentation, we have chosen MkDocs. MkDocs is a fast, simple, and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file `mkdocs.yml`. Information about MkDocs syntax and functions can be found further down on this page.
 
 MkDocs require to have installed: 
 
 * python3.8
 * pipenv
 
-Clone [repository](https://gitlab.ics.muni.cz/muni-kypo-crp/kypo-crp-project-docs) from GitLab. To use the local server, go to `kypo-crp-project-docs` directory and in the command line enter the following commands:
+Clone [repository](https://gitlab.ics.muni.cz/muni-kypo-crp/kypo-crp-project-docs) from GitLab. To use the local server, go to `kypo-crp-project-docs` directory, and in the command line enter the following commands:
 ```
 pipenv sync
 pipenv run mkdocs serve
@@ -135,19 +135,19 @@ The Footnotes extension adds syntax for defining footnotes in Markdown documents
 ```
 Footnotes[^1] have a label[^@#$%] and the footnote's content.
 
-[^1]: This is a footnote content.
+[^1]: This is footnote content.
 [^@#$%]: A footnote on the label: "@#$%".
 ```
 
 will be rendered as:
 Footnotes[^1] have a label[^@#$%] and the footnote's content.
 
-[^1]: This is a footnote content.
+[^1]: This is footnote content.
 [^@#$%]: A footnote on the label: "@#$%".
 
 A footnote label must start with a caret ^ and may contain any inline text (including spaces) between a set of square brackets []. Only the first caret has any special meaning.
 
-A footnote content must start with the label followed by a colon and at least one space. The label used to define the content must exactly match the label used in the body (including capitalization and white space). The content would then follow the label either on the same line or on the next line. The content may contain multiple lines, paragraphs, code blocks, blockquotes and most any other markdown syntax. The additional lines must be indented one level (four spaces or one tab).
+A footnote content must start with the label followed by a colon and at least one space. The label used to define the content must exactly match the label used in the body (including capitalization and white space). The content would then follow the label either on the same line or on the next line. The content may contain multiple lines, paragraphs, code blocks, blockquotes, and most any other markdown syntax. The additional lines must be indented one level (four spaces or one tab).
 
 ### Icons
 
@@ -163,13 +163,13 @@ In order to add additional icons, create a `*.svg` icon in folder `overrides/.ic
 
 
 ### Notes
-Thanks to Admonition extension you are able to create a notes. Following text: 
+Thanks to Admonition extension you are able to create notes. Following text: 
 ```
 !!! note
     You should note that the title will be automatically capitalized.
 ```
 
-will be renedered as: 
+will be rendered as: 
 
 !!! note
     You should note that the title will be automatically capitalized.

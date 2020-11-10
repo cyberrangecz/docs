@@ -12,7 +12,7 @@ This page consists of two panels:
 Enter the access token prefix and PIN provided by the instructor of the training instance into the two fields shown in the above figure. By clicking on ![access-button](../../img/buttons/access-button.png) the button the system checks if there are any active training instances with a corresponding access token and if there are any available sandboxes. If those conditions are fulfilled the trainee will access the training run (particular game) with an assigned unique sandbox.
 
 !!! note
-    If trainee already accessed training run in particular training instance and haven't finished it yet, the training run will be resumed. 
+    If trainee already accessed training run in a particular training instance and haven't finished it yet, the training run will be resumed. 
 
 ### 2. Training Runs
 Lists all training runs of the logged-in trainee. Each row of the table represents a training run of a particular training instance (trainee can access multiple training runs within training instance). The training run can be unfinished or finished. An unfinished run can be resumed using the :material-launch:{: .blue .icon} button or entering the access token in the Access Training panel.   
@@ -91,7 +91,7 @@ If hints are not enough, the trainee can reveal the solution by clicking the ![s
 
 
 #### SSH Access
-In addition to connecting to the sandbox using Spice, it is also possible to connect to the sandbox machines locally using the SSH. To do that, click the ![get-ssh-access-button](../../img/buttons/get-ssh-access-button.png) button and download the ZIP archive with the configuration of a user SSH access to the respective sandbox. More about SSH access can be found in [Sandbox SSH Access](../../../user-guide-advanced/sandboxes/sandbox-ssh-access#user-access).
+In addition to connecting to the sandbox using Spice, it is also possible to connect to the sandbox machines locally using SSH. To do that, click the ![get-ssh-access-button](../../img/buttons/get-ssh-access-button.png) button and download the ZIP archive with the configuration of a user SSH access to the respective sandbox. More about SSH access can be found in [Sandbox SSH Access](../../../user-guide-advanced/sandboxes/sandbox-ssh-access#user-access).
 
 ## Training Run Results
 

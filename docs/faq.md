@@ -15,7 +15,7 @@ Here you can find the **Frequently asked questions** and answers regarding the *
 **A: Yes!** Sandbox machines must have these tools to provision sandbox. On UN*X machines there is an SSH and on Windows there is WinRM. These tools are configured by image developers and KYPO does not change their configuration. But their configuration can be changed in Sandbox Provisioning. Be careful not to cut the path to the machine. 
 
 ### 3. **Q:** Is it possible to restrict SSH only for the management network after Sandbox Networking or turn it off completely?
-**A: Yes!** SSH user acceess is led through the networks defined in the sandbox topology definition, so trainee could access the machine only via web console. Management network can be completely blocked in [Sandbox Provisioning](../user-guide-advanced/sandboxes/sandbox-provisioning), but you (as organizer) won't be able to access machines and won't help your students.
+**A: Yes!** SSH user access is led through the networks defined in the sandbox topology definition, so trainee could access the machine only via a web console. Management network can be completely blocked in [Sandbox Provisioning](../user-guide-advanced/sandboxes/sandbox-provisioning), but you (as organizer) won't be able to access machines and won't help your students.
 
 
 ## Trainings

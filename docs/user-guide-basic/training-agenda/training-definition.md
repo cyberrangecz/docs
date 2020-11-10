@@ -42,7 +42,7 @@ This page lists all definitions that are available to the instructor (the instru
       <img src="../../../img/user-guide-basic/training-agenda/training-definition/TD-clone-panel.png">
     </p>
     
-    Here the instructor can change the name of the new training definition that will be added into the KYPO portal. The contents of this new definition will be identical to the original training definition.
+    Here the instructor can change the name of the new training definition that will be added to the KYPO portal. The contents of this new definition will be identical to the original training definition.
     
 ??? download "Download"
     
@@ -100,14 +100,14 @@ In the first panel of the training definition editor, the instructor can edit fi
 </p>
 
 #### Edit Authors Panel
-In the second panel of training definition editor, the instructor can add and remove authors from the definition.
+In the second panel of the training definition editor, the instructor can add and remove authors from the definition.
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-definition/TD-edit-authors.png">
 </p>
 
 #### Edit Levels Panel
-In the third panel the instructor can add, delete, and edit game levels of the training definition.
+In the third panel, the instructor can add, delete, and edit game levels of the training definition.
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-definition/TD-edit-levels.png">
@@ -120,7 +120,7 @@ To add a new level the instructor can click ![Add-button](../../img/buttons/add-
 </p>
 
 !!! tip
-    To change the order of levels, use drag-and-drop mechanism. Select a level in level bar by "grabbing" it and dragging it to a different position.
+    To change the order of levels, use the drag-and-drop mechanism. Select a level in the level bar by "grabbing" it and dragging it to a different position.
 
 ##### I. Game Level
 At the game level, a trainee can access a virtual network inside the sandbox to find a solution to the assignment. The instructor can fill this form to specify details of the new level (when the instructor is done editing level they must save changes with the ![save](../../img/buttons/save-button.png) button.
