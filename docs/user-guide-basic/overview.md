@@ -4,9 +4,9 @@ The objective of the **User Guide (Basic)** is to provide basic guidelines to th
 
 The portal is divided into three **KYPO agendas**:
 
-1. **[Sandboxes agenda](./sandbox-agenda/sandbox-agenda-overview/)** specifies guidelines for sandbox creation and realization. 
-2. **[Trainings agenda](./training-agenda/training-agenda-overview/)** with main focus on creation and organization of trainings.
-3. **[Administration agenda](./administration-agenda/administration-agenda-overview/)** deals with the administration of users and their access to the specific parts of the KYPO Portal based on user access roles.
+1. **[Sandboxes agenda](../sandbox-agenda/sandbox-agenda-overview/)** specifies guidelines for sandbox creation and realization. 
+2. **[Trainings agenda](../training-agenda/training-agenda-overview/)** with main focus on creation and organization of trainings.
+3. **[Administration agenda](../administration-agenda/administration-agenda-overview/)** deals with the administration of users and their access to the specific parts of the KYPO Portal based on user access roles.
 
 Then the User Guide (Basic) section then serves as a manual on how to operate all of the functions that these agendas offer.
 

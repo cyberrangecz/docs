@@ -45,7 +45,7 @@ On this page, the instructor can do the following actions:
     
 
 ## Create/Edit Training Instance 
-This page consists of three panels allowing user to [create/edit training instance**](#1-createedit-training-instance), [assign pool](#2-assign-pool), and [edit instructors**](#3-edit-instructors).
+This page consists of three panels allowing user to [create/edit training instance](#1-createedit-training-instance), [assign pool](#2-assign-pool), and [edit instructors](#3-edit-instructors).
 
 During the creation of the training instance, the second and third panels are disabled. To make them accessible, the instructor must fill the required fields in the first panel and either click: 
 1. ![create-button](../../img/buttons/create-button.png) that will create the new training instance and redirect the instructor back to the [Training Instance Overview](#training-instance-overview). 

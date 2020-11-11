@@ -15,7 +15,7 @@ A created training definition can be download as a file in JSON format. It is a 
 
 ## Training Instance
 
-A time-limited instance of a training definition during which trainees have access to training. The whole progress of training instance is managed by instructors who can monitor events made by trainees that are displayed in various graphs and tables. Each training instance has an assigned [pool](../../../user-guide-advanced/sandboxes/sandboxes-overview#pool) with sandboxes. 
+A time-limited instance of a training definition during which trainees have access to training. The whole progress of training instance is managed by instructors who can monitor events made by trainees that are displayed in various graphs and tables. Each training instance has an assigned [pool](../../../user-guide-advanced/sandboxes/sandboxes-overview/#pool) with sandboxes. 
 
 ## Training Run
 

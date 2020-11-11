@@ -1,6 +1,6 @@
 ## Resources Overview
 
-Resources Overview consist of panels describing [statistics of OpenStack project utilization](#1-usage-statistics-of-cloud-server) and [overview of available images](#2-overview-of-os-images).
+Resources Overview consist of panels describing [statistics of OpenStack project utilization](#1-usage-statistics-of-cloud-server) and [overview of available images](#2-overview-of-images).
 
 ### 1. Usage Statistics of Cloud Server
 * **kypo-platform-testing**: the name of a used OpenStack project,
