@@ -126,7 +126,7 @@ Names of hosts, networks, and routers should be unique in the context of a Topol
 Networks and routers CIDRs should be disjunct (not overlapping), and in `network_mappings` and `router_mappings` IP address should be from the IP address range of the network. Other way networking wouldn't work.
 Network and routers CIDRs shouldn't overlap with [management networks](../topology-instance/#topology-instance-management) CIDRs too.
 
-[How to set CIDRs of management networks](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo/-/blob/master/provisioning/roles/kypo-crp-configuration/templates/configuration/sandbox-service/kypo-sandbox-service-config.yml).
+[How to set CIDRs of management networks](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-demo/-/blob/master/provisioning/roles/kypo-crp-configuration/templates/configuration/sandbox-service/kypo-sandbox-service-config.yml).
         
 ### Address Restriction
 

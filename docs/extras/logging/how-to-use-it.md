@@ -16,7 +16,7 @@ The training organizer can access all logged data (training events or commands) 
 
 ## Local deployment with vagrant
 
-If you are using the local vagrant deployment configuration from the [kypo-crp](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo) project and want to access logged data via the [Training Instance Overview](../../../user-guide-basic/training-agenda/training-instance/#training-instance-overview), you need to additionally set up the forwarding from `MAN` to your local machine. To manually set up this forwarding, follow these steps. 
+If you are using the local vagrant deployment configuration from the [kypo-crp](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-demo) project and want to access logged data via the [Training Instance Overview](../../../user-guide-basic/training-agenda/training-instance/#training-instance-overview), you need to additionally set up the forwarding from `MAN` to your local machine. To manually set up this forwarding, follow these steps. 
 
 
 **1. Create a new port forwarding rule in VirtualBox Manager (configured on Ubuntu):**
@@ -30,7 +30,7 @@ The `Port Forwarding Rules` create a new rule for log forwarding with `Guest IP`
  
 **2. Set the KYPO Head IP for sandbox service:**
 
-Open the [kypo-sandbox-service-config.yml](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo/-/blob/master/provisioning/roles/kypo-crp-configuration/templates/configuration/sandbox-service/kypo-sandbox-service-config.yml) file (located in the `/provisioning/roles/kypo-crp-configuration/templates/configuration/sandbox-service/kypo-sandbox-service-config.yml`) and under the `application_configuration` uncomment and set the `kypo_head_ip` to the IP address of your local machine. 
+Open the [kypo-sandbox-service-config.yml](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-demo/-/blob/master/provisioning/roles/kypo-crp-configuration/templates/configuration/sandbox-service/kypo-sandbox-service-config.yml) file (located in the `/provisioning/roles/kypo-crp-configuration/templates/configuration/sandbox-service/kypo-sandbox-service-config.yml`) and under the `application_configuration` uncomment and set the `kypo_head_ip` to the IP address of your local machine. 
 
 !!! note 
     If you don't uncomment the `kypo_head_ip` attribute, all logs will be stored on the **MAN** in the `/data/idm-logs/man.log` file. 
