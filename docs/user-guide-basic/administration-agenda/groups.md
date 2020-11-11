@@ -1,4 +1,4 @@
-This section is used to list all groups created in the KYPO platform. Groups are essential to the user-access, as the access roles are not assigned to specific users but groups. The user acquires access to the KYPO portal agendas based on the roles of the groups they belong to.
+This page is used to list all groups created in the KYPO platform. Groups are essential to the user-access, as the access roles are not assigned to specific users but groups. The user acquires access to the KYPO portal agendas based on the roles of the groups they belong to.
 
 ![group-overview](../../img/user-guide-basic/administration-agenda/groups/group-overview.png) 
 
