@@ -1,4 +1,4 @@
-## Enable command logging
+## Enable command logging (Currently supported for Debian-based images)
 Command logging is enabled on host VMs by using several Ansible roles. If the organizer wants to log terminal commands, these roles must be added to the sandbox definition's playbook. (More about sandbox definition creation: [Create Sandbox Definition](../../../user-guide-basic/sandbox-agenda/sandbox-definition/#create-sandbox-definition))
 
 * **Bash command logging** can be enabled by using the [KYPO Sandbox Logging Bash Commands](https://gitlab.ics.muni.cz/muni-kypo-crp/useful-ansible-roles/kypo-sandbox-logging-bash) Ansible role. 
@@ -16,10 +16,10 @@ The training organizer can access all logged data (training events or commands) 
 
 ## Local deployment with vagrant
 
-If you are using the local vagrant deployment configuration from the [kypo-crp-local-demo](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo) project and want to access logged data via the [Training Instance Overview](../../../user-guide-basic/training-agenda/training-instance/#training-instance-overview), you need to additionally set up the forwarding from `MAN` to your local machine. To manually set up this forwarding, follow these steps. 
+If you are using the local vagrant deployment configuration from the [kypo-crp](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo) project and want to access logged data via the [Training Instance Overview](../../../user-guide-basic/training-agenda/training-instance/#training-instance-overview), you need to additionally set up the forwarding from `MAN` to your local machine. To manually set up this forwarding, follow these steps. 
 
 
-**1. Create a new port forwarding rule in VirtualBox Manager:**
+**1. Create a new port forwarding rule in VirtualBox Manager (configured on Ubuntu):**
    
 Open the VirtualBox Manager, and in the `Advanced Network settings` of your KYPO VM session, click on the **Port Forwarding** button:
 ![VirtualBox settings](../../img/extras/logging/port-forwarding-rule.png)
@@ -89,5 +89,4 @@ As the last step you need to the restart syslog-ng service on the MAN by using t
 sudo systemctl restart syslog-ng.service 
 ```
 
-!!! note
-    Wait a few seconds until the syslog-ng restarts.
+Wait a few seconds until the syslog-ng restarts.
