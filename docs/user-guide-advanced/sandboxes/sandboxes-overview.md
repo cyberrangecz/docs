@@ -6,7 +6,7 @@ As it was mentioned in [terminology](../../../basic-concepts/terminology/#emulat
 ## Sandbox Definition
 The creation of the sandbox requires the definition of the sandbox structure and configuration of the individual virtual machines. The definition in the context of KYPO is the directory structure named after sandbox definition which contains: 
 
-* **Topology Definition**: The file with the sandbox structure definition (hosts, routers, networks, etc.). For more detailed information about the topology definition, check the page [Toplogy Definition](../sandbox-topology/topology-definition/). Created sandbox inside the cloud is called KYPO [Topology Instance](../sandbox-topology/topology-instance/).
+* **Topology Definition**: The file with the sandbox structure definition (hosts, routers, networks, etc.). For more detailed information about the topology definition, check the page [Toplogy Definition](../topology-definition/). Created sandbox inside the cloud is called KYPO [Topology Instance](../topology-instance/).
 * **Sandbox Provisioning**: It is used to customize Topology Instances, e.g., set up an environment, create users, install packages, etc. Sandbox Provisioning must specify the way how to connect to instances, e.g., user name and SSH key. The Ansible tool is used to perform these actions. For more detailed information about the topology definition, check the page [Sandbox Provisioning](../sandbox-provisioning/).
 
 Created sandbox definitions must be stored as a Git repository so it can be used inside the KYPO portal. Git repository also must be accessible by the KYPO platform. For more detailed information, check the page [Sandbox Definition](../sandbox-definition/).
