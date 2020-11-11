@@ -9,5 +9,5 @@ sandbox-definition/
     └── playbook.yml
 ```
 
-* **sandbox.yml**: a [Topology Definition](../sandbox-topology/topology-definition/) of a topology that will be deployed in the cloud. Once deployed it is called [Topology Instance](../sandbox-topology/topology-instance/).
-* **provisioning**: a directory structure of a [Sandbox Provisioning](../sandbox-provisioning/) which is intended for [Topology Instance](../sandbox-topology/topology-instance/) customization. Once provisioned it is called a Sandbox.
+* **sandbox.yml**: a [Topology Definition](../topology-definition/) of a topology that will be deployed in the cloud. Once deployed it is called [Topology Instance](../topology-instance/).
+* **provisioning**: a directory structure of a [Sandbox Provisioning](../sandbox-provisioning/) which is intended for [Topology Instance](../topology-instance/) customization. Once provisioned it is called a Sandbox.

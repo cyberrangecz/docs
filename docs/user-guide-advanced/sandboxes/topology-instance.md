@@ -2,7 +2,7 @@
 
 The KYPO OpenStack Driver transforms a [Topology Definition](../topology-definition/) (user-defined topology) with the [Topology Instance Management](#topology-instance-management) sub-infrastructure into the HEAT Orchestration Template, which the OpenStack cloud platform uses to create a virtual infrastructure we call a KYPO Topology Instance.
 
-![topology-instance-color](../../../img/user-guide-advanced/sandboxes/topology-instance-color.png)
+![topology-instance-color](../../img/user-guide-advanced/sandboxes/topology-instance-color.png)
 
 !!! note
     For clarity reasons, there are missing links from **mng-network** to **UAN**, left **Router**, and left **Host**.

@@ -36,9 +36,8 @@ nav:
       - Sandboxes:
           - Overview: user-guide-advanced/sandboxes/sandboxes-overview.md
           - Sandbox Definition: user-guide-advanced/sandboxes/sandbox-definition.md
-          - Sandbox Topology:
-              - Topology Definition: user-guide-advanced/sandboxes/sandbox-topology/topology-definition.md
-              - Topology Instance: user-guide-advanced/sandboxes/sandbox-topology/topology-instance.md
+          - Topology Definition: user-guide-advanced/sandboxes/topology-definition.md
+          - Topology Instance: user-guide-advanced/sandboxes/topology-instance.md
           - Sandbox Provisioning: user-guide-advanced/sandboxes/sandbox-provisioning.md
           - Sandbox SSH Access: user-guide-advanced/sandboxes/sandbox-ssh-access.md
       - Trainings:

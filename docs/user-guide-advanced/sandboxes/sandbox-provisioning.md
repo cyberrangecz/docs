@@ -1,4 +1,4 @@
-The Sandbox Provisioning is for [Topology Instance](../sandbox-topology/topology-instance/) customizations. Use it to set up your environment, create users, install packages, etc.
+The Sandbox Provisioning is for [Topology Instance](../topology-instance/) customizations. Use it to set up your environment, create users, install packages, etc.
 
 The **provisioning** directory's content is the same as any other [Ansible](https://docs.ansible.com/ansible/latest/index.html).
 
@@ -22,11 +22,11 @@ The KYPO requires Sandbox Provisioning, but if you do not need any provisioning,
 
 On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#default-groups), the KYPO sandbox-service defines three more default host groups.
 
-* **management**: the group containing all the [sandbox management nodes](../sandbox-topology/topology-instance/#topology-instance-management), i.e., MAN, BR, and UAN node.
-* **routers**: the group containing all the routers defined in [Topology definition](../sandbox-topology/topology-definition/#routers).
-* **hosts**: the group containing all the hosts defined in [Topology definition](../sandbox-topology/topology-definition/#hosts).
+* **management**: the group containing all the [sandbox management nodes](../topology-instance/#topology-instance-management), i.e., MAN, BR, and UAN node.
+* **routers**: the group containing all the routers defined in [Topology definition](../topology-definition/#routers).
+* **hosts**: the group containing all the hosts defined in [Topology definition](../topology-definition/#hosts).
 
-You can specify additional Ansible host groups in [Topology definition](../sandbox-topology/topology-definition/#groups) and then use them in a `playbook.yml` file of the Sandbox Provisioning.
+You can specify additional Ansible host groups in [Topology definition](../topology-definition/#groups) and then use them in a `playbook.yml` file of the Sandbox Provisioning.
 
 ### Ansible Special Variables
 

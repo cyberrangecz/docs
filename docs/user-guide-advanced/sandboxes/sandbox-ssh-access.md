@@ -4,7 +4,7 @@ A Topology Instance of a Sandbox is created in the cloud platform and connected 
 
 * **KYPO Head**: The server where the KYPO platform is installed.
 * **KYPO Proxy**: The server used only for SSH access to all sandboxes.
-* **KYPO Base Network**: The network where both servers and all sandboxes are connected through MAN ([more about management nodes](../sandbox-topology/topology-instance/#topology-instance-management)).
+* **KYPO Base Network**: The network where both servers and all sandboxes are connected through MAN ([more about management nodes](../topology-instance/#topology-instance-management)).
 
 ![topology-instance-blank](../../img/user-guide-advanced/sandboxes/topology-instance-blank.png)
 
@@ -53,7 +53,7 @@ Access to the sandbox nodes is through the **KYPO proxy**, a **MAN** node, and a
 !!! warning "Sandbox definition set up"
     You will not be able to use this approach if you did not set up the sandbox definition correctly!
 
-    * Set user access to networks in the sandbox definition file `sandbox.yml`, e.g., set an attribute `accessible_by_user` of the network to value `True` or leave it undefined as it is a default value. See [Topology Definition](../sandbox-topology/topology-definition/#networks).
+    * Set user access to networks in the sandbox definition file `sandbox.yml`, e.g., set an attribute `accessible_by_user` of the network to value `True` or leave it undefined as it is a default value. See [Topology Definition](../topology-definition/#networks).
 
     * Set user access to hosts connected to user-accessible networks, e.g., apply Ansible role [kypo-user-access](https://gitlab.ics.muni.cz/CSIRT-MU-public/ansible-roles/kypo-user-access/-/tree/master/) to specified hosts in the file `provisioning/playbook.yml` of the sandbox definition.
 
