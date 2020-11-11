@@ -33,7 +33,7 @@ Instructors can click on the title of each pool to see a more [detailed view](#p
     Click the button to delete all allocation requests and sandboxes from the given pool.
 
     !!! warning
-        All sandboxes must be unlocked and all allocation requests must be finished/stopped.   
+        All sandboxes must be unlocked, and all allocation requests must be finished/stopped.   
 
 ??? download "Download"
     Click the button to display a pop-up window to download the ZIP archive. The archive contains configuration with the SSH access to a respective sandbox. More about SSH access can be found [here](../../user-guide-advanced/sandboxes/sandbox-ssh-access.md).
@@ -60,18 +60,11 @@ This page contains a short form that needs to be filled out before creating a ne
 
 
 ## Pool Detail
-When the instructor clicks the title of a given pool in **Pool Overview** they will be redirected to the **Pool Detail** page.
-  
-![pool-detail](../../img/user-guide-basic/sandbox-agenda/pool/pool-detail.png)
-
-This page consist of 4 tables: 
-
-1. [Sandbox Instances](#1-sandbox-instances)
-2. [Allocation Units](#2-allocation-units)
-3. [Allocation Requests](#3-allocation-requests)
-4. [Cleanup Requests](#4-cleanup-requests)
+When the instructor clicks the title of a given pool in **Pool Overview** they will be redirected to the **Pool Detail** page, which contains panels addressing [sandbox instances](#1-sandbox-instances), [allocation units](#2-allocation-units), [allocation requests](#3-allocation-requests), and [cleanup requests](#4-cleanup-requests).
 
 In the top right corner, there is the ![allocate-button](../../img/buttons/allocate-button.png) button that can be used to start the allocation of all missing sandboxes in the pool.
+
+![pool-detail](../../img/user-guide-basic/sandbox-agenda/pool/pool-detail.png)
 
 ### 1. Sandbox Instances
 
@@ -111,7 +104,6 @@ The instructor can see all of the allocated sandboxes in the **Sandbox Instances
 ![sandbox-instances](../../img/user-guide-basic/sandbox-agenda/pool/allocation-units.png)
 Each sandbox that is allocating or has been allocated is tied with the allocation unit. It is the object which manages allocation requests and cleanup requests. Allocation is composed of [three stages](#allocation-request-stages). If one of these stages fails, the sandbox cannot be used. The last column of the table contains the **create cleanup request** button :bootstrap-cleaning-services:{: .blue .icon}. In case that all stages of the allocation request are successfully finished, the button works the same as the delete button in the Sandbox Instances table. Otherwise, the respective [allocation request](#3-allocation-requests) must be canceled (to invalidate other stages), and then **create a cleanup request** button can be used.
 
-
 ### 3. Allocation Requests
 
 ![allocation-request](../../img/user-guide-basic/sandbox-agenda/pool/allocation-requests.png)
@@ -141,6 +133,4 @@ The page consists of three panels. Each represents one stage of allocation (allo
 
 To see details of stage execution click the **Stage detail** button of the given stage. In case that stage will fail, the error message should be available there.
 
- 
 ![allocation-request-stages](../../img/user-guide-basic/sandbox-agenda/pool/allocation-request-stages.png)
- 

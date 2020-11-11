@@ -10,15 +10,7 @@ The purpose of the Training Agenda is to create and manage trainings that are on
 To access the above-mentioned pages, click the respective button on the front page of the KYPO portal. 
 
 <p align="center">
-  <img src="../../../img/user-guide-basic/training-agenda/overview/home-page-training-definition-button.png">
-</p>
-
-<p align="center">
-  <img src="../../../img/user-guide-basic/training-agenda/overview/home-page-training-instance-button.png">
-</p>
-
-<p align="center">
-  <img src="../../../img/user-guide-basic/training-agenda/overview/home-page-training-run-button.png">
+  <img src="../../../img/user-guide-basic/training-agenda/overview/home-page-training-definition-button.png">  <img src="../../../img/user-guide-basic/training-agenda/overview/home-page-training-instance-button.png"> <img src="../../../img/user-guide-basic/training-agenda/overview/home-page-training-run-button.png">
 </p>
 
 Or click the button in the global navigation in the section Trainings.
@@ -28,4 +20,4 @@ Or click the button in the global navigation in the section Trainings.
 </p>
 
 !!! note
-    In the case, that you have only the role `ROLE_TRAINING_TRAINEE` you will be after a successful login directly forwarded to the page [Training Runs Overview](../training-run/#training-runs-overview) without any further action.
+    If you have only the role `ROLE_TRAINING_TRAINEE` you will be after a successful login directly forwarded to the page [Training Runs Overview](../training-run/#training-runs-overview) without any further action.

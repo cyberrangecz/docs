@@ -6,7 +6,7 @@ This page lists all definitions that are available to the instructor (the instru
 </p>
 
 !!! info
-    Users with the role `ROLE_TRAINING_ADMINISTRATOR` are able to see all of the training definitions.
+    Users with the role `ROLE_TRAINING_ADMINISTRATOR` can see all of the training definitions.
 
 ??? pencil "Edit"
     
@@ -57,12 +57,12 @@ This page lists all definitions that are available to the instructor (the instru
     </p>
     
     !!! info
-        Sandbox topologies in the preview are mocked and not connected to any real sandbox so they cannot be used to access any virtual network.
+        Sandbox topologies in the preview are mocked and not connected to any real sandbox, so they cannot be used to access any virtual network.
     
 ??? lock "Release"
    
     Click the button to change the state of the definition to **Released**. 
-    Released definitions cannot have their content changed but they can have its state changed to either **Unreleased** or **Archived**.
+    Released definitions cannot have their content changed, but they can have its state changed to either **Unreleased** or **Archived**.
 
   
 ??? unlock "Unrelease"
@@ -81,17 +81,17 @@ This page lists all definitions that are available to the instructor (the instru
     Actions 3. - 8. can be accessed in the menu shown after clicking on the **more options** button :material-dots-vertical:{: .grey .icon}. 
 
 ## Add a New Definition
-There are three approaches on how to create a new training definition in the KYPO Portal:
+There are three approaches on how to create a new training definition. 
 
-1.  [**Create a new definition from a scratch**](#1-create-a-new-definition) 
-2.  [**Upload a definition from JSON file**](#2-upload-a-definition-from-json-file)
-3.  Clone an existing definition (more in the previous [**subsection**](#training-definition-overview))
+1. [Create a new definition](#1-create-a-new-definition) from a scratch. 
+2. [Upload a definition ](#2-upload-a-definition-from-json-file) from JSON file.
+3. Last approach is to clone an already existing definition. More about this it is written in the previous [subsection](#training-definition-overview)).
 
 ### 1. Create a New Definition
 To create a new training definition click on the top right button ![Create-button](../../img/buttons/create-button.png). This will open the training definition editor page.
 
 #### Create Training Definition Panel
-In the first panel of the training definition editor, the instructor can edit fields that describe the new definition. When the instructor is done they can either click on:
+In the first panel of the training definition editor, the instructor can edit fields that describe the new definition. When the instructor is done, they can either click on:
 1.  ![Create-button](../../img/buttons/create-button.png) that will create a new definition and redirect them back to [Training Definition Overview](#training-definition-overview).
 2.  ![Create-and-continue](../../img/buttons/create-and-continue-button.png) that will allow the instructor to edit **authors** and **levels** of the definition.
 
@@ -107,7 +107,7 @@ In the second panel of the training definition editor, the instructor can add an
 </p>
 
 #### Edit Levels Panel
-In the third panel, the instructor can add, delete, and edit game levels of the training definition.
+The instructor can add, delete, and edit game levels of the training definition in the third panel.
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-definition/TD-edit-levels.png">
@@ -123,19 +123,19 @@ To add a new level the instructor can click ![Add-button](../../img/buttons/add-
     To change the order of levels, use the drag-and-drop mechanism. Select a level in the level bar by "grabbing" it and dragging it to a different position.
 
 ##### I. Game Level
-At the game level, a trainee can access a virtual network inside the sandbox to find a solution to the assignment. The instructor can fill this form to specify details of the new level (when the instructor is done editing level they must save changes with the ![save](../../img/buttons/save-button.png) button.
+At the game level, a trainee can access a virtual network inside the sandbox to find a solution to the assignment. The instructor can fill this form to specify details of the new level (when the instructor is done editing level, they must save changes with the ![save](../../img/buttons/save-button.png) button.
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-definition/TD-GL-panel.png">
 </p>
 
-Under the game level editing form, there is a fourth additional **Hints** panel that the instructor can use to create, delete and, edit hints that are associated with a given game level.
+Under the game level editing form, there is a fourth additional **Hints** panel that the instructor can use to create, delete, and edit hints associated with a given game level.
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-definition/TD-hint-panel.png">
 </p>
 
-A new hint can be added with the ![add-button](../../img/buttons/add-button.png) button and edited with the following form (when the instructors finish the editing of hints they must save changes with the ![save](../../img/buttons/save-button.png) button). To change the order of hints use the drag-and-drop mechanism. 
+A new hint can be added with the ![add-button](../../img/buttons/add-button.png) button and edited with the following form (when the instructors finish the editing of hints, they must save changes with the ![save](../../img/buttons/save-button.png) button). To change the order of hints, use the drag-and-drop mechanism. 
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-definition/TD-hint-edit.png">
@@ -182,4 +182,4 @@ To upload a training definition, click in the **Training Definition Overview** o
 </p>
 
 
-Upload training definition that has been downloaded as a file in JSON format. This use-case is useful in the situation when the instructor wants to re-use the training definition stored in the past.
+Upload training definition that has been downloaded as a file in JSON format. This use-case is useful when the instructor wants to re-use the training definition stored in the past.

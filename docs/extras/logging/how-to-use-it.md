@@ -1,7 +1,7 @@
 ## Enable command logging
-Command logging is enabled on host VMs by using several Ansible roles. If the organizer wants to log terminal commands, these roles must be added to the playbook of the sandbox definition. (More about sandbox definition creation: [Sandbox definition creation process](../../../user-guide-basic/sandbox-agenda/sandbox-definition/#create-sandbox-definition))
+Command logging is enabled on host VMs by using several Ansible roles. If the organizer wants to log terminal commands, these roles must be added to the sandbox definition's playbook. (More about sandbox definition creation: [Create Sandbox Definition](../../../user-guide-basic/sandbox-agenda/sandbox-definition/#create-sandbox-definition))
 
-* **Bash command logging** can be enabled by using the [KYPO Sandbox Logging Commands](https://gitlab.ics.muni.cz/muni-kypo-crp/useful-ansible-roles/kypo-sandbox-logging-bash) Ansible role. 
+* **Bash command logging** can be enabled by using the [KYPO Sandbox Logging Bash Commands](https://gitlab.ics.muni.cz/muni-kypo-crp/useful-ansible-roles/kypo-sandbox-logging-bash) Ansible role. 
 
 * **Metasploit framework command logging** can be enabled by using the [KYPO Sandbox Logging Msfconsole Commands](https://gitlab.ics.muni.cz/muni-kypo-crp/useful-ansible-roles/kypo-sandbox-logging-msf) Ansible role.
 
@@ -16,23 +16,24 @@ The training organizer can access all logged data (training events or commands) 
 
 ## Local deployment with vagrant
 
-If you are using the local vagrant deployment configuration from the [kypo-crp-local-demo](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo) project and want to access logged data via the [Training Instance Overview](../../../user-guide-basic/training-agenda/training-instance#training-instance-overview), you need to additionally set up the forwarding from `MAN` to your local machine. To manually set up this forwarding follow these steps. 
+If you are using the local vagrant deployment configuration from the [kypo-crp-local-demo](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo) project and want to access logged data via the [Training Instance Overview](../../../user-guide-basic/training-agenda/training-instance/#training-instance-overview), you need to additionally set up the forwarding from `MAN` to your local machine. To manually set up this forwarding, follow these steps. 
+
 
 **1. Create a new port forwarding rule in VirtualBox Manager:**
    
-Open the VirtualBox Manager and in the `Advanced Network settings` of your KYPO VM session click on the **Port Forwarding** button:
+Open the VirtualBox Manager, and in the `Advanced Network settings` of your KYPO VM session, click on the **Port Forwarding** button:
 ![VirtualBox settings](../../img/extras/logging/port-forwarding-rule.png)
 
-In the `Port Forwarding Rules` create a new rule for log forwarding with `Guest IP` of `172.19.0.22`, `Guest Port` of `515`, and with any `Host port`, e.g. `8015`. For example the `Log Forwarding` rule:
+The `Port Forwarding Rules` create a new rule for log forwarding with `Guest IP` of `172.19.0.22`, `Guest Port` of `515`, and with any `Host port`, e.g., `8015`. For example, the `Log Forwarding` rule:
 
 ![PortForwardingRules](../../img/extras/logging/port-forwarding-rule2.png) 
  
 **2. Set the KYPO Head IP for sandbox service:**
 
-Open the [kypo-sandbox-service-config.yml](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo/-/blob/master/docker-config-files/kypo-sandbox-service-config.yml) file (located in the `/vagrant/configuration/sandbox-service/kypo-sandbox-service-config.yml`) and under the `application_configuration` uncomment and set the `kypo_head_ip` to the IP address of your local machine. 
+Open the [kypo-sandbox-service-config.yml](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo/-/blob/master/provisioning/roles/kypo-crp-configuration/templates/configuration/sandbox-service/kypo-sandbox-service-config.yml) file (located in the `/provisioning/roles/kypo-crp-configuration/templates/configuration/sandbox-service/kypo-sandbox-service-config.yml`) and under the `application_configuration` uncomment and set the `kypo_head_ip` to the IP address of your local machine. 
 
 !!! note 
-    If you don't uncomment the `kypo_head_ip` attribute all logs will be stored on the **MAN** in the `/data/idm-logs/man.log` file. 
+    If you don't uncomment the `kypo_head_ip` attribute, all logs will be stored on the **MAN** in the `/data/idm-logs/man.log` file. 
 
 !!! note
     You can check if your data are getting into the ELK infrastructure by using the following command inside the `elasticsearch` docker container to list all data stored in the Elasticsearch:
@@ -42,19 +43,19 @@ Open the [kypo-sandbox-service-config.yml](https://gitlab.ics.muni.cz/muni-kypo-
 
 **3. Start the KYPO platform:**
 
-After the `kypo-sandbox-service-config.yml` is updated you can start the KYPO platform (if the platform is already running you must restart it) using the following command in `/vagrant` directory:
+After the `kypo-sandbox-service-config.yml` is updated, you can start the KYPO platform (if the platform is already running, you must restart it) using the following command in `/vagrant` directory:
 ```
 docker-compose up
 ```
 
 **4. Update syslog-ng configuration in the MAN:** 
 
-After you have built your sandbox you need to change the forwarding of the syslog-ng in the MAN. Access the MAN via ssh (How to access MAN: [Sandbox SSH Access](../../../user-guide-advanced/sandboxes/sandbox-ssh-access)). When you are in the MAN open the syslog-ng log forwarding configuration:
+After you have built your sandbox, you need to change the forwarding of the syslog-ng in the MAN. Access the MAN via ssh (How to access MAN: [Sandbox SSH Access](../../../user-guide-advanced/sandboxes/sandbox-ssh-access/)). When you are in the MAN open the syslog-ng log forwarding configuration:
 ```
 sudo vim /etc/syslog-ng/conf.d/forward-rfc5424-messages.conf
 ```
 
-Here in the `destination d_kypo_head` section change the `port(515)` to the Host port you set in the VirtualBox Manager in the first step and save your changes. Following the example from the first step your configuration should look like this (with an exception in IP address which should be the one you set in the second step):
+Here in the `destination d_kypo_head` section change the `port(515)` to the Host port you set in the VirtualBox Manager in the first step and save your changes. Following the example from the first step your configuration should look like this (with an exception in IP address, which should be the one you set in the second step):
 ```
 # EVENTS Log Source
 source s_host {
