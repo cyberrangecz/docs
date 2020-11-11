@@ -1,160 +1,199 @@
+# Base Infrastructure
+
+This page contains the steps that are needed to prepare the KYPO base
+infrastructure used by the KYPO Cyber Range Platform.
+
 ## Prerequisites
 
-* Install APT packages
+KYPO Cyber Range Platform is tested with Open Stack releases Stein and Train, but it is quite possible it will also work on newer releases.
+
+At this moment, you should have installed [OpenStack](https://docs.openstack.org/install-guide/) with the following [OpenStack Services](https://www.openstack.org/software/project-navigator/openstack-components).
+
+- Nova
+- Neutron
+- Keystone
+- Placement
+- Heat
+- Horizon
+
+For every instance of KYPO Cyber Range Platform you also need two floating addreses from Open Stack public pool to access the platform. 
+
+## Toolkit
+
+The following instructions were tested on **Debian**-like OS, specifically Linux Mint 19, 20 and Ubuntu 20.
+
+| Tool                  | Version |
+| ----                  | ------  |
+| Python                | 3.8     |
+| Pipenv                | 2020+   |
+| openssh-client        | 1.7     |
+
+1. Install APT packages
 
     ```shell
-    $ sudo apt install python-pip
+    sudo apt install python3-pip openssh-client
     ```
     
-* Install Python packages
+2. Install Pipenv
 
     ```shell
-    $ sudo pip install "openstacksdk==0.43.0" "python-openstackclient==5.2.1" "python-heatclient==1.18.0"
+    sudo pip3 install pipenv
     ```
     
-* [Obtain Application Credentials](https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo2-openstack-deploy/-/wikis/how-to/Obtain-Application-Credentials)
-    and source `app-cred-<name>-openrc.sh` file before the first use of a new terminal session.
+3. [Obtain Application Credentials](https://docs.openstack.org/keystone/ussuri/user/application_credentials.html) and source `app-cred-<name>-openrc.sh` file before the first use of a new terminal session.
 
     ```shell
-    $ source /path/to/app-cred-<name>-openrc.sh
+    source /path/to/app-cred-<name>-openrc.sh
     ```
+
+4. Clone [KYPO CRP base repository](https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo-crp-openstack-base)
+
+    ```shell
+    git clone https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo-crp-openstack-base.git
+    cd kypo-crp-openstack-base
+    ```
+    
+    Don't leave this directory!
+  
+5. Install the necessary dependencies via Pipenv
+
+    ```shell    
+    pipenv install
+    pipenv shell
+    ```
+    Don't leave the Pipenv shell!
 
 ## Configuration
 
-There are 3 configuration files. Each for a different OpenStack project.
+Before you get to the deployment, you must obtain several configuration values that might be specific to your OpenStack instance.
 
-| OpenStack project     | Configuration file                       |
-| -----------------     | ------------------                       |
-| kypo-platform-devel   | [devel-params.yml](configuration-files/devel-params.yml)     |
-| kypo-platform-staging | [staging-params.yml](configuration-files/staging-params.yml) |
-| kypo-platform-testing | [testing-params.yml](configuration-files/testing-params.yml) |
+1. Get the name of the OpenStack external network that will allow you to allocate floating IP addresses from public IP address range.
 
-Before you get to the deployment choose one of the configuration files and follow the next steps.
-
-1. Check that both floating IP IDs exists in the OpenStack project (i.e. `kypo_base_head_floating_ip_id` and `kypo_base_proxy_floating_ip_id`).
-
-    List Floating IP addresses in the OpenStack project.
+    List all external networks.
 
     ```shell
-    $ openstack floating ip list
+    openstack network list --external --column Name
+    ```
+
+    Expected output.
+
+    ```shell
+    +-----------------+
+    | Name            |
+    +-----------------+
+    | <kypo_base_net> |
+    +-----------------+
     ```
     
-    For each missing floating IP, create a new one and update IDs in the configuration file.
-    
-    Use the following command with parameter `kypo_base_external_public_network_name` or `kypo_base_external_private_network_name` respectively from the configuration file. Both of them are OpenStack external networks, where the first one can be used to allocate a public IP address and the second one to allocate a private IP address of your company. The choice depends on your needs but, typically only servers on kypo-platform-production and kypo-platform-devel OpenStack projects should have public IP addresses.
-    
-    ```shell
-    $ openstack floating ip create <kypo_base_external_<public/private>_network_name>
-    ```
-    
-2. Set both KeyPair names to OpenStack SSH KeyPair that you own private part of (i.e. `kypo_base_head_keypair_name` and `kypo_base_proxy_keypair_name`).
-    It can be the same KeyPair for both servers KYPO-head and KYPO-proxy.
+2. Get the image names that will be used for the KYPO base servers. 
 
-    List KeyPairs in the OpenStack project.
+    List all images.
 
     ```shell
-    $ openstack keypair list
+    openstack image list --column Name
     ```
     
-    If you do not own the private part of any of the KeyPairs, add the public part of any of your SSH keys to OpenStack KeyPairs.
+    Expected output.
+    
+    ```
+    +-------------------+
+    | Name              |
+    +-------------------+
+    | <kypo_base_image> |
+    +-------------------+
+    ```
+   
+    (This guide was tested on Ubuntu-based images).
+    
+3. Get the flavor names that will be used for the KYPO base servers.
+
+    List all flavors.
     
     ```shell
-    $ openstack keypair create --public-key </path/to/id_rsa.pub> <kypo_base_<head/proxy>_keypair_name>
+    openstack flavor list --column Name
+    ```
+    
+    Expected output.
+    
+    ```
+    +--------------------+
+    | Name               |
+    +--------------------+
+    | <kypo_base_flavor> |
+    +--------------------+
+    ```
+   
+    (This guide was tested with flavors of 4 VCPUs, 8192 RAM 80 GB Disk and 2 VCPUs, 4096 RAM, 80 GB Disk).
+
+4. Edit the desired values for images (`<kypo_base_image>`) and flavors (`<kypo_base_flavor>`) in the `openstack-defaults.sh` file of the cloned repository.
+    
+    The default values are set as follows.
+    
+    ```shell
+    export KYPO_HEAD_FLAVOR="standard.large"
+    export KYPO_HEAD_IMAGE="ubuntu-bionic-x86_64"
+    export KYPO_PROXY_FLAVOR="standard.medium"
+    export KYPO_PROXY_IMAGE="ubuntu-bionic-x86_64"
     ```
 
 ## Deployment
 
-There are 4 files of HEAT templates. Each of them is used to create a different part of the base infrastructure. 
-
-* [kypo-base-networking.yml](heat-templates/kypo-base-networking.yml): Creates a base network where all sandboxes, KYPO-head, and KYPO-proxy will be connected to.
-    This template is designed for KYPO-head and KYPO-proxy to have public IP addresses.
-* [kypo-base-networking-private.yml](heat-templates/kypo-base-networking-private.yml): Almost the same as the previous one but
-    this template is designed for KYPO-head and KYPO-proxy to have private IP addresses.    
-    **NOTE**: Do not use both networking templates.
-* [kypo-head.yml](heat-templates/kypo-head.yml): Creates the KYPO-head server where the KYPO platform will be installed.
-* [kypo-proxy-jump.yml](heat-templates/kypo-proxy-jump.yml): Creates the KYPO-proxy server which is used for users to access sandboxes.
-
-### Create
-
-1. Create KYPO-base networking, KYPO-head, and KYPO-proxy. First, choose the right networking template and the OpenStack project configuration. Then run the following commands.
-
-    ```bash
-    $ openstack stack create --wait -e <project>-params.yml -t <kypo-base-networking<-private>>.yml kypo-base-networking-stack
-    $ openstack stack create --wait -e <project>-params.yml -t kypo-head.yml kypo-head-stack
-    $ openstack stack create --wait -e <project>-params.yml -t kypo-proxy-jump.yml kypo-proxy-jump-stack 
-    ```
-    
-2. All communication to the OpenStack project is prohibited by default.
-    Set OpenStack [Firewall](#firewall) rules to enable communication.
-
-3. Test SSH connection.
-
-    Obtain `default_user` of the images used for KYPO-head and KYPO-proxy server
-    (i.e. `kypo_base_head_image` and `kypo_base_proxy_image`).
-
-    ```shell
-    $ openstack image show <kypo_base_<head/proxy>_image> -f json -c properties
-    ```
-    
-    Using floating IP address and KeyPair from [Configuration](#configuration)
-    step with previously obtained `default_user` test that you can access both servers.
+1. Bootstrap Floating IPs and Keypair. The results will be saved into `kypo-base-params.yml` file. 
+Private key of the keypair will be saved into `<ostack-project>_kypo-base-key.key` 
     
     ```shell
-    $ ssh -i </path/to/id_rsa> <default_user>@<kypo_base_<head/proxy>_floating_ip> echo ok
+    ./bootstrap.sh <kypo_base_net>
     ```
-
-### Delete
-
-1. Before the base infrastructure deletion, you need to delete all stacks connected to it.
-
-    List all existing stacks.
+   
+2. Create the base infrastructure. 
 
     ```shell
-    $ openstack stack list
+    ./create-base.sh
     ```
 
-    Each KYPO platform instance is prefixing stack names with its identifier.
-    Execute the following command for every KYPO platform instance that was using this base infrastructure.
-    Replace the `<stack-name-prefix>` placeholder for example for `kypo-devel-`.
+3. Set the firewall rules. 
+
+    The firewall rules within OpenStack are grouped in Security Groups. Currently, we are using only the default Security Group called `default`.
+
+    KYPO platform currently requires ingress access for ports 22 (SSH), 443 (HTTPS)
+    and 8443 (HTTPS), and optionally ingress access of ICMP protocol.
+
+    ```shell
+    openstack security group rule create --remote-ip 0.0.0.0/0 --protocol icmp --ingress --ethertype IPv4 default
+    openstack security group rule create --remote-ip 0.0.0.0/0 --dst-port 22 --protocol tcp --ingress --ethertype IPv4 default
+    openstack security group rule create --remote-ip 0.0.0.0/0 --dst-port 443 --protocol tcp --ingress --ethertype IPv4 default
+    openstack security group rule create --remote-ip 0.0.0.0/0 --dst-port 8443 --protocol tcp --ingress --ethertype IPv4 default
+    ```
+   
+    !!! note
+        The provided group rules are very basic and they expose the generated servers to the world (`0.0.0.0/0`). This may not be necessary for your use case. Use with caution.
+
+4. Test the base infrastructure via SSH (executed with the `StrictHostKeyChecking=no` option).
+
+    ```shell
+    ./check-base.sh
+    ```
+    
+    Expected output.
     
     ```shell
-    $ openstack stack list | grep " <stack-name-prefix>" | awk '{print $2}' | xargs openstack stack delete --wait -y 
+    HEAD OK
+    PROXY OK
     ```
-    
-    Check that there is nothing connected to the base infrastructure. Everything is ok if there is no output.
-    
+
+## Cleanup
+
+1. Delete the base infrastructure. 
+
     ```shell
-    $ openstack port list | grep "subnet_id='$(openstack subnet list | grep kypo-base-subnet | awk '{print $2}')'"
-    ```
-    
-2. Destroy the whole base infrastructure.
-    **NOTE**: Delete the base networking last.
-    
-    ```bash
-    $ openstack stack delete --wait -y kypo-head-stack
-    $ openstack stack delete --wait -y kypo-proxy-jump-stack
-    $ openstack stack delete --wait -y kypo-base-networking-stack
+    ./delete-base.sh
     ```
 
-## Firewall
+1. Delete Floating IPs and Keypair.
 
-The firewall rules within OpenStack are grouped in Security Groups.
-Currently, we are using only the default Security Group called `default`.
-By default, all egress communication is allowed, but ingress communication is allowed only within the same Security Group.
+    !!! warning
+        This step is extremely destructive. It will delete all the results of the bootstrap step, including the files generated on the local machine.
 
-List all Security Group rules.
-
-```shell
-$ openstack security group rule list <security-group>
-```
-
-KYPO platform currently requires ingress access only for ports 22 (SSH)
-and 443 (HTTPS), and optionally ingress access of ICMP protocol.
-
-```shell
-$ openstack security group rule create --remote-ip 147.251.0.0/16 --protocol icmp --ingress --ethertype IPv4 <security-group>
-$ openstack security group rule create --remote-ip 147.251.0.0/16 --dst-port 22 --protocol tcp --ingress --ethertype IPv4 <security-group>
-$ openstack security group rule create --remote-ip 147.251.0.0/16 --dst-port 443 --protocol tcp --ingress --ethertype IPv4 <security-group>
-```
-
-For more information run help of the create or delete command.
+    ```shell
+    ./bootstrap-delete.sh
+    ```
