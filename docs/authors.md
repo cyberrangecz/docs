@@ -33,7 +33,7 @@
 ## Special Recognition
 
 !!!note
-    Here goes a list of people (surely not complete), whose invaluable help allowed us to make the current version of KYPO CRP into what it is today.
+    Here goes a list of people (surely not complete) whose invaluable help allowed us to make the current version of KYPO CRP into what it is today.
 
 - Čermák Milan
 - Čermák Roman

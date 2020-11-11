@@ -1,4 +1,4 @@
-Topology Definition is used for the description of [Topology Instance](../../sandbox-topology/topology-instance). See the following image to help you visualize what you can define in the topology definition.
+Topology Definition is used for the description of [Topology Instance](../../sandbox-topology/topology-instance/). See the following image to help you visualize what you can define in the topology definition.
 
 ![topology-definition-color](../../../img/user-guide-advanced/sandboxes/topology-definition-color.png)
 
@@ -16,7 +16,7 @@ Defines the name of the definition ([name restrictions](#names)).
 
 ### hosts
 
-The list of end hosts to be deployed. A host has the following attributes.
+Hosta contains the list of end hosts to be deployed. A host has the following attributes.
 
 * **name**: name of end host VM ([names restriction](#names), [unique names restriction](#unique-names))
 * **flavor**: name of flavor (see [how to chose flavor](#flavor))
@@ -37,7 +37,7 @@ The list of routers. Routers are the only nodes through which hosts can communic
     * **image**: name of image
     * **man_user**: name of user with sudo privileges
     * **mng_protocol (optional)**: protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
-* **cidr**: for network between router and BR ([more about management nodes](../topology-instance#topology-instance-management), the recommended range of the network is `/29`, [unique cidrs restriction](#disjunct-cidrs))
+* **cidr**: for network between router and BR ([more about management nodes](../topology-instance/#topology-instance-management), the recommended range of the network is `/29`, [unique cidrs restriction](#disjunct-cidrs))
    
 ### networks
 
@@ -45,7 +45,7 @@ The list of networks. A network is used to connect the router with the end host.
 
 * **name**: name of network ([names restriction](#names), [unique names restriction](#unique-names))
 * **cidr**: IP address range in CIDR notation ([unique cidrs restriction](#disjunct-cidrs))
-* **accessible_by_user**: optional attribute specifies whether the UAN ([more about management nodes](../topology-instance#topology-instance-management)) should be connected to this network (default: `True`).
+* **accessible_by_user**: optional attribute specifies whether the UAN ([more about management nodes](../topology-instance/#topology-instance-management)) should be connected to this network (default: `True`).
 
 ### net_mappings
 
@@ -74,9 +74,9 @@ The list of groups. An ansible group is used for better management of nodes. It 
 
 ### Base_box
 
-Base_box specifies the `image` of the node boot disk, its default user `man_user` with sudo permissions, and a protocol that is needed to communicate with the machine.
+Base_box specifies the `image` of the node boot disk, default user `man_user` with sudo permissions, and a protocol that is needed to communicate with the machine.
 
-Now (24.9.2020) possible options are as follows.
+Now (24.9.2020), possible options are as follows.
 
 image | user
 ----- | ----
@@ -90,11 +90,11 @@ ubuntu-bionic-x86_64                        | ubuntu
   
 For routers, it is strongly recommended to use the `debian-9-x86_64` image.
 
-[How to list OpenStack images](../../../../installation-guide/base-infrastructure#configuration)
+[How to list OpenStack images](../../../../installation-guide/base-infrastructure/#configuration)
 
 ### Flavor
 
-Defines virtual machine hardware parameters (VCPUs, RAM, Disk size).
+Flavor defines virtual machine hardware parameters (VCPUs, RAM, Disk size).
 
 flavor | vCPU | RAM (GB) | disk size (GB)
 ------ | ---- | -------- | ---------
@@ -109,13 +109,13 @@ csirtmu.large8x32  | 8  | 32 | 80
 csirtmu.jumbo16x32 | 16 | 32 | 100
 csirtmu.jumbo16x64 | 16 | 64 | 100
 
-[How to list OpenStack flavors](../../../../installation-guide/base-infrastructure#configuration)
+[How to list OpenStack flavors](../../../../installation-guide/base-infrastructure/#configuration)
 
 ## Restrictions
 
 ### Names
 
-All names should have only characters: `a-z`, `A-Z`, `1-9`, and `-` and the first character should be a lower case letter.
+All names should have only characters: `a-z`, `A-Z`, `1-9`, and `-`, and the first character should be a lower case letter.
 
 ### Unique Names
 
@@ -123,14 +123,14 @@ Names of hosts, networks, and routers should be unique in the context of a Topol
 
 ### Disjunct CIDRs
 
-Networks and routers CIDRs should be disjunct (not overlapping) and in `network_mappings` and `router_mappings` IP address should be from the IP address range of the network, other way networking wouldn't work.
-Network and routers CIDRs shouldn't overlap with [management networks](../topology-instance#topology-instance-management) CIDRs too.
+Networks and routers CIDRs should be disjunct (not overlapping), and in `network_mappings` and `router_mappings` IP address should be from the IP address range of the network. Other way networking wouldn't work.
+Network and routers CIDRs shouldn't overlap with [management networks](../topology-instance/#topology-instance-management) CIDRs too.
 
-[How to set CIDRs of management networks](../../../../installation-guide/kypo-platform-configuration#sandbox-service).
+[How to set CIDRs of management networks](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo/-/blob/master/provisioning/roles/kypo-crp-configuration/templates/configuration/sandbox-service/kypo-sandbox-service-config.yml).
         
 ### Address Restriction
 
-During a network creation, the OpenStack will take the first IP address of the specified IP address range for a gateway (a Router), the second IP address for DHCP, and the rest for hosts. The OpenStack will non-deterministically take the first address of the network or the first address after a gateway (a Router) address and if any of net_mappings has an IP address set to one of these addresses, sandbox creation may fail.
+During a network creation, the OpenStack will take the first IP address of the specified IP address range for a gateway (a Router), the second IP address for DHCP, and the rest for hosts. The OpenStack will non-deterministically take the first address of the network or the first address after a gateway (a Router) address, and if any of net_mappings has an IP address set to one of these addresses, sandbox creation may fail.
 
 *[VM]: Virtual machine
 *[BR]: Border router

@@ -4,9 +4,9 @@ The objective of the **User Guide (Basic)** is to provide basic guidelines to th
 
 The portal is divided into three **KYPO agendas**:
 
-1. **[Trainings agenda](./training-agenda/training-agenda-overview)** with main focus on creation and organization of trainings.
-2. **[Sandboxes agenda](./sandbox-agenda/sandbox-agenda-overview)** specifies guidelines for sandbox creation and realization. 
-3. **[Administration agenda](./administration-agenda/administration-agenda-overview)** deals with the administration of users and their access to the specific parts of the KYPO Portal based on user access roles.
+1. **[Sandboxes agenda](./sandbox-agenda/sandbox-agenda-overview/)** specifies guidelines for sandbox creation and realization. 
+2. **[Trainings agenda](./training-agenda/training-agenda-overview/)** with main focus on creation and organization of trainings.
+3. **[Administration agenda](./administration-agenda/administration-agenda-overview/)** deals with the administration of users and their access to the specific parts of the KYPO Portal based on user access roles.
 
 Then the User Guide (Basic) section then serves as a manual on how to operate all of the functions that these agendas offer.
 
@@ -14,14 +14,14 @@ Then the User Guide (Basic) section then serves as a manual on how to operate al
 
 Access to KYPO Portal depends a lot on the role you hold as a user. There are three main roles we differentiated and depending on them you can access different pages of agendas and perform various functionalities in the KYPO Portal.
 
-* **[Trainees](#trainees-view):** Everybody who has access to the KYPO Portal and is interested in participating in the training can perform actions inside of the [Traning run](../training-agenda/training-run).
+* **[Trainees](#trainees-view):** Everybody who has access to the KYPO Portal and is interested in participating in the training can perform actions inside of the [Traning run](../training-agenda/training-run/).
 * **[Instructors](#instructors-view):** Users who are responsible for preparing and creating trainings and corresponding sandboxes can access the following pages: 
-    * [Training definitions](../training-agenda/training-definition) and [Training instances](../training-agenda/training-instance) for overview and management of trainings. 
-    * [Sandbox definitions](../sandbox-agenda/sandbox-definition) and [Pools](../sandbox-agenda/pool) needed for management of sandboxes, and [Resources](../sandbox-agenda/resources) for cloud resources overview.
-* **[Administrators](#administrators-view):** Users who are responsible for managing the whole KYPO CRP instance. They have access to every above-mentioned page in the KYPO Portal. Moreover, they can also have the right to manage entities like users, groups, and microservices in [Administration Agenda](../administration-agenda/administration-agenda-overview). 
+    * [Training definitions](../training-agenda/training-definition/) and [Training instances](../training-agenda/training-instance/) for overview and management of trainings. 
+    * [Sandbox definitions](../sandbox-agenda/sandbox-definition/) and [Pools](../sandbox-agenda/pool/) needed for management of sandboxes, and [Resources](../sandbox-agenda/resources/) for cloud resources overview.
+* **[Administrators](#administrators-view):** Users who are responsible for managing the whole KYPO CRP instance. They have access to every above-mentioned page in the KYPO Portal. Moreover, they can also have the right to manage entities like users, groups, and microservices in [Administration Agenda](../administration-agenda/administration-agenda-overview/). 
 
 !!! note
-    See the page [Roles](../../user-guide-advanced/users-and-groups/roles) for a better explanation of the meaning of roles.
+    See the page [Roles](../../user-guide-advanced/users-and-groups/roles/) for a better explanation of the meaning of roles.
 
 
 ## KYPO Portal Home Page
@@ -29,7 +29,7 @@ Access to KYPO Portal depends a lot on the role you hold as a user. There are th
 After a successful login, the home page of the KYPO Portal contains the elements displayed and marked in the following picture. 
 
 !!! warning "Trainee"
-    A trainee cannot see the home page. See [Trainee's Point of View](#the-trainees-point-of-view).
+    A trainee cannot see the home page. See [Trainee's View](#trainees-view).
 
 ![KYPO-home-page](../img/user-guide-basic/KYPO-home-page.png)
 

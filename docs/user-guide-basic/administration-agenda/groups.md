@@ -1,4 +1,4 @@
-This section is used to list all groups created in the KYPO platform. Groups are essential to the user-access, as the access roles are not assigned to specific users but to groups. The user acquires access to the KYPO portal agendas based on the roles of the groups they belong to.
+This section is used to list all groups created in the KYPO platform. Groups are essential to the user-access, as the access roles are not assigned to specific users but groups. The user acquires access to the KYPO portal agendas based on the roles of the groups they belong to.
 
 ![group-overview](../../img/user-guide-basic/administration-agenda/groups/group-overview.png) 
 
@@ -25,11 +25,7 @@ To create a new group, the administrator must click on ![create-button](../../im
 
 ## Create or Edit Group
 
-The page consists of three panels:
-
-[1. Create/Edit Group](#1-createedit-group) 
-[2. Edit members](#2-edit-members) 
-[3. Edit roles](#3-edit-roles) 
+The page consists of three panels, which allow to [create/edit group](#1-createedit-group), [add/edit members](#2-edit-members) of the group, and [edit roles](#3-edit-roles) of the group.
 
 ![create-group](../../img/user-guide-basic/administration-agenda/groups/create-group-all.png)
 
@@ -46,7 +42,7 @@ Here, the administrator is required to fill up all the necessary fields before c
 
 ![create-group-panel](../../img/user-guide-basic/administration-agenda/groups/create-group.png)
 ### 2. Edit Members
-Here, the administrator can add users individually or import all users from the group. The part **Add users** provide an easy way to search for users whose administrator would like to add to the group. Administrators can also add all users from the specific group in the part **Import users**. Click on the ![add-button](../../img/buttons/add-button.png) button to add selected users to the group. All users will be added to the group and will be present in the list in the part **Members of group**. A user or multiple users can be removed via the common way mentioned before.
+Here, the administrator can add users individually or import all users from the group. The part **Add users** provides an easy way to search for users whose administrator wants to add to the group. Administrators can also add all users from the specific group in the part **Import users**. Click on the ![add-button](../../img/buttons/add-button.png) button to add selected users to the group. All users will be added to the group and will be present in the list in the part **Members of group**. A user or multiple users can be removed via the common way mentioned before.
 
 ![edit-members-panel](../../img/user-guide-basic/administration-agenda/groups/edit-members.png)
 ### 3. Edit Roles 

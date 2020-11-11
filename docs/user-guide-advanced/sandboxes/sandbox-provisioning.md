@@ -1,6 +1,6 @@
-The Sandbox Provisioning is for [Topology Instance](../sandbox-topology/topology-instance) customizations. Use it to set up your environment, create users, install packages, etc.
+The Sandbox Provisioning is for [Topology Instance](../sandbox-topology/topology-instance/) customizations. Use it to set up your environment, create users, install packages, etc.
 
-The content of the **provisioning** directory is the same as any other [Ansible](https://docs.ansible.com/ansible/latest/index.html).
+The **provisioning** directory's content is the same as any other [Ansible](https://docs.ansible.com/ansible/latest/index.html).
 
 * **playbook.yml**: the Ansible playbook that is used for provisioning of the sandbox,
 see Ansible documentation on [playbooks](https://docs.ansible.com/ansible/latest/user_guide/playbooks.html).
@@ -12,7 +12,7 @@ see Ansible documentation on [playbooks](https://docs.ansible.com/ansible/latest
 
 ### Minimal Ansible Playbook
 
-The KYPO requires presence Sandbox Provisioning, but if you do not need any provisioning, you can use a dummy `playbook.yml` file containing only the following line.
+The KYPO requires Sandbox Provisioning, but if you do not need any provisioning, you can use a dummy `playbook.yml` file containing only the following line.
 
 ```yaml
 - hosts: all
@@ -22,11 +22,11 @@ The KYPO requires presence Sandbox Provisioning, but if you do not need any prov
 
 On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#default-groups), the KYPO sandbox-service defines three more default host groups.
 
-* **management**: the group containing all the [sandbox management nodes](../sandbox-topology/topology-instance#topology-instance-management), i.e., MAN, BR, and UAN node.
-* **routers**: the group containing all the routers defined in [Topology definition](../sandbox-topology/topology-definition#routers).
-* **hosts**: the group containing all the hosts defined in [Topology definition](../sandbox-topology/topology-definition#hosts).
+* **management**: the group containing all the [sandbox management nodes](../sandbox-topology/topology-instance/#topology-instance-management), i.e., MAN, BR, and UAN node.
+* **routers**: the group containing all the routers defined in [Topology definition](../sandbox-topology/topology-definition/#routers).
+* **hosts**: the group containing all the hosts defined in [Topology definition](../sandbox-topology/topology-definition/#hosts).
 
-You can specify additional Ansible host groups in [Topology definition](../sandbox-topology/topology-definition#groups) and then use them in a `playbook.yml` file of the Sandbox Provisioning.
+You can specify additional Ansible host groups in [Topology definition](../sandbox-topology/topology-definition/#groups) and then use them in a `playbook.yml` file of the Sandbox Provisioning.
 
 ### Ansible Special Variables
 
@@ -36,7 +36,7 @@ On top of [Ansible special variables](https://docs.ansible.com/ansible/latest/re
 * **kypo_global_pool_id**: the ID of the pool for which the sandbox was created.
 * **kypo_global_sandbox_allocation_unit_id**: the ID of the sandbox allocation unit. Once the sandbox is fully provisioned, it is the same ID as the sandbox ID.
 * **kypo_global_sandbox_ip**: the sandbox IPv4 address.
-* **kypo_global_sandbox_name**: the sandbox name, which is the compound of [stack_name_prefix](../../../installation-guide/kypo-platform-configuration#sandbox-service), pool ID and sandbox allocation unit ID.
+* **kypo_global_sandbox_name**: the sandbox name, which is the compound of [stack_name_prefix](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo/-/blob/master/extra-vars.yml), pool ID and sandbox allocation unit ID.
 * **kypo_global_head_ip**: the KYPO head server IP address.
 
 ### Ansible Inventory

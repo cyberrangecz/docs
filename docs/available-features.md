@@ -7,7 +7,7 @@
 
 # What's not done
 
-* [ ] Support for complex network topologies (e.g. multi-route or cyclic networks)
+* [ ] Support for complex network topologies (e.g., multi-route or cyclic networks)
 * [ ] Consolidated debug logging (debug logs are not in one place)
 * [ ] Total isolation of *SSH jump-host tunnels* for trainee access ([More information](./user-guide-advanced/sandboxes/sandbox-ssh-access.md))
 
