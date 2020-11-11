@@ -11,7 +11,7 @@ The engine of the KYPO CRP environment is based on the cloud platform OpenStack.
 A graphical user interface for simple interaction of users with the KYPO CRP, easy access to sandboxes, and to the other functionalities. Represents the mediator between users and microservices that are running in the background. For more detailed information about microservices see [Platform Components](../../installation-guide/platform-components/). 
 
 ### Git Repositories 
-Git repositories are used to store created sandbox definitions by users. Then they are loaded by the respective microservice of KYPO Portal when needed to create a sandbox in the cloud. 
+Git repositories are used to store created sandbox definitions by users. Then they are loaded by the respective microservice of KYPO Portal when needed to create a sandbox in the cloud. Access to the Git is configured during the KYPO CRP deployment. See [7. Configure access to the Gitlab repository](../../installation-guide/kypo-crp-deployment/#configure).
 
 ### Users  
 Users have different roles with a different scope of work within KYPO CRP. They can create and manage trainings, manage other users and they are also responsible for designing sandboxes via sandbox definitions. Users can access machines in the sandboxes using Spice console or directly using SSH. 
