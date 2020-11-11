@@ -50,8 +50,7 @@ nav:
       - Overview: installation-guide/installation-guide-overview.md
       - OpenStack Requirements: installation-guide/openstack-requirements.md
       - Base Infrastructure: installation-guide/base-infrastructure.md
-      - KYPO Platform Configuration: installation-guide/kypo-platform-configuration.md
-      - KYPO Platform Deployment: installation-guide/kypo-platform-deployment.md
+      - KYPO CRP Deployment: installation-guide/kypo-crp-deployment.md
       - Setting up OIDC Provider: installation-guide/setting-up-oidc-provider.md
       - Platform Components: installation-guide/platform-components.md
   - Available Features: available-features.md
