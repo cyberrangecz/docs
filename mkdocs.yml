@@ -47,7 +47,7 @@ nav:
           - Overview: user-guide-advanced/users-and-groups/users-and-groups-overview.md
           - Roles: user-guide-advanced/users-and-groups/roles.md
   - Installation Guide:
-      - Overview: installation-guide/installation-guide-overview.md
+#      - Overview: installation-guide/installation-guide-overview.md
       - OpenStack Requirements: installation-guide/openstack-requirements.md
       - Base Infrastructure: installation-guide/base-infrastructure.md
       - KYPO CRP Deployment: installation-guide/kypo-crp-deployment.md
