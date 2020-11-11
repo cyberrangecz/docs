@@ -1,6 +1,6 @@
 ---
-extra_vars_url: https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo/-/blob/master/extra-vars.yml
-secrets_url: https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo/-/blob/master/secrets.yml
+extra_vars_url: https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-demo/-/blob/master/extra-vars.yml
+secrets_url: https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-demo/-/blob/master/secrets.yml
 obtain_application_credentials_url: https://docs.openstack.org/keystone/ussuri/user/application_credentials.html
 base_infrastructure_url: ../base-infrastructure
 setting_up_oidc_provider_url: ../setting-up-oidc-provider
@@ -9,7 +9,11 @@ administration_agenda_url: ../../user-guide-basic/administration-agenda/administ
 
 # KYPO CRP Deployment
 
-This page contains the steps that are needed to install and configure the KYPO Cyber Range Platform.
+This page contains the steps that are needed to install and configure the KYPO Cyber Range Platform. You can clone the [KYPO CRP Deployment Demo Repository](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-demo) via the following command.
+
+```shell
+git clone https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-demo.git
+```
 
 ## Prerequisites
 
