@@ -104,11 +104,15 @@ The tab displays a graph with a real-time development of the trainees' scores ma
 </p>
 
 ### 2. Score Scatter Plot 
+This visualization provides an overview of the training results. It helps to compare the score and duration of the whole training or individual levels. Dots show the positions of the trainees based on score and time. They indicate the correlation between the two factors and help to pinpoint the outliers or allocate clusters.
+
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-score-scatter.png">
 </p>
 
 ### 3. Progress 
+The Progress visualization is a view on available data distilled from the "Progress of Training Instance". It supports additional interaction (such as level sorting by their duration) and gives a full picture of the trainee walkthrough. The color scale helps to highlight individual levels for all trainees as well as their usage of hints or submission of wrong flags for the levels. It helps to find skilled trainees or flaws in the training design by observing the details of its progression.
+
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-score-progress.png">
 </p>
