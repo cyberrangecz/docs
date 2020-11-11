@@ -153,3 +153,93 @@ The following tables display the actions that can perform the users with the spe
 
 
 ### Sandbox Microservice 
+
+#### Pools Endpoints
+
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
+| Create Sandbox Allocation Unit| CREATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Lock given pool | CREATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Creates new pool | CREATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get a list of Sandbox Allocation Units | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| List locks for given pool | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| List Allocation Request for this pool | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get lock of the given pool | READ | :material-close-thick:{: .icon .red }| :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Retrieve the definition associated with a pool | READ | :material-close-thick:{: .icon .red }| :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get a list of pools | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| List Cleanup Request for this pool | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get unlocked sandbox in given pool and lock it | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get a list of sandboxes in given pool | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Generate SSH config for User access to this sandbox | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Retrieve a pool | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Delete all Sandbox Allocation Units in pool | DELETE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Delete given lock | DELETE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Delete pool | DELETE | :material-close-thick:{: .icon .red }  | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+
+
+#### Cleanup Requests Endpoints
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
+| Retrieve a Sandbox Provisioning Cleanup stage | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Retrieve a Sandbox Networking Cleanup stage | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Retrieve a Sandbox Cleanup Request | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Retrieve an openstack Cleanup stage | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Cancel given Cleanup Request | UPDATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+
+
+#### Cloud Endpoints 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
+| Get list of images | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Retrieve a Sandbox Networking Cleanup stage | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get the quota set and name of project | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+
+
+#### Definitions Endpoints
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
+| Create a new sandbox definition | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
+| Retrieve the definition | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
+| Retrieve a list of sandbox definitions | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green }| :material-check-bold:{: .icon .green } |
+| Retrieve a list of definition refs (branches and tags) | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
+| Delete the definition | DELETE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
+
+
+#### Allocation Requests Endpoints
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
+| List sandbox Resources | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Retrieve a Sandbox Networking Allocation stage | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Retrieve a list of Ansible Outputs | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Retrieve a Sandbox Provisioning Allocation stage | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Retrieve a Sandbox Allocation Request | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| List sandbox Events | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Retrieve a list of Ansible Outputs | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Retrieve an openstack allocation stage | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Cancel given Allocation Request | UPDATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+
+
+
+#### Sandbox Allocation Units Endpoints
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
+| Create cleanup request | CREATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Retrieve a Sandbox Allocation Unit | READ | :material-close-thick:{: .icon .red }| :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Retrieve a Sandbox Cleanup Request for an Allocation Unit. | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Retrieve a Sandbox Allocation Request for an Allocation Unit | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Delete cleanup request | DELETE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+
+#### Sandboxes Endpoints
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
+| Lock given sandbox | CREATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| List locks for given sandbox | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get topology data for given sandbox | READ | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Generate SSH config for User access to this sandbox | READ | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get a console for given machine | READ | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get lock of given sandbox | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Retrieve a sandbox | READ | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Retrieve a VM info | READ | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Perform specified action on given VM | UPDATE | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Delete given lock | DELETE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+
