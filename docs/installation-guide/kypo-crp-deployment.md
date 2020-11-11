@@ -1,13 +1,15 @@
 ---
 extra_vars_url: https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo/-/blob/master/extra-vars.yml
 secrets_url: https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-local-demo/-/blob/master/secrets.yml
-obtain_application_credentials_url: https://gitlab.ics.muni.cz/kypo-crp/devops/kypo2-openstack-deploy/-/wikis/how-to/Obtain-Application-Credentials
+obtain_application_credentials_url: https://docs.openstack.org/keystone/ussuri/user/application_credentials.html
 base_infrastructure_url: ../base-infrastructure
 setting_up_oidc_provider_url: ../setting-up-oidc-provider
 administration_agenda_url: ../../user-guide-basic/administration-agenda/administration-agenda-overview
 ---
 
 # KYPO CRP Deployment
+
+This page contains the steps that are needed to install and configure the KYPO Cyber Range Platform.
 
 ## Prerequisites
 
@@ -23,7 +25,7 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
 
 1. Configure access to the OpenStack cloud.
     
-    1. [Obtain Application Credentials]({{ page.meta.extra_vars_url }}).
+    1. [Obtain Application Credentials]({{ page.meta.obtain_application_credentials_url }}).
     
     2. Edit the following variables of an [extra-vars.yml]({{ page.meta.extra_vars_url }}) file using values obtained from the previous step.
     
@@ -173,7 +175,7 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
 
 6. Configure initial users.
 
-    There has to be at least one initial user with admin permissions that will be able to manage other users. See [Administration Agenda]({{ administration_agenda_url }}). Edit the following variables of an [extra-vars.yml]({{ page.meta.extra_vars_url }}) file using values obtained from the previous step.
+    There has to be at least one initial user with admin permissions that will be able to manage other users. See [Administration Agenda]({{ page.meta.administration_agenda_url }}). Edit the following variables of an [extra-vars.yml]({{ page.meta.extra_vars_url }}) file using values obtained from the previous step.
 
     !!! info "CSIRT-MU dummy OIDC issuer"
         
