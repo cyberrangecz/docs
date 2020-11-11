@@ -8,7 +8,7 @@ It is assumed that KYPO CRP is installed according to the [installation guide](.
 
 
 ## Sandboxes Creation
-1. A sandbox definition is created by instructors according to this [format](../../user-guide-advanced/sandboxes/sandbox-definition/) and stored as a Git repository. 
+1. A sandbox definition is created by instructors according to this [format](../../user-guide-advanced/sandboxes/sandbox-definition/) and stored as a Git repository (see [7. Configure access to the Gitlab repository](../../installation-guide/kypo-crp-deployment/#configure)). 
 2. In the KYPO Portal, a record about the sandbox definition is created via the [Sandbox Definition Overview](../../user-guide-basic/sandbox-agenda/sandbox-definition/) page by entering the URI to the respective Git repository from the previous step.
 3. From the sandbox definition created in the KYPO Portal, a pool with a specified size can be created by following these [steps](../../user-guide-basic/sandbox-agenda/pool/#create-pool). 
 4. Sandboxes in the cloud are allocated by clicking the allocation button of the respective pool. Two actions are automatically performed:
