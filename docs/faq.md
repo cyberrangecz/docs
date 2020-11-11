@@ -2,9 +2,11 @@
 
 Here you can find the **Frequently asked questions** and answers regarding the **KYPO platform**. If the questions answered on this page are not sufficient as solutions for your problem, be sure to contact us on *support@kypo.cz*.
 
+<!--
 ## Deployment
 ###  1. **Q:** Placeholder
 **A: placeholder**
+-->
 
 ## Sandboxes
 ### 1. **Q:** Can I connect to the VMs in my sandbox via ssh?
@@ -17,7 +19,8 @@ Here you can find the **Frequently asked questions** and answers regarding the *
 ### 3. **Q:** Is it possible to restrict SSH only for the management network after Sandbox Networking or turn it off completely?
 **A: Yes!** SSH user access is led through the networks defined in the sandbox topology definition so that trainee could access the machine only via a web console. Management network can be completely blocked in [Sandbox Provisioning](./user-guide-advanced/sandboxes/sandbox-provisioning.md), but you (as organizer) won't be able to access machines and won't help your students.
 
-
+<!--
 ## Trainings
 ### 1. **Q:** Placeholder
 **A: placeholder**
+-->
