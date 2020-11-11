@@ -9,7 +9,7 @@ Command logging is enabled on host VMs by using several Ansible roles. If the or
     To forward logs from `host` VM to the `MAN` the [KYPO Sandbox Forward to MAN](https://gitlab.ics.muni.cz/muni-kypo-crp/useful-ansible-roles/kypo-sandbox-logging-forward) Ansible role must be enabled with any combination of before mentioned roles. If this role is not added to the sandbox definition, logged data will **not** be accessible.
 
 ## Accessing logged data
-The training organizer can access all logged data (training events or commands) by exporting the training instance in the [Training Instance Overview](../../../user-guide-basic/training-agenda/training-instance#training-instance-overview). All data can be found in the exported archive in the corresponding files stored in the JSON format. 
+The training organizer can access all logged data (training events or commands) by exporting the training instance in the [Training Instance Overview](../../../user-guide-basic/training-agenda/training-instance/#training-instance-overview). All data can be found in the exported archive in the corresponding files stored in the JSON format. 
 
 ![Archive](../../img/extras/logging/accessed-logged-data-structure.png)
 
