@@ -78,11 +78,11 @@ Before you get to the deployment, you must obtain several configuration values t
     Expected output.
 
     ```shell
-    +-----------------+
-    | Name            |
-    +-----------------+
-    | <kypo_base_net> |
-    +-----------------+
+    +--------------------------+
+    | Name                     |
+    +--------------------------+
+    | <kypo_base_external_net> |
+    +--------------------------+
     ```
     
 2. Get the image names that will be used for the KYPO base servers. 
@@ -142,7 +142,7 @@ Before you get to the deployment, you must obtain several configuration values t
 Private key of the keypair will be saved into `<ostack-project>_kypo-base-key.key` 
     
     ```shell
-    ./bootstrap.sh <kypo_base_net>
+    ./bootstrap.sh <kypo_base_external_net>
     ```
    
 2. Create the base infrastructure. 
@@ -168,17 +168,32 @@ Private key of the keypair will be saved into `<ostack-project>_kypo-base-key.ke
     !!! note
         The provided group rules are very basic and they expose the generated servers to the world (`0.0.0.0/0`). This may not be necessary for your use case. Use with caution.
 
-4. Test the base infrastructure via SSH (executed with the `StrictHostKeyChecking=no` option).
+4. Test the base infrastructure via Ansible (executed with the `host_key_checking = False` option).
 
     ```shell
-    ./check-base.sh
+    ./ansible-check-base.sh
     ```
     
-    Expected output.
+    Expected output (`failed=0`).
     
     ```shell
-    HEAD OK
-    PROXY OK
+    # ...
+    PLAY RECAP *******************************************************************************************************
+    kypo-base-head             : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+    kypo-base-proxy            : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+    ```
+
+5. Provision the Proxy to enable user SSH access to sandboxes via tunneling
+
+    ```shell
+    ./ansible-user-access.sh
+    ```
+    
+    Expected output (`failed=0`).
+    
+    ```shell
+    PLAY RECAP *******************************************************************************************************
+    kypo-base-proxy            : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0  
     ```
 
 ## Cleanup
