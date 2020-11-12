@@ -10,6 +10,12 @@ img {
     margin-top: 0px !important; 
 }
 
+#ack-table + div thead {
+     height: 0px !important;
+     font-size:0; 
+     margin:0;
+}
+
 .lock-open {
     color: rgb(64, 81, 181);
     font-size: 18px;
