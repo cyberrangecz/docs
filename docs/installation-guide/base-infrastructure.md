@@ -136,6 +136,33 @@ Before you get to the deployment, you must obtain several configuration values t
     export KYPO_PROXY_IMAGE="ubuntu-bionic-x86_64"
     ```
 
+5. Delete all non-default Security Group Rules from the `default` Security Group (they serve as a firewall).
+    
+    List all groups.
+    
+    ```
+    openstack security group rule list default
+    ```
+   
+    Expected state.
+
+    ```
+    +-----------+-------------+-----------+-----------+------------+-----------------------+
+    | ID        | IP Protocol | Ethertype | IP Range  | Port Range | Remote Security Group |
+    +-----------+-------------+-----------+-----------+------------+-----------------------+
+    | <rule_id> | None        | IPv4      | 0.0.0.0/0 |            | ...                   |
+    | <rule_id> | None        | IPv4      | 0.0.0.0/0 |            | None                  |
+    | <rule_id> | None        | IPv6      | ::/0      |            | None                  |
+    | <rule_id> | None        | IPv6      | ::/0      |            | ...                   |
+    +-----------+-------------+-----------+------------------------+-----------------------+
+    ```
+    
+    Delete any unwanted rules by issuing the following command.
+   
+    ```
+    openstack security group rule delete <rule_id>
+    ```
+
 ## Deployment
 
 1. Bootstrap Floating IPs and Keypair. The results will be saved into `kypo-base-params.yml` file. 
@@ -151,22 +178,17 @@ Private key of the keypair will be saved into `<ostack-project>_kypo-base-key.ke
     ./create-base.sh
     ```
 
-3. Set the firewall rules. 
+3. Security Groups information.
 
-    The firewall rules within OpenStack are grouped in Security Groups. Currently, we are using only the default Security Group called `default`.
-
-    KYPO platform currently requires ingress access for ports 22 (SSH), 443 (HTTPS)
-    and 8443 (HTTPS), and optionally ingress access of ICMP protocol.
-
-    ```shell
-    openstack security group rule create --remote-ip 0.0.0.0/0 --protocol icmp --ingress --ethertype IPv4 default
-    openstack security group rule create --remote-ip 0.0.0.0/0 --dst-port 22 --protocol tcp --ingress --ethertype IPv4 default
-    openstack security group rule create --remote-ip 0.0.0.0/0 --dst-port 443 --protocol tcp --ingress --ethertype IPv4 default
-    openstack security group rule create --remote-ip 0.0.0.0/0 --dst-port 8443 --protocol tcp --ingress --ethertype IPv4 default
-    ```
+    The firewall rules within OpenStack are grouped into Security Groups. KYPO platform currently requires the following rules to be enabled. They are created automatically in the previous step.
+    
+    * 22 (SSH)
+    * 443 (HTTPS)
+    * 8443 (HTTPS)
+    * ICMP protocol
    
     !!! note
-        The provided group rules are very basic and they expose the generated servers to the world (`0.0.0.0/0`). This may not be necessary for your use case. Use with caution.
+        The provided group rules are very basic and they expose the deployed servers to the world (`0.0.0.0/0`). This may not be suitable for your use case.
 
 4. Test the base infrastructure via Ansible (executed with the `host_key_checking = False` option).
 
