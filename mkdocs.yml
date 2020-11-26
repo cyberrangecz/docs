@@ -99,3 +99,4 @@ extra_css:
 plugins:
   - macros
   - search
+  - mkdocs-swagger-ui
