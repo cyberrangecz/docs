@@ -16,7 +16,7 @@ At this moment, you should have installed [OpenStack](https://docs.openstack.org
 - Heat
 - Horizon
 
-For every instance of KYPO Cyber Range Platform you also need two floating addreses from Open Stack public pool to access the platform. 
+For every instance of KYPO Cyber Range Platform you also need two floating addreses from Open Stack public pool to access the platform.
 
 ## Toolkit
 
@@ -33,14 +33,14 @@ The following instructions were tested on **Debian**-like OS, specifically Linux
     ```shell
     sudo apt install python3-pip openssh-client
     ```
-    
+
 2. Install Pipenv
 
     ```shell
     sudo pip3 install pipenv
     ```
-    
-3. [Obtain Application Credentials](https://docs.openstack.org/keystone/ussuri/user/application_credentials.html) and source `app-cred-<name>-openrc.sh` file before the first use of a new terminal session.
+
+3. [Obtain Application Credentials](https://docs.openstack.org/keystone/ussuri/user/application_credentials.html) and source `app-cred-<name>-openrc.sh` file before the first use of a new terminal session. Application Credentials needs to be generated with the parameter **unrestricted**.
 
     ```shell
     source /path/to/app-cred-<name>-openrc.sh
@@ -52,9 +52,9 @@ The following instructions were tested on **Debian**-like OS, specifically Linux
     git clone https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo-crp-openstack-base.git
     cd kypo-crp-openstack-base
     ```
-    
+
     Don't leave this directory!
-  
+
 5. Install the necessary dependencies via Pipenv
 
     ```shell    
@@ -84,17 +84,17 @@ Before you get to the deployment, you must obtain several configuration values t
     | <kypo_base_external_net> |
     +--------------------------+
     ```
-    
-2. Get the image names that will be used for the KYPO base servers. 
+
+2. Get the image names that will be used for the KYPO base servers.
 
     List all images.
 
     ```shell
     openstack image list --column Name
     ```
-    
+
     Expected output.
-    
+
     ```
     +-------------------+
     | Name              |
@@ -102,19 +102,19 @@ Before you get to the deployment, you must obtain several configuration values t
     | <kypo_base_image> |
     +-------------------+
     ```
-   
+
     (This guide was tested on Ubuntu-based images).
-    
+
 3. Get the flavor names that will be used for the KYPO base servers.
 
     List all flavors.
-    
+
     ```shell
     openstack flavor list --column Name
     ```
-    
+
     Expected output.
-    
+
     ```
     +--------------------+
     | Name               |
@@ -122,13 +122,13 @@ Before you get to the deployment, you must obtain several configuration values t
     | <kypo_base_flavor> |
     +--------------------+
     ```
-   
+
     (This guide was tested with flavors of 4 VCPUs, 8192 RAM 80 GB Disk and 2 VCPUs, 4096 RAM, 80 GB Disk).
 
 4. Edit the desired values for images (`<kypo_base_image>`) and flavors (`<kypo_base_flavor>`) in the `openstack-defaults.sh` file of the cloned repository.
-    
+
     The default values are set as follows.
-    
+
     ```shell
     export KYPO_HEAD_FLAVOR="standard.large"
     export KYPO_HEAD_IMAGE="ubuntu-bionic-x86_64"
@@ -137,13 +137,13 @@ Before you get to the deployment, you must obtain several configuration values t
     ```
 
 5. Delete all non-default Security Group Rules from the `default` Security Group (they serve as a firewall).
-    
+
     List all groups.
-    
+
     ```
     openstack security group rule list default
     ```
-   
+
     Expected state.
 
     ```
@@ -156,23 +156,23 @@ Before you get to the deployment, you must obtain several configuration values t
     | <rule_id> | None        | IPv6      | ::/0      |            | ...                   |
     +-----------+-------------+-----------+------------------------+-----------------------+
     ```
-    
+
     Delete any unwanted rules by issuing the following command.
-   
+
     ```
     openstack security group rule delete <rule_id>
     ```
 
 ## Deployment
 
-1. Bootstrap Floating IPs and Keypair. The results will be saved into `kypo-base-params.yml` file. 
-Private key of the keypair will be saved into `<ostack-project>_kypo-base-key.key` 
-    
+1. Bootstrap Floating IPs and Keypair. The results will be saved into `kypo-base-params.yml` file.
+Private key of the keypair will be saved into `<ostack-project>_kypo-base-key.key`
+
     ```shell
     ./bootstrap.sh <kypo_base_external_net>
     ```
-   
-2. Create the base infrastructure. 
+
+2. Create the base infrastructure.
 
     ```shell
     ./create-base.sh
@@ -181,12 +181,12 @@ Private key of the keypair will be saved into `<ostack-project>_kypo-base-key.ke
 3. Security Groups information.
 
     The firewall rules within OpenStack are grouped into Security Groups. KYPO platform currently requires the following rules to be enabled. They are created automatically in the previous step.
-    
+
     * 22 (SSH)
     * 443 (HTTPS)
     * 8443 (HTTPS)
     * ICMP protocol
-   
+
     !!! note
         The provided group rules are very basic and they expose the deployed servers to the world (`0.0.0.0/0`). This may not be suitable for your use case.
 
@@ -195,9 +195,9 @@ Private key of the keypair will be saved into `<ostack-project>_kypo-base-key.ke
     ```shell
     ./ansible-check-base.sh
     ```
-    
+
     Expected output (`failed=0`).
-    
+
     ```shell
     # ...
     PLAY RECAP *******************************************************************************************************
@@ -210,9 +210,9 @@ Private key of the keypair will be saved into `<ostack-project>_kypo-base-key.ke
     ```shell
     ./ansible-user-access.sh
     ```
-    
+
     Expected output (`failed=0`).
-    
+
     ```shell
     PLAY RECAP *******************************************************************************************************
     kypo-base-proxy            : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0  
@@ -220,7 +220,7 @@ Private key of the keypair will be saved into `<ostack-project>_kypo-base-key.ke
 
 ## Cleanup
 
-1. Delete the base infrastructure. 
+1. Delete the base infrastructure.
 
     ```shell
     ./delete-base.sh
