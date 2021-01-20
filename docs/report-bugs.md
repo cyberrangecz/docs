@@ -1,10 +1,9 @@
 Reporting bugs is a great way for anyone to help improve the KYPO platform. To report bugs, we use the GitLab lightweight issue tracker system. Before reporting a bug, please consider the following points:
   
   * Read the [FAQ](./faq.md) to see if your issue isn't already a well-known question.
-  * Ask on the kypo-users first if you're not sure that what you're seeing is a bug.
   * Check if someone hasn't already filed the bug by searching or running custom queries in the issues repository. If so, put "**thumb up**" on the bug.
   * Don't use the issue system to ask support questions. Use the **support@kypo.cz** for that.
-  * Don't reopen issues that have been marked ** "wontfix"** without finding consensus to do so on kypo-developers.
+  * Don't reopen issues that have been marked **"wontfix"** without finding consensus to do so on **support@kypo.cz**.
 
 
 ## How to report a bug
