@@ -96,6 +96,13 @@ For routers, it is strongly recommended to use the `debian-9-x86_64` image.
 
 Flavor defines virtual machine hardware parameters (VCPUs, RAM, Disk size).
 
+To use the examples of sandbox definitions the flavors displayed in the table must be present in your OpenStack. Either you are using CSIRT-MU/KYPO OpenStack projects where all flavors are already created or you need to create these flavors in your own OpenStack. 
+
+!!! warning 
+    In the case of using a public cloud provider (flavors cannot be created without admin rights) the flavors in the topology definition must be replaced by the available flavors of that provider. 
+
+[How to list OpenStack flavors](../../../../installation-guide/base-infrastructure/#configuration)
+
 flavor | vCPU | RAM (GB) | disk size (GB)
 ------ | ---- | -------- | ---------
 csirtmu.tiny1x2    | 1  | 2  | 20
@@ -109,7 +116,6 @@ csirtmu.large8x32  | 8  | 32 | 80
 csirtmu.jumbo16x32 | 16 | 32 | 100
 csirtmu.jumbo16x64 | 16 | 64 | 100
 
-[How to list OpenStack flavors](../../../../installation-guide/base-infrastructure/#configuration)
 
 ## Restrictions
 
