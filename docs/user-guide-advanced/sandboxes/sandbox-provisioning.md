@@ -36,7 +36,7 @@ On top of [Ansible special variables](https://docs.ansible.com/ansible/latest/re
 * **kypo_global_pool_id**: the ID of the pool for which the sandbox was created.
 * **kypo_global_sandbox_allocation_unit_id**: the ID of the sandbox allocation unit. Once the sandbox is fully provisioned, it is the same ID as the sandbox ID.
 * **kypo_global_sandbox_ip**: the sandbox IPv4 address.
-* **kypo_global_sandbox_name**: the sandbox name, which is the compound of [stack_name_prefix](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-demo/-/blob/master/extra-vars.yml), pool ID and sandbox allocation unit ID.
+* **kypo_global_sandbox_name**: the sandbox name, which is the compound of [stack_name_prefix](https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo-crp-deployment/-/blob/master/extra-vars.yml), pool ID and sandbox allocation unit ID.
 * **kypo_global_head_ip**: the KYPO head server IP address.
 
 ### Ansible Inventory

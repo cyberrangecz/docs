@@ -31,14 +31,14 @@ Hosta contains the list of end hosts to be deployed. A host has the following at
 
 The list of routers. Routers are the only nodes through which hosts can communicate with the internet or with hosts in networks connected to different Routers. Every router should be connected to some [networks](#networks). A connection can be achieved by [router_mappings](#router_mappings). A router has the following attributes.
 
-* **name**: name of router VM ([names restriction](#names), [unique names restriction](#unique-names)) 
+* **name**: name of router VM ([names restriction](#names), [unique names restriction](#unique-names))
 * **flavor**: name of flavor (see [how to chose flavor](#flavor))
 * **base_box**: (see [how to define base_box](#base_box))
     * **image**: name of image
     * **man_user**: name of user with sudo privileges
     * **mng_protocol (optional)**: protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
 * **cidr**: for network between router and BR ([more about management nodes](../topology-instance/#topology-instance-management), the recommended range of the network is `/29`, [unique cidrs restriction](#disjunct-cidrs))
-   
+
 ### networks
 
 The list of networks. A network is used to connect the router with the end host. It has the following attributes.
@@ -51,7 +51,7 @@ The list of networks. A network is used to connect the router with the end host.
 
 The list of net_mappings. A net_mapping is used to connect the host to the network. Each host should be connected to one network (more are possible but not recommended). A net_mapping has the following attributes.
 
-* **host**: name of host defined in [hosts](#hosts) 
+* **host**: name of host defined in [hosts](#hosts)
 * **network**: name of the network defined in [networks](#networks)
 * **ip**: IP address for the host, must be from IP address range of the network [address restriction](#address-restriction)
 
@@ -59,10 +59,10 @@ The list of net_mappings. A net_mapping is used to connect the host to the netwo
 
 The list of router_mappings. A router_mapping is used to connect the router to the network. Each network should be connected to one router, but one router can be connected to multiple networks. A router_mapping has the following attributes.
 
-* **router**: name of router defined in [routers](#routers) 
+* **router**: name of router defined in [routers](#routers)
 * **network**: name of network defined in [networks](#networks)
 * **ip**: IP address for the router, must be from IP address range of the network [address restriction](#address-restriction)
- 
+
 ### groups
 
 The list of groups. An ansible group is used for better management of nodes. It has the following attributes.
@@ -87,7 +87,7 @@ debian-9-x86_64                             | debian
 debian-10-x86_64                            | debian
 kali-linux-2019.4-amd64                     | debian
 ubuntu-bionic-x86_64                        | ubuntu
-  
+
 For routers, it is strongly recommended to use the `debian-9-x86_64` image.
 
 [How to list OpenStack images](../../../../installation-guide/base-infrastructure/#configuration)
@@ -96,10 +96,10 @@ For routers, it is strongly recommended to use the `debian-9-x86_64` image.
 
 Flavor defines virtual machine hardware parameters (VCPUs, RAM, Disk size).
 
-To use the examples of sandbox definitions the flavors displayed in the table must be present in your OpenStack. Either you are using CSIRT-MU/KYPO OpenStack projects where all flavors are already created or you need to create these flavors in your own OpenStack. 
+To use the examples of sandbox definitions the flavors displayed in the table must be present in your OpenStack. Either you are using CSIRT-MU/KYPO OpenStack projects where all flavors are already created or you need to create these flavors in your own OpenStack.
 
-!!! warning 
-    In the case of using a public cloud provider (flavors cannot be created without admin rights) the flavors in the topology definition must be replaced by the available flavors of that provider. 
+!!! warning
+    In the case of using a public cloud provider (flavors cannot be created without admin rights) the flavors in the topology definition must be replaced by the available flavors of that provider.
 
 [How to list OpenStack flavors](../../../../installation-guide/base-infrastructure/#configuration)
 
@@ -132,15 +132,15 @@ Names of hosts, networks, and routers should be unique in the context of a Topol
 Networks and routers CIDRs should be disjunct (not overlapping), and in `network_mappings` and `router_mappings` IP address should be from the IP address range of the network. Other way networking wouldn't work.
 Network and routers CIDRs shouldn't overlap with [management networks](../topology-instance/#topology-instance-management) CIDRs too.
 
-[How to set CIDRs of management networks](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/kypo-crp-demo/-/blob/master/provisioning/roles/kypo-crp-configuration/templates/configuration/sandbox-service/kypo-sandbox-service-config.yml).
-        
+[How to set CIDRs of management networks](https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo-crp-deployment/-/blob/master/provisioning/roles/kypo-crp-configuration/templates/configuration/sandbox-service/kypo-sandbox-service-config.yml).
+
 ### Address Restriction
 
 During a network creation, the OpenStack will take the first IP address of the specified IP address range for a gateway (a Router), the second IP address for DHCP, and the rest for hosts. The OpenStack will non-deterministically take the first address of the network or the first address after a gateway (a Router) address, and if any of net_mappings has an IP address set to one of these addresses, sandbox creation may fail.
 
 *[VM]: Virtual machine
 *[BR]: Border router
-*[UAN]: User Access Node 
+*[UAN]: User Access Node
 ## Example
 
 An example topology definition in the sandbox definition with the name `small-sandbox` contains the following.
