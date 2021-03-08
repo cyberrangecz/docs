@@ -21,7 +21,7 @@ Install the following technology:
 
 Technology      | Installation                               | Version
 ----------      | ---------------                            | -------
-Ansible         | `apt install ansible`                      | 2.9.6+
+Ansible         | `apt install ansible`                      | 2.10.5+
 python3-passlib | `apt install python3-passlib`              | 1.7+
 bcrypt          | `pip3 install bcrypt`                      | 3.2+
 
