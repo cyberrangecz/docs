@@ -125,7 +125,7 @@ Before you get to the deployment, you must obtain several configuration values t
 
     (This guide was tested with flavors of 4 VCPUs, 8192 RAM 80 GB Disk and 2 VCPUs, 4096 RAM, 80 GB Disk).
 
-4. Edit the desired values for images (`<kypo_base_image>`) and flavors (`<kypo_base_flavor>`) in the `openstack-defaults.sh` file of the cloned repository.
+4. Edit the desired values for images (`<kypo_base_image>`) and flavors (`<kypo_base_flavor>`) in the `openstack-defaults.sh` file of the cloned repository. Source `openstack-defaults.sh` file.
 
     The default values are set as follows.
 
@@ -134,6 +134,10 @@ Before you get to the deployment, you must obtain several configuration values t
     export KYPO_HEAD_IMAGE="ubuntu-bionic-x86_64"
     export KYPO_PROXY_FLAVOR="standard.medium"
     export KYPO_PROXY_IMAGE="ubuntu-bionic-x86_64"
+    ```
+
+    ```shell
+    source openstack-defaults.sh
     ```
 
 5. Delete all non-default Security Group Rules from the `default` Security Group (they serve as a firewall).

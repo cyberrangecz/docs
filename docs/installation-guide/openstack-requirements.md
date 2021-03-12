@@ -11,6 +11,8 @@ KYPO Platform requires the following OpenStack services:
 
 Floating IPs need to be unrestricted on any firewalls.
 
+It is recommended to use for OpenStack deployment open source project [Kolla Ansible](https://github.com/openstack/kolla-ansible), which supports all KYPO requirements.
+
 ## OpenStack Resources
 
 ### Flavors
