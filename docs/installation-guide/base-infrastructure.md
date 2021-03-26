@@ -131,9 +131,9 @@ Before you get to the deployment, you must obtain several configuration values t
 
     ```shell
     export KYPO_HEAD_FLAVOR="standard.large"
-    export KYPO_HEAD_IMAGE="ubuntu-bionic-x86_64"
+    export KYPO_HEAD_IMAGE="ubuntu-focal-x86_64"
     export KYPO_PROXY_FLAVOR="standard.medium"
-    export KYPO_PROXY_IMAGE="ubuntu-bionic-x86_64"
+    export KYPO_PROXY_IMAGE="ubuntu-focal-x86_64"
     ```
 
     ```shell
