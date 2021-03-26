@@ -27,11 +27,12 @@ The following instructions were tested on **Debian**-like OS, specifically Linux
 | Python                | 3.8     |
 | Pipenv                | 2020+   |
 | openssh-client        | 1.7     |
+| jq                    | 1.6     |
 
 1. Install APT packages
 
     ```shell
-    sudo apt install python3-pip openssh-client
+    sudo apt install python3-pip openssh-client jq
     ```
 
 2. Install Pipenv
