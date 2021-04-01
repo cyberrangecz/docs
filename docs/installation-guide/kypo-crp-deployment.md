@@ -53,7 +53,7 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
         And make sure you can access it.
 
         ```shell
-        $ ssh -i <passwordless-ssh-key> <username>@<hostname>
+        ssh -i <passwordless-ssh-key> <username>@<hostname>
         ```
 
     2. Edit the following variables of an [extra-vars.yml]({{ page.meta.extra_vars_url }}) file using values obtained from the previous step.
@@ -68,7 +68,7 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
     3. Encode the obtained passwordless SSH key using the base64 tool.
 
         ```shell
-        $ base64 <passwordless-ssh-key>
+        base64 <passwordless-ssh-key>
         ```
 
     4. Edit the following variable of an [secrets.yml]({{ page.meta.secrets_url }}) file using value obtained from the previous step.
@@ -91,7 +91,7 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
         And make sure you can access it.
 
         ```shell
-        $ ssh -i <passwordless-ssh-key> <username>@<hostname>
+        ssh -i <passwordless-ssh-key> <username>@<hostname>
         ```
 
     2. Edit the following variable of an inventory.ini file using value obtained from the previous step.
@@ -119,8 +119,8 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
     2. Encode obtained certificate and its key using the base64 tool.
 
         ```shell
-        $ base64 <certificate.pem>
-        $ base64 <certificate.key>
+        base64 <certificate.pem>
+        base64 <certificate.key>
         ```
 
     3. Edit the following variables of an [secrets.yml]({{ page.meta.secrets_url }}) file using values obtained from the previous step.
@@ -139,10 +139,11 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
 5. Configure OpenID Connect providers.
 
     1. There has to be at least one OIDC issuer defined. If you do not have one, you can create our CSIRT-MU dummy OIDC issuer.
-
+        
         ```shell
-        $ ansible-playbook -i inventory.ini provisioning/docker.yml --extra-vars=@extra-vars.yml --extra-vars=@secrets.yml
-        $ ansible-playbook -i inventory.ini provisioning-oidc/oidc.yml --extra-vars=@extra-vars.yml --extra-vars=@secrets.yml
+        ansible-galaxy install -r provisioning/requirements.yml
+        ansible-playbook -i inventory.ini provisioning/docker.yml --extra-vars=@extra-vars.yml --extra-vars=@secrets.yml
+        ansible-playbook -i inventory.ini provisioning-oidc/oidc.yml --extra-vars=@extra-vars.yml --extra-vars=@secrets.yml
         ```
 
         !!! warning "Security Risk"
@@ -228,8 +229,8 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
     2. Encode obtained private and public SSH key using the base64 tool.
 
         ```shell
-        $ base64 <passwordless-ssh-key>
-        $ base64 <passwordless-ssh-key.pub>
+        base64 <passwordless-ssh-key>
+        base64 <passwordless-ssh-key.pub>
         ```
 
     3. There has to be available [KYPO CRP Ansible Stage One](https://gitlab.ics.muni.cz/muni-kypo-crp/backend-python/ansible-networking-stage/kypo-ansible-stage-one) repository within your Gitlab, so you will have to fork it. Then obtain its **Clone with SSH** URL address and revision, i.e. branch, tag or commit SHA.
@@ -267,6 +268,6 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
 Run the Ansible provisioning that will install and configure KYPO CRP.
 
 ```shell
-$ ansible-playbook -i inventory.ini provisioning/docker.yml --extra-vars=@extra-vars.yml --extra-vars=@secrets.yml
-$ ansible-playbook -i inventory.ini provisioning/playbook.yml --extra-vars=@extra-vars.yml --extra-vars=@secrets.yml
+ansible-playbook -i inventory.ini provisioning/docker.yml --extra-vars=@extra-vars.yml --extra-vars=@secrets.yml
+ansible-playbook -i inventory.ini provisioning/playbook.yml --extra-vars=@extra-vars.yml --extra-vars=@secrets.yml
 ```
