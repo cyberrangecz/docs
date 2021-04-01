@@ -141,7 +141,7 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
     1. There has to be at least one OIDC issuer defined. If you do not have one, you can create our CSIRT-MU dummy OIDC issuer.
         
         ```shell
-        ansible-galaxy install -r provisioning/requirements.yml
+        ansible-galaxy install -r provisioning/requirements.yml -p provisioning/roles_required
         ansible-playbook -i inventory.ini provisioning/docker.yml --extra-vars=@extra-vars.yml --extra-vars=@secrets.yml
         ansible-playbook -i inventory.ini provisioning-oidc/oidc.yml --extra-vars=@extra-vars.yml --extra-vars=@secrets.yml
         ```
