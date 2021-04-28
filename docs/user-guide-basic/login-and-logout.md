@@ -14,7 +14,7 @@ After successful login, you will be redirected to the main page that should look
 ![kypo-front-page](../img/user-guide-basic/login-and-logout/kypo-portal-home-page.png)
 
 !!! Note
-    Based on the roles you have, some buttons might not be displayed. 
+    Based on the roles you have, some buttons might be disabled. 
 
 ## Logout
 

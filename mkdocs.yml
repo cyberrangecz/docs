@@ -23,9 +23,7 @@ nav:
           - Resources: user-guide-basic/sandbox-agenda/resources.md
       - Training Agenda:
           - Overview: user-guide-basic/training-agenda/training-agenda-overview.md
-          - Training Definition:
-              - Linear Training Definition: user-guide-basic/training-agenda/training-definition/linear-training-definition.md
-              - Adaptive Training Definition: user-guide-basic/training-agenda/training-definition/adaptive-training-definition.md
+          - Training Definition: user-guide-basic/training-agenda/training-definition.md
           - Training Instance: user-guide-basic/training-agenda/training-instance.md
           - Training Run: user-guide-basic/training-agenda/training-run.md
       - Administration Agenda:
