@@ -1,11 +1,19 @@
+Although the pages for managing linear and adaptive training instances are very similar, they are explicitly divided into two standalone pages for more straightforward and transparent management of both types.
+
 ## Training Instance Overview
-The page lists all training instances available to the instructor (ones that the given instructor created or is a co-author of). 
+The page lists all training instances available to the instructor (ones that the given instructor created or co-author of). The page for the linear training instances looks as follows: 
 
 <p align="center">
-  <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-overview.png">
+  <img src="../../../img/user-guide-basic/training-agenda/training-instance/LTI-overview.png">
 </p>
 
-On this page, the instructor can do the following actions:
+and for the adaptive training instance looks as follows:
+
+<p align="center">
+  <img src="../../../img/user-guide-basic/training-agenda/training-instance/ATI-overview.png">
+</p>
+
+Regardless of the instance type, on the page, the instructor can do the following actions:
 
 * Click ![create-button](../../img/buttons/create-button.png) to redirect to the page [Create/Edit Training Instance](#1-createedit-training-instance).
 * Click on the name of the training instance to redirect to the [Summary of Training Instance](#summary-of-training-instance) page.
@@ -49,14 +57,14 @@ This page consists of three panels allowing user to [create/edit training instan
 
 During the creation of the training instance, the second and third panels are disabled. To make them accessible, the instructor must fill the required fields in the first panel and either click: 
 1. ![create-button](../../img/buttons/create-button.png) that will create the new training instance and redirect the instructor back to the [Training Instance Overview](#training-instance-overview). 
-2. ![create-and-continue-button](../../img/buttons/create-and-continue-button.png) that will allow the instructor to edit **co-instructors** and assing **pools** to the instance.
+2. ![create-and-continue-button](../../img/buttons/create-and-continue-button.png) that will allow the instructor to edit **co-instructors** and assign **pools** to the instance.
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-edit.png">
 </p>
 
 ### 1. Create/Edit Training Instance 
-An instructor can use this panel to edit basic information about the training instance. The title is used to identify a training instance, among others but doesn't have to be unique. The start time and end time defines the time frame when trainees can access training run of the appropriate training instance. Both time values must be in the future, and the start time must be before the end time. The access token is used by the trainees to access a game. The instructor must also choose a Training Definition, but they can only choose from:
+An instructor can use this panel to edit basic information about the training instance. The title is used to identify a training instance, among others but doesn't have to be unique. The start time and end time defines the time frame when trainees can access training run of the appropriate training instance. Both time values must be in the future, and the start time must be before the end time. The access token is used by the trainees to access a game. The instructor must also choose a Linear/Adaptive Training Definition, but they can only choose from:
 
 * Released training definitions and definitions created by the instructor, if they also have the instructor role. 
 * All definitions (released/unreleased), if they also have the administrator role. 
@@ -76,7 +84,7 @@ Provides a summary of the entire run of the training instance and allows the ins
 </p>
 
 ### 1. Overview
-Overview displays basic information about training instance, as shown in the above figure. Provides links to display token and link to the detail of the assigned pool. Click on the ![show-progress](../../img/buttons/show-progess-button.png) button to redirect to the [Progress of Training Instance](#progress-of-training-instance) page to see the game progress of participants in time. Click on another button ![show-results](../../img/buttons/show-results-button.png) to redirect to the [Results of Training Instance](#results-of-training-instance)  page to see summary results of training instance visualized on various graphs and in tables. 
+Overview displays basic information about training instance, as shown in the above figure. Provides links to display token and link to the detail of the assigned pool. Click on the ![show-progress](../../img/buttons/show-progess-button.png) button **(only linear training instance)** to redirect to the [Progress of Training Instance](#progress-of-training-instance) page to see the game progress of participants in time. Click on another button ![show-results](../../img/buttons/show-results-button.png) to redirect to the [Results of Training Instance](#results-of-training-instance)  page to see summary results of training instance visualized on various graphs and in tables. 
 
 ### 2. Active Training Runs
 Lists active training runs. Runs are either in the running state or finished state (trainee completed all levels). All active training runs have assigned sandboxes from the pool. The instructor is able to delete the assigned sandbox from OpenStack by clicking :material-delete:{: .red .icon}. Be careful when deleting the sandbox from a training run in the running state. The trainee will not be able to complete the remaining levels. Those training runs should be archived after that, so trainees could not resume training run. 
@@ -87,39 +95,52 @@ Click the archive button :material-package-down:{: .icon .blue } to change the s
 Lists training runs whose references to sandboxes in OpenStack were removed, and their state has been changed to archived. 
 
 ## Progress of Training Instance 
-Page visualize individual progress of trainees in training runs. The instructor can see the time of particular events made by trainees, like the start of the training run, taken hints, completed level, etc. It is also possible to filter finished and unfinished training runs. 
+Page is available only for the linear training instance and visualizes trainees' progress in training runs. The instructor can see the time of particular events made by trainees, like the start of the training run, taken hints, completed level, etc. It is also possible to filter finished and unfinished training runs. 
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-progress.png">
 </p>
 
 ## Results of Training Instance 
-The page displays all collected data about the training instance divided into five tabs. The overview tab displays all graphs and tables in a single tab. Tabs [Score Development](#1-score-development), [Score Scatter Plot](#2-score-scatter-plot), and [Progress](#3-progress) provides various views on trainees activity in the training. Tab [Assessments](#4-assessments) provides information about trainees' answers in quizzes and assessments. 
+### Linear
 
-### 1. Score Development 
+The page displays all collected data about the linear training instance divided into five tabs. The overview tab displays all graphs and tables in a single tab. Tabs [Score Development](#1-score-development), [Score Scatter Plot](#2-score-scatter-plot), and [Progress](#3-progress) provides various views on trainees activity in the training. Tab [Assessments](#4-assessments) provides information about trainees' answers in quizzes and assessments. 
+
+#### 1. Score Development 
 The tab displays a graph with a real-time development of the trainees' scores marked in the table under the graph. The graph also displays various types of events (displayed by a small circle). To visualize events taken by trainees, check/uncheck a checkbox displayed next to the table with participants. 
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-score-dev.png">
 </p>
 
-### 2. Score Scatter Plot 
+#### 2. Score Scatter Plot 
 This visualization provides an overview of the training results. It helps to compare the score and duration of the whole training or individual levels. Dots show the positions of the trainees based on score and time. They indicate the correlation between the two factors and help to pinpoint the outliers or allocate clusters.
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-score-scatter.png">
 </p>
 
-### 3. Progress 
+#### 3. Progress 
 The Progress visualization is a view on available data distilled from the "Progress of Training Instance". It supports additional interaction (such as level sorting by their duration) and gives a full picture of the trainee walkthrough. The color scale helps to highlight individual levels for all trainees as well as their usage of hints or submission of wrong flags for the levels. It helps to find skilled trainees or flaws in the training design by observing the details of its progression.
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-score-progress.png">
 </p>
 
-### 4. Assessments 
+#### 4. Assessments 
 Displays statistics of individual assessment answers.
  
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/training-instance/TI-assessment.png">
+</p>
+
+
+### Adaptive
+
+The page displays only one tab with the Sankey diagram. 
+#### 1. Sankey Diagram
+Diagram represents participant's transitions between the tasks of the respective training phases. Each transition also contains the number of participants. 
+
+<p align="center">
+  <img src="../../../img/user-guide-basic/training-agenda/training-instance/ATI-sankey.png">
 </p>
