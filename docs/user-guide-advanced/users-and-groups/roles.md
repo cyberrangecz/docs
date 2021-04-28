@@ -29,7 +29,7 @@ Current roles that are used in the KYPO portal can be divided into categories ([
 
 ``ROLE_TRAINING_ORGANIZER``: **Training organizers** can create and manage [training instances](../../user-guide-basic/training-agenda/training-instance.md), see the progress of trainees during the game, or see the results in the form of graphs and tables. Each organizer can only access training instances in which they are set as an organizer.
 
-``ROLE_TRAINING_DESIGNER``: **Training designers** can create and manage [training definitions](../../user-guide-basic/training-agenda/training-definition.md), that can be used to create training instances by the organizers. In a similar manner to the organizers, these users can only access training definitions that have them set as their designer.
+``ROLE_TRAINING_DESIGNER``: **Training designers** can create and manage [training definitions](../../user-guide-basic/training-agenda/training-definition/linear-training-definition.md), that can be used to create training instances by the organizers. In a similar manner to the organizers, these users can only access training definitions that have them set as their designer.
 
 ``ROLE_TRAINING_ADMINISTRATOR``: **Training administrators** have all the privileges of the above roles, with the exception being that they are not restricted by ownership of the training instances and definitions. This means that the training administrator can access all definitions and instances that exist on the KYPO platform.
 
