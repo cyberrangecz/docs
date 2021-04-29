@@ -25,6 +25,8 @@ On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/
 * **management**: the group containing all the [sandbox management nodes](../topology-instance/#topology-instance-management), i.e., MAN, BR, and UAN node.
 * **routers**: the group containing all the routers defined in [Topology definition](../topology-definition/#routers).
 * **hosts**: the group containing all the hosts defined in [Topology definition](../topology-definition/#hosts).
+* **ssh_nodes**: the group containing all the hosts and routers defined in [Topology definition](../topology-definition/) with base_box.mgmt_protocol set to `SSH`.
+* **winrm_nodes**: the group containing all the hosts and routers defined in [Topology definition](../topology-definition/) with base_box.mgmt_protocol set to `WINRM`.
 
 You can specify additional Ansible host groups in [Topology definition](../topology-definition/#groups) and then use them in a `playbook.yml` file of the Sandbox Provisioning.
 
@@ -38,6 +40,8 @@ On top of [Ansible special variables](https://docs.ansible.com/ansible/latest/re
 * **kypo_global_sandbox_ip**: the sandbox IPv4 address.
 * **kypo_global_sandbox_name**: the sandbox name, which is the compound of [stack_name_prefix](https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo-crp-deployment/-/blob/master/extra-vars.yml), pool ID and sandbox allocation unit ID.
 * **kypo_global_head_ip**: the KYPO head server IP address.
+* **kypo_global_ssh_public_user_key**: the path on Ansible controller to SSH public user key.
+* **kypo_global_ssh_public_mgmt_key**: the path on Ansible controller to SSH public management key.
 
 ### Ansible Inventory
 
@@ -97,8 +101,6 @@ all:
               mask: 255.255.255.0
               net: 10.10.30.0
       ip_forward: true
-      user_private_key_path: /root/.ssh/user_key
-      user_public_key_path: /root/.ssh/user_key.pub
     uan:
       ansible_host: 192.168.128.2
       ansible_user: kypo-man
@@ -122,9 +124,12 @@ all:
           mac: 00:00:00:00:00:13
           routes: []
       ip_forward: true
-    kypo_proxy_jump:
+    kypo-proxy-jump:
       ansible_host: jump-host-ip
       ansible_user: debian
+      user_access_mgmt_name: pool-prefix
+      user_access_user_name: stack-name
+      user_access_present: true
   children:
     hosts:
       hosts:
@@ -164,6 +169,7 @@ all:
     kypo_global_pool_id: 1
     kypo_global_sandbox_allocation_unit_id: 1
     kypo_global_sandbox_ip: 10.10.10.10
-    kypo_global_sandbox_jump_host: 'absent'
     kypo_global_sandbox_name: stack-name
+    kypo_global_ssh_public_user_key: /root/.ssh/user_key.pub
+    kypo_global_ssh_public_mgmt_key: /root/.ssh/pool_mng_key.pub
 ```
