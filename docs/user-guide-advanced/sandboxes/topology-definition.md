@@ -22,8 +22,8 @@ Hosta contains the list of end hosts to be deployed. A host has the following at
 * **flavor**: name of flavor (see [how to chose flavor](#flavor))
 * **base_box**: (see [how to define base_box](#base_box))
     * **image**: name of image
-    * **man_user**: name of user with sudo privileges
-    * **mng_protocol (optional)**: protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
+    * **mgmt_user**: name of user with sudo privileges
+    * **mgmt_protocol (optional)**: protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
 * **hidden (optional)**: whether the host should be hidden in a topology visualization (default: `False`)
 
 
@@ -35,8 +35,8 @@ The list of routers. Routers are the only nodes through which hosts can communic
 * **flavor**: name of flavor (see [how to chose flavor](#flavor))
 * **base_box**: (see [how to define base_box](#base_box))
     * **image**: name of image
-    * **man_user**: name of user with sudo privileges
-    * **mng_protocol (optional)**: protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
+    * **mgmt_user**: name of user with sudo privileges
+    * **mgmt_protocol (optional)**: protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
 * **cidr**: for network between router and BR ([more about management nodes](../topology-instance/#topology-instance-management), the recommended range of the network is `/29`, [unique cidrs restriction](#disjunct-cidrs))
 
 ### networks
@@ -74,9 +74,9 @@ The list of groups. An ansible group is used for better management of nodes. It 
 
 ### Base_box
 
-Base_box specifies the `image` of the node boot disk, default user `man_user` with sudo permissions, and a protocol that is needed to communicate with the machine.
+Base_box specifies the `image` of the node boot disk, default user `mgmt_user` with sudo permissions, and a protocol that is needed to communicate with the machine.
 
-Now (24.9.2020), possible options are as follows.
+Now (22. 4. 2021), possible options are as follows.
 
 image | user
 ----- | ----
@@ -87,8 +87,10 @@ debian-9-x86_64                             | debian
 debian-10-x86_64                            | debian
 kali-linux-2019.4-amd64                     | debian
 ubuntu-bionic-x86_64                        | ubuntu
+windows-10-0.2.0                            | windows
+windows-server-2019                         | windows
 
-For routers, it is strongly recommended to use the `debian-9-x86_64` image.
+For routers, it is strongly recommended using the `debian-9-x86_64` image.
 
 [How to list OpenStack images](../../../../installation-guide/base-infrastructure/#configuration)
 
@@ -151,22 +153,22 @@ An example topology definition in the sandbox definition with the name `small-sa
 * One group, which contains only two nodes accessible by the user.
 
 ```yaml
-name: small-sandbox
-
 provider: OpenStack
 
+name: small-sandbox
 hosts:
   - name: server
     base_box:
       image: debian-9-x86_64
-      man_user: debian
+      mgmt_user: debian
     flavor: csirtmu.tiny1x2
     hidden: True
 
   - name: home
     base_box:
-      image: debian-9-x86_64
-      man_user: debian
+      image: windows-10-0.2.0
+      mgmt_user: windows
+      mgmt_protocol: wirm
     flavor: csirtmu.tiny1x2
 
 routers:
@@ -174,13 +176,13 @@ routers:
     cidr: 100.100.100.0/29
     base_box:
       image: debian-9-x86_64
-      man_user: debian
+      mgmt_user: debian
     flavor: csirtmu.tiny1x2
 
   - name: home-router
     base_box:
       image: debian-9-x86_64
-      man_user: debian
+      mgmt_user: debian
     cidr: 200.100.100.0/29
     flavor: csirtmu.tiny1x2
 
@@ -188,6 +190,7 @@ networks:
   - name: server-switch
     cidr: 10.10.20.0/24
     accessible_by_user: False
+
   - name: home-switch
     cidr: 10.10.30.0/24
 
