@@ -25,13 +25,23 @@ Current roles that are used in the KYPO portal can be divided into categories ([
 
 ### Training Roles
 
-``ROLE_TRAINING_TRAINEE``: **Trainees** are allowed to start, resume, and play the [training run](../../user-guide-basic/training-agenda/training-run.md). After the training is complete, trainees can also check and compare their scores. The role of the trainee is the default role of each KYPO user.
+``ROLE_TRAINING_TRAINEE``: **Trainees** are allowed to start, resume, and play the [linear training run](../../user-guide-basic/training-agenda/training-run/linear-training-run.md). After the training is complete, trainees can also check and compare their scores. The role of the trainee is the default role of each KYPO user.
 
-``ROLE_TRAINING_ORGANIZER``: **Training organizers** can create and manage [training instances](../../user-guide-basic/training-agenda/training-instance.md), see the progress of trainees during the game, or see the results in the form of graphs and tables. Each organizer can only access training instances in which they are set as an organizer.
+``ROLE_TRAINING_ORGANIZER``: **Training organizers** can create and manage [linear training instances](../../user-guide-basic/training-agenda/training-instance/linear-training-instance.md), see the progress of trainees during the game, or see the results in the form of graphs and tables. Each organizer can only access training instances in which they are set as an organizer.
 
-``ROLE_TRAINING_DESIGNER``: **Training designers** can create and manage [training definitions](../../user-guide-basic/training-agenda/training-definition.md), that can be used to create training instances by the organizers. In a similar manner to the organizers, these users can only access training definitions that have them set as their designer.
+``ROLE_TRAINING_DESIGNER``: **Training designers** can create and manage [linear training definitions](../../user-guide-basic/training-agenda/training-definition/linear-training-definition.md), that can be used to create training instances by the organizers. In a similar manner to the organizers, these users can only access training definitions that have them set as their designer.
 
 ``ROLE_TRAINING_ADMINISTRATOR``: **Training administrators** have all the privileges of the above roles, with the exception being that they are not restricted by ownership of the training instances and definitions. This means that the training administrator can access all definitions and instances that exist on the KYPO platform.
+
+### Adaptive Training Roles
+
+``ROLE_ADAPTIVE_TRAINING_TRAINEE``: **Trainees** are allowed to start, resume, and play the [adaptive training run](../../user-guide-basic/training-agenda/training-run/adaptive-training-run.md). After the training is complete, trainees can also check and compare their scores. The role of the trainee is the default role of each KYPO user.
+
+``ROLE_ADAPTIVE_TRAINING_ORGANIZER``: **Training organizers** can create and manage [adaptive training instances](../../user-guide-basic/training-agenda/training-instance/adaptive-training-instance.md), see the progress of trainees during the game, or see the results in the form of graphs and tables. Each organizer can only access training instances in which they are set as an organizer.
+
+``ROLE_ADAPTIVE_TRAINING_DESIGNER``: **Training designers** can create and manage [adaptive training definitions](../../user-guide-basic/training-agenda/training-definition/adaptive-training-definition.md), that can be used to create training instances by the organizers. In a similar manner to the organizers, these users can only access training definitions that have them set as their designer.
+
+``ROLE_ADAPTIVE_TRAINING_ADMINISTRATOR``: **Training administrators** have all the privileges of the above roles, with the exception being that they are not restricted by ownership of the training instances and definitions. This means that the training administrator can access all definitions and instances that exist on the KYPO platform.
 
 ### User and Group Roles
 
