@@ -43,98 +43,127 @@ On top of [Ansible special variables](https://docs.ansible.com/ansible/latest/re
 
 For each sandbox, the KYPO sandbox-service generates an `inventory.yml` file. It adds some networking data to it, which you might find useful in your Sandbox Provisioning.
 
-Example of inventory file for [small sandbox](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/sandbox-definitions/small-sandbox).
+Example of inventory file for [small-sandbox](../topology-definition#example) defined in [Topology definition](../topology-definition) example.
 
 ```yaml
 all:
-  children:
-    hosts:
-      hosts:
-        home:
-          ansible_host: 172.16.2.230
-          ansible_user: debian
-        server:
-          ansible_host: 172.16.2.13
-          ansible_user: debian
-    management:
-      hosts:
-        br:
-          ansible_host: 172.16.0.216
-          ansible_user: debian
-          interfaces:
-          - def_gw_ip: 203.203.203.206
-            mac: fa:16:3e:bb:d5:0a
-            routes: []
-          - def_gw_ip: null
-            mac: fa:16:3e:6a:dd:57
-            routes:
+  hosts:
+    home:
+      ansible_host: 192.168.128.5
+      ansible_user: windows
+    server:
+      ansible_host: 192.168.128.4
+      ansible_user: debian
+    border-router:
+      ansible_host: 192.168.128.3
+      ansible_user: kypo-man
+      interfaces:
+        - def_gw_ip: 192.168.0.2
+          mac: 00:00:00:00:00:07
+          routes: []
+        - def_gw_ip: null
+          mac: 00:00:00:00:00:14
+          routes:
             - gw: 100.100.100.3
               mask: 255.255.255.0
               net: 10.10.20.0
-          - def_gw_ip: null
-            mac: fa:16:3e:5c:3c:41
-            routes:
-            - gw: 200.100.100.3
+        - def_gw_ip: null
+          mac: 00:00:00:00:00:17
+          routes:
+            - gw: 200.100.100.2
               mask: 255.255.255.0
               net: 10.10.30.0
-          ip_forward: true
-        man:
-          ansible_host: 201.201.2.133
-          ansible_user: debian
-          interfaces:
-          - def_gw_ip: null
-            mac: fa:16:3e:ee:1d:33
-            routes:
-            - gw: 203.203.203.111
+      ip_forward: true
+    man:
+      ansible_host: 10.10.10.10
+      ansible_user: kypo-man
+      interfaces:
+        - def_gw_ip: null
+          mac: 00:00:00:00:00:02
+          routes: []
+        - def_gw_ip: null
+          mac: 00:00:00:00:00:03
+          routes:
+            - gw: 192.168.0.1
               mask: 255.255.255.248
               net: 100.100.100.0
-            - gw: 203.203.203.111
+            - gw: 192.168.0.1
               mask: 255.255.255.0
               net: 10.10.20.0
-            - gw: 203.203.203.111
+            - gw: 192.168.0.1
               mask: 255.255.255.248
               net: 200.100.100.0
-            - gw: 203.203.203.111
+            - gw: 192.168.0.1
               mask: 255.255.255.0
               net: 10.10.30.0
-          ip_forward: true
-          user_private_key_path: /root/user_key
-          user_public_key_path: /root/user_key.pub
-        uan:
-          ansible_host: 172.16.2.3
-          ansible_user: debian
-          interfaces:
-          - def_gw_ip: 202.202.202.194
-            mac: fa:16:3e:b1:86:44
-            routes: []
-          ip_forward: false
+      ip_forward: true
+      user_private_key_path: /root/.ssh/user_key
+      user_public_key_path: /root/.ssh/user_key.pub
+    uan:
+      ansible_host: 192.168.128.2
+      ansible_user: kypo-man
+      interfaces:
+        - def_gw_ip: 192.168.0.17
+          mac: 00:00:00:00:00:05
+          routes: []
+    home-router:
+      ansible_host: 192.168.128.7
+      ansible_user: debian
+      interfaces:
+        - def_gw_ip: 200.100.100.3
+          mac: 00:00:00:00:00:16
+          routes: []
+      ip_forward: true
+    server-router:
+      ansible_host: 192.168.128.6
+      ansible_user: debian
+      interfaces:
+        - def_gw_ip: 100.100.100.3
+          mac: 00:00:00:00:00:13
+          routes: []
+      ip_forward: true
+    kypo_proxy_jump:
+      ansible_host: jump-host-ip
+      ansible_user: debian
+  children:
+    hosts:
+      hosts:
+        home: null
+        server: null
+    management:
+      hosts:
+        man: null
+        uan: null
+        border-router: null
     routers:
       hosts:
-        home-router:
-          ansible_host: 172.16.1.228
-          ansible_user: debian
-          interfaces:
-          - def_gw_ip: 200.100.100.4
-            mac: fa:16:3e:0b:17:ed
-            routes: []
-          ip_forward: true
-        server-router:
-          ansible_host: 172.16.0.21
-          ansible_user: debian
-          interfaces:
-          - def_gw_ip: 100.100.100.4
-            mac: fa:16:3e:1b:38:6a
-            routes: []
-          ip_forward: true
+        home-router: null
+        server-router: null
     user-accessible:
       hosts:
         home: null
         home-router: null
+    winrm_nodes:
+      hosts:
+        home:
+      vars:
+        ansible_connection: psrp
+        ansible_psrp_auth: certificate
+        ansible_psrp_cert_validation: ignore
+        ansible_psrp_certificate_key_pem: /root/.ssh/pool_mng_key
+        ansible_psrp_certificate_pem: /root/.ssh/pool_mng_cert
+        ansible_psrp_proxy: 'socks5://localhost:12345'
+    ssh_nodes:
+      hosts:
+        server:
+        home-router:
+        server-router:
   vars:
-    kypo_global_openstack_stack_id: b76e13b4-ae59-4aaa-bc42-97b78780bdcc
+    kypo_global_head_ip: 0.0.0.0
+    kypo_global_openstack_stack_id: heatstack-stack-id
     kypo_global_pool_id: 1
-    kypo_global_sandbox_allocation_unit_id: 42
-    kypo_global_sandbox_ip: 192.168.64.238
-    kypo_global_sandbox_name: db-attack-42
-    kypo_global_head_ip: 172.19.0.22
+    kypo_global_sandbox_allocation_unit_id: 1
+    kypo_global_sandbox_ip: 10.10.10.10
+    kypo_global_sandbox_jump_host: 'absent'
+    kypo_global_sandbox_name: stack-name
 ```

@@ -8,17 +8,20 @@ A Topology Instance of a Sandbox is created in the cloud platform and connected 
 
 ![topology-instance-blank](../../img/user-guide-advanced/sandboxes/topology-instance-blank.png)
 
-## Sandbox SSH Access
+## Sandbox Access
 
-Sandbox SSH access is divided into two types based on privileges.[Management access](#management-access) is available for those who manage sandboxes or KYPO Cyber Range Platform (role `instructor`). [User access](#user-access) is provided for everyone else (role `trainee`).
+Sandbox access is divided into two types based on privileges.[Management access](#management-access) is available for those who manage sandboxes or KYPO Cyber Range Platform (role `instructor`). [User access](#user-access) is provided for everyone else (role `trainee`).
+
+!!! note
+    Windows users are required to install WSL or Git Bash.
 
 ### Management Access
 
-Access to the sandbox nodes is through the **KYPO proxy** and a **MAN** node as jump hosts and a **mng-network**.
+Access to the sandbox nodes is through the **KYPO proxy**, and a **MAN** node as jump hosts and a **mng-network**.
 
 1. Download the SSH access zip file from [Pool Overview](../../../user-guide-basic/sandbox-agenda/pool/#pool-overview) page.
 
-2. Extract the `ssh-access.zip` file to the `~/.ssh/` directory.
+2. Extract the `ssh-access.zip` file to the `.ssh/` folder in your home directory.
 
     ```shell
     $ unzip ssh-access.zip -d ~/.ssh/
@@ -32,7 +35,7 @@ Access to the sandbox nodes is through the **KYPO proxy** and a **MAN** node as 
     * `~/.ssh/pool-id-ID-management-key.pub`: the pool management SSH public key.
 
     !!! note
-        The configuration file and the source script are generated for every sandbox of the pool.
+        The configuration file, and the source script are generated for every sandbox of the pool.
 
 3. Execute the extracted source script in the current shell using the `source` command with the path to the KYPO proxy SSH private key.
 
@@ -40,11 +43,33 @@ Access to the sandbox nodes is through the **KYPO proxy** and a **MAN** node as 
     $ source ~/.ssh/pool-id-ID-sandbox-id-ID-management-source.sh PATH_TO_KYPO_PROXY_PRIVATE_KEY
     ```
 
-4. Connect to any virtual machine specified in the SSH configuration file, e.g.:
+4. Connect to any virtual machine specified in the SSH configuration file.
 
-    ```shell
-    $ ssh man
-    ```
+    * Connect directly to any virtual machine using SSH protocol, even a Windows machine, e.g.:
+
+        ```shell
+        $ ssh man
+        ```
+
+    * Connect to any virtual machine using software that supports communication over SOCKS5 proxy.
+        First, create a local proxy on a port 12345:
+
+        ```shell
+        $ ssh -N -F ~/.ssh/pool-id-ID-sandbox-id-ID-management-config -D 12345 man
+        ```
+
+        Then connect to a virtual machine specified in the SSH configuration file over `socks5://localhost:12345` proxy.
+
+    * If the communication software does not support SOCKS5 proxy like Windows RDP client,
+      use local port forwarding to bind the virtual machine's port to your localhost.
+      For example, bind the virtual machine's RDP server port 3389 to your local port 12345.
+      Virtual machine IP is specified in the SSH configuration file.
+
+        ```shell
+        $ ssh -N -F ~/.ssh/pool-id-ID-sandbox-id-ID-management-config -L 12345:<vm_ip>:3389 man
+        ```
+
+        Then use the RDP client and connect to a virtual machine using the `localhost:12345` address.
 
 ### User Access
 
@@ -81,8 +106,30 @@ Access to the sandbox nodes is through the **KYPO proxy**, a **MAN** node, and a
     $ source ~/.ssh/pool-id-ID-sandbox-id-ID-user-source.sh PATH_TO_KYPO_PROXY_PRIVATE_KEY
     ```
 
-4. Connect to any virtual machine specified in the SSH configuration file, e.g.:
+4. Connect to any virtual machine specified in the SSH configuration file except KYPO Proxy, MAN or UAN.
 
-    ```shell
-    $ ssh uan
-    ```
+   * Connect directly to any virtual machine using SSH protocol, even a Windows machine, e.g.:
+
+       ```shell
+       $ ssh <vm_name>
+       ```
+
+   * Connect to any virtual machine using software that supports communication over SOCKS5 proxy.
+     First, create a local proxy on a port 12345:
+
+       ```shell
+       $ ssh -N -F ~/.ssh/pool-id-ID-sandbox-id-ID-user-config -D 12345 uan
+       ```
+
+     Then connect to a virtual machine specified in the SSH configuration file over `socks5://localhost:12345` proxy.
+
+   * If the communication software does not support SOCKS5 proxy like Windows RDP client,
+     use local port forwarding to bind the virtual machine's port to your localhost.
+     For example, bind the virtual machine's RDP server port 3389 to your local port 12345.
+     Virtual machine IP is specified in the SSH configuration file.
+
+       ```shell
+       $ ssh -N -F ~/.ssh/pool-id-ID-sandbox-id-ID-user-config -L 12345:<vm_ip>:3389 uan
+       ```
+
+     Then use the RDP client and connect to a virtual machine using the `localhost:12345` address.

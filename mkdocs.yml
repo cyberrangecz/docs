@@ -39,7 +39,7 @@ nav:
           - Topology Definition: user-guide-advanced/sandboxes/topology-definition.md
           - Topology Instance: user-guide-advanced/sandboxes/topology-instance.md
           - Sandbox Provisioning: user-guide-advanced/sandboxes/sandbox-provisioning.md
-          - Sandbox SSH Access: user-guide-advanced/sandboxes/sandbox-ssh-access.md
+          - Sandbox Access: user-guide-advanced/sandboxes/sandbox-access.md
       - Trainings:
           - Overview: user-guide-advanced/trainings/trainings-overview.md
       - Users and Groups:

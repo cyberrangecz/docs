@@ -40,7 +40,7 @@ On this page, the instructor can do the following actions:
 
     ??? key "Get Access"
     
-        Click the button, pop up will be displayed to download the ZIP archive. The archive contains configuration with SSH access to the respective sandbox. More about SSH access can be found in [Sandbox SSH Access](../../../user-guide-advanced/sandboxes/sandbox-ssh-access/).
+        Click the button, pop up will be displayed to download the ZIP archive. The archive contains configuration with SSH access to the respective sandbox. More about SSH access can be found in [Sandbox SSH Access](../../../user-guide-advanced/sandboxes/sandbox-access/).
     
     
 
