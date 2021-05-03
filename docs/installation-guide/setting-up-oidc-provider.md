@@ -2,7 +2,8 @@
 
 ## Setting up a Relying Party and Resource Server in OIDC Provider
 
-1. Open the webpage `https://<YOUR-SERVER-ADDRESS>/csirtmu-dummy-issuer-server`, and log in with username `kypo-admin` and the password `password`.
+1. Open the webpage `https://<YOUR-SERVER-ADDRESS>/csirtmu-dummy-issuer-server`, and log in with credentials\
+set up in your [extra-vars.yml]({{ page.meta.extra_vars_url }}) file as sub-variables **sub** and **password** in variable **kypo_crp_users**.
 2. Click on "**Self-service Client Registration**" -> "**New Client**".
 3. Set the Client name, e.g. `KYPO PROD/Devel Client`.
 4. Add at least one custom Redirect URI. For example: 

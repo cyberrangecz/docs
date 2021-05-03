@@ -136,7 +136,36 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
             spanning-multiple-lines>
         ```
 
-5. Configure OpenID Connect providers.
+5. Configure initial users.
+
+    There has to be at least one initial user with admin permissions that will be able to manage other users. See [Administration Agenda]({{ page.meta.administration_agenda_url }}). Edit the following variables of an [extra-vars.yml]({{ page.meta.extra_vars_url }}) file using your desired values.
+
+    !!! info "CSIRT-MU dummy OIDC issuer"
+
+        The format of variable `sub` is `<user-login>@oidc.csirt.muni.cz`
+        The variable `iss` is `https://<kypo_crp_head>:8443/csirtmu-dummy-issuer-server/`
+
+    ```yaml
+    kypo_crp_users:
+          # The unique identifier of the user within the OIDC provider.
+        - sub: admin@example.com
+          # The URL of the OIDC provider.
+          iss: https://example.com:443/issuer
+          # A password of the user.
+          password: password
+          # An email address of the user.
+          email: admin@example.com
+          # The user full name.
+          fullName: "Demo Admin"
+          # The user given name.
+          givenName: "Demo"
+          # The user family name.
+          familyName: "Admin"
+          # The boolean value that represents whether the user is admin or not.
+          admin: True
+    ```
+
+6. Configure OpenID Connect providers.
 
     1. There has to be at least one OIDC issuer defined. If you do not have one, you can create our CSIRT-MU dummy OIDC issuer.
         
@@ -177,35 +206,6 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
               # The secret for resource client `resource_client_id`.
               resource_client_secret: <resource_client_secret>
         ```
-
-6. Configure initial users.
-
-    There has to be at least one initial user with admin permissions that will be able to manage other users. See [Administration Agenda]({{ page.meta.administration_agenda_url }}). Edit the following variables of an [extra-vars.yml]({{ page.meta.extra_vars_url }}) file using values obtained from the previous step.
-
-    !!! info "CSIRT-MU dummy OIDC issuer"
-
-        The format of variable `sub` is `<user-login>@oidc.csirt.muni.cz`
-        The variable `iss` is `https://<kypo_crp_head>:8443/csirtmu-dummy-issuer-server/`
-
-    ```yaml
-    kypo_crp_users:
-          # The unique identifier of the user within the OIDC provider.
-        - sub: admin@example.com
-          # The URL of the OIDC provider.
-          iss: https://example.com:443/issuer
-          # A password of the user.
-          password: password
-          # An email address of the user.
-          email: admin@example.com
-          # The user full name.
-          fullName: "Demo Admin"
-          # The user given name.
-          givenName: "Demo"
-          # The user family name.
-          familyName: "Admin"
-          # The boolean value that represents whether the user is admin or not.
-          admin: True
-    ```
 
 7. Configure access to the Gitlab repository.
 
