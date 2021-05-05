@@ -124,7 +124,7 @@ Before you get to the deployment, you must obtain several configuration values t
     +--------------------+
     ```
 
-    (This guide was tested with flavors of 4 VCPUs, 8192 RAM 80 GB Disk and 2 VCPUs, 4096 RAM, 80 GB Disk).
+    (This guide was tested with flavors of 4 VCPUs, 16384 RAM 80 GB Disk and 2 VCPUs, 4096 RAM, 80 GB Disk).
 
 4. Edit the desired values for images (`<kypo_base_image>`) and flavors (`<kypo_base_flavor>`) in the `openstack-defaults.sh` file of the cloned repository. Source `openstack-defaults.sh` file.
 
