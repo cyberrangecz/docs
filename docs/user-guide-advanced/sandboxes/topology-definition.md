@@ -16,7 +16,7 @@ Defines the name of the definition ([name restrictions](#names)).
 
 ### hosts
 
-Hosta contains the list of end hosts to be deployed. A host has the following attributes.
+Hosts contains the list of end hosts to be deployed. A host has the following attributes.
 
 * **name**: name of end host VM ([names restriction](#names), [unique names restriction](#unique-names))
 * **flavor**: name of flavor (see [how to chose flavor](#flavor))
