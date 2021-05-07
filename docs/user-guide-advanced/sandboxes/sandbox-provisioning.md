@@ -20,7 +20,7 @@ The KYPO requires Sandbox Provisioning, but if you do not need any provisioning,
 
 ### Ansible Host Groups
 
-On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#default-groups), the KYPO sandbox-service defines three more default host groups.
+On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#default-groups), the KYPO sandbox-service defines five more default host groups.
 
 * **management**: the group containing all the [sandbox management nodes](../topology-instance/#topology-instance-management), i.e., MAN, BR, and UAN node.
 * **routers**: the group containing all the routers defined in [Topology definition](../topology-definition/#routers).
