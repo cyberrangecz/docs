@@ -1,9 +1,9 @@
 swagger: '2.0'
 info:
-  title: KYPO2 OpenStack REST API documentation
+  title: KYPO2 Sandbox Service - API Reference
   description: ''
-  version: "Version: 0.6.6"
-host: localhost:3000
+  version: "Version: 0.8.0"
+host: 172.19.0.22:8000
 schemes:
   - http
 basePath: /kypo-sandbox-service/api/v1
@@ -64,6 +64,7 @@ paths:
         '200':
           description: ''
           schema:
+            description: ''
             type: object
             properties: {}
       tags:
@@ -474,6 +475,7 @@ paths:
         '200':
           description: ''
           schema:
+            description: ''
             type: object
             properties: {}
       tags:
@@ -811,6 +813,28 @@ paths:
       responses:
         '200':
           description: ''
+          schema:
+            required:
+              - results
+              - count
+            type: object
+            properties:
+              page:
+                type: integer
+              page_size:
+                type: integer
+              page_count:
+                type: integer
+              count:
+                type: integer
+                format: uri
+              total_count:
+                type: integer
+                format: uri
+              results:
+                type: array
+                items:
+                  $ref: '#/definitions/Image'
       tags:
         - cloud
     parameters: []
@@ -832,6 +856,28 @@ paths:
       responses:
         '200':
           description: ''
+          schema:
+            required:
+              - results
+              - count
+            type: object
+            properties:
+              page:
+                type: integer
+              page_size:
+                type: integer
+              page_count:
+                type: integer
+              count:
+                type: integer
+                format: uri
+              total_count:
+                type: integer
+                format: uri
+              results:
+                type: array
+                items:
+                  $ref: '#/definitions/QuotaSet'
       tags:
         - cloud
     parameters: []
@@ -1409,6 +1455,7 @@ paths:
         '201':
           description: ''
           schema:
+            description: ''
             type: array
             items:
               $ref: '#/definitions/SandboxAllocationUnit'
@@ -1445,6 +1492,7 @@ paths:
         '202':
           description: ''
           schema:
+            description: ''
             type: array
             items:
               $ref: '#/definitions/CleanupRequest'
@@ -2006,6 +2054,7 @@ paths:
         '200':
           description: ''
           schema:
+            description: ''
             type: object
             properties: {}
         '400':
@@ -2082,6 +2131,7 @@ paths:
         type: string
 definitions:
   AllocationRequest:
+    description: AllocationRequest(id, created, allocation_unit)
     type: object
     properties:
       id:
@@ -2098,6 +2148,7 @@ definitions:
         format: date-time
         readOnly: true
   ErrorSerilizer:
+    description: Serializer for error responses.
     required:
       - detail
     type: object
@@ -2108,6 +2159,8 @@ definitions:
         type: string
         minLength: 1
   NetworkingAnsibleAllocationStage:
+    description: NetworkingAnsibleAllocationStage(id, start, end, failed, error_message,
+      finished, allocation_request_fk_many, allocationstage_ptr, repo_url, rev, allocation_request)
     type: object
     properties:
       id:
@@ -2154,6 +2207,7 @@ definitions:
         readOnly: true
         minLength: 1
   AnsibleOutput:
+    description: AnsibleOutput(id, allocation_stage, content)
     type: object
     properties:
       content:
@@ -2162,6 +2216,9 @@ definitions:
         readOnly: true
         minLength: 1
   OpenstackAllocationStage:
+    description: StackAllocationStage(id, start, end, failed, error_message, finished,
+      allocation_request_fk_many, allocationstage_ptr, allocation_request, status,
+      status_reason)
     type: object
     properties:
       id:
@@ -2208,6 +2265,7 @@ definitions:
         readOnly: true
         minLength: 1
   SandboxEvent:
+    description: ''
     required:
       - time
       - name
@@ -2232,6 +2290,7 @@ definitions:
         type: string
         minLength: 1
   SandboxResource:
+    description: ''
     required:
       - name
       - type
@@ -2251,6 +2310,8 @@ definitions:
         type: string
         minLength: 1
   UserAnsibleAllocationStage:
+    description: UserAnsibleAllocationStage(id, start, end, failed, error_message,
+      finished, allocation_request_fk_many, allocationstage_ptr, repo_url, rev, allocation_request)
     type: object
     properties:
       id:
@@ -2297,6 +2358,7 @@ definitions:
         readOnly: true
         minLength: 1
   CleanupRequest:
+    description: AllocationRequest(id, created, allocation_unit)
     type: object
     properties:
       id:
@@ -2313,6 +2375,8 @@ definitions:
         format: date-time
         readOnly: true
   NetworkingAnsibleCleanupStage:
+    description: NetworkingAnsibleCleanupStage(id, start, end, failed, error_message,
+      finished, cleanup_request_fk_many, cleanupstage_ptr, cleanup_request)
     type: object
     properties:
       id:
@@ -2351,6 +2415,8 @@ definitions:
         type: string
         readOnly: true
   OpenstackCleanupStage:
+    description: StackCleanupStage(id, start, end, failed, error_message, finished,
+      cleanup_request_fk_many, cleanupstage_ptr, cleanup_request)
     type: object
     properties:
       id:
@@ -2389,6 +2455,8 @@ definitions:
         type: string
         readOnly: true
   UserAnsibleCleanupStage:
+    description: UserAnsibleCleanupStage(id, start, end, failed, error_message, finished,
+      cleanup_request_fk_many, cleanupstage_ptr, cleanup_request)
     type: object
     properties:
       id:
@@ -2427,6 +2495,7 @@ definitions:
         type: string
         readOnly: true
   Definition:
+    description: Definition(id, name, url, rev)
     required:
       - url
     type: object
@@ -2452,6 +2521,7 @@ definitions:
         type: string
         minLength: 1
   DefinitionRev:
+    description: ''
     required:
       - name
     type: object
@@ -2460,7 +2530,119 @@ definitions:
         title: Name
         type: string
         minLength: 1
+  Image:
+    description: ''
+    required:
+      - os_distro
+      - os_type
+      - disk_format
+      - container_format
+      - visibility
+      - size
+      - status
+      - min_ram
+      - min_disk
+      - created_at
+      - updated_at
+      - tags
+      - default_user
+      - name
+    type: object
+    properties:
+      os_distro:
+        title: Os distro
+        type: string
+        minLength: 1
+      os_type:
+        title: Os type
+        type: string
+        minLength: 1
+      disk_format:
+        title: Disk format
+        type: string
+        minLength: 1
+      container_format:
+        title: Container format
+        type: string
+        minLength: 1
+      visibility:
+        title: Visibility
+        type: string
+        minLength: 1
+      size:
+        title: Size
+        type: integer
+      status:
+        title: Status
+        type: string
+        minLength: 1
+      min_ram:
+        title: Min ram
+        type: integer
+      min_disk:
+        title: Min disk
+        type: integer
+      created_at:
+        title: Created at
+        type: string
+        minLength: 1
+      updated_at:
+        title: Updated at
+        type: string
+        minLength: 1
+      tags:
+        description: ''
+        type: array
+        items:
+          type: string
+      default_user:
+        title: Default user
+        type: string
+        minLength: 1
+      name:
+        title: Name
+        type: string
+        minLength: 1
+  Quota:
+    title: Vcpu
+    description: ''
+    required:
+      - limit
+      - in_use
+    type: object
+    properties:
+      limit:
+        title: Limit
+        type: number
+      in_use:
+        title: In use
+        type: number
+  QuotaSet:
+    description: ''
+    required:
+      - vcpu
+      - ram
+      - instances
+      - network
+      - subnet
+      - port
+    type: object
+    properties:
+      vcpu:
+        $ref: '#/definitions/Quota'
+      ram:
+        $ref: '#/definitions/Quota'
+      instances:
+        $ref: '#/definitions/Quota'
+      network:
+        $ref: '#/definitions/Quota'
+      subnet:
+        $ref: '#/definitions/Quota'
+      port:
+        $ref: '#/definitions/Quota'
   Pool:
+    description: Pool(id, definition, max_size, private_management_key, public_management_key,
+      management_certificate, uuid, rev, rev_sha)
     required:
       - definition_id
       - max_size
@@ -2483,8 +2665,6 @@ definitions:
         title: Max size
         description: Maximum amount of Allocation Units associated with this pool.
         type: integer
-        maximum: 2147483647
-        minimum: -2147483648
       lock_id:
         title: Lock id
         type: integer
@@ -2501,6 +2681,7 @@ definitions:
         readOnly: true
         minLength: 1
   PoolLock:
+    description: PoolLock(id, pool)
     type: object
     properties:
       id:
@@ -2512,6 +2693,7 @@ definitions:
         type: integer
         readOnly: true
   SandboxAllocationUnit:
+    description: SandboxAllocationUnit(id, pool)
     type: object
     properties:
       id:
@@ -2525,6 +2707,7 @@ definitions:
       allocation_request:
         $ref: '#/definitions/AllocationRequest'
   Sandbox:
+    description: Sandbox(id, allocation_unit, private_user_key, public_user_key)
     type: object
     properties:
       id:
@@ -2540,6 +2723,7 @@ definitions:
         type: integer
         readOnly: true
   SandboxLock:
+    description: SandboxLock(id, sandbox)
     type: object
     properties:
       id:
@@ -2551,6 +2735,7 @@ definitions:
         type: integer
         readOnly: true
   LibHost:
+    description: KYPO OS lib Host topology serializer
     required:
       - name
     type: object
@@ -2560,6 +2745,7 @@ definitions:
         type: string
         minLength: 1
   LibRouter:
+    description: KYPO OS lib Router topology serializer
     required:
       - name
       - cidr
@@ -2574,6 +2760,7 @@ definitions:
         type: string
         minLength: 1
   LibNetwork:
+    description: KYPO OS lib Network topology serializer
     required:
       - name
       - cidr
@@ -2588,6 +2775,7 @@ definitions:
         type: string
         minLength: 1
   Link:
+    description: ''
     type: object
     properties:
       port_a:
@@ -2599,6 +2787,7 @@ definitions:
         type: string
         readOnly: true
   Port:
+    description: ''
     required:
       - ip
       - mac
@@ -2623,6 +2812,7 @@ definitions:
         type: string
         minLength: 1
   Topology:
+    description: Serializer for topology
     required:
       - hosts
       - routers
@@ -2632,26 +2822,32 @@ definitions:
     type: object
     properties:
       hosts:
+        description: ''
         type: array
         items:
           $ref: '#/definitions/LibHost'
       routers:
+        description: ''
         type: array
         items:
           $ref: '#/definitions/LibRouter'
       switches:
+        description: ''
         type: array
         items:
           $ref: '#/definitions/LibNetwork'
       links:
+        description: ''
         type: array
         items:
           $ref: '#/definitions/Link'
       ports:
+        description: ''
         type: array
         items:
           $ref: '#/definitions/Port'
   Node:
+    description: KYPO OS lib Instance serializer
     required:
       - name
       - id
@@ -2691,6 +2887,7 @@ definitions:
         type: string
         minLength: 1
   NodeAction:
+    description: ''
     required:
       - action
     type: object
@@ -2704,6 +2901,7 @@ definitions:
           - resume
           - reboot
   NodeConsole:
+    description: ''
     required:
       - url
     type: object
