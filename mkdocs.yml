@@ -61,10 +61,10 @@ nav:
   - Available Features: available-features.md
   - FAQ: faq.md
   - Reference:
-      - Sandbox Service: reference/kypo-sandbox-service-open-api.yaml
-      - Training Service: reference/kypo-training-open-api.yaml
-      - User and Group Service: reference/kypo-user-and-group-open-api.yaml
-      - Elasticsearch Service: reference/kypo-elasticsearch-service-open-api.yaml
+      - Sandbox Service: reference/kypo-sandbox-service-swagger-open-api.yaml
+      - Training Service: reference/kypo-training-swagger-open-api.yaml
+      - User and Group Service: reference/kypo-user-and-group-swagger-open-api.yaml
+      - Elasticsearch Service: reference/kypo-elasticsearch-service-swagger-open-api.yaml
       - Tables of Permissions: reference/tables-of-permissions.md
   - Extras:
       - Logging:

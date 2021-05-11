@@ -1,20 +1,152 @@
 ---
 swagger: "2.0"
 info:
-  version: "Version: 1.0.19"
+  version: "Version: 1.0.26"
   title: "KYPO2 Eleasticsearch Service - API Reference"
 host: "localhost:8080"
 basePath: "/kypo-elasticsearch-service/api/v1"
 tags:
+- name: "Adaptive Training events"
+- name: "Training commands"
 - name: "Training events"
+- name: "Training statistics"
 schemes:
 - "http"
 - "https"
 paths:
+  /adaptive-training-platform-events/training-definitions/{definitionId}/training-instances/{instanceId}:
+    get:
+      tags:
+      - "Adaptive Training events"
+      summary: "Get all events in particular training definition and training instance."
+      description: ""
+      operationId: "getAllEventsByTrainingDefinitionAndTrainingInstanceId"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "definitionId"
+        in: "path"
+        description: "Training definition ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "instanceId"
+        in: "path"
+        description: "Training instance ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        200:
+          description: "All events in particular training run by id was found."
+          schema:
+            type: "object"
+        500:
+          description: "Unexpected condition was encountered."
+          schema:
+            $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
+  /adaptive-training-platform-events/training-definitions/{definitionId}/training-instances/{instanceId}/training-runs/{runId}:
+    get:
+      tags:
+      - "Adaptive Training events"
+      summary: "Get all events in particular training run."
+      description: ""
+      operationId: "getAllEventsFromTrainingRun"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "definitionId"
+        in: "path"
+        description: "Training definition ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "instanceId"
+        in: "path"
+        description: "Training instance ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "runId"
+        in: "path"
+        description: "Training run ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        200:
+          description: "All events in particular training run by id was found."
+          schema:
+            type: "object"
+        500:
+          description: "Unexpected condition was encountered."
+          schema:
+            $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
+  /adaptive-training-platform-events/training-instances/{instanceId}:
+    delete:
+      tags:
+      - "Adaptive Training events"
+      summary: "Delete all events in particular training instance."
+      description: ""
+      operationId: "deleteEventsFromTrainingInstance"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "instanceId"
+        in: "path"
+        description: "Training instance ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        200:
+          description: "All events in particular training instance by id was were\
+            \ deleted."
+        500:
+          description: "Unexpected condition was encountered."
+          schema:
+            $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
+  /adaptive-training-platform-events/training-instances/{instanceId}/training-runs/{runId}:
+    delete:
+      tags:
+      - "Adaptive Training events"
+      summary: "Delete all events in particular training run."
+      description: ""
+      operationId: "deleteEventsFromTrainingRun"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "instanceId"
+        in: "path"
+        description: "Training instance ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "runId"
+        in: "path"
+        description: "Training run ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        200:
+          description: "All events in particular training run by id was were deleted."
+        500:
+          description: "Unexpected condition was encountered."
+          schema:
+            $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
   /training-platform-commands/pools/{poolId}:
     get:
       tags:
-      - "Training events"
+      - "Training commands"
       summary: "Get all commands in particular pool."
       description: ""
       operationId: "findAllConsoleCommandsByPoolId"
@@ -36,9 +168,11 @@ paths:
           description: "Unexpected condition was encountered."
           schema:
             $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
     delete:
       tags:
-      - "Training events"
+      - "Training commands"
       summary: "Delete all commands in particular pool."
       description: ""
       operationId: "deleteConsoleCommandsByPoolId"
@@ -58,10 +192,12 @@ paths:
           description: "Unexpected condition was encountered."
           schema:
             $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
   /training-platform-commands/sandboxes/{sandboxId}:
     get:
       tags:
-      - "Training events"
+      - "Training commands"
       summary: "Get all commands in particular sandbox."
       description: ""
       operationId: "findAllConsoleCommandsBySandboxId"
@@ -83,9 +219,11 @@ paths:
           description: "Unexpected condition was encountered."
           schema:
             $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
     delete:
       tags:
-      - "Training events"
+      - "Training commands"
       summary: "Delete all commands in particular pool."
       description: ""
       operationId: "deleteConsoleCommandsByPoolId"
@@ -105,10 +243,12 @@ paths:
           description: "Unexpected condition was encountered."
           schema:
             $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
   /training-platform-commands/sandboxes/{sandboxId}/ranges:
     get:
       tags:
-      - "Training events"
+      - "Training commands"
       summary: "Get all commands in particular sandbox."
       description: ""
       operationId: "findAllConsoleCommandsBySandboxId"
@@ -144,6 +284,8 @@ paths:
           description: "Unexpected condition was encountered."
           schema:
             $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
   /training-platform-events/training-definitions/{definitionId}/training-instances/{instanceId}:
     get:
       tags:
@@ -175,6 +317,8 @@ paths:
           description: "Unexpected condition was encountered."
           schema:
             $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
   /training-platform-events/training-definitions/{definitionId}/training-instances/{instanceId}/training-runs/{runId}:
     get:
       tags:
@@ -212,6 +356,8 @@ paths:
           description: "Unexpected condition was encountered."
           schema:
             $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
   /training-platform-events/training-instances/{instanceId}:
     delete:
       tags:
@@ -236,6 +382,62 @@ paths:
           description: "Unexpected condition was encountered."
           schema:
             $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
+  /training-platform-events/training-instances/{instanceId}/aggregated/levels/users:
+    get:
+      tags:
+      - "Training events"
+      summary: "Get all events in particular training definition and training instance."
+      description: ""
+      operationId: "getAllEventsByTrainingDefinitionAndTrainingInstanceId"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "instanceId"
+        in: "path"
+        description: "Training instance ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        200:
+          description: "All events in particular training run by id was found."
+          schema:
+            type: "object"
+        500:
+          description: "Unexpected condition was encountered."
+          schema:
+            $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
+  /training-platform-events/training-instances/{instanceId}/aggregated/users/levels:
+    get:
+      tags:
+      - "Training events"
+      summary: "Get all events in particular training definition and training instance."
+      description: ""
+      operationId: "getAllEventsByTrainingDefinitionAndTrainingInstanceId"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "instanceId"
+        in: "path"
+        description: "Training instance ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        200:
+          description: "All events in particular training run by id was found."
+          schema:
+            type: "object"
+        500:
+          description: "Unexpected condition was encountered."
+          schema:
+            $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
   /training-platform-events/training-instances/{instanceId}/training-runs/{runId}:
     delete:
       tags:
@@ -265,15 +467,216 @@ paths:
           description: "Unexpected condition was encountered."
           schema:
             $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
+  /training-statistics/training-runs/{runId}/phases/commands:
+    post:
+      tags:
+      - "Training statistics"
+      summary: "Get commands statistics for particular training run and phases."
+      description: ""
+      operationId: "getCommandsStatistics"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "runId"
+        in: "path"
+        description: "Training run ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "phaseIds"
+        in: "query"
+        description: "Phase Ids"
+        required: true
+        type: "array"
+        items:
+          type: "integer"
+          format: "int64"
+        collectionFormat: "multi"
+      - in: "body"
+        name: "body"
+        description: "Training run ID"
+        required: false
+        schema:
+          type: "object"
+          additionalProperties:
+            type: "array"
+            items:
+              type: "string"
+      responses:
+        200:
+          description: "All events in particular training run by id was found."
+          schema:
+            type: "object"
+        500:
+          description: "Unexpected condition was encountered."
+          schema:
+            $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
+  /training-statistics/training-runs/{runId}/phases/events/solutions:
+    get:
+      tags:
+      - "Training statistics"
+      summary: "Get solution statistics for particular training run and phases."
+      description: ""
+      operationId: "getPhaseSolutionsStatistics"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "runId"
+        in: "path"
+        description: "Training run ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "phaseIds"
+        in: "query"
+        description: "Phase Ids"
+        required: true
+        type: "array"
+        items:
+          type: "integer"
+          format: "int64"
+        collectionFormat: "multi"
+      responses:
+        200:
+          description: "All events in particular training instance by id was were\
+            \ deleted."
+          schema:
+            type: "object"
+        500:
+          description: "Unexpected condition was encountered."
+          schema:
+            $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
+  /training-statistics/training-runs/{runId}/phases/events/time:
+    get:
+      tags:
+      - "Training statistics"
+      summary: "Get time statistics about phases for particular training run and phases."
+      description: ""
+      operationId: "getPhaseTimeStatistics"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "runId"
+        in: "path"
+        description: "Training run ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "phaseIds"
+        in: "query"
+        description: "Phase Ids"
+        required: true
+        type: "array"
+        items:
+          type: "integer"
+          format: "int64"
+        collectionFormat: "multi"
+      responses:
+        200:
+          description: "Time statistics was found."
+          schema:
+            type: "object"
+        500:
+          description: "Unexpected condition was encountered."
+          schema:
+            $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
+  /training-statistics/training-runs/{runId}/phases/events/wrong-answers:
+    get:
+      tags:
+      - "Training statistics"
+      summary: "Obtaing all wrong answers in phases."
+      description: ""
+      operationId: "getPhaseWrongAnswersStatistics"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "runId"
+        in: "path"
+        description: "Training run ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "phaseIds"
+        in: "query"
+        description: "Phase Ids"
+        required: true
+        type: "array"
+        items:
+          type: "integer"
+          format: "int64"
+        collectionFormat: "multi"
+      responses:
+        200:
+          description: "All wrong answers of the particular phases have been found."
+          schema:
+            type: "object"
+        500:
+          description: "Unexpected condition was encountered."
+          schema:
+            $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
+  /training-statistics/training-runs/{runId}/phases/overall:
+    post:
+      tags:
+      - "Training statistics"
+      summary: "Get overall statistics."
+      description: ""
+      operationId: "getOverallPhasesStatistics"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "runId"
+        in: "path"
+        description: "Training run ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "phaseIds"
+        in: "query"
+        description: "Phase Ids"
+        required: true
+        type: "array"
+        items:
+          type: "integer"
+          format: "int64"
+        collectionFormat: "multi"
+      - in: "body"
+        name: "body"
+        description: "Training run ID"
+        required: false
+        schema:
+          type: "object"
+          additionalProperties:
+            type: "array"
+            items:
+              type: "string"
+      responses:
+        200:
+          description: "Overall statistics was found."
+          schema:
+            type: "object"
+        500:
+          description: "Unexpected condition was encountered."
+          schema:
+            $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
 securityDefinitions:
-  KYPO:
-    type: "oauth2"
-    authorizationUrl: "https://oidc.muni.cz/oidc/authorize"
-    flow: "implicit"
-    scopes:
-      openid: ""
-      email: ""
-      profile: ""
+  bearerAuth:
+    description: "Obtain bearer token from OIDC provider and enter the token in the\
+      \ following field. Use format 'Bearer {token}'"
+    type: "apiKey"
+    name: "Authorization"
+    in: "header"
 definitions:
   ApiEntityError:
     allOf:
@@ -533,3 +936,4 @@ definitions:
           additionalProperties:
             type: "string"
       description: "A detailed error from another Python mircorservice."
+
