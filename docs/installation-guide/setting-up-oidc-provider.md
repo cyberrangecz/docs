@@ -1,6 +1,8 @@
 # Setting up OIDC Provider (Local issuer)
+    
+This setup is done automatically by creating our CSIRT-MU dummy OIDC issuer in KYPO CRP Deployment installation guide.
 
-## Setting up a Relying Party and Resource Server in OIDC Provider
+## Manual setup of Relying Party and Resource Server in OIDC Provider
 
 1. Open the webpage `https://<YOUR-SERVER-ADDRESS>/csirtmu-dummy-issuer-server`, and log in with credentials\
 set up in your [extra-vars.yml]({{ page.meta.extra_vars_url }}) file as sub-variables **sub** and **password** in variable **kypo_crp_users**.
