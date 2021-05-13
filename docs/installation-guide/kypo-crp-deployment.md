@@ -114,7 +114,11 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
 
 4. Configure an SSL certificate that will be used for HTTPS communication.
 
-    1. Obtain a certificate either from your Certification Authority (CA) or generate a self-signed one.
+    1. Obtain a certificate either from your Certification Authority (CA) or generate a self-signed one e.g. with command bellow.
+        ```shell
+        openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes -out kypo.crt -keyout kypo.key -subj "/C=AU/ST=Some-State/O=Internet Widgits Pty Ltd/CN=x.x.x.x 
+        ```
+        Where CN is IP address of your KYPO Head server.
 
     2. Encode obtained certificate and its key using the base64 tool.
 
@@ -150,7 +154,7 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
           # The unique identifier of the user within the OIDC provider.
         - sub: admin@example.com
           # The URL of the OIDC provider.
-          iss: https://example.com:443/issuer
+          iss: https://example.com:443/issuer/
           # A password of the user.
           password: password
           # An email address of the user.
@@ -183,13 +187,13 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
 
             The issuer can be found at https://<kypo_crp_head\>:8443/csirtmu-dummy-issuer-server/
 
-    2. Obtain OIDC URL and clients secrets from [Setting up OIDC Provider]({{ page.meta.setting_up_oidc_provider_url }}), i.e.:
-
+    2. Obtain OIDC URL and clients secrets from oidc-local-provider.yml file, which was auto-created after previous command.
+        
         * url
         * client_id
         * resource_client_id
         * resource_client_secret
-
+        
     3. Edit the following variables of an [extra-vars.yml]({{ page.meta.extra_vars_url }}) file using values obtained from the previous step.
 
         ```yaml
