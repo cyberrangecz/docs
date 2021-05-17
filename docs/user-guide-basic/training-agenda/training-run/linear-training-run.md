@@ -56,11 +56,14 @@ Right click on the selected network node (host or router), the following menu wi
   <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-host-options.png">
 </p>
 
-* **Generate console URL**: Connect to Spice console for a particular network node (this is provided by OpenStack cloud). When you connect to the Spice client, you will see the following console in a new browser tab. If you will provide a correct login and password combination, you will be able to work inside of the corresponding VM:
+* **Generate console URL**: Connect to web console for a particular network node. This is provided by OpenStack cloud, and console types may vary. When you connect to the Spice client, you will see the following console in a new browser tab. If you provide a correct login and password combination, you will be able to work inside of the corresponding VM:
 
     <p align="center">
         <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-spice.png">
     </p>
+
+    !!! info
+        To scroll console output up, use Shift + Page Up, and to scroll it down, use Shift + Page Down.
 
 * **Resume**: Resuming a suspended virtual machine is analogous to waking up a computer that has been in sleep mode.
 * **Reboot**: Rebooting a virtual machine is analogous to restarting a computer.
