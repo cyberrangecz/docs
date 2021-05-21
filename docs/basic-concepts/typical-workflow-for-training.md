@@ -27,16 +27,19 @@ It is assumed that KYPO CRP is installed according to the [installation guide](.
 ## Training Creation
 
 ### Before Training 
-1. Training definition can be created via the [Create Training Definition](../../user-guide-basic/training-agenda/training-definition/#add-a-new-definition) page independently on the sandbox definition.
+1. Training definition can be created via the [Create Linear Training Definition](../../user-guide-basic/training-agenda/training-definition/linear-training-definition/#add-a-new-definition) or the [Create Adaptive Training Definition](../../user-guide-basic/training-agenda/training-definition/adaptive-training-definition/#add-a-new-definition) page independently on the sandbox definition.
 2. Training instance can be created via the [Create/Edit Training Instance](../../user-guide-basic/training-agenda/training-instance/#createedit-training-instance) page specifically for the selected available training definition.
 3. An unlocked pool of sandboxes **created for the training** is assigned to the training instance in the second panel [Assign Pool](../../user-guide-basic/training-agenda/training-instance/#2-assign-pool) when editing the training instance.
-4. Each training instance has partially a generated access token which the instructor hand over to trainees so they can access [training runs](../../user-guide-basic/training-agenda/training-run/#training-run). 
+4. Each training instance has partially a generated access token which the instructor hand over to trainees so they can access [linear](../../user-guide-basic/training-agenda/training-run/linear-training-run/#training-run) or [adaptive](../../user-guide-basic/training-agenda/training-run/adaptive-training-run/#training-run) training runs. 
 
 
 ### During Training
-5. Trainees [access Training Run](../../user-guide-basic/training-agenda/training-run/#1-access-training) using the obtained access token. Trainees can resume their accessed training runs if the training instance is still active.
-6. Each training run has assigned a specific sandbox and trainees can access VMs in this sandbox using [Sandbox SSH Access](../../user-guide-advanced/sandboxes/sandbox-access/) or a [Spice console](../../user-guide-basic/training-agenda/training-run/#vm-manipulation).
-7. An organizer of training instance can watch real-time progress of trainees and can see their [training run results](../../user-guide-basic/training-agenda/training-run/#training-run-results) during the game. 
+5. Trainees [access Training Run](../../user-guide-basic/training-agenda/training-run/linear-training-run/#1-access-training) using the obtained access token. Trainees can resume their accessed training runs if the training instance is still active.
+6. Each training run has assigned a specific sandbox and trainees can access VMs in this sandbox using [Sandbox SSH Access](../../user-guide-advanced/sandboxes/sandbox-ssh-access/) or a [Spice console](../../user-guide-basic/training-agenda/training-run/linear-training-run/#vm-manipulation).
+7. An organizer of training instance can watch real-time progress of trainees and can see their [linear training run results](../../user-guide-basic/training-agenda/training-run/linear-training-run/#training-run-results) during the game. 
+
+!!! note
+    Results for the adaptive training runs will be added in near future.
 
 ### After Training
 8. When the training instance is finished, the [results](../../user-guide-basic/training-agenda/training-instance/#results-of-training-instance) are available and ready to be downloaded for further evaluation.

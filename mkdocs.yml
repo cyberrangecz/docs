@@ -24,14 +24,12 @@ nav:
       - Training Agenda:
           - Overview: user-guide-basic/training-agenda/training-agenda-overview.md
           - Training Definition:
-            - Linear Training Definition: user-guide-basic/training-agenda/training-definition/linear-training-definition.md
-            - Adaptive Training Definition: user-guide-basic/training-agenda/training-definition/adaptive-training-definition.md
-          - Training Instance:
-            - Linear Training Instance: user-guide-basic/training-agenda/training-instance/linear-training-instance.md
-            - Adaptive Training Instance: user-guide-basic/training-agenda/training-instance/adaptive-training-instance.md
-          - Training Run:
-            - Linear Training Run: user-guide-basic/training-agenda/training-run/linear-training-run.md
-            - Adaptive Training Run: user-guide-basic/training-agenda/training-run/adaptive-training-run.md
+              - Linear Training Definition: user-guide-basic/training-agenda/training-definition/linear-training-definition.md
+              - Adaptive Training Definition: user-guide-basic/training-agenda/training-definition/adaptive-training-definition.md
+          - Training Instance: user-guide-basic/training-agenda/training-instance.md
+          - Training Run: 
+              - Linear Training Run: user-guide-basic/training-agenda/training-run/linear-training-run.md
+              - Adaptive Training Run: user-guide-basic/training-agenda/training-run/adaptive-training-run.md
       - Administration Agenda:
           - Overview: user-guide-basic/administration-agenda/administration-agenda-overview.md
           - Groups: user-guide-basic/administration-agenda/groups.md
@@ -63,6 +61,8 @@ nav:
   - Reference:
       - Sandbox Service: reference/kypo-sandbox-service-swagger-open-api.yaml
       - Training Service: reference/kypo-training-swagger-open-api.yaml
+      - Adaptive Training Service: reference/kypo-adaptive-training-swagger-open-api.yaml
+      - Adaptive Smart Assistant Service: reference/kypo-adaptive-smart-assistant-swagger-open-api.yaml
       - User and Group Service: reference/kypo-user-and-group-swagger-open-api.yaml
       - Elasticsearch Service: reference/kypo-elasticsearch-service-swagger-open-api.yaml
       - Tables of Permissions: reference/tables-of-permissions.md
