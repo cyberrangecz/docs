@@ -1,0 +1,156 @@
+---
+swagger: "2.0"
+info:
+  version: "Version: 1.0.26"
+  title: "KYPO Adaptive Smart Assistant - API Reference"
+host: "localhost:8080"
+basePath: "/kypo-adaptive-smart-assistant/api/v1"
+tags:
+- name: "Adaptive Phases"
+schemes:
+- "http"
+- "https"
+paths:
+  /adaptive-phases:
+    post:
+      tags:
+      - "Adaptive Phases"
+      summary: "Find a suitable task"
+      description: "Find a suitable task for a participant trying to get the next\
+        \ phase"
+      operationId: "findSuitableTaskInPhase"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "smartAssistantInput"
+        required: true
+        schema:
+          $ref: "#/definitions/AdaptiveSmartAssistantInput"
+      responses:
+        200:
+          description: "Suitable task found."
+          schema:
+            $ref: "#/definitions/SuitableTaskResponseDto"
+        500:
+          description: "Unexpected application error"
+      security:
+      - bearerAuth: []
+securityDefinitions:
+  bearerAuth:
+    description: "Obtain bearer token from OIDC provider and enter the token in the\
+      \ following field. Use format 'Bearer {token}'"
+    type: "apiKey"
+    name: "Authorization"
+    in: "header"
+definitions:
+  AdaptiveSmartAssistantInput:
+    type: "object"
+    required:
+    - "phaseX"
+    - "phaseXTasks"
+    - "trainingRunId"
+    properties:
+      trainingRunId:
+        type: "integer"
+        format: "int64"
+        example: 1
+        description: "The identifier of a given training run representing a given\
+          \ participant"
+      phaseX:
+        type: "integer"
+        format: "int64"
+        example: 5
+        description: "The id of a phase X."
+      phaseXTasks:
+        type: "integer"
+        format: "int32"
+        example: 3
+        description: "The number of tasks in a phase X."
+        minimum: 1
+      phaseIds:
+        type: "array"
+        example: "[1,2,3,4,5]"
+        description: "The list of phaseIds (the given phase including the given phases)."
+        items:
+          type: "integer"
+          format: "int64"
+      decisionMatrix:
+        type: "array"
+        description: "The decision matrix with weights to compute the students' performance."
+        items:
+          $ref: "#/definitions/DecisionMatrixRowDTO"
+  DecisionMatrixRowDTO:
+    type: "object"
+    required:
+    - "completedInTime"
+    - "id"
+    - "keywordUsed"
+    - "order"
+    - "questionnaireAnswered"
+    - "relatedPhaseInfo"
+    - "solutionDisplayed"
+    - "wrongAnswers"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+        example: 1
+        description: "ID of decision matrix row"
+      order:
+        type: "integer"
+        format: "int32"
+        example: 1
+        description: "Order of row in a decision matrix"
+      questionnaireAnswered:
+        type: "number"
+        format: "double"
+        example: 0.5
+        description: "It determines how important the answers of the questions in\
+          \ questionnaires are"
+      keywordUsed:
+        type: "number"
+        format: "double"
+        example: 0.5
+        description: "It determines how important it is whether the player used the\
+          \ keyword"
+      completedInTime:
+        type: "number"
+        format: "double"
+        example: 0.5
+        description: "It determines how important it is whether the player completed\
+          \ the task in time"
+      solutionDisplayed:
+        type: "number"
+        format: "double"
+        example: 0.5
+        description: "It determines how important it is whether the player displayed\
+          \ the solution of the task they were solving"
+      wrongAnswers:
+        type: "number"
+        format: "double"
+        example: 0.5
+        description: "It determines how important the number of wrong answers are"
+      relatedPhaseInfo:
+        example: "1"
+        description: "Info about phase (usually training phase) the decision matrix\
+          \ row is related to"
+        $ref: "#/definitions/DecisionMatrixRowDTO"
+      allowedCommands:
+        type: "integer"
+        format: "int64"
+        example: 10
+        description: "Number of commands that are allowed to use in a training phase"
+      allowedWrongAnswers:
+        type: "integer"
+        format: "int64"
+        example: 10
+        description: "Number of wrong answers that are allowed in a training phase"
+  SuitableTaskResponseDto:
+    type: "object"
+    properties:
+      suitableTask:
+        type: "integer"
+        format: "int32"
+        example: 1
+        description: "Returns the number representing the suitable task for a given\
+          \ participant"

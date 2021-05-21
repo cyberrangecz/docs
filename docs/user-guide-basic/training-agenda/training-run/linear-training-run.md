@@ -85,9 +85,7 @@ If hints are not enough, the trainee can reveal the solution by clicking the ![s
 
 
 #### SSH Access
-
-In addition to connecting to the sandbox using Spice, it is also possible to connect to the sandbox machines locally using SSH. To do that, click the ![get-ssh-access-button](../../../img/buttons/get-ssh-access-button.png) button and download the ZIP archive with the configuration of a user SSH access to the respective sandbox. More about SSH access can be found in [Sandbox SSH Access](../../../../user-guide-advanced/sandboxes/sandbox-access/#user-access).
-
+In addition to connecting to the sandbox using Spice, it is also possible to connect to the sandbox machines locally using SSH. To do that, click the ![get-ssh-access-button](../../../img/buttons/get-ssh-access-button.png) button and download the ZIP archive with the configuration of a user SSH access to the respective sandbox. More about SSH access can be found in [Sandbox SSH Access](../../../../user-guide-advanced/sandboxes/sandbox-ssh-access/#user-access).
 
 ## Training Run Results
 

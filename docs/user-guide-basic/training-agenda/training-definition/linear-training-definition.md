@@ -175,7 +175,7 @@ In the info level the trainees read the content of the information written by th
 
 
 ### 2. Upload a Definition From JSON File
-To upload a training definition, click in the **Training Definition Overview** on the top right ![upload-button](../../../img/buttons/upload-button.png) button. This will open the following window:
+To upload a training definition, click in the **Linear Training Definition Overview** on the top right ![upload-button](../../../img/buttons/upload-button.png) button. This will open the following window:
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-upload-panel.png">

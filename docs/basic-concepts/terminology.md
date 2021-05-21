@@ -10,6 +10,6 @@ When creating and using an emulated virtual environment we use the following ter
 ## Training
 KYPO training is centered around the sandbox, where trainees solve tasks presented in KYPO GUI. KYPO training can also contain questionnaires to collect feedback from trainees or tests to assess their knowledge. In the context of the training we use the following terminology:
 
-* **[Training Definition](../../user-guide-advanced/trainings/trainings-overview/#training-definition):** Defines the scenario of the training. It is composed of several levels. Each level can be of different types: Game level, Assessment level, Info level.
+* **[Training Definition](../../user-guide-advanced/trainings/trainings-overview/#training-definition):** Defines the scenario of the training. Definitions can be composed either of levels or phases, based on their type. Linear definitions can contain Game levels, Assessment levels, and Info levels. Adaptive definitions can be composed of Training phases, Questionnaire phases, and Info phases.
 * **[Training Instance](../../user-guide-advanced/trainings/trainings-overview/#training-instance):** Specify the time period in which the players can access training. Each training instance also must be assigned a pool of sandboxes.
 * **[Training Run](../../user-guide-advanced/trainings/trainings-overview/#training-run):** Single run of training of the particular player. Each run has an assigned sandbox from the pool.
