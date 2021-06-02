@@ -71,7 +71,7 @@ Access to the sandbox nodes is through the **KYPO proxy**, a **MAN** node, and a
 !!! warning "Sandbox definition set up"
     You will not be able to use this approach if you did not set up the sandbox definition correctly!
 
-    * Set user access to networks in the sandbox definition file `sandbox.yml`, e.g., set an attribute `accessible_by_user` of the network to value `True` or leave it undefined as it is a default value. See [Topology Definition](../topology-definition/#networks).
+    * Set user access to networks in the sandbox definition file `topology.yml`, e.g., set an attribute `accessible_by_user` of the network to value `True` or leave it undefined as it is a default value. See [Topology Definition](../topology-definition/#networks).
 
     * Set user access to hosts connected to user-accessible networks, e.g., apply Ansible role [kypo-user-access](https://gitlab.ics.muni.cz/CSIRT-MU-public/ansible-roles/kypo-user-access/-/tree/master/) to specified hosts in the file `provisioning/playbook.yml` of the sandbox definition.
 
