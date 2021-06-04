@@ -80,6 +80,11 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
             spanning-multiple-lines>
         ```
 
+    5. Edit the following variable of an [extra-vars.yml]({{ page.meta.extra_vars_url }}) file using IP addresses of DNS servers which will be used for subnets in  Openstack.
+        ```yaml
+        # The list of IP addresses to custom DNS servers.
+        kypo_crp_dns: []
+        ```
 3. Configure access to the KYPO CRP Head machine.
 
     1. Obtain access to the VM from [Base Infrastructure]({{ page.meta.base_infrastructure_url }}), i.e.:
@@ -94,7 +99,7 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
         ssh -i <passwordless-ssh-key> <username>@<hostname>
         ```
 
-    2. Edit the following variable of an inventory.ini file using value obtained from the previous step.
+    2. Create and edit the following variable of an inventory.ini file using value obtained from the previous step.
 
         ```ini
         [kypo_head]
@@ -116,7 +121,7 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
 
     1. Obtain a certificate either from your Certification Authority (CA) or generate a self-signed one e.g. with command bellow.
         ```shell
-        openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes -out kypo.crt -keyout kypo.key -subj "/C=AU/ST=Some-State/O=Internet Widgits Pty Ltd/CN=x.x.x.x
+        openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes -out kypo.crt -keyout kypo.key -subj "/C=AU/ST=Some-State/O=Internet Widgits Pty Ltd/CN=x.x.x.x"
         ```
         Where CN is IP address of your KYPO Head server.
 
