@@ -30,10 +30,10 @@ The `Port Forwarding Rules` create a new rule for log forwarding with `Guest IP`
 
 **2. Set the KYPO Head IP for sandbox service:**
 
-Open the [kypo-sandbox-service-config.yml](https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo-crp-deployment/-/blob/master/provisioning/roles/kypo-crp-configuration/templates/configuration/sandbox-service/kypo-sandbox-service-config.yml) file (located in the `/provisioning/roles/kypo-crp-configuration/templates/configuration/sandbox-service/kypo-sandbox-service-config.yml`) and under the `application_configuration` uncomment and set the `kypo_head_ip` to the IP address of your local machine.
+Open the [main.yml](https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo-crp-deployment/-/blob/master/provisioning/roles/kypo-crp-head/defaults/main.yml) file (located in the `/kypo-crp-deployment/provisioning/roles/kypo-crp-head/defaults/main.yml`) and set the `kypo_head_ip` to the IP address of your local machine.
 
 !!! note
-    If you don't uncomment the `kypo_head_ip` attribute, all logs will be stored on the **MAN** in the `/data/idm-logs/man.log` file.
+    If you don't change the `kypo_head_ip` variable, all logs will be stored on the **MAN** in the `/data/idm-logs/man.log` file.
 
 !!! note
     You can check if your data are getting into the ELK infrastructure by using the following command inside the `elasticsearch` docker container to list all data stored in the Elasticsearch:
@@ -43,9 +43,9 @@ Open the [kypo-sandbox-service-config.yml](https://gitlab.ics.muni.cz/muni-kypo-
 
 **3. Start the KYPO platform:**
 
-After the `kypo-sandbox-service-config.yml` is updated, you can start the KYPO platform (if the platform is already running, you must restart it) using the following command in `/vagrant` directory:
+After updating the file with default variables, you can start the KYPO platform by following the [manual](https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo-crp-deployment#run-vagrant-vm). If the KYPO platform is already running, you can apply the changes by running the following command in the `/kypo-crp-deployment` directory: 
 ```
-docker-compose up
+EXTRA_VARS=./local-demo-extra-vars.yml,./local-demo-secrets.yml vagrant up --provision
 ```
 
 **4. Update syslog-ng configuration in the MAN:**
