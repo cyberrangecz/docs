@@ -20,13 +20,15 @@ The KYPO requires Sandbox Provisioning, but if you do not need any provisioning,
 
 ### Ansible Host Groups
 
-On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#default-groups), the KYPO sandbox-service defines five more default host groups.
+On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#default-groups), the KYPO sandbox-service defines seven more default host groups.
 
 * **management**: the group containing all the [sandbox management nodes](../topology-instance/#topology-instance-management), i.e., MAN, BR, and UAN node.
 * **routers**: the group containing all the routers defined in [Topology definition](../topology-definition/#routers).
 * **hosts**: the group containing all the hosts defined in [Topology definition](../topology-definition/#hosts).
-* **ssh_nodes**: the group containing all the hosts and routers defined in [Topology definition](../topology-definition/) with base_box.mgmt_protocol set to `SSH`.
-* **winrm_nodes**: the group containing all the hosts and routers defined in [Topology definition](../topology-definition/) with base_box.mgmt_protocol set to `WINRM`.
+* **ssh_nodes**: the group containing all the hosts and routers defined in [Topology definition](../topology-definition/) with `base_box.mgmt_protocol` set to `SSH` (Since 21.04).
+* **winrm_nodes**: the group containing all the hosts and routers defined in [Topology definition](../topology-definition/) with `base_box.mgmt_protocol` set to `WINRM` (Since 21.04).
+* **user_accessible_nodes**: the group containing all hosts and routers defined in [Topology definition](../topology-definition/), which are connected to a network with attribute `accessible_by_user` set to `True` (Since 21.06).
+* **hidden_hosts**: the group containing all hosts defined in [Topology definition](../topology-definition/) with attribute `hidden` set to `True` (Since 21.06).
 
 You can specify additional Ansible host groups in [Topology definition](../topology-definition/#groups) and then use them in a `playbook.yml` file of the Sandbox Provisioning.
 
@@ -40,8 +42,8 @@ On top of [Ansible special variables](https://docs.ansible.com/ansible/latest/re
 * **kypo_global_sandbox_ip**: the sandbox IPv4 address.
 * **kypo_global_sandbox_name**: the sandbox name, which is the compound of [stack_name_prefix](https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo-crp-deployment/-/blob/master/extra-vars.yml), pool ID and sandbox allocation unit ID.
 * **kypo_global_head_ip**: the KYPO head server IP address.
-* **kypo_global_ssh_public_user_key**: the path on Ansible controller to SSH public user key.
-* **kypo_global_ssh_public_mgmt_key**: the path on Ansible controller to SSH public management key.
+* **kypo_global_ssh_public_user_key**: the path on Ansible controller to SSH public user key (Since 21.04).
+* **kypo_global_ssh_public_mgmt_key**: the path on Ansible controller to SSH public management key (Since 21.04).
 
 ### Ansible Inventory
 
@@ -144,7 +146,14 @@ all:
       hosts:
         home-router: null
         server-router: null
-    user-accessible:
+    user_accessible_nodes:
+      hosts:
+        home: null
+        home-router: null
+    hidden_hosts:
+      hosts:
+        server: null
+    custom-group:
       hosts:
         home: null
         home-router: null
