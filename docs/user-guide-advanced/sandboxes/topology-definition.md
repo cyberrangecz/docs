@@ -140,6 +140,10 @@ Network and routers CIDRs shouldn't overlap with [management networks](../topolo
 
 During a network creation, the OpenStack will take the first IP address of the specified IP address range for a gateway (a Router), the second IP address for DHCP, and the rest for hosts. The OpenStack will non-deterministically take the first address of the network or the first address after a gateway (a Router) address, and if any of net_mappings has an IP address set to one of these addresses, sandbox creation may fail.
 
+### Group Restriction
+
+KYPO sandbox service does not allow the redefinition of its [default hosts groups](../sandbox-provisioning/#ansible-host-groups). Thus, Topology Definition in which these groups are defined is invalid.
+
 *[VM]: Virtual machine
 *[BR]: Border router
 *[UAN]: User Access Node
@@ -150,7 +154,7 @@ An example topology definition in the sandbox definition with the name `small-sa
 * Two hosts. The host server will not be visible in the topology.
 * Two routers.
 * Two networks. Only one is user-accessible and therefore connected to the UAN node.
-* One group, which contains only two nodes accessible by the user.
+* One group, which contains two nodes.
 
 ```yaml
 provider: OpenStack
@@ -213,7 +217,7 @@ router_mappings:
       ip: 10.10.30.1
 
 groups:
-  - name: user-accessible
+  - name: custom-group
     nodes:
       - home
       - home-router
