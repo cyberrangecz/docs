@@ -75,7 +75,7 @@ nav:
   - Authors: authors.md
   - Acknowledgements: acknowledgements.md
   - License: license.md
-copyright: Copyright © 2020 Masaryk University
+copyright: Copyright © 2021 Masaryk University
 
 markdown_extensions:
   - admonition
