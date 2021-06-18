@@ -40,9 +40,12 @@ It is assumed that KYPO CRP is installed according to the [installation guide](.
 
 !!! note
     Results for the adaptive training runs will be added in near future.
+5. Trainees [access Training Run](../../user-guide-basic/training-agenda/training-run/#1-access-training) using the obtained access token. Trainees can resume their accessed training runs if the training instance is still active.
+6. Each training run has assigned a specific sandbox and trainees can access VMs in this sandbox using [Sandbox SSH Access](../../user-guide-advanced/sandboxes/sandbox-access/) or a [Spice console](../../user-guide-basic/training-agenda/training-run/#vm-manipulation).
+7. An organizer of training instance can watch real-time progress of trainees and can see their [linear training run progress](../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear/#progress-of-training-instance) during the game. 
 
 ### After Training
-8. When the training instance is finished, the [results](../../user-guide-basic/training-agenda/training-instance/#results-of-training-instance) are available and ready to be downloaded for further evaluation.
+8. When the training instance is finished, the [results](../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear/#results-of-training-instance) are available and ready for further evaluation.
 9. The assigned pool is unassigned from the training instance and deleted using the delete button on [Pool Overview](../../user-guide-basic/sandbox-agenda/pool/#pool-overview) page to free resources in the cloud. The respective training instance can be deleted using delete button on [Training Instances Overview](../../user-guide-basic/training-agenda/training-instance/#training-instance-overview) page.
 
 ![KYPO-workflow-trainings](../img/basic-concepts/KYPO-workflow-trainings.png)

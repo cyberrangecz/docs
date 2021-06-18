@@ -89,8 +89,4 @@ In addition to connecting to the sandbox using Spice, it is also possible to con
 
 ## Training Run Results
 
-When the trainee finishes a training run, they will see the visualizations of them and the other player's behavior in the game:
-
-<p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-results.png">
-</p>
+When the trainee finishes a training run, they will see the visualization of their and the other players' behavior in the game. The visualization is described in detail in [Visualizations for Linear Training](../../visualizations/visualizations-for-linear/#for-trainees)
