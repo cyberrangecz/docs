@@ -27,9 +27,13 @@ nav:
               - Linear Training Definition: user-guide-basic/training-agenda/training-definition/linear-training-definition.md
               - Adaptive Training Definition: user-guide-basic/training-agenda/training-definition/adaptive-training-definition.md
           - Training Instance: user-guide-basic/training-agenda/training-instance.md
-          - Training Run: 
+          - Training Run:
               - Linear Training Run: user-guide-basic/training-agenda/training-run/linear-training-run.md
               - Adaptive Training Run: user-guide-basic/training-agenda/training-run/adaptive-training-run.md
+          - Visualization Tools:
+              - Overview: user-guide-basic/training-agenda/visualizations/overview.md
+              - Visualizations for Adaptive Training: user-guide-basic/training-agenda/visualizations/visualizations-for-adaptive.md
+              - Visualizations for Linear Training: user-guide-basic/training-agenda/visualizations/visualizations-for-linear.md
       - Administration Agenda:
           - Overview: user-guide-basic/administration-agenda/administration-agenda-overview.md
           - Groups: user-guide-basic/administration-agenda/groups.md

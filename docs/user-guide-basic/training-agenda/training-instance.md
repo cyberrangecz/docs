@@ -95,52 +95,17 @@ Click the archive button :material-package-down:{: .icon .blue } to change the s
 Lists training runs whose references to sandboxes in OpenStack were removed, and their state has been changed to archived. 
 
 ## Progress of Training Instance 
-Page is available only for the linear training instance and visualizes trainees' progress in training runs. The instructor can see the time of particular events made by trainees, like the start of the training run, taken hints, completed level, etc. It is also possible to filter finished and unfinished training runs. 
-
-<p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-instance/TI-progress.png">
-</p>
+To see how the instance progresses, a dedicated visualization tool is available. It is described in [Visualizations for Linear Training](../visualizations/visualizations-for-linear/#progress-of-training-instance).
 
 ## Results of Training Instance 
+
 ### Linear
 
-The page displays all collected data about the linear training instance divided into five tabs. The overview tab displays all graphs and tables in a single tab. Tabs [Score Development](#1-score-development), [Score Scatter Plot](#2-score-scatter-plot), and [Progress](#3-progress) provides various views on trainees activity in the training. Tab [Assessments](#4-assessments) provides information about trainees' answers in quizzes and assessments. 
-
-#### 1. Score Development 
-The tab displays a graph with a real-time development of the trainees' scores marked in the table under the graph. The graph also displays various types of events (displayed by a small circle). To visualize events taken by trainees, check/uncheck a checkbox displayed next to the table with participants. 
-
-<p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-instance/TI-score-dev.png">
-</p>
-
-#### 2. Score Scatter Plot 
-This visualization provides an overview of the training results. It helps to compare the score and duration of the whole training or individual levels. Dots show the positions of the trainees based on score and time. They indicate the correlation between the two factors and help to pinpoint the outliers or allocate clusters.
-
-<p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-instance/TI-score-scatter.png">
-</p>
-
-#### 3. Progress 
-The Progress visualization is a view on available data distilled from the "Progress of Training Instance". It supports additional interaction (such as level sorting by their duration) and gives a full picture of the trainee walkthrough. The color scale helps to highlight individual levels for all trainees as well as their usage of hints or submission of wrong flags for the levels. It helps to find skilled trainees or flaws in the training design by observing the details of its progression.
-
-<p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-instance/TI-score-progress.png">
-</p>
-
-#### 4. Assessments 
-Displays statistics of individual assessment answers.
- 
-<p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-instance/TI-assessment.png">
-</p>
-
+After a training session finishes, additional visualizations display details regarding its summary and its trainees' results. The visualizations are described in [Visualizations for Linear Training](../visualizations/visualizations-for-linear/#results-of-training-instance).
 
 ### Adaptive
 
-The page displays only one tab with the Sankey diagram. 
-#### 1. Sankey Diagram
-Diagram represents participant's transitions between the tasks of the respective training phases. Each transition also contains the number of participants. 
+A visualization of trainees' transitions between the tasks is described in [Visualizations for Adaptive Training](../visualizations/visualizations-for-adaptive/).
 
-<p align="center">
-  <img src="../../../img/user-guide-basic/training-agenda/training-instance/ATI-sankey.png">
-</p>
+
+
