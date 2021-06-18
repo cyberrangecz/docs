@@ -13,11 +13,11 @@ As an instructor, you can see the ongoing course of the training runs and furthe
 </p>
 
 !!! info
-    In the visualization, exclamation marks (![exclamation_mark](../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/exclamation.png)) can appear next to trainees or level tiles. They indicate a situation that may need further attention - upon a mouse over, textual information appears. On a mouse click on the mark, it fades to signalize that the issue is being solved and does need to be highlighted.
+    In the visualization, exclamation marks (![exclamation_mark](../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/exclamation.png)) can appear next to trainees or level tiles. They indicate a situation that may need further attention - upon a mouse over, textual information appears. On a mouse click on the mark, it fades to signalize that the issue is being solved and does need to be highlighted.
 
 **A - Overview Timeline**
 
- The time displayed in the upper right corner indicates the estimated end of the session based on the current progression. A small arrow ![arrow](../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/arrow.png) denotes the original scheduled end time to show the deviation from the schedule. On hover, exact scheduled end time shows. As the training session progresses, the timeline fills accordingly.
+ The time displayed in the upper right corner indicates the estimated end of the session based on the current progression. A small arrow ![arrow](../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/arrow.png) denotes the original scheduled end time to show the deviation from the schedule. On hover, exact scheduled end time shows. As the training session progresses, the timeline fills accordingly.
 
 **B - Trainee Selection**
 
@@ -35,7 +35,7 @@ It gives a full picture of the trainees walkthrough. Upon filtering in the prece
 
 Each row represents an individual trainee. Bars of each row are training levels - gray levels are finished levels, current levels are colored green/yellow/red, according to their delay opposed to the scheduled amount of time. The stripped bars denote the scheduled time for the ongoing or upcoming levels.
 
-The bars can display events of the trainees. When taking a hint ![hint](../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/hint.png) or submitting a wrong flag ![wrong-flag](../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/flag.png), the event displays in the visualization, colored the same as its level. Multiple events of the same type triggered in quick succession show as one, with a corresponding number on it. On mouse-over, detailed information tooltip shows.
+The bars can display events of the trainees. When taking a hint ![hint](../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/hint.png) or submitting a wrong flag ![wrong-flag](../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/flag.png), the event displays in the visualization, colored the same as its level. Multiple events of the same type triggered in quick succession show as one, with a corresponding number on it. On mouse-over, detailed information tooltip shows.
 
 **Individual Trainee Detail**
 
