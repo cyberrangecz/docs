@@ -50,7 +50,7 @@ This page lists all definitions that are available to the instructor (the instru
     
 ??? preview "Preview"
    
-    Click the button to show how the training definition will look from the perspective of the trainee.
+    Click the button to show how the training definition will look from the perspective of the trainee. Solution and hints are automatically revealed in the preview of the training definition in the opposite of the training run where the hint or solution needs to be revealed by clicking the respective button.
     
     <p align="center">
       <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-preview.png">
@@ -58,6 +58,7 @@ This page lists all definitions that are available to the instructor (the instru
     
     !!! info
         Sandbox topologies in the preview are mocked and not connected to any real sandbox, so they cannot be used to access any virtual network.
+
     
 ??? lock "Release"
    

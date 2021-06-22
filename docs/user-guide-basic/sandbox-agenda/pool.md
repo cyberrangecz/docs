@@ -54,10 +54,12 @@ Instructors can click on the title of each pool to see a more [detailed view](#p
 
 
 ## Create Pool
-This page contains a short form that needs to be filled out before creating a new pool. The field **Sandbox Pool Size** specifies the maximal number of sandboxes that can be created inside the pool. The instructor must also select one of the available [sandbox definitions](./sandbox-definition.md) created by the instructor. Sandbox definitions define the topology of sandboxes and user configuration of virtual machines created in a sandbox. After filling out all the fields, confirm the creation of a new pool by clicking on the ![create-button](../../img/buttons/create-button.png) button.
+This page contains a short form that needs to be filled out before creating a new pool. The field **Sandbox Pool Size** specifies the maximal number of sandboxes that can be created inside the pool. The instructor must also select one of the available [sandbox definitions](./sandbox-definition.md) created by the instructor. Sandbox definitions define the topology of sandboxes and user configuration of virtual machines created in a sandbox. After filling out all the fields, confirm the creation of a new pool by clicking on the ![create-button](../../img/buttons/create-button.png) button. The sandboxes built in the pool are always created from the same definition and the same revision. In fact, during creation, the pool stores the current revision of the definition. If the revision of the sandbox definition has changed, e.g. new commit has been added to the specified branch, and you want to build sandboxes from a new revision, you need to make a new pool.
  
 ![create-pool](../../img/user-guide-basic/sandbox-agenda/pool/create-pool.png)
 
+!!! warning 
+    
 
 ## Pool Detail
 When the instructor clicks the title of a given pool in **Pool Overview** they will be redirected to the **Pool Detail** page, which contains panels addressing [sandbox instances](#1-sandbox-instances), [allocation units](#2-allocation-units), [allocation requests](#3-allocation-requests), and [cleanup requests](#4-cleanup-requests).
