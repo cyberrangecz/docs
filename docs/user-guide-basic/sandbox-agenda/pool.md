@@ -58,8 +58,6 @@ This page contains a short form that needs to be filled out before creating a ne
  
 ![create-pool](../../img/user-guide-basic/sandbox-agenda/pool/create-pool.png)
 
-!!! warning 
-    
 
 ## Pool Detail
 When the instructor clicks the title of a given pool in **Pool Overview** they will be redirected to the **Pool Detail** page, which contains panels addressing [sandbox instances](#1-sandbox-instances), [allocation units](#2-allocation-units), [allocation requests](#3-allocation-requests), and [cleanup requests](#4-cleanup-requests).
