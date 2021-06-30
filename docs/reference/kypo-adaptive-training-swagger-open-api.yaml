@@ -1,7 +1,7 @@
 ---
 swagger: "2.0"
 info:
-  version: "Version: 1.0.34"
+  version: "Version: 1.0.39"
   title: "KYPO Adaptive Training Service - API Reference"
 host: "localhost:8082"
 basePath: "/kypo-adaptive-training/api/v1"
@@ -2237,7 +2237,7 @@ paths:
       - "Visualizations"
       summary: "Get necessary visualization info for training instance."
       description: ""
-      operationId: "getSankeyGraphVisualization"
+      operationId: "getSankeyDiagramVisualization"
       produces:
       - "application/json"
       parameters:
@@ -2251,7 +2251,7 @@ paths:
         200:
           description: "Data for visualization found."
           schema:
-            $ref: "#/definitions/SankeyGraphDTO"
+            $ref: "#/definitions/SankeyDiagramDTO"
         404:
           description: "Training instance with given id not found."
           schema:
@@ -2575,78 +2575,8 @@ definitions:
   ApiSubError:
     type: "object"
     properties:
-      status:
+      message:
         type: "string"
-        example: "404 Not found (different for each type of exception)."
-        description: "The HTTP response status code"
-        enum:
-        - "CONTINUE"
-        - "SWITCHING_PROTOCOLS"
-        - "PROCESSING"
-        - "CHECKPOINT"
-        - "OK"
-        - "CREATED"
-        - "ACCEPTED"
-        - "NON_AUTHORITATIVE_INFORMATION"
-        - "NO_CONTENT"
-        - "RESET_CONTENT"
-        - "PARTIAL_CONTENT"
-        - "MULTI_STATUS"
-        - "ALREADY_REPORTED"
-        - "IM_USED"
-        - "MULTIPLE_CHOICES"
-        - "MOVED_PERMANENTLY"
-        - "FOUND"
-        - "MOVED_TEMPORARILY"
-        - "SEE_OTHER"
-        - "NOT_MODIFIED"
-        - "USE_PROXY"
-        - "TEMPORARY_REDIRECT"
-        - "PERMANENT_REDIRECT"
-        - "BAD_REQUEST"
-        - "UNAUTHORIZED"
-        - "PAYMENT_REQUIRED"
-        - "FORBIDDEN"
-        - "NOT_FOUND"
-        - "METHOD_NOT_ALLOWED"
-        - "NOT_ACCEPTABLE"
-        - "PROXY_AUTHENTICATION_REQUIRED"
-        - "REQUEST_TIMEOUT"
-        - "CONFLICT"
-        - "GONE"
-        - "LENGTH_REQUIRED"
-        - "PRECONDITION_FAILED"
-        - "PAYLOAD_TOO_LARGE"
-        - "REQUEST_ENTITY_TOO_LARGE"
-        - "URI_TOO_LONG"
-        - "REQUEST_URI_TOO_LONG"
-        - "UNSUPPORTED_MEDIA_TYPE"
-        - "REQUESTED_RANGE_NOT_SATISFIABLE"
-        - "EXPECTATION_FAILED"
-        - "I_AM_A_TEAPOT"
-        - "INSUFFICIENT_SPACE_ON_RESOURCE"
-        - "METHOD_FAILURE"
-        - "DESTINATION_LOCKED"
-        - "UNPROCESSABLE_ENTITY"
-        - "LOCKED"
-        - "FAILED_DEPENDENCY"
-        - "UPGRADE_REQUIRED"
-        - "PRECONDITION_REQUIRED"
-        - "TOO_MANY_REQUESTS"
-        - "REQUEST_HEADER_FIELDS_TOO_LARGE"
-        - "UNAVAILABLE_FOR_LEGAL_REASONS"
-        - "INTERNAL_SERVER_ERROR"
-        - "NOT_IMPLEMENTED"
-        - "BAD_GATEWAY"
-        - "SERVICE_UNAVAILABLE"
-        - "GATEWAY_TIMEOUT"
-        - "HTTP_VERSION_NOT_SUPPORTED"
-        - "VARIANT_ALSO_NEGOTIATES"
-        - "INSUFFICIENT_STORAGE"
-        - "LOOP_DETECTED"
-        - "BANDWIDTH_LIMIT_EXCEEDED"
-        - "NOT_EXTENDED"
-        - "NETWORK_AUTHENTICATION_REQUIRED"
     description: "Superclass for classes JavaApiError and PythonApiError"
   BasicPhaseInfoDTO:
     type: "object"
@@ -2955,16 +2885,88 @@ definitions:
     - $ref: "#/definitions/ApiSubError"
     - type: "object"
       properties:
-        timestamp:
-          type: "integer"
-          format: "int64"
-          example: "1574062900 (different for each type of exception)"
-          description: "The time when the exception occurred"
         message:
           type: "string"
           example: "The IDMGroup could not be found in database (different for each\
             \ type of exception)."
           description: "The specific description of the ApiError."
+        timestamp:
+          type: "integer"
+          format: "int64"
+          example: "1574062900 (different for each type of exception)"
+          description: "The time when the exception occurred"
+        status:
+          type: "string"
+          example: "404 Not found (different for each type of exception)."
+          description: "The HTTP response status code"
+          enum:
+          - "CONTINUE"
+          - "SWITCHING_PROTOCOLS"
+          - "PROCESSING"
+          - "CHECKPOINT"
+          - "OK"
+          - "CREATED"
+          - "ACCEPTED"
+          - "NON_AUTHORITATIVE_INFORMATION"
+          - "NO_CONTENT"
+          - "RESET_CONTENT"
+          - "PARTIAL_CONTENT"
+          - "MULTI_STATUS"
+          - "ALREADY_REPORTED"
+          - "IM_USED"
+          - "MULTIPLE_CHOICES"
+          - "MOVED_PERMANENTLY"
+          - "FOUND"
+          - "MOVED_TEMPORARILY"
+          - "SEE_OTHER"
+          - "NOT_MODIFIED"
+          - "USE_PROXY"
+          - "TEMPORARY_REDIRECT"
+          - "PERMANENT_REDIRECT"
+          - "BAD_REQUEST"
+          - "UNAUTHORIZED"
+          - "PAYMENT_REQUIRED"
+          - "FORBIDDEN"
+          - "NOT_FOUND"
+          - "METHOD_NOT_ALLOWED"
+          - "NOT_ACCEPTABLE"
+          - "PROXY_AUTHENTICATION_REQUIRED"
+          - "REQUEST_TIMEOUT"
+          - "CONFLICT"
+          - "GONE"
+          - "LENGTH_REQUIRED"
+          - "PRECONDITION_FAILED"
+          - "PAYLOAD_TOO_LARGE"
+          - "REQUEST_ENTITY_TOO_LARGE"
+          - "URI_TOO_LONG"
+          - "REQUEST_URI_TOO_LONG"
+          - "UNSUPPORTED_MEDIA_TYPE"
+          - "REQUESTED_RANGE_NOT_SATISFIABLE"
+          - "EXPECTATION_FAILED"
+          - "I_AM_A_TEAPOT"
+          - "INSUFFICIENT_SPACE_ON_RESOURCE"
+          - "METHOD_FAILURE"
+          - "DESTINATION_LOCKED"
+          - "UNPROCESSABLE_ENTITY"
+          - "LOCKED"
+          - "FAILED_DEPENDENCY"
+          - "UPGRADE_REQUIRED"
+          - "PRECONDITION_REQUIRED"
+          - "TOO_MANY_REQUESTS"
+          - "REQUEST_HEADER_FIELDS_TOO_LARGE"
+          - "UNAVAILABLE_FOR_LEGAL_REASONS"
+          - "INTERNAL_SERVER_ERROR"
+          - "NOT_IMPLEMENTED"
+          - "BAD_GATEWAY"
+          - "SERVICE_UNAVAILABLE"
+          - "GATEWAY_TIMEOUT"
+          - "HTTP_VERSION_NOT_SUPPORTED"
+          - "VARIANT_ALSO_NEGOTIATES"
+          - "INSUFFICIENT_STORAGE"
+          - "LOOP_DETECTED"
+          - "BANDWIDTH_LIMIT_EXCEEDED"
+          - "NOT_EXTENDED"
+          - "NETWORK_AUTHENTICATION_REQUIRED"
         errors:
           type: "array"
           example: "[The requested resource was not found (different for each type\
@@ -3020,8 +3022,6 @@ definitions:
         format: "int64"
       sort:
         $ref: "#/definitions/Sort"
-      paged:
-        type: "boolean"
       unpaged:
         type: "boolean"
       pageNumber:
@@ -3030,6 +3030,8 @@ definitions:
       pageSize:
         type: "integer"
         format: "int32"
+      paged:
+        type: "boolean"
   Pagination:
     type: "object"
     properties:
@@ -3193,6 +3195,7 @@ definitions:
         format: "int32"
         example: 0
         description: "Order of question"
+        minimum: 0
       text:
         type: "string"
         example: "What's the capital of Canada?"
@@ -3285,6 +3288,7 @@ definitions:
     - "id"
     - "order"
     - "phaseId"
+    - "questionIds"
     - "successRate"
     properties:
       id:
@@ -3297,6 +3301,7 @@ definitions:
         format: "int32"
         example: 0
         description: "Order of question"
+        minimum: 0
       questionIds:
         type: "array"
         description: "Set of IDs of questions related to the specified questionnaire"
@@ -3499,7 +3504,7 @@ definitions:
         type: "string"
       name_of_microservice:
         type: "string"
-  SankeyGraphDTO:
+  SankeyDiagramDTO:
     type: "object"
     properties:
       nodes:
@@ -3555,6 +3560,8 @@ definitions:
         position: 4
         description: "It defines the allowed number of incorrect answers submitted\
           \ by the player"
+        minimum: 0
+        maximum: 100
       modifySandbox:
         type: "boolean"
         example: true
@@ -3567,6 +3574,7 @@ definitions:
         position: 6
         description: "It defines the expected duration of sandbox change defined in\
           \ seconds"
+        minimum: 0
   TaskDTO:
     type: "object"
     required:
@@ -3752,12 +3760,15 @@ definitions:
         position: 1
         description: "It defines the expected duration of sandbox change defined in\
           \ seconds"
+        minimum: 0
       answer:
         type: "string"
         example: "secretFlag"
         position: 2
         description: "Keyword that must be found in the task. Necessary in order to\
           \ get to the next phase"
+        minLength: 0
+        maxLength: 50
       solution:
         type: "string"
         example: "Open secret.txt"
@@ -3770,6 +3781,8 @@ definitions:
         position: 4
         description: "It defines the allowed number of incorrect answers submitted\
           \ by the player"
+        minimum: 0
+        maximum: 100
       modifySandbox:
         type: "boolean"
         example: true
@@ -4378,7 +4391,7 @@ definitions:
           type: "integer"
           format: "int32"
           example: 50
-          description: "Estimated time it takes to finish the phase (in seconds)."
+          description: "Estimated time it takes to finish the phase (in minutes)."
           minimum: 0
         allowedCommands:
           type: "integer"
@@ -4428,12 +4441,14 @@ definitions:
         example: 10
         position: 1
         description: "Maximal number of allowed wrong answers provided by played"
+        minimum: 0
       allowedCommands:
         type: "integer"
         format: "int32"
         example: 10
         position: 2
         description: "Maximal number of allowed commands provided by played"
+        minimum: 0
       estimatedDuration:
         type: "integer"
         format: "int32"
@@ -4441,6 +4456,7 @@ definitions:
         position: 3
         description: "Estimated time (minutes) taken by the player to solve the training\
           \ phase"
+        minimum: 0
       decisionMatrix:
         type: "array"
         position: 4
@@ -4632,3 +4648,4 @@ definitions:
         example: "answer"
         description: "Answer to be validated."
     description: "Encapsulation of the answer submitted in training phase."
+
