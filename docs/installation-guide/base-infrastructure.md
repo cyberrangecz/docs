@@ -5,7 +5,7 @@ infrastructure used by the KYPO Cyber Range Platform.
 
 ## Prerequisites
 
-KYPO Cyber Range Platform is tested with Open Stack releases Stein and Train, but it is quite possible it will also work on newer releases.
+KYPO Cyber Range Platform is tested with Open Stack releases from Stein to Wallaby, but it is quite possible it will also work on newer releases.
 
 At this moment, you should have installed [OpenStack](https://docs.openstack.org/install-guide/) with the following [OpenStack Services](https://www.openstack.org/software/project-navigator/openstack-components).
 
