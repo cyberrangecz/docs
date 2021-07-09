@@ -32,4 +32,4 @@ Or click the button in the global navigation in the section Trainings.
 </p>
 
 !!! note
-    If you have only the role `ROLE_TRAINING_TRAINEE` you will be after a successful login directly forwarded to the page [Training Runs Overview](../training-run/linear-training-run/#training-runs-overview) without any further action.
+    If you only have the role `ROLE_TRAINING_TRAINEE` you will be directly forwarded to the page [Training Runs Overview](../training-run/linear-training-run/#training-runs-overview) without any further action after a successful login.
