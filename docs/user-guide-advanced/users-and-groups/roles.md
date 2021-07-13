@@ -35,7 +35,7 @@ Current roles that are used in the KYPO portal can be divided into categories ([
 
 ### User and Group Roles
 
-``ROLE_USER_AND_GROUP_GUEST``: **Guests** can only see information about himself or basic information about other users. It is the default role for every user of the KYPO platform.
+``ROLE_USER_AND_GROUP_GUEST``: **Guests** can only see information about themselves and basic information about other users. It is the default role for every user of the KYPO platform.
 
 ``ROLE_USER_AND_GROUP_USER``: **Users** have at this moment the same access rights as the previous role **guest**.
 

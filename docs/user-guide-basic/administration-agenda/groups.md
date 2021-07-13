@@ -2,7 +2,7 @@ This page is used to list all groups created in the KYPO platform. Groups are es
 
 ![group-overview](../../img/user-guide-basic/administration-agenda/groups/group-overview.png) 
 
-To create a new group, the administrator must click on ![create-button](../../img/buttons/create-button.png) button that redirects him to the page [Create Group](#create-or-edit-group). The last column of the table contains actions :material-pencil:{: .icon .blue } &nbsp; :material-delete:{: .red .icon }: 
+To create a new group, the administrator must click on ![create-button](../../img/buttons/create-button.png) button that redirects them to the page [Create Group](#create-or-edit-group). The last column of the table contains actions :material-pencil:{: .icon .blue } &nbsp; :material-delete:{: .red .icon }: 
 
 
 ??? pencil "Edit"
