@@ -13,7 +13,7 @@ A Topology Instance of a Sandbox is created in the cloud platform and connected 
 Sandbox access is divided into two types based on privileges.[Management access](#management-access) is available for those who manage sandboxes or KYPO Cyber Range Platform (role `instructor`). [User access](#user-access) is provided for everyone else (role `trainee`).
 
 !!! note
-    Windows users are required to install WSL or Git Bash.
+    Windows users are required to install `Git Bash` or `WSL`. On Windows, all the following actions to connect to the sandboxes have to be performed using the `Git Bash` or `WSL` console. Please note that it is not required to create the `.ssh` folder. That will be created automatically by the `Extract action` using the `unzip` command."
 
 ### Management Access
 
