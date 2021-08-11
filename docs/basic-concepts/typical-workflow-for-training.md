@@ -35,8 +35,8 @@ It is assumed that KYPO CRP is installed according to the [installation guide](.
 
 ### During Training
 5. Trainees [access Training Run](../../user-guide-basic/training-agenda/training-run/linear-training-run/#1-access-training) using the obtained access token. Trainees can resume their accessed training runs if the training instance is still active.
-6. Each training run has assigned a specific sandbox and trainees can access VMs in this sandbox using [Sandbox SSH Access](../../user-guide-advanced/sandboxes/sandbox-ssh-access/) or a [Spice console](../../user-guide-basic/training-agenda/training-run/linear-training-run/#vm-manipulation).
-7. An organizer of training instance can watch real-time progress of trainees and can see their [linear training run results](../../user-guide-basic/training-agenda/training-run/linear-training-run/#training-run-results) during the game. 
+6. Each training run has assigned a specific sandbox and trainees can access VMs in this sandbox using [Sandbox SSH Access](../../user-guide-advanced/sandboxes/sandbox-access/) or a [Spice console](../../user-guide-basic/training-agenda/training-run/linear-training-run/#vm-manipulation).
+7. An organizer of training instance can watch real-time progress of trainees and can see their [linear training run results](../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear/#progress-of-training-instance) during the game. 
 
 !!! note
     Results for the adaptive training runs will be added in near future.
