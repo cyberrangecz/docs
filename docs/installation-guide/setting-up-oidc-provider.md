@@ -5,7 +5,11 @@
 Regardless of the use internal or external OIDC provider, you must register a new **Client** to obtain `client_id` and **Resource Server** to obtain `client_id` and `client_secret`. 
 
 !!! warning
-    Make sure that your OIDC provider uses **JSON Web Token (JWT)** access tokens. Opaque tokens are not supported by the KYPO platform. 
+    Make sure that your OIDC provider:
+
+    * Uses **JSON Web Token (JWT)** access tokens. Opaque tokens are not supported by the KYPO platform. 
+
+    * Supports the **introspection endpoint** to validate the access token and retrieve its underlying authorization.
 
 
 ### Client
