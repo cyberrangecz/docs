@@ -157,8 +157,6 @@ An example topology definition in the sandbox definition with the name `small-sa
 * One group, which contains two nodes.
 
 ```yaml
-provider: OpenStack
-
 name: small-sandbox
 hosts:
   - name: server
