@@ -108,7 +108,7 @@ In the second panel of the training definition editor, the instructor can add an
 </p>
 
 #### Edit Levels Panel
-The instructor can add, delete, and edit game levels of the training definition in the third panel.
+The instructor can add, delete, and edit training levels of the training definition in the third panel.
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-edit-levels.png">
@@ -123,14 +123,14 @@ To add a new level the instructor can click ![Add-button](../../../img/buttons/a
 !!! tip
     To change the order of levels, use the drag-and-drop mechanism. Select a level in the level bar by "grabbing" it and dragging it to a different position.
 
-##### I. Game Level
-At the game level, a trainee can access a virtual network inside the sandbox to find a solution to the assignment. The instructor can fill this form to specify details of the new level (when the instructor is done editing level, they must save changes with the ![save](../../../img/buttons/save-button.png) button.
+##### I. Training Level
+At the training level, a trainee can access a virtual network inside the sandbox to find a solution to the assignment. The instructor can fill this form to specify details of the new level (when the instructor is done editing level, they must save changes with the ![save](../../../img/buttons/save-button.png) button.
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-GL-panel.png">
 </p>
 
-Under the game level editing form, there is a fourth additional **Hints** panel that the instructor can use to create, delete, and edit hints associated with a given game level.
+Under the training level editing form, there is a fourth additional **Hints** panel that the instructor can use to create, delete, and edit hints associated with a given training level.
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-hint-panel.png">

@@ -78,7 +78,7 @@ Access to the sandbox nodes is through the **KYPO proxy**, a **MAN** node, and a
     !!! warning
         The SSH config file will be generated with the host's directive `User` set to `user-access`, therefore setting variable `kypo_user_access_username` to value `user-access` modify the SSH config file later.
 
-1. Download the SSH access zip file from [Game Level](../../../user-guide-basic/training-agenda/training-run/#3-game-level) of the Training Run page with topology visualization.
+1. Download the SSH access zip file from [Training Level](../../../user-guide-basic/training-agenda/training-run/#3-training-level) of the Training Run page with topology visualization.
 
 2. Extract the `ssh-access.zip` file to the `~/.ssh/` directory.
 

@@ -27,7 +27,7 @@ All trainees (their avatars and/or names) are listed here. Each trainee can be s
 
 **C - Level Selection**
 
-These tiles represent individual training levels. Each level tile also holds information regarding the number of trainees who currently solve the level. On hover, level name and correct flag shows in a tooltip. Additionally, the last tile displays all the trainees who have already finished the whole training session. For each level, you can display it’s trainees on click.
+These tiles represent individual training levels. Each level tile also holds information regarding the number of trainees who currently solve the level. On hover, level name and correct answer shows in a tooltip. Additionally, the last tile displays all the trainees who have already finished the whole training session. For each level, you can display it’s trainees on click.
 
 **D - Progress Visualization**
 
@@ -35,7 +35,7 @@ It gives a full picture of the trainees walkthrough. Upon filtering in the prece
 
 Each row represents an individual trainee. Bars of each row are training levels - gray levels are finished levels, current levels are colored green/yellow/red, according to their delay opposed to the scheduled amount of time. The stripped bars denote the scheduled time for the ongoing or upcoming levels.
 
-The bars can display events of the trainees. When taking a hint ![hint](../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/hint.png) or submitting a wrong flag ![wrong-flag](../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/flag.png), the event displays in the visualization, colored the same as its level. Multiple events of the same type triggered in quick succession show as one, with a corresponding number on it. On mouse-over, detailed information tooltip shows.
+The bars can display events of the trainees. When taking a hint ![hint](../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/hint.png) or submitting a wrong answer ![wrong-answer](../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/flag.png), the event displays in the visualization, colored the same as its level. Multiple events of the same type triggered in quick succession show as one, with a corresponding number on it. On mouse-over, detailed information tooltip shows.
 
 **Individual Trainee Detail**
 

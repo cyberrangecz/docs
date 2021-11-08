@@ -4,31 +4,33 @@
 
 | Surname | Name | Role | Active |
 | ------ | ------ | ------ | ------ |
-| Andoniadis | Kamil | Python & DevOps leader | :material-check-bold:{: .icon .green } |
+| *Andoniadis* | *Kamil* | *Python & DevOps leader* | :material-close-thick:{: .icon .red } |
 | Dočkalová Burská | Karolína | UI/UX developer | :material-check-bold:{: .icon .green } |
 | *Duda* | *Jan* | *Java developer* | :material-close-thick:{: .icon .red } |
 | *Hai Duong* | *Tran* | *Angular developer* | :material-close-thick:{: .icon .red } |
-| Hamerník | Martin | Angular leader | :material-check-bold:{: .icon .green } |
+| *Hamerník* | *Martin* | *Angular leader* | :material-close-thick:{: .icon .red } |
 | Ignác | Igor | Angular developer | :material-check-bold:{: .icon .green } |
-| Jaduš | Boris | Java developer | :material-check-bold:{: .icon .green } |
+| *Jaduš* | *Boris* | *Java developer* | :material-close-thick:{: .icon .red } |
 | Kočamba | Erik | Angular developer | :material-check-bold:{: .icon .green } |
 | Ošlejšek | Radek |  Visualisation R&D | :material-check-bold:{: .icon .green } |
 | Paluba | Juraj | Python developer | :material-check-bold:{: .icon .green } |
-| Pilár | Dominik | Java developer | :material-check-bold:{: .icon .green } |
-| Rusňák | Vít | UI/UX R&D | :material-check-bold:{: .icon .green } |
+| Pilár | Dominik | Java & Angular developer | :material-check-bold:{: .icon .green } |
+| *Rusňák* | *Vít* | *UI/UX R&D* | :material-close-thick:{: .icon .red } |
+| Sapák | Tomáš | DevOps leader | :material-check-bold:{: .icon .green } |
 | *Staněk* | *Miloslav* | *Python developer* | :material-close-thick:{: .icon .red } |
 | Šeda | Pavel | Java leader | :material-check-bold:{: .icon .green } |
 | Tovarňák| Daniel | Technical leader | :material-check-bold:{: .icon .green } |
+| Urban | Michal | Python developer | :material-check-bold:{: .icon .green } |
 | *Zbončáková* | *Tatiana* | *Python developer* | :material-close-thick:{: .icon .red } |
 
 ## Advisory Board
 
 | Surname | Name | Role |
 | ------ | ------ | ------ |
-| Čegan | Jakub | Project management |
-| Čeleda | Pavel | KYPO principal investigator |
+| Čegan | Jakub | Industrial Applications & Business Development |
+| Čeleda | Pavel | KYPO Principal Investigator |
 | Tovarňák| Daniel |  Architecture & Design |
-| Vykopal | Jan | Educational research & User testing |
+| Vykopal | Jan | Project Management, Educational research & User testing |
 
 ## Special Recognition
 

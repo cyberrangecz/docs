@@ -6,7 +6,7 @@ The page consists of a panel providing [access to training](#1-access-training) 
 </p>
 
 ### 1. Access Training
-Enter the access token prefix and PIN provided by the instructor of the training instance into the two fields shown in the above figure. By clicking on ![access-button](../../../img/buttons/access-button.png) the button the system checks if there are any active training instances with a corresponding access token and if there are any available sandboxes. If those conditions are fulfilled, the trainee will access the training run (particular game) with an assigned unique sandbox.
+Enter the access token prefix and PIN provided by the instructor of the training instance into the two fields shown in the above figure. By clicking on ![access-button](../../../img/buttons/access-button.png) the button the system checks if there are any active training instances with a corresponding access token and if there are any available sandboxes. If those conditions are fulfilled, the trainee will access the training run (particular training) with an assigned unique sandbox.
 
 !!! note
     If a trainee already accessed training run in a particular training instance and haven't finished it yet, the training run will be resumed. 
@@ -17,7 +17,7 @@ A trainee can view the results of the finished training run by clicking the :mat
 
 ## Training Run
 
-In the training run, trainees will go through predesigned levels. There is a bar listing all of the levels in order at the top of the training run page. The finished levels are marked by :material-checkbox-marked-circle:{: .blue .icon}, the current level is highlighted in blue and the following levels are gray. In the current version, there are available three types of level ([Assessment level](#1-assessment-level), [Info level](#2-info-level), and [Game level](#3-game-level)).
+In the training run, trainees will go through predesigned levels. There is a bar listing all of the levels in order at the top of the training run page. The finished levels are marked by :material-checkbox-marked-circle:{: .blue .icon}, the current level is highlighted in blue and the following levels are gray. In the current version, there are available three types of level ([Assessment level](#1-assessment-level), [Info level](#2-info-level), and [Training level](#3-training-level)).
 
 ![level-bar](../../../img/user-guide-basic/training-agenda/training-run/TR-level-bar.png)
 
@@ -41,11 +41,11 @@ The info level is used to provide important information to trainees in text form
   <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-info.png">
 </p>
 
-### 3. Game Level 
-At the game level, the trainee must complete the assignment specified on the page's left side. On the right, side the sandbox topology is displayed. The layout of the topology can be changed with the controls panel(see the following figure):
+### 3. Training Level 
+At the training level, the trainee must complete the assignment specified on the page's left side. On the right, side the sandbox topology is displayed. The layout of the topology can be changed with the controls panel(see the following figure):
 
 <p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-game.png">
+  <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-training.png">
 </p>
 
 
@@ -89,4 +89,4 @@ In addition to connecting to the sandbox using Spice, it is also possible to con
 
 ## Training Run Results
 
-When the trainee finishes a training run, they will see the visualization of their and the other players' behavior in the game. The visualization is described in detail in [Visualizations for Linear Training](../../visualizations/visualizations-for-linear/#for-trainees)
+When the trainee finishes a training run, they will see the visualization of their and the other players' behavior in the training. The visualization is described in detail in [Visualizations for Linear Training](../../visualizations/visualizations-for-linear/#for-trainees)

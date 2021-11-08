@@ -8,7 +8,7 @@ The content of the whole exercise is described using so-called training definiti
  The *linear definition* consist of three types of levels: 
 
 1. **Info Level**: Contains information for the trainee (welcome message or important information about the following levels).
-2. **Game Level**: In the level, the user has to solve a predefined assignment. By solving the assignment, the trainee acquires a secret flag, and after submitting the flag, they can continue to the next level of the training. 
+2. **Training Level**: In the level, the user has to solve a predefined assignment. By solving the assignment, the trainee acquires a secret answer, and after submitting the answer, they can continue to the next level of the training. 
 3. **Assessment Level**: Can be either a test or a questionnaire, and it serves to test users’ knowledge or gets feedback from users. The assessment can contain one of the following types of question: 
     * **Multiple choice question (MCQ)**: Trainees are asked to select one or multiple answers from the choices offered as a list.
     * **Extended matching item (EMI)**: Trainees are asked to pair items from row and column that are semantically related. 

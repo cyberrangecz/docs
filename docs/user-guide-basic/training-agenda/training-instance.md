@@ -64,7 +64,7 @@ During the creation of the training instance, the second and third panels are di
 </p>
 
 ### 1. Create/Edit Training Instance 
-An instructor can use this panel to edit basic information about the training instance. The title is used to identify a training instance, among others but doesn't have to be unique. The start time and end time defines the time frame when trainees can access training run of the appropriate training instance. Both time values must be in the future, and the start time must be before the end time. The access token is used by the trainees to access a game. The instructor must also choose a Linear/Adaptive Training Definition, but they can only choose from:
+An instructor can use this panel to edit basic information about the training instance. The title is used to identify a training instance, among others but doesn't have to be unique. The start time and end time defines the time frame when trainees can access training run of the appropriate training instance. Both time values must be in the future, and the start time must be before the end time. The access token is used by the trainees to access a training. The instructor must also choose a Linear/Adaptive Training Definition, but they can only choose from:
 
 * Released training definitions and definitions created by the instructor, if they also have the instructor role. 
 * All definitions (released/unreleased), if they also have the administrator role. 
@@ -84,7 +84,7 @@ Provides a summary of the entire run of the training instance and allows the ins
 </p>
 
 ### 1. Overview
-Overview displays basic information about training instance, as shown in the above figure. Provides links to display token and link to the detail of the assigned pool. Click on the ![show-progress](../../img/buttons/show-progess-button.png) button **(only linear training instance)** to redirect to the [Progress of Training Instance](#progress-of-training-instance) page to see the game progress of participants in time. Click on another button ![show-results](../../img/buttons/show-results-button.png) to redirect to the [Results of Training Instance](#results-of-training-instance)  page to see summary results of training instance visualized on various graphs and in tables. 
+Overview displays basic information about training instance, as shown in the above figure. Provides links to display token and link to the detail of the assigned pool. Click on the ![show-progress](../../img/buttons/show-progess-button.png) button **(only linear training instance)** to redirect to the [Progress of Training Instance](#progress-of-training-instance) page to see the training progress of participants in time. Click on another button ![show-results](../../img/buttons/show-results-button.png) to redirect to the [Results of Training Instance](#results-of-training-instance)  page to see summary results of training instance visualized on various graphs and in tables. 
 
 ### 2. Active Training Runs
 Lists active training runs. Runs are either in the running state or finished state (trainee completed all levels). All active training runs have assigned sandboxes from the pool. The instructor is able to delete the assigned sandbox from OpenStack by clicking :material-delete:{: .red .icon}. Be careful when deleting the sandbox from a training run in the running state. The trainee will not be able to complete the remaining levels. Those training runs should be archived after that, so trainees could not resume training run. 

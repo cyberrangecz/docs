@@ -11,7 +11,7 @@ The purpose of the Training Agenda is to create and manage trainings that are on
 !!! note
     To access the above-mentioned pages in the portal, click the respective button on the front page of the KYPO portal. 
 
-* **Visualization Tools** incorporate the visual components from the aforementioned sections. They are used to provide insight into training data visually. For adaptive training, see [Visualizations for Adaptive Training](visualizations/visualizations-for-adaptive.md). For linear game results or progression, see [Visualizations for Linear Training](visualizations/visualizations-for-linear.md).
+* **Visualization Tools** incorporate the visual components from the aforementioned sections. They are used to provide insight into training data visually. For adaptive training, see [Visualizations for Adaptive Training](visualizations/visualizations-for-adaptive.md). For linear training results or progression, see [Visualizations for Linear Training](visualizations/visualizations-for-linear.md).
 
 **Training Definition**, **Training Instance**, or **Training Run** can be accessed from the front page of the KYPO portal.
 
