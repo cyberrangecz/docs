@@ -27,7 +27,7 @@ Current roles that are used in the KYPO portal can be divided into categories ([
 
 ``ROLE_TRAINING_TRAINEE``/``ROLE_ADAPTIVE_TRAINING_TRAINEE``: **Trainees** are allowed to start, resume, and play the [linear training run](../../user-guide-basic/training-agenda/training-run/linear-training-run.md)/[adaptive training run](../../user-guide-basic/training-agenda/training-run/adaptive-training-run.md). After the training is complete, trainees can also check and compare their scores. The role of the trainee is the default role of each KYPO user.
 
-``ROLE_TRAINING_ORGANIZER``/``ROLE_ADAPTIVE_TRAINING_ORGANIZER``: **Training organizers** can create and manage [linear training instances](../../user-guide-basic/training-agenda/training-instance.md)/[adaptive training instances](../../user-guide-basic/training-agenda/training-instance.md), see the progress of trainees during the game, or see the results in the form of graphs and tables. Each organizer can only access training instances in which they are set as an organizer.
+``ROLE_TRAINING_ORGANIZER``/``ROLE_ADAPTIVE_TRAINING_ORGANIZER``: **Training organizers** can create and manage [linear training instances](../../user-guide-basic/training-agenda/training-instance.md)/[adaptive training instances](../../user-guide-basic/training-agenda/training-instance.md), see the progress of trainees during the training, or see the results in the form of graphs and tables. Each organizer can only access training instances in which they are set as an organizer.
 
 ``ROLE_TRAINING_DESIGNER``/``ROLE_ADAPTIVE_TRAINING_DESIGNER``: **Training designers** can create and manage [linear training definitions](../../user-guide-basic/training-agenda/training-definition/linear-training-definition.md)/[adaptive training definitions](../../user-guide-basic/training-agenda/training-definition/adaptive-training-definition.md), that can be used to create training instances by the organizers. In a similar manner to the organizers, these users can only access training definitions that have them set as their designer.
 
@@ -43,9 +43,9 @@ Current roles that are used in the KYPO portal can be divided into categories ([
 
 ### Sandbox Roles
 
-``ROLE_KYPO-SANDBOX-SERVICE_TRAINEE``: **Sandbox trainees** cannot access any part of the sandbox agenda, but they can access sandbox topology during the game. This role is the default role of all KYPO users.
+``ROLE_KYPO-SANDBOX-SERVICE_TRAINEE``: **Sandbox trainees** cannot access any part of the sandbox agenda, but they can access sandbox topology during the training. This role is the default role of all KYPO users.
 
-``ROLE_KYPO-SANDBOX-SERVICE_ORGANIZER``: **Sandbox organizers** gain access to the management of the sandbox [pools](../../user-guide-basic/sandbox-agenda/pool.md). These pools contain sandboxes that are assigned to a specific trainee at the start of the game. 
+``ROLE_KYPO-SANDBOX-SERVICE_ORGANIZER``: **Sandbox organizers** gain access to the management of the sandbox [pools](../../user-guide-basic/sandbox-agenda/pool.md). These pools contain sandboxes that are assigned to a specific trainee at the start of the training. 
 
 ``ROLE_KYPO-SANDBOX-SERVICE_DESIGNER``: **Sandbox designers** can create and manage [sandbox definitions](../../user-guide-basic/sandbox-agenda/sandbox-definition.md), that can be used by a sandbox organizer to create a pool of sandboxes. 
 
