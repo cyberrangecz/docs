@@ -176,7 +176,7 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
 
 6. Configure OpenID Connect providers.
 
-    1. There has to be at least one OIDC issuer defined. If you do not have one, you can create our CSIRT-MU dummy OIDC issuer.
+    1. There has to be at least one OIDC issuer defined. If you do not have one, you can create our CSIRT-MU dummy OIDC issuer, otherwise you can skip this step.
 
         ```shell
         ansible-galaxy collection install community.docker
@@ -193,12 +193,16 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
 
             The issuer can be found at https://<kypo_crp_head\>:8443/csirtmu-dummy-issuer-server/
 
-    2. Obtain OIDC URL and clients secrets from oidc-local-provider.yml file, which was auto-created after previous command.
+    2. Obtain the following variables from your OIDC issuer. 
 
         * url
-        * client_id
-        * resource_client_id
-        * resource_client_secret
+        * client_id 
+        * issuer_identifier (optional) - identifier of the issuer must match `iss` field from the JWT token. If not specified, the `url` will be used instead. 
+        * user_info_url (optional) - UserInfo Endpoint of the OIDC issuer. If not specified, the [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html) mechanism will be used to obtain the UserInfo Endpoint.
+
+        !!! hint "Where to find the variables for supported OIDC issuers?"
+            1. [CSIRT-MU dummy OIDC issuer](../../installation-guide/setting-up-oidc-provider/#required-variables)
+            2. [Microsoft Azure](../../installation-guide/setting-up-oidc-provider/#required-variables_1)
 
     3. Edit the following variables of an [extra-vars.yml]({{ page.meta.extra_vars_url }}) file using values obtained from the previous step.
 
@@ -207,14 +211,16 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
         kypo_crp_oidc_providers:
               # The label that is displayed as an option for authentication.
             - label: "Login with Example issuer"
-              # The URL of resource server configuration.
+              # The URL of the identity provider.
               url: <url>
               # The ID of OIDC client.
               client_id: <client_id>
-              # The ID of resource client.
-              resource_client_id: <resource_client_id>
-              # The secret for resource client `resource_client_id`.
-              resource_client_secret: <resource_client_secret>
+              # (Optional) The claim that identifies the identity provider. It's required
+              # only when the 'iss' claim provided in JWT is different from 'url' configured above.
+              issuer_identifier: <issuer_identifier>
+              # (Optional) The URL used to retrieve details about the user from OIDC issuer.
+              # If not provided, the URL is obtained from the well-known OpenID configuration.
+              user_info_url: <user_info_url>
         ```
 
 7. Configure access to the Gitlab repository.

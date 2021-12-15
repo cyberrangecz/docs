@@ -6,10 +6,6 @@ Topology Definition is used for the description of [Topology Instance](../topolo
 
 Attributes of a Topology Definition (an [example](#example)).
 
-### provider
-
-The provider attribute in a Topology Definition should always have the value `OpenStack` for OpenStack definitions.
-
 ### name
 
 Defines the name of the definition ([name restrictions](#names)).
@@ -26,10 +22,9 @@ Hosts contains the list of end hosts to be deployed. A host has the following at
     * **mgmt_protocol (optional)**: protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
 * **hidden (optional)**: whether the host should be hidden in a topology visualization (default: `False`)
 
-
 ### routers
 
-The list of routers. Routers are the only nodes through which hosts can communicate with the internet or with hosts in networks connected to different Routers. Every router should be connected to some [networks](#networks). A connection can be achieved by [router_mappings](#router_mappings). A router has the following attributes.
+The list of routers. Routers are the only nodes through which hosts can communicate with the internet or hosts in networks connected to different Routers. Every router should be connected to some [networks](#networks). A connection can be achieved by [router_mappings](#router_mappings). A router has the following attributes.
 
 * **name**: name of router VM ([names restriction](#names), [unique names restriction](#unique-names))
 * **flavor**: name of flavor (see [how to chose flavor](#flavor))
@@ -37,7 +32,15 @@ The list of routers. Routers are the only nodes through which hosts can communic
     * **image**: name of image
     * **mgmt_user**: name of user with sudo privileges
     * **mgmt_protocol (optional)**: protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
-* **cidr**: for network between router and BR ([more about management nodes](../topology-instance/#topology-instance-management), the recommended range of the network is `/29`, [unique cidrs restriction](#disjunct-cidrs))
+
+    !!! note
+        A router's **cidr** attribute has been deprecated since version 21.12.
+  
+### wan
+A special network that [routers](#routers) uses to communicate with each other and the Internet. [Routers](#routers) are assigned to this network automatically.
+
+* **name**: name of the network (default: `wan`, [names restriction](#names), [unique names restriction](#unique-names))
+* **cidr**: IP address range in CIDR notation (default: `100.100.100.0/24`, [unique cidrs restriction](#disjunct-cidrs))
 
 ### networks
 
@@ -45,7 +48,7 @@ The list of networks. A network is used to connect the router with the end host.
 
 * **name**: name of network ([names restriction](#names), [unique names restriction](#unique-names))
 * **cidr**: IP address range in CIDR notation ([unique cidrs restriction](#disjunct-cidrs))
-* **accessible_by_user**: optional attribute specifies whether the UAN ([more about management nodes](../topology-instance/#topology-instance-management)) should be connected to this network (default: `True`).
+* **accessible_by_user**: optional attribute, specifies which networks will be accessible by user (default: `True`), applies to the all hosts of a network
 
 ### net_mappings
 
@@ -76,48 +79,53 @@ The list of groups. An ansible group is used for better management of nodes. It 
 
 Base_box specifies the `image` of the node boot disk, default user `mgmt_user` with sudo permissions, and a protocol that is needed to communicate with the machine.
 
-Now (22. 4. 2021), possible options are as follows.
+The table below contains some examples of possible base_box options. 
 
-image | user
------ | ----
-centos-7-1809-x86_64                        | centos
-centos-8-1-1911-x86_64                      | centos
-cirros-0.4.0-x86_64                         | cirros
-debian-9-x86_64                             | debian
-debian-10-x86_64                            | debian
-kali-linux-2019.4-amd64                     | debian
-ubuntu-bionic-x86_64                        | ubuntu
-windows-10-0.2.0                            | windows
-windows-server-2019                         | windows
+| image                | user    |
+|----------------------|---------|
+| centos-7.9           | centos  |
+| cirros-0-x86_64      | cirros  |
+| debian-9-x86_64      | debian  |
+| debian-10-x86_64     | debian  |
+| kali-2020.4          | debian  |
+| ubuntu-bionic-x86_64 | ubuntu  |
+| windows-10           | windows |
+| windows-server-2019  | windows |
 
-For routers, it is strongly recommended using the `debian-9-x86_64` image.
+!!! warning
+    The actual base_box options may differ from the contents of this table. Before using an image, check that it is present in the list of OpenStack images ([How to list OpenStack images](../../../../installation-guide/base-infrastructure/#configuration))
 
-[How to list OpenStack images](../../../../installation-guide/base-infrastructure/#configuration)
+!!! note
+    To create and deploy a custom image, follow this [tutorial](https://gitlab.ics.muni.cz/muni-kypo-images/image-template/-/blob/master/README.md).
+
+!!! note
+    It is strongly recommended to use the `debian-9-x86_64` and `debian-10-x86_64` images for routers. Furthermore, currently, it is a known issue that the debian-10 image does not work as a router, as may be the case with other munikypo images. Until fixed, it is advised not to use these images as routers.
+
+
 
 ### Flavor
 
 Flavor defines virtual machine hardware parameters (VCPUs, RAM, Disk size).
 
-To use the examples of sandbox definitions the flavors displayed in the table must be present in your OpenStack. Either you are using CSIRT-MU/KYPO OpenStack projects where all flavors are already created or you need to create these flavors in your own OpenStack.
+To use the examples of sandbox definitions, the flavors displayed in the table must be present in your OpenStack. Either you are using CSIRT-MU/KYPO OpenStack projects where all flavors are already created, or you need to create these flavors in your own OpenStack.
 
 !!! warning
-    In the case of using a public cloud provider (flavors cannot be created without admin rights) the flavors in the topology definition must be replaced by the available flavors of that provider.
+    In the case of using a public cloud provider (flavors cannot be created without admin rights), the flavors in the topology definition must be replaced by the available flavors of that provider.
 
 [How to list OpenStack flavors](../../../../installation-guide/base-infrastructure/#configuration)
 
-flavor | vCPU | RAM (GB) | disk size (GB)
------- | ---- | -------- | ---------
-csirtmu.tiny1x2    | 1  | 2  | 20
-csirtmu.tiny1x4    | 1  | 4  | 20
-csirtmu.small2x4   | 2  | 4  | 40
-csirtmu.small2x8   | 2  | 8  | 40
-csirtmu.medium4x8  | 4  | 8  | 40
-csirtmu.medium4x16 | 4  | 16 | 40
-csirtmu.large8x16  | 8  | 16 | 80
-csirtmu.large8x32  | 8  | 32 | 80
-csirtmu.jumbo16x32 | 16 | 32 | 100
-csirtmu.jumbo16x64 | 16 | 64 | 100
-
+| flavor             | vCPU | RAM (GB) | disk size (GB) |
+|--------------------|------|----------|----------------|
+| csirtmu.tiny1x2    | 1    | 2        | 20             |
+| csirtmu.tiny1x4    | 1    | 4        | 20             |
+| csirtmu.small2x4   | 2    | 4        | 40             |
+| csirtmu.small2x8   | 2    | 8        | 40             |
+| csirtmu.medium4x8  | 4    | 8        | 40             |
+| csirtmu.medium4x16 | 4    | 16       | 40             |
+| csirtmu.large8x16  | 8    | 16       | 80             |
+| csirtmu.large8x32  | 8    | 32       | 80             |
+| csirtmu.jumbo16x32 | 16   | 32       | 100            |
+| csirtmu.jumbo16x64 | 16   | 64       | 100            |
 
 ## Restrictions
 
@@ -131,10 +139,10 @@ Names of hosts, networks, and routers should be unique in the context of a Topol
 
 ### Disjunct CIDRs
 
-Networks and routers CIDRs should be disjunct (not overlapping), and in `network_mappings` and `router_mappings` IP address should be from the IP address range of the network. Other way networking wouldn't work.
-Network and routers CIDRs shouldn't overlap with [management networks](../topology-instance/#topology-instance-management) CIDRs either.
+Networks, including wan, should be disjunct (not overlapping), and in `network_mappings` and `router_mappings` IP address should be from the IP address range of the network. Otherwise, networking wouldn't work.
+Networks, including wan, shouldn't overlap with [management network's](../topology-instance/#topology-instance-management) CIDR either.
 
-[How to set CIDRs of management networks](https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo-crp-deployment/-/blob/master/provisioning/roles/kypo-crp-configuration/templates/configuration/sandbox-service/kypo-sandbox-service-config.yml).
+[How to set CIDRs of management networks](https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo-crp-deployment/-/tree/master/provisioning/roles/kypo-crp-head/templates/configuration/sandbox-service/kypo-sandbox-service-config.yml).
 
 ### Address Restriction
 
@@ -142,7 +150,7 @@ During a network creation, the OpenStack will take the first IP address of the s
 
 ### Group Restriction
 
-KYPO sandbox service does not allow the redefinition of its [default hosts groups](../sandbox-provisioning/#ansible-host-groups). Thus, Topology Definition in which these groups are defined is invalid.
+KYPO sandbox service does not allow the redefinition of its [default hosts groups](../sandbox-provisioning/#ansible-host-groups). Thus, the Topology Definition in which these groups are defined is invalid.
 
 *[VM]: Virtual machine
 *[BR]: Border router
@@ -153,6 +161,7 @@ An example topology definition in the sandbox definition with the name `small-sa
 
 * Two hosts. The host server will not be visible in the topology.
 * Two routers.
+* The wan network with a custom name.
 * Two networks. Only one is user-accessible and therefore connected to the UAN node.
 * One group, which contains two nodes.
 
@@ -175,7 +184,6 @@ hosts:
 
 routers:
   - name: server-router
-    cidr: 100.100.100.0/29
     base_box:
       image: debian-9-x86_64
       mgmt_user: debian
@@ -185,8 +193,11 @@ routers:
     base_box:
       image: debian-9-x86_64
       mgmt_user: debian
-    cidr: 200.100.100.0/29
     flavor: csirtmu.tiny1x2
+
+wan:
+  name: internet-connection
+  cidr: 100.100.100.0/24
 
 networks:
   - name: server-switch

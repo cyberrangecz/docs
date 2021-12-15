@@ -3,21 +3,35 @@
 A Topology Instance of a Sandbox is created in the cloud platform and connected to the [KYPO Base Infrastructure](../../../installation-guide/base-infrastructure/), which mainly consists of 2 servers and a network.
 
 * **KYPO Head**: The server where the KYPO platform is installed.
-* **KYPO Proxy**: The server used only for SSH access to all sandboxes.
+* **KYPO Proxy**: The server is used only for SSH access to all sandboxes.
 * **KYPO Base Network**: The network where both servers and all sandboxes are connected through MAN ([more about management nodes](../topology-instance/#topology-instance-management)).
 
 ![topology-instance-blank](../../img/user-guide-advanced/sandboxes/topology-instance-blank.png)
 
+!!! note
+    For clarity reasons, there are missing links from **man-network** to the left **Router** and left **Host**.
+
 ## Sandbox Access
 
-Sandbox access is divided into two types based on privileges.[Management access](#management-access) is available for those who manage sandboxes or KYPO Cyber Range Platform (role `instructor`). [User access](#user-access) is provided for everyone else (role `trainee`).
+Sandbox access is divided into two major categories: 
+
+* [Terminal Remote Access](#terminal-remote-access):  Access to the remote sandbox node from the local command-line interface. It requires additional configuration. We differentiate two types based on privileges:
+     * [Management access](#management-access) is available for those who manage sandboxes or KYPO Cyber Range Platform (role `instructor`). 
+     * [User access](#user-access) is provided for everyone else (role `trainee`).
+* [Web-based Access](#web-based-access): Access to the remote sandbox node through the KYPO portal in the web browser is available for everyone. It is simpler because it doesn't require any additional configuration. We support two clients that provide that connection: 
+    * [Spice](#spice)
+    * [Apache Guacamole](#apache-guacamole) 
+
+
+### Terminal Remote Access
 
 !!! note
-    Windows users are required to install `Git Bash` or `WSL`. On Windows, all the following actions to connect to the sandboxes have to be performed using the `Git Bash` or `WSL` console. Please note that it is not required to create the `.ssh` folder. That will be created automatically by the `Extract action` using the `unzip` command."
+    Windows users must install `Git Bash` or `WSL`. On Windows, all actions in Management access and User access to connect to the sandboxes have to be performed using the `Git Bash` or `WSL` console. Please note that creating the `.ssh` folder is not required. The' Extract action' will be created automatically using the `unzip` command.
 
-### Management Access
 
-Access to the sandbox nodes is through the **KYPO Proxy**, and a **MAN** node as jump hosts and a **mng-network**.
+#### Management Access
+
+Access to the sandbox nodes is through the **KYPO Proxy**, and a **MAN** node as jump hosts and a **man-network**.
 
 1. Download the SSH access zip file from [Pool Overview](../../../user-guide-basic/sandbox-agenda/pool/#pool-overview) page.
 
@@ -64,9 +78,8 @@ Access to the sandbox nodes is through the **KYPO Proxy**, and a **MAN** node as
 
         Then use the RDP client and connect to a virtual machine using the `localhost:12345` address.
 
-### User Access
-
-Access to the sandbox nodes is through the **KYPO proxy**, a **MAN** node, and a **UAN** node as jump hosts and an `accessible_by_user` networks.
+#### User Access
+Access to the sandbox nodes is through the **KYPO proxy**, and a **MAN** node, as jump hosts and an `accessible_by_user` networks.
 
 !!! warning "Sandbox definition set up"
     You will not be able to use this approach if you did not set up the sandbox definition correctly!
@@ -78,7 +91,7 @@ Access to the sandbox nodes is through the **KYPO proxy**, a **MAN** node, and a
     !!! warning
         The SSH config file will be generated with the host's directive `User` set to `user-access`, therefore setting variable `kypo_user_access_username` to value `user-access` modify the SSH config file later.
 
-1. Download the SSH access zip file from [Training Level](../../../user-guide-basic/training-agenda/training-run/#3-training-level) of the Training Run page with topology visualization.
+1. Download the SSH access zip file from [Training Level](../../../user-guide-basic/training-agenda/training-run/linear-training-run/#3-training-level) of the Linear Training Run page with topology visualization (in case of Adaptive Training Run, download it from the [Training Phase](../../../user-guide-basic/training-agenda/training-run/adaptive-training-run/#3-training-phase)).
 
 2. Extract the `ssh-access.zip` file to the `~/.ssh/` directory.
 
@@ -92,7 +105,7 @@ Access to the sandbox nodes is through the **KYPO proxy**, a **MAN** node, and a
     * `~/.ssh/pool-id-ID-sandbox-id-ID-user-key`: the sandbox user SSH private key.
     * `~/.ssh/pool-id-ID-sandbox-id-ID-user-key.pub`: the sandbox user SSH public key.
 
-3. Connect to any virtual machine specified in the SSH configuration file except **KYPO Proxy**, **MAN** or **UAN**.
+3. Connect to any virtual machine specified in the SSH configuration file except **KYPO Proxy**, **MAN**.
 
    * Connect directly to any virtual machine using SSH protocol, even a Windows machine, e.g.:
 
@@ -104,7 +117,7 @@ Access to the sandbox nodes is through the **KYPO proxy**, a **MAN** node, and a
      First, create a local proxy on a port 12345:
 
        ```shell
-       $ ssh -F ~/.ssh/pool-id-ID-sandbox-id-ID-user-config -N -D 12345 uan
+       $ ssh -F ~/.ssh/pool-id-ID-sandbox-id-ID-user-config -N -D 12345 man
        ```
 
      Then connect to a virtual machine specified in the SSH configuration file over `socks5://localhost:12345` proxy.
@@ -115,7 +128,36 @@ Access to the sandbox nodes is through the **KYPO proxy**, a **MAN** node, and a
      Virtual machine IP is specified in the SSH configuration file.
 
        ```shell
-       $ ssh -F ~/.ssh/pool-id-ID-sandbox-id-ID-user-config -N -L 12345:<vm_ip>:3389 uan
+       $ ssh -F ~/.ssh/pool-id-ID-sandbox-id-ID-user-config -N -L 12345:<vm_ip>:3389 man
        ```
 
      Then use the RDP client and connect to a virtual machine using the `localhost:12345` address.
+
+### Web-based Access
+Simple access to the sandbox node from within the web browser is available through the KYPO portal from the sandbox topology. An instructor can display the topology on the [Pool Detail](../../../user-guide-basic/sandbox-agenda/pool/#pool-detail) page, and for trainees, the topology is always displayed during a training run in [training levels](../../../user-guide-basic/training-agenda/training-run/linear-training-run/#3-training-level). Right-click on the selected network node (host or router) in the network topology will open the menu with the following options (see [VM manipulation](../../../user-guide-basic/training-agenda/training-run/linear-training-run/#vm-manipulation):
+
+* **Open console**: Opens web browser-based user interface using [Spice](#spice) client. This option is available for all routers and hosts, but it doesn’t support the *Copy & paste* feature, and the response from the machine may be slow, so it seems that the console is freezing. Therefore we are recommending using the other options to access the sandbox node.
+* **Open CLI**: Opens the command-line interface (CLI) in [Apache Guacamole](#apache-guacamole) application using the SSH protocol. This option is available only for routers and hosts with Linux-based operating systems. 
+* **Open GUI**: Opens graphical user interface (GUI) in [Apache Guacamole](#apache-guacamole) application using the VNC or RDP protocol. This option can be available for all routers and hosts but depends on whether they are properly configured.
+
+!!! info "Credentials"
+    A user must know the login credentials to access the sandbox node in all cases. 
+
+#### Spice
+As an alternative to VNC, OpenStack provides remote desktop access to guest virtual machines using the Simple Protocol for Independent Computing Environments (SPICE) protocol. Provides the command-line interface or graphical user interface depending the display manager is installed or not. When you connect to the Spice client, you will see the following console in a new browser tab. 
+
+
+#### Apache Guacamole
+An HTML5 web application supports graphical access to remote hosts directly in the browser. It is a clientless remote desktop gateway that supports standard protocols like VNC, RDP, and SSH. In the KYPO CRP, all the mentioned protocols can be used, but the following conditions must be satisfied:
+
+1. **SSH** (only Linux-based system): The target host must have allowed password authentication. This can be done by setting up the following parameter in `/etc/ssh/sshd_config`: 
+      ```
+      PasswordAuthentication yes
+      ```
+2. **VNC** (only Linux-based system): Requires running VNC server with possible login option. Configuration of the VNC server may vary based on the OS type and its version. We have set up a VNC server on several types of OS by performing these [steps](https://gitlab.ics.muni.cz/muni-kypo-images/image-template/-/blob/master/REMOTE-ACCESS.md#vnc-linux).
+3. **RDP** (Windows): Requires enabled *Remote Desktop* that can be done by following these [steps](https://gitlab.ics.muni.cz/muni-kypo-images/image-template/-/blob/master/REMOTE-ACCESS.md#rdp-windows). 
+
+!!! warning "VNC & RDP" 
+    Besides the proper configuration, the image of the machines must have set the custom property `owner_specified.openstack.gui_acess` to `true`. Otherwise, the option `Open GUI` in the topology won't be available. 
+       
+

@@ -60,7 +60,7 @@ The following tables display the actions that can perform the users with the spe
 
 | Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
-| Create training definition  | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
+| Create training definition  | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Clone training definition  | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Create level  | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
 | Find training definition by ID  | READ | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
@@ -75,6 +75,7 @@ The following tables display the actions that can perform the users with the spe
 | Update training definition | UPDATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Swap levels | UPDATE |  :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
 | Move level | UPDATE |  :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
+| Update multiple levels | UPDATE |  :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
 | Update training level | UPDATE |  :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
 | Update info level | UPDATE |  :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
 | Update assessment level | UPDATE |  :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
@@ -113,16 +114,17 @@ The following tables display the actions that can perform the users with the spe
 | Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Access training run | CREATE |  :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Is correct answer | CREATE | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Find training run by ID  | READ | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Find all training runs | READ |  :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Get all accessed training runs | READ |  :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Get next level | READ | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get correct answers of training run | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-cards-spade:{: .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Get solution | READ | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Get hint | READ | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Resume training run | READ | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Get participant | READ | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Finish training run | UPDATE | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
-| Is correct answer | UPDATE | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Evaluate responses to assessment | UPDATE | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Archive training run | UPDATE |  :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-cards-spade:{: .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Delete training runs | DELETE |  :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
@@ -148,7 +150,16 @@ The following tables display the actions that can perform the users with the spe
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Gather visualization info for training run | READ | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Gather visualization info for training instance | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-cards-spade:{: .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get clustering visualization dat for organizer | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-cards-spade:{: .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get table visualization dat for organizer | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-cards-spade:{: .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get timeline visualization dat for organizer | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-cards-spade:{: .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get progress visualization dat for organizer | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-cards-spade:{: .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get level tabs visualization dat for organizer | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-cards-spade:{: .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Get participants for given training instance| READ | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get commands in training run | READ | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get clustering visualization data for trainee | READ | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get table visualization data for trainee | READ | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get timeline visualization data for trainee | READ | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Get users by IDs| READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 
 ### Adaptive Training Microservice 
@@ -263,11 +274,15 @@ The following tables display the actions that can perform the users with the spe
 #### Visualizations Endpoints
 
 !!! note
-    The symbol :material-hexagram:{: .green } means that action can be performed only by the organizer of that particular training instance.
+    The symbols: 
+    &nbsp; &nbsp; &nbsp; &nbsp; :material-hexagram:{: .green } means that action can be performed only by the trainee of that particular training run.
+    &nbsp; &nbsp; &nbsp; &nbsp; :material-cards-spade:{: .green } means that action can be performed only by the organizer of that particular training run.
 
 | Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
-| Gather visualization data for Sankey diagram | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get Sankey diagram data | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-cards-spade:{: .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get transition graph data for organizer | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-cards-spade:{: .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get transition graph data for trainee | READ | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 
 ### Sandbox Microservice 
 
@@ -275,9 +290,10 @@ The following tables display the actions that can perform the users with the spe
 
 | Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
-| Create Sandbox Allocation Unit| CREATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Create sandbox allocation unit| CREATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Lock given pool | CREATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
-| Creates new pool | CREATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Create new pool | CREATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Create cleanup requests | CREATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Get a list of Sandbox Allocation Units | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | List locks for given pool | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | List Allocation Request for this pool | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
@@ -350,6 +366,8 @@ The following tables display the actions that can perform the users with the spe
 | Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Lock given sandbox | CREATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get Spice consoles urls | READ | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
+| Get MAN out port IP | READ | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | List locks for given sandbox | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Get topology data for given sandbox | READ | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Generate SSH config for User access to this sandbox | READ | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |

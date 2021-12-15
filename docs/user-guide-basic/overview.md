@@ -43,7 +43,7 @@ After a successful login, the home page of the KYPO Portal contains the elements
 
 
 ### Trainee's View
-Each trainee will be after a successful log-in directly redirected to the [Training Run Overview](../training-agenda/training-run/#training-runs-overview) page. 
+Each trainee will be after a successful log-in directly redirected to the [Training Run Overview](../training-agenda/training-run/linear-training-run/#training-runs-overview) page. 
 
 ![KYPO-home-page-trainee](../img/user-guide-basic/KYPO-home-page-trainee.png)
 
