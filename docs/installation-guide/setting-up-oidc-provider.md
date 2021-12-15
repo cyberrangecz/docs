@@ -1,18 +1,23 @@
 # Setting up OIDC Provider
 
+Currently, the KYPO CRP is tested and supports the following OIDC providers: 
+
+* [MUNI Unified Login](https://it.muni.cz/en/services/jednotne-prihlaseni-na-muni)
+* [Microsoft Azure](https://azure.microsoft.com)
+* [CSIRT-MU dummy OIDC issuer](https://gitlab.ics.muni.cz/csirt-mu-devel/oidc-auth/csirtmu-oidc-overlay)
+
 ## General Setup
 
-Regardless of the use internal or external OIDC provider, you must register a new **Client** to obtain `client_id` and **Resource Server** to obtain `client_id` and `client_secret`. 
+Regardless of the used OIDC provider, you must register a new **Client** to obtain `client_id`. 
 
 !!! warning
-    Make sure that your OIDC provider:
+    Make sure that OIDC provider:
 
     * Uses **JSON Web Token (JWT)** access tokens. Opaque tokens are not supported by the KYPO platform. 
 
-    * Supports the **introspection endpoint** to validate the access token and retrieve its underlying authorization.
+    * Supports the **user info endpoint** to validate the access token and retrieve base info about a user.
 
 
-### Client
 Set up the following parameters with given values. 
 
 1. Redirect URI
@@ -42,47 +47,85 @@ Set up the following parameters with given values.
     ```
 
 
-### Resource Server
-Set up the following parameters. 
+## CSIRT-MU OIDC Dummy Issuer Setup
+ 
 
-1. Scopes
+!!! info Automatic Setup 
+    The setup is done automatically by creating our CSIRT-MU dummy OIDC issuer in the KYPO CRP Deployment installation guide.
 
-    * openid
-    * profile 
-    * email
+1. Open the webpage `https://<YOUR-SERVER-ADDRESS>/csirtmu-dummy-issuer-server`, and log in with credentials set up in your [extra-vars.yml](https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo-crp-deployment/-/blob/master/extra-vars.yml) file as sub-variables **sub** and **password** in variable **kypo_crp_users**.
+2. **Self-service Client Registration** > **New Client**
+3. In the **Main** tab
+    1. *Client name* - optional, e.g. *"KYPO PROD/Devel Client"*
+    2. *Redirect URIs* 
+        * `https://<YOUR-SERVER-ADDRESS>`
+        * `https://<YOUR-SERVER-ADDRESS>/index.html`
+        * `https://<YOUR-SERVER-ADDRESS>/silent-refresh.html`
 
-2. Check the option to allow calls to the introspection endpoint.
+4. In the **Access** tab select the following values
+    1. *Scopes*
+        * openid
+        * profile
+        * email 
+    2. *Grant Types*
+        * implicit
+    3. *Responses Types*
+        * token 
+        * code id_token
+6. In the **Other** tab 
+    1. *Post-Logout Redirects* 
+        * `https://<YOUR-SERVER-ADDRESS>/logout-confirmed`
 
-## Local Issuer Setup
+7. Click the **Save** button.
+8. In the **JSON** tab, copy the JSON file and save it to file. <u>**IMPORTANT STEP**</u>
+
+### Required variables
+
+!!! tip "CSIRT-MU dummy OIDC issuer"
+        If you have created CSIRT-MU dummy OIDC issuer by following the KYPO CRP Deployment installation guide you can find the required variables in the auto-created *oidc-local-provider.yml* file.
+
+The following variables are needed to deploy and use KYPO CRP with CSIRT-MU OIDC Dummy Issuer: 
+
+* **client_id** - field `client_id` in the JSON file
+* **url** - `https://<YOUR-SERVER-ADDRESS>/csirtmu-dummy-issuer-server/`
+
+## Microsoft Azure Setup
+
+1. Open and log in to the [Microsoft Azure portal](https://portal.azure.com/#home).
+2. **Azure services** > **App registrations** > **New registration**
+    1. *Name* - optional, e.g. *"KYPO PROD/Devel Client"*
+    2. *Redirect URI*
+        * Select *"Single-page application (SPA)"*
+        * Add Redirect URI `https://<YOUR-SERVER-ADDRESS>`
+3. Click the **Register** button
+4. In the **Authentication** tab 
+    1. *Single-page application* > *Redirect URIs*
+        *  `https://<YOUR-SERVER-ADDRESS>`
+        *  `https://<YOUR-SERVER-ADDRESS>/index.html`
+        *  `https://<YOUR-SERVER-ADDRESS>/silent-refresh.html`
+    2. *Front-channel logout URL*
+        * `https://<YOUR-SERVER-ADDRESS>/logout-confirmed`
+    3. *Implicit grant and hybrid flows*
+        * Check *"Access tokens (used for implicit flows)"*
+        * Check *"ID tokens (used for implicit and hybrid flows)"*
+5. In the **API permissions** tab 
+    1. *Add a permissions* > *Microsoft APIs* > *Microsoft Graph* > *Delegated permissions* > *OpenId permissions* 
+        * openid
+        * profile 
+        * email
+6. In the **Overview** tab 
+    1. Save the value *"Application (client) ID"* 
+    2. Save the value *"Directory (tenant) ID"*
     
-This setup is done automatically by creating our CSIRT-MU dummy OIDC issuer in KYPO CRP Deployment installation guide.
+### Required variables
 
-### Example of the Manual setup
+The following variables are needed to deploy and use KYPO CRP with Microsoft Azure: 
 
-1. Open the webpage `https://<YOUR-SERVER-ADDRESS>/csirtmu-dummy-issuer-server`, and log in with credentials set up in your [extra-vars.yml]({{ page.meta.extra_vars_url }}) file as sub-variables **sub** and **password** in variable **kypo_crp_users**.
-2. Click on "**Self-service Client Registration**" -> "**New Client**".
-3. Set the Client name, e.g. `KYPO PROD/Devel Client`.
-4. Add at least one custom Redirect URI. For example: 
-    ```
-    https://<YOUR-SERVER-ADDRESS>
-    https://<YOUR-SERVER-ADDRESS>/index.html
-    https://<YOUR-SERVER-ADDRESS>/silent-refresh.html
-    ```
+* **client_id** - `Application (client) ID` (see the 6. step described above)
+* **url** - `https://login.microsoftonline.com/<tenant ID>/v2.0/`
+* **issuer_identifier** - `https://sts.windows.net/<tenant ID>/`
+* **user_info_url** - `https://graph.microsoft.com/oidc/userinfo`
 
-5. In tab "**Access**":
-    1. choose which information about the user you will be getting, so-called `scopes`.
-    2. select just *implicit* in **Grant Types**
-    3. select *token* and *code id_token* in **Responses Types**
-6. In the tab "**Other**" add **Post-Logout Redirects**, e.g. `https://<YOUR-SERVER-ADDRESS>/logout-confirmed`
-
-7. Hit the **Save** button.
-8. Then got to tab "**JSON**", copy the JSON file and save it to file. <u>**IMPORTANT STEP**</u>
-9. Now create a new Resource in "**Self-service Protected Resource Registration**".
-10. Again insert client Name and save JSON to an external file in the "**JSON**" tab.
-11. In the tab "**Access**": 
-     1. choose which information about the user you will be getting, so-called `scopes`.
-     2. set **Allow calls to the Introspection Endpoint?** to true. 
-12. Hit **Save** button.
 
 ## Selecting the Right Grant Types
 The selection of the right grant type is especially important for security reasons. In OpenID Connect exists 4 grant types:

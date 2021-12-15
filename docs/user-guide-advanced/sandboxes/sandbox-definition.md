@@ -5,6 +5,7 @@ The simplest directory structure of Sandbox Definition:
 ```
 sandbox-definition/
 ├── topology.yml
+├── variables.yml
 └── provisioning/
     └── playbook.yml
 ```
@@ -13,5 +14,7 @@ sandbox-definition/
 
     !!! note
         The name **sandbox.yml** is deprecated since version 21.06.
+
+* **variables.yml (optional)**: a configuration file containing all necessary and optional information for the generation of [APG Variables](../apg-variables/) that can be used to create variant answers for the sandboxes in the pool. It's necessary for APG trainings. 
 
 * **provisioning**: a directory structure of a [Sandbox Provisioning](../sandbox-provisioning/) which is intended for [Topology Instance](../topology-instance/) customization. Once provisioned it is called a Sandbox.

@@ -1,14 +1,14 @@
-Before starting a training run, several steps must be performed. These steps are not necessarily performed by a single user and they are usually divided among several users with a role [instructor](../../user-guide-advanced/users-and-groups/roles/). The whole workflow of creating training is divided into two parts, as it also includes the creation of the sandboxes.
+Before starting a training run, several steps must be performed. These steps are not necessarily performed by a single user and they are usually divided among several users with a role [instructor](../../user-guide-advanced/users-and-groups/roles/#instructor). The whole workflow of creating training is divided into two parts, as it also includes the creation of the sandboxes.
 
 1. **[Sandboxes Creation](#sandboxes-creation)**
 2. **[Training Creation](#training-creation)**
 
 ## Prerequisites
-It is assumed that KYPO CRP is installed according to the [installation guide](../../installation-guide/installation-guide-overview/) and created KYPO CRP instance is connected to the OpenStack cloud service and through the respective microservice, it can create and manage sandboxes inside the cloud via available APIs.
+It is assumed that KYPO CRP is installed according to the [installation guide](../../installation-guide/installation-guide-overview/) and created KYPO CRP instance is connected to the OpenStack cloud service, and through the respective microservice, it can create and manage sandboxes inside the cloud via available APIs.
 
 
 ## Sandboxes Creation
-1. A sandbox definition is created by instructors according to this [format](../../user-guide-advanced/sandboxes/sandbox-definition/) and stored as a Git repository (see [7. Configure access to the Gitlab repository](../../installation-guide/kypo-crp-deployment/#configure)). 
+1. A sandbox definition is created by instructors according to this [format](../../user-guide-advanced/sandboxes/sandbox-definition/) and stored as a Git repository (see [6. Configure access to the Gitlab repository](../../installation-guide/kypo-crp-deployment/#configure)). 
 2. In the KYPO Portal, a record about the sandbox definition is created via the [Sandbox Definition Overview](../../user-guide-basic/sandbox-agenda/sandbox-definition/) page by entering the URI to the respective Git repository from the previous step.
 3. From the sandbox definition created in the KYPO Portal, a pool with a specified size can be created by following these [steps](../../user-guide-basic/sandbox-agenda/pool/#create-pool). 
 4. Sandboxes in the cloud are allocated by clicking the allocation button of the respective pool. Two actions are automatically performed:
@@ -29,14 +29,14 @@ It is assumed that KYPO CRP is installed according to the [installation guide](.
 ### Before Training 
 1. Training definition can be created via the [Create Linear Training Definition](../../user-guide-basic/training-agenda/training-definition/linear-training-definition/#add-a-new-definition) or the [Create Adaptive Training Definition](../../user-guide-basic/training-agenda/training-definition/adaptive-training-definition/#add-a-new-definition) page independently on the sandbox definition.
 2. Training instance can be created via the [Create/Edit Training Instance](../../user-guide-basic/training-agenda/training-instance/#createedit-training-instance) page specifically for the selected available training definition.
-3. An unlocked pool of sandboxes **created for the training** is assigned to the training instance in the second panel [Assign Pool](../../user-guide-basic/training-agenda/training-instance/#2-assign-pool) when editing the training instance.
+3. An unlocked pool of sandboxes **created for the training** is assigned to the training instance in the second panel [Assign Pool](../../user-guide-basic/training-agenda/training-instance/#assign-pool) when editing the training instance.
 4. Each training instance has partially a generated access token which the instructor hand over to trainees so they can access [linear](../../user-guide-basic/training-agenda/training-run/linear-training-run/#training-run) or [adaptive](../../user-guide-basic/training-agenda/training-run/adaptive-training-run/#training-run) training runs. 
 
 
 ### During Training
 5. Trainees [access Training Run](../../user-guide-basic/training-agenda/training-run/linear-training-run/#1-access-training) using the obtained access token. Trainees can resume their accessed training runs if the training instance is still active.
-6. Each training run has assigned a specific sandbox and trainees can access VMs in this sandbox using [Sandbox SSH Access](../../user-guide-advanced/sandboxes/sandbox-access/) or a [Spice console](../../user-guide-basic/training-agenda/training-run/linear-training-run/#vm-manipulation).
-7. An organizer of training instance can watch real-time progress of trainees and can see their [linear training run results](../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear/#progress-of-training-instance) during the training. 
+6. Each training run has assigned a specific sandbox and trainees can access VMs in this sandbox using [Sandbox SSH Access](../../user-guide-advanced/sandboxes/sandbox-access/), [Apache Guacamole](../../user-guide-advanced/sandboxes/sandbox-access/#apache-guacamole) or a [Spice client](../../user-guide-advanced/sandboxes/sandbox-access/#spice).
+7. An organizer of training instance can watch the real-time progress of trainees and can see their [linear training run results](../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear/#progress-of-training-instance) during the training. 
 
 !!! note
     Results for the adaptive training runs will be added in near future.

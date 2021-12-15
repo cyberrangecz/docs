@@ -90,3 +90,11 @@ sudo systemctl restart syslog-ng.service
 ```
 
 Wait a few seconds until the syslog-ng restarts.
+
+## View Data In Kibana
+
+1. Export data from KYPO Platform. On the [Training Instance Overview page](../../user-guide-basic/training-agenda/training-instance.md#training-instance-overview), click the :material-dots-vertical:{: .grey .icon} button and then click the **Get Data** button to export the training instance results in the ZIP archive. 
+
+2. Extract the ZIP file to the arbitrary folder. 
+
+3. Download the [elk-portal-commands-events project](https://gitlab.fi.muni.cz/cybersec/elk-la/elk-portal-commands-events) from GitLab and follow the instructions in the [README](https://gitlab.fi.muni.cz/cybersec/elk-la/elk-portal-commands-events/-/blob/master/README.md) file of the project.

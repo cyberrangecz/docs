@@ -1,3 +1,7 @@
+---
+kypo_crp_issues_url: https://gitlab.ics.muni.cz/muni-kypo-crp/kypo-crp-issues
+---
+
 Reporting bugs is a great way for anyone to help improve the KYPO platform. To report bugs, we use the GitLab lightweight issue tracker system. Before reporting a bug, please consider the following points:
   
   * Read the [FAQ](./faq.md) to see if your issue isn't already a well-known question.
@@ -11,7 +15,7 @@ Reporting bugs is a great way for anyone to help improve the KYPO platform. To r
 A good bug report should be clear and concise without any missing key points. Any lack of clarity may lead to misunderstanding and may slow down the development process as well. Well-written bug reports are incredibly helpful. If you find a bug please create a bug report.
 
 
-  1.  Go to GitLab repository [kypo-crp-issues-public](https://gitlab.ics.muni.cz/muni-kypo-crp/kypo-crp-issues-public).
+  1.  Go to GitLab repository [kypo-crp-issues]({{ page.meta.kypo_crp_issues_url }}).
   2.  In the menu on the left side, click `Issues`.
   ![gitlab-issue-repository-left-menu](img/report-bugs/issues-repository-left-menu.png)
   3.  In the top menu above the list of issues click `New issue`.

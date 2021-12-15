@@ -1,6 +1,6 @@
 # Overview
 
-The visualizations serve for a better grasp of the data collected during the training sessions. They can be divided into two types according to the type of the training:
+The visualizations serve to grasp better the data collected during the training sessions. They can be divided into two types according to the type of the training:
 
 1. **[Visualizations for *linear* training](../visualizations-for-linear/)** 
 2. **[Visualizations for *adaptive* training](../visualizations-for-adaptive/)**

@@ -36,8 +36,8 @@ nav:
               - Visualizations for Linear Training: user-guide-basic/training-agenda/visualizations/visualizations-for-linear.md
       - Administration Agenda:
           - Overview: user-guide-basic/administration-agenda/administration-agenda-overview.md
-          - Groups: user-guide-basic/administration-agenda/groups.md
           - Users: user-guide-basic/administration-agenda/users.md
+          - Groups: user-guide-basic/administration-agenda/groups.md
           - Microservices: user-guide-basic/administration-agenda/microservices.md
   - User Guide (Advanced):
       - Overview: user-guide-advanced/user-guide-advanced-overview.md
@@ -48,6 +48,7 @@ nav:
           - Topology Instance: user-guide-advanced/sandboxes/topology-instance.md
           - Sandbox Provisioning: user-guide-advanced/sandboxes/sandbox-provisioning.md
           - Sandbox Access: user-guide-advanced/sandboxes/sandbox-access.md
+          - APG Variabels: user-guide-advanced/sandboxes/apg-variables.md
       - Trainings:
           - Overview: user-guide-advanced/trainings/trainings-overview.md
       - Users and Groups:
@@ -64,16 +65,21 @@ nav:
   - FAQ: faq.md
   - Reference:
       - Sandbox Service: reference/kypo-sandbox-service-swagger-open-api.yaml
+      - User and Group Service: reference/kypo-user-and-group-swagger-open-api.yaml
       - Training Service: reference/kypo-training-swagger-open-api.yaml
       - Adaptive Training Service: reference/kypo-adaptive-training-swagger-open-api.yaml
       - Adaptive Smart Assistant Service: reference/kypo-adaptive-smart-assistant-swagger-open-api.yaml
-      - User and Group Service: reference/kypo-user-and-group-swagger-open-api.yaml
+      - Training Feedback Service: reference/kypo-training-feedback-swagger-open-api.yaml
+      - Answers Storage: reference/kypo-answers-storage-swagger-open-api.yaml
       - Elasticsearch Service: reference/kypo-elasticsearch-service-swagger-open-api.yaml
       - Tables of Permissions: reference/tables-of-permissions.md
   - Extras:
       - Logging:
+          - Logs: extras/logging/logs.md
           - Architecture: extras/logging/architecture.md
           - How to Use It: extras/logging/how-to-use-it.md
+          - Visualize Data - Kibana: extras/logging/visualize-data-kibana.md
+      - Sharing sandbox between two players: extras/sharing-sandbox-between-two-players.md
       - Writing Documentation - MkDocs: extras/writing-documentation-mkdocs.md
   - Report Bugs: report-bugs.md
   - Authors: authors.md

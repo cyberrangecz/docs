@@ -1,11 +1,6 @@
 # KYPO Logging Architecture Overview
 In the KYPO project, we design the architecture for logging using the **Syslog-ng**, **Rsyslog**, **Elasticsearch**, and **Logstash** technologies. These technologies were integrated into the **KYPO** project using the **Java Logback**, **Ansible** roles, and many others. In this documentation, we show the overall architecture and its internals.
 
-Currently, we differentiate between two major types of logs:
-
- * **Training events**:  Any action performed by the trainee on the KYPO portal web page is considered to be a Training event (e.g., taking a hint, solving a level, finishing a run, ...). These events are used mainly as a means of real-time visualization of the Training run. Based on training events, organizers can offer individual help to struggling trainees or, on the other hand, take notice of excellent students.
- * **Commands**: All commands executed by the students inside the command line in the sandbox are logged as well. These logged commands offer detailed information about all of the actions that students performed while completing the assignment. Command logs can then be used by the organizers to evaluate each student's actions and evaluate the complexity of the solutions students came up with during the Training run.
-
 ## Overall Architecture
 Our logging architecture is based on the  [`RFC5424`](https://tools.ietf.org/html/rfc5424). The benefit of RFC5424 logs is that it includes structured data and defines a specific format that can be automatically parsed by Syslog-ng or other central logging server technologies. Using this specification, we do not need any regular expressions to distinguish between different logs (e.g., **bash commands**, **msf commands** or others). We also do not need any regular expressions to parse the message events.
 

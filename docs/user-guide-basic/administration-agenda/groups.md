@@ -1,4 +1,4 @@
-This page is used to list all groups created in the KYPO platform. Groups are essential to the user-access, as the access roles are not assigned to specific users but groups. The user acquires access to the KYPO portal agendas based on the roles of the groups they belong to.
+This page is used to list all groups created in the KYPO platform. Groups are essential to the user-access, as the access roles are not assigned to specific users but groups. The user acquires access to the KYPO portal agendas based on the roles of the groups they belong to. Each group also has a separate detail page containing additional information about it. This page can be accessed upon clicking on the group's name.
 
 ![group-overview](../../img/user-guide-basic/administration-agenda/groups/group-overview.png) 
 
@@ -21,7 +21,6 @@ To create a new group, the administrator must click on ![create-button](../../im
     
     !!! info
         Multiple groups can be deleted by checking groups with checkboxes situated on the left side of the table row and by clicking on ![delete-button](../../img/buttons/big-delete-button.png) button.
-
 
 ## Create or Edit Group
 
@@ -49,3 +48,13 @@ Here, the administrator can add users individually or import all users from the 
 Here, the administrator can assign roles to the group. The part **Add roles** provide an easy way to search for roles which the administrator would like to assign to the group. Click on the ![add-button](../../img/buttons/add-button.png) button to assign all selected roles to the group. Assigned roles will be present in the list in the part **Roles of group**. A role or multiple roles can be removed via the common way mentioned before.
 
 ![edit-members-panel](../../img/user-guide-basic/administration-agenda/groups/edit-roles.png)
+
+## Group Detail
+
+The page consists of three panels. The first panel displays the group description, expiration date, number of users in the group, and the number of roles that the group has. The second panel shows the list of users in the group and the basic information about them.
+
+![group-detail](../../img/user-guide-basic/administration-agenda/groups/group-detail.png)
+
+The last panel shows all roles assigned to the group. Every role also has expandable detail upon clicking on the :material-chevron-down:{: .grey .icon }. This detail displays the role description.
+
+![group-detail-role-detail](../../img/user-guide-basic/administration-agenda/groups/group-role-detail.png)
