@@ -99,8 +99,7 @@ The table below contains some examples of possible base_box options.
     To create and deploy a custom image, follow this [tutorial](https://gitlab.ics.muni.cz/muni-kypo-images/image-template/-/blob/master/README.md).
 
 !!! note
-    It is strongly recommended to use the `debian-9-x86_64` and `debian-10-x86_64` images for routers. Furthermore, currently, it is a known issue that the debian-10 image does not work as a router, as may be the case with other munikypo images. Until fixed, it is advised not to use these images as routers.
-
+    It is strongly recommended to use the `debian-10`, `debian-10-x86_64` or `debian-9-x86_64` images for routers.
 
 
 ### Flavor
