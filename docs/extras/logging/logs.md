@@ -232,3 +232,5 @@ Each type of event might have additional fields.
    "pool_id": "3"
 }
 ```
+
+The example logs from the past training events can be found at: [https://gitlab.ics.muni.cz/muni-kypo-trainings/datasets](https://gitlab.ics.muni.cz/muni-kypo-trainings/datasets).
