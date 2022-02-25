@@ -14,7 +14,7 @@ If you decide to deploy KYPO CRP in your organization, please check our Installa
 
 ## Be a part of our KYPO CRP community
 
-KYPO Cyber Range Platform is an open-source project. We walked a long way with the support of projects and institutions listed below. If you are considering supporting our KYPO CRP or contributing to it, please [contact us](https://www.crp.kypo.muni.cz/#contact).
+KYPO Cyber Range Platform is an open-source project. We walked a long way with the support of projects and institutions listed below. If you are considering supporting our KYPO CRP, please [contact us](https://www.crp.kypo.muni.cz/#contact). On the other hand, if you are thinking about contributing to KYPO you can find more details at [How To Contribute](how-to-contribute.md).
 
 ## Get Professional Support
 

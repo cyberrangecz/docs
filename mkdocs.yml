@@ -81,6 +81,7 @@ nav:
           - Visualize Data - Kibana: extras/logging/visualize-data-kibana.md
       - Sharing sandbox between two players: extras/sharing-sandbox-between-two-players.md
       - Writing Documentation - MkDocs: extras/writing-documentation-mkdocs.md
+  - Contribute to Docs: contribute-to-docs.md
   - Report Bugs: report-bugs.md
   - Authors: authors.md
   - Acknowledgements: acknowledgements.md
