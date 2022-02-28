@@ -193,7 +193,7 @@ To upload a training definition, click in the **Linear Training Definition Overv
 </p>
 
 
-Upload training definition that has been downloaded as a file in JSON format. This use case is useful when the instructor wants to re-use the training definition stored in the past. Try downloading and uploading an [example training definition](https://gitlab.ics.muni.cz/muni-kypo-trainings/games/junior-hacker) prepared by our team.
+Upload training definition that has been downloaded as a file in JSON format. This use case is useful when the instructor wants to re-use the training definition stored in the past. Try downloading and uploading an [example training definition](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/sandbox-definitions/kypo-crp-demo-training/-/blob/master/training.json) prepared by our team.
 
 ## Linear Training Definition Detail
 This page provides detail of the selected training definition in two panels. The first panel displays elementary information regarding the number of levels, when it was last edited, its estimated duration, whether the option to display stepper was selected, and its current state. On the other hand, the second panel describes definition levels in detail. Detail for a particular level may vary based on its type and can be opened by clicking the expand button  :material-chevron-down:{: .grey .icon } (on the opposite side to the level name). The detail page provides an option to expand or collapse these details for all levels at once.

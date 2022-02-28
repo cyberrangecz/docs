@@ -237,7 +237,7 @@ To upload a training definition, on the page **Adaptive Training Definition Over
 </p>
 
 
-Upload training definition that has been downloaded as a file in JSON format. This usecase is useful when the instructor wants to re-use the training definition stored in the past. Try downloading and uploading an [example training definition](https://gitlab.ics.muni.cz/muni-kypo-trainings/games/junior-hacker-adaptive) prepared by our team.
+Upload training definition that has been downloaded as a file in JSON format. This usecase is useful when the instructor wants to re-use the training definition stored in the past. Try downloading and uploading an [example training definition](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/sandbox-definitions/kypo-crp-demo-training-adaptive/-/blob/master/adaptive-training.json) prepared by our team.
 
 ## Adaptive Training Definition Detail
 
