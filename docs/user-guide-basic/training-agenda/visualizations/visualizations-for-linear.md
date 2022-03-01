@@ -140,13 +140,20 @@ This visualization provides commands ordered by the time of the selected trainee
 
 #### Command Analysis
 
-This visualization provides an analysis of commands for a selected trainee. Commands are divided by their correctness and contain the following detailed information:
+This visualization provides an analysis of commands for a selected trainee. Commands are divided by their correctness (**correct**, **wrong**) which can be changed with a slide toggle button at the top left side of the panel tab. Each command record contains the following detailed information:
 
 * **Full Command**: represents the whole command with options, e.g., `nmap -A -T4 scanme.nmap.org`
 * **IP**: IP address of the machine in the sandbox from which the command has been executed 
 * **Frequency**: states the number of occurrences of this exact command
 
-Furthermore, each incorrect command specifies the error type. These error types are divided into seven categories based on the syntax (five categories) or semantic error (two categories).
+**Correct Commands**
+Analysis of the correct commands requires choosing at least one trainee in the instructor's view. Otherwise, the table will be empty.
+
+**Wrong Commands**
+Analysis of the wrong commands specifies the error type of the command. These error types are divided into seven categories based on the syntax (five categories) or semantic error (two categories). At least one error type must be selected to display the wrong commands. Also, at least one trainee must be selected in the instructor's view.
+
+!!! warning
+    The selection must be confirmed by the **Filter** button.
 
 <p align="center">
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-command-analysis.png">
