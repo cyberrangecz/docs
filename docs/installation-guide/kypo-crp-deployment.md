@@ -180,6 +180,7 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
 
         ```shell
         ansible-galaxy collection install community.docker
+        ansible-galaxy collection install community.postgresql
         ansible-galaxy install -r provisioning/requirements.yml -p provisioning/roles_required
         ansible-playbook -i inventory.ini provisioning/docker.yml --extra-vars=@extra-vars.yml --extra-vars=@secrets.yml
         ansible-playbook -i inventory.ini provisioning-oidc/oidc.yml --extra-vars=@extra-vars.yml --extra-vars=@secrets.yml
@@ -193,11 +194,11 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
 
             The issuer can be found at https://<kypo_crp_head\>:8443/csirtmu-dummy-issuer-server/
 
-    2. Obtain the following variables from your OIDC issuer. 
+    2. Obtain the following variables from your OIDC issuer.
 
         * url
-        * client_id 
-        * issuer_identifier (optional) - identifier of the issuer must match `iss` field from the JWT token. If not specified, the `url` will be used instead. 
+        * client_id
+        * issuer_identifier (optional) - identifier of the issuer must match `iss` field from the JWT token. If not specified, the `url` will be used instead.
         * user_info_url (optional) - UserInfo Endpoint of the OIDC issuer. If not specified, the [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html) mechanism will be used to obtain the UserInfo Endpoint.
 
         !!! hint "Where to find the variables for supported OIDC issuers?"
