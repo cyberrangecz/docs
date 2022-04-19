@@ -120,10 +120,16 @@ bcrypt          | `pip3 install bcrypt`                      | 3.2+
 4. Configure an SSL certificate that will be used for HTTPS communication.
 
     1. Obtain a certificate either from your Certification Authority (CA) or generate a self-signed one e.g. with command bellow.
+        * For IP address
         ```shell
-        openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes -out kypo.crt -keyout kypo.key -subj "/C=AU/ST=Some-State/O=Internet Widgits Pty Ltd/CN=x.x.x.x"
+        openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes -out kypo.crt -keyout kypo.key -subj "/C=AU/ST=Some-State/O=Internet Widgits Pty Ltd/CN=x.x.x.x" -addext "subjectAltName = DNS:x.x.x.x, IP:x.x.x.x"
         ```
-        Where CN is IP address of your KYPO Head server.
+        Where CN, DNS and IP is IP address of your KYPO Head server.
+        * For FQDN
+        ```shell
+        openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes -out kypo.crt -keyout kypo.key -subj "/C=AU/ST=Some-State/O=Internet Widgits Pty Ltd/CN=x.x.x.x" -addext "subjectAltName = DNS:x.x.x.x"
+        ```
+        Where CN and DNS is FQDN of your KYPO Head server.
 
     2. Encode obtained certificate and its key using the base64 tool.
 
