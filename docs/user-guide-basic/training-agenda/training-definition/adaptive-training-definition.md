@@ -1,5 +1,5 @@
 ## Adaptive Training Definition Overview
-This page lists all adaptive definitions available to the instructor (the instructors can see only the ones that they create or the ones that they are co-authors). In the top right corner are located buttons ![create-button](../../../img/buttons/create-button.png) and ![upload-button](../../../img/buttons/upload-button.png) that are used to [add a new definition](#add-a-new-definition) into the KYPO portal. In the following table, each row represents one adaptive training definition. The last column of this table contains actions :material-pencil:{: .blue .icon} &nbsp; :material-delete:{: .red .icon} &nbsp; :material-dots-vertical:{: .grey .icon} that can be executed on a given training definition. By clicking the name of the adaptive training definition, the instructor will be redirected to the [detail page](#adaptive-training-definition-detail) of the training definition.
+This page lists all adaptive definitions available to the instructor (the instructors can see only the ones that they create or the ones that they are co-authors). In the top right corner are located buttons ![create-button](../../../img/buttons/create-button.png) and ![upload-button](../../../img/buttons/upload-button.png) that are used to [add a new definition](#add-a-new-definition) into the KYPO portal. In the following table, each row represents one adaptive training definition. The last column of this table contains actions :material-pencil:{: .blue .icon} &nbsp; :material-delete:{: .red .icon} &nbsp; :material-file-multiple:{: .blue .icon} &nbsp; :material-cloud-download:{: .blue .icon} &nbsp; :material-eye:{: .blue .icon} &nbsp; :material-lock:{: .red .icon}/:material-lock-open-outline:{: .red .icon} that can be executed on a given training definition. By clicking the name of the adaptive training definition, the instructor will be redirected to the [detail page](#adaptive-training-definition-detail) of the training definition.
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/adaptive/ATD-overview.png">
@@ -59,16 +59,6 @@ This page lists all adaptive definitions available to the instructor (the instru
     
     Click the button to change the definition state to **Unreleased**.
     Unreleased definitions allow the instructor to edit the content inside them and change its state to **Released**.
-    
-??? archive "Archive"
-    
-    Click the button to change the definition state to **Archived**.
-    Archived definitions cannot change their content and cannot be switched to any other state.
-
-----------------------------------------------------
-
-!!! note
-    Actions 3. - 7. can be accessed in the menu shown after clicking on the **more options** button :material-dots-vertical:{: .grey .icon}. 
 
 ## Add a New Definition
 There are three approaches on how to creating a new training definition. 
@@ -126,6 +116,18 @@ A new task can be added with the ![add-button](../../../img/buttons/add-button.p
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/adaptive/ATD-task-form.png">
+</p>
+
+Under the related questions panel, there is a **MITRE ATT&CK Techniques** panel that the instructor can use to add techniques associated with a given training phase.
+
+<p align="center">
+  <img src="../../../../img/user-guide-basic/training-agenda/training-definition/adaptive/ATD-mitre-techniques-assign.png">
+</p>
+
+Under the MITRE ATT&CK techniques panel is a **Expected Commands** panel that the instructor can use to add commands which should be used to solve a given training phase.
+
+<p align="center">
+  <img src="../../../../img/user-guide-basic/training-agenda/training-definition/adaptive/ATD-expected-commands.png">
 </p>
 
 ##### II. Adaptive Questionnaire Phase
@@ -220,6 +222,13 @@ In the info phase, the trainees read the content of the information written by t
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/adaptive/ATD-IP.png">
+</p>
+
+##### V. Access Phase
+In the access phase, a trainee is provided with necessary information on how to access either cloud or local sandbox. Either cloud or local content is displayed during a training run based on the selected environment in a training instance. In local content, the special variables can be used. These variables are then replaced by an actual values when the content is displayed to trainee. A trainee must submit a passkey to proceed to next phase. Passkey can be provided to trainees by an instructor or can be mentioned in the content itself. 
+
+<p align="center">
+  <img src="../../../../img/user-guide-basic/training-agenda/training-definition/adaptive/ATD-AC.png">
 </p>
 
 #### Authors Panel

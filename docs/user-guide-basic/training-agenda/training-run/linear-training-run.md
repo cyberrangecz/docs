@@ -17,7 +17,7 @@ A trainee can view the results of the finished training run by clicking the :mat
 
 ## Training Run
 
-In the training run, trainees will go through predesigned levels. There is a bar listing all of the levels in order at the top of the training run page. The finished levels are marked by :material-checkbox-marked-circle:{: .blue .icon}, the current level is highlighted in blue, and the following are gray. In the current version, there are three types of level available ([Assessment level](#1-assessment-level), [Info level](#2-info-level), and [Training level](#3-training-level)).
+In the training run, trainees will go through predesigned levels. There is a bar listing all of the levels in order at the top of the training run page. Visited levels are highlighted in blue :material-checkbox-blank-circle:{: .blue .icon}, the currently selected level is highlighted in pink :material-checkbox-blank-circle:{: .pink .icon}, and non-visited are in grey :material-checkbox-blank-circle:{: .grey .icon}. If backward mode is enabled by an instructor, a trainee can move between visited levels by clicking the level in the bar. In the current version, there are four types of levels available ([Assessment](#1-assessment-level), [Info](#2-info-level), [Access](#3-access-level), and [Training](#4-training-level)).
 
 ![level-bar](../../../img/user-guide-basic/training-agenda/training-run/TR-level-bar.png)
 
@@ -41,7 +41,14 @@ The info level provides important information to trainees in text form.
   <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-info.png">
 </p>
 
-### 3. Training Level 
+### 3. Access Level
+The access level provides information to trainees on how to access cloud or local sandbox.
+
+<p align="center">
+  <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-access.png">
+</p>
+
+### 4. Training Level 
 The trainee must complete the assignment specified on the page's left side at the training level. On the right side, the sandbox topology supplemented by legend is displayed. The layout of the topology can be changed with the controls panel (see the following figure):
 
 <p align="center">
@@ -74,25 +81,28 @@ Right-click on the selected network node (host or router), the following menu wi
   <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-host-options.png">
 </p>
 
-* **Open console**: Connect to the web console of the particular network node using SPICE protocol. The feature is provided by OpenStack cloud, and console types may vary. When you connect to the SPICE client, you will see the following console in a new browser tab.
-
-    <p align="center">
-        <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-spice.png">
-    </p>
-
-    <video width="100%" height="auto" controls>
-        <source src="../../../../img/user-guide-basic/training-agenda/training-run/how-to-connect-to-spice.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    !!! info
-        To scroll console output up, use Shift + Page Up, and to scroll it down, use Shift + Page Down.
-
-* **Open CLI**: Connect to the particular network node's Command Line Interface (CLI) using the Apache Guacamole. When you connect to the Guacamole, you will see the following console in a new browser tab.
+* **Open console**: Connect to the particular network node's Command Line Interface (CLI) using the Apache Guacamole. When you connect to the Guacamole, you will see the following console in a new browser tab.
 
     <p align="center">
         <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-guacamole-cli.png">
     </p>
+
+* **Open console (deprecated)**: Connect to the web console of the particular network node using SPICE protocol. The feature is provided by OpenStack cloud, and console types may vary. When you connect to the SPICE client, you will see the following console in a new browser tab.
+!!! warning
+    In the case of local sandboxes, only the last option **Copy host info to clipboard** is available in the menu. 
+
+<p align="center">
+    <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-spice.png">
+</p>
+
+<video width="100%" height="auto" controls>
+    <source src="../../../../img/user-guide-basic/training-agenda/training-run/how-to-connect-to-spice.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+!!! info
+    To scroll console output up, use Shift + Page Up, and to scroll it down, use Shift + Page Down.
+
 
 * **Open GUI**: Connect to the particular network node's Graphical User Interface (GUI) using the Apache Guacamole. This option might not be visible if the VM does not have GUI configured. When you connect to the Spice client, you will see the following console in a new browser tab. 
 
@@ -103,7 +113,6 @@ Right-click on the selected network node (host or router), the following menu wi
 !!! warning
     All the above options of connecting to the corresponding VM require correct login credentials.
 
-* **Resume**: Resuming a suspended virtual machine is analogous to waking up a computer that has been in sleep mode.
 * **Copy host info to clipboard**: Copy the content of the node tooltip to the clipboard.
 
    <p align="center">

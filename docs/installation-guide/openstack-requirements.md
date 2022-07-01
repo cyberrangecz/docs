@@ -1,45 +1,26 @@
 # OpenStack Requirements
 KYPO Platform requires several OpenStack resources and components, that can be installed or configured only by the OpenStack administrator.
 
+## OpenStack Version
+
+KYPO Cyber Range Platform is tested with Open Stack releases from Train to Yoga, but it is possible it will also work on newer releases.
+
 ## OpenStack Services
 KYPO Platform requires the following OpenStack services:
 
-* Nova with SPICE console support
+* Nova with SPICE or VNC console support
 * Neutron with user-defined internal networks and floating IPs (provider networks are not supported)
 * Keystone with Application Credentials
-* Heat
 
-Floating IPs need to be unrestricted on any firewalls.
+For every instance of KYPO Cyber Range Platform you also need two floating IP addreses from Open Stack public pool to access the platform.
+
+Floating IP addreses need to be unrestricted on any firewalls.
 
 For OpenStack deployment, it is recommended to use open source project [Kolla Ansible](https://github.com/openstack/kolla-ansible), which supports all KYPO requirements.
 
-## OpenStack Resources
+### MUNI-KYPO Images
 
-### Flavors
-All flavors used by the KYPO Platform can be customized in its configuration. It is recommended to create the following flavor with a command (OpenStack admin only):
-```
-openstack flavor create --ram 2048 --disk 20 --vcpus 1 csirtmu.tiny1x2
-```
+More images can be found in the [MUNI-KYPO-IMAGES](https://gitlab.ics.muni.cz/muni-kypo-images) GitLab group. These images, each stored in its own repository, were created specifically for the needs of KYPO-CRP and their use is strongly recommended. Once an image is uploaded to the OpenStack project, it can be used in the `topology.yml` file of the sandbox definition. 
 
-### Images
-KYPO Platform requires images of supported Operating Systems. They can be customized in KYPO Platform configuration or created with the following commands (with **public** argument OpenStack admin only):
-
-* **ubuntu-bionic-x86_64**
-```
-wget https://cloud-images.ubuntu.com/bionic/current/bionic-server-cloudimg-amd64.img -P /tmp/
-openstack image create --disk-format qcow2 --container-format bare --public --property \
-os_type=linux --file /tmp/bionic-server-cloudimg-amd64.img ubuntu-bionic-x86_64
-```
-* **ubuntu-focal-x86_64**
-```
-wget https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.img -P /tmp/
-openstack image create --disk-format qcow2 --container-format bare --public --property \
-os_type=linux --file /tmp/focal-server-cloudimg-amd64.img ubuntu-focal-x86_64
-```
-
-* **debian-9-x86_64**
-```
-wget http://cdimage.debian.org/cdimage/openstack/current-9/debian-9-openstack-amd64.qcow2 -P /tmp/
-openstack image create --disk-format qcow2 --container-format bare --public --property \
-os_type=linux --file /tmp/debian-9-openstack-amd64.qcow2 debian-9-x86_64
-```
+!!!note
+    In the `topology.yml`, it is necessary to specify a `mgmt_user` along with each used image. This can be found in the `README.md` of the image, in the section _Image for QEMU/OpenStack_.

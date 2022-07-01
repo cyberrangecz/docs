@@ -18,6 +18,7 @@ The content of the whole exercise is described using so-called training definiti
     * **Multiple choice question (MCQ)**: Trainees are asked to select one or multiple answers from the choices offered as a list.
     * **Extended matching item (EMI)**: Trainees are asked to pair items from row and column that are semantically related. 
     * **Freeform question (FFQ)**: Trainees are asked to type the answer to the submit field.
+4. **Access Level**: Contains information on how to access either local or cloud sandbox.
 
 #### Automatic Generation Problem (APG) in Linear Training Definition 
 **Automatic Problem Generation** is a technique of defining various problem instances. In KYPO CRP, it is achieved by using variant answers for each [Training Run](#training-run) that can reduce the threat of copied or leaked answers. APG training definition requires specific [Sandbox Definition](../../../../user-guide-advanced/sandboxes/sandbox-definition) with **variables.yml** file. The file specifies variables whose values are automatically generated for each sandbox instance. The generated values then can be used during provisioning to set secret answers inside the sandbox (e.g., filename, port, username, etc.). Behind the scenes, generated values are stored to the special **answers storage**.
@@ -83,6 +84,7 @@ The *adaptive definition* consist of four types of so-called phases:
     * **Completed in Time** - the trainee completes the task in the predefined time.
     * **Solution Displayed** - the trainee has revealed the solution. 
     * **Submitted Answers** - the number of the submitted incorrect answers. 
+5. **Access Phase**: Contains information on how to access either local or cloud sandbox.
 
 ## Training Instance
 

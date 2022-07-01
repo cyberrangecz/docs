@@ -34,6 +34,9 @@ Provides functionality to manage the lifecycle of sandboxes in the KYPO platform
 ### OIDC Provider
 Service is realized by OpenID Connect, which is used to authenticate the users logged into the KYPO Platform and obtain basic profile information about the end-user in an interoperable and REST-like manner. It provides a secure authentication mechanism for microservices and the protection of their APIs.
 
+### Mitre Technique Service
+Provides a visualization of [MITRE ATT&CK matrix](https://attack.mitre.org/), extended by additional information about which training definitions focus on specific tactics. Two versions of this matrix can be requested. The first version has all training definitions, and the second version has definitions that a particular player has played.
+
 ### Angular Frontend
 User-friendly graphical user interface implemented using the Angular framework. Provides access to individual microservices and their selected functionalities via a web browser. 
 

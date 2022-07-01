@@ -136,16 +136,12 @@ Access to the sandbox nodes is through the **KYPO proxy**, and a **MAN** node, a
 ### Web-based Access
 Simple access to the sandbox node from within the web browser is available through the KYPO portal from the sandbox topology. An instructor can display the topology on the [Pool Detail](../../../user-guide-basic/sandbox-agenda/pool/#pool-detail) page, and for trainees, the topology is always displayed during a training run in [training levels](../../../user-guide-basic/training-agenda/training-run/linear-training-run/#3-training-level). Right-click on the selected network node (host or router) in the network topology will open the menu with the following options (see [VM manipulation](../../../user-guide-basic/training-agenda/training-run/linear-training-run/#vm-manipulation):
 
-* **Open console**: Opens web browser-based user interface using [Spice](#spice) client. This option is available for all routers and hosts, but it doesn’t support the *Copy & paste* feature, and the response from the machine may be slow, so it seems that the console is freezing. Therefore we are recommending using the other options to access the sandbox node.
-* **Open CLI**: Opens the command-line interface (CLI) in [Apache Guacamole](#apache-guacamole) application using the SSH protocol. This option is available only for routers and hosts with Linux-based operating systems. 
+* **Open console**: Opens the command-line interface (CLI) in [Apache Guacamole](#apache-guacamole) application using the SSH protocol. This option is available only for routers and hosts with Linux-based operating systems. 
+* **Open console (deprecated)**: Opens web browser-based user interface using [Spice](#spice) client. This option is available for all routers and hosts, but it doesn’t support the *Copy & paste* feature, and the response from the machine may be slow, so it seems that the console is freezing. Therefore it was marked as deprecated and we recommend using the other options to access the sandbox node.
 * **Open GUI**: Opens graphical user interface (GUI) in [Apache Guacamole](#apache-guacamole) application using the VNC or RDP protocol. This option can be available for all routers and hosts but depends on whether they are properly configured.
 
 !!! info "Credentials"
     A user must know the login credentials to access the sandbox node in all cases. 
-
-#### Spice
-As an alternative to VNC, OpenStack provides remote desktop access to guest virtual machines using the Simple Protocol for Independent Computing Environments (SPICE) protocol. Provides the command-line interface or graphical user interface depending the display manager is installed or not. When you connect to the Spice client, you will see the following console in a new browser tab. 
-
 
 #### Apache Guacamole
 An HTML5 web application supports graphical access to remote hosts directly in the browser. It is a clientless remote desktop gateway that supports standard protocols like VNC, RDP, and SSH. In the KYPO CRP, all the mentioned protocols can be used, but the following conditions must be satisfied:
@@ -159,5 +155,8 @@ An HTML5 web application supports graphical access to remote hosts directly in t
 
 !!! warning "VNC & RDP" 
     Besides the proper configuration, the image of the machines must have set the custom property `owner_specified.openstack.gui_acess` to `true`. Otherwise, the option `Open GUI` in the topology won't be available. 
+
+#### Spice
+As an alternative to VNC, OpenStack provides remote desktop access to guest virtual machines using the Simple Protocol for Independent Computing Environments (SPICE) protocol. Provides the command-line interface or graphical user interface depending the display manager is installed or not. When you connect to the Spice client, you will see the following console in a new browser tab. 
        
 

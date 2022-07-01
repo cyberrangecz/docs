@@ -1,6 +1,6 @@
 # Topology Instance
 
-The KYPO OpenStack Driver transforms a [Topology Definition](../topology-definition/) (user-defined topology) with the [Topology Instance Management](#topology-instance-management) sub-infrastructure into the HEAT Orchestration Template, which the OpenStack cloud platform uses to create a virtual infrastructure we call a KYPO Topology Instance.
+The KYPO Terraform Client transforms a [Topology Definition](../topology-definition/) (user-defined topology) with the [Topology Instance Management](#topology-instance-management) sub-infrastructure into the Terraform Template, which is then used by [Terraform](https://www.terraform.io) to create a virtual infrastructure we call a KYPO Topology Instance.
 
 ![topology-instance-color](../../img/user-guide-advanced/sandboxes/topology-instance-color.png)
 

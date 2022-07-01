@@ -1,5 +1,5 @@
 ## Linear Training Definition Overview
-This page lists all definitions available to the instructor (the instructors can see only the ones they create or the ones they are co-authors of). In the top right corner are located buttons ![create-button](../../../img/buttons/create-button.png) and ![upload-button](../../../img/buttons/upload-button.png) that are used to [add a new definition](#add-a-new-definition) into the KYPO portal. In the following table, each row represents one training definition. The last column of this table contains actions :material-pencil:{: .blue .icon} &nbsp; :material-delete:{: .red .icon} &nbsp; :material-dots-vertical:{: .grey .icon} that can be executed on a given training definition. Click on the training definition name to redirect to the [detail page](#linear-training-definition-detail).
+This page lists all definitions available to the instructor (the instructors can see only the ones they create or the ones they are co-authors of). In the top right corner are located buttons ![create-button](../../../img/buttons/create-button.png) and ![upload-button](../../../img/buttons/upload-button.png) that are used to [add a new definition](#add-a-new-definition) into the KYPO portal. In the following table, each row represents one training definition. The last column of this table contains actions :material-pencil:{: .blue .icon} &nbsp; :material-delete:{: .red .icon} &nbsp; :material-file-multiple:{: .blue .icon} &nbsp; :material-cloud-download:{: .blue .icon} &nbsp; :material-eye:{: .blue .icon} &nbsp; :material-lock:{: .red .icon}/:material-lock-open-outline:{: .red .icon} that can be executed on a given training definition. Click on the training definition name to redirect to the [detail page](#linear-training-definition-detail).
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-overview.png">
@@ -70,16 +70,6 @@ This page lists all definitions available to the instructor (the instructors can
     
     Click the button to change the definition state to **Unreleased**.
     Unreleased definitions allow the instructor to edit the content inside them and change its state to **Released**.
-    
-??? archive "Archive"
-    
-    Click the button to change the definition state to **Archived**.
-    Archived definitions cannot change their content and cannot be switched to any other state.
-
-----------------------------------------------------
-
-!!! note
-    Actions 3. - 8. can be accessed in the menu shown after clicking on the **more options** button :material-dots-vertical:{: .grey .icon}. 
 
 ## Add a New Definition
 There are three approaches on how to creating a new training definition. 
@@ -99,7 +89,7 @@ In the first panel of the training definition editor, the instructor can edit fi
 </p>
 
 #### Levels Panel
-This panel is part of the [Create Linear Training Definition Panel](#create-linear-training-definition-panel), where the instructor can add, delete, and edit training levels of the training definition.
+This panel is part of the [Create Linear Training Definition Panel](#create-linear-training-definition-panel), where the instructor can add, delete, and edit training levels of the training definition. **Reference Graph** panel at the bottom of the panel displays the preview of the graph which is created according to the reference solutions defined in the [training levels](#i-training-level).
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-edit-levels.png">
@@ -117,9 +107,7 @@ Each change made inside a level must be saved with the ![save](../../../img/butt
     To change the order of levels, use the drag-and-drop mechanism. Select a level in the level bar by "grabbing" it and dragging it to a different position.
 
 ##### I. Training Level
-At the training level, a trainee can access a virtual network inside the sandbox to find a solution to the assignment. The instructor can fill this form to specify details of the new level. Training definition is considered [APG](../../../../user-guide-advanced/trainings/trainings-overview/#automatic-generation-problem-apg-in-linear-training-definition) if ***Variant Answers*** is checked, and ***Correct Answer - Variable Name*** is filled. [Reference solution](../../../../user-guide-advanced/trainings/trainings-overview/#reference-solution) defines the sample solution of the training level. Precisely speaking, what commands have to be executed to find the secret answer. It is also used for post-training feedback visualizations.
-
-
+At the training level, a trainee can access a virtual network inside the sandbox to find a solution to the assignment. The instructor can fill this form to specify details of the new level. Training definition is considered [APG](../../../../user-guide-advanced/trainings/trainings-overview/#automatic-generation-problem-apg-in-linear-training-definition) if ***Variant Answers*** is checked, and ***Correct Answer - Variable Name*** is filled. [Reference solution](../../../../user-guide-advanced/trainings/trainings-overview/#reference-solution) defines the sample solution of the training level. Precisely speaking, what commands have to be executed to find the secret answer. It is also used for post-training feedback visualizations. A preview of the reference graph is displayed in the **Reference Graph** panel after saving of all training levels and is updated whenever a reference solution of training level is modified.
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-TL-panel.png">
@@ -135,6 +123,18 @@ A new hint can be added with the ![add-button](../../../img/buttons/add-button.p
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-hint-edit.png">
+</p>
+
+Under the hints panel, there is a **MITRE ATT&CK Techniques** panel that the instructor can use to add techniques associated with a given training level.
+
+<p align="center">
+  <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-mitre-techniques-assign.png">
+</p>
+
+Under the MITRE ATT&CK techniques panel is a **Expected Commands** panel that the instructor can use to add commands which should be used to solve a given training level.
+
+<p align="center">
+  <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-expected-commands.png">
 </p>
 
 ##### II. Assessment Level
@@ -176,6 +176,14 @@ In the info level, the trainees read the content of the information written by t
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-IL-panel.png">
 </p>
+
+##### IV. Access Level
+In the access level, a trainee is provided with necessary information on how to access either cloud or local sandbox. Either cloud or local content is displayed during a training run based on the selected environment in a training instance. In local content, the special variables can be used. These variables are then replaced by an actual values when the content is displayed to trainee. A trainee must submit a passkey to proceed to next level. Passkey can be provided to trainees by an instructor or can be mentioned in the content itself. 
+
+<p align="center">
+  <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-ACL-panel.png">
+</p>
+
 
 #### Authors Panel
 In the second panel of the training definition editor, the instructor can add and remove authors from the definition.
