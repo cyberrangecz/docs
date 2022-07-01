@@ -1,7 +1,7 @@
 In the KYPO CRP, we monitor the trainees' progress during training by logging the various events. Currently, we differentiate between two major types of logs:
 
  * **Training events**:  Any action performed by the trainee on the KYPO portal web page is considered to be a Training event (e.g., taking a hint, solving a level, finishing a run, ...). These events are mainly used for real-time visualization of the Training run. Based on training events, organizers can offer individual help to struggling trainees or, on the other hand, take notice of excellent students.
- * **Commands**: All commands executed by the students inside the sandbox command line are logged. These logged commands offer detailed information about all students' actions while completing the assignment. The organizers can then use command logs to evaluate each student's actions, and the complexity of the solutions students came up with during the Training run.
+ * **Commands**: All commands executed by the students inside the sandbox (cloud or local) command line are logged. These logged commands offer detailed information about all students' actions while completing the assignment. The organizers can then use command logs to evaluate each student's actions, and the complexity of the solutions students came up with during the Training run.
  
 
 ## Training Events - Linear 
@@ -204,7 +204,7 @@ Each type of event might have additional fields.
 
 ## Commands 
 
-### Fields
+### Common Fields
 
 * **cmd**: executed command
 * **cmd_type**: type of command *(bash-command, msf-command)*
@@ -213,13 +213,20 @@ Each type of event might have additional fields.
 * **timestamp_str**: time at which the command has been executed
 * **hostname**: unique name of the machine in a sandbox
 * **ip**: internal IP address of the machine in a sandbox 
+
+### Cloud Sandbox Specific Fields
 * **sandbox_id**: the ID of a sandbox instance
 * **pool_id**: the ID of a pool
+
+### Local Sandbox Specific Fields
+* **user_id**: the ID of the user
+* **access_token**: the access token of the training instance used to access the training run in KYPO portal
 
 
 ### Example 
 
 ```
+# CLOUD_SANDBOX
 {
    "cmd": "msfconsole",
    "cmd_type": "bash-command",
@@ -231,6 +238,20 @@ Each type of event might have additional fields.
    "sandbox_id": "11",
    "pool_id": "3"
 }
+
+# LOCAL_SANDBOX
+{
+   "cmd": "msfconsole",
+   "cmd_type": "bash-command",
+   "wd": "/home/debian",
+   "username": "debian",
+   "timestamp_str": "2021-11-12T10:29:37.988Z",
+   "hostname": "home",
+   "ip": "10.10.30.5",
+   "user_id": "21",
+   "access_token": "secret-2541"
+}
+
 ```
 
 The example logs from the past training events can be found at: [https://gitlab.ics.muni.cz/muni-kypo-trainings/datasets](https://gitlab.ics.muni.cz/muni-kypo-trainings/datasets).

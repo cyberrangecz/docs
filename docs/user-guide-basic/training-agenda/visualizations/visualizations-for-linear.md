@@ -115,6 +115,49 @@ Displays statistics of individual assessment answers.
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-assessment.png">
 </p>
 
+#### Aggregated Dashboard
+
+This dashboard provides overview over 4 different visualizations. All of these present data from selected training instances which share **same** [Training Definition](../../../user-guide-advanced/trainings/trainings-overview/#training-definition). Data from selected training instances are aggregated and presented in visualizations below. 
+
+<p align="center">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-aggregated-dashboard.png">
+</p>
+
+##### Training Instance Result visualization
+
+Presents statistics about obtained points and compares them across several training instances. The combined diagram contains a bar chart representing the number of participants per individual training, which is augmented by two bar graphs showing players' average and median scores. 
+The visualization has a double y-ray axis. The left one corresponds to the number of training participants, while the right axis belongs to the line graphs indicating the score of participants. The x-axis represents the date when the training were organized.
+
+<p align="center">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-results.png">
+</p>
+
+##### Time-score-hints Relationship
+
+Helps designers identify a successful game strategy - examines whether it is more appropriate to use point-based hints penalties or whether participants should prefer to solve tasks without assistance. 
+Furthermore, it identifies weak participants who would need help from a training instructor. Moreover, it helps to find the most qualified participants. This information helps to determine the complexity of the training.
+
+<p align="center">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-time-score-hints.png">
+</p>
+
+##### Wrong Answers Overview
+
+Visualization is used to analyze the quality of training, thereby helping the training designers. Provides insight into the ratio of correct and incorrect answers entered during each training level and shows whether all participants solved the level. Designers have the opportunity to compare the difficulty of training levels and identify the tasks that caused problems for participants. Significant failure can indicate ambiguities in the training definition. 
+
+<p align="center">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-wrong-answers-overview.png">
+</p>
+
+##### Wrong Answers Details
+
+The bubble chart is created for the selected training level to provide a detailed view of the submitted answers. This procedure allows instructors to examine the participants' answers in more detail to find repeating patterns. Each bubble in the diagram corresponds to one answer entered during the currently selected training level. The bubble size indicates the number of times the participant submitted the answer during the selected training - the larger the circle, the more times the selected answer has been entered. Instructors can use this technique to identify frequently occurring incorrect answers, which in certain cases indicate ambiguity of training definition.
+
+<p align="center">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-wrong-answers-detail.png">
+</p>
+
+
 #### Trainee Graph
 
 This graph visualizes the progress of the selected trainee in training. The difference from the reference graph is that this graph distinguishes edges by nodes they are connected to. Reverse edges are dashed and have a color of the node from which they are going out. All levels in this graph are divided into square boxes, always connected by an edge. It is done because the trainee can display the solution of a level without actually entering any commands. Using boxes connected with edges guarantees continuity of trainee path.

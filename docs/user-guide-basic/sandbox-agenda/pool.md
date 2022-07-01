@@ -4,7 +4,7 @@ This page lists all sandbox pools that are accessible in the KYPO portal. In the
 
 ![pool-overview](../../img/user-guide-basic/sandbox-agenda/pool/pool-overview.png)
 
-Instructors can click on the title of each pool to see a more [detailed view](#pool-detail) of the given pool. The last column of this table contains actions :material-delete:{: .red .icon} &nbsp; :material-youtube-subscription:{: .blue .icon} &nbsp; :material-dots-vertical:{: .grey .icon}  that can be executed on the given pool: 
+Instructors can click on the title of each pool to see a more [detailed view](#pool-detail) of the given pool. The last column of this table contains actions :material-delete:{: .red .icon} &nbsp; :material-youtube-subscription:{: .blue .icon} &nbsp; :bootstrap-exposure-plus-1:{: .blue .icon} &nbsp; :bootstrap-clear-all:{: .red .icon} &nbsp; :material-key:{: .blue .icon} &nbsp; :material-lock:{: .blue .icon}/:material-lock-open-outline:{: .blue .icon} that can be executed on the given pool: 
 
 ??? trash-can "Delete"
     Click the button, and the following confirmation window will be opened:
@@ -45,11 +45,6 @@ Instructors can click on the title of each pool to see a more [detailed view](#p
 ??? unlock "Unlock"
     Click the button to change the state of the given pool from **locked** to **unlocked**. Unlock symbolizes that pool is not in use with any training instance.   
 
--------------------------------------
-
-!!! Note
-    Actions 3. - 6. can be accessed in the menu shown after clicking on the **more options** :material-dots-vertical:{: .grey .icon} button.
-
  To create a new pool, click on the ![create-button](../../img/buttons/create-button.png) button. The instructor will be redirected to the page [Create Pool](#create-pool).
 
 
@@ -74,7 +69,7 @@ In the top right corner, there are control buttons:
 
 ### Sandbox Instances
 
-The instructor can see all the allocated sandboxes in the **Sandbox Instances** table. The last column of this table contains actions :material-delete:{: .red .icon} &nbsp; :bootstrap-topology:{: .blue .icon} &nbsp; :material-dots-vertical:{: .grey .icon} that can be executed on the given sandbox:
+The instructor can see all the allocated sandboxes in the **Sandbox Instances** table. The last column of this table contains actions :material-delete:{: .red .icon} &nbsp; :bootstrap-topology:{: .blue .icon} &nbsp; :material-key:{: .blue .icon} &nbsp; :material-lock:{: .blue .icon}/:material-lock-open-outline:{: .blue .icon} that can be executed on the given sandbox:
 
 ??? trash-can "Delete"
     Click the button, and the following confirmation window will be opened:
@@ -100,20 +95,15 @@ The instructor can see all the allocated sandboxes in the **Sandbox Instances** 
 ??? unlock "Unlock"
     Click the button to change the state of the sandbox instance from **locked** to **unlocked**. Unlock symbolizes that the sandbox instance can be connected to a training run. 
 
------------------------------------------
-
-!!! Note
-    Actions lock and unlock can be accessed in the menu shown after clicking on the **more options** :material-dots-vertical:{: .grey .icon} button, and only one of these actions is always available, depending on the current state of the sandbox.
-
 Allocation itself consists of **three** stages (allocation of a sandbox in the cloud, sandbox networking, sandbox provisioning). Each stage can be in one of the following states:
 
-* **In Queue** ![in-queue-stage](../../img/user-guide-basic/sandbox-agenda/pool/in-queue-stage.png): Stage is waiting to start.
-* **Running** ![in-progress-state](../../img/user-guide-basic/sandbox-agenda/pool/in-progress-stage.png): Stage in progress.
-* **Finished** ![finished-stage](../../img/user-guide-basic/sandbox-agenda/pool/finished-stage.png):  Stage was successfully executed.
-* **Failed** ![failed-state](../../img/user-guide-basic/sandbox-agenda/pool/failed-stage.png): An error occurred during the stage execution. 
+* **In Queue** :material-pause-circle-outline:{: .in-queue-stage-color .icon}: Stage is waiting to start.
+* **Running** :material-circle-slice-7:{: .running-stage-color .icon}: Stage in progress.
+* **Finished** :material-check-circle-outline:{: .green .icon}:  Stage was successfully executed.
+* **Failed** :material-close-circle-outline:{: .red .icon}: An error occurred during the stage execution. 
 
-!!! Note
-    Sandbox instances with **failed** stage are unusable. Thus no action can be executed on them apart from delete.
+!!! info "Retry stage"
+    If one of the stages fails, you can restart the failed stage by clicking on the retry icon :bootstrap-cached-circle:{ .icon } which appears next to the stages. Keep in mind that as of now only the second and third stage can be restarted.
 
 Stage details of the sandbox are available by clicking on **sandbox name**. To see details of stage execution, click the **Stage detail** button of the given stage. In case that stage fails, the error message should be available there.
 

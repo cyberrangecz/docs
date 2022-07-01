@@ -32,4 +32,6 @@ Click extend button :material-chevron-down:{: .icon .grey} to show **detailed in
 * **Tags**: Used to filter images.
 * **Owner specified**: special variables specified by KYPO images, **gui_access** - used to signal GUI is installed for the image.
 
+Checkbox **Only KYPO images** allows filtering of images that are created by the KYPO team.
+
 ![overview-images](../../img/user-guide-basic/sandbox-agenda/resources/overview-images.png)

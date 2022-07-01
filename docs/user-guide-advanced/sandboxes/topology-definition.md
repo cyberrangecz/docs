@@ -1,3 +1,6 @@
+!!! note
+    **Cyber Sandbox Creator** has own [wiki page](https://gitlab.ics.muni.cz/muni-kypo-csc/cyber-sandbox-creator/-/wikis/3.0/Sandbox-Definitions#definitions-file-structure) describing the structure and attributes of topology definition files.
+
 Topology Definition is used for the description of [Topology Instance](../topology-instance/). See the following image to help you visualize what you can define in the topology definition.
 
 ![topology-definition-color](../../img/user-guide-advanced/sandboxes/topology-definition-color.png)

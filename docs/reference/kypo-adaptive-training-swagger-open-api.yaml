@@ -1,7 +1,7 @@
 ---
 swagger: "2.0"
 info:
-  version: "Version: 1.0.43"
+  version: "Version: 2.1.0"
   title: "KYPO Adaptive Training Service - API Reference"
 host: "localhost:8082"
 basePath: "/kypo-adaptive-training/api/v1"
@@ -37,7 +37,7 @@ paths:
         200:
           description: "Training definitions and phase found and exported."
           schema:
-            $ref: "#/definitions/TrainingDefinitionWithPhasesExportDTO"
+            $ref: "#/definitions/TrainingDefinitionExportDTO"
         404:
           description: "Training definition not found."
           schema:
@@ -2093,6 +2093,47 @@ paths:
             $ref: "#/definitions/ApiError"
       security:
       - bearerAuth: []
+  /training-runs/{runId}/is-correct-passkey:
+    post:
+      tags:
+      - "Training runs"
+      summary: "Check passkey of access phase"
+      description: "Current phase of given training run must be acess phase"
+      operationId: "isCorrectPasskey"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "runId"
+        in: "path"
+        description: "Training run ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      - in: "body"
+        name: "body"
+        description: "Submitted passkey"
+        required: true
+        schema:
+          $ref: "#/definitions/ValidatePasskeyDTO"
+      responses:
+        200:
+          description: "The passkey has been checked."
+          schema:
+            type: "boolean"
+        400:
+          description: "Current phase is not training phase and does not have answer."
+          schema:
+            $ref: "#/definitions/ApiError"
+        404:
+          description: "The training run has not been found."
+          schema:
+            $ref: "#/definitions/ApiError"
+        500:
+          description: "Unexpected condition was encountered."
+          schema:
+            $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
   /training-runs/{runId}/next-phases:
     get:
       tags:
@@ -2153,6 +2194,49 @@ paths:
             $ref: "#/definitions/UserRefDTO"
         404:
           description: "The training run has not been found."
+          schema:
+            $ref: "#/definitions/ApiError"
+        500:
+          description: "Unexpected condition was encountered."
+          schema:
+            $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
+  /training-runs/{runId}/phases/{phaseId}:
+    get:
+      tags:
+      - "Training runs"
+      summary: "Get visited phase of given training run."
+      description: "Returns (questionnaire, training, info, access) phase if any phase\
+        \ exists and training run as well"
+      operationId: "getVisitedPhase"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "runId"
+        in: "path"
+        description: "Training run ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "phaseId"
+        in: "path"
+        description: "Phase ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "fields"
+        in: "query"
+        description: "Fields which should be returned in REST API response"
+        required: false
+        type: "string"
+      responses:
+        200:
+          description: "The visited phase has been found."
+          schema:
+            $ref: "#/definitions/AbstractLevelDTO"
+        404:
+          description: "The visited phase has not been found."
           schema:
             $ref: "#/definitions/ApiError"
         500:
@@ -2261,6 +2345,72 @@ paths:
             $ref: "#/definitions/ApiError"
       security:
       - bearerAuth: []
+  /training-runs/{runId}/submissions:
+    get:
+      tags:
+      - "Training runs"
+      summary: "Get trainees submissions."
+      description: ""
+      operationId: "getTraineesSubmissions"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "runId"
+        in: "path"
+        description: "Training run ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "phaseId"
+        in: "query"
+        description: "Training phase ID."
+        required: false
+        type: "integer"
+        format: "int64"
+      responses:
+        200:
+          description: "The submissions has been found."
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/SubmissionDTO"
+        404:
+          description: "The training run has not been found."
+          schema:
+            $ref: "#/definitions/ApiError"
+        500:
+          description: "Unexpected condition was encountered."
+          schema:
+            $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
+  /visualizations/training-definitions/mitre-techniques:
+    get:
+      tags:
+      - "Visualizations"
+      summary: "Get summarized mitre techniques."
+      description: ""
+      operationId: "getSummarizedMitreTechniques"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Mitre techniques found."
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/TrainingDefinitionMitreTechniqueDTO"
+        404:
+          description: "Training instance with given id not found."
+          schema:
+            $ref: "#/definitions/ApiError"
+        500:
+          description: "Unexpected condition was encountered."
+          schema:
+            $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
   /visualizations/training-instances/{instanceId}/sankey:
     get:
       tags:
@@ -2323,6 +2473,39 @@ paths:
             $ref: "#/definitions/ApiError"
       security:
       - bearerAuth: []
+  /visualizations/training-runs/{runId}/commands:
+    get:
+      tags:
+      - "Visualizations"
+      summary: "Get all commands in a training run."
+      description: ""
+      operationId: "getAllCommandsInTrainingRun"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "runId"
+        in: "path"
+        description: "Training run ID"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        200:
+          description: "Commands in training run."
+          schema:
+            type: "array"
+            items:
+              type: "object"
+        404:
+          description: "Training run with given id not found."
+          schema:
+            $ref: "#/definitions/ApiError"
+        500:
+          description: "Unexpected condition was encountered."
+          schema:
+            $ref: "#/definitions/ApiError"
+      security:
+      - bearerAuth: []
   /visualizations/training-runs/{runId}/transitions-graph:
     get:
       tags:
@@ -2367,7 +2550,7 @@ definitions:
     required:
     - "id"
     - "order"
-    - "phaseType"
+    - "phase_type"
     - "title"
     properties:
       id:
@@ -2384,7 +2567,7 @@ definitions:
         format: "int32"
         example: 1
         description: "Order of phase in a training definition"
-      phaseType:
+      phase_type:
         type: "string"
         example: "TRAINING"
         description: "Type of phase"
@@ -2392,8 +2575,8 @@ definitions:
         - "QUESTIONNAIRE"
         - "INFO"
         - "TRAINING"
-    description: "Abstract superclass for classes TrainingPhaseDTO, InfoPhaseDTO and\
-      \ QuestionnairePhaseDTO"
+    description: "Abstract superclass for classes TrainingPhaseDTO, AccessPhaseDTO,\
+      \ InfoPhaseDTO and QuestionnairePhaseDTO"
   AbstractPhaseExportDTO:
     type: "object"
     properties:
@@ -2401,7 +2584,7 @@ definitions:
         type: "string"
         example: "Training Phase"
         description: "Short textual description of the phase."
-      phaseType:
+      phase_type:
         type: "string"
         example: "TRAINING"
         description: "Type of the phase."
@@ -2409,25 +2592,26 @@ definitions:
         - "QUESTIONNAIRE"
         - "INFO"
         - "TRAINING"
+        - "ACCESS"
       order:
         type: "integer"
         format: "int32"
         example: 2
         description: "Order of phase, starts with 0"
-    description: "Superclass for classes TrainingPhaseExportDTO, InfoPhaseExportDTO\
-      \ and QuestionnairePhaseExportDTO"
+    description: "Superclass for classes TrainingPhaseExportDTO, AccessPhaseExportDTO,\
+      \ InfoPhaseExportDTO and QuestionnairePhaseExportDTO"
   AbstractPhaseImportDTO:
     type: "object"
     required:
     - "order"
-    - "phaseType"
+    - "phase_type"
     discriminator: "phase_type"
     properties:
       title:
         type: "string"
         example: "Training phase description"
         description: "Short textual description of the phase."
-      phaseType:
+      phase_type:
         type: "string"
         example: "TRAINING"
         position: 1
@@ -2436,6 +2620,7 @@ definitions:
         - "QUESTIONNAIRE"
         - "INFO"
         - "TRAINING"
+        - "ACCESS"
       order:
         type: "integer"
         format: "int32"
@@ -2449,7 +2634,7 @@ definitions:
     type: "object"
     required:
     - "id"
-    - "phaseType"
+    - "phase_type"
     - "title"
     discriminator: "phase_type"
     properties:
@@ -2462,7 +2647,7 @@ definitions:
         type: "string"
         example: "Training phase title"
         description: "Short description of training phase"
-      phaseType:
+      phase_type:
         type: "string"
         example: "TRAINING"
         description: "Type of phase"
@@ -2470,14 +2655,14 @@ definitions:
         - "QUESTIONNAIRE"
         - "INFO"
         - "TRAINING"
-    description: "Abstract superclass for classes TrainingPhaseUpdateDTO, InfoPhaseUpdateDTO\
-      \ and QuestionnaireUpdateDTO"
+    description: "Abstract superclass for classes TrainingPhaseUpdateDTO, AccessPhaseUpdateDTO,\
+      \ InfoPhaseUpdateDTO and QuestionnaireUpdateDTO"
   AbstractQuestionDTO:
     type: "object"
     required:
     - "choices"
     - "order"
-    - "questionType"
+    - "question_type"
     - "text"
     properties:
       order:
@@ -2490,7 +2675,7 @@ definitions:
         type: "string"
         example: "What's the capital of Canada?"
         description: "The question that will be displayed to a player"
-      questionType:
+      question_type:
         type: "string"
         example: "MCQ"
         description: "It defines the type of the question"
@@ -2503,45 +2688,149 @@ definitions:
         description: "Choices that are distributed with the question"
         items:
           $ref: "#/definitions/QuestionChoiceDTO"
+  AccessPhaseDTO:
+    allOf:
+    - $ref: "#/definitions/AbstractLevelDTO"
+    - type: "object"
+      properties:
+        passkey:
+          type: "string"
+          example: "secretAnswer"
+          description: "Keyword found in training, used for access next level."
+        cloud_content:
+          type: "string"
+          example: "Connect using SSH config."
+          description: "The instructions on how to connect to the machine in cloud\
+            \ environment."
+        local_content:
+          type: "string"
+          example: "Use vagrant SSH connection."
+          description: "The instructions on how to connect to the machine in local\
+            \ (non-cloud) environment."
+      description: "A level containing instructions on how to connect to the virtual\
+        \ machines."
+  AccessPhaseExportDTO:
+    allOf:
+    - $ref: "#/definitions/AbstractPhaseExportDTO"
+    - type: "object"
+      properties:
+        passkey:
+          type: "string"
+          example: "secretAnswer"
+          description: "Keyword used for access next level."
+        cloud_content:
+          type: "string"
+          example: "Connect using SSH config."
+          description: "The instructions on how to connect to the machine in cloud\
+            \ environment."
+        local_content:
+          type: "string"
+          example: "Use vagrant SSH connection."
+          description: "The instructions on how to connect to the machine in local\
+            \ (non-cloud) environment."
+      description: "Exported access phase."
+  AccessPhaseImportDTO:
+    allOf:
+    - $ref: "#/definitions/AbstractPhaseImportDTO"
+    - type: "object"
+      properties:
+        passkey:
+          type: "string"
+          example: "secretAnswer"
+          description: "Keyword used for access next level."
+          minLength: 0
+          maxLength: 50
+        cloud_content:
+          type: "string"
+          example: "Connect using SSH config."
+          description: "The instructions on how to connect to the machine in cloud\
+            \ environment."
+        local_content:
+          type: "string"
+          example: "Use vagrant SSH connection."
+          description: "The instructions on how to connect to the machine in local\
+            \ (non-cloud) environment."
+      description: "Imported access phase."
+  AccessPhaseUpdateDTO:
+    allOf:
+    - $ref: "#/definitions/AbstractPhaseUpdateDTO"
+    - type: "object"
+      required:
+      - "passkey"
+      properties:
+        passkey:
+          type: "string"
+          example: "secretAnswer"
+          description: "Keyword found in training, used for access next level."
+          minLength: 0
+          maxLength: 50
+        cloud_content:
+          type: "string"
+          example: "Connect using SSH config."
+          description: "The instructions on how to connect to the machine in cloud\
+            \ environment."
+        local_content:
+          type: "string"
+          example: "Use vagrant SSH connection."
+          description: "The instructions on how to connect to the machine in local\
+            \ (non-cloud) environment."
+      description: "Access level to update."
   AccessTrainingRunDTO:
     type: "object"
     properties:
-      trainingRunID:
+      training_run_id:
         type: "integer"
         format: "int64"
         example: 1
         description: "Main identifier of training run."
-      showStepperBar:
+      show_stepper_bar:
         type: "boolean"
         example: false
         description: "Sign if stepper bar should be displayed."
-      sandboxInstanceRefId:
+      sandbox_instance_ref_id:
         type: "integer"
         format: "int64"
         example: 2
         description: "Main identifier of sandbox which is assigned to training run."
-      currentPhase:
+      current_phase:
         description: "Current phase in the training run."
         $ref: "#/definitions/AbstractLevelDTO"
-      infoAboutPhases:
+      info_about_phases:
         type: "array"
         description: "Information about all phase in training instance."
         items:
           $ref: "#/definitions/BasicPhaseInfoDTO"
-      instanceId:
+      instance_id:
         type: "integer"
         format: "int64"
         example: 1
         description: "Id of associated training instance"
-      startTime:
+      start_time:
         type: "string"
         format: "date-time"
         example: "2016-10-19 10:23:54+02"
         description: "Date when training run started."
-      takenSolution:
+      taken_solution:
         type: "string"
         example: "solution of the task"
         description: "Content of the taken solution of the current training phase."
+      local_environment:
+        type: "boolean"
+        example: true
+        description: "Indicates if local sandboxes are used for training runs."
+      sandbox_definition_id:
+        type: "integer"
+        format: "int64"
+        example: 2
+        description: "Main identifier of sandbox definition which is assigned to training\
+          \ instance of the training run."
+      backward_mode:
+        type: "boolean"
+        example: true
+        description: "Indicates if trainee can during training run move to the previous\
+          \ already solved phases."
+      phase_answered:
+        type: "boolean"
     description: "Just accessed training run."
   AccessedTrainingRunDTO:
     type: "object"
@@ -2555,29 +2844,29 @@ definitions:
         type: "string"
         example: "Concluded Instance"
         description: "Short textual description of the training instance."
-      trainingInstanceStartDate:
+      training_instance_start_date:
         type: "string"
         format: "date-time"
         example: "2016-10-19T10:23:54"
         description: "Start date of training instance for which the training run was\
           \ created."
-      trainingInstanceEndDate:
+      training_instance_end_date:
         type: "string"
         format: "date-time"
         example: "2017-10-19T10:23:54"
         description: "End date of training instance for which the training run was\
           \ created."
-      currentPhaseOrder:
+      current_phase_order:
         type: "integer"
         format: "int32"
         example: 1
         description: "Current phase order of training run."
-      numberOfPhases:
+      number_of_phases:
         type: "integer"
         format: "int32"
         example: 3
         description: "The number of phase in the training instance."
-      possibleAction:
+      possible_action:
         type: "string"
         example: "RESULTS"
         description: "Possible action which can be executed with training Run."
@@ -2585,7 +2874,7 @@ definitions:
         - "NONE"
         - "RESULTS"
         - "RESUME"
-      instanceId:
+      instance_id:
         type: "integer"
         format: "int64"
         example: 1
@@ -2611,7 +2900,7 @@ definitions:
     - $ref: "#/definitions/ApiError"
     - type: "object"
       properties:
-        entityErrorDetail:
+        entity_error_detail:
           description: "Detail of the entity which is related to the error."
           $ref: "#/definitions/EntityErrorDetail"
       description: "A detailed error information related to the entity."
@@ -2718,7 +3007,7 @@ definitions:
     - $ref: "#/definitions/ApiError"
     - type: "object"
       properties:
-        apiSubError:
+        api_sub_error:
           description: "Detailed error from another microservice."
           $ref: "#/definitions/ApiSubError"
       description: "A detailed error information related to the microservice."
@@ -2745,7 +3034,7 @@ definitions:
         format: "int32"
         example: 1
         description: "Order of phase among phase in training definition."
-      phaseType:
+      phase_type:
         type: "string"
         example: "TRAINING"
         description: "Type of the phase."
@@ -2753,17 +3042,18 @@ definitions:
         - "QUESTIONNAIRE"
         - "INFO"
         - "TRAINING"
+        - "ACCESS"
     description: "Basic information about the phase and its type."
   DecisionMatrixRowDTO:
     type: "object"
     required:
-    - "completedInTime"
+    - "completed_in_time"
     - "id"
-    - "keywordUsed"
+    - "keyword_used"
     - "order"
-    - "questionnaireAnswered"
-    - "solutionDisplayed"
-    - "wrongAnswers"
+    - "questionnaire_answered"
+    - "solution_displayed"
+    - "wrong_answers"
     properties:
       id:
         type: "integer"
@@ -2775,31 +3065,31 @@ definitions:
         format: "int32"
         example: 1
         description: "Order of row in a decision matrix"
-      questionnaireAnswered:
+      questionnaire_answered:
         type: "number"
         format: "double"
         example: 0.5
         description: "It determines how important the answers of the questions in\
           \ questionnaires are"
-      keywordUsed:
+      keyword_used:
         type: "number"
         format: "double"
         example: 0.5
         description: "It determines how important it is whether the player used the\
           \ keyword"
-      completedInTime:
+      completed_in_time:
         type: "number"
         format: "double"
         example: 0.5
         description: "It determines how important it is whether the player completed\
           \ the task in time"
-      solutionDisplayed:
+      solution_displayed:
         type: "number"
         format: "double"
         example: 0.5
         description: "It determines how important it is whether the player displayed\
           \ the solution of the task they were solving"
-      wrongAnswers:
+      wrong_answers:
         type: "number"
         format: "double"
         example: 0.5
@@ -2807,43 +3097,43 @@ definitions:
   DecisionMatrixRowExportDTO:
     type: "object"
     required:
-    - "completedInTime"
-    - "keywordUsed"
+    - "completed_in_time"
+    - "keyword_used"
     - "order"
-    - "questionnaireAnswered"
-    - "solutionDisplayed"
-    - "wrongAnswers"
+    - "questionnaire_answered"
+    - "solution_displayed"
+    - "wrong_answers"
     properties:
       order:
         type: "integer"
         format: "int32"
         example: 1
         description: "Order of row in a decision matrix"
-      questionnaireAnswered:
+      questionnaire_answered:
         type: "number"
         format: "double"
         example: 0.5
         description: "It determines how important the answers of the questions in\
           \ questionnaires are"
-      keywordUsed:
+      keyword_used:
         type: "number"
         format: "double"
         example: 0.5
         description: "It determines how important it is whether the player used the\
           \ keyword"
-      completedInTime:
+      completed_in_time:
         type: "number"
         format: "double"
         example: 0.5
         description: "It determines how important it is whether the player completed\
           \ the task in time"
-      solutionDisplayed:
+      solution_displayed:
         type: "number"
         format: "double"
         example: 0.5
         description: "It determines how important it is whether the player displayed\
           \ the solution of the task they were solving"
-      wrongAnswers:
+      wrong_answers:
         type: "number"
         format: "double"
         example: 0.5
@@ -2851,43 +3141,43 @@ definitions:
   DecisionMatrixRowImportDTO:
     type: "object"
     required:
-    - "completedInTime"
-    - "keywordUsed"
+    - "completed_in_time"
+    - "keyword_used"
     - "order"
-    - "questionnaireAnswered"
-    - "solutionDisplayed"
-    - "wrongAnswers"
+    - "questionnaire_answered"
+    - "solution_displayed"
+    - "wrong_answers"
     properties:
       order:
         type: "integer"
         format: "int32"
         example: 1
         description: "Order of row in a decision matrix"
-      questionnaireAnswered:
+      questionnaire_answered:
         type: "number"
         format: "double"
         example: 0.5
         description: "It determines how important the answers of the questions in\
           \ questionnaires are"
-      keywordUsed:
+      keyword_used:
         type: "number"
         format: "double"
         example: 0.5
         description: "It determines how important it is whether the player used the\
           \ keyword"
-      completedInTime:
+      completed_in_time:
         type: "number"
         format: "double"
         example: 0.5
         description: "It determines how important it is whether the player completed\
           \ the task in time"
-      solutionDisplayed:
+      solution_displayed:
         type: "number"
         format: "double"
         example: 0.5
         description: "It determines how important it is whether the player displayed\
           \ the solution of the task they were solving"
-      wrongAnswers:
+      wrong_answers:
         type: "number"
         format: "double"
         example: 0.5
@@ -2903,7 +3193,7 @@ definitions:
         type: "string"
         example: "id"
         description: "Identifier of the entity."
-      identifierValue:
+      identifier_value:
         type: "object"
         example: "1"
         description: "Value of the identifier."
@@ -2914,7 +3204,7 @@ definitions:
   ImportTrainingDefinitionDTO:
     type: "object"
     required:
-    - "showStepperBar"
+    - "show_stepper_bar"
     - "state"
     properties:
       title:
@@ -2936,12 +3226,12 @@ definitions:
         - "RELEASED"
         - "ARCHIVED"
         - "UNRELEASED"
-      showStepperBar:
+      show_stepper_bar:
         type: "boolean"
         example: false
         position: 3
         description: "Sign if stepper bar should be displayed."
-      estimatedDuration:
+      estimated_duration:
         type: "integer"
         format: "int32"
         example: 5
@@ -3014,7 +3304,7 @@ definitions:
   IsCorrectAnswerDTO:
     type: "object"
     properties:
-      remainingAttempts:
+      remaining_attempts:
         type: "integer"
         format: "int32"
         example: 3
@@ -3142,24 +3432,39 @@ definitions:
       value:
         type: "integer"
         format: "int64"
+  MitreTechniqueDTO:
+    type: "object"
+    required:
+    - "id"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+        example: 1
+        description: "Main identifier of Mitre technique."
+      technique_key:
+        type: "string"
+        example: "T1548.001"
+    description: "Represent 'how' an trainee achieves a tactical goal of the training\
+      \ level by performing an action."
   NodeDTO:
     type: "object"
     properties:
-      taskId:
+      task_id:
         type: "integer"
         format: "int64"
-      taskOrder:
+      task_order:
         type: "integer"
         format: "int32"
-      taskTitle:
+      task_title:
         type: "string"
-      phaseId:
+      phase_id:
         type: "integer"
         format: "int64"
-      phaseOrder:
+      phase_order:
         type: "integer"
         format: "int32"
-      phaseTitle:
+      phase_title:
         type: "string"
   Pageable:
     type: "object"
@@ -3173,10 +3478,10 @@ definitions:
         type: "boolean"
       unpaged:
         type: "boolean"
-      pageNumber:
+      page_number:
         type: "integer"
         format: "int32"
-      pageSize:
+      page_size:
         type: "integer"
         format: "int32"
   Pagination:
@@ -3210,9 +3515,9 @@ definitions:
   PhaseCreateDTO:
     type: "object"
     required:
-    - "phaseType"
+    - "phase_type"
     properties:
-      phaseType:
+      phase_type:
         type: "string"
         example: "TRAINING"
         description: "Type of phase."
@@ -3220,7 +3525,7 @@ definitions:
         - "QUESTIONNAIRE"
         - "INFO"
         - "TRAINING"
-      questionnaireType:
+      questionnaire_type:
         type: "string"
         example: "ADAPTIVE"
         description: "Type of questionnaire."
@@ -3247,9 +3552,9 @@ definitions:
   QuestionAnswerDTO:
     type: "object"
     required:
-    - "questionId"
+    - "question_id"
     properties:
-      questionId:
+      question_id:
         type: "integer"
         format: "int64"
         example: 1
@@ -3334,7 +3639,7 @@ definitions:
     - "choices"
     - "id"
     - "order"
-    - "questionType"
+    - "question_type"
     - "text"
     properties:
       order:
@@ -3347,7 +3652,7 @@ definitions:
         type: "string"
         example: "What's the capital of Canada?"
         description: "The question that will be displayed to a player"
-      questionType:
+      question_type:
         type: "string"
         example: "MCQ"
         description: "It defines the type of the question"
@@ -3370,7 +3675,7 @@ definitions:
     required:
     - "choices"
     - "order"
-    - "questionType"
+    - "question_type"
     - "text"
     properties:
       order:
@@ -3382,7 +3687,7 @@ definitions:
         type: "string"
         example: "What's the capital of Canada?"
         description: "The question that will be displayed to a player"
-      questionType:
+      question_type:
         type: "string"
         example: "MCQ"
         description: "It defines the type of the question"
@@ -3400,14 +3705,14 @@ definitions:
     required:
     - "choices"
     - "order"
-    - "questionType"
+    - "question_type"
     - "text"
     properties:
       text:
         type: "string"
         example: "What's the capital of Canada?"
         description: "The question that will be displayed to a player"
-      questionType:
+      question_type:
         type: "string"
         example: "MCQ"
         position: 1
@@ -3434,9 +3739,9 @@ definitions:
     required:
     - "id"
     - "order"
-    - "phaseId"
-    - "questionIds"
-    - "successRate"
+    - "phase_id"
+    - "question_ids"
+    - "success_rate"
     properties:
       id:
         type: "integer"
@@ -3449,19 +3754,19 @@ definitions:
         example: 0
         description: "Order of question"
         minimum: 0
-      questionIds:
+      question_ids:
         type: "array"
         description: "Set of IDs of questions related to the specified questionnaire"
         uniqueItems: true
         items:
           type: "integer"
           format: "int64"
-      phaseId:
+      phase_id:
         type: "integer"
         format: "int64"
         example: 1
         description: "ID of training phase to which the questions are related of question"
-      successRate:
+      success_rate:
         type: "integer"
         format: "int32"
         example: 50
@@ -3472,27 +3777,28 @@ definitions:
     type: "object"
     required:
     - "order"
-    - "phaseOrder"
-    - "successRate"
+    - "phase_order"
+    - "success_rate"
     properties:
       order:
         type: "integer"
         format: "int32"
         example: 0
         description: "Order of question"
-      questionOrders:
+      question_orders:
         type: "array"
-        description: "Set of IDs of questions related to the specified questionnaire"
+        description: "Set of orders of questions related to the specified questionnaire"
         uniqueItems: true
         items:
           type: "integer"
           format: "int32"
-      phaseOrder:
+      phase_order:
         type: "integer"
         format: "int32"
         example: 1
-        description: "ID of training phase to which the questions are related of question"
-      successRate:
+        description: "Order of training phase to which the questions are related of\
+          \ question"
+      success_rate:
         type: "integer"
         format: "int32"
         example: 50
@@ -3501,9 +3807,9 @@ definitions:
     type: "object"
     required:
     - "order"
-    - "phaseOrder"
-    - "questionOrders"
-    - "successRate"
+    - "phase_order"
+    - "question_orders"
+    - "success_rate"
     properties:
       order:
         type: "integer"
@@ -3511,14 +3817,14 @@ definitions:
         example: 0
         description: "Order of question"
         minimum: 0
-      phaseOrder:
+      phase_order:
         type: "integer"
         format: "int32"
         example: 1
         position: 1
         description: "ID of training phase to which the questions are related of question"
         minimum: 0
-      successRate:
+      success_rate:
         type: "integer"
         format: "int32"
         example: 50
@@ -3526,7 +3832,7 @@ definitions:
         description: "Percentage that defines whether a player was successful or not "
         minimum: 0
         maximum: 100
-      questionOrders:
+      question_orders:
         type: "array"
         position: 3
         description: "Set of IDs of questions related to the specified questionnaire"
@@ -3554,14 +3860,14 @@ definitions:
           description: "List of questions associated with the questionnaire phase"
           items:
             $ref: "#/definitions/QuestionDTO"
-        questionnaireType:
+        questionnaire_type:
           type: "string"
           example: "ADAPTIVE"
           description: "Type of questionnaire phase"
           enum:
           - "ADAPTIVE"
           - "GENERAL"
-        phaseRelations:
+        phase_relations:
           type: "array"
           description: "List of relations between questions and a training phase"
           items:
@@ -3576,14 +3882,14 @@ definitions:
           description: "List of questions associated with the questionnaire phase"
           items:
             $ref: "#/definitions/QuestionExportDTO"
-        questionnaireType:
+        questionnaire_type:
           type: "string"
           example: "ADAPTIVE"
           description: "Type of questionnaire phase"
           enum:
           - "ADAPTIVE"
           - "GENERAL"
-        phaseRelations:
+        phase_relations:
           type: "array"
           description: "List of relations between questions and a training phase"
           items:
@@ -3594,11 +3900,11 @@ definitions:
     - $ref: "#/definitions/AbstractPhaseImportDTO"
     - type: "object"
       required:
-      - "phaseRelations"
-      - "questionnaireType"
+      - "phase_relations"
+      - "questionnaire_type"
       - "questions"
       properties:
-        questionnaireType:
+        questionnaire_type:
           type: "string"
           example: "ADAPTIVE"
           description: "The type of the questionnaire"
@@ -3611,7 +3917,7 @@ definitions:
           description: "Questions in the questionnaire"
           items:
             $ref: "#/definitions/QuestionImportDTO"
-        phaseRelations:
+        phase_relations:
           type: "array"
           position: 2
           description: "The relation between questions in the questionnaire and phase\
@@ -3624,7 +3930,7 @@ definitions:
     - $ref: "#/definitions/AbstractPhaseUpdateDTO"
     - type: "object"
       required:
-      - "phaseRelations"
+      - "phase_relations"
       - "questions"
       properties:
         questions:
@@ -3632,7 +3938,7 @@ definitions:
           description: "Questions in the questionnaire"
           items:
             $ref: "#/definitions/QuestionDTO"
-        phaseRelations:
+        phase_relations:
           type: "array"
           description: "The relation between questions in the questionnaire and phase\
             \ in the training definition"
@@ -3662,18 +3968,56 @@ definitions:
   Sort:
     type: "object"
     properties:
+      empty:
+        type: "boolean"
       sorted:
         type: "boolean"
       unsorted:
         type: "boolean"
-      empty:
-        type: "boolean"
+  SubmissionDTO:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+        example: 1
+        description: "ID of a the submission"
+      provided:
+        type: "string"
+        example: "true"
+        description: "Content of the provided answer."
+      submission_type:
+        type: "string"
+        example: "CORRECT"
+        description: "Type of the submission, either correct or incorrect"
+        enum:
+        - "CORRECT"
+        - "INCORRECT"
+      date:
+        type: "string"
+        format: "date-time"
+        example: "2016-10-19 10:23:54+02"
+        description: "Date time when answer was submitted."
+      ip_address:
+        type: "string"
+        example: "2016-10-19 10:23:54+02"
+        description: "IP address of the trainee who submitted an answer."
+      training_run_id:
+        type: "integer"
+        format: "int64"
+        example: "2016-10-19 10:23:54+02"
+        description: "ID of training run."
+      phase_id:
+        type: "integer"
+        format: "int64"
+        example: "2016-10-19 10:23:54+02"
+        description: "ID of phase."
   TaskCopyDTO:
     type: "object"
     required:
     - "answer"
     - "content"
-    - "incorrectAnswerLimit"
+    - "incorrect_answer_limit"
     - "solution"
     - "title"
     properties:
@@ -3697,7 +4041,7 @@ definitions:
         example: "Open secret.txt"
         position: 3
         description: "Description how to get the answer"
-      incorrectAnswerLimit:
+      incorrect_answer_limit:
         type: "integer"
         format: "int32"
         example: 5
@@ -3706,12 +4050,12 @@ definitions:
           \ by the player"
         minimum: 0
         maximum: 100
-      modifySandbox:
+      modify_sandbox:
         type: "boolean"
         example: true
         position: 5
         description: "It defines whether the sandbox can be modified"
-      sandboxChangeExpectedDuration:
+      sandbox_change_expected_duration:
         type: "integer"
         format: "int32"
         example: 15
@@ -3725,7 +4069,7 @@ definitions:
     - "answer"
     - "content"
     - "id"
-    - "incorrectAnswerLimit"
+    - "incorrect_answer_limit"
     - "order"
     - "solution"
     - "title"
@@ -3757,17 +4101,17 @@ definitions:
         type: "string"
         example: "Open secret.txt"
         description: "Description how to get the answer"
-      incorrectAnswerLimit:
+      incorrect_answer_limit:
         type: "integer"
         format: "int32"
         example: 5
         description: "It defines the allowed number of incorrect answers submitted\
           \ by the player"
-      modifySandbox:
+      modify_sandbox:
         type: "boolean"
         example: true
         description: "It defines whether the sandbox can be modified"
-      sandboxChangeExpectedDuration:
+      sandbox_change_expected_duration:
         type: "integer"
         format: "int32"
         example: 15
@@ -3778,7 +4122,7 @@ definitions:
     required:
     - "answer"
     - "content"
-    - "incorrectAnswerLimit"
+    - "incorrect_answer_limit"
     - "order"
     - "solution"
     - "title"
@@ -3805,17 +4149,17 @@ definitions:
         type: "string"
         example: "Open secret.txt"
         description: "Description how to get the answer"
-      incorrectAnswerLimit:
+      incorrect_answer_limit:
         type: "integer"
         format: "int32"
         example: 5
         description: "It defines the allowed number of incorrect answers submitted\
           \ by the player"
-      modifySandbox:
+      modify_sandbox:
         type: "boolean"
         example: true
         description: "It defines whether the sandbox can be modified"
-      sandboxChangeExpectedDuration:
+      sandbox_change_expected_duration:
         type: "integer"
         format: "int32"
         example: 15
@@ -3824,7 +4168,7 @@ definitions:
   TaskImportDTO:
     type: "object"
     required:
-    - "incorrectAnswerLimit"
+    - "incorrect_answer_limit"
     - "order"
     properties:
       title:
@@ -3856,7 +4200,7 @@ definitions:
         example: "This is how you do it"
         position: 4
         description: "Instruction how to get answer in training."
-      incorrectAnswerLimit:
+      incorrect_answer_limit:
         type: "integer"
         format: "int32"
         example: 5
@@ -3865,12 +4209,12 @@ definitions:
           \ solution."
         minimum: 0
         maximum: 100
-      modifySandbox:
+      modify_sandbox:
         type: "boolean"
         example: true
         position: 6
         description: "Sign if sandbox should be modified if the task is picked."
-      sandboxChangeExpectedDuration:
+      sandbox_change_expected_duration:
         type: "integer"
         format: "int32"
         example: 30
@@ -3885,7 +4229,7 @@ definitions:
     - "answer"
     - "content"
     - "id"
-    - "incorrectAnswerLimit"
+    - "incorrect_answer_limit"
     - "solution"
     - "title"
     properties:
@@ -3903,7 +4247,7 @@ definitions:
         example: "Capture the flag"
         position: 1
         description: "The information that are displayed to a player"
-      sandboxChangeExpectedDuration:
+      sandbox_change_expected_duration:
         type: "integer"
         format: "int32"
         example: 15
@@ -3924,7 +4268,7 @@ definitions:
         example: "Open secret.txt"
         position: 3
         description: "Description how to get the answer"
-      incorrectAnswerLimit:
+      incorrect_answer_limit:
         type: "integer"
         format: "int32"
         example: 5
@@ -3933,7 +4277,7 @@ definitions:
           \ by the player"
         minimum: 0
         maximum: 100
-      modifySandbox:
+      modify_sandbox:
         type: "boolean"
         example: true
         position: 5
@@ -3979,25 +4323,25 @@ definitions:
         description: "Information about all phase in training definition."
         items:
           $ref: "#/definitions/AbstractLevelDTO"
-      showStepperBar:
+      show_stepper_bar:
         type: "boolean"
         example: false
         description: "Sign if stepper bar should be displayed."
-      estimatedDuration:
+      estimated_duration:
         type: "integer"
         format: "int64"
         example: 5
         description: "Estimated time it takes to finish runs created from this definition."
-      lastEdited:
+      last_edited:
         type: "string"
         format: "date-time"
         example: "2017-10-19 10:23:54+02"
         description: "Time of last edit done to definition."
-      lastEditedBy:
+      last_edited_by:
         type: "string"
         example: "John Doe"
         description: "Name of the user who has done the last edit in definition."
-      canBeArchived:
+      can_be_archived:
         type: "boolean"
         example: true
         position: 7
@@ -4006,7 +4350,7 @@ definitions:
   TrainingDefinitionCreateDTO:
     type: "object"
     required:
-    - "showStepperBar"
+    - "show_stepper_bar"
     - "state"
     - "title"
     properties:
@@ -4020,7 +4364,7 @@ definitions:
         description: "List of knowledge and skills necessary to complete the training."
         items:
           type: "string"
-      defaultContent:
+      default_content:
         type: "boolean"
         example: false
         description: "Sign if default phases should be created."
@@ -4047,12 +4391,60 @@ definitions:
         - "RELEASED"
         - "ARCHIVED"
         - "UNRELEASED"
-      showStepperBar:
+      show_stepper_bar:
         type: "boolean"
         example: true
         position: 1
         description: "Sign if stepper bar should be displayed."
     description: "Training definition to create."
+  TrainingDefinitionExportDTO:
+    type: "object"
+    properties:
+      title:
+        type: "string"
+        example: "TrainingDefinition2"
+        description: "A name of the training/game (e.g., Photo Hunter) ."
+      description:
+        type: "string"
+        example: "Unreleased training definition"
+        description: "Description of training definition that is visible to the participant."
+      prerequisites:
+        type: "array"
+        description: "List of knowledge and skills necessary to complete the training."
+        items:
+          type: "string"
+      outcomes:
+        type: "array"
+        description: "A list of knowledge and skills that the participant should learn\
+          \ by attending the training (if it is used for educational purposes) "
+        items:
+          type: "string"
+      state:
+        type: "string"
+        example: "UNRELEASED"
+        description: "Current state of training definition."
+        enum:
+        - "PRIVATED"
+        - "RELEASED"
+        - "ARCHIVED"
+        - "UNRELEASED"
+      show_stepper_bar:
+        type: "boolean"
+        example: false
+        description: "Sign if stepper bar should be displayed."
+      phases:
+        type: "array"
+        description: "Information about all phase in training definition."
+        items:
+          $ref: "#/definitions/AbstractPhaseExportDTO"
+      estimated_duration:
+        type: "integer"
+        format: "int32"
+        example: 5
+        description: "Estimated time (minutes) taken by the player to finish run created\
+          \ from this definition."
+    description: "An exported detailed information about training definition which\
+      \ also include individual phase."
   TrainingDefinitionInfoDTO:
     type: "object"
     properties:
@@ -4075,6 +4467,30 @@ definitions:
         - "ARCHIVED"
         - "UNRELEASED"
     description: "Basic training definition information."
+  TrainingDefinitionMitreTechniqueDTO:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+        example: "Delta"
+        description: "Unique identifier of the training definition."
+      title:
+        type: "string"
+        example: "Delta"
+        description: "Title of the training definition."
+      played:
+        type: "boolean"
+        example: true
+        description: "Indicates if the training definition has been played by user."
+      mitre_techniques:
+        type: "array"
+        example: "[TA0043.T1595, TA0042.T1588.006]"
+        description: "List of MITRE technique keys."
+        uniqueItems: true
+        items:
+          type: "string"
+    description: "Represent training definition and all used mitre techniques."
   TrainingDefinitionRestResource:
     type: "object"
     properties:
@@ -4094,7 +4510,7 @@ definitions:
     type: "object"
     required:
     - "id"
-    - "showStepperBar"
+    - "show_stepper_bar"
     - "state"
     - "title"
     properties:
@@ -4108,7 +4524,7 @@ definitions:
         example: "TrainingDefinition2"
         position: 1
         description: "A name of the training/game (e.g., Photo Hunter) ."
-      showStepperBar:
+      show_stepper_bar:
         type: "boolean"
         example: false
         position: 2
@@ -4143,54 +4559,6 @@ definitions:
         - "ARCHIVED"
         - "UNRELEASED"
     description: "Training definition to update."
-  TrainingDefinitionWithPhasesExportDTO:
-    type: "object"
-    properties:
-      title:
-        type: "string"
-        example: "TrainingDefinition2"
-        description: "A name of the training/game (e.g., Photo Hunter) ."
-      description:
-        type: "string"
-        example: "Unreleased training definition"
-        description: "Description of training definition that is visible to the participant."
-      prerequisites:
-        type: "array"
-        description: "List of knowledge and skills necessary to complete the training."
-        items:
-          type: "string"
-      outcomes:
-        type: "array"
-        description: "A list of knowledge and skills that the participant should learn\
-          \ by attending the training (if it is used for educational purposes) "
-        items:
-          type: "string"
-      state:
-        type: "string"
-        example: "UNRELEASED"
-        description: "Current state of training definition."
-        enum:
-        - "PRIVATED"
-        - "RELEASED"
-        - "ARCHIVED"
-        - "UNRELEASED"
-      showStepperBar:
-        type: "boolean"
-        example: false
-        description: "Sign if stepper bar should be displayed."
-      phases:
-        type: "array"
-        description: "Information about all phase in training definition."
-        items:
-          $ref: "#/definitions/AbstractPhaseExportDTO"
-      estimatedDuration:
-        type: "integer"
-        format: "int32"
-        example: 5
-        description: "Estimated time (minutes) taken by the player to finish run created\
-          \ from this definition."
-    description: "An exported detailed information about training definition which\
-      \ also include individual phase."
   TrainingInstanceArchiveDTO:
     type: "object"
     properties:
@@ -4199,7 +4567,7 @@ definitions:
         format: "int64"
         example: 1
         description: "Main identifier of training instance."
-      definitionId:
+      definition_id:
         type: "integer"
         format: "int64"
         example: 1
@@ -4209,35 +4577,44 @@ definitions:
         type: "string"
         example: "Concluded Instance"
         description: "Short textual description of the training instance."
-      startTime:
+      start_time:
         type: "string"
         format: "date-time"
         example: "2016-10-19 10:23:54+02"
         description: "Date when training instance starts."
-      endTime:
+      end_time:
         type: "string"
         format: "date-time"
         example: "2017-10-19 10:23:54+02"
         description: "Date when training instance ends."
-      accessToken:
+      access_token:
         type: "string"
         example: "pass-1234"
         description: "Token needed to access runs created from this definition"
-      organizersRefIds:
+      organizers_ref_ids:
         type: "array"
         description: "Reference to organizersRefIds which organize training instance."
         uniqueItems: true
         items:
           type: "integer"
           format: "int64"
+      local_environment:
+        type: "boolean"
+        example: true
+        description: "Indicates if local sandboxes are used for training runs."
+      backward_mode:
+        type: "boolean"
+        example: true
+        description: "Indicates if trainee can during training run move to the previous\
+          \ already solved phases."
     description: "The finished and archived instance of training definition which\
       \ includes individual finished training runs of participants."
   TrainingInstanceAssignPoolIdDTO:
     type: "object"
     required:
-    - "poolId"
+    - "pool_id"
     properties:
-      poolId:
+      pool_id:
         type: "integer"
         format: "int64"
         example: 2
@@ -4247,19 +4624,19 @@ definitions:
   TrainingInstanceBasicInfoDTO:
     type: "object"
     required:
-    - "accessToken"
+    - "access_token"
     properties:
       id:
         type: "integer"
         format: "int64"
         example: 1
         description: "Main identifier of training instance."
-      startTime:
+      start_time:
         type: "string"
         format: "date-time"
         example: "2016-10-19 10:23:54+02"
         description: "Date when training instance starts."
-      endTime:
+      end_time:
         type: "string"
         format: "date-time"
         example: "2017-10-19 10:23:54+02"
@@ -4268,52 +4645,80 @@ definitions:
         type: "string"
         example: "Concluded Instance"
         description: "Short textual description of the training instance."
-      accessToken:
+      access_token:
         type: "string"
         example: "hunter"
         description: "Token used to access training run."
-      poolId:
+      pool_id:
         type: "integer"
         format: "int64"
         example: 1
         description: "Id of sandbox pool belonging to training instance"
+      local_environment:
+        type: "boolean"
+        example: true
+        description: "Indicates if local sandboxes are used for training runs."
+      sandbox_definition_id:
+        type: "integer"
+        format: "int64"
+        example: 1
+        description: "Id of sandbox definition assigned to training instance"
+      backward_mode:
+        type: "boolean"
+        example: true
+        description: "Indicates if trainee can during training run move to the previous\
+          \ already solved phases."
   TrainingInstanceCreateDTO:
     type: "object"
     required:
-    - "accessToken"
-    - "endTime"
-    - "startTime"
+    - "access_token"
+    - "end_time"
+    - "start_time"
     - "title"
-    - "trainingDefinitionId"
+    - "training_definition_id"
     properties:
       title:
         type: "string"
         example: "December instance"
         description: "Short textual description of the training instance."
-      poolId:
+      pool_id:
         type: "integer"
         format: "int64"
         example: 1
         description: "Id of sandbox pool assigned to training instance"
-      startTime:
+      local_environment:
+        type: "boolean"
+        example: true
+        description: "Indicates if local sandboxes are used for training runs."
+      sandbox_definition_id:
+        type: "integer"
+        format: "int64"
+        example: 1
+        description: "Id of sandbox definition assigned to training instance"
+      backward_mode:
+        type: "boolean"
+        example: true
+        description: "Indicates if trainee can during training run move to the previous\
+          \ already solved phases."
+      start_time:
         type: "string"
         format: "date-time"
         example: "2020-11-20T10:28:02.727Z"
         position: 1
         description: "Date when training instance starts."
-      endTime:
+      end_time:
         type: "string"
         format: "date-time"
         example: "2020-11-25T10:26:02.727Z"
         position: 2
         description: "Date when training instance ends."
-      accessToken:
+      access_token:
         type: "string"
         example: "hunter"
         position: 3
         description: "AccessToken which will be modified and then used for accessing\
           \ training run."
-      trainingDefinitionId:
+      training_definition_id:
         type: "integer"
         format: "int64"
         example: 1
@@ -4325,19 +4730,19 @@ definitions:
   TrainingInstanceDTO:
     type: "object"
     required:
-    - "accessToken"
+    - "access_token"
     properties:
       id:
         type: "integer"
         format: "int64"
         example: 1
         description: "Main identifier of training instance."
-      startTime:
+      start_time:
         type: "string"
         format: "date-time"
         example: "2016-10-19 10:23:54+02"
         description: "Date when training instance starts."
-      endTime:
+      end_time:
         type: "string"
         format: "date-time"
         example: "2017-10-19 10:23:54+02"
@@ -4346,54 +4751,68 @@ definitions:
         type: "string"
         example: "Concluded Instance"
         description: "Short textual description of the training instance."
-      trainingDefinition:
+      training_definition:
         description: "Reference to training definition from which is training instance\
           \ created."
         $ref: "#/definitions/TrainingDefinitionByIdDTO"
-      accessToken:
+      access_token:
         type: "string"
         example: "hunter"
         description: "Token used to access training run."
-      poolId:
+      pool_id:
         type: "integer"
         format: "int64"
         example: 1
         description: "Id of sandbox pool belonging to training instance"
-      sandboxesWithTrainingRun:
+      sandboxes_with_training_run:
         type: "array"
         example: "[3,15]"
         description: "Ids of sandboxes which are assigned to training run."
         items:
           type: "integer"
           format: "int64"
-      lastEdited:
+      last_edited:
         type: "string"
         format: "date-time"
         example: "2017-10-19 10:23:54+02"
         description: "Time of last edit done to instance."
-      lastEditedBy:
+      last_edited_by:
         type: "string"
         example: "John Doe"
         description: "Name of the user who has done the last edit in instance."
+      local_environment:
+        type: "boolean"
+        example: true
+        description: "Indicates if local sandboxes are used for training runs."
+      sandbox_definition_id:
+        type: "integer"
+        format: "int64"
+        example: 1
+        description: "Id of sandbox definition assigned to training instance"
+      backward_mode:
+        type: "boolean"
+        example: true
+        description: "Indicates if trainee can during training run move to the previous\
+          \ already solved phases."
     description: "A session of attending a concrete training, which involves a deployment\
       \ of the training definition in one or more sandbox instances that are then\
-      \ assigned to participants. The instance comprises one or more training runs."
+      \ assigned to participants. The instance comprises one or more game runs."
   TrainingInstanceFindAllResponseDTO:
     type: "object"
     required:
-    - "accessToken"
+    - "access_token"
     properties:
       id:
         type: "integer"
         format: "int64"
         example: 1
         description: "Main identifier of training instance."
-      startTime:
+      start_time:
         type: "string"
         format: "date-time"
         example: "2016-10-19 10:23:54+02"
         description: "Date when training instance starts."
-      endTime:
+      end_time:
         type: "string"
         format: "date-time"
         example: "2017-10-19 10:23:54+02"
@@ -4402,28 +4821,37 @@ definitions:
         type: "string"
         example: "Concluded Instance"
         description: "Short textual description of the training instance."
-      trainingDefinition:
+      training_definition:
         description: "Reference to training definition from which is training instance\
           \ created."
         $ref: "#/definitions/TrainingDefinitionByIdDTO"
-      accessToken:
+      access_token:
         type: "string"
         example: "hunter"
         description: "Token used to access training run."
-      poolId:
+      pool_id:
         type: "integer"
         format: "int64"
         example: 1
         description: "Id of sandbox pool belonging to training instance"
-      lastEdited:
+      last_edited:
         type: "string"
         format: "date-time"
         example: "2017-10-19 10:23:54+02"
         description: "Time of last edit done to instance."
-      lastEditedBy:
+      last_edited_by:
         type: "string"
         example: "John Doe"
         description: "Name of the user who has done the last edit in instance."
+      local_environment:
+        type: "boolean"
+        example: true
+        description: "Indicates if local sandboxes are used for training runs."
+      backward_mode:
+        type: "boolean"
+        example: true
+        description: "Indicates if trainee can during training run move to the previous\
+          \ already solved phases."
     description: "Information about training instance returned in find all training\
       \ instance response."
   TrainingInstanceRestResource:
@@ -4444,47 +4872,61 @@ definitions:
   TrainingInstanceUpdateDTO:
     type: "object"
     required:
-    - "accessToken"
-    - "endTime"
+    - "access_token"
+    - "end_time"
     - "id"
-    - "startTime"
+    - "start_time"
     - "title"
-    - "trainingDefinitionId"
+    - "training_definition_id"
     properties:
       id:
         type: "integer"
         format: "int64"
         example: 2
         description: "Main identifier of training instance."
-      poolId:
+      pool_id:
         type: "integer"
         format: "int64"
         example: 1
         description: "Id of sandbox pool assigned to training instance"
+      local_environment:
+        type: "boolean"
+        example: true
+        description: "Indicates if local sandboxes are used for training runs."
+      sandbox_definition_id:
+        type: "integer"
+        format: "int64"
+        example: 1
+        description: "Id of sandbox definition assigned to training instance"
+      backward_mode:
+        type: "boolean"
+        example: true
+        description: "Indicates if trainee can during training run move to the previous\
+          \ already solved phases."
       title:
         type: "string"
         example: "Current Instance"
         position: 1
         description: "Short textual description of the training instance."
-      startTime:
+      start_time:
         type: "string"
         format: "date-time"
         example: "2019-10-19T10:28:02.727Z"
         position: 2
         description: "Date when training instance starts."
-      endTime:
+      end_time:
         type: "string"
         format: "date-time"
         example: "2019-10-25T10:28:02.727Z"
         position: 2
         description: "Date when training instance ends."
-      accessToken:
+      access_token:
         type: "string"
         example: "hello-6578"
         position: 3
         description: "AccessToken which will be modified and then used for accessing\
           \ training run."
-      trainingDefinitionId:
+      training_definition_id:
         type: "integer"
         format: "int64"
         example: 1
@@ -4497,24 +4939,24 @@ definitions:
     - $ref: "#/definitions/AbstractLevelDTO"
     - type: "object"
       required:
-      - "allowedCommands"
-      - "allowedWrongAnswers"
-      - "decisionMatrix"
-      - "relatedQuestions"
+      - "allowed_commands"
+      - "allowed_wrong_answers"
+      - "decision_matrix"
+      - "related_questions"
       - "tasks"
       properties:
-        estimatedDuration:
+        estimated_duration:
           type: "integer"
           format: "int32"
           example: 20
           description: "Estimated time (minutes) taken by the player to solve the\
             \ training phase"
-        allowedCommands:
+        allowed_commands:
           type: "integer"
           format: "int32"
           example: 10
           description: "Maximal number of allowed commands provided by played"
-        allowedWrongAnswers:
+        allowed_wrong_answers:
           type: "integer"
           format: "int32"
           example: 10
@@ -4524,38 +4966,50 @@ definitions:
           description: "Tasks associated with the training phase"
           items:
             $ref: "#/definitions/TaskDTO"
-        decisionMatrix:
+        decision_matrix:
           type: "array"
           description: "Decision matrix associated with the training phase"
           items:
             $ref: "#/definitions/DecisionMatrixRowDTO"
-        relatedQuestions:
+        related_questions:
           type: "array"
           description: "Questions related to the training phase."
           items:
             $ref: "#/definitions/AbstractQuestionDTO"
+        mitre_techniques:
+          type: "array"
+          description: "List of mitre techniques used in the training level."
+          items:
+            $ref: "#/definitions/MitreTechniqueDTO"
+        expected_commands:
+          type: "array"
+          description: "Set of the expected commands to be executed during the training\
+            \ level."
+          uniqueItems: true
+          items:
+            type: "string"
   TrainingPhaseExportDTO:
     allOf:
     - $ref: "#/definitions/AbstractPhaseExportDTO"
     - type: "object"
       required:
-      - "allowedCommands"
-      - "allowedWrongAnswers"
-      - "decisionMatrix"
+      - "allowed_commands"
+      - "allowed_wrong_answers"
+      - "decision_matrix"
       - "tasks"
       properties:
-        estimatedDuration:
+        estimated_duration:
           type: "integer"
           format: "int32"
           example: 20
           description: "Estimated time (minutes) taken by the player to solve the\
             \ training phase"
-        allowedCommands:
+        allowed_commands:
           type: "integer"
           format: "int32"
           example: 10
           description: "Maximal number of allowed commands provided by played"
-        allowedWrongAnswers:
+        allowed_wrong_answers:
           type: "integer"
           format: "int32"
           example: 10
@@ -4565,27 +5019,52 @@ definitions:
           description: "Tasks associated with the training phase"
           items:
             $ref: "#/definitions/TaskExportDTO"
-        decisionMatrix:
+        decision_matrix:
           type: "array"
           description: "Decision matrix associated with the training phase"
           items:
             $ref: "#/definitions/DecisionMatrixRowExportDTO"
+        mitre_techniques:
+          type: "array"
+          description: "List of mitre techniques used in the training phase."
+          uniqueItems: true
+          items:
+            $ref: "#/definitions/MitreTechniqueDTO"
+        expected_commands:
+          type: "array"
+          description: "Set of the expected commands to be executed during the training\
+            \ level."
+          uniqueItems: true
+          items:
+            type: "string"
       description: "Exported training phase."
   TrainingPhaseImportDTO:
     allOf:
     - $ref: "#/definitions/AbstractPhaseImportDTO"
     - type: "object"
       required:
-      - "decisionMatrix"
+      - "decision_matrix"
       - "tasks"
       properties:
-        estimatedDuration:
+        estimated_duration:
           type: "integer"
           format: "int32"
           example: 50
           description: "Estimated time it takes to finish the phase (in minutes)."
           minimum: 0
-        allowedCommands:
+        mitre_techniques:
+          type: "array"
+          description: "List of mitre techniques used in the training level."
+          items:
+            $ref: "#/definitions/MitreTechniqueDTO"
+        expected_commands:
+          type: "array"
+          description: "Set of the expected commands to be executed during the training\
+            \ level."
+          uniqueItems: true
+          items:
+            type: "string"
+        allowed_commands:
           type: "integer"
           format: "int32"
           example: 10
@@ -4593,7 +5072,7 @@ definitions:
           description: "Number of allowed commands that can be used to solve the task\
             \ (used for data analysis)."
           minimum: 0
-        allowedWrongAnswers:
+        allowed_wrong_answers:
           type: "integer"
           format: "int32"
           example: 4
@@ -4607,7 +5086,7 @@ definitions:
           description: "Tasks associated with the training phase"
           items:
             $ref: "#/definitions/TaskImportDTO"
-        decisionMatrix:
+        decision_matrix:
           type: "array"
           position: 4
           description: "Decision matrix associated with the training phase"
@@ -4619,27 +5098,39 @@ definitions:
     - $ref: "#/definitions/AbstractPhaseUpdateDTO"
     - type: "object"
       required:
-      - "allowedCommands"
-      - "allowedWrongAnswers"
-      - "decisionMatrix"
-      - "estimatedDuration"
+      - "allowed_commands"
+      - "allowed_wrong_answers"
+      - "decision_matrix"
+      - "estimated_duration"
       - "tasks"
       properties:
-        allowedWrongAnswers:
+        mitre_techniques:
+          type: "array"
+          description: "List of mitre techniques used in the training level."
+          items:
+            $ref: "#/definitions/MitreTechniqueDTO"
+        expected_commands:
+          type: "array"
+          description: "Set of the expected commands to be executed during the training\
+            \ level."
+          uniqueItems: true
+          items:
+            type: "string"
+        allowed_wrong_answers:
           type: "integer"
           format: "int32"
           example: 10
           position: 1
           description: "Maximal number of allowed wrong answers provided by played"
           minimum: 0
-        allowedCommands:
+        allowed_commands:
           type: "integer"
           format: "int32"
           example: 10
           position: 2
           description: "Maximal number of allowed commands provided by played"
           minimum: 0
-        estimatedDuration:
+        estimated_duration:
           type: "integer"
           format: "int32"
           example: 20
@@ -4647,7 +5138,7 @@ definitions:
           description: "Estimated time (minutes) taken by the player to solve the\
             \ training phase"
           minimum: 0
-        decisionMatrix:
+        decision_matrix:
           type: "array"
           position: 4
           description: "Decision matrix associated with the training phase"
@@ -4668,12 +5159,12 @@ definitions:
         format: "int64"
         example: 1
         description: "Main identifier of training run."
-      startTime:
+      start_time:
         type: "string"
         format: "date-time"
         example: "2016-10-19 10:23:54+02"
         description: "Date when training run started."
-      endTime:
+      end_time:
         type: "string"
         format: "date-time"
         example: "2022-10-19 10:23:54+02"
@@ -4686,22 +5177,22 @@ definitions:
         - "RUNNING"
         - "FINISHED"
         - "ARCHIVED"
-      sandboxInstanceRefId:
+      sandbox_instance_ref_id:
         type: "integer"
         format: "int64"
         description: "Reference to the received sandbox."
-      participantRef:
+      participant_ref:
         description: "Reference to participant of training run."
         $ref: "#/definitions/UserRefDTO"
-      definitionId:
+      definition_id:
         type: "integer"
         format: "int64"
         description: "Id of associated training definition"
-      instanceId:
+      instance_id:
         type: "integer"
         format: "int64"
         description: "Id of associated training instance"
-      previousSandboxInstanceRefId:
+      previous_sandbox_instance_ref_id:
         type: "integer"
         format: "int64"
         example: 12
@@ -4716,12 +5207,12 @@ definitions:
         format: "int64"
         example: 1
         description: "Main identifier of training run."
-      startTime:
+      start_time:
         type: "string"
         format: "date-time"
         example: "2016-10-19 10:23:54+02"
         description: "Date when training run started."
-      endTime:
+      end_time:
         type: "string"
         format: "date-time"
         example: "2022-10-19 10:23:54+02"
@@ -4734,11 +5225,11 @@ definitions:
         - "RUNNING"
         - "FINISHED"
         - "ARCHIVED"
-      sandboxInstanceRefId:
+      sandbox_instance_ref_id:
         type: "integer"
         format: "int64"
         description: "Reference to the received sandbox."
-      participantRef:
+      participant_ref:
         description: "Reference to participant of training run."
         $ref: "#/definitions/UserRefDTO"
     description: "The act, or a recording, of performing actions during training from\
@@ -4810,6 +5301,10 @@ definitions:
         items:
           type: "string"
           format: "byte"
+      mail:
+        type: "string"
+        example: "johndoe@mail.muni.cz"
+        description: "Email of the user."
       user_ref_id:
         type: "integer"
         format: "int64"
@@ -4844,4 +5339,12 @@ definitions:
         example: "answer"
         description: "Answer to be validated."
     description: "Encapsulation of the answer submitted in training phase."
-
+  ValidatePasskeyDTO:
+    type: "object"
+    required:
+    - "passkey"
+    properties:
+      passkey:
+        type: "string"
+        example: "passkey"
+        description: "Passkey to be validated."

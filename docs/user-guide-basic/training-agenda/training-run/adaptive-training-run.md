@@ -16,7 +16,7 @@ It lists all training runs of the logged-in trainee. Each table row represents a
 
 ## Training Run
 
-In the training run, trainees will go through predesigned phases. There is a bar listing all of the phases in order at the top of the training run page. The finished phases are marked by :material-checkbox-marked-circle:{: .blue .icon}, the current phase is highlighted in blue, and the following are gray. In the current version, there are available three types of phases ([questionnaire phase](#1-questionnaire-phase), [info phase](#2-info-phase), and [training phase](#3-training-phase)).
+In the training run, trainees will go through predesigned phases. There is a bar listing all of the phases in order at the top of the training run page. Visited phases are highlighted in blue :material-checkbox-blank-circle:{: .blue .icon}, the currently selected phase is highlighted in pink :material-checkbox-blank-circle:{: .pink .icon}, and non-visited are in grey :material-checkbox-blank-circle:{: .grey .icon}. If backward mode is enabled by an instructor, a trainee can move between visited phases by clicking the phase in the bar. In the current version, there are four types of phases available ([Questionnaire](#1-questionnaire-phase), [Info](#2-info-phase), [Access](#3-access-phase), and [Training](#4-training-phase)).
 
 ![phase-bar](../../../img/user-guide-basic/training-agenda/training-run/adaptive/ATR-phase-bar.png)
 
@@ -30,21 +30,28 @@ There are three types of questions:
 * **Rating Form Questions (RFQ)**: Trainees are asked to choose one option from a spectrum. 
 
 <p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-run/adaptive/ATR-qp.png">
+  <img src="../../../../img/user-guide-basic/training-agenda/training-run/adaptive/ATR-questionnaire.png">
 </p>
 
 ### 2. Info Phase
 The info phase provides essential information to trainees in text form.
 
 <p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-run/adaptive/ATR-ip.png">
+  <img src="../../../../img/user-guide-basic/training-agenda/training-run/adaptive/ATR-info.png">
 </p>
 
-### 3. Training Phase 
+### 3. Access Phase
+The access phase provides information to trainees on how to access cloud or local sandbox.
+
+<p align="center">
+  <img src="../../../../img/user-guide-basic/training-agenda/training-run/adaptive/ATR-access.png">
+</p>
+
+### 4. Training Phase 
 The trainee must complete the assignment specified on the page’s left side at the training phase. On the right side, the sandbox topology supplemented by legend is displayed. The layout of the topology can be changed with the controls panel(see the following figure):
 
 <p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-run/adaptive/ATR-tp.png">
+  <img src="../../../../img/user-guide-basic/training-agenda/training-run/adaptive/ATR-training.png">
 </p>
 
 #### VM Manipulation
@@ -72,7 +79,16 @@ Right-click on the selected network node (host or router), the following menu wi
   <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-host-options.png">
 </p>
 
-* **Open console**: Connect to the web console of the particular network node using SPICE protocol. The feature is provided by OpenStack cloud, and console types may vary. When you connect to the SPICE client, you will see the following console in a new browser tab.
+* **Open console**: Connect to the particular network node's Command Line Interface (CLI) using the Apache Guacamole. When you connect to the Guacamole, you will see the following console in a new browser tab.
+
+    <p align="center">
+        <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-guacamole-cli.png">
+    </p>
+
+* **Open console (deprecated)**: Connect to the web console of the particular network node using SPICE protocol. The feature is provided by OpenStack cloud, and console types may vary. When you connect to the SPICE client, you will see the following console in a new browser tab.
+    
+    !!! warning
+        In the case of local sandboxes, only the last option **Copy host info to clipboard** is available in the menu.
 
     <p align="center">
         <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-spice.png">
@@ -86,12 +102,6 @@ Right-click on the selected network node (host or router), the following menu wi
     !!! info
         To scroll console output up, use Shift + Page Up, and to scroll it down, use Shift + Page Down.
 
-* **Open CLI**: Connect to the particular network node's Command Line Interface (CLI) using the Apache Guacamole. When you connect to the Guacamole, you will see the following console in a new browser tab.
-
-    <p align="center">
-        <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-guacamole-cli.png">
-    </p>
-
 * **Open GUI**: Connect to the particular network node's Graphical User Interface (GUI) using the Apache Guacamole. This option might not be visible if the VM does not have GUI configured. When you connect to the Spice client, you will see the following console in a new browser tab. 
 
     <p align="center">
@@ -101,7 +111,6 @@ Right-click on the selected network node (host or router), the following menu wi
 !!! warning
     All the above options of connecting to the corresponding VM require correct login credentials.
 
-* **Resume**: Resuming a suspended virtual machine is analogous to waking up a computer that has been in sleep mode.
 * **Copy host info to clipboard**: Copy the content of the node tooltip to the clipboard.
 
    <p align="center">
