@@ -24,6 +24,7 @@ Hosts contains the list of end hosts to be deployed. A host has the following at
     * **mgmt_user**: name of user with sudo privileges
     * **mgmt_protocol (optional)**: protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
 * **hidden (optional)**: whether the host should be hidden in a topology visualization (default: `False`)
+* **volumes (optional)**: list of volumes that will be provisioned on the host in the format `- size: X`, where X is volume size in GB. The first volume will be used as a system drive - the author of the definition utilizing this parameter has to determine how much space the image itself requires to run.
 
 ### routers
 
@@ -176,6 +177,10 @@ hosts:
       mgmt_user: debian
     flavor: csirtmu.tiny1x2
     hidden: True
+    volumes:
+      - size: 16
+      - size: 2
+      - size: 9
 
   - name: home
     base_box:
