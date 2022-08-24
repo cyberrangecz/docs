@@ -130,6 +130,11 @@ Under the MITRE ATT&CK techniques panel is a **Expected Commands** panel that th
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/adaptive/ATD-expected-commands.png">
 </p>
 
+In the Edit mode of the adaptive definition, it is also possible to simulate the performance of a single trainee. This option is of great use for the instructor. According to this simulated performance, the instructor can verify that the weights of the decision matrix are set up correctly. Simulating the performance of different trainees can be vital for creating a definition that suits the various range of trainees.
+<p align="center">
+  <img src="../../../../img/user-guide-basic/training-agenda/training-definition/adaptive/ATD-performance-simulator.png">
+</p>
+
 ##### II. Adaptive Questionnaire Phase
 In the adaptive questionnaire phase, the trainees answer a list of questions. Questions of the adaptive questionnaire can be further linked to training phases (links affect the Questionnaire Answered aspect of the Decision Matrix). Content of this phase can be edited with the following form:
 
