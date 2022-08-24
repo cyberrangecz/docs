@@ -30,6 +30,7 @@ nav:
               - Linear Training Definition: user-guide-basic/training-agenda/training-definition/linear-training-definition.md
               - Adaptive Training Definition: user-guide-basic/training-agenda/training-definition/adaptive-training-definition.md
               - MITRE ATT&CK Matrix: user-guide-basic/training-agenda/training-definition/mitre-attack-matrix.md
+              - Instance Simulator: user-guide-basic/training-agenda/training-definition/instance-simulator.md
           - Training Instance: user-guide-basic/training-agenda/training-instance.md
           - Training Run:
               - Linear Training Run: user-guide-basic/training-agenda/training-run/linear-training-run.md
