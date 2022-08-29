@@ -19,6 +19,11 @@ Here you can find the **Frequently asked questions** and answers regarding the *
 ### 3. **Q:** Is it possible to restrict SSH only for the management network after Sandbox Networking or turn it off completely?
 **A: Yes!** SSH user access is led through the networks defined in the sandbox topology definition so that trainee could access the machine only via a web console. Management network can be completely blocked in [Sandbox Provisioning](./user-guide-advanced/sandboxes/sandbox-provisioning.md), but you (as organizer) won't be able to access machines and won't help your students.
 
+### 4. **Q:** How can I define the level of interaction between trainees and hosts in a sandbox definition?
+**A:** Two options can be set up to limit the way trainees interact with hosts. The first option is to define an attribute `hidden: True` for any host. This node will not be displayed to the trainee in the topology visualization. The second option is to define `accessible_by_user: False` for a network, which blocks users from accessing nodes within this network and will also be left out of the user ssh config. By default, all other networks are user accessible.
+
+A detailed list of sandbox definition attributes can be found [here](https://docs.crp.kypo.muni.cz/user-guide-advanced/sandboxes/topology-definition/).
+
 <!--
 ## Trainings
 ### 1. **Q:** Placeholder
