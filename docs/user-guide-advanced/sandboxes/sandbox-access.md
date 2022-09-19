@@ -143,6 +143,9 @@ Simple access to the sandbox node from within the web browser is available throu
 !!! info "Credentials"
     A user must know the login credentials to access the sandbox node in all cases. 
 
+!!! warning "Simultaneous usage of Guacamole and Spice"
+    Once a user logs into the Spice (using Open console (deprecated)), the Guacamole (Open Console) will not let the user log in unless they **log out** of the Spice session (just closing the tab with Spice is **not** enough).
+
 #### Apache Guacamole
 An HTML5 web application supports graphical access to remote hosts directly in the browser. It is a clientless remote desktop gateway that supports standard protocols like VNC, RDP, and SSH. In the KYPO CRP, all the mentioned protocols can be used, but the following conditions must be satisfied:
 
