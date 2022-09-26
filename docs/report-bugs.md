@@ -8,7 +8,7 @@ Reporting bugs is a great way for anyone to help improve the KYPO platform. To r
   * Check if someone hasn't already filed the bug by searching or running custom queries in the issues repository. If so, put "**thumb up**" on the bug.
   * Don't use the issue system to ask support questions. Use the **support@kypo.cz** for that.
   * Don't reopen issues that have been marked **"wontfix"** without finding consensus to do so on **support@kypo.cz**.
-
+  * If you find a security issue or a bug, contact us at **security@crp.kypo.muni.cz**
 
 ## How to report a bug
 
