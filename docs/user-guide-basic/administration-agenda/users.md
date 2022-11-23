@@ -23,8 +23,8 @@ Then click **Choose file** and select the file with the following structure:
      {
        ...
      }
-  ]
-  "group_name": "TEST GROUP", (OPTIONAL)
+  ],
+  "group_name": "TEST GROUP" (OPTIONAL)
 }
 ```
 
