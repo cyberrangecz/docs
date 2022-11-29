@@ -1,4 +1,4 @@
-It is possible to add docker containers to hosts in the topology of the sandbox definition. The trainees can then directly connect to these containers. This is done as part of networking ansible, and the only prerequisite is the existence of the `containers.yml` file in the topology. The structure of this file, along with the container functionality, is explained in an example [sandbox definition](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/sandbox-definitions/general-testing-definition/-/tree/test-docker-containers).
+It is possible to add docker containers to hosts in the topology of the sandbox definition. The trainees can then directly connect to these containers. This is done as part of networking ansible, and the only prerequisite is the existence of the `containers.yml` file in the topology. The structure of this file, along with the container functionality, is explained in an example [sandbox definition](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/sandbox-definitions/kypo-docker-containers).
 
 The definition contains a host `deb`, with two docker containers running on it (`home-docker` and `home-docker2`). These containers are specified in a file `containers.yml`. 
 
@@ -23,7 +23,7 @@ container_mappings:
 `containers` specify Docker containers' names and whether they are created from an *image* (as in `home-docker`) or a custom *Dockerfile* (`home-docker2`). In the case of a Dockerfile, a path to the Dockerfile in the repository has to be specified. Container *names* have to be unique, and either an *image* or a *dockerfile* have to be specified.
 
 !!! note
-    When using an image, a [default Dockerfile](https://gitlab.ics.muni.cz/muni-kypo-crp/backend-python/kypo-sandbox-service/-/blob/develop/kypo/sandbox_ansible_app/lib/templates/Dockerfile.j2) is used. It installs an *OpenSSH server* on the container. This is necessary so that the trainees can connect. When using a custom Dockerfile, you also have to include the installation of the OpenSSH server (see [here](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/sandbox-definitions/general-testing-definition/-/blob/test-docker-containers/home-docker2/Dockerfile#L3)).
+    When using an image, a [default Dockerfile](https://gitlab.ics.muni.cz/muni-kypo-crp/backend-python/kypo-sandbox-service/-/blob/develop/kypo/sandbox_ansible_app/lib/templates/Dockerfile.j2) is used. It installs an *OpenSSH server* on the container. This is necessary so that the trainees can connect. When using a custom Dockerfile, you also have to include the installation of the OpenSSH server (see [here](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/sandbox-definitions/kypo-docker-containers/-/blob/master/home-docker2/Dockerfile#L3)).
 
 ### Container Mappings
 
