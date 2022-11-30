@@ -6,7 +6,7 @@ stages:
 pages:
   stage: deploy
   script:
-    - pip install pipenv
+    - pip install pipenv==2022.3.28
     - pipenv sync
     - pipenv run mkdocs build --strict --verbose --site-dir public
   artifacts:
