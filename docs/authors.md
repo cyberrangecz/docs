@@ -18,7 +18,7 @@
 | *Rusňák* | *Vít* | *UI/UX R&D* | :material-close-thick:{: .icon .red } |
 | Sapák | Tomáš | DevOps leader | :material-check-bold:{: .icon .green } |
 | *Staněk* | *Miloslav* | *Python developer* | :material-close-thick:{: .icon .red } |
-| Šeda | Pavel | Java leader | :material-check-bold:{: .icon .green } |
+| Šeda | Pavel | Java & DB services leader | :material-check-bold:{: .icon .green } |
 | Tovarňák| Daniel | Technical leader | :material-check-bold:{: .icon .green } |
 | Urban | Michal | Python developer | :material-check-bold:{: .icon .green } |
 | *Zbončáková* | *Tatiana* | *Python developer* | :material-close-thick:{: .icon .red } |
