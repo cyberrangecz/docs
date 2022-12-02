@@ -72,8 +72,11 @@ In the top right corner, there are control buttons:
     After choosing your option either by typing in the field or setting the value with the slider, you can confirm your choice by clicking **allocate**, and the allocation starts.
 
 
- * ![delete-failed-button](../../img/buttons/delete-failed-button.png) delete sandbox instances with failed stage,
- * ![delete-all-button](../../img/buttons/delete-all-button.png) force delete all sandbox instances.
+ * ![delete-dropdown-button](../../img/buttons/delete-dropdown-button.png) drops down following choices for deleting sandboxes:
+
+ * ![delete-all-button](../../img/buttons/delete-all-button.png) **Delete All** - force delete all sandbox instances.
+ * ![delete-failed-button](../../img/buttons/delete-failed-button.png) **Delete Failed** - delete sandboxes with failed stage.
+ * ![delete-unlocked-button](../../img/buttons/delete-unlocked-button.png) **Delete Unlocked** - delete all unlocked sandbox instances.
 
 ![pool-detail](../../img/user-guide-basic/sandbox-agenda/pool/pool-detail.png)
 
