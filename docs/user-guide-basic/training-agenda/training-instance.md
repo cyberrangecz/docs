@@ -72,7 +72,7 @@ Regardless of the instance type, on the page, the instructor can do the followin
         Click the button to redirect to the post training [aggregated dashboard](../visualizations/visualizations-for-linear/#aggregated-dashboard).
 
 ## Training Instance Detail
-Lists active training runs. Runs are either in the running or finished state (trainee completed all levels). All active training runs have assigned sandboxes from the pool. The instructor can delete the training run along with assigned sandbox from OpenStack by clicking :material-delete:{: .red .icon}.
+Lists active training runs. Runs are either in the running or finished state (trainee completed all levels). All active training runs have assigned sandboxes from the pool. There are also columns indicating if there are any events and commands logged from the training run indicated by the icon (:material-check-circle-outline:{: .green .icon}) or if there are no events or commands logged yet (:material-alert:{: .warning .icon}). The instructor can delete the training run along with assigned sandbox from OpenStack by clicking :material-delete:{: .red .icon}. 
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-instance/ATI-detail.png">
