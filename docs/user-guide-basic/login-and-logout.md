@@ -1,6 +1,6 @@
 ## Login
 
-Enter a URL of the KYPO CRP to your web browser to navigate to the KYPO Portal web page. Log in using one of the available OIDC providers. If you have to use a local OIDC provider **(local issuer)**, which is a part of the KYPO CRP, the administrator must provide credentials (username and password) to you.
+Enter a URL of the KYPO CRP to your web browser to navigate to the KYPO Portal web page. Log in using one of the available OIDC providers. If you are not using local OIDC provider, **you must give access to your name**. If you have to use a local OIDC provider **(local issuer)**, which is a part of the KYPO CRP, the administrator must provide credentials (username and password) to you.
 <p align="center">
   <img height="130" src="../../img/user-guide-basic/login-and-logout/login-muni-or-local-issuer.png">
 </p>
