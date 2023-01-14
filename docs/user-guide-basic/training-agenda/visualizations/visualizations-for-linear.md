@@ -6,7 +6,11 @@ The following visualizations relate to the linear form of the training. The sect
 
 ### Progress of Training Instance 
 
-As an instructor, you can see the ongoing course of the training runs and further filter information on demand in the tab **Progress**. The interface consists of several sections for interaction with the visualization. Each section (**A** to **D**, see the figure below) is further described in detail.
+As an instructor, you can see the ongoing course of the training runs and further filter information on demand in the tab **Progress**. This tab contains two swappable sections - **Progress** and **Command Timeline**. 
+
+#### Progress
+
+The interface consists of several sections for interaction with the visualization. Each section (**A** to **D**, see the figure below) is further described in detail.
 
 <p align="center">
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-progress.png">
@@ -46,6 +50,8 @@ More detailed individual trainee progress can be displayed. Upon clicking on a t
 </p>
 
 Here, the additional line chart shows the trainee's activity for the ongoing level.
+
+#### Command Timeline
 
 ### Results of Training Instance 
 
