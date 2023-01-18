@@ -6,7 +6,7 @@ The following visualizations relate to the linear form of the training. The sect
 
 ### Progress of Training Instance 
 
-As an instructor, you can see the ongoing course of the training runs and further filter information on demand in the tab **Progress**. This tab contains two swappable sections - **Progress** and **Command Timeline**. 
+As an instructor, you can see the ongoing course of the training runs and further filter information on demand in the tab **Progress**. This tab contains two swappable sections - [Progress](#progress) and [Command Timeline](#command-timeline). 
 
 #### Progress
 
@@ -53,11 +53,24 @@ Here, the additional line chart shows the trainee's activity for the ongoing lev
 
 #### Command Timeline
 
+This visualization provides commands ordered by the time of the selected trainee. Every command contains the detail of its usage and when it was executed. More precisely:
+
+* **Commands Type**: represents a command type, e.g., bash command.
+* **Options**: states used option for command, e.g., `nmap -h`.
+* **IP**: IP address from which the command was entered.
+
+!!! note
+    Displayed time is a timestamp from training, not real-time.
+
+<p align="center">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-command-timeline.png">
+</p>
+
 ### Results of Training Instance 
 
 The page provides all collected data about the training instance in several tabs. The number of tabs depends on the presence of a reference solution for the instance's training levels, as specified below.
 
-The Dashboard tab, which is always present, contains [Score Development](#score-development), [Score Scatter Plot](#score-scatter-plot), and [Progress](#final-training-runs-view) overview graph. These graphs provide various views on trainees' activity in training. If reference solution has been specified, dashboard tab contains [Summary](#summary-graph) and [Reference](#reference-graph) graph as well. Next to the dashboard tab is the [Assessment](#assessment) tab. [Trainee Graph](#trainee-graph), [Command Timeline](#command-timeline), and [Command Analysis](#command-analysis) tabs are present if a reference solution has been provided.
+The Dashboard tab, which is always present, contains [Score Development](#score-development), [Score Scatter Plot](#score-scatter-plot), and [Progress](#final-training-runs-view) overview graph. These graphs provide various views on trainees' activity in training. If reference solution has been specified, dashboard tab contains [Summary](#summary-graph) and [Reference](#reference-graph) graph as well. Next to the dashboard tab is the [Assessment](#assessment) tab. [Trainee Graph](#trainee-graph) and [Command Analysis](#command-analysis) tabs are present if a reference solution has been provided.
 
 #### Dashboard
 
@@ -172,20 +185,6 @@ This graph visualizes the progress of the selected trainee in training. The diff
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-trainee-graph.png">
 </p>
 
-#### Command Timeline
-
-This visualization provides commands ordered by the time of the selected trainee. Every command contains the detail of its usage and when it was executed. More precisely:
-
-* **Commands Type**: represents a command type, e.g., bash command.
-* **Options**: states used option for command, e.g., `nmap -h`.
-* **IP**: IP address from which the command was entered.
-
-!!! note
-    Displayed time is a timestamp from training, not real-time.
-
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-command-timeline.png">
-</p>
 
 #### Command Analysis
 
