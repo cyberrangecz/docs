@@ -186,9 +186,11 @@ Description
 
 ##### Two Clusterable Features Comparison
 
+Line chart containing a radio button to swap between two line chart features:
+
 ###### Wrong Flags Submitted
 
-Description
+This feature shows the scatter plot visualization of trainees submitting wrong flags per time played.
 
 <p align="center">
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-wrong-flags-submitted.png">
@@ -196,7 +198,7 @@ Description
 
 ###### Time Spent After Using Hint
 
-Description
+Feature containing the information about time spent solving the current level after using a hint for the level.
 
 <p align="center">
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-time-spent-after-using-hint.png">
@@ -204,7 +206,15 @@ Description
 
 ##### Behavior Correlation Chart
 
-Description
+This feature displays more complex but effectively more comparative data than the previous two aggregations. It contains radar charts for clusters of trainees based on five attributes:
+
+* maximal time spent in a level after taking a hint
+* amount of wrong flags submitted
+* total score of the user
+* time played
+* hints taken
+
+The biggest chart shows the correlation between all other clusters.
 
 <p align="center">
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-behavior-correlation-chart.png">
