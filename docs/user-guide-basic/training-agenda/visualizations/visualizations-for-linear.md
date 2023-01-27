@@ -176,6 +176,39 @@ The bubble chart is created for the selected training level to provide a detaile
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-wrong-answers-detail.png">
 </p>
 
+##### Time and Score Aggregations
+
+Description
+
+<p align="center">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-time-and-score-aggregations.png">
+</p>
+
+##### Two Clusterable Features Comparison
+
+###### Wrong Flags Submitted
+
+Description
+
+<p align="center">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-wrong-flags-submitted.png">
+</p>
+
+###### Time Spent After Using Hint
+
+Description
+
+<p align="center">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-time-spent-after-using-hint.png">
+</p>
+
+##### Behavior Correlation Chart
+
+Description
+
+<p align="center">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-behavior-correlation-chart.png">
+</p>
 
 #### Trainee Graph
 
