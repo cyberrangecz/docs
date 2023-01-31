@@ -46,7 +46,7 @@ The bars can display the events of the trainees. When taking a hint ![hint](../.
 More detailed individual trainee progress can be displayed. Upon clicking on a trainee avatar or name on the left side of the training runs visualization, a new window shows:
 
 <p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/progress-detail.png">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-progress-detail.png">
 </p>
 
 Here, the additional line chart shows the trainee's activity for the ongoing level.
@@ -178,7 +178,7 @@ The bubble chart is created for the selected training level to provide a detaile
 
 ##### Time and Score Aggregations
 
-Description
+Time and Score Aggregations is an alternative to the Time-Score Overview scatter plot (see [here](#time-score-hints-relationship)). This view aggregates data from all the selected training instances. However, it does not display individual trainees in the form of the dots, instead it shows the maximum and average values. The maximum is marked by the size of the bars and the maximum values on the coordinates. The averages are denoted by the hatched horizontal and vertical lines.
 
 <p align="center">
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-time-and-score-aggregations.png">
@@ -219,6 +219,18 @@ The biggest chart shows the correlation between all other clusters.
 <p align="center">
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-behavior-correlation-chart.png">
 </p>
+
+#### Walkthrough
+
+A tab called Walkthrough transforms the data of each game phase into visualizations that provide a quick overview of relative success rates. Each curve corresponds to one player, whose ID is shown on the far left.
+
+<p align="center">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-walkthrough.png">
+</p>
+
+The x-axis captures important game events that are interpreted as either a successful step towards solving a task (e.g., using the correct command or entering the correct answer) or, conversely, a "failed" step (e.g., displaying a hint). This interpretation is reflected by an increasing (successful step) or decreasing tendency of the curve. Players are ranked according to the outcome. The color scale on the right visually distinguishes successful players (shades of green) from less successful players (shades of red) in this relative comparison.
+
+For clarity, some events (points on the curves) are aggregated. When you hover over an event, details are displayed. A solid curve indicates that some sandbox commands were used between game events. Hovering the mouse over a curve will display a list of them. A dashed curve indicates that no commands were recorded between events.
 
 #### Trainee Graph
 
