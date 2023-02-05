@@ -6,11 +6,9 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-mkdocs = "==1.1.2"
-mkdocs-material = "==6.1.6"
-mkdocs-macros-plugin = "==0.5.0"
-jinja2 = "==2.11.2"
-markupsafe = "==1.1.1"
+mkdocs = "*"
+mkdocs-material = "*"
+mkdocs-macros-plugin = "*"
 mkdocs-swagger-ui-plugin = {git = "https://gitlab.ics.muni.cz/muni-kypo-crp/devops/mkdocs-swagger-ui-plugin.git"}
 
 [requires]
