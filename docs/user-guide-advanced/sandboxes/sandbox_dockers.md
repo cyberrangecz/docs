@@ -37,12 +37,9 @@ container_mappings:
 
 ## User access
 
-The running docker containers can be accessed with ssh, using the *user ssh config* that can be downloaded for each sandbox. If containers.yml is present in the sandbox definition, the ssh config is expanded with entries for each docker container so that the containers are easily accessible with ssh, just like any other host.
+The running docker containers can be accessed with ssh, using the *user ssh config* that can be downloaded for each sandbox. If containers.yml is present in the sandbox definition, the ssh config is expanded with entries for each docker container so that the containers are easily accessible with ssh, just like any other host. Once connected to, the users are logged into the root account.
 
 Connecting to the containers from the KYPO CRP using Spice console or Guacamole access is not supported.
-
-!!! note
-    Docker hosts do **not** have to be user accessible to allow the user access to the containers.
 
 !!! warning
     Do not reboot hosts which run the docker containers.
@@ -61,3 +58,5 @@ The docker containers are set up and started in **networking ansible**. If there
       community.docker.docker_compose:
         project_src: "/home/kypo-user/containers/"
 ```
+
+Because the default account the users log into is root, a workaround is required in order to update system variables. To achieve this, the beginning of a `~/.profile` file has to be updated. To add `/root/.local/bin` to the `PATH`, for example, add the following line into the custom `Dockerfile`: `RUN sed -i '1iexport PATH="${PATH}:/root/.local/bin"' ~/.profile`. An example of a Dockerfile including Ansible installation followed by a PATH update can be found [here](https://gitlab.ics.muni.cz/muni-kypo-crp/prototypes-and-examples/sandbox-definitions/kypo-docker-containers/-/blob/ansible-installed/home-docker2/Dockerfile#L7)
