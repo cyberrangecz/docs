@@ -1,12 +1,5 @@
 ## Enable command logging (Currently supported for Debian-based images)
-Command logging is enabled on host VMs by using several Ansible roles. If the organizer wants to log terminal commands, these roles must be added to the sandbox definition's playbook. (More about sandbox definition creation: [Create Sandbox Definition](../../../user-guide-basic/sandbox-agenda/sandbox-definition/#create-sandbox-definition))
-
-* **Bash command logging** can be enabled by using the [KYPO Sandbox Logging Bash Commands](https://gitlab.ics.muni.cz/muni-kypo/ansible-roles/sandbox-logging-bash) Ansible role.
-
-* **Metasploit framework command logging** can be enabled by using the [KYPO Sandbox Logging Msfconsole Commands](https://gitlab.ics.muni.cz/muni-kypo/ansible-roles/sandbox-logging-msf) Ansible role.
-
-!!! warning
-    To forward logs from `host` VM to the `MAN` the [KYPO Sandbox Forward to MAN](https://gitlab.ics.muni.cz/muni-kypo/ansible-roles/sandbox-logging-forward) Ansible role must be enabled with any combination of before mentioned roles. If this role is not added to the sandbox definition, logged data will **not** be accessible.
+Command logging was originally enabled on host VMs by using three Ansible roles. These roles enable Bash command logging, Metasploit framework command logging, and forwarding of logs from `host` VM to the `MAN`. These three roles have been united under a [KYPO Sandbox Logging role](https://gitlab.ics.muni.cz/muni-kypo/ansible-roles/sandbox-logging), which must be added to the sandbox definition's playbook to enable the functionality (More about sandbox definition creation: [Create Sandbox Definition](../../../user-guide-basic/sandbox-agenda/sandbox-definition/#create-sandbox-definition)).
 
 ## Accessing logged data
 The training organizer can access all logged data (training events or commands) by exporting the training instance in the [Training Instance Overview](../../../user-guide-basic/training-agenda/training-instance/#training-instance-overview). All data can be found in the exported archive in the corresponding files stored in the JSON format.

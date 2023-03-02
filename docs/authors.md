@@ -9,18 +9,23 @@
 | *Duda* | *Jan* | *Java developer* | :material-close-thick:{: .icon .red } |
 | *Hai Duong* | *Tran* | *Angular developer* | :material-close-thick:{: .icon .red } |
 | *Hamerník* | *Martin* | *Angular leader* | :material-close-thick:{: .icon .red } |
-| Ignác | Igor | Angular developer | :material-check-bold:{: .icon .green } |
+| Ignác | Igor | Angular leader | :material-check-bold:{: .icon .green } |
 | *Jaduš* | *Boris* | *Java developer* | :material-close-thick:{: .icon .red } |
-| Kočamba | Erik | Angular developer | :material-check-bold:{: .icon .green } |
+| Juhás | Martin | Java developer | :material-check-bold:{: .icon .green } |
+| *Kočamba* | *Erik* | *Angular developer* | :material-close-thick:{: .icon .red } |
+| Krebs | Radovan | Python developer | :material-check-bold:{: .icon .green } |
+| Majdan | Lukáš | Java & Angular developer | :material-check-bold:{: .icon .green } |
+| Mařinec | Petr | Penetration tester | :material-check-bold:{: .icon .green } |
 | Ošlejšek | Radek |  Visualisation R&D | :material-check-bold:{: .icon .green } |
-| Paluba | Juraj | Python developer | :material-check-bold:{: .icon .green } |
-| Pilár | Dominik | Java & Angular developer | :material-check-bold:{: .icon .green } |
+| *Paluba* | *Juraj* | *Python developer* | :material-close-thick:{: .icon .red } |
+| *Pilár* | *Dominik* | *Java & Angular developer* | :material-close-thick:{: .icon .red } |
 | *Rusňák* | *Vít* | *UI/UX R&D* | :material-close-thick:{: .icon .red } |
 | Sapák | Tomáš | DevOps leader | :material-check-bold:{: .icon .green } |
 | *Staněk* | *Miloslav* | *Python developer* | :material-close-thick:{: .icon .red } |
-| Šeda | Pavel | Java leader | :material-check-bold:{: .icon .green } |
+| Šeda | Pavel | Java & DB services leader | :material-check-bold:{: .icon .green } |
 | Tovarňák| Daniel | Technical leader | :material-check-bold:{: .icon .green } |
-| Urban | Michal | Python developer | :material-check-bold:{: .icon .green } |
+| Urban | Michal | Python leader | :material-check-bold:{: .icon .green } |
+| Volf | Daniel | Penetration tester | :material-check-bold:{: .icon .green } |
 | *Zbončáková* | *Tatiana* | *Python developer* | :material-close-thick:{: .icon .red } |
 
 ## Advisory Board
@@ -48,6 +53,7 @@
 - Lago Dušan
 - Laštovička Martin
 - Macháč Martin
+- Mojdlová Helena
 - Nutár Ivo
 - Plesník  Tomáš
 - Procházka Michal

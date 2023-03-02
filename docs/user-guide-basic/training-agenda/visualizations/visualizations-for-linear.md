@@ -6,7 +6,11 @@ The following visualizations relate to the linear form of the training. The sect
 
 ### Progress of Training Instance 
 
-As an instructor, you can see the ongoing course of the training runs and further filter information on demand in the tab **Progress**. The interface consists of several sections for interaction with the visualization. Each section (**A** to **D**, see the figure below) is further described in detail.
+As an instructor, you can see the ongoing course of the training runs and further filter information on demand in the tab **Progress**. This tab contains two swappable sections - [Progress](#progress) and [Command Timeline](#command-timeline). 
+
+#### Progress
+
+The interface consists of several sections for interaction with the visualization. Each section (**A** to **D**, see the figure below) is further described in detail.
 
 <p align="center">
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-progress.png">
@@ -42,16 +46,31 @@ The bars can display the events of the trainees. When taking a hint ![hint](../.
 More detailed individual trainee progress can be displayed. Upon clicking on a trainee avatar or name on the left side of the training runs visualization, a new window shows:
 
 <p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/progress-detail.png">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-progress-detail.png">
 </p>
 
 Here, the additional line chart shows the trainee's activity for the ongoing level.
+
+#### Command Timeline
+
+This visualization provides commands ordered by the time of the selected trainee. Every command contains the detail of its usage and when it was executed. More precisely:
+
+* **Commands Type**: represents a command type, e.g., bash command.
+* **Options**: states used option for command, e.g., `nmap -h`.
+* **IP**: IP address from which the command was entered.
+
+!!! note
+    Displayed time is a timestamp from training, not real-time.
+
+<p align="center">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-command-timeline.png">
+</p>
 
 ### Results of Training Instance 
 
 The page provides all collected data about the training instance in several tabs. The number of tabs depends on the presence of a reference solution for the instance's training levels, as specified below.
 
-The Dashboard tab, which is always present, contains [Score Development](#score-development), [Score Scatter Plot](#score-scatter-plot), and [Progress](#final-training-runs-view) overview graph. These graphs provide various views on trainees' activity in training. If reference solution has been specified, dashboard tab contains [Summary](#summary-graph) and [Reference](#reference-graph) graph as well. Next to the dashboard tab is the [Assessment](#assessment) tab. [Trainee Graph](#trainee-graph), [Command Timeline](#command-timeline), and [Command Analysis](#command-analysis) tabs are present if a reference solution has been provided.
+The Dashboard tab, which is always present, contains [Score Development](#score-development), [Score Scatter Plot](#score-scatter-plot), and [Progress](#final-training-runs-view) overview graph. These graphs provide various views on trainees' activity in training. If reference solution has been specified, dashboard tab contains [Summary](#summary-graph) and [Reference](#reference-graph) graph as well. Next to the dashboard tab is the [Assessment](#assessment) tab. [Trainee Graph](#trainee-graph) and [Command Analysis](#command-analysis) tabs are present if a reference solution has been provided.
 
 #### Dashboard
 
@@ -157,6 +176,61 @@ The bubble chart is created for the selected training level to provide a detaile
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-wrong-answers-detail.png">
 </p>
 
+##### Time and Score Aggregations
+
+Time and Score Aggregations is an alternative to the Time-Score Overview scatter plot (see [here](#time-score-hints-relationship)). This view aggregates data from all the selected training instances. However, it does not display individual trainees in the form of the dots, instead it shows the maximum and average values. The maximum is marked by the size of the bars and the maximum values on the coordinates. The averages are denoted by the hatched horizontal and vertical lines.
+
+<p align="center">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-time-and-score-aggregations.png">
+</p>
+
+##### Two Clusterable Features Comparison
+
+Line chart containing a radio button to swap between two line chart features:
+
+###### Wrong Flags Submitted
+
+This feature shows the scatter plot visualization of trainees submitting wrong flags per time played.
+
+<p align="center">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-wrong-flags-submitted.png">
+</p>
+
+###### Time Spent After Using Hint
+
+Feature containing the information about time spent solving the current level after using a hint for the level.
+
+<p align="center">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-time-spent-after-using-hint.png">
+</p>
+
+##### Behavior Correlation Chart
+
+This feature displays more complex but effectively more comparative data than the previous two aggregations. It contains radar charts for clusters of trainees based on five attributes:
+
+* maximal time spent in a level after taking a hint
+* amount of wrong flags submitted
+* total score of the user
+* time played
+* hints taken
+
+The biggest chart shows the correlation between all other clusters.
+
+<p align="center">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-behavior-correlation-chart.png">
+</p>
+
+#### Walkthrough
+
+A tab called Walkthrough transforms the data of each game phase into visualizations that provide a quick overview of relative success rates. Each curve corresponds to one player, whose ID is shown on the far left.
+
+<p align="center">
+  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-walkthrough.png">
+</p>
+
+The x-axis captures important game events that are interpreted as either a successful step towards solving a task (e.g., using the correct command or entering the correct answer) or, conversely, a "failed" step (e.g., displaying a hint). This interpretation is reflected by an increasing (successful step) or decreasing tendency of the curve. Players are ranked according to the outcome. The color scale on the right visually distinguishes successful players (shades of green) from less successful players (shades of red) in this relative comparison.
+
+For clarity, some events (points on the curves) are aggregated. When you hover over an event, details are displayed. A solid curve indicates that some sandbox commands were used between game events. Hovering the mouse over a curve will display a list of them. A dashed curve indicates that no commands were recorded between events.
 
 #### Trainee Graph
 
@@ -166,20 +240,6 @@ This graph visualizes the progress of the selected trainee in training. The diff
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-trainee-graph.png">
 </p>
 
-#### Command Timeline
-
-This visualization provides commands ordered by the time of the selected trainee. Every command contains the detail of its usage and when it was executed. More precisely:
-
-* **Commands Type**: represents a command type, e.g., bash command.
-* **Options**: states used option for command, e.g., `nmap -h`.
-* **IP**: IP address from which the command was entered.
-
-!!! note
-    Displayed time is a timestamp from training, not real-time.
-
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-command-timeline.png">
-</p>
 
 #### Command Analysis
 

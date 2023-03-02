@@ -17,8 +17,8 @@ Instructors can click on the title of each pool to see a more [detailed view](#p
         Pools that are **locked** or **not empty** cannot be deleted.
 
 
-??? allocate-all "Allocate all"
-    Click the button to start allocating all missing sandboxes.
+??? allocate-all "Allocate"
+    Click the button to start allocating missing sandboxes.
 
     !!! info 
         More about allocation in the [pool detail](#pool-detail) section. 
@@ -61,9 +61,22 @@ When the instructor clicks the title of a given pool in **Pool Overview** they w
 
 In the top right corner, there are control buttons:
 
- * ![allocate-all-button](../../img/buttons/allocate-all-button.png) allocate all of the missing sandboxes in the pool,
- * ![delete-failed-button](../../img/buttons/delete-failed-button.png) delete sandbox instances with failed stage,
- * ![delete-all-button](../../img/buttons/delete-all-button.png) force delete all sandbox instances.
+ * ![allocate-button](../../img/buttons/allocate-some-button.png) opens up a dialog window for allocating the missing sandboxes in the pool.
+    
+    
+    In this window, you get the option to specify the amount of sandboxes you wish to allocate. 
+
+    ![allocation-dialog](../../img/user-guide-basic/sandbox-agenda/pool/allocation-dialog.png)
+
+    
+    After choosing your option either by typing in the field or setting the value with the slider, you can confirm your choice by clicking **allocate**, and the allocation starts.
+
+
+ * ![delete-dropdown-button](../../img/buttons/delete-dropdown-button.png) drops down following choices for deleting sandboxes:
+
+ * ![delete-all-button](../../img/buttons/delete-all-button.png) **Delete All** - force delete all sandbox instances.
+ * ![delete-failed-button](../../img/buttons/delete-failed-button.png) **Delete Failed** - delete sandboxes with failed stage.
+ * ![delete-unlocked-button](../../img/buttons/delete-unlocked-button.png) **Delete Unlocked** - delete all unlocked sandbox instances.
 
 ![pool-detail](../../img/user-guide-basic/sandbox-agenda/pool/pool-detail.png)
 
