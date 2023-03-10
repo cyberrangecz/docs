@@ -5,27 +5,27 @@
 | Surname | Name | Role | Active |
 | ------ | ------ | ------ | ------ |
 | *Andoniadis* | *Kamil* | *Python & DevOps leader* | :material-close-thick:{: .icon .red } |
-| Dočkalová Burská | Karolína | UI/UX developer | :material-check-bold:{: .icon .green } |
+| Dočkalová Burská | Karolína | Angular Leader | :material-check-bold:{: .icon .green } |
 | *Duda* | *Jan* | *Java developer* | :material-close-thick:{: .icon .red } |
 | *Hai Duong* | *Tran* | *Angular developer* | :material-close-thick:{: .icon .red } |
 | *Hamerník* | *Martin* | *Angular leader* | :material-close-thick:{: .icon .red } |
-| Ignác | Igor | Angular leader | :material-check-bold:{: .icon .green } |
+| *Ignác* | *Igor* | *Angular leader* | :material-close-thick:{: .icon .red } |
 | *Jaduš* | *Boris* | *Java developer* | :material-close-thick:{: .icon .red } |
-| Juhás | Martin | Java developer | :material-check-bold:{: .icon .green } |
+| *Juhás* | *Martin* | *Java developer* | :material-close-thick:{: .icon .red } |
 | *Kočamba* | *Erik* | *Angular developer* | :material-close-thick:{: .icon .red } |
 | Krebs | Radovan | Python developer | :material-check-bold:{: .icon .green } |
-| Majdan | Lukáš | Java & Angular developer | :material-check-bold:{: .icon .green } |
-| Mařinec | Petr | Penetration tester | :material-check-bold:{: .icon .green } |
+| Majdan | Lukáš | Java developer | :material-check-bold:{: .icon .green } |
+| *Mařinec* | *Petr* | *Penetration tester* | :material-close-thick:{: .icon .red } |
 | Ošlejšek | Radek |  Visualisation R&D | :material-check-bold:{: .icon .green } |
 | *Paluba* | *Juraj* | *Python developer* | :material-close-thick:{: .icon .red } |
 | *Pilár* | *Dominik* | *Java & Angular developer* | :material-close-thick:{: .icon .red } |
 | *Rusňák* | *Vít* | *UI/UX R&D* | :material-close-thick:{: .icon .red } |
 | Sapák | Tomáš | DevOps leader | :material-check-bold:{: .icon .green } |
 | *Staněk* | *Miloslav* | *Python developer* | :material-close-thick:{: .icon .red } |
-| Šeda | Pavel | Java & DB services leader | :material-check-bold:{: .icon .green } |
+| *Šeda* | *Pavel* | *Java & DB services leader* | :material-close-thick:{: .icon .red } |
 | Tovarňák| Daniel | Technical leader | :material-check-bold:{: .icon .green } |
-| Urban | Michal | Python leader | :material-check-bold:{: .icon .green } |
-| Volf | Daniel | Penetration tester | :material-check-bold:{: .icon .green } |
+| *Urban* | *Michal* | *Python leader* | :material-close-thick:{: .icon .red }} |
+| *Volf* | *Daniel* | *Penetration tester* | :material-close-thick:{: .icon .red } |
 | *Zbončáková* | *Tatiana* | *Python developer* | :material-close-thick:{: .icon .red } |
 
 ## Advisory Board
