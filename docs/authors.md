@@ -5,11 +5,14 @@
 | Surname | Name | Role |
 | ------ | ------ | ------ |
 | Dočkalová Burská | Karolína | Angular Developer & Team Leader |
+| Kacvinský | Tomáš | Tester |
 | Krebs | Radovan | Python developer |
 | Majdan | Lukáš | Java developer |
+| Ošlejšek | Radek |  Visualisation R&D |
 | Paluba | Juraj | Python developer |
 | Sapák | Tomáš | DevOps leader |
 | Tovarňák| Daniel | Technical leader |
+| Vydra | Zdeněk | Tester |
 
 ## Inactive Core Contributors
 
@@ -24,7 +27,6 @@
 | *Juhás* | *Martin* | *Java developer* |
 | *Kočamba* | *Erik* | *Angular developer* |
 | *Mařinec* | *Petr* | *Penetration tester* |
-| *Ošlejšek* | *Radek* |  *Visualisation R&D* |
 | *Pilár* | *Dominik* | *Java & Angular developer* |
 | *Rusňák* | *Vít* | *UI/UX R&D* |
 | *Staněk* | *Miloslav* | *Python developer* |
@@ -68,4 +70,3 @@
 - Švábenský Valdemar
 - Toth Dalibor
 - Vizváry Martin
-- Vydra Zdeněk
