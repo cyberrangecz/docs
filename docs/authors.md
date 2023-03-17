@@ -62,7 +62,7 @@
 - Macháč Martin
 - Mojdlová Helena
 - Nutár Ivo
-- Plesník  Tomáš
+- Plesník Tomáš
 - Procházka Michal
 - Račanský Václav
 - Rebok Tomáš
@@ -70,3 +70,5 @@
 - Švábenský Valdemar
 - Toth Dalibor
 - Vizváry Martin
+- Vydra Zdeněk
+- Kacvinský Tomáš
