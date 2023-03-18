@@ -4,7 +4,7 @@
 
 | Surname | Name | Role |
 | ------ | ------ | ------ |
-| Dočkalová Burská | Karolína | Angular Developer & Team Leader |
+| Dočkalová Burská | Karolína | Angular developer & Team leader |
 | Kacvinský | Tomáš | Tester |
 | Krebs | Radovan | Python developer |
 | Majdan | Lukáš | Java developer |
