@@ -26,13 +26,11 @@
 | *Jaduš* | *Boris* | *Java developer* |
 | *Juhás* | *Martin* | *Java developer* |
 | *Kočamba* | *Erik* | *Angular developer* |
-| *Mařinec* | *Petr* | *Penetration tester* |
 | *Pilár* | *Dominik* | *Java & Angular developer* |
 | *Rusňák* | *Vít* | *UI/UX R&D* |
 | *Staněk* | *Miloslav* | *Python developer* |
 | *Šeda* | *Pavel* | *Java & DB services leader* |
 | *Urban* | *Michal* | *Python leader* |
-| *Volf* | *Daniel* | *Penetration tester* |
 | *Zbončáková* | *Tatiana* | *Python developer* |
 
 ## Advisory Board
@@ -60,6 +58,7 @@
 - Lago Dušan
 - Laštovička Martin
 - Macháč Martin
+- Mařinec Petr
 - Mojdlová Helena
 - Nutár Ivo
 - Plesník Tomáš
@@ -70,5 +69,6 @@
 - Švábenský Valdemar
 - Toth Dalibor
 - Vizváry Martin
+- Volf Daniel
 - Vydra Zdeněk
 - Kacvinský Tomáš
