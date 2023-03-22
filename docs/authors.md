@@ -1,41 +1,44 @@
 # Project Authors
 
-## Core Contributors
+## Active Core Contributors
 
-| Surname | Name | Role | Active |
-| ------ | ------ | ------ | ------ |
-| *Andoniadis* | *Kamil* | *Python & DevOps leader* | :material-close-thick:{: .icon .red } |
-| Dočkalová Burská | Karolína | UI/UX developer | :material-check-bold:{: .icon .green } |
-| *Duda* | *Jan* | *Java developer* | :material-close-thick:{: .icon .red } |
-| *Hai Duong* | *Tran* | *Angular developer* | :material-close-thick:{: .icon .red } |
-| *Hamerník* | *Martin* | *Angular leader* | :material-close-thick:{: .icon .red } |
-| Ignác | Igor | Angular leader | :material-check-bold:{: .icon .green } |
-| *Jaduš* | *Boris* | *Java developer* | :material-close-thick:{: .icon .red } |
-| Juhás | Martin | Java developer | :material-check-bold:{: .icon .green } |
-| *Kočamba* | *Erik* | *Angular developer* | :material-close-thick:{: .icon .red } |
-| Krebs | Radovan | Python developer | :material-check-bold:{: .icon .green } |
-| Majdan | Lukáš | Java & Angular developer | :material-check-bold:{: .icon .green } |
-| Mařinec | Petr | Penetration tester | :material-check-bold:{: .icon .green } |
-| Ošlejšek | Radek |  Visualisation R&D | :material-check-bold:{: .icon .green } |
-| *Paluba* | *Juraj* | *Python developer* | :material-close-thick:{: .icon .red } |
-| *Pilár* | *Dominik* | *Java & Angular developer* | :material-close-thick:{: .icon .red } |
-| *Rusňák* | *Vít* | *UI/UX R&D* | :material-close-thick:{: .icon .red } |
-| Sapák | Tomáš | DevOps leader | :material-check-bold:{: .icon .green } |
-| *Staněk* | *Miloslav* | *Python developer* | :material-close-thick:{: .icon .red } |
-| Šeda | Pavel | Java & DB services leader | :material-check-bold:{: .icon .green } |
-| Tovarňák| Daniel | Technical leader | :material-check-bold:{: .icon .green } |
-| Urban | Michal | Python leader | :material-check-bold:{: .icon .green } |
-| Volf | Daniel | Penetration tester | :material-check-bold:{: .icon .green } |
-| *Zbončáková* | *Tatiana* | *Python developer* | :material-close-thick:{: .icon .red } |
+| Surname | Name | Role |
+| ------ | ------ | ------ |
+| Dočkalová Burská | Karolína | Team leader & Visualization R&D |
+| Kacvinský | Tomáš | Tester |
+| Krebs | Radovan | Python developer |
+| Majdan | Lukáš | Java & Angular developer |
+| Ošlejšek | Radek |  Visualisation R&D |
+| Paluba | Juraj | Python developer |
+| Sapák | Tomáš | DevOps leader |
+
+## Inactive Core Contributors
+
+| Surname | Name | Role |
+| ------ | ------ | ------ |
+| *Andoniadis* | *Kamil* | *Python & DevOps leader* |
+| *Duda* | *Jan* | *Java developer* |
+| *Hai Duong* | *Tran* | *Angular developer* |
+| *Hamerník* | *Martin* | *Angular leader* |
+| *Ignác* | *Igor* | *Angular leader* |
+| *Jaduš* | *Boris* | *Java developer* |
+| *Juhás* | *Martin* | *Java developer* |
+| *Kočamba* | *Erik* | *Angular developer* |
+| *Pilár* | *Dominik* | *Java & Angular developer* |
+| *Rusňák* | *Vít* | *UI/UX R&D* |
+| *Staněk* | *Miloslav* | *Python developer* |
+| *Šeda* | *Pavel* | *Java & DB services leader* |
+| *Urban* | *Michal* | *Python leader* |
+| *Zbončáková* | *Tatiana* | *Python developer* |
 
 ## Advisory Board
 
 | Surname | Name | Role |
 | ------ | ------ | ------ |
-| Čegan | Jakub | Industrial Applications & Business Development |
+| Čegan | Jakub | Project Management & Industrial Applications & Business Development |
 | Čeleda | Pavel | KYPO Principal Investigator |
-| Tovarňák| Daniel |  Architecture & Design |
-| Vykopal | Jan | Project Management, Educational research & User testing |
+| Tovarňák | Daniel |  Architecture & Design & Technical leader |
+| Vykopal | Jan | Educational research & User testing |
 
 ## Special Recognition
 
@@ -44,18 +47,20 @@
 
 - Čermák Milan
 - Čermák Roman
-- Eichler Zdeněk
+- Eichler Zdenek
 - Hašák Šimon
 - Horák Martin
+- Kacvinský Tomáš
 - Klimentová Lucie
 - Košuth Jakub Bartolomej
 - Kouřil Daniel
 - Lago Dušan
 - Laštovička Martin
 - Macháč Martin
+- Mařinec Petr
 - Mojdlová Helena
 - Nutár Ivo
-- Plesník  Tomáš
+- Plesník Tomáš
 - Procházka Michal
 - Račanský Václav
 - Rebok Tomáš
@@ -63,4 +68,5 @@
 - Švábenský Valdemar
 - Toth Dalibor
 - Vizváry Martin
+- Volf Daniel
 - Vydra Zdeněk
