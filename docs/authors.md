@@ -4,15 +4,13 @@
 
 | Surname | Name | Role |
 | ------ | ------ | ------ |
-| Dočkalová Burská | Karolína | Angular developer & Team leader |
+| Dočkalová Burská | Karolína | Team leader & Visualization R&D |
 | Kacvinský | Tomáš | Tester |
 | Krebs | Radovan | Python developer |
-| Majdan | Lukáš | Java developer |
+| Majdan | Lukáš | Java & Angular developer |
 | Ošlejšek | Radek |  Visualisation R&D |
 | Paluba | Juraj | Python developer |
 | Sapák | Tomáš | DevOps leader |
-| Tovarňák| Daniel | Technical leader |
-| Vydra | Zdeněk | Tester |
 
 ## Inactive Core Contributors
 
@@ -39,7 +37,7 @@
 | ------ | ------ | ------ |
 | Čegan | Jakub | Project Management & Industrial Applications & Business Development |
 | Čeleda | Pavel | KYPO Principal Investigator |
-| Tovarňák| Daniel |  Architecture & Design |
+| Tovarňák | Daniel |  Architecture & Design & Technical leader |
 | Vykopal | Jan | Educational research & User testing |
 
 ## Special Recognition
@@ -49,9 +47,10 @@
 
 - Čermák Milan
 - Čermák Roman
-- Eichler Zdeněk
+- Eichler Zdenek
 - Hašák Šimon
 - Horák Martin
+- Kacvinský Tomáš
 - Klimentová Lucie
 - Košuth Jakub Bartolomej
 - Kouřil Daniel
@@ -71,4 +70,3 @@
 - Vizváry Martin
 - Volf Daniel
 - Vydra Zdeněk
-- Kacvinský Tomáš
