@@ -132,14 +132,14 @@ Under the hints panel, there is a **MITRE ATT&CK Techniques** panel that the ins
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-mitre-techniques-assign.png">
 </p>
 
-Under the MITRE ATT&CK techniques panel is a **Expected Commands** panel that the instructor can use to add commands which should be used to solve a given training level.
+Under the MITRE ATT&CK techniques panel is an **Expected Commands** panel that the instructor can use to add commands which should be used to solve a given training level. This functionality will be further enhanced as a part of a future release related to cheating detection.
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-expected-commands.png">
 </p>
 
 ##### II. Assessment Level
-At the assessment level, the trainees answer a list of questions. Content of this level can be edited with the following form.
+At the _assessment level_, the trainees answer a list of questions. Content of this level can be edited with the following form.
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-AL-panel.png">
@@ -172,19 +172,18 @@ Each type has its specific editing form.
 </p>
 
 ##### III. Info Level
-In the info level, the trainees read the content of the information written by the instructor in the following form:
+In the _info level_, the trainees read the content of the information written by the instructor in the following form:
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-IL-panel.png">
 </p>
 
 ##### IV. Access Level
-In the access level, a trainee is provided with necessary information on how to access either cloud or local sandbox. Either cloud or local content is displayed during a training run based on the selected environment in a training instance. In local content, the special variables can be used. These variables are then replaced by an actual values when the content is displayed to trainee. A trainee must submit a passkey to proceed to next level. Passkey can be provided to trainees by an instructor or can be mentioned in the content itself. 
+In the _access level_, a trainee is provided with information on accessing the cloud or local sandbox. Either cloud or local content is displayed during a training run based on the selected environment in a training instance. In local content, special placeholder variables can be used. The specific variables are listed in the level description below. To use it, they need to be placed in curly brackets inside the text. The variables are then replaced by actual values when the content is displayed to a trainee. A trainee must submit a passkey to proceed to the next level. Passkey can be provided to trainees by an instructor or can be mentioned in the training level content. 
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-ACL-panel.png">
 </p>
-
 
 #### Authors Panel
 In the second panel of the training definition editor, the instructor can add and remove authors from the definition.
