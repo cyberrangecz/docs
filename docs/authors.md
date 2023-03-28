@@ -5,7 +5,6 @@
 | Surname | Name | Role |
 | ------ | ------ | ------ |
 | Dočkalová Burská | Karolína | Team leader & Visualization R&D |
-| Kacvinský | Tomáš | Tester |
 | Krebs | Radovan | Python developer |
 | Majdan | Lukáš | Java & Angular developer |
 | Ošlejšek | Radek |  Visualisation R&D |
