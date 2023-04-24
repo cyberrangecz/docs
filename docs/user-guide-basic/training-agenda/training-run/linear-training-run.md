@@ -10,7 +10,7 @@ Enter the access token prefix and PIN provided by the instructor of the training
 
 !!! note
     If a trainee has already accessed a training run in a particular training instance and hasn't finished it yet, the training run will be resumed.
-    If a trainee finished one training run, he will not be able to start another one, unless you delete his old run.
+    If a trainee has finished one training run, he will not be able to start another one instantly. However, to enable another run of the same training, you can delete the old run.
 
 ### 2. Training Runs
 It lists all training runs of the logged-in trainee. Each table row represents a training run of a particular training instance (trainee can access multiple training runs within training instance). The training run can be unfinished or finished. An unfinished run can be resumed using the :material-launch:{: .blue .icon} button or entering the access token in the Access Training panel.
