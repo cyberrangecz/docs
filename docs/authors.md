@@ -27,6 +27,7 @@
 | *Rusňák* | *Vít* | *UI/UX R&D* |
 | *Staněk* | *Miloslav* | *Python developer* |
 | *Šeda* | *Pavel* | *Java & DB services leader* |
+| *Tovarňák* | *Daniel* | *Technical leader* |
 | *Urban* | *Michal* | *Python leader* |
 | *Zbončáková* | *Tatiana* | *Python developer* |
 
@@ -36,7 +37,7 @@
 | ------ | ------ | ------ |
 | Čegan | Jakub | Project Management & Industrial Applications & Business Development |
 | Čeleda | Pavel | KYPO Principal Investigator |
-| Tovarňák | Daniel |  Architecture & Design & Technical leader |
+| Tovarňák | Daniel |  Architecture & Design |
 | Vykopal | Jan | Educational research & User testing |
 
 ## Special Recognition
