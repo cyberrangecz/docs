@@ -9,7 +9,8 @@ The page consists of a panel providing [access to training](#1-access-training) 
 Enter the access token prefix and PIN provided by the instructor of the training instance into the two fields shown in the above figure. By clicking on the ![access-button](../../../img/buttons/access-button.png) button, the system checks if there are any active training instances with a corresponding access token and any available sandboxes. If those conditions are fulfilled, the trainee will access the training run (particular training) with an assigned unique sandbox.
 
 !!! note
-    If a trainee has already accessed a training run in a particular training instance and hasn't finished it yet, the training run will be resumed. 
+    If a trainee has already accessed a training run in a particular training instance and hasn't finished it yet, the training run will be resumed.
+    If a trainee has finished one training run, he will not be able to start another one instantly. However, to enable another run of the same training, you can delete the old run.
 
 ### 2. Training Runs
 It lists all training runs of the logged-in trainee. Each table row represents a training run of a particular training instance (trainee can access multiple training runs within training instance). The training run can be unfinished or finished. An unfinished run can be resumed using the :material-launch:{: .blue .icon} button or entering the access token in the Access Training panel.
