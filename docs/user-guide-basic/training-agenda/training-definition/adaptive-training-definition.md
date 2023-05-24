@@ -60,6 +60,11 @@ This page lists all adaptive definitions available to the instructor (the instru
     Click the button to change the definition state to **Unreleased**.
     Unreleased definitions allow the instructor to edit the content inside them and change its state to **Released**.
 
+??? archive "Archive"
+
+    Click the button to change the definition state from **Released** to **Archived**.
+    Archived definitions cannot change their **Archived** state and can no longer be modified.
+
 ## Add a New Definition
 There are three approaches on how to creating a new training definition. 
 
