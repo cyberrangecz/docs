@@ -59,17 +59,20 @@ This page lists all definitions available to the instructor (the instructors can
     !!! info
         Sandbox topologies in the preview are mocked and not connected to any real sandbox, so they cannot be used to access any virtual network.
 
-    
 ??? lock "Release"
    
     Click the button to change the definition state to **Released**. 
     Released definitions cannot change their content, but their state can be changed to either **Unreleased** or **Archived**.
-
-  
+ 
 ??? unlock "Unrelease"
     
     Click the button to change the definition state to **Unreleased**.
     Unreleased definitions allow the instructor to edit the content inside them and change its state to **Released**.
+
+??? archive "Archive"
+
+    Click the button to change the definition state from **Released** to **Archived**.
+    Archived definitions cannot change their **Archived** state and can no longer be modified.
 
 ## Add a New Definition
 There are three approaches on how to creating a new training definition. 
