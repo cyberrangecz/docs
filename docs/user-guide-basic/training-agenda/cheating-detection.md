@@ -33,7 +33,7 @@ Each cheating detection has these actions that can be executed:
 
     Click the button and cheating detection with all its detected events and data will be deleted.
 
-## Cheating Detection Create
+## Create Cheating Detection
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/cheating-detection/cheating-detection-create.png">
@@ -47,20 +47,20 @@ So far the cheating detection supports these methods:
 
 ??? pencil "Answer Similarity"
 
-    Occurs when a trainee submits an answer for a level that was incorrect, but was a correct answer for another trainee ( who most likely shared his answer).
+    Occurs when a trainee submits an answer for a level that was incorrect, but was a correct answer for another trainee (who most likely shared his answer).
     This detection method is relevant for APG trainings, where answers for trainees are randomly generated.
 
 ??? pencil "Location Similarity"
 
-    Occurs when two or more trainees submit the answer to a level from the same domain. This detection is relevant for trainings where all participants are expected to have different domains ( excludes trainings happening in a lecture room where everyone has the same domain).
+    Occurs when two or more trainees submit the answer to a level from the same domain. This detection is relevant for trainings where all participants are expected to have different domains (excludes trainings where all trainees are connected to KYPO from the same IP network).
 
 ??? pencil "Time Proximity"
 
-    Occurs when two or more trainees submit a correct answer for a level in a short time window. This time window can be specified in a label 'proximity threshold' in seconds, with default value being two minutes. This detection is relevant for trainings that span a longer time period ( for example two weeks), but is irrelevant for a short term training ( one hour exam).  
+    Occurs when two or more trainees submit a correct answer for a level in a short time window. This time window can be specified in a label 'proximity threshold' in seconds, with default value being two minutes. This detection is relevant for trainings that span a longer time period (for example two weeks), but is irrelevant for a short term training (one hour exam).  
 
 ??? pencil "Minimal Solve Time"
 
-    Occurs when a trainee solves a level in a shorter time that is the specified minimal possible solve time for the level. For this detection to be relevant, minimal solving time must be reasonably specified when creating a level in training definition. Too high will result in many false negatives while too low in false positives. This detection might not prove someone cheated right away, but can be a great supplement for all the detection methods described above. 
+    Occurs when a trainee solves a level in a shorter time that is the specified minimal possible solve time for the level. For this detection to be relevant, minimal solving time must be reasonably specified when creating a level in training definition. Too much time will result in many false negatives while too little time in false positives. This detection might not prove someone cheated right away, but can be a great supplement for all the detection methods described above. 
 
 ??? pencil "No Commands"
 
