@@ -85,7 +85,7 @@ There are three approaches on how to creating a new training definition.
 To create a new training definition, click on the top right button ![Create-button](../../../img/buttons/create-button.png). It will open the training definition editor page.
 
 #### Create Linear Training Definition Panel
-In the first panel of the training definition editor, the instructor can edit fields that describe the new definition. When the instructor is done, they can either click on ![save](../../../img/buttons/save-button.png) button that will create a new definition and redirect them to the edit page for training definition. It will allow the instructor to edit **authors** and **levels** of the definition.
+In the first panel of the training definition editor, the instructor can edit fields that describe the new definition. When the instructor is done, they can either click on ![save](../../../img/buttons/save-button.png) button that will create a new definition and redirect them to the edit page for training definition. It will allow the instructor to edit **designers** and **levels** of the definition.
 
 <p align="center">
     <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-create-panel.png">
@@ -188,11 +188,11 @@ In the _access level_, a trainee is provided with information on accessing the c
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-ACL-panel.png">
 </p>
 
-#### Authors Panel
-In the second panel of the training definition editor, the instructor can add and remove authors from the definition.
+#### Designers Panel
+In the second panel of the training definition editor, the instructor can add and remove designers from the definition.
 
 <p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-edit-authors.png">
+  <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-edit-designers.png">
 </p>
 
 
