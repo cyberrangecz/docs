@@ -39,7 +39,7 @@ The list of routers. Routers are the only nodes through which hosts can communic
 
     !!! note
         A router's **cidr** attribute has been deprecated since version 21.12.
-  
+
 ### wan
 A special network that [routers](#routers) uses to communicate with each other and the Internet. [Routers](#routers) are assigned to this network automatically.
 
@@ -77,13 +77,24 @@ The list of groups. An ansible group is used for better management of nodes. It 
 * **name**: name of the group
 * **nodes**: list of node names defined in [hosts](#hosts), or [routers](#routers).
 
+The following group names are reserved for monitoring - monitor-os (monitoring of Operating System), monitor-icmp (network availability monitoring on management interface).
+
+### monitoring_targets
+
+List of monitoring targets with TCP ports and interfaces to monitor. A monitoring_target has the following attributes.
+
+* **node**: name of host or router defined in [hosts](#hosts) or [routers](#routers)
+* **targets**: list of TCP ports and interfaces to monitor in the following format.
+    * **port**: TCP port to monitor
+    * **interface**: network interface to monitor
+
 ## Glossary
 
 ### Base_box
 
 Base_box specifies the `image` of the node boot disk, default user `mgmt_user` with sudo permissions, and a protocol that is needed to communicate with the machine.
 
-The table below contains some examples of possible base_box options. 
+The table below contains some examples of possible base_box options.
 
 | image                | user    |
 |----------------------|---------|

@@ -56,6 +56,7 @@ nav:
           - Sandbox Access: user-guide-advanced/sandboxes/sandbox-access.md
           - APG Variables: user-guide-advanced/sandboxes/apg-variables.md
           - Docker Containers in Sandbox Definitions: user-guide-advanced/sandboxes/sandbox_dockers.md
+          - Sandbox Monitoring: user-guide-advanced/sandboxes/sandbox-monitoring.md
       - Trainings:
           - Overview: user-guide-advanced/trainings/trainings-overview.md
       - Users and Groups:
