@@ -1,10 +1,12 @@
 # Setting up OIDC Provider
 
-Currently, the KYPO CRP is tested and supports the following OIDC providers:
+KYPO CRP is from the release 23.12 deployed with Keycloak OIDC service. KYPO CRP supports with Keycloak:
 
-* [MUNI Unified Login](https://it.muni.cz/en/services/jednotne-prihlaseni-na-muni)
-* [Microsoft Azure](https://azure.microsoft.com)
-* [CSIRT-MU dummy OIDC issuer](https://gitlab.ics.muni.cz/csirt-mu-devel/oidc-auth/csirtmu-oidc-overlay)
+* local Keycloak users
+* [external Kerberos and LDAP users](https://www.keycloak.org/docs/latest/server_admin/#_user-storage-federation)
+* [external Identity Providers](https://www.keycloak.org/docs/latest/server_admin/#_identity_broker)
+
+Using OIDC providers directly in KYPO CRP instead of local Keycloak service is still possible, but it's not recommended. The implementation might not be fully compatible with KYPO CRP. For the direct implementation of external service instead of local Keycloak service, continue with [General Setup](#general-setup) section.
 
 ## General Setup
 
@@ -46,50 +48,7 @@ Set up the following parameters with given values.
     https://<YOUR-SERVER-ADDRESS>/logout-confirmed
     ```
 
-
-## CSIRT-MU OIDC Dummy Issuer Setup
-
-CSIRT-MU OIDC Dummy Issuer is the default implementation for Internal local OIDC issuer. Deploy KYPO with Internal local OIDC issuer by following [Deployment of KYPO-CRP Helm application](https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo-crp-tf-deployment/-/blob/master/HELM.md) guide.
-
-## Microsoft Azure Setup
-
-1. Open and log in to the [Microsoft Azure portal](https://portal.azure.com/#home).
-2. **Azure services** > **App registrations** > **New registration**
-    1. *Name* - optional, e.g. *"KYPO PROD/Devel Client"*
-    2. *Redirect URI*
-        * Select *"Single-page application (SPA)"*
-        * Add Redirect URI `https://<YOUR-SERVER-ADDRESS>`
-3. Click the **Register** button
-4. In the **Authentication** tab
-    1. *Single-page application* > *Redirect URIs*
-        *  `https://<YOUR-SERVER-ADDRESS>`
-        *  `https://<YOUR-SERVER-ADDRESS>/index.html`
-        *  `https://<YOUR-SERVER-ADDRESS>/silent-refresh.html`
-    2. *Front-channel logout URL*
-        * `https://<YOUR-SERVER-ADDRESS>/logout-confirmed`
-    3. *Implicit grant and hybrid flows*
-        * Check *"Access tokens (used for implicit flows)"*
-        * Check *"ID tokens (used for implicit and hybrid flows)"*
-5. In the **API permissions** tab
-    1. *Add a permissions* > *Microsoft APIs* > *Microsoft Graph* > *Delegated permissions* > *OpenId permissions*
-        * openid
-        * profile
-        * email
-6. In the **Overview** tab
-    1. Save the value *"Application (client) ID"*
-    2. Save the value *"Directory (tenant) ID"*
-
-### Required variables
-
-The following variables are needed to deploy and use KYPO CRP with Microsoft Azure:
-
-* **client_id** - `Application (client) ID` (see the 6. step described above)
-* **url** - `https://login.microsoftonline.com/<tenant ID>/v2.0/`
-* **issuer_identifier** - `https://sts.windows.net/<tenant ID>/`
-* **user_info_url** - `https://graph.microsoft.com/oidc/userinfo`
-
-
-## Selecting the Right Grant Types
+### Selecting the Right Grant Types
 The selection of the right grant type is especially important for security reasons. In OpenID Connect exists 4 grant types:
 
 1. Authorization code grant
