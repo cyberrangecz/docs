@@ -7,6 +7,8 @@ Resources Overview consists of panels describing [statistics of OpenStack projec
 * **Instances**: Created VMs in the OpenStack project,
 * **VCPUs**: Virtual CPUs currently in use by all instances,
 * **RAM**: The amount of the main memory currently in use by all instances.
+* **Ports**: The amount of the ports currently in use by all instances.
+* **Networks**: The amount of networks currently in use by all the instances.
 
 ![usage-statistics](../../img/user-guide-basic/sandbox-agenda/resources/usage-stats.png)
 
