@@ -39,6 +39,7 @@ The list of routers. Routers are the only nodes through which hosts can communic
 
     !!! note
         A router's **cidr** attribute has been deprecated since version 21.12.
+* * **hidden (optional)**: whether the router and its networks and hosts should be hidden in a topology visualization (default: `False`)
 
 ### wan
 A special network that [routers](#routers) uses to communicate with each other and the Internet. [Routers](#routers) are assigned to this network automatically.
@@ -53,6 +54,7 @@ The list of networks. A network is used to connect the router with the end host.
 * **name**: name of network ([names restriction](#names), [unique names restriction](#unique-names))
 * **cidr**: IP address range in CIDR notation ([unique cidrs restriction](#disjunct-cidrs))
 * **accessible_by_user**: optional attribute, specifies which networks will be accessible by user (default: `True`), applies to the all hosts of a network
+* **hidden (optional)**: whether the network and its hosts should be hidden in a topology visualization (default: `False`)
 
 ### net_mappings
 
