@@ -25,6 +25,7 @@ Hosts contains the list of end hosts to be deployed. A host has the following at
     * **mgmt_protocol (optional)**: protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
 * **hidden (optional)**: whether the host should be hidden in a topology visualization (default: `False`)
 * **volumes (optional)**: list of volumes that will be provisioned on the host in the format `- size: X`, where X is volume size in GB. The first volume will be used as a system drive - the author of the definition utilizing this parameter has to determine how much space the image itself requires to run.
+* **extra (optional)**: a map used for defining extra values for the host, has no additional effect.
 
 ### routers
 
@@ -36,10 +37,11 @@ The list of routers. Routers are the only nodes through which hosts can communic
     * **image**: name of image
     * **mgmt_user**: name of user with sudo privileges
     * **mgmt_protocol (optional)**: protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
+* **extra (optional)**: a map used for defining extra values for the router, has no additional effect.
+* **hidden (optional)**: whether the router and its networks and hosts should be hidden in a topology visualization (default: `False`)
 
     !!! note
         A router's **cidr** attribute has been deprecated since version 21.12.
-* * **hidden (optional)**: whether the router and its networks and hosts should be hidden in a topology visualization (default: `False`)
 
 ### wan
 A special network that [routers](#routers) uses to communicate with each other and the Internet. [Routers](#routers) are assigned to this network automatically.
