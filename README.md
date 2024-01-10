@@ -2,8 +2,21 @@
 
 ## Dependencies
 
-* `python3.8`
-* `pipenv`
+* `python3.10` (with all dependencies using **python 3.10**)
+* `pipenv` 
+
+## Update info
+
+Make sure you use Python 3.10. If you previously had an older version of the docs project installed, you'll might need to remove the virtualenv and create a new one with the new Python version:
+
+```
+pipenv --rm
+pipenv sync
+```
+
+Then you can run the server locally.
+
+_In case you'll want to update the project further, a new version of `mkdocs-swagger-ui-plugin` will have to be provided first or substituted with another suitable plugin._
 
 ## Usage (local server)
 

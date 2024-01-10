@@ -1,4 +1,4 @@
-image: python:3.8-buster
+image: python:3.10-bullseye
 
 stages:
   - deploy
@@ -6,7 +6,7 @@ stages:
 pages:
   stage: deploy
   script:
-    - pip install pipenv==11.9.0
+    - pip install pipenv==2023.11.15
     - pipenv sync
     - pipenv run mkdocs build --strict --verbose --site-dir public
   artifacts:
