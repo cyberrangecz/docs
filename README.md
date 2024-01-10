@@ -16,8 +16,6 @@ pipenv sync
 
 Then you can run the server locally.
 
-_In case you'll want to update the project further, a new version of `mkdocs-swagger-ui-plugin` will have to be provided first or substituted with another suitable plugin._
-
 ## Usage (local server)
 
 ```
