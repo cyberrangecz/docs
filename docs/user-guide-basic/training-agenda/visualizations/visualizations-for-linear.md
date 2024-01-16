@@ -136,7 +136,7 @@ Displays statistics of individual assessment answers.
 
 #### Aggregated Dashboard
 
-This dashboard provides overview over 4 different visualizations. All of these present data from selected training instances which share **same** [Training Definition](../../../user-guide-advanced/trainings/trainings-overview/#training-definition). Data from selected training instances are aggregated and presented in visualizations below. 
+This dashboard provides overview over 4 different visualizations. All of these present data from selected training instances which share **same** [Training Definition](../../../user-guide-advanced/trainings/trainings-overview.md#training-definition). Data from selected training instances are aggregated and presented in visualizations below. 
 
 <p align="center">
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-aggregated-dashboard.png">

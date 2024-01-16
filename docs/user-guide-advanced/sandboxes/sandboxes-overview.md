@@ -11,15 +11,15 @@
 The KYPO Cyber Range Platform creates and provides an emulated virtual environment. Working with this environment in KYPO requires knowledge of the terms [Sandbox](#sandbox), [Sandbox definition](#sandbox-definition), and [Pool](#pool).
 
 ## Sandbox
-As mentioned in [terminology](../../../basic-concepts/terminology/#emulated-virtual-environment), it is an isolated testing environment with virtual networks and virtual machines (VMs) in them. Thanks to the infrastructure created using the [OpenStack](https://www.openstack.org/) cloud service, and everything is running without affecting the external infrastructure.
+As mentioned in [terminology](../../basic-concepts/terminology.md#emulated-virtual-environment), it is an isolated testing environment with virtual networks and virtual machines (VMs) in them. Thanks to the infrastructure created using the [OpenStack](https://www.openstack.org/) cloud service, and everything is running without affecting the external infrastructure.
 
 ## Sandbox Definition
-As mentioned in [terminology](../../../basic-concepts/terminology/#emulated-virtual-environment), it is an isolated testing environment with virtual networks and virtual machines (VMs) in them. Thanks to the infrastructure created using the [OpenStack](https://www.openstack.org/) cloud service, and everything is running without affecting the external infrastructure.
+As mentioned in [terminology](../../basic-concepts/terminology.md#emulated-virtual-environment), it is an isolated testing environment with virtual networks and virtual machines (VMs) in them. Thanks to the infrastructure created using the [OpenStack](https://www.openstack.org/) cloud service, and everything is running without affecting the external infrastructure.
 
-* **Topology Definition**: The file with the sandbox structure definition (hosts, routers, networks, etc.). For more detailed information about the topology definition, check the page [Toplogy Definition](../topology-definition/). Created sandbox inside the cloud is called KYPO [Topology Instance](../topology-instance/).
-* **Sandbox Provisioning**: It is used to customize Topology Instances, e.g., set up an environment, create users, install packages, etc. Sandbox Provisioning must specify how to connect to instances, e.g., user name and SSH key. The Ansible tool is used to perform these actions. For more detailed information about the topology definition, check the page [Sandbox Provisioning](../sandbox-provisioning/).
+* **Topology Definition**: The file with the sandbox structure definition (hosts, routers, networks, etc.). For more detailed information about the topology definition, check the page [Toplogy Definition](topology-definition.md). Created sandbox inside the cloud is called KYPO [Topology Instance](topology-instance.md).
+* **Sandbox Provisioning**: It is used to customize Topology Instances, e.g., set up an environment, create users, install packages, etc. Sandbox Provisioning must specify how to connect to instances, e.g., user name and SSH key. The Ansible tool is used to perform these actions. For more detailed information about the topology definition, check the page [Sandbox Provisioning](sandbox-provisioning.md).
 
-Created sandbox definition must be stored as a Git repository to be used inside the KYPO portal. Git repository must also be accessible by the KYPO platform. For more detailed information, check the page [Sandbox Definition](../sandbox-definition/).
+Created sandbox definition must be stored as a Git repository to be used inside the KYPO portal. Git repository must also be accessible by the KYPO platform. For more detailed information, check the page [Sandbox Definition](sandbox-definition.md).
 
 ## Pool
 Before creating cloud sandboxes, it is essential to create in system so-called pools. Pools are groups of sandboxes created based on the same sandbox definition. A definition is specified before creating the pool. After creating the pool, it is possible to start with the allocation of the sandboxes, which is divided into three phases:

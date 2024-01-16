@@ -126,8 +126,8 @@ If hints are not enough, the trainee can reveal the solution by clicking the ![s
 When the trainee finds out the answer for the current training phase, they can proceed to the next phase by typing the answer to the input field and submitting it by clicking the ![submit-button](../../../img/buttons/submit-button.png) button in the control panel.
 
 #### SSH Access
-In addition to connecting to the sandbox using Spice or Guacamole, it is also possible to connect to the sandbox machines locally using SSH. To do that, click the ![get-ssh-config-button](../../../img/buttons/get-ssh-config-button.png) button and download the ZIP archive with the configuration of a user SSH access to the respective sandbox. More about SSH access can be found in [Sandbox SSH Access](../../../../user-guide-advanced/sandboxes/sandbox-access/#user-access).
+In addition to connecting to the sandbox using Spice or Guacamole, it is also possible to connect to the sandbox machines locally using SSH. To do that, click the ![get-ssh-config-button](../../../img/buttons/get-ssh-config-button.png) button and download the ZIP archive with the configuration of a user SSH access to the respective sandbox. More about SSH access can be found in [Sandbox SSH Access](../../../user-guide-advanced/sandboxes/sandbox-access.md#user-access).
 
 ## Training Run Results
 
-When the trainee finishes a training run, they will see the visualization of their behavior in training. The visualization is described in detail in [Visualizations for Adaptive Training](../../visualizations/visualizations-for-adaptive/#for-trainees).
+When the trainee finishes a training run, they will see the visualization of their behavior in training. The visualization is described in detail in [Visualizations for Adaptive Training](../visualizations/visualizations-for-adaptive.md#for-trainees).

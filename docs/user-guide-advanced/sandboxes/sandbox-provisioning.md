@@ -1,4 +1,4 @@
-The Sandbox Provisioning is for [Topology Instance](../topology-instance/) customizations. Use it to set up your environment, create users, install packages, etc.
+The Sandbox Provisioning is for [Topology Instance](topology-instance.md) customizations. Use it to set up your environment, create users, install packages, etc.
 
 The **provisioning** directory's content is the same as any other [Ansible](https://docs.ansible.com/ansible/latest/index.html).
 
@@ -22,15 +22,15 @@ The KYPO requires Sandbox Provisioning, but if you do not need any provisioning,
 
 On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#default-groups), the KYPO sandbox-service defines seven more default host groups.
 
-* **management**: the group containing the [sandbox management node](../topology-instance/#topology-instance-management), i.e., MAN node.
-* **routers**: the group containing all the routers defined in [Topology definition](../topology-definition/#routers).
-* **hosts**: the group containing all the hosts defined in [Topology definition](../topology-definition/#hosts).
-* **ssh_nodes**: the group containing all the hosts and routers defined in [Topology definition](../topology-definition/) with `base_box.mgmt_protocol` set to `SSH` (Since 21.04).
-* **winrm_nodes**: the group containing all the hosts and routers defined in [Topology definition](../topology-definition/) with `base_box.mgmt_protocol` set to `WINRM` (Since 21.04).
-* **user_accessible_nodes**: the group containing all hosts and routers defined in [Topology definition](../topology-definition/), which are connected to a network with attribute `accessible_by_user` set to `True` (Since 21.06).
-* **hidden_hosts**: the group containing all hosts defined in [Topology definition](../topology-definition/) with attribute `hidden` set to `True` (Since 21.06).
+* **management**: the group containing the [sandbox management node](topology-instance.md#topology-instance-management), i.e., MAN node.
+* **routers**: the group containing all the routers defined in [Topology definition](topology-definition.md#routers).
+* **hosts**: the group containing all the hosts defined in [Topology definition](topology-definition.md#hosts).
+* **ssh_nodes**: the group containing all the hosts and routers defined in [Topology definition](topology-definition.md) with `base_box.mgmt_protocol` set to `SSH` (Since 21.04).
+* **winrm_nodes**: the group containing all the hosts and routers defined in [Topology definition](topology-definition.md) with `base_box.mgmt_protocol` set to `WINRM` (Since 21.04).
+* **user_accessible_nodes**: the group containing all hosts and routers defined in [Topology definition](topology-definition.md), which are connected to a network with attribute `accessible_by_user` set to `True` (Since 21.06).
+* **hidden_hosts**: the group containing all hosts defined in [Topology definition](topology-definition.md) with attribute `hidden` set to `True` (Since 21.06).
 
-You can specify additional Ansible host groups in [Topology definition](../topology-definition/#groups) and then use them in a `playbook.yml` file of the Sandbox Provisioning.
+You can specify additional Ansible host groups in [Topology definition](topology-definition.md#groups) and then use them in a `playbook.yml` file of the Sandbox Provisioning.
 
 ### Ansible Special Variables
 
@@ -50,7 +50,7 @@ On top of [Ansible special variables](https://docs.ansible.com/ansible/latest/re
 
 For each sandbox, the KYPO sandbox-service generates an `inventory.yml` file. It adds some networking data to it, which you might find useful in your Sandbox Provisioning.
 
-Example of inventory file for [small-sandbox](../topology-definition#example) defined in [Topology definition](../topology-definition) example.
+Example of inventory file for [small-sandbox](topology-definition.md#example) defined in [Topology definition](topology-definition.md) example.
 
 ```yaml
 all:

@@ -1,7 +1,7 @@
 !!! note
     **Cyber Sandbox Creator** has own [wiki page](https://gitlab.ics.muni.cz/muni-kypo-csc/cyber-sandbox-creator/-/wikis/3.0/Sandbox-Definitions#definitions-file-structure) describing the structure and attributes of topology definition files.
 
-Topology Definition is used for the description of [Topology Instance](../topology-instance/). See the following image to help you visualize what you can define in the topology definition.
+Topology Definition is used for the description of [Topology Instance](topology-instance.md). See the following image to help you visualize what you can define in the topology definition.
 
 ![topology-definition-color](../../img/user-guide-advanced/sandboxes/topology-definition-color.png)
 
@@ -112,7 +112,7 @@ The table below contains some examples of possible base_box options.
 | windows-server-2019  | windows |
 
 !!! warning
-    The actual base_box options may differ from the contents of this table. Before using an image, check that it is present in the list of OpenStack images ([How to list OpenStack images](../../../../installation-guide/base-infrastructure/#configuration))
+    The actual base_box options may differ from the contents of this table. Before using an image, check that it is present in the list of OpenStack images ([How to list OpenStack images](../../installation-guide/installation-guide-overview.md#configuration))
 
 !!! note
     To create and deploy a custom image, follow this [tutorial](https://gitlab.ics.muni.cz/muni-kypo-images/image-template/-/blob/master/README.md).
@@ -130,7 +130,7 @@ To use the examples of sandbox definitions, the flavors displayed in the table m
 !!! warning
     In the case of using a public cloud provider (flavors cannot be created without admin rights), the flavors in the topology definition must be replaced by the available flavors of that provider.
 
-[How to list OpenStack flavors](../../../../installation-guide/base-infrastructure/#configuration)
+[How to list OpenStack flavors](../../installation-guide/installation-guide-overview.md#configuration)
 
 | flavor             | vCPU | RAM (GB) | disk size (GB) |
 |--------------------|------|----------|----------------|
@@ -158,7 +158,7 @@ Names of hosts, networks, and routers should be unique in the context of a Topol
 ### Disjunct CIDRs
 
 Networks, including wan, should be disjunct (not overlapping), and in `network_mappings` and `router_mappings` IP address should be from the IP address range of the network. Otherwise, networking wouldn't work.
-Networks, including wan, shouldn't overlap with [management network's](../topology-instance/#topology-instance-management) CIDR either.
+Networks, including wan, shouldn't overlap with [management network's](topology-instance.md#topology-instance-management) CIDR either.
 
 [How to set CIDRs of management networks](https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo-crp-deployment/-/tree/master/provisioning/roles/kypo-crp-head/templates/configuration/sandbox-service/kypo-sandbox-service-config.yml).
 
@@ -168,7 +168,7 @@ During a network creation, the OpenStack will take the first IP address of the s
 
 ### Group Restriction
 
-KYPO sandbox service does not allow the redefinition of its [default hosts groups](../sandbox-provisioning/#ansible-host-groups). Thus, the Topology Definition in which these groups are defined is invalid.
+KYPO sandbox service does not allow the redefinition of its [default hosts groups](sandbox-provisioning.md#ansible-host-groups). Thus, the Topology Definition in which these groups are defined is invalid.
 
 *[VM]: Virtual machine
 *[BR]: Border router

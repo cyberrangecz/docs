@@ -5,7 +5,7 @@ The KYPO platform is also used to create cybersecurity exercises and trainings. 
 The content of the whole exercise is described using so-called training definitions. We distinguish the two types of definitions: **linear** and **adaptive**. Linear training definition also supports the technique of the [Automatic Problem Generation (APG)](#automatic-generation-problem-apg-in-linear-training-definition). In general, both linear and adaptive training definitions include information about the title, notes for instructors, and learning outcomes. Linear/adaptive training definition further consists of multiple **[levels](#levels)/[phases](#phases)**. A created training definition can be download as a file in JSON format. It is a good practice to store Training Definition in the Git repository next or close to the repository of Sandbox Definition that is specially created for that Training Definition.
 
 !!! note
-    Creating APG Training Definition requires field Generate variant sandboxes to be selected while [creating training definition](../../../user-guide-basic/training-agenda/training-definition/linear-training-definition/#create-linear-training-definition-panel).
+    Creating APG Training Definition requires field Generate variant sandboxes to be selected while [creating training definition](../../user-guide-basic/training-agenda/training-definition/linear-training-definition.md#create-linear-training-definition-panel).
 
 ### Linear
 
@@ -21,7 +21,7 @@ The content of the whole exercise is described using so-called training definiti
 4. **Access Level**: Contains information on how to access either local or cloud sandbox.
 
 #### Automatic Generation Problem (APG) in Linear Training Definition 
-**Automatic Problem Generation** is a technique of defining various problem instances. In KYPO CRP, it is achieved by using variant answers for each [Training Run](#training-run) that can reduce the threat of copied or leaked answers. APG training definition requires specific [Sandbox Definition](../../../../user-guide-advanced/sandboxes/sandbox-definition) with **variables.yml** file. The file specifies variables whose values are automatically generated for each sandbox instance. The generated values then can be used during provisioning to set secret answers inside the sandbox (e.g., filename, port, username, etc.). Behind the scenes, generated values are stored to the special **answers storage**.
+**Automatic Problem Generation** is a technique of defining various problem instances. In KYPO CRP, it is achieved by using variant answers for each [Training Run](#training-run) that can reduce the threat of copied or leaked answers. APG training definition requires specific [Sandbox Definition](../../user-guide-advanced/sandboxes/sandbox-definition.md) with **variables.yml** file. The file specifies variables whose values are automatically generated for each sandbox instance. The generated values then can be used during provisioning to set secret answers inside the sandbox (e.g., filename, port, username, etc.). Behind the scenes, generated values are stored to the special **answers storage**.
 
 When creating a training level, a designer can specify either:
 
@@ -37,7 +37,7 @@ When creating a training level, a designer can specify either:
 !!! warning "Prototype"
     Reference solution and training graph-based feedback created accordingly is a prototype feature.
 
-Reference solution defines the sample solution of executing commands during training levels. The designer defines what commands have to be or might be executed to achieve the secret answer. The reference solution is defined in the [Training Level](../../../user-guide-basic/training-agenda/training-definition/linear-training-definition/#i-training-level) as a JSON array of objects where each object represents one command.
+Reference solution defines the sample solution of executing commands during training levels. The designer defines what commands have to be or might be executed to achieve the secret answer. The reference solution is defined in the [Training Level](../../user-guide-basic/training-agenda/training-definition/linear-training-definition.md#i-training-level) as a JSON array of objects where each object represents one command.
 
 
 ```
@@ -61,7 +61,7 @@ Reference solution defines the sample solution of executing commands during trai
 * **cmd_regex**: Regular expression to determine whether the specified command will allow this state to be reached. 
 * **optional**: Determines whether it is optional to reach this state for further progress in training.
 
-The [reference](../../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear/#reference-graph), [trainee](../../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear/#trainee-graph), and [summary](../../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear/#summary-graph) graphs are created according to the reference solution and command analysis done behind the scenes. 
+The [reference](../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear.md#reference-graph), [trainee](../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear.md#trainee-graph), and [summary](../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear.md#summary-graph) graphs are created according to the reference solution and command analysis done behind the scenes. 
 
 ### Adaptive
 
@@ -89,7 +89,7 @@ For more information about how exactly the specific tasks are chosen and what eq
 
 ## Training Instance
 
-A time-limited instance of a training definition during which trainees have access to training. The whole training instance progress is managed by instructors who can monitor events made by trainees that are displayed in various graphs and tables that may differ based on the type of assigned training definition. Each training instance has an assigned [pool](../../../user-guide-advanced/sandboxes/sandboxes-overview/#pool) with sandboxes. 
+A time-limited instance of a training definition during which trainees have access to training. The whole training instance progress is managed by instructors who can monitor events made by trainees that are displayed in various graphs and tables that may differ based on the type of assigned training definition. Each training instance has an assigned [pool](../../user-guide-advanced/sandboxes/sandboxes-overview.md#pool) with sandboxes. 
 
 ## Training Run
 
@@ -105,6 +105,6 @@ The training run represents a single run of the training of the particular train
 
 
 ### Overall 
-The following picture displays interconnection between trainings and [sandboxes](../../sandboxes/sandboxes-overview).
+The following picture displays interconnection between trainings and [sandboxes](../sandboxes/sandboxes-overview.md).
 
 ![kypo-basic-elements-training](../../img/user-guide-advanced/trainings/KYPO-basic-elements.png)

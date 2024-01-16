@@ -5,9 +5,9 @@ This post-training instance simulator allows the instructor to analyze the finis
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/instance-simulator/instance-simulator-edit.png">
 </p>
 
-The simulator can be accessed by clicking the ![instance-simulator-button](../../../img/buttons/instance-simulator-button.png) button, [Adaptive Training Definition Overview page](../adaptive-training-definition/#adaptive-training-definition-overview). Simulating tool works with the data exported from the previous instances.
+The simulator can be accessed by clicking the ![instance-simulator-button](../../../img/buttons/instance-simulator-button.png) button, [Adaptive Training Definition Overview page](adaptive-training-definition.md#adaptive-training-definition-overview). Simulating tool works with the data exported from the previous instances.
 !!! note
-    The Instructor can find the option to export data from the desired instance on the [Training Instances Overview](../../training-instance/#training-instance-overview) page.
+    The Instructor can find the option to export data from the desired instance on the [Training Instances Overview](../training-instance.md#training-instance-overview) page.
 
 #### Adaptive Training Definition Panel
 This panel allows the instructor to work further with the uploaded training definition. The instructor can adjust the decision matrix weights and the selected phase's restrictions. The tool also provides a read-only view of tasks assigned to the selected phase. Moreover, the pre-training questionnaire relations are displayed upon selecting the pre-training questionnaire phase.

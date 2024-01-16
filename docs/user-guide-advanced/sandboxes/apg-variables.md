@@ -47,7 +47,7 @@ Each variable can define the various attributes.
 
 
 ## How to Use It?
-Use the variable name in the [definition of the training level](../../../user-guide-basic/training-agenda/training-definition/linear-training-definition/#i-training-level) as **Correct  Answer - Variable Name** (enable checkbox Variant Answers) instead of a static answer **Correct Answer - Static**. See also [APG in Linear Training Definition](../../trainings/trainings-overview/#automatic-generation-problem-apg-in-linear-training-definition).
+Use the variable name in the [definition of the training level](../../user-guide-basic/training-agenda/training-definition/linear-training-definition.md#i-training-level) as **Correct  Answer - Variable Name** (enable checkbox Variant Answers) instead of a static answer **Correct Answer - Static**. See also [APG in Linear Training Definition](../trainings/trainings-overview.md#automatic-generation-problem-apg-in-linear-training-definition).
 
 ## Example
 
