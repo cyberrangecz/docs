@@ -16,7 +16,7 @@ It is used to create, manage, and perform **linear** cybersecurity trainings in 
 Stores unique answers for each sandbox under the specific identifier. Answers are generated during the allocation of the sandbox, and then they are requested by [Training Service](#training-service) when evaluating a submitted answer of the trainee for a particular level. 
 
 ### Training Feedback Service
-Provides data necessary to visualize the feedback in the form of three types of graphs: summary, reference, trainee. The creation of the graphs is conditioned by semantical and syntax analysis of the commands executed during the training. Commands are then compared against the reference solution, and the data for respective graphs are generated. A detailed description of the graphs can be found in the section [Visualizations for Linear Training](../user-guide-basic/training-agenda/visualizations/visualizations-for-linear.md).
+(Obsolete) Provided data necessary to visualize the feedback in the form of three types of graphs: summary, reference, trainee. Currently, the graphs with their dependecies are being reconstructed, so their presence in the portal is hidden.
 
 
 ### Adaptive Training Service

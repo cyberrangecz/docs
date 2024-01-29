@@ -32,37 +32,6 @@ When creating a training level, a designer can specify either:
 !!! note
     Training definition is considered APG if it has at least one training level with field **Correct Answer - Variable Name** set.
 
-#### Reference solution
-
-!!! warning "Prototype"
-    Reference solution and training graph-based feedback created accordingly is a prototype feature.
-
-Reference solution defines the sample solution of executing commands during training levels. The designer defines what commands have to be or might be executed to achieve the secret answer. The reference solution is defined in the [Training Level](../../user-guide-basic/training-agenda/training-definition/linear-training-definition.md#i-training-level) as a JSON array of objects where each object represents one command.
-
-
-```
-{
-   "state_name":"options_showed",
-   "prereq_state":[
-      " metasploit_opened "
-   ],
-   "cmd_type":"msf-command",
-   "cmd":"show  options",
-   "cmd_regex":"show\\s+options",
-   "optional":true
-}
-
-```
-
-* **state_name**: Text name of the state used as the node name in the graph.
-* **prereq_state**: List of the node names that must be reached before reaching the state.
-* **cmd_type**: Command type. Currently, the only available types are *bash-command* and *msf-command*.
-* **cmd**: Command including options. It is used to visualize the edge name.
-* **cmd_regex**: Regular expression to determine whether the specified command will allow this state to be reached. 
-* **optional**: Determines whether it is optional to reach this state for further progress in training.
-
-The [reference](../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear.md#reference-graph), [trainee](../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear.md#trainee-graph), and [summary](../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear.md#summary-graph) graphs are created according to the reference solution and command analysis done behind the scenes. 
-
 ### Adaptive
 
 The following figure displays the adaptive format of training. This form of training is defined as a graph structure containing a questionnaire (**A**, **Q**), a list of phases, and a list of tasks. **A** represents a pre-training questionnaire before training on which trainees' knowledge is tested for a given training. Furthermore, the other events/metrics are audited to the internal database, such as answers to tasks, commands entered in the command line in the sandbox, time spent in a given phase, events of displaying the solution. These events are assigned to appropriate phases to use the computational model **PD** component properly. For example, the pre-training questions **A** is assigned to the particular phases, so we know what questions are related to what phase.
