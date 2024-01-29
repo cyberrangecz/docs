@@ -5,7 +5,7 @@
 
 This guide contains the steps that are needed to prepare the KYPO Cyber Range Platform (KYPO CRP) for cyber exercises and the creation of emulated virtual environments.
 
-Before the deployment, check the [OpenStack Requirements](../openstack-requirements/) section, which describes the requirements for the OpenStack cloud platform to be supported by KYPO CRP.
+Before the deployment, check the [OpenStack Requirements](openstack-requirements.md) section, which describes the requirements for the OpenStack cloud platform to be supported by KYPO CRP.
 
 If you meet the OpenStack Requirements follow with setting up the [Deployment Environment](https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo-crp-tf-deployment#preparing-the-deployment-environment).
 

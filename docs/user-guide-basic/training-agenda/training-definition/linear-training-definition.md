@@ -75,7 +75,7 @@ This page lists all definitions available to the instructor (the instructors can
     Archived definitions cannot change their **Archived** state and can no longer be modified.
 
 ## Add a New Definition
-There are three approaches on how to creating a new training definition. 
+There are three approaches on how to create a new training definition. 
 
 1. [Create a new definition](#1-create-a-new-definition) from scratch. 
 2. [Upload a definition ](#2-upload-a-definition-from-json-file) from a JSON file.
@@ -92,7 +92,7 @@ In the first panel of the training definition editor, the instructor can edit fi
 </p>
 
 #### Levels Panel
-This panel is part of the [Create Linear Training Definition Panel](#create-linear-training-definition-panel), where the instructor can add, delete, and edit training levels of the training definition. **Reference Graph** panel at the bottom of the panel displays the preview of the graph which is created according to the reference solutions defined in the [training levels](#i-training-level).
+This panel is part of the [Create Linear Training Definition Panel](#create-linear-training-definition-panel), where the instructor can add, delete, and edit training levels of the training definition.
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-edit-levels.png">
@@ -110,8 +110,7 @@ Each change made inside a level must be saved with the ![save](../../../img/butt
     To change the order of levels, use the drag-and-drop mechanism. Select a level in the level bar by "grabbing" it and dragging it to a different position.
 
 ##### I. Training Level
-At the training level, a trainee can access a virtual network inside the sandbox to find a solution to the assignment. The instructor can fill this form to specify details of the new level. Training definition is considered [APG](../../../../user-guide-advanced/trainings/trainings-overview/#automatic-generation-problem-apg-in-linear-training-definition) if ***Variant Answers*** is checked, and ***Correct Answer - Variable Name*** is filled. **Variant Answers** also require a specific sandbox definition that defines specified **variable name**. If variable names do not match between training definition and sandbox definition, you will get notified during training instance creation.
-[Reference solution](../../../../user-guide-advanced/trainings/trainings-overview/#reference-solution) defines the sample solution of the training level. Precisely speaking, what commands have to be executed to find the secret answer. It is also used for post-training feedback visualizations. A preview of the reference graph is displayed in the **Reference Graph** panel after saving of all training levels and is updated whenever a reference solution of training level is modified.
+At the training level, a trainee can access a virtual network inside the sandbox to find a solution to the assignment. The instructor can fill this form to specify details of the new level. Training definition is considered [APG](../../../user-guide-advanced/trainings/trainings-overview.md#automatic-generation-problem-apg-in-linear-training-definition) if ***Variant Answers*** is checked, and ***Correct Answer - Variable Name*** is filled. **Variant Answers** also require a specific sandbox definition that defines specified **variable name**. If variable names do not match between training definition and sandbox definition, you will get notified during training instance creation.
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-definition/TD-TL-panel.png">

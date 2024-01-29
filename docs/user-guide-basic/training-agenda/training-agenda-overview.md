@@ -1,6 +1,6 @@
 # Overview
 
-The purpose of the Training Agenda is to create and manage trainings that are only available to users with the role [instructor](../../../user-guide-advanced/users-and-groups/roles/#instructor).  Another purpose of the agenda is to access training runs available for all users with the role [trainee](../../../user-guide-advanced/users-and-groups/roles/#trainee). These activities are mapped onto the [Training Creation](../../../basic-concepts/typical-workflow-for-training/#training-creation) workflow. The training agenda is divided into four sections:
+The purpose of the Training Agenda is to create and manage trainings that are only available to users with the role [instructor](../../user-guide-advanced/users-and-groups/roles.md#instructor).  Another purpose of the agenda is to access training runs available for all users with the role [trainee](../../user-guide-advanced/users-and-groups/roles.md#trainee). These activities are mapped onto the [Training Creation](../../basic-concepts/typical-training-workflow/training-workflow-cloud.md#training-creation) workflow. The training agenda is divided into four sections:
 
 * **Training Definition** section is used to create and manage training definitions (the content of trainings). You can choose between the [Linear Training Definition](training-definition/linear-training-definition.md) and [Adaptive Training Definition](training-definition/adaptive-training-definition.md)
  
@@ -32,4 +32,4 @@ Or click the button in the global navigation in the section Trainings.
 </p>
 
 !!! note
-    If you only have the role `ROLE_TRAINING_TRAINEE`, you will be directly forwarded to the page [Training Runs Overview](../training-run/linear-training-run/#training-runs-overview) without any further action after a successful login.
+    If you only have the role `ROLE_TRAINING_TRAINEE`, you will be directly forwarded to the page [Training Runs Overview](training-run/linear-training-run.md#training-runs-overview) without any further action after a successful login.

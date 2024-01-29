@@ -10,7 +10,7 @@ As an instructor, you can see the ongoing course of the training runs and furthe
 
 #### Progress
 
-The interface consists of several sections for interaction with the visualization. Each section (**A** to **D**, see the figure below) is further described in detail.
+The interface consists of several sections for interaction with the visualization. Each section (see the figure below) is further described.
 
 <p align="center">
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-progress.png">
@@ -19,23 +19,27 @@ The interface consists of several sections for interaction with the visualizatio
 !!! info
     In the visualization, exclamation marks (![exclamation_mark](../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/exclamation.png)) can appear next to trainees or level tiles. They indicate a situation that may need further attention - upon a mouse-over, textual information appears. On a mouse click on the mark, it fades to signal that the issue is being solved and needs to be highlighted.
 
-**A - Overview Timeline**
+**Settings**
+
+Serves for automatic or semiautomatic restriction of the full visible timeline -- in case the user needs just a portion of the full progress, these settings can help observe it more efficiently. 
+
+**Timeline Allocation**
 
 The time displayed in the upper right corner indicates the estimated end of the session based on the current progression. A small arrow ![arrow](../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/arrow.png) denotes the originally scheduled end time to show the deviation from the schedule. On hover, the exact scheduled end time shows. As the training session progresses, the timeline fills accordingly.
 
-**B - Trainee Selection**
+**Trainee Selection**
 
-All trainees (their avatars and/or names) are listed here. Each trainee can be selected or deselected upon mouse click to show/hide their training progression in the visualization below. The mouse hovering on a visible trainee runs in the visualization highlights. 
+All trainees (their avatars and/or names) are listed in the circles. Each trainee can be selected or deselected upon mouse click to show/hide their training progression in the visualization below. The mouse hovering on a visible trainee runs in the visualization highlights. 
 
 [//]: <> (Above the grid is a text summary with the number of all trainees and the number of those currently displayed in the visualization. On click on the corresponding text on the right, all trainees show or hide accordingly.)
 
-**C - Level Selection**
+**Level Selection**
 
-These tiles represent individual training levels. Each level tile also holds information regarding the number of trainees who currently solve the level. The level name and correct answer are shown in a tooltip on hover. Additionally, the last tile displays all trainees who have already finished the whole training session. For each level, you can display its trainees on click.
+Tiles that represent individual training levels. Each level tile also holds information regarding the number of trainees who currently solve the level. The level name and correct answer are shown in a tooltip on hover. Additionally, the last tile displays all trainees who have already finished the whole training session. For each level, you can display its trainees on click.
 
-**D - Progress Visualization**
+**Progress Visualization**
 
-It gives a full picture of the trainee's walkthrough. Upon filtering in the preceding sections, selected trainees are displayed here. 
+It gives a full picture of the trainee's walkthrough. Upon filtering in the preceding sections, the selected trainees are displayed here. 
 
 Each row represents an individual trainee. Bars of each row are training levels - gray levels are finished levels, current levels are colored green/yellow/red, according to their delay as opposed to the scheduled amount of time. The stripped bars denote the scheduled time for the ongoing or upcoming levels.
 
@@ -68,14 +72,13 @@ This visualization provides commands ordered by the time of the selected trainee
 
 ### Results of Training Instance 
 
-The page provides all collected data about the training instance in several tabs. The number of tabs depends on the presence of a reference solution for the instance's training levels, as specified below.
+The page provides all collected data about the training instance in several tabs.
 
-The Dashboard tab, which is always present, contains [Score Development](#score-development), [Score Scatter Plot](#score-scatter-plot), and [Progress](#final-training-runs-view) overview graph. These graphs provide various views on trainees' activity in training. If reference solution has been specified, dashboard tab contains [Summary](#summary-graph) and [Reference](#reference-graph) graph as well. Next to the dashboard tab is the [Assessment](#assessment) tab. [Trainee Graph](#trainee-graph) and [Command Analysis](#command-analysis) tabs are present if a reference solution has been provided.
+The Dashboard tab, which is always present, contains [Score Development](#score-development), [Score Scatter Plot](#score-scatter-plot), and [Progress](#final-training-runs-view) overview graph. These graphs provide various views on trainees' activity in training. Next to the dashboard tab is the [Assessment](#assessment) tab. [Command Analysis](#command-analysis) tab is present if any commands were collected.
 
 #### Dashboard
 
-This visualization unites the previously listed visualizations and provides interactions between them. Visualization filters allow the instructor to filter the available training events and the format in which the trainee selector displays the trainees. The trainees selected by the trainee selector are then shown in the [Progress](#final-training-runs-view) overview graph. The instructor can filter which trainees they want to see in visualizations by this option. Their results are displayed in the progress overview graph upon selecting these trainees. Selecting trainees in the progress overview graph will appear in [Score Development](#score-development) and [Score Scatter Plot](#score-scatter-plot). Hovering over a trainee in any visualization will highlight them in the remaining visualizations. 
-Furthermore, if the training definition contains at least one training level with a defined reference solution, the [Summary](#summary-graph) and [Reference](#reference-graph) graph is displayed on the bottom.
+This visualization unites the previously listed visualizations and provides interactions between them. Visualization filters allow the instructor to filter the available training events and the format in which the trainee selector displays the trainees. The trainees selected by the trainee selector are then shown in the [Progress](#final-training-runs-view) overview graph. The instructor can filter which trainees they want to see in visualizations by this option. Their results are displayed in the progress overview graph upon selecting these trainees. Selecting trainees in the progress overview graph will appear in [Score Development](#score-development) and [Score Scatter Plot](#score-scatter-plot). Hovering over a trainee in any visualization will highlight them in the remaining visualizations.
 
 <p align="center">
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-dashboard.png">
@@ -106,27 +109,6 @@ This visualization is a view on available data distilled from the "Progress of T
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-score-progress.png">
 </p>
 
-
-##### Reference graph
-
-This graph visualizes the sample (author) solution of the training. There are three types of nodes in this graph:
-
-  * **Mandatory node**: represents states that have to be reached during the training.
-  * **Optional node**: represents states that do not have to be reached during the training but reaching them can lead to a successful level solution. For instance, a help switch of a particular tool can create this node.
-  * **Possible node**: used to visualize different routes that can lead to a successful level solution. Reaching one of these nodes is enough to get the level solution successfully.
-
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-reference-graph.png">
-</p>
-
-##### Summary Graph
-
-This graph provides aggregated view of results for all trainees. The core of the graph is formed by the above-mentioned reference graph, which is extended by additional information that shows which trainee has reached specific nodes. Moreover, the error nodes represent states from which it is impossible to reach a solution.
-
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-summary-graph.png">
-</p>
-
 #### Assessment
 Displays statistics of individual assessment answers.
  
@@ -136,7 +118,7 @@ Displays statistics of individual assessment answers.
 
 #### Aggregated Dashboard
 
-This dashboard provides overview over 4 different visualizations. All of these present data from selected training instances which share **same** [Training Definition](../../../user-guide-advanced/trainings/trainings-overview/#training-definition). Data from selected training instances are aggregated and presented in visualizations below. 
+This dashboard provides overview over 4 different visualizations. All of these present data from selected training instances which share **same** [Training Definition](../../../user-guide-advanced/trainings/trainings-overview.md#training-definition). Data from selected training instances are aggregated and presented in visualizations below. 
 
 <p align="center">
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-aggregated-dashboard.png">
@@ -232,15 +214,6 @@ The x-axis captures important game events that are interpreted as either a succe
 
 For clarity, some events (points on the curves) are aggregated. When you hover over an event, details are displayed. A solid curve indicates that some sandbox commands were used between game events. Hovering the mouse over a curve will display a list of them. A dashed curve indicates that no commands were recorded between events.
 
-#### Trainee Graph
-
-This graph visualizes the progress of the selected trainee in training. The difference from the reference graph is that this graph distinguishes edges by nodes they are connected to. Reverse edges are dashed and have a color of the node from which they are going out. All levels in this graph are divided into square boxes, always connected by an edge. It is done because the trainee can display the solution of a level without actually entering any commands. Using boxes connected with edges guarantees continuity of trainee path.
-
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-trainee-graph.png">
-</p>
-
-
 #### Command Analysis
 
 This visualization provides an analysis of commands for a selected trainee. Commands are divided by their correctness (**correct**, **wrong**) which can be changed with a slide toggle button at the top left side of the panel tab. Each command record contains the following detailed information:
@@ -264,8 +237,8 @@ Analysis of the wrong commands specifies the error type of the command. These er
 
 ## For trainees
 
-After trainees finish a training run, a set of visualizations of their behavior is displayed in tabs. The number of tabs depends on whether the reference solution was provided. Tab Score Development contains [Score Development](#score-development), [Score Scatter Plot](#score-scatter-plot), and table of other trainees. Since the trainees should decode all information easily without further guidance, the interface is straightforward.
-Furthermore, if the reference solution was provided for training levels of the training definition, the following tabs are displayed: [Command Analysis](#command-analysis), [Command Timeline](#command-timeline), [Reference Graph](#reference-graph), [Trainee Graph](#trainee-graph).
+After trainees finish a training run, a set of visualizations of their behavior is displayed in tabs. Tab Score Development contains [Score Development](#score-development), [Score Scatter Plot](#score-scatter-plot), and table of other trainees. Since the trainees should decode all information easily without further guidance, the interface is straightforward.
+Furthermore, if there any commands collected, the following tabs are displayed: [Command Analysis](#command-analysis), [Command Timeline](#command-timeline).
 <p align="center">
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TR-results.png">
 </p>

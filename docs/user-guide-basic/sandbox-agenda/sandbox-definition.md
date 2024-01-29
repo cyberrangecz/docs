@@ -21,7 +21,7 @@ Instructor can click on the title of each sandbox definition to redirect to the 
 A new sandbox definition can be added by clicking on the ![create-button](../../img/buttons/create-button.png) button that redirects the instructor to the [Create Sandbox Definition](#create-sandbox-definition) page.
 
 ## Create Sandbox Definition
-Before creating a sandbox, the sandbox's topology and user configuration of the machines in the sandbox needs to be described by the [sandbox definition](../../../user-guide-advanced/sandboxes/sandbox-definition/). It contains all information needed to create a sandbox instance in a cloud. In the current version, the sandbox definition is created outside the KYPO platform and then stored as a Git repository.
+Before creating a sandbox, the sandbox's topology and user configuration of the machines in the sandbox needs to be described by the [sandbox definition](../../user-guide-advanced/sandboxes/sandbox-definition.md). It contains all information needed to create a sandbox instance in a cloud. In the current version, the sandbox definition is created outside the KYPO platform and then stored as a Git repository.
 
 The page in the KYPO portal contains only one panel with two required fields: 
 
