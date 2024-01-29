@@ -10,7 +10,7 @@ As an instructor, you can see the ongoing course of the training runs and furthe
 
 #### Progress
 
-The interface consists of several sections for interaction with the visualization. Each section (**A** to **D**, see the figure below) is further described in detail.
+The interface consists of several sections for interaction with the visualization. Each section (see the figure below) is further described.
 
 <p align="center">
   <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-progress.png">
@@ -19,23 +19,27 @@ The interface consists of several sections for interaction with the visualizatio
 !!! info
     In the visualization, exclamation marks (![exclamation_mark](../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/exclamation.png)) can appear next to trainees or level tiles. They indicate a situation that may need further attention - upon a mouse-over, textual information appears. On a mouse click on the mark, it fades to signal that the issue is being solved and needs to be highlighted.
 
-**A - Overview Timeline**
+**Settings**
+
+Serves for automatic or semiautomatic restriction of the full visible timeline -- in case the user needs just a portion of the full progress, these settings can help observe it more efficiently. 
+
+**Timeline Allocation**
 
 The time displayed in the upper right corner indicates the estimated end of the session based on the current progression. A small arrow ![arrow](../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/arrow.png) denotes the originally scheduled end time to show the deviation from the schedule. On hover, the exact scheduled end time shows. As the training session progresses, the timeline fills accordingly.
 
-**B - Trainee Selection**
+**Trainee Selection**
 
-All trainees (their avatars and/or names) are listed here. Each trainee can be selected or deselected upon mouse click to show/hide their training progression in the visualization below. The mouse hovering on a visible trainee runs in the visualization highlights. 
+All trainees (their avatars and/or names) are listed in the circles. Each trainee can be selected or deselected upon mouse click to show/hide their training progression in the visualization below. The mouse hovering on a visible trainee runs in the visualization highlights. 
 
 [//]: <> (Above the grid is a text summary with the number of all trainees and the number of those currently displayed in the visualization. On click on the corresponding text on the right, all trainees show or hide accordingly.)
 
-**C - Level Selection**
+**Level Selection**
 
-These tiles represent individual training levels. Each level tile also holds information regarding the number of trainees who currently solve the level. The level name and correct answer are shown in a tooltip on hover. Additionally, the last tile displays all trainees who have already finished the whole training session. For each level, you can display its trainees on click.
+Tiles that represent individual training levels. Each level tile also holds information regarding the number of trainees who currently solve the level. The level name and correct answer are shown in a tooltip on hover. Additionally, the last tile displays all trainees who have already finished the whole training session. For each level, you can display its trainees on click.
 
-**D - Progress Visualization**
+**Progress Visualization**
 
-It gives a full picture of the trainee's walkthrough. Upon filtering in the preceding sections, selected trainees are displayed here. 
+It gives a full picture of the trainee's walkthrough. Upon filtering in the preceding sections, the selected trainees are displayed here. 
 
 Each row represents an individual trainee. Bars of each row are training levels - gray levels are finished levels, current levels are colored green/yellow/red, according to their delay as opposed to the scheduled amount of time. The stripped bars denote the scheduled time for the ongoing or upcoming levels.
 
