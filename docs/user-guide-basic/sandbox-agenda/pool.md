@@ -18,7 +18,7 @@ Instructors can click on the title of each pool to see a more [detailed view](#p
 
 
 ??? allocate-all "Allocate"
-    Click the button to start allocating missing sandboxes.
+    Click the button to start allocating sandboxes.
 
     !!! info 
         More about allocation in the [pool detail](#pool-detail) section. 
@@ -61,15 +61,13 @@ When the instructor clicks the title of a given pool in **Pool Overview** they w
 
 In the top right corner, there are control buttons:
 
- * ![allocate-button](../../img/buttons/allocate-some-button.png) opens up a dialog window for allocating the missing sandboxes in the pool.
-    
-    
-    In this window, you get the option to specify the amount of sandboxes you wish to allocate. 
+ * ![allocate-button](../../img/buttons/allocate-some-button.png) If there is one last unallocated sandbox, it automatically run its allocation. Otherwise, it opens up a dialog window for selecting a specific number of sandboxes in the pool for allocation.
+    <br/>In the following window, you get to specify the amount of sandboxes you wish to allocate. 
 
     ![allocation-dialog](../../img/user-guide-basic/sandbox-agenda/pool/allocation-dialog.png)
 
     
-    After choosing your option either by typing in the field or setting the value with the slider, you can confirm your choice by clicking **allocate**, and the allocation starts.
+    After choosing the desired amount either by typing in the field or setting the value with the slider, confirm your choice by clicking **Allocate**.
 
 
  * ![delete-dropdown-button](../../img/buttons/delete-dropdown-button.png) drops down following choices for deleting sandboxes:
