@@ -66,6 +66,10 @@ So far the cheating detection supports these methods:
 
     Occurs when a trainee solves a level without using any commands in a provided console, when the level specifically required it. The requirement for using commands is specified in the box 'are_commands_required' when creating a level in training definition.
 
+??? pencil "Forbidden Commands"
+
+    Occures when a trainee submits a command that was specified as 'forbidden' by the instructor. When ticking this checkbox, the instructor gets access to a new panel where he can setup which commands he wants to forbid. Each forbidden command consists of the command string and command console type. The console type can be either BASH or Metasploit.
+
 ## Detection Events of Cheating Detection
 
 <p align="center">
@@ -114,3 +118,8 @@ This page provides detailed information for a detection event and its participan
 #### Detection Event of type 'No Commands'
 
 No specific information added.
+
+#### Detection Event of type 'Forbidden Commands'
+
+**List of forbidden commands** - list of forbidden commands
+**Command timeline** - a timeline of commands that were submitted by the trainee in the training
