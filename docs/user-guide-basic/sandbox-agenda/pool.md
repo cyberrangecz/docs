@@ -1,21 +1,17 @@
 ## Pool Overview
 
-This page lists all sandbox pools that are accessible in the KYPO portal. In the following table, each row represents one pool: 
+This page lists all sandbox pools that are accessible in the KYPO portal and their available resources. In the following table, each row represents one pool: 
 
 ![pool-overview](../../img/user-guide-basic/sandbox-agenda/pool/pool-overview.png)
 
 Instructors can click on the title of each pool to see a more [detailed view](#pool-detail) of the given pool. The last column of this table contains actions :material-delete:{: .red .icon} &nbsp; :material-youtube-subscription:{: .blue .icon} &nbsp; :bootstrap-exposure-plus-1:{: .blue .icon} &nbsp; :bootstrap-clear-all:{: .red .icon} &nbsp; :material-key:{: .blue .icon} &nbsp; :material-lock:{: .blue .icon}/:material-lock-open-outline:{: .blue .icon} that can be executed on the given pool: 
 
-??? trash-can "Delete"
-    Click the button, and the following confirmation window will be opened:
 
-    ![delete-pool](../../img/user-guide-basic/sandbox-agenda/pool/delete-pool.png)
+??? pencil "Edit"
+    Click the button to edit pool information.
 
-    After confirming, the given pool will be deleted from the KYPO portal.
-
-    !!! warning
-        Pools that are **locked** or **not empty** cannot be deleted.
-
+    !!! info 
+        Information like pool size, comment or pool notifications can be edited through pool edit window. 
 
 ??? allocate-all "Allocate"
     Click the button to start allocating sandboxes.
@@ -27,17 +23,17 @@ Instructors can click on the title of each pool to see a more [detailed view](#p
     Click the button to start allocating one new sandbox.
 
     !!! info 
-        More about allocation in the [pool detail](#pool-detail).
+        More about allocation in the [pool detail](#pool-detail). 
 
-??? clear-all "Clear"
-    Click the button to delete all allocation requests and sandboxes from the given pool.
+??? trash-can "Delete"
+    Click the button, and the following confirmation window will be opened:
+
+    ![delete-pool](../../img/user-guide-basic/sandbox-agenda/pool/delete-pool.png)
+
+    After confirming, the given pool will be deleted from the KYPO portal.
 
     !!! warning
-        All sandboxes must be unlocked, and all allocation requests must be finished/stopped.   
-
-??? key "Get SSH Config"
-    Click the button to display a pop-up window to download the ZIP archive. The archive contains configuration with the **Management** SSH access to successfully built sandboxes. More about SSH access can be found [here](../../user-guide-advanced/sandboxes/sandbox-access.md).
-
+        Pools that are **locked** or **not empty** cannot be deleted.
 
 ??? lock "Lock"
     Click the button to change the state of the given pool from **unlocked** to **locked**. The lock symbolizes that pool is in use with some training instance.
@@ -47,14 +43,26 @@ Instructors can click on the title of each pool to see a more [detailed view](#p
 
  To create a new pool, click on the ![create-button](../../img/buttons/create-button.png) button. The instructor will be redirected to the page [Create Pool](#create-pool).
 
-
 ## Create Pool
-This page contains a short form that needs to be filled out before creating a new pool. The field **Sandbox Pool Size** specifies the maximal number of sandboxes that can be created inside the pool. The instructor must also select one of the available [sandbox definitions](./sandbox-definition.md) created by the instructor. Sandbox definitions define the topology of sandboxes and user configuration of virtual machines created in a sandbox. After filling out all the fields, confirm the creation of a new pool by clicking on the ![create-button](../../img/buttons/create-button.png) button. 
+This page contains a short form that needs to be filled out before creating a new pool. The field **Sandbox Pool Size** specifies the maximal number of sandboxes that can be created inside the pool. The instructor must also select one of the available [sandbox definitions](./sandbox-definition.md) created by the instructor. Sandbox definitions define the topology of sandboxes and user configuration of virtual machines created in a sandbox. Instructor is also able to add a comment to a pool for description purposes. Additionally, the instructor can check the notifications checkbox to receive e-mails on pool build progression. After filling out all the fields, confirm the creation of a new pool by clicking on the ![create-button](../../img/buttons/create-button.png) button. 
 
 The sandboxes built in the pool are always created from the same definition and the same revision. When the pool is created, it is tied to the current revision of the definition. If the definition revision has changed, e.g., new commit has been added to the specific branch, and you want to build sandboxes from a new revision, you need to make a new pool.
  
 ![create-pool](../../img/user-guide-basic/sandbox-agenda/pool/create-pool.png)
 
+## Resources Overview
+
+Resources Overview panel describes [statistics of OpenStack project utilization](#1-usage-statistics-of-cloud-server).
+
+### Usage Statistics of Cloud Server
+* **kypo-platform-testing**: the name of a used OpenStack project,
+* **Instances**: Created VMs in the OpenStack project,
+* **VCPUs**: Virtual CPUs currently in use by all instances,
+* **RAM**: The amount of the main memory currently in use by all instances.
+* **Ports**: The amount of the ports currently in use by all instances.
+* **Networks**: The amount of networks currently in use by all the instances.
+
+![usage-statistics](../../img/user-guide-basic/sandbox-agenda/resources/usage-stats.png)
 
 ## Pool Detail
 When the instructor clicks the title of a given pool in **Pool Overview** they will be redirected to the **Pool Detail** page, which contains panel addressing [sandbox instances](#sandbox-instances).
