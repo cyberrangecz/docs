@@ -4,11 +4,12 @@
 
 | Surname | Name | Role |
 | ------ | ------ | ------ |
-| Dočkalová Burská | Karolína | Team leader & Visualization R&D |
-| Krebs | Radovan | Python developer |
-| Majdan | Lukáš | Java & Angular developer |
-| Ošlejšek | Radek |  Visualisation R&D |
+| Krebs | Radovan | Python leader |
+| Majdan | Lukáš | Java & Angular leader |
+| Murár | Martin | Python developer |
+| Murín | Mário | Java & Angular developer |
 | Paluba | Juraj | Python developer |
+| Pretschner | Robert | Python developer |
 | Sapák | Tomáš | DevOps leader |
 
 ## Inactive Core Contributors
@@ -22,7 +23,9 @@
 | *Ignác* | *Igor* | *Angular leader* |
 | *Jaduš* | *Boris* | *Java developer* |
 | *Juhás* | *Martin* | *Java developer* |
+| *Dočkalová Burská* | *Karolína* | *Team leader & Visualization R&D* |
 | *Kočamba* | *Erik* | *Angular developer* |
+| *Ošlejšek* | *Radek* | *Visualisation R&D* |
 | *Pilár* | *Dominik* | *Java & Angular developer* |
 | *Rusňák* | *Vít* | *UI/UX R&D* |
 | *Staněk* | *Miloslav* | *Python developer* |
