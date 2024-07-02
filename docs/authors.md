@@ -4,7 +4,6 @@
 
 | Surname | Name | Role |
 | ------ | ------ | ------ |
-
 | Krebs | Radovan | Python leader |
 | Majdan | Lukáš | Java & Angular leader |
 | Murár | Martin | Python developer |
