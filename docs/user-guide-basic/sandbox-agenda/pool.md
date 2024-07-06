@@ -67,6 +67,8 @@ Resources Overview panel describes [statistics of OpenStack project utilization]
 ## Pool Detail
 When the instructor clicks the title of a given pool in **Pool Overview** they will be redirected to the **Pool Detail** page, which contains panel addressing [sandbox instances](#sandbox-instances).
 
+![pool-detail](../../img/user-guide-basic/sandbox-agenda/pool/pool-detail.png)
+
 In the top right corner, there are control buttons:
 
  * ![allocate-button](../../img/buttons/allocate-some-button.png) If there is one last unallocated sandbox, it automatically run its allocation. Otherwise, it opens up a dialog window for selecting a specific number of sandboxes in the pool for allocation.
@@ -74,17 +76,15 @@ In the top right corner, there are control buttons:
 
     ![allocation-dialog](../../img/user-guide-basic/sandbox-agenda/pool/allocation-dialog.png)
 
-    
     After choosing the desired amount either by typing in the field or setting the value with the slider, confirm your choice by clicking **Allocate**.
+
 
 
  * ![delete-dropdown-button](../../img/buttons/delete-dropdown-button.png) drops down following choices for deleting sandboxes:
 
- * ![delete-all-button](../../img/buttons/delete-all-button.png) **Delete All** - force delete all sandbox instances.
- * ![delete-failed-button](../../img/buttons/delete-failed-button.png) **Delete Failed** - delete sandboxes with failed stage.
- * ![delete-unlocked-button](../../img/buttons/delete-unlocked-button.png) **Delete Unlocked** - delete all unlocked sandbox instances.
-
-![pool-detail](../../img/user-guide-basic/sandbox-agenda/pool/pool-detail.png)
+    * ![delete-all-button](../../img/buttons/delete-all-button.png) **Delete All** - force delete all sandbox instances.
+    * ![delete-failed-button](../../img/buttons/delete-failed-button.png) **Delete Failed** - delete sandboxes with failed stage.
+    * ![delete-unlocked-button](../../img/buttons/delete-unlocked-button.png) **Delete Unlocked** - delete all unlocked sandbox instances.
 
 ### Sandbox Instances
 
