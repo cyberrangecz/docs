@@ -17,7 +17,7 @@ Access to KYPO Portal depends a lot on the role you hold as a user. There are th
 * **[Trainees](#trainees-view):** Everybody who has access to the KYPO Portal and is interested in participating in the training can perform actions inside of the [linear](training-agenda/training-run/linear-training-run.md) or [adaptive](training-agenda/training-run/adaptive-training-run.md) Training run.
 * **[Instructors](#instructors-view):** Users who are responsible for preparing and creating trainings and corresponding sandboxes can access the following pages: 
     * [Linear Training definitions](training-agenda/training-definition/linear-training-definition.md), [Adaptive Training definitions](training-agenda/training-definition/adaptive-training-definition.md) and [Training instances](training-agenda/training-instance.md) for overview and management of trainings. 
-    * [Sandbox definitions](sandbox-agenda/sandbox-definition.md) and [Pools](sandbox-agenda/pool.md) needed for management of sandboxes, and [Resources](sandbox-agenda/resources.md) for cloud resources overview.
+    * [Sandbox definitions](sandbox-agenda/sandbox-definition.md) and [Pools](sandbox-agenda/pool.md) needed for management of sandboxes, and [Images](sandbox-agenda/images.md) to view available OS images.
 * **[Administrators](#administrators-view):** Users who are responsible for managing the whole KYPO CRP instance. They have access to every above-mentioned page in the KYPO Portal. Moreover, they can also have the right to manage entities like users, groups, and microservices in [Administration Agenda](administration-agenda/administration-agenda-overview.md). 
 
 !!! note
