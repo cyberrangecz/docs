@@ -35,7 +35,7 @@ All trainees (their avatars and/or names) are listed in the circles. Each traine
 
 **Level Selection**
 
-Tiles that represent individual training levels. Each level tile also holds information regarding the number of trainees who currently solve the level. The level name and correct answer are shown in a tooltip on hover. Additionally, the last tile displays all trainees who have already finished the whole training session. For each level, you can display its trainees on click.
+Tiles that represent individual training levels. Each level tile also holds information regarding the number of trainees who currently solve the level. The level type and correct answer are shown in a tooltip on hover. Additionally, the last tile displays all trainees who have already finished the whole training session. For each level, you can display its trainees on click.
 
 **Progress Visualization**
 
