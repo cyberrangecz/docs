@@ -1,18 +1,5 @@
-## Resources Overview
+## Images Overview
 
-Resources Overview consists of panels describing [statistics of OpenStack project utilization](#1-usage-statistics-of-cloud-server) and [overview of available images](#2-overview-of-images).
-
-### 1. Usage Statistics of Cloud Server
-* **kypo-platform-testing**: the name of a used OpenStack project,
-* **Instances**: Created VMs in the OpenStack project,
-* **VCPUs**: Virtual CPUs currently in use by all instances,
-* **RAM**: The amount of the main memory currently in use by all instances.
-* **Ports**: The amount of the ports currently in use by all instances.
-* **Networks**: The amount of networks currently in use by all the instances.
-
-![usage-statistics](../../img/user-guide-basic/sandbox-agenda/resources/usage-stats.png)
-
-### 2. Overview of Images
 Provides a list of available images that can be installed on virtual machines. Each row contains the following values of image parameters:
 
 * **Name**: The unique name of the image.
