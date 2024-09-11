@@ -45,7 +45,7 @@ Regardless of the instance type, on the page, the instructor can do the followin
         * description of the training instance,
         * folder `training_runs` with base information about all training runs,
         * folder `training_events` with the recorded events of individual training runs,
-        * folder `command_histories` with the user actions of individual training runs.
+        * folder `logs` with the user actions of individual training runs.
 
     ??? key "Get SSH Configs"
     
