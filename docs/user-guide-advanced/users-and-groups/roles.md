@@ -5,7 +5,7 @@ All roles are imported into the KYPO portal by registering a [microservice](../.
 In the KYPO CRP context, we are using three abstract roles that are not part of any microservice. We have experienced that most of the users require the functionalities that are privileges of the specific set of [microservice roles](#microservice-roles). Each abstract role is composed of several roles of microservices that must be assigned to users by an administrator.
 
 ### Trainee
-Each user who can log into the KYPO CRP automatically acquires this role. It is composed of the default roles of each microservice. For now, these roles are: ``ROLE_TRAINING_TRAINEE``, ``ROLE_ADAPTIVE_TRAINING_TRAINEE``, ``ROLE_USER_AND_GROUP_GUEST``, and ``ROLE_KYPO-SANDBOX-SERVICE_TRAINEE``.
+Each user who can log into the KYPO CRP automatically acquires this role. It is composed of the default roles of each microservice. For now, these roles are: ``ROLE_TRAINING_TRAINEE``, ``ROLE_ADAPTIVE_TRAINING_TRAINEE``, ``ROLE_USER_AND_GROUP_TRAINEE``, and ``ROLE_KYPO-SANDBOX-SERVICE_TRAINEE``.
 
 ### Instructor
 The user who is responsible for creating exercises for trainees and for their management is called the instructor. Each instructor should have access to sandbox definitions, pools, cloud resources, training definitions, and training instances. Because of that, the instructor must have assigned the following roles: ``ROLE_TRAINING_ORGANIZER``, ``ROLE_TRAINING_DESIGNER``, ``ROLE_ADAPTIVE_TRAINING_ORGANIZER``, ``ROLE_ADAPTIVE_TRAINING_DESIGNER``, ``ROLE_KYPO-SANDBOX-SERVICE_ORGANIZER``, and ``ROLE_KYPO-SANDBOX-SERVICE_DESIGNER``. The role of the trainee is assigned by default. 
@@ -35,9 +35,9 @@ Current roles that are used in the KYPO portal can be divided into categories ([
 
 ### User and Group Roles
 
-``ROLE_USER_AND_GROUP_GUEST``: **Guests** can only see information about themselves and basic information about other users. It is the default role for every user of the KYPO platform.
+``ROLE_USER_AND_GROUP_TRAINEE``: **Trainees** can only see information about themselves and anonymized information about other users. It is the default role for every user of the KYPO platform.
 
-``ROLE_USER_AND_GROUP_USER``: **Users** have at this moment the same access rights as the previous role **guest**.
+``ROLE_USER_AND_GROUP_POWER_USER``: **Power users** can view all information about users. This is essential for the management of trainees, designers, and organizers in the training agenda.
 
 ``ROLE_USER_AND_GROUP_ADMINISTRATOR``: **Administrators** can fully access and manage users, groups, and microservices in the user and group agenda.
 
