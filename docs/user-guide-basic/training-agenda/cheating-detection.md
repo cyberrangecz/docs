@@ -1,7 +1,7 @@
 This page details the use of cheating detection methods and interpretation of detected results on linear training instance. Detection methods can be easily and freely used on any training instance of linear training definition, however, to fully understand the relevancy and applicability of each detection method, read the whole documentation.
 
 ## Cheating Detection Overview
-To access the main page for cheating detections on a training instance click the ![cheating-detection](../../img/user-guide-basic/training-agenda/cheating-detection/cheating-detection.png) button in training instance overview. 
+To access the main page for cheating detections on a training instance click the ![cheating-detection](../../img/user-guide-basic/training-agenda/cheating-detection/cheating-detection.png) button in training instance overview.
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/cheating-detection/cheating-detection-overview.png">
@@ -52,15 +52,15 @@ So far the cheating detection supports these methods:
 
 ??? pencil "Location Similarity"
 
-    Occurs when two or more trainees submit the answer to a level from the same domain. This detection is relevant for trainings where all participants are expected to have different domains (excludes trainings where all trainees are connected to KYPO from the same IP network).
+    Occurs when two or more trainees submit the answer to a level from the same domain. This detection is relevant for trainings where all participants are expected to have different domains (excludes trainings where all trainees are connected to CyberRangeCZ Platform from the same IP network).
 
 ??? pencil "Time Proximity"
 
-    Occurs when two or more trainees submit a correct answer for a level in a short time window. This time window can be specified in a label 'proximity threshold' in seconds, with default value being two minutes. This detection is relevant for trainings that span a longer time period (for example two weeks), but is irrelevant for a short term training (one hour exam).  
+    Occurs when two or more trainees submit a correct answer for a level in a short time window. This time window can be specified in a label 'proximity threshold' in seconds, with default value being two minutes. This detection is relevant for trainings that span a longer time period (for example two weeks), but is irrelevant for a short term training (one hour exam).
 
 ??? pencil "Minimal Solve Time"
 
-    Occurs when a trainee solves a level in a shorter time that is the specified minimal possible solve time for the level. For this detection to be relevant, minimal solving time must be reasonably specified when creating a level in training definition. Too much time will result in many false negatives while too little time in false positives. This detection might not prove someone cheated right away, but can be a great supplement for all the detection methods described above. 
+    Occurs when a trainee solves a level in a shorter time that is the specified minimal possible solve time for the level. For this detection to be relevant, minimal solving time must be reasonably specified when creating a level in training definition. Too much time will result in many false negatives while too little time in false positives. This detection might not prove someone cheated right away, but can be a great supplement for all the detection methods described above.
 
 ??? pencil "No Commands"
 
@@ -104,15 +104,15 @@ This page provides detailed information for a detection event and its participan
 #### Detection Event of type 'Location Similarity'
 
 **Domain name** - name of the domain service that was shared by all participants of the event.
-**Is address of deployment** - Boolean value that specifies if the domain is the same as the domain name where KYPO is deployed.
+**Is address of deployment** - Boolean value that specifies if the domain is the same as the domain name where CyberRangeCZ Platform is deployed.
 
 #### Detection Event of type 'Time Proximity'
 
-**Proximity threshold** - specified time window (in seconds), in which two submissions from distinct players on the same level are flagged.  
+**Proximity threshold** - specified time window (in seconds), in which two submissions from distinct players on the same level are flagged.
 
 #### Detection Event of type 'Minimal Solve Time'
 
-**Minimal solve time** - minimum time to solve level (specified in training definition). 
+**Minimal solve time** - minimum time to solve level (specified in training definition).
 **Solved in time** - time it took for the player to solve the level.
 
 #### Detection Event of type 'No Commands'

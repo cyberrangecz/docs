@@ -22,12 +22,12 @@ In the training run, trainees will go through predesigned levels. There is a bar
 
 ![level-bar](../../../img/user-guide-basic/training-agenda/training-run/TR-level-bar.png)
 
-### 1. Assessment Level 
-At the assessment level, a trainee must answer the different types of questions. Assessment can be a questionnaire or test. If it is a test, the trainee should try his best to get the best score because questions are scored. Some of the questions can be required and must be answered to proceed to the next level. 
+### 1. Assessment Level
+At the assessment level, a trainee must answer the different types of questions. Assessment can be a questionnaire or test. If it is a test, the trainee should try his best to get the best score because questions are scored. Some of the questions can be required and must be answered to proceed to the next level.
 
-There are three types of questions: 
+There are three types of questions:
 
-* **Free Form Question (FFQ)**: Trainees are asked to provide the text answer to the predefined field. 
+* **Free Form Question (FFQ)**: Trainees are asked to provide the text answer to the predefined field.
 * **Multiple Choice Questions (MCQ)**: Trainees are asked to select only correct answers from the choices offered as a list.
 * **Extended matching item (EMI)**: Trainees are asked to pair rows and columns.
 
@@ -49,7 +49,7 @@ The access level provides information to trainees on how to access cloud or loca
   <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-access.png">
 </p>
 
-### 4. Training Level 
+### 4. Training Level
 The trainee must complete the assignment specified on the page's left side at the training level. On the right side, the sandbox topology supplemented by legend is displayed. The layout of the topology can be changed with the controls panel (see the following figure):
 
 <p align="center">
@@ -90,22 +90,17 @@ Right-click on the selected network node (host or router), the following menu wi
 
 * **Open console (deprecated)**: Connect to the web console of the particular network node using SPICE protocol. The feature is provided by OpenStack cloud, and console types may vary. When you connect to the SPICE client, you will see the following console in a new browser tab.
 !!! warning
-    In the case of local sandboxes, only the last option **Copy host info to clipboard** is available in the menu. 
+    In the case of local sandboxes, only the last option **Copy host info to clipboard** is available in the menu.
 
 <p align="center">
     <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-spice.png">
 </p>
 
-<video width="100%" height="auto" controls>
-    <source src="../../../../img/user-guide-basic/training-agenda/training-run/how-to-connect-to-spice.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-
 !!! info
     To scroll console output up, use Shift + Page Up, and to scroll it down, use Shift + Page Down.
 
 
-* **Open GUI**: Connect to the particular network node's Graphical User Interface (GUI) using the Apache Guacamole. This option might not be visible if the VM does not have GUI configured. When you connect to the Spice client, you will see the following console in a new browser tab. 
+* **Open GUI**: Connect to the particular network node's Graphical User Interface (GUI) using the Apache Guacamole. This option might not be visible if the VM does not have GUI configured. When you connect to the Spice client, you will see the following console in a new browser tab.
 
     <p align="center">
         <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-guacamole-gui.png">
@@ -121,12 +116,12 @@ Right-click on the selected network node (host or router), the following menu wi
     </p>
 
 #### Hints
-If the trainee gets stuck and does not know how to proceed with the task they can use one or more of the provided hints situated inside the control panel at the bottom of the page. Clicking the ![hint-button](../../../img/buttons/hint-button.png) button opens the following confirmation window: 
+If the trainee gets stuck and does not know how to proceed with the task they can use one or more of the provided hints situated inside the control panel at the bottom of the page. Clicking the ![hint-button](../../../img/buttons/hint-button.png) button opens the following confirmation window:
 <p align="center">
    <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-reveal-hint.png">
 </p>
 
-The message inside the window contains the name of the hint, which should tell the trainee if it will help them or not. The message also includes the number of points lost if the trainee reveals the hint. 
+The message inside the window contains the name of the hint, which should tell the trainee if it will help them or not. The message also includes the number of points lost if the trainee reveals the hint.
 
 #### Solution
 If hints are not enough, the trainee can reveal the solution by clicking the ![solution-button](../../../img/buttons/solution-button.png). Solution reveal will cost the trainee all of the points that could be awarded at the given level.

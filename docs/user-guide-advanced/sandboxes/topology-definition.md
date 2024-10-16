@@ -1,6 +1,3 @@
-!!! note
-    **Cyber Sandbox Creator** has own [wiki page](https://gitlab.ics.muni.cz/muni-kypo-csc/cyber-sandbox-creator/-/wikis/3.0/Sandbox-Definitions#definitions-file-structure) describing the structure and attributes of topology definition files.
-
 Topology Definition is used for the description of [Topology Instance](topology-instance.md). See the following image to help you visualize what you can define in the topology definition.
 
 ![topology-definition-color](../../img/user-guide-advanced/sandboxes/topology-definition-color.png)
@@ -102,12 +99,11 @@ The table below contains some examples of possible base_box options.
 
 | image                | user    |
 |----------------------|---------|
-| centos-7.9           | centos  |
+| centos-8             | centos  |
 | cirros-0-x86_64      | cirros  |
-| debian-9-x86_64      | debian  |
-| debian-10-x86_64     | debian  |
+| debian-12-x86_64     | debian  |
 | kali-2020.4          | debian  |
-| ubuntu-bionic-x86_64 | ubuntu  |
+| ubuntu-noble-x86_64  | ubuntu  |
 | windows-10           | windows |
 | windows-server-2019  | windows |
 
@@ -115,35 +111,26 @@ The table below contains some examples of possible base_box options.
     The actual base_box options may differ from the contents of this table. Before using an image, check that it is present in the list of OpenStack images ([How to list OpenStack images](../../installation-guide/installation-guide-overview.md#configuration))
 
 !!! note
-    To create and deploy a custom image, follow this [tutorial](https://gitlab.ics.muni.cz/muni-kypo-images/image-template/-/blob/master/README.md).
-
-!!! note
-    It is strongly recommended to use the `debian-10`, `debian-10-x86_64` or `debian-9-x86_64` images for routers.
+    It is strongly recommended to use the `debian-12-x86_64` or `ubuntu-noble-x86_64` images for routers.
 
 
 ### Flavor
 
 Flavor defines virtual machine hardware parameters (VCPUs, RAM, Disk size).
 
-To use the examples of sandbox definitions, the flavors displayed in the table must be present in your OpenStack. Either you are using CSIRT-MU/KYPO OpenStack projects where all flavors are already created, or you need to create these flavors in your own OpenStack.
+The following flavors can be deployed using the CyberRangeCZ Platform deployment tools.
 
 !!! warning
     In the case of using a public cloud provider (flavors cannot be created without admin rights), the flavors in the topology definition must be replaced by the available flavors of that provider.
 
 [How to list OpenStack flavors](../../installation-guide/installation-guide-overview.md#configuration)
 
-| flavor             | vCPU | RAM (GB) | disk size (GB) |
-|--------------------|------|----------|----------------|
-| csirtmu.tiny1x2    | 1    | 2        | 20             |
-| csirtmu.tiny1x4    | 1    | 4        | 20             |
-| csirtmu.small2x4   | 2    | 4        | 40             |
-| csirtmu.small2x8   | 2    | 8        | 40             |
-| csirtmu.medium4x8  | 4    | 8        | 40             |
-| csirtmu.medium4x16 | 4    | 16       | 40             |
-| csirtmu.large8x16  | 8    | 16       | 80             |
-| csirtmu.large8x32  | 8    | 32       | 80             |
-| csirtmu.jumbo16x32 | 16   | 32       | 100            |
-| csirtmu.jumbo16x64 | 16   | 64       | 100            |
+| flavor          | vCPU | RAM (GB) | disk size (GB) |
+|-----------------|------|----------|----------------|
+| standard.small  | 1    | 2        | 80             |
+| standard.medium | 1    | 4        | 80             |
+| standard.large  | 2    | 16       | 80             |
+
 
 ## Restrictions
 
@@ -160,15 +147,13 @@ Names of hosts, networks, and routers should be unique in the context of a Topol
 Networks, including wan, should be disjunct (not overlapping), and in `network_mappings` and `router_mappings` IP address should be from the IP address range of the network. Otherwise, networking wouldn't work.
 Networks, including wan, shouldn't overlap with [management network's](topology-instance.md#topology-instance-management) CIDR either.
 
-[How to set CIDRs of management networks](https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo-crp-deployment/-/tree/master/provisioning/roles/kypo-crp-head/templates/configuration/sandbox-service/kypo-sandbox-service-config.yml).
-
 ### Address Restriction
 
 During a network creation, the OpenStack will take the first IP address of the specified IP address range for a gateway (a Router), the second IP address for DHCP, and the rest for hosts. The OpenStack will non-deterministically take the first address of the network or the first address after a gateway (a Router) address, and if any of net_mappings has an IP address set to one of these addresses, sandbox creation may fail.
 
 ### Group Restriction
 
-KYPO sandbox service does not allow the redefinition of its [default hosts groups](sandbox-provisioning.md#ansible-host-groups). Thus, the Topology Definition in which these groups are defined is invalid.
+Sandbox service does not allow the redefinition of its [default hosts groups](sandbox-provisioning.md#ansible-host-groups). Thus, the Topology Definition in which these groups are defined is invalid.
 
 *[VM]: Virtual machine
 *[BR]: Border router
@@ -188,9 +173,9 @@ name: small-sandbox
 hosts:
   - name: server
     base_box:
-      image: debian-9-x86_64
+      image: debian-12-x86_64
       mgmt_user: debian
-    flavor: csirtmu.tiny1x2
+    flavor: standard.small
     hidden: True
     volumes:
       - size: 16
@@ -202,20 +187,20 @@ hosts:
       image: windows-10-0.2.0
       mgmt_user: windows
       mgmt_protocol: wirm
-    flavor: csirtmu.tiny1x2
+    flavor: standard.small
 
 routers:
   - name: server-router
     base_box:
-      image: debian-9-x86_64
+      image: debian-12-x86_64
       mgmt_user: debian
-    flavor: csirtmu.tiny1x2
+    flavor: standard.small
 
   - name: home-router
     base_box:
-      image: debian-9-x86_64
+      image: debian-12-x86_64
       mgmt_user: debian
-    flavor: csirtmu.tiny1x2
+    flavor: standard.small
 
 wan:
   name: internet-connection

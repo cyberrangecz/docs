@@ -11,7 +11,7 @@ Provides a list of available images that can be installed on virtual machines. E
 !!! note
     Don't get confused by the **Gb** in the name of column **Size**. The value is in gigabytes, not gigabits.
 
-Click extend button :material-chevron-down:{: .icon .grey} to show **detailed information** about the image: 
+Click extend button :material-chevron-down:{: .icon .grey} to show **detailed information** about the image:
 
 * **OS Distro**: Common name of operating system distribution.
 * **OS Type**: Linux or windows.
@@ -24,7 +24,7 @@ Click extend button :material-chevron-down:{: .icon .grey} to show **detailed in
 * **Tags**: Used to filter images.
 * **Version**: Specifies the version of the image.
 
-Checkbox **Only KYPO images** allows filtering of images that are created by the KYPO team.
+Checkbox **Only CRCZP images** allows filtering of images that are created by the CyberRangeCZ Platform team.
 
 Checkbox **Only GUI access** allows filtering of images that have graphical user interface installed for the image.
 

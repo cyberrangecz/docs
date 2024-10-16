@@ -12,7 +12,7 @@ see Ansible documentation on [playbooks](https://docs.ansible.com/ansible/latest
 
 ### Minimal Ansible Playbook
 
-The KYPO requires Sandbox Provisioning, but if you do not need any provisioning, you can use a dummy `playbook.yml` file containing only the following line.
+The CyberRangeCZ Platform requires Sandbox Provisioning, but if you do not need any provisioning, you can use a dummy `playbook.yml` file containing only the following line.
 
 ```yaml
 - hosts: all
@@ -20,7 +20,7 @@ The KYPO requires Sandbox Provisioning, but if you do not need any provisioning,
 
 ### Ansible Host Groups
 
-On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#default-groups), the KYPO sandbox-service defines seven more default host groups.
+On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#default-groups), the sandbox-service defines seven more default host groups.
 
 * **management**: the group containing the [sandbox management node](topology-instance.md#topology-instance-management), i.e., MAN node.
 * **routers**: the group containing all the routers defined in [Topology definition](topology-definition.md#routers).
@@ -34,21 +34,21 @@ You can specify additional Ansible host groups in [Topology definition](topology
 
 ### Ansible Special Variables
 
-On top of [Ansible special variables](https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html), the KYPO sandbox-service defines more special variables.
+On top of [Ansible special variables](https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html), the sandbox-service defines more special variables.
 
-* **kypo_global_openstack_stack_id**: the ID of sandbox representation in OpenStack cloud.
-* **kypo_global_pool_id**: the ID of the pool for which the sandbox was created.
-* **kypo_global_sandbox_id**: the UUID of the sandbox.
-* **kypo_global_sandbox_allocation_unit_id**: the ID of the sandbox allocation unit. It is **not** the same as the sandbox UUID.
-* **kypo_global_sandbox_ip**: the sandbox IPv4 address.
-* **kypo_global_sandbox_name**: the sandbox name, which is the compound of [stack_name_prefix](https://gitlab.ics.muni.cz/muni-kypo-crp/devops/kypo-crp-deployment/-/blob/master/extra-vars.yml), pool ID and sandbox allocation unit ID.
-* **kypo_global_head_ip**: the KYPO head server IP address.
-* **kypo_global_ssh_public_user_key**: the path on Ansible controller to SSH public user key (Since 21.04).
-* **kypo_global_ssh_public_mgmt_key**: the path on Ansible controller to SSH public management key (Since 21.04).
+* **global_openstack_stack_id**: the ID of sandbox representation in OpenStack cloud.
+* **global_pool_id**: the ID of the pool for which the sandbox was created.
+* **global_sandbox_id**: the UUID of the sandbox.
+* **global_sandbox_allocation_unit_id**: the ID of the sandbox allocation unit. It is **not** the same as the sandbox UUID.
+* **global_sandbox_ip**: the sandbox IPv4 address.
+* **global_sandbox_name**: the sandbox name, which is the compound of [stackNamePrefix](https://github.com/cyberrangecz/devops-tf-deployment/blob/master/tf-head-services/values.yaml#L24), pool ID and sandbox allocation unit ID.
+* **global_head_ip**: the CyberRangeCZ Platform IP address or FQDN.
+* **global_ssh_public_user_key**: the path on Ansible controller to SSH public user key (Since 21.04).
+* **global_ssh_public_mgmt_key**: the path on Ansible controller to SSH public management key (Since 21.04).
 
 ### Ansible Inventory
 
-For each sandbox, the KYPO sandbox-service generates an `inventory.yml` file. It adds some networking data to it, which you might find useful in your Sandbox Provisioning.
+For each sandbox, the sandbox-service generates an `inventory.yml` file. It adds some networking data to it, which you might find useful in your Sandbox Provisioning.
 
 Example of inventory file for [small-sandbox](topology-definition.md#example) defined in [Topology definition](topology-definition.md) example.
 
@@ -68,7 +68,7 @@ all:
         routes: []
       ip_forward: true
       user_network_ip: 10.10.30.1
-    kypo-proxy-jump:
+    proxy-jump:
       ansible_host: jump-host-ip
       ansible_user: debian
       user_access_mgmt_name: pool-prefix
@@ -76,7 +76,7 @@ all:
       user_access_user_name: stack-name
     man:
       ansible_host: 10.10.10.10
-      ansible_user: kypo-man
+      ansible_user: man
       interfaces:
       - def_gw_ip: ''
         mac: 00:00:00:00:00:02
@@ -140,12 +140,12 @@ all:
         ansible_psrp_certificate_pem: /root/.ssh/pool_mng_cert
         ansible_psrp_proxy: socks5://localhost:12345
   vars:
-    kypo_global_head_ip: 0.0.0.0
-    kypo_global_openstack_stack_id: heatstack-stack-id
-    kypo_global_pool_id: 1
-    kypo_global_sandbox_allocation_unit_id: 1
-    kypo_global_sandbox_ip: 10.10.10.10
-    kypo_global_sandbox_name: stack-name
-    kypo_global_ssh_public_mgmt_key: /root/.ssh/pool_mng_key.pub
-    kypo_global_ssh_public_user_key: /root/.ssh/user_key.pub
+    global_head_ip: 0.0.0.0
+    global_openstack_stack_id: heatstack-stack-id
+    global_pool_id: 1
+    global_sandbox_allocation_unit_id: 1
+    global_sandbox_ip: 10.10.10.10
+    global_sandbox_name: stack-name
+    global_ssh_public_mgmt_key: /root/.ssh/pool_mng_key.pub
+    global_ssh_public_user_key: /root/.ssh/user_key.pub
 ```

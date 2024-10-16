@@ -22,13 +22,13 @@ In the training run, trainees will go through predesigned phases. There is a bar
 ![phase-bar](../../../img/user-guide-basic/training-agenda/training-run/adaptive/ATR-phase-bar.png)
 
 ### 1. Questionnaire Phase
-At the questionnaire phase, a trainee must answer the different types of questions. Questions that are left blank are considered to be wrongly answered. 
+At the questionnaire phase, a trainee must answer the different types of questions. Questions that are left blank are considered to be wrongly answered.
 
-There are three types of questions: 
+There are three types of questions:
 
-* **Free Form Question (FFQ)**: Trainees are asked to provide the text answer to the predefined field. 
+* **Free Form Question (FFQ)**: Trainees are asked to provide the text answer to the predefined field.
 * **Multiple Choice Questions (MCQ)**: Trainees are asked to select only correct answers from the choices offered as a list.
-* **Rating Form Questions (RFQ)**: Trainees are asked to choose one option from a spectrum. 
+* **Rating Form Questions (RFQ)**: Trainees are asked to choose one option from a spectrum.
 
 <p align="center">
   <img src="../../../../img/user-guide-basic/training-agenda/training-run/adaptive/ATR-questionnaire.png">
@@ -48,7 +48,7 @@ The access phase provides information to trainees on how to access cloud or loca
   <img src="../../../../img/user-guide-basic/training-agenda/training-run/adaptive/ATR-access.png">
 </p>
 
-### 4. Training Phase 
+### 4. Training Phase
 The trainee must complete the assignment specified on the page’s left side at the training phase. On the right side, the sandbox topology supplemented by legend is displayed. The layout of the topology can be changed with the controls panel(see the following figure):
 
 <p align="center">
@@ -87,7 +87,7 @@ Right-click on the selected network node (host or router), the following menu wi
     </p>
 
 * **Open console (deprecated)**: Connect to the web console of the particular network node using SPICE protocol. The feature is provided by OpenStack cloud, and console types may vary. When you connect to the SPICE client, you will see the following console in a new browser tab.
-    
+
     !!! warning
         In the case of local sandboxes, only the last option **Copy host info to clipboard** is available in the menu.
 
@@ -95,15 +95,10 @@ Right-click on the selected network node (host or router), the following menu wi
         <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-spice.png">
     </p>
 
-    <video width="100%" height="auto" controls>
-        <source src="../../../../img/user-guide-basic/training-agenda/training-run/how-to-connect-to-spice.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
     !!! info
         To scroll console output up, use Shift + Page Up, and to scroll it down, use Shift + Page Down.
 
-* **Open GUI**: Connect to the particular network node's Graphical User Interface (GUI) using the Apache Guacamole. This option might not be visible if the VM does not have GUI configured. When you connect to the Spice client, you will see the following console in a new browser tab. 
+* **Open GUI**: Connect to the particular network node's Graphical User Interface (GUI) using the Apache Guacamole. This option might not be visible if the VM does not have GUI configured. When you connect to the Spice client, you will see the following console in a new browser tab.
 
     <p align="center">
         <img src="../../../../img/user-guide-basic/training-agenda/training-run/TR-guacamole-gui.png">

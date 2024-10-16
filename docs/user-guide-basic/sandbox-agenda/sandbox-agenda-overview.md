@@ -7,7 +7,7 @@ The purpose of the Sandbox Agenda is to create and manage sandbox definitions, p
 
 * **[Images](images.md)** section provides a list of available OS images.
 
-To access the above-mentioned pages, click the respective button on the front page of the KYPO portal. 
+To access the above-mentioned pages, click the respective button on the front page of the CyberRangeCZ Platform portal.
 
 <p align="center">
   <img src="../../../img/user-guide-basic/sandbox-agenda/overview/home-page-sandbox-definition-button.png">  <img src="../../../img/user-guide-basic/sandbox-agenda/overview/home-page-pool-button.png">  <img src="../../../img/user-guide-basic/sandbox-agenda/overview/home-page-resources-button.png">

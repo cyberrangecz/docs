@@ -1,18 +1,18 @@
-In the KYPO CRP, we monitor the trainees' progress during training by logging the various events. Currently, we differentiate between two major types of logs:
+In the CyberRangeCZ Platform, we monitor the trainees' progress during training by logging the various events. Currently, we differentiate between two major types of logs:
 
- * **Training events**:  Any action performed by the trainee on the KYPO portal web page is considered to be a Training event (e.g., taking a hint, solving a level, finishing a run, ...). These events are mainly used for real-time visualization of the Training run. Based on training events, organizers can offer individual help to struggling trainees or, on the other hand, take notice of excellent students.
- * **Commands**: All commands executed by the students inside the sandbox (cloud or local) command line are logged. These logged commands offer detailed information about all students' actions while completing the assignment. The organizers can then use command logs to evaluate each student's actions, and the complexity of the solutions students came up with during the Training run.
- 
+ * **Training events**:  Any action performed by the trainee on the CyberRangeCZ Platform portal web page is considered to be a Training event (e.g., taking a hint, solving a level, finishing a run, ...). These events are mainly used for real-time visualization of the Training run. Based on training events, organizers can offer individual help to struggling trainees or, on the other hand, take notice of excellent students.
+ * **Commands**: All commands executed by the students inside the sandbox command line are logged. These logged commands offer detailed information about all students' actions while completing the assignment. The organizers can then use command logs to evaluate each student's actions, and the complexity of the solutions students came up with during the Training run.
 
-## Training Events - Linear 
+
+## Training Events - Linear
 
 ### Common Fields
- 
+
 * **sandbox_id**: the ID of a sandbox instance
 * **pool_id**: the ID of a pool
 * **training_definition_id**: the ID of a training definition
 * **training_instance_id**: the ID of a training instance
-* **training_run_id**: the ID of a training run 
+* **training_run_id**: the ID of a training run
 * **training_time**: the time that has elapsed since the start of a training run
 * **total_training_score**: total score achieved in training levels
 * **total_assessment_score**: total score achieved in assessment levels
@@ -25,9 +25,9 @@ In the KYPO CRP, we monitor the trainees' progress during training by logging th
 
 ### Additional fields
 
-Each type of event might have additional fields. 
+Each type of event might have additional fields.
 
-* AssessmentAnswers 
+* AssessmentAnswers
     * **answers**: all answers submitted by the trainee in the JSON format
 * CorrectAnswerSubmitted
     * **answers_content**: answer submitted by the trainee
@@ -42,7 +42,7 @@ Each type of event might have additional fields.
     * **max_score**: maximal score that can be achieved for a level
     * **level_title**: title of a level
 * SolutionDisplayed
-    * **penalty_points**: 
+    * **penalty_points**:
 * TrainingRunEnded
     * **start_time**: training run start time
     * **end_time**: training run end time
@@ -58,7 +58,7 @@ Each type of event might have additional fields.
 {
    "sandbox_id": 10,
    "pool_id": 3,
-   "training_definition_id": 1, 
+   "training_definition_id": 1,
    "training_instance_id": 1,
    "training_run_id": 1,
    "training_time": 0,
@@ -69,7 +69,7 @@ Each type of event might have additional fields.
    "level_order": 0,
    "user_ref_id": 1,
    "timestamp": 1636706806953
-   "type": "cz.muni.csirt.kypo.events.trainings.TrainingRunStarted"
+   "type": "crczp.events.trainings.TrainingRunStarted"
 }
 ```
 
@@ -78,7 +78,7 @@ Each type of event might have additional fields.
 ```
 {
    ### AssessmentAnswers
-   "answers": "[{ \"questionId\": 4, \"answers\": [\"Graphical user interface of KYPO\"] }, { \"questionId\": 5, \"answers\": [{ \"statementOrder\": 1, \"optionOrder\": 1 }, { \"statementOrder\": 2, \"optionOrder\": 1 }, { \"statementOrder\": 0, \"optionOrder\": 0 }] }, { \"questionId\": 6, \"answers\": [\"null\"] }]"
+   "answers": "[{ \"questionId\": 4, \"answers\": [\"Graphical user interface of CyberRangeCZ Platform\"] }, { \"questionId\": 5, \"answers\": [{ \"statementOrder\": 1, \"optionOrder\": 1 }, { \"statementOrder\": 2, \"optionOrder\": 1 }, { \"statementOrder\": 0, \"optionOrder\": 0 }] }, { \"questionId\": 6, \"answers\": [\"null\"] }]"
 
    ### CorrectAnswerSubmitted
    "answer_content": "Top_Secret_Flag"
@@ -112,7 +112,7 @@ Each type of event might have additional fields.
 
 
 
-## Training Events - Adaptive 
+## Training Events - Adaptive
 
 ### Common Fields
 
@@ -120,12 +120,12 @@ Each type of event might have additional fields.
 * **pool_id**: the ID of a pool
 * **training_definition_id**: the ID of a training definition
 * **training_instance_id**: the ID of a training instance
-* **training_run_id**: the ID of a training run 
+* **training_run_id**: the ID of a training run
 * **training_time**: the time that has elapsed since the start of a training run
 * **phase_id**: the ID of a phase
 * **phase_order**: order of a phase in a training definition
-* **task_id**: the ID of a task 
-* **task_order**: order of a task in a phase 
+* **task_id**: the ID of a task
+* **task_order**: order of a task in a phase
 * **user_ref_id**: the ID of a user
 * **timestamp**: time at which the event occured
 * **type**: type of the event (*CorrectAnswerSubmitted, PhaseCompleted, PhaseStarted, QuestionnaireAnswers, SolutionDisplayed, TrainingRunEnded, TrainingRunResumed, TrainingRunStarted, TrainingRunSurrendered, WrongAnswerSubmitted*)
@@ -134,7 +134,7 @@ Each type of event might have additional fields.
 
 ### Additional fields
 
-Each type of event might have additional fields. 
+Each type of event might have additional fields.
 
 * CorrectAnswerSubmitted
     * **answers_content**: answer submitted by a trainee
@@ -144,7 +144,7 @@ Each type of event might have additional fields.
 * PhaseStarted
     * **phase_type**: type of a phase (INFO, QUESTIONNAIRE, TRAINING)
     * **phase_title**: title of a phase
-* QuestionnaireAnswers 
+* QuestionnaireAnswers
     * **answers**: all answers submitted by a trainee in the JSON format
 * TrainingRunEnded
     * **start_time**: training run start time
@@ -164,13 +164,13 @@ Each type of event might have additional fields.
    "training_instance_id": 152,
    "training_run_id": 5,
    "training_time": 2516,
-   "phase_id": 6, 
+   "phase_id": 6,
    "phase_order": 1,
-   "task_id": null, 
+   "task_id": null,
    "task_order": null,
    "user_ref_id": 1,
    "timestamp": 1636712942803,
-   "type": "cz.muni.csirt.kypo.events.adaptive.trainings.PhaseStarted"
+   "type": "crczp.events.adaptive.trainings.PhaseStarted"
 }
 ```
 
@@ -202,7 +202,7 @@ Each type of event might have additional fields.
 ```
 
 
-## Commands 
+## Commands
 
 ### Common Fields
 
@@ -212,7 +212,7 @@ Each type of event might have additional fields.
 * **username**: name of the currently logged in user logged into the machine who executed the command
 * **timestamp_str**: time at which the command has been executed
 * **hostname**: unique name of the machine in a sandbox
-* **ip**: internal IP address of the machine in a sandbox 
+* **ip**: internal IP address of the machine in a sandbox
 
 ### Cloud Sandbox Specific Fields
 * **sandbox_id**: the ID of a sandbox instance
@@ -220,10 +220,10 @@ Each type of event might have additional fields.
 
 ### Local Sandbox Specific Fields
 * **user_id**: the ID of the user
-* **access_token**: the access token of the training instance used to access the training run in KYPO portal
+* **access_token**: the access token of the training instance used to access the training run in CyberRangeCZ Platform portal
 
 
-### Example 
+### Example
 
 ```
 # CLOUD_SANDBOX
@@ -254,4 +254,3 @@ Each type of event might have additional fields.
 
 ```
 
-The example logs from the past training events can be found at: [https://gitlab.ics.muni.cz/muni-kypo-trainings/datasets](https://gitlab.ics.muni.cz/muni-kypo-trainings/datasets).

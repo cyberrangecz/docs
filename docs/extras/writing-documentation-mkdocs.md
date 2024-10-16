@@ -1,13 +1,13 @@
 [TOC]
 
-For the creation of the KYPO portal documentation, we have chosen MkDocs. MkDocs is a fast, simple, and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file `mkdocs.yml`. Information about MkDocs syntax and functions can be found further down on this page.
+For the creation of the CyberRangeCZ Platform portal documentation, we have chosen MkDocs. MkDocs is a fast, simple, and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file `mkdocs.yml`. Information about MkDocs syntax and functions can be found further down on this page.
 
-MkDocs require to have installed: 
+MkDocs require to have installed:
 
 * python3.8
 * pipenv
 
-Clone [repository](https://gitlab.ics.muni.cz/muni-kypo-crp/kypo-crp-project-docs) from GitLab. To use the local server, go to `kypo-crp-docs` directory, and in the command line enter the following commands:
+Clone [repository](https://github.com/cyberrangecz/docs) from GitLab. To use the local server, go to `docs` directory, and in the command line enter the following commands:
 ```
 pipenv sync
 pipenv run mkdocs serve
@@ -24,7 +24,7 @@ nav:
 ```
 
 
- and add line in `nav` object as follow: 
+ and add line in `nav` object as follow:
 ```
 site_name: MkLorum
 nav:
@@ -32,12 +32,12 @@ nav:
     - About: about.md
 ```
 
-To add nested pages use the following YAML syntax: 
+To add nested pages use the following YAML syntax:
 ```
 site_name: MkLorum
 nav:
     - Home: index.md
-    - Pages: 
+    - Pages:
         - Page1: path-to-page1
         - Page2: path-to-page2
 ```
@@ -70,7 +70,7 @@ Cupcake indexer is a snazzy new project for indexing small cakes.
 ![Screenshot](img/screenshot.png)
 ```
 
-### Tables 
+### Tables
 The tables extension adds a basic table syntax to Markdown which is popular across multiple implementations. The syntax is rather simple and is generally only useful for simple tabular data.
 
 A simple table looks like this:
@@ -80,7 +80,7 @@ First Header | Second Header | Third Header
 Content Cell | Content Cell  | Content Cell
 Content Cell | Content Cell  | Content Cell
 ```
-and will be rendered as: 
+and will be rendered as:
 
 First Header | Second Header | Third Header
 ------------ | ------------- | ------------
@@ -97,7 +97,7 @@ Left         | Center        | Right
 ```
 
 ### Fenced Code Blocks
-The first line should contain 3 or more backtick (\`) characters, and the last line should contain the same number of backtick characters (\`). The language can optionally be specified on the first line after the backticks which informs any syntax highlighters of the language used: 
+The first line should contain 3 or more backtick (\`) characters, and the last line should contain the same number of backtick characters (\`). The language can optionally be specified on the first line after the backticks which informs any syntax highlighters of the language used:
 ~~~~~~~~~~~~~~~~~~~~~
 ```python
 def fn():
@@ -105,14 +105,14 @@ def fn():
 ```
 ~~~~~~~~~~~~~~~~~~~~~
 
-Text wil be rendered as: 
+Text wil be rendered as:
 ```python
 def fn():
     pass
 ```
 
-### Abbreviations 
-Abbreviations are defined using the syntax established in PHP Markdown Extra. The following text: 
+### Abbreviations
+Abbreviations are defined using the syntax established in PHP Markdown Extra. The following text:
 ```
 The HTML specification
 is maintained by the W3C.
@@ -121,7 +121,7 @@ is maintained by the W3C.
 *[W3C]:  World Wide Web Consortium
 ```
 
-will be rendered as: 
+will be rendered as:
 The HTML specification
 is maintained by the W3C.
 
@@ -131,7 +131,7 @@ is maintained by the W3C.
 Move cursor above the abbreviation.
 
 ### Footnotes
-The Footnotes extension adds syntax for defining footnotes in Markdown documents. The following text: 
+The Footnotes extension adds syntax for defining footnotes in Markdown documents. The following text:
 ```
 Footnotes[^1] have a label[^@#$%] and the footnote's content.
 
@@ -152,7 +152,7 @@ A footnote content must start with the label followed by a colon and at least on
 ### Icons
 
 The following icon sets are bundled with Material for MkDocs:
- 
+
 * [Material Design](https://materialdesignicons.com/) -- usage: `:material-(name of the icon):`, e.g. `:material-alarm:`
 * [FontAwesome](https://fontawesome.com/icons?d=gallery&m=free) -- usage: `:fontawesome-(bundle)-(name of the icon):`, e.g. `:fontawesome-brands-accusoft:`
 * [Octicons](https://primer.style/octicons/) -- usage: `:octicons-(name of the icon):`, e.g. `:octicons-bell-24:`
@@ -163,27 +163,27 @@ In order to add additional icons, create a `*.svg` icon in folder `overrides/.ic
 
 
 ### Notes
-Thanks to Admonition extension you are able to create notes. Following text: 
+Thanks to Admonition extension you are able to create notes. Following text:
 ```
 !!! note
     You should note that the title will be automatically capitalized.
 ```
 
-will be rendered as: 
+will be rendered as:
 
 !!! note
     You should note that the title will be automatically capitalized.
 
-In order to create custom note panel with custom icon you need to do the following steps: 
+In order to create custom note panel with custom icon you need to do the following steps:
 
 1. Find svg description of the icon `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17a2 2 0 002-2 2 2 0 00-2-2 2 2 0 00-2 2 2 2 0 002 2m6-9a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V10a2 2 0 012-2h1V6a5 5 0 015-5 5 5 0 015 5v2h1m-6-5a3 3 0 00-3 3v2h6V6a3 3 0 00-3-3z"/></svg>`.
-2. In file `/docs/stylesheets/extra.css` add to `:root` block the following line: 
+2. In file `/docs/stylesheets/extra.css` add to `:root` block the following line:
 ```markdown
 --md-admonition-icon--(name of note panel): url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17a2 2 0 002-2 2 2 0 00-2-2 2 2 0 00-2 2 2 2 0 002 2m6-9a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V10a2 2 0 012-2h1V6a5 5 0 015-5 5 5 0 015 5v2h1m-6-5a3 3 0 00-3 3v2h6V6a3 3 0 00-3-3z"/></svg>');
 ```
 
 
-3. Then add folowing lines under the `:root` block: 
+3. Then add folowing lines under the `:root` block:
 ```
 .md-typeset .(name of note panel) > summary::before {
   background-color: (color of the icon, e.g. rgb(119, 119, 119));

@@ -1,10 +1,11 @@
-# License 
+# License
 
-KYPO Cyber Range Platform is open-source software developed by **Masaryk University**, and it is distributed under **MIT license**.
+CyberRangeCZ Platform is a fork of the KYPO Cyber Range Platform, both distributed under the **MIT License**.
 
 ## License Terms
 
-**Copyright 2020 MASARYK UNIVERSITY**
+**Copyright (c) 2020 MASARYK UNIVERSITY**
+**Copyright (c) 2025 CyberSecurity Hub, z.s.**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

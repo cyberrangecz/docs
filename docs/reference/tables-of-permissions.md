@@ -1,10 +1,10 @@
-The following tables display the actions that can perform the users with the specified role. To be specific it displays all endpoints available across KYPO microservices that can be called. Because of that tables are divided based on individual microservices and then divided based on the resource to which they relate. The more detailed description of the endpoints are in the pages in this section. 
+The following tables display the actions that can perform the users with the specified role. To be specific it displays all endpoints available across CyberRangeCZ Platform microservices that can be called. Because of that tables are divided based on individual microservices and then divided based on the resource to which they relate. The more detailed description of the endpoints are in the pages in this section.
 
 
 ### User and Group Microservice
 
 
-#### Users Endpoints  
+#### Users Endpoints
 | Action | CRUD operation |  Guest | User | Administrator |
 | ------ | :------------: |  :---: | :--: | :-----------: |
 | Get users | READ | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
@@ -50,7 +50,7 @@ The following tables display the actions that can perform the users with the spe
 !!! warning
     Registration of a microservice is not secured at all.
 
-### Training Microservice 
+### Training Microservice
 
 #### Linear Training Definitions Endpoints
 
@@ -58,7 +58,7 @@ The following tables display the actions that can perform the users with the spe
     The symbol :material-hexagram:{: .green } means that action can be performed only by the designer of that particular training definition.
 
 
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Create training definition  | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Clone training definition  | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
@@ -90,7 +90,7 @@ The following tables display the actions that can perform the users with the spe
 !!! note
     The symbol :material-hexagram:{: .green } means that action can be performed only by the organizer of that particular training instance.
 
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Create training instance | CREATE |  :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Find training instance by ID  | READ |  :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
@@ -107,11 +107,11 @@ The following tables display the actions that can perform the users with the spe
 #### Linear Training Runs Endpoints
 
 !!! note
-    The symbols: 
+    The symbols:
     &nbsp; &nbsp; &nbsp; &nbsp; :material-hexagram:{: .green } means that action can be performed only by the trainee of that particular training run.
     &nbsp; &nbsp; &nbsp; &nbsp; :material-cards-spade:{: .green } means that action can be performed only by the organizer of that particular training run.
 
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Access training run | CREATE |  :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Is correct answer | CREATE | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
@@ -132,7 +132,7 @@ The following tables display the actions that can perform the users with the spe
 
 #### Export & Import Endpoints
 
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Import training definition | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Get exported training definition and levels | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
@@ -142,11 +142,11 @@ The following tables display the actions that can perform the users with the spe
 #### Visualizations Endpoints
 
 !!! note
-    The symbols: 
+    The symbols:
     &nbsp; &nbsp; &nbsp; &nbsp; :material-hexagram:{: .green } means that action can be performed only by the trainee of that particular training run.
     &nbsp; &nbsp; &nbsp; &nbsp; :material-cards-spade:{: .green } means that action can be performed only by the organizer of that particular training instance.
 
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Gather visualization info for training run | READ | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Gather visualization info for training instance | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-cards-spade:{: .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
@@ -162,7 +162,7 @@ The following tables display the actions that can perform the users with the spe
 | Get timeline visualization data for trainee | READ | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Get users by IDs| READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 
-### Adaptive Training Microservice 
+### Adaptive Training Microservice
 
 #### Adaptive Training Definitions Endpoints
 
@@ -170,7 +170,7 @@ The following tables display the actions that can perform the users with the spe
     The symbol :material-hexagram:{: .green } means that action can be performed only by the designer of that particular training definition.
 
 
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Create training definition  | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
 | Clone training definition  | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
@@ -192,7 +192,7 @@ The following tables display the actions that can perform the users with the spe
     The symbol :material-hexagram:{: .green } means that action can be performed only by the designer of that particular training definition.
 
 
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Create phase  | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
 | Get phase by ID | READ | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
@@ -206,11 +206,11 @@ The following tables display the actions that can perform the users with the spe
 #### Tasks Endpoints
 
 !!! note
-    The symbols: 
+    The symbols:
     &nbsp; &nbsp; &nbsp; &nbsp; :material-hexagram:{: .green } means that action can be performed only by the designer of that particular training phase.
     &nbsp; &nbsp; &nbsp; &nbsp; :material-cards-spade:{: .green } means that action can be performed only by the designer of that particular task.
 
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Create task in phase  | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
 | Clone task | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
@@ -224,7 +224,7 @@ The following tables display the actions that can perform the users with the spe
 !!! note
     The symbol :material-hexagram:{: .green } means that action can be performed only by the organizer of that particular training instance.
 
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Create training instance | CREATE |  :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Find training instance by ID  | READ |  :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
@@ -241,11 +241,11 @@ The following tables display the actions that can perform the users with the spe
 #### Adaptive Training Runs Endpoints
 
 !!! note
-    The symbols: 
+    The symbols:
     &nbsp; &nbsp; &nbsp; &nbsp; :material-hexagram:{: .green } means that action can be performed only by the trainee of that particular training run.
     &nbsp; &nbsp; &nbsp; &nbsp; :material-cards-spade:{: .green } means that action can be performed only by the organizer of that particular training run.
 
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Access training run | CREATE |  :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Is correct answer | CREATE | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
@@ -264,7 +264,7 @@ The following tables display the actions that can perform the users with the spe
 
 #### Export & Import Endpoints
 
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Import training definition | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Get exported training definition and phases | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
@@ -274,21 +274,21 @@ The following tables display the actions that can perform the users with the spe
 #### Visualizations Endpoints
 
 !!! note
-    The symbols: 
+    The symbols:
     &nbsp; &nbsp; &nbsp; &nbsp; :material-hexagram:{: .green } means that action can be performed only by the trainee of that particular training run.
     &nbsp; &nbsp; &nbsp; &nbsp; :material-cards-spade:{: .green } means that action can be performed only by the organizer of that particular training run.
 
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Get Sankey diagram data | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-cards-spade:{: .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Get transition graph data for organizer | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-cards-spade:{: .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Get transition graph data for trainee | READ | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 
-### Sandbox Microservice 
+### Sandbox Microservice
 
 #### Pools Endpoints
 
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Create sandbox allocation unit| CREATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Lock given pool | CREATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
@@ -311,7 +311,7 @@ The following tables display the actions that can perform the users with the spe
 
 
 #### Cleanup Requests Endpoints
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Retrieve a Sandbox Provisioning Cleanup stage | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Retrieve a Sandbox Networking Cleanup stage | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
@@ -320,8 +320,8 @@ The following tables display the actions that can perform the users with the spe
 | Cancel given Cleanup Request | UPDATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 
 
-#### Cloud Endpoints 
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+#### Cloud Endpoints
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Get list of images | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Retrieve a Sandbox Networking Cleanup stage | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
@@ -329,7 +329,7 @@ The following tables display the actions that can perform the users with the spe
 
 
 #### Definitions Endpoints
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Create a new sandbox definition | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Retrieve the definition | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
@@ -339,7 +339,7 @@ The following tables display the actions that can perform the users with the spe
 
 
 #### Allocation Requests Endpoints
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | List sandbox Resources | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Retrieve a Sandbox Networking Allocation stage | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
@@ -354,7 +354,7 @@ The following tables display the actions that can perform the users with the spe
 
 
 #### Sandbox Allocation Units Endpoints
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Create cleanup request | CREATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Retrieve a Sandbox Allocation Unit | READ | :material-close-thick:{: .icon .red }| :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
@@ -363,7 +363,7 @@ The following tables display the actions that can perform the users with the spe
 | Delete cleanup request | DELETE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 
 #### Sandboxes Endpoints
-| Action | CRUD operation | Trainee | Organizer | Designer | Administrator | 
+| Action | CRUD operation | Trainee | Organizer | Designer | Administrator |
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Lock given sandbox | CREATE | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
 | Get Spice consoles urls | READ | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |

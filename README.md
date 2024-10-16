@@ -1,9 +1,9 @@
-# KYPO CRP
+# CRCZP
 
 ## Dependencies
 
 * `python3.10` (with all dependencies using **python 3.10**)
-* `pipenv` 
+* `pipenv`
 
 ## Update info
 
@@ -25,5 +25,5 @@ pipenv run mkdocs serve
 
 Access http://localhost:8000
 
-## GitLab Pages
-https://muni-kypo-crp.gitlab-pages.ics.muni.cz/kypo-crp-docs/
+## GitHub Pages
+https://cyberrangecz.github.io/docs/

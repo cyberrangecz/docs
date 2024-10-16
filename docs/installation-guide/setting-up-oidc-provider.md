@@ -1,12 +1,12 @@
 # Setting up OIDC Provider
 
-KYPO CRP is from the release 23.12 deployed with Keycloak OIDC service. KYPO CRP supports with Keycloak:
+CyberRangeCZ Platform is deployed with Keycloak OIDC service. CyberRangeCZ Platform supports with Keycloak:
 
 * local Keycloak users
 * [external Kerberos and LDAP users](https://www.keycloak.org/docs/latest/server_admin/#_user-storage-federation)
 * [external Identity Providers](https://www.keycloak.org/docs/latest/server_admin/#_identity_broker)
 
-Using OIDC providers directly in KYPO CRP instead of local Keycloak service is still possible, but it's not recommended. The implementation might not be fully compatible with KYPO CRP. For the direct implementation of external service instead of local Keycloak service, continue with [General Setup](#general-setup) section.
+Using OIDC providers directly in CyberRangeCZ Platform instead of local Keycloak service is still possible, but it's not recommended. The implementation might not be fully compatible with CyberRangeCZ Platform. For the direct implementation of external service instead of local Keycloak service, continue with [General Setup](#general-setup) section.
 
 ## General Setup
 
@@ -15,7 +15,7 @@ Regardless of the used OIDC provider, you must register a new **Client** to obta
 !!! warning
     Make sure that OIDC provider:
 
-    * Uses **JSON Web Token (JWT)** access tokens. Opaque tokens are not supported by the KYPO platform.
+    * Uses **JSON Web Token (JWT)** access tokens. Opaque tokens are not supported by the CyberRangeCZ Platform.
 
     * Supports the **user info endpoint** to validate the access token and retrieve base info about a user.
 

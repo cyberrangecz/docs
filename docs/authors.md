@@ -1,18 +1,22 @@
 # Project Authors
 
-## Active Core Contributors
+This project, CyberRangeCZ Platform, is a fork of the KYPO CRP software.  We gratefully acknowledge the contributions of the original KYPO CRP team.
+
+## CyberRangeCZ Platform Contributors
+
+### Active Core Contributors
 
 | Surname | Name | Role |
 | ------ | ------ | ------ |
-| Krebs | Radovan | Python leader |
-| Majdan | Lukáš | Java & Angular leader |
-| Murár | Martin | Python developer |
+| Čegan | Jakub | Project leader |
+| Kiruščanka | Andrej | Team leader |
 | Murín | Mário | Java & Angular developer |
 | Paluba | Juraj | Python developer |
-| Pretschner | Robert | Python developer |
 | Sapák | Tomáš | DevOps leader |
 
-## Inactive Core Contributors
+## Original KYPO CRP Authors
+
+We recognize and appreciate the contributions of the following individuals to the original KYPO CRP project:
 
 | Surname | Name | Role |
 | ------ | ------ | ------ |
@@ -25,16 +29,23 @@
 | *Juhás* | *Martin* | *Java developer* |
 | *Dočkalová Burská* | *Karolína* | *Team leader & Visualization R&D* |
 | *Kočamba* | *Erik* | *Angular developer* |
+| *Krebs* | *Radovan* | *Python leader* |
+| *Majdan* | *Lukáš* | *Java & Angular leader* |
+| *Murár* | *Martin* | *Python developer* |
+| *Murín* | *Mário* | *Java & Angular developer* |
 | *Ošlejšek* | *Radek* | *Visualisation R&D* |
+| *Paluba* | *Juraj* | *Python developer* |
 | *Pilár* | *Dominik* | *Java & Angular developer* |
+| *Pretschner* | *Robert* | *Python developer* |
 | *Rusňák* | *Vít* | *UI/UX R&D* |
+| *Sapák* | *Tomáš* | *DevOps leader* |
 | *Staněk* | *Miloslav* | *Python developer* |
 | *Šeda* | *Pavel* | *Java & DB services leader* |
 | *Tovarňák* | *Daniel* | *Technical leader* |
 | *Urban* | *Michal* | *Python leader* |
 | *Zbončáková* | *Tatiana* | *Python developer* |
 
-## Advisory Board
+### Advisory Board (KYPO CRP)
 
 | Surname | Name | Role |
 | ------ | ------ | ------ |
@@ -43,7 +54,7 @@
 | Tovarňák | Daniel |  Architecture & Design |
 | Vykopal | Jan | Educational research & User testing |
 
-## Special Recognition
+### Special Recognition (KYPO CRP)
 
 !!!note
     Here goes a list of people (surely not complete) whose invaluable help allowed us to make the current version of KYPO CRP into what it is today.

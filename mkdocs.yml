@@ -1,124 +1,118 @@
-site_name: KYPO Cyber Range Platform
+site_name: CyberRangeCZ Platform
 theme:
-  name: material
-  logo: 'img/kypo-simple.svg'
-  favicon: 'img/kypo-simple.svg'
+        name: material
+        logo: 'img/crczp-symbol.svg'
+        favicon: 'img/crczp-symbol.svg'
 
 nav:
-  - Home: index.md
-  - Basic Concepts:
-    - Use Cases: basic-concepts/use-cases.md
-    - Terminology: basic-concepts/terminology.md
-    - Conceptual Architecture: basic-concepts/conceptual-architecture.md
-    - Typical Training Workflow:
-      - Overview: basic-concepts/typical-training-workflow/overview.md
-      - Training Workflow - Cloud: basic-concepts/typical-training-workflow/training-workflow-cloud.md
-      - Training Workflow - Local: basic-concepts/typical-training-workflow/training-workflow-local.md
-  - User Guide (Basic):
-      - Overview: user-guide-basic/overview.md
-      - Login & Logout: user-guide-basic/login-and-logout.md
-      - Sandbox Agenda:
-          - Overview: user-guide-basic/sandbox-agenda/sandbox-agenda-overview.md
-          - Sandbox Definition: user-guide-basic/sandbox-agenda/sandbox-definition.md
-          - Pool: user-guide-basic/sandbox-agenda/pool.md
-          - Images: user-guide-basic/sandbox-agenda/images.md
-      - Training Agenda:
-          - Overview: user-guide-basic/training-agenda/training-agenda-overview.md
-          - Training Definition:
-              - Linear Training Definition: user-guide-basic/training-agenda/training-definition/linear-training-definition.md
-              - Adaptive Training Definition: user-guide-basic/training-agenda/training-definition/adaptive-training-definition.md
-              - MITRE ATT&CK Matrix: user-guide-basic/training-agenda/training-definition/mitre-attack-matrix.md
-              - Instance Simulator: user-guide-basic/training-agenda/training-definition/instance-simulator.md
-          - Cheating Detection: user-guide-basic/training-agenda/cheating-detection.md
-          - Training Instance: user-guide-basic/training-agenda/training-instance.md
-          - Training Run:
-              - Linear Training Run: user-guide-basic/training-agenda/training-run/linear-training-run.md
-              - Adaptive Training Run: user-guide-basic/training-agenda/training-run/adaptive-training-run.md
-          - Visualization Tools:
-              - Overview: user-guide-basic/training-agenda/visualizations/overview.md
-              - Visualizations for Adaptive Training: user-guide-basic/training-agenda/visualizations/visualizations-for-adaptive.md
-              - Visualizations for Linear Training: user-guide-basic/training-agenda/visualizations/visualizations-for-linear.md
-      - Administration Agenda:
-          - Overview: user-guide-basic/administration-agenda/administration-agenda-overview.md
-          - Users: user-guide-basic/administration-agenda/users.md
-          - Groups: user-guide-basic/administration-agenda/groups.md
-          - Microservices: user-guide-basic/administration-agenda/microservices.md
-  - User Guide (Advanced):
-      - Overview: user-guide-advanced/user-guide-advanced-overview.md
-      - Sandboxes:
-          - Overview: user-guide-advanced/sandboxes/sandboxes-overview.md
-          - Sandbox Definition: user-guide-advanced/sandboxes/sandbox-definition.md
-          - Topology Definition: user-guide-advanced/sandboxes/topology-definition.md
-          - Topology Instance: user-guide-advanced/sandboxes/topology-instance.md
-          - Sandbox Provisioning: user-guide-advanced/sandboxes/sandbox-provisioning.md
-          - Sandbox Access: user-guide-advanced/sandboxes/sandbox-access.md
-          - APG Variables: user-guide-advanced/sandboxes/apg-variables.md
-          - Docker Containers in Sandbox Definitions: user-guide-advanced/sandboxes/sandbox_dockers.md
-          - Sandbox Monitoring: user-guide-advanced/sandboxes/sandbox-monitoring.md
-      - Trainings:
-          - Overview: user-guide-advanced/trainings/trainings-overview.md
-      - Users and Groups:
-          - Overview: user-guide-advanced/users-and-groups/users-and-groups-overview.md
-          - Roles: user-guide-advanced/users-and-groups/roles.md
-  - Installation Guide:
-      - Overview: installation-guide/installation-guide-overview.md
-      - OpenStack Requirements: installation-guide/openstack-requirements.md
-      - Setting up OIDC Provider: installation-guide/setting-up-oidc-provider.md
-      - Platform Components: installation-guide/platform-components.md
-  - Available Features: available-features.md
-  - FAQ: faq.md
-  - Reference:
-      - Sandbox Service: reference/kypo-sandbox-service-swagger-open-api.yaml
-      - User and Group Service: reference/kypo-user-and-group-swagger-open-api.yaml
-      - Training Service: reference/kypo-training-swagger-open-api.yaml
-      - Adaptive Training Service: reference/kypo-adaptive-training-swagger-open-api.yaml
-      - Adaptive Smart Assistant Service: reference/kypo-adaptive-smart-assistant-swagger-open-api.yaml
-      - Training Feedback Service: reference/kypo-training-feedback-swagger-open-api.yaml
-      - Answers Storage: reference/kypo-answers-storage-swagger-open-api.yaml
-      - Elasticsearch Service: reference/kypo-elasticsearch-service-swagger-open-api.yaml
-      - Mitre Technique Service: reference/kypo-mitre-technique-service-swagger-open-api.yaml
-      - Tables of Permissions: reference/tables-of-permissions.md
-  - Extras:
-      - Logging:
-          - Logs: extras/logging/logs.md
-          - Architecture: extras/logging/architecture.md
-          - How to Use It: extras/logging/how-to-use-it.md
-          - Visualize Data - Kibana: extras/logging/visualize-data-kibana.md
-      - Sharing sandbox between two players: extras/sharing-sandbox-between-two-players.md
-      - Writing Documentation - MkDocs: extras/writing-documentation-mkdocs.md
-  - Contribute to Docs: contribute-to-docs.md
-  - Report Bugs: report-bugs.md
-  - Authors: authors.md
-  - Acknowledgements: acknowledgements.md
-  - License: license.md
-copyright: Copyright © 2020-2022 Masaryk University
+        - Home: index.md
+        - Basic Concepts:
+                  - Use Cases: basic-concepts/use-cases.md
+                  - Terminology: basic-concepts/terminology.md
+                  - Conceptual Architecture: basic-concepts/conceptual-architecture.md
+                  - Typical Training Workflow:
+                            - Overview: basic-concepts/typical-training-workflow/overview.md
+                            - Training Workflow: basic-concepts/typical-training-workflow/training-workflow-cloud.md
+        - User Guide (Basic):
+                  - Overview: user-guide-basic/overview.md
+                  - Login & Logout: user-guide-basic/login-and-logout.md
+                  - Sandbox Agenda:
+                            - Overview: user-guide-basic/sandbox-agenda/sandbox-agenda-overview.md
+                            - Sandbox Definition: user-guide-basic/sandbox-agenda/sandbox-definition.md
+                            - Pool: user-guide-basic/sandbox-agenda/pool.md
+                            - Images: user-guide-basic/sandbox-agenda/images.md
+                  - Training Agenda:
+                            - Overview: user-guide-basic/training-agenda/training-agenda-overview.md
+                            - Training Definition:
+                                      - Linear Training Definition: user-guide-basic/training-agenda/training-definition/linear-training-definition.md
+                                      - Adaptive Training Definition: user-guide-basic/training-agenda/training-definition/adaptive-training-definition.md
+                                      - MITRE ATT&CK Matrix: user-guide-basic/training-agenda/training-definition/mitre-attack-matrix.md
+                                      - Instance Simulator: user-guide-basic/training-agenda/training-definition/instance-simulator.md
+                            - Cheating Detection: user-guide-basic/training-agenda/cheating-detection.md
+                            - Training Instance: user-guide-basic/training-agenda/training-instance.md
+                            - Training Run:
+                                      - Linear Training Run: user-guide-basic/training-agenda/training-run/linear-training-run.md
+                                      - Adaptive Training Run: user-guide-basic/training-agenda/training-run/adaptive-training-run.md
+                            - Visualization Tools:
+                                      - Overview: user-guide-basic/training-agenda/visualizations/overview.md
+                                      - Visualizations for Adaptive Training: user-guide-basic/training-agenda/visualizations/visualizations-for-adaptive.md
+                                      - Visualizations for Linear Training: user-guide-basic/training-agenda/visualizations/visualizations-for-linear.md
+                  - Administration Agenda:
+                            - Overview: user-guide-basic/administration-agenda/administration-agenda-overview.md
+                            - Users: user-guide-basic/administration-agenda/users.md
+                            - Groups: user-guide-basic/administration-agenda/groups.md
+                            - Microservices: user-guide-basic/administration-agenda/microservices.md
+        - User Guide (Advanced):
+                  - Overview: user-guide-advanced/user-guide-advanced-overview.md
+                  - Sandboxes:
+                            - Overview: user-guide-advanced/sandboxes/sandboxes-overview.md
+                            - Sandbox Definition: user-guide-advanced/sandboxes/sandbox-definition.md
+                            - Topology Definition: user-guide-advanced/sandboxes/topology-definition.md
+                            - Topology Instance: user-guide-advanced/sandboxes/topology-instance.md
+                            - Sandbox Provisioning: user-guide-advanced/sandboxes/sandbox-provisioning.md
+                            - Sandbox Access: user-guide-advanced/sandboxes/sandbox-access.md
+                            - APG Variables: user-guide-advanced/sandboxes/apg-variables.md
+                            - Docker Containers in Sandbox Definitions: user-guide-advanced/sandboxes/sandbox_dockers.md
+                            - Sandbox Monitoring: user-guide-advanced/sandboxes/sandbox-monitoring.md
+                  - Trainings:
+                            - Overview: user-guide-advanced/trainings/trainings-overview.md
+                  - Users and Groups:
+                            - Overview: user-guide-advanced/users-and-groups/users-and-groups-overview.md
+                            - Roles: user-guide-advanced/users-and-groups/roles.md
+        - Installation Guide:
+                  - Overview: installation-guide/installation-guide-overview.md
+                  - OpenStack Requirements: installation-guide/openstack-requirements.md
+                  - Setting up OIDC Provider: installation-guide/setting-up-oidc-provider.md
+                  - Platform Components: installation-guide/platform-components.md
+        - FAQ: faq.md
+        - Reference:
+                  - Sandbox Service: reference/sandbox-service-swagger-open-api.yaml
+                  - User and Group Service: reference/user-and-group-swagger-open-api.yaml
+                  - Training Service: reference/training-swagger-open-api.yaml
+                  - Adaptive Training Service: reference/adaptive-training-swagger-open-api.yaml
+                  - Adaptive Smart Assistant Service: reference/adaptive-smart-assistant-swagger-open-api.yaml
+                  - Training Feedback Service: reference/training-feedback-swagger-open-api.yaml
+                  - Answers Storage: reference/answers-storage-swagger-open-api.yaml
+                  - Elasticsearch Service: reference/elasticsearch-service-swagger-open-api.yaml
+                  - Mitre Technique Service: reference/mitre-technique-service-swagger-open-api.yaml
+                  - Tables of Permissions: reference/tables-of-permissions.md
+        - Extras:
+                  - Logging:
+                            - Logs: extras/logging/logs.md
+                            - Architecture: extras/logging/architecture.md
+                            - How to Use It: extras/logging/how-to-use-it.md
+                  - Writing Documentation - MkDocs: extras/writing-documentation-mkdocs.md
+        - Authors: authors.md
+        - Acknowledgements: acknowledgements.md
+        - License: license.md
+copyright: Copyright © 2020-2024 Masaryk University<br>Copyright © 2025 CyberSecurity Hub, z.s.
 
 markdown_extensions:
-  - admonition
-  - sane_lists
-  - smarty
-  - toc:
-      permalink: "#"
-  - wikilinks
-  - extra
-  - nl2br
-  - fenced_code
-  - codehilite
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.tasklist
-  - pymdownx.tilde
-  - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-      options:
-        custom_icons:
-          - overrides/.icons
-  - pymdownx.superfences
+        - admonition
+        - sane_lists
+        - smarty
+        - toc:
+                  permalink: "#"
+        - wikilinks
+        - extra
+        - nl2br
+        - fenced_code
+        - codehilite
+        - pymdownx.details
+        - pymdownx.superfences
+        - pymdownx.tasklist
+        - pymdownx.tilde
+        - attr_list
+        - pymdownx.emoji:
+                  emoji_index: !!python/name:material.extensions.emoji.twemoji ""
+                  emoji_generator: !!python/name:material.extensions.emoji.to_svg ""
+                  options:
+                          custom_icons:
+                                  - overrides/.icons
+        - pymdownx.superfences
 extra_css:
-  - stylesheets/extra.css
+        - stylesheets/extra.css
 plugins:
-  - macros
-  - search
-  - mkdocs-swagger-ui
+        - macros
+        - search
+        - mkdocs-swagger-ui

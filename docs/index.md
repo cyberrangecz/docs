@@ -1,23 +1,25 @@
-# KYPO Cyber Range Platform
+# CyberRangeCZ Platform
 
-KYPO Cyber Range Platform (KYPO CRP) is developed by Masaryk University since 2013, and it represents several years of our experience with cyber ranges in education, cyber defense exercises, and trainings. KYPO CRP is entirely based on state-of-the-art approaches such as containers, infrastructures as code, microservices, and open-source software, including cloud provider technology - OpenStack. With practical applications in mind, the team emphasized repeatability, scalability, automation, and interoperability to minimize human tasks and make cyber trainings affordable and cost-efficient.
+CyberRangeCZ Platform is a fork of the KYPO Cyber Range Platform (KYPO CRP), a registered trademark of Masaryk University.  The original KYPO CRP was developed by Masaryk University starting in 2013, representing years of experience in cyber ranges for education, cyber defense exercises, and training.  CyberRangeCZ Platform builds upon this foundation.
 
-KYPO CRP uses the same open approach for the content as for its architecture to encourage creating a community of trainers and supporting the sharing of training building blocks. For that reason, virtual machines, networks, and trainings are entirely defined in human-readable data-serialization languages JSON and YAML or use open-source software Packer to build virtual machines and Ansible for describing machine content.
+CyberRangeCZ Platform, is built using modern approaches like containers, infrastructure as code, microservices, and open-source software, including the OpenStack and AWS cloud provider technology.  The emphasis on repeatability, scalability, automation, and interoperability minimizes human tasks and makes cyber trainings affordable.
 
-The KYPO CRP sources are currently hosted at [https://gitlab.ics.muni.cz/muni-kypo-crp](https://gitlab.ics.muni.cz/muni-kypo-crp).
+CyberRangeCZ Platform maintains the open approach to content and architecture pioneered by KYPO CRP, encouraging a community of trainers in creation and sharing of training building blocks.  Virtual machines, networks, and trainings are defined in human-readable data-serialization languages (JSON and YAML) using open-source tools like Packer for building virtual machine images and Ansible for describing machine content.
+
+The CyberRangeCZ Platform sources are currently hosted at [https://github.com/cyberrangecz](https://github.com/cyberrangecz). The original KYPO CRP sources are hosted at [https://gitlab.ics.muni.cz/muni-kypo-crp](https://gitlab.ics.muni.cz/muni-kypo-crp).
 
 ## Getting Started
 
-We are glad that you are interested in our KYPO Cyber Range Platform. Please check the section Basic Concepts if you want to read more about the platform. It contains all supported [use-cases](./basic-concepts/use-cases.md) of the platform, used [terminology](./basic-concepts/terminology.md), and also the [typical workflow](./basic-concepts/typical-training-workflow/overview.md). Please also consult [Available Features](./available-features.md) for what is done for now and what is not.
+We are glad that you are interested in the CyberRangeCZ Platform.  Please check the section Basic Concepts if you want to learn more about the platform.  It contains all supported [use-cases](./basic-concepts/use-cases.md), used [terminology](./basic-concepts/terminology.md), and also the [typical workflow](./basic-concepts/typical-training-workflow/overview.md).
 
-If you decide to deploy KYPO CRP in your organization, please check our Installation Guide and pay attention to a page describing [OpenStack Requirements](./installation-guide/openstack-requirements.md). All information you need for work with our platform should be available in this documentation. If you think you missed something, please, check [FAQ](./faq.md) before contacting us.
+If you decide to deploy CyberRangeCZ Platform in your organization, please check our Installation Guide and pay attention to the page describing [OpenStack Requirements](./installation-guide/openstack-requirements.md). All information you need to work with the platform should be available in this documentation. If you think something is missing, please check [FAQ](./faq.md) before contacting us.
 
-## Be a part of our KYPO CRP community
+## Be a Part of the CyberRangeCZ Platform Community
 
-KYPO Cyber Range Platform is an open-source project. We walked a long way with the support of projects and institutions listed below. If you are considering supporting our KYPO CRP, please [contact us](https://www.crp.kypo.muni.cz/#contact). On the other hand, if you are thinking about contributing to KYPO you can find more details at [Contribute to Docs](contribute-to-docs.md).
+CyberRangeCZ Platform is an open-source project. We build upon the work of the KYPO CRP project, supported by the projects and institutions listed in the [Acknowledgements](./acknowledgements.md) section. If you are considering supporting CyberRangeCZ Platform, please [contact us](https://www.cyberrange.cz/contact/).
 
 ## Get Professional Support
 
-We tried our best to create the KYPO Cyber Range Platform as simple as is possible for such complex software. We made all our documentation public here to help you with deployment and running the platform.
+We tried our best to create the CyberRangeCZ Platform as simple as possible for such a complex piece of software.  All documentation is publicly available here to help you with deployment and operation.
 
-But if you need professional support or just looking for someone who will help you pick up the OpenStack cluster and deploy the KYPO CRP for you, [let us know](https://www.crp.kypo.muni.cz/#contact).
+If you need professional support, or assistance with setting up an OpenStack cluster and deploying CyberRangeCZ Platform, [let us know](https://www.cyberrange.cz/contact/).

@@ -1,6 +1,6 @@
 #FAQ
 
-Here you can find the **Frequently asked questions** and answers regarding the **KYPO platform**. If the questions answered on this page are not sufficient as solutions for your problem, be sure to contact us on *support@kypo.cz*.
+Here you can find the **Frequently asked questions** and answers regarding the **CyberRangeCZ Platform**. If the questions answered on this page are not sufficient as solutions for your problem, be sure to contact us on *support@cyberrange.cz*.
 
 <!--
 ## Deployment
@@ -10,11 +10,11 @@ Here you can find the **Frequently asked questions** and answers regarding the *
 
 ## Sandboxes
 ### 1. **Q:** Can I connect to the VMs in my sandbox via ssh?
-**A: Yes!** Detailed instructions can be found in [Sandbox SSH Access](./user-guide-advanced/sandboxes/sandbox-access.md). 
+**A: Yes!** Detailed instructions can be found in [Sandbox SSH Access](./user-guide-advanced/sandboxes/sandbox-access.md).
 
 ### 2. **Q:** Are there any remote management tools on the sandbox machines? SSH, RDP, or WinRM? How are they set up? Is it possible to use them for my scenario?
 
-**A: Yes!** Sandbox machines must have these tools to provision sandbox. On UN*X machines, there is an SSH, and on Windows, there is WinRM. Image developers configure these tools, and KYPO does not change their configuration. But their configuration can be changed in Sandbox Provisioning. Be careful not to cut the path to the machine. 
+**A: Yes!** Sandbox machines must have these tools to provision sandbox. On UN*X machines, there is an SSH, and on Windows, there is WinRM. Image developers configure these tools, and CyberRangeCZ Platform does not change their configuration. But their configuration can be changed in Sandbox Provisioning. Be careful not to cut the path to the machine.
 
 ### 3. **Q:** Is it possible to restrict SSH only for the management network after Sandbox Networking or turn it off completely?
 **A: Yes!** SSH user access is led through the networks defined in the sandbox topology definition so that trainee could access the machine only via a web console. Management network can be completely blocked in [Sandbox Provisioning](./user-guide-advanced/sandboxes/sandbox-provisioning.md), but you (as organizer) won't be able to access machines and won't help your students.
@@ -22,7 +22,7 @@ Here you can find the **Frequently asked questions** and answers regarding the *
 ### 4. **Q:** How can I define the level of interaction between trainees and hosts in a sandbox definition?
 **A:** Two options can be set up to limit the way trainees interact with hosts. The first option is to define an attribute `hidden: True` for any host. This node will not be displayed to the trainee in the topology visualization. The second option is to define `accessible_by_user: False` for a network, which blocks users from accessing nodes within this network and will also be left out of the user ssh config. By default, all other networks are user accessible.
 
-A detailed list of sandbox definition attributes can be found [here](https://docs.crp.kypo.muni.cz/user-guide-advanced/sandboxes/topology-definition/).
+A detailed list of sandbox definition attributes can be found [here](./user-guide-advanced/sandboxes/topology-definition.md).
 
 <!--
 ## Trainings
