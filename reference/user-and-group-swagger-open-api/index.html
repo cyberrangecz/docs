@@ -1,0 +1,2482 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../sandbox-service-swagger-open-api/">
+      
+      
+        <link rel="next" href="../training-swagger-open-api/">
+      
+      
+      <link rel="icon" href="../../img/crczp-symbol.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>User and Group Service - CyberRangeCZ Platform</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CyberRangeCZ Platform" class="md-header__button md-logo" aria-label="CyberRangeCZ Platform" data-md-component="logo">
+      
+  <img src="../../img/crczp-symbol.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CyberRangeCZ Platform
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              User and Group Service
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CyberRangeCZ Platform" class="md-nav__button md-logo" aria-label="CyberRangeCZ Platform" data-md-component="logo">
+      
+  <img src="../../img/crczp-symbol.svg" alt="logo">
+
+    </a>
+    CyberRangeCZ Platform
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basic Concepts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basic Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic-concepts/use-cases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Cases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic-concepts/terminology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminology
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic-concepts/conceptual-architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conceptual Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Typical Training Workflow
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Typical Training Workflow
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic-concepts/typical-training-workflow/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic-concepts/typical-training-workflow/training-workflow-cloud/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Training Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Guide (Basic)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide (Basic)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/login-and-logout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Login & Logout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sandbox Agenda
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sandbox Agenda
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/sandbox-agenda/sandbox-agenda-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/sandbox-agenda/sandbox-definition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Definition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/sandbox-agenda/pool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pool
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/sandbox-agenda/images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Training Agenda
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Training Agenda
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-agenda-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Training Definition
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Training Definition
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-definition/linear-training-definition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linear Training Definition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-definition/adaptive-training-definition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adaptive Training Definition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-definition/mitre-attack-matrix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MITRE ATT&CK Matrix
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-definition/instance-simulator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instance Simulator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/cheating-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cheating Detection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-instance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Training Instance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_5" id="__nav_3_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Training Run
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Training Run
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-run/linear-training-run/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linear Training Run
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-run/adaptive-training-run/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adaptive Training Run
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_6" id="__nav_3_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visualization Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Visualization Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/visualizations/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/visualizations/visualizations-for-adaptive/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualizations for Adaptive Training
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualizations for Linear Training
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Administration Agenda
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Administration Agenda
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/administration-agenda/administration-agenda-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/administration-agenda/users/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Users
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/administration-agenda/groups/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Groups
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/administration-agenda/microservices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Guide (Advanced)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide (Advanced)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/user-guide-advanced-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sandboxes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sandboxes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/sandboxes-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/sandbox-definition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Definition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/topology-definition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Topology Definition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/topology-instance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Topology Instance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/sandbox-provisioning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Provisioning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/sandbox-access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/apg-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    APG Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/sandbox_dockers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Containers in Sandbox Definitions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/sandbox-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Monitoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Trainings
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Trainings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/trainings/trainings-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Users and Groups
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Users and Groups
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/users-and-groups/users-and-groups-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/users-and-groups/roles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Roles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Installation Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-guide/installation-guide-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-guide/openstack-requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenStack Requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-guide/setting-up-oidc-provider/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up OIDC Provider
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-guide/platform-components/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Platform Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sandbox-service-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    User and Group Service
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../training-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Training Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adaptive-training-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adaptive Training Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adaptive-smart-assistant-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adaptive Smart Assistant Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../training-feedback-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Training Feedback Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../answers-storage-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Answers Storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elasticsearch-service-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elasticsearch Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mitre-technique-service-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mitre Technique Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables-of-permissions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables of Permissions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Extras
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Extras
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Logging
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Logging
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/logging/logs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/logging/architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/logging/how-to-use-it/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Use It
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/writing-documentation-mkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing Documentation - MkDocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../authors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acknowledgements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledgements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>User and Group Service</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui.css" >
+  <style>
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    .topbar {
+      display: none !important;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  </style>
+<div id="swagger-ui"></div>
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol viewBox="0 0 20 20" id="unlocked">
+          <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="locked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="close">
+      <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="large-arrow">
+      <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="large-arrow-down">
+      <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/>
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="jump-to">
+      <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="expand">
+      <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+    </symbol>
+  </defs>
+ </svg>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui-bundle.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui-standalone-preset.js"> </script>
+<script>
+window.onload = function() {
+  var spec = {"swagger": "2.0", "info": {"version": "Version: 0.0.2", "title": "User and Group - API Reference"}, "host": "localhost:8084", "basePath": "/user-and-group/api/v1", "tags": [{"name": "groups"}, {"name": "roles"}, {"name": "users"}], "schemes": ["http", "https"], "paths": {"/groups": {"get": {"tags": ["groups"], "summary": "Get groups.", "description": "", "operationId": "getGroups", "produces": ["application/json"], "parameters": [{"in": "body", "name": "body", "description": "Filtering on IDMGroup entity attributes", "required": false, "schema": {"$ref": "#/definitions/Predicate"}}, {"name": "fields", "in": "query", "description": "Fields which should be returned in REST API response", "required": false, "type": "string"}, {"name": "page", "in": "query", "description": "Results page you want to retrieve (0..N)", "required": false, "type": "int", "x-example": "0"}, {"name": "size", "in": "query", "description": "Number of records per page.", "required": false, "type": "int", "x-example": "20"}, {"name": "sort", "in": "query", "description": "Sorting criteria in the format: property(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.", "required": false, "type": "array", "items": {"type": "string", "example": "asc"}, "collectionFormat": "multi", "x-example": "asc"}], "responses": {"200": {"description": "All groups found.", "schema": {"$ref": "#/definitions/GroupRestResource"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}, "post": {"tags": ["groups"], "summary": "Create new group.", "description": "", "operationId": "createNewGroup", "consumes": ["application/json"], "produces": ["application/json"], "parameters": [{"in": "body", "name": "body", "description": "Group to be created.", "required": true, "schema": {"$ref": "#/definitions/NewGroupDTO"}}], "responses": {"200": {"description": "successful operation", "schema": {"$ref": "#/definitions/GroupDTO"}}, "201": {"description": "Given group created.", "schema": {"$ref": "#/definitions/GroupDTO"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}, "put": {"tags": ["groups"], "summary": "Update group.", "description": "", "operationId": "updateGroup", "consumes": ["application/json"], "produces": ["application/json"], "parameters": [{"in": "body", "name": "body", "description": "Group to be updated.", "required": true, "schema": {"$ref": "#/definitions/UpdateGroupDTO"}}], "responses": {"200": {"description": "Group updated."}, "405": {"description": "Group is external and cannot be modified.", "schema": {"$ref": "#/definitions/ApiError"}}, "409": {"description": "Name of the main group cannot be changed.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}, "delete": {"tags": ["groups"], "summary": "Delete groups", "description": "Tries to deleteIDMGroup groups with given ids and returns groups and statuses of their deletion", "operationId": "deleteGroups", "consumes": ["application/json"], "produces": ["application/json"], "parameters": [{"in": "body", "name": "body", "description": "Ids of groups to be deleted.", "required": true, "schema": {"type": "array", "items": {"type": "integer", "format": "int64"}}}], "responses": {"200": {"description": "Returned HTTP status OK."}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}}, "/groups/{groupId}": {"get": {"tags": ["groups"], "summary": "Get group with given id", "description": "", "operationId": "getGroupById", "produces": ["application/json"], "parameters": [{"name": "groupId", "in": "path", "description": "Id of group to be returned.", "required": true, "type": "integer", "format": "int64"}], "responses": {"200": {"description": "Group found.", "schema": {"$ref": "#/definitions/GroupDTO"}}, "404": {"description": "Group cannot be found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}, "delete": {"tags": ["groups"], "summary": "Delete group", "description": "Tries to deleteIDMGroup group with given id and returns if it was successful.", "operationId": "deleteGroup", "produces": ["application/json"], "parameters": [{"name": "groupId", "in": "path", "description": "Id of group to be deleted.", "required": true, "type": "integer", "format": "int64"}], "responses": {"200": {"description": "Returned deletion status of the group."}, "404": {"description": "Group cannot be found.", "schema": {"$ref": "#/definitions/ApiError"}}, "405": {"description": "Group cannot be deleted because it is a main group.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}}, "/groups/{groupId}/roles/{roleId}": {"put": {"tags": ["groups"], "summary": "Assign role to the group", "description": "", "operationId": "assignRoleToGroup", "parameters": [{"name": "groupId", "in": "path", "description": "groupId", "required": true, "type": "integer", "format": "int64"}, {"name": "roleId", "in": "path", "description": "roleId", "required": true, "type": "integer", "format": "int64"}], "responses": {"204": {"description": "Role assigned to group."}, "404": {"description": "Role or group cannot be found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}, "delete": {"tags": ["groups"], "summary": "Remove role from the group", "description": "Role can be removed only if it is not main role of the group.", "operationId": "removeRoleFromGroup", "parameters": [{"name": "groupId", "in": "path", "description": "groupId", "required": true, "type": "integer", "format": "int64"}, {"name": "roleId", "in": "path", "description": "roleId", "required": true, "type": "integer", "format": "int64"}], "responses": {"204": {"description": "Role successfully removed from the group."}, "404": {"description": "Group cannot be found or role cannot be found in group.", "schema": {"$ref": "#/definitions/ApiError"}}, "409": {"description": "Role cannot be removed from the group because it is the main role of the group.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}}, "/groups/{groupId}/users": {"put": {"tags": ["groups"], "summary": "Add users to group.", "description": "", "operationId": "addUsersToGroup", "consumes": ["application/json"], "parameters": [{"name": "groupId", "in": "path", "description": "Id of group to add users.", "required": true, "type": "integer", "format": "int64"}, {"in": "body", "name": "body", "description": "Ids of members to be added and ids of groups of imported members to group.", "required": true, "schema": {"$ref": "#/definitions/AddUsersToGroupDTO"}}], "responses": {"204": {"description": "User has been given into group."}, "304": {"description": "Group is external and cannot be modified.", "schema": {"$ref": "#/definitions/ApiError"}}, "404": {"description": "Group or some user cannot be found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}, "delete": {"tags": ["groups"], "summary": "Remove users from the group.", "description": "", "operationId": "removeUsers", "parameters": [{"name": "groupId", "in": "path", "description": "Id of group to remove users.", "required": true, "type": "integer", "format": "int64"}, {"in": "body", "name": "body", "description": "Ids of members to be removed from group.", "required": true, "schema": {"type": "array", "items": {"type": "integer", "format": "int64"}}}], "responses": {"204": {"description": "User has been removed from the group."}, "304": {"description": "Group is external and cannot be modified.", "schema": {"$ref": "#/definitions/ApiError"}}, "404": {"description": "Group or some user cannot be found.", "schema": {"$ref": "#/definitions/ApiError"}}, "409": {"description": "Users cannot be removed from default group or administrator cannot remove himself.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}}, "/groups/{id}/roles": {"get": {"tags": ["groups"], "summary": "Returns all roles of group", "description": "", "operationId": "getRolesOfGroup", "parameters": [{"in": "body", "name": "body", "description": "Filtering on IDMGroup entity attributes", "required": false, "schema": {"$ref": "#/definitions/Predicate"}}, {"name": "id", "in": "path", "description": "id", "required": true, "type": "integer", "format": "int64"}, {"name": "page", "in": "query", "description": "Results page you want to retrieve (0..N)", "required": false, "type": "int", "x-example": "0"}, {"name": "size", "in": "query", "description": "Number of records per page.", "required": false, "type": "int", "x-example": "20"}, {"name": "sort", "in": "query", "description": "Sorting criteria in the format: property(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.", "required": false, "type": "array", "items": {"type": "string", "example": "asc"}, "collectionFormat": "multi", "x-example": "asc"}], "responses": {"200": {"description": "All roles of group found.", "schema": {"$ref": "#/definitions/RoleRestResource"}}, "404": {"description": "Group cannot be found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}}, "/roles": {"get": {"tags": ["roles"], "summary": "Get all roles", "description": "", "operationId": "getRoles", "produces": ["application/json"], "parameters": [{"in": "body", "name": "body", "description": "Filtering on Role entity attributes", "required": false, "schema": {"$ref": "#/definitions/Predicate"}}, {"name": "fields", "in": "query", "description": "Fields which should be returned in REST API response", "required": false, "type": "string"}, {"name": "page", "in": "query", "description": "Results page you want to retrieve (0..N)", "required": false, "type": "int", "x-example": "0"}, {"name": "size", "in": "query", "description": "Number of records per page.", "required": false, "type": "int", "x-example": "20"}, {"name": "sort", "in": "query", "description": "Sorting criteria in the format: property(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.", "required": false, "type": "array", "items": {"type": "string", "example": "asc"}, "collectionFormat": "multi", "x-example": "asc"}], "responses": {"200": {"description": "All roles found.", "schema": {"$ref": "#/definitions/RoleRestResource"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}}, "/roles/not-in-group/{groupId}": {"get": {"tags": ["roles"], "summary": "Gets all roles except roles of given group.", "description": "", "operationId": "getAllRolesNotInGivenGroup", "produces": ["application/json"], "parameters": [{"in": "body", "name": "body", "description": "Filtering on Role entity attributes", "required": false, "schema": {"$ref": "#/definitions/Predicate"}}, {"name": "groupId", "in": "path", "description": "Id of group whose roles not to include", "required": true, "type": "integer", "format": "int64"}, {"name": "fields", "in": "query", "description": "Fields which should be returned in REST API response", "required": false, "type": "string"}, {"name": "page", "in": "query", "description": "Results page you want to retrieve (0..N)", "required": false, "type": "int", "x-example": "0"}, {"name": "size", "in": "query", "description": "Number of records per page.", "required": false, "type": "int", "x-example": "20"}, {"name": "sort", "in": "query", "description": "Sorting criteria in the format: property(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.", "required": false, "type": "array", "items": {"type": "string", "example": "asc"}, "collectionFormat": "multi", "x-example": "asc"}], "responses": {"200": {"description": "Roles found.", "schema": {"$ref": "#/definitions/RoleRestResource"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}}, "/roles/users": {"get": {"tags": ["roles"], "summary": "Gets all users with given role type.", "description": "", "operationId": "getUsersWithGivenRoleType", "produces": ["application/json"], "parameters": [{"in": "body", "name": "body", "description": "Filtering on User entity attributes", "required": false, "schema": {"$ref": "#/definitions/Predicate"}}, {"name": "fields", "in": "query", "description": "Fields which should be returned in REST API response", "required": false, "type": "string"}, {"name": "roleType", "in": "query", "description": "Type of role to getGroupById users for.", "required": true, "type": "string"}, {"name": "page", "in": "query", "description": "Results page you want to retrieve (0..N)", "required": false, "type": "int", "x-example": "0"}, {"name": "size", "in": "query", "description": "Number of records per page.", "required": false, "type": "int", "x-example": "20"}, {"name": "sort", "in": "query", "description": "Sorting criteria in the format: property(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.", "required": false, "type": "array", "items": {"type": "string", "example": "asc"}, "collectionFormat": "multi", "x-example": "asc"}], "responses": {"200": {"description": "Users with specific role type found.", "schema": {"$ref": "#/definitions/UserRestResource"}}, "404": {"description": "Role cannot be found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}}, "/roles/users-not-with-ids": {"get": {"tags": ["roles"], "summary": "Gets all users with given role and not with given ids.", "description": "Page size cannot be higher than 1000", "operationId": "getUsersWithGivenRoleTypeAndNotWithGivenIds", "produces": ["application/json"], "parameters": [{"in": "body", "name": "body", "description": "Filtering on User entity attributes", "required": false, "schema": {"$ref": "#/definitions/Predicate"}}, {"name": "fields", "in": "query", "description": "Fields which should be returned in REST API response", "required": false, "type": "string"}, {"name": "roleType", "in": "query", "description": "Type of role to getGroupById users for.", "required": true, "type": "string"}, {"name": "ids", "in": "query", "description": "Ids of the users to be excluded from the result.", "required": true, "type": "array", "items": {"type": "integer", "format": "int64"}, "collectionFormat": "multi"}, {"name": "page", "in": "query", "description": "Results page you want to retrieve (0..N)", "required": false, "type": "int", "x-example": "0"}, {"name": "size", "in": "query", "description": "Number of records per page.", "required": false, "type": "int", "x-example": "20"}, {"name": "sort", "in": "query", "description": "Sorting criteria in the format: property(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.", "required": false, "type": "array", "items": {"type": "string", "example": "asc"}, "collectionFormat": "multi", "x-example": "asc"}], "responses": {"200": {"description": "All roles found.", "schema": {"$ref": "#/definitions/UserRestResource"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}}, "/roles/{roleId}": {"get": {"tags": ["roles"], "summary": "Get role with given id", "description": "", "operationId": "getRole", "produces": ["application/json"], "parameters": [{"name": "roleId", "in": "path", "description": "Id of role to be returned", "required": true, "type": "integer", "format": "int64"}], "responses": {"200": {"description": "Role found.", "schema": {"$ref": "#/definitions/RoleDTO"}}, "404": {"description": "Role cannot be found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}}, "/roles/{roleId}/users": {"get": {"tags": ["roles"], "summary": "Gets all users with given role ID.", "description": "", "operationId": "getUsersWithGivenRole", "produces": ["application/json"], "parameters": [{"in": "body", "name": "body", "description": "Filtering on User entity attributes", "required": false, "schema": {"$ref": "#/definitions/Predicate"}}, {"name": "fields", "in": "query", "description": "Fields which should be returned in REST API response", "required": false, "type": "string"}, {"name": "roleId", "in": "path", "description": "Type of role to getGroupById users for.", "required": true, "type": "integer", "format": "int64"}, {"name": "page", "in": "query", "description": "Results page you want to retrieve (0..N)", "required": false, "type": "int", "x-example": "0"}, {"name": "size", "in": "query", "description": "Number of records per page.", "required": false, "type": "int", "x-example": "20"}, {"name": "sort", "in": "query", "description": "Sorting criteria in the format: property(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.", "required": false, "type": "array", "items": {"type": "string", "example": "asc"}, "collectionFormat": "multi", "x-example": "asc"}], "responses": {"200": {"description": "Users with specific role ID found.", "schema": {"$ref": "#/definitions/UserRestResource"}}, "404": {"description": "Role cannot be found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}}, "/users": {"get": {"tags": ["users"], "summary": "Gets all users.", "description": "", "operationId": "getUsers", "produces": ["application/json"], "parameters": [{"in": "body", "name": "body", "description": "Filtering on User entity attributes", "required": false, "schema": {"$ref": "#/definitions/Predicate"}}, {"name": "fields", "in": "query", "description": "Fields which should be returned in REST API response", "required": false, "type": "string"}, {"name": "page", "in": "query", "description": "Results page you want to retrieve (0..N)", "required": false, "type": "int", "x-example": "0"}, {"name": "size", "in": "query", "description": "Number of records per page.", "required": false, "type": "int", "x-example": "20"}, {"name": "sort", "in": "query", "description": "Sorting criteria in the format: property(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.", "required": false, "type": "array", "items": {"type": "string", "example": "asc"}, "collectionFormat": "multi", "x-example": "asc"}], "responses": {"200": {"description": "Users found.", "schema": {"$ref": "#/definitions/UserRestResource"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}, "post": {"tags": ["users"], "summary": "Import new users.", "description": "", "operationId": "importUsers", "consumes": ["application/json"], "produces": ["application/json"], "parameters": [{"in": "body", "name": "body", "description": "Object with users to be imported", "required": true, "schema": {"$ref": "#/definitions/UsersImportDTO"}}], "responses": {"201": {"description": "Given group created.", "schema": {"$ref": "#/definitions/GroupDTO"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}, "delete": {"tags": ["users"], "summary": "DeleteUsers", "description": "Delete users based on given ids.", "operationId": "deleteUsers", "consumes": ["application/json"], "produces": ["application/json"], "parameters": [{"in": "body", "name": "body", "description": "Ids of users to be deleted.", "required": true, "schema": {"type": "array", "items": {"type": "integer", "format": "int64"}}}], "responses": {"200": {"description": "Returned HTTP status OK."}, "404": {"description": "User could not be found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}}, "/users/groups": {"get": {"tags": ["users"], "summary": "Gets users in given groups.", "description": "", "operationId": "getUsersInGroups", "produces": ["application/json"], "parameters": [{"in": "body", "name": "body", "description": "Filtering on User entity attributes", "required": false, "schema": {"$ref": "#/definitions/Predicate"}}, {"name": "fields", "in": "query", "description": "Fields which should be returned in REST API response", "required": false, "type": "string"}, {"name": "ids", "in": "query", "description": "Ids of groups where users are assigned.", "required": true, "type": "array", "items": {"type": "integer", "format": "int64"}, "collectionFormat": "multi"}, {"name": "page", "in": "query", "description": "Results page you want to retrieve (0..N)", "required": false, "type": "int", "x-example": "0"}, {"name": "size", "in": "query", "description": "Number of records per page.", "required": false, "type": "int", "x-example": "20"}, {"name": "sort", "in": "query", "description": "Sorting criteria in the format: property(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.", "required": false, "type": "array", "items": {"type": "string", "example": "asc"}, "collectionFormat": "multi", "x-example": "asc"}], "responses": {"200": {"description": "Users in specific groups found.", "schema": {"$ref": "#/definitions/UserRestResource"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}}, "/users/ids": {"get": {"tags": ["users"], "summary": "Gets users with given ids.", "description": "Page size cannot be higher than 1000", "operationId": "getUsersWithGivenIds", "produces": ["application/json"], "parameters": [{"in": "body", "name": "body", "description": "Filtering on User entity attributes", "required": false, "schema": {"$ref": "#/definitions/Predicate"}}, {"name": "fields", "in": "query", "description": "Fields which should be returned in REST API response", "required": false, "type": "string"}, {"name": "ids", "in": "query", "description": "Ids of users to be obtained.", "required": true, "type": "array", "items": {"type": "integer", "format": "int64"}, "collectionFormat": "multi"}, {"name": "page", "in": "query", "description": "Results page you want to retrieve (0..N)", "required": false, "type": "int", "x-example": "0"}, {"name": "size", "in": "query", "description": "Number of records per page.", "required": false, "type": "int", "x-example": "20"}, {"name": "sort", "in": "query", "description": "Sorting criteria in the format: property(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.", "required": false, "type": "array", "items": {"type": "string", "example": "asc"}, "collectionFormat": "multi", "x-example": "asc"}], "responses": {"200": {"description": "Users with given ids found.", "schema": {"$ref": "#/definitions/UserRestResource"}}, "404": {"description": "User could not be found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}}, "/users/info": {"get": {"tags": ["users"], "summary": "Get user info", "description": "Returns details of user who is logged in.", "operationId": "getUserInfo", "parameters": [], "responses": {"200": {"description": "Base user info found.", "schema": {"$ref": "#/definitions/UserDTO"}}, "404": {"description": "User could not be found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}}, "/users/initial-oidc-users": {"get": {"tags": ["users"], "summary": "Get initial oidc users", "description": "Returns details of initial OIDC users.", "operationId": "getInitialOIDCUsers", "produces": ["application/octet-stream"], "parameters": [], "responses": {"200": {"description": "successful operation", "schema": {"type": "array", "items": {"type": "string", "format": "byte"}}}}, "security": [{"bearerAuth": []}]}}, "/users/not-in-group/{groupId}": {"get": {"tags": ["users"], "summary": "Gets all users except users in given group.", "description": "", "operationId": "getAllUsersNotInGivenGroup", "produces": ["application/json"], "parameters": [{"in": "body", "name": "body", "description": "Filtering on User entity attributes", "required": false, "schema": {"$ref": "#/definitions/Predicate"}}, {"name": "groupId", "in": "path", "description": "Id of group whose users do not getGroupById.", "required": true, "type": "integer", "format": "int64"}, {"name": "fields", "in": "query", "description": "Fields which should be returned in REST API response", "required": false, "type": "string"}, {"name": "page", "in": "query", "description": "Results page you want to retrieve (0..N)", "required": false, "type": "int", "x-example": "0"}, {"name": "size", "in": "query", "description": "Number of records per page.", "required": false, "type": "int", "x-example": "20"}, {"name": "sort", "in": "query", "description": "Sorting criteria in the format: property(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.", "required": false, "type": "array", "items": {"type": "string", "example": "asc"}, "collectionFormat": "multi", "x-example": "asc"}], "responses": {"200": {"description": "User found.", "schema": {"$ref": "#/definitions/UserRestResource"}}, "404": {"description": "Some user could not be found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}}, "/users/{id}/roles": {"get": {"tags": ["users"], "summary": "Returns all roles of user with given id.", "description": "", "operationId": "getRolesOfUser", "parameters": [{"in": "body", "name": "body", "description": "Filtering on User entity attributes", "required": false, "schema": {"$ref": "#/definitions/Predicate"}}, {"name": "id", "in": "path", "description": "id", "required": true, "type": "integer", "format": "int64"}, {"name": "page", "in": "query", "description": "Results page you want to retrieve (0..N)", "required": false, "type": "int", "x-example": "0"}, {"name": "size", "in": "query", "description": "Number of records per page.", "required": false, "type": "int", "x-example": "20"}, {"name": "sort", "in": "query", "description": "Sorting criteria in the format: property(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.", "required": false, "type": "array", "items": {"type": "string", "example": "asc"}, "collectionFormat": "multi", "x-example": "asc"}], "responses": {"200": {"description": "Roles of the users.", "schema": {"$ref": "#/definitions/RoleRestResource"}}, "404": {"description": "User could not be found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}}, "/users/{userId}": {"get": {"tags": ["users"], "summary": "Gets user with given id.", "description": "", "operationId": "getUserById", "produces": ["application/json"], "parameters": [{"name": "userId", "in": "path", "description": "Id of user to be returned.", "required": true, "type": "integer", "format": "int64"}], "responses": {"200": {"description": "User found.", "schema": {"$ref": "#/definitions/UserRestResource"}}, "404": {"description": "User not found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}, "delete": {"tags": ["users"], "summary": "Delete user", "description": "Delete user based on given id.", "operationId": "deleteUser", "produces": ["application/json"], "parameters": [{"name": "userId", "in": "path", "description": "Screen name of user to be deleted.", "required": true, "type": "integer", "format": "int64"}], "responses": {"200": {"description": "Returned HTTP status OK."}, "404": {"description": "User could not be found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}, "security": [{"bearerAuth": []}]}}}, "securityDefinitions": {"bearerAuth": {"description": "Obtain bearer token from OIDC provider and enter the token in the following field. Use format 'Bearer {token}'", "type": "apiKey", "name": "Authorization", "in": "header"}}, "definitions": {"AddUsersToGroupDTO": {"type": "object", "properties": {"idsOfUsersToBeAdd": {"type": "array", "example": "[1,2]", "description": "Main identifiers of users to be added to group.", "items": {"type": "integer", "format": "int64"}}, "idsOfGroupsOfImportedUsers": {"type": "array", "example": "[1,2]", "description": "Main group identifiers whose users are to be imported into a group.", "items": {"type": "integer", "format": "int64"}}}, "description": "Data that need to be provided to add users to a group."}, "ApiError": {"type": "object", "properties": {"timestamp": {"type": "integer", "format": "int64", "example": "1574062900 (different for each type of exception)", "description": "The time when the exception occurred"}, "status": {"type": "string", "example": "404 Not found (different for each type of exception).", "description": "The HTTP response status code", "enum": ["CONTINUE", "SWITCHING_PROTOCOLS", "PROCESSING", "CHECKPOINT", "OK", "CREATED", "ACCEPTED", "NON_AUTHORITATIVE_INFORMATION", "NO_CONTENT", "RESET_CONTENT", "PARTIAL_CONTENT", "MULTI_STATUS", "ALREADY_REPORTED", "IM_USED", "MULTIPLE_CHOICES", "MOVED_PERMANENTLY", "FOUND", "MOVED_TEMPORARILY", "SEE_OTHER", "NOT_MODIFIED", "USE_PROXY", "TEMPORARY_REDIRECT", "PERMANENT_REDIRECT", "BAD_REQUEST", "UNAUTHORIZED", "PAYMENT_REQUIRED", "FORBIDDEN", "NOT_FOUND", "METHOD_NOT_ALLOWED", "NOT_ACCEPTABLE", "PROXY_AUTHENTICATION_REQUIRED", "REQUEST_TIMEOUT", "CONFLICT", "GONE", "LENGTH_REQUIRED", "PRECONDITION_FAILED", "PAYLOAD_TOO_LARGE", "REQUEST_ENTITY_TOO_LARGE", "URI_TOO_LONG", "REQUEST_URI_TOO_LONG", "UNSUPPORTED_MEDIA_TYPE", "REQUESTED_RANGE_NOT_SATISFIABLE", "EXPECTATION_FAILED", "I_AM_A_TEAPOT", "INSUFFICIENT_SPACE_ON_RESOURCE", "METHOD_FAILURE", "DESTINATION_LOCKED", "UNPROCESSABLE_ENTITY", "LOCKED", "FAILED_DEPENDENCY", "UPGRADE_REQUIRED", "PRECONDITION_REQUIRED", "TOO_MANY_REQUESTS", "REQUEST_HEADER_FIELDS_TOO_LARGE", "UNAVAILABLE_FOR_LEGAL_REASONS", "INTERNAL_SERVER_ERROR", "NOT_IMPLEMENTED", "BAD_GATEWAY", "SERVICE_UNAVAILABLE", "GATEWAY_TIMEOUT", "HTTP_VERSION_NOT_SUPPORTED", "VARIANT_ALSO_NEGOTIATES", "INSUFFICIENT_STORAGE", "LOOP_DETECTED", "BANDWIDTH_LIMIT_EXCEEDED", "NOT_EXTENDED", "NETWORK_AUTHENTICATION_REQUIRED"]}, "message": {"type": "string", "example": "The IDMGroup could not be found in database (different for each type of exception).", "description": "The specific description of the ApiError."}, "errors": {"type": "array", "example": "[\"The requested resource was not found (different for each type of exception).\"]", "description": "The list of main reasons of the ApiError.", "items": {"type": "string"}}, "path": {"type": "string", "example": "/user-and-group/api/v1/groups/1000 (different for each type of exception).", "description": "The requested URI path which caused error."}}}, "GroupDTO": {"type": "object", "properties": {"name": {"type": "string", "example": "Main group of organizers", "description": "A name of the group."}, "description": {"type": "string", "example": "Organizers group for training run in June.", "description": "A description of the group."}, "roles": {"type": "array", "description": "Set of roles of  group.", "uniqueItems": true, "items": {"$ref": "#/definitions/RoleDTO"}}, "users": {"type": "array", "description": "Set of users in group.", "uniqueItems": true, "items": {"$ref": "#/definitions/UserForGroupsDTO"}}, "source": {"type": "string", "example": "Internal", "description": "Source of the group, whether its internal or from perun.", "enum": ["INTERNAL", "PERUN"]}, "canBeDeleted": {"type": "boolean", "example": false, "description": "Sign if the group can be deleted."}, "expirationDate": {"type": "string", "format": "date-time", "example": "2017-10-19 10:23:54+02", "description": "Time until the group is valid."}, "id": {"type": "integer", "format": "int64", "example": 1, "position": 1, "description": "Main identifier of group."}}, "description": "The detailed information about a group."}, "GroupRestResource": {"type": "object", "properties": {"content": {"type": "array", "description": "Retrieved IDMGroups from databases.", "items": {"$ref": "#/definitions/GroupViewDTO"}}, "pagination": {"description": "Pagination including: page number, number of elements in page, size, total elements and total pages.", "$ref": "#/definitions/Pagination"}}, "description": "Content (Retrieved data) and meta information about REST API result page. Including page number, number of elements in page, size of elements, total number of elements and total number of pages."}, "GroupViewDTO": {"type": "object", "properties": {"name": {"type": "string", "example": "Main group of organizers", "description": "A name of the group."}, "description": {"type": "string", "example": "Organizers group for training run in June.", "description": "A description of the group."}, "source": {"type": "string", "example": "Internal", "description": "Source of the group, whether its internal or from perun.", "enum": ["INTERNAL", "PERUN"]}, "canBeDeleted": {"type": "boolean", "example": false, "description": "Sign if the group can be deleted."}, "expirationDate": {"type": "string", "format": "date-time", "example": "2017-10-19 10:23:54+02", "description": "Time until the group is valid."}, "id": {"type": "integer", "format": "int64", "example": 1, "position": 1, "description": "Main identifier of group."}}, "description": "The basic information about a group."}, "NewGroupDTO": {"type": "object", "required": ["description", "name"], "properties": {"name": {"type": "string", "example": "Main group", "description": "A name of the group."}, "description": {"type": "string", "example": "Group for main users.", "description": "A description of the group."}, "expirationDate": {"type": "string", "format": "date-time", "example": "2019-11-20T10:28:02.727Z", "description": "Time until the group is valid."}, "users": {"type": "array", "description": "List of users who is assigned to group.", "uniqueItems": true, "items": {"$ref": "#/definitions/UserForGroupsDTO"}}, "groupIdsOfImportedUsers": {"type": "array", "example": "[1]", "description": "Main identifiers of group.", "items": {"type": "integer", "format": "int64"}}}, "description": "Data that need to be provided to create a new group."}, "Pagination": {"type": "object", "required": ["number", "numberOfElements", "size", "totalElements", "totalPages"], "properties": {"number": {"type": "integer", "format": "int32", "example": 1, "description": "Page number."}, "numberOfElements": {"type": "integer", "format": "int32", "example": 20, "description": "Number of elements in page."}, "size": {"type": "integer", "format": "int32", "example": 20, "description": "Page size."}, "totalElements": {"type": "integer", "format": "int64", "example": 100, "description": "Total number of elements in this resource (in all Pages)."}, "totalPages": {"type": "integer", "format": "int32", "example": 5, "description": "Total number of pages."}}}, "Predicate": {"type": "object"}, "Result info (Page)": {"type": "object", "required": ["content", "pagination"], "properties": {"content": {"type": "array", "position": 1, "description": "Content - (Retrieved data) from databases.", "items": {"type": "object"}}, "pagination": {"position": 2, "description": "Pagination including: page number, number of elements in page, size, total elements and total pages.", "$ref": "#/definitions/Pagination"}}, "description": "Content (Retrieved data) and meta information about REST API result page. Including page number, number of elements in page, size of elements, total number of elements and total number of pages"}, "Result info (Page)RoleDTO": {"type": "object", "required": ["content", "pagination"], "properties": {"content": {"type": "array", "position": 1, "description": "Content - (Retrieved data) from databases.", "items": {"$ref": "#/definitions/RoleDTO"}}, "pagination": {"position": 2, "description": "Pagination including: page number, number of elements in page, size, total elements and total pages.", "$ref": "#/definitions/Pagination"}}, "description": "Content (Retrieved data) and meta information about REST API result page. Including page number, number of elements in page, size of elements, total number of elements and total number of pages"}, "RoleDTO": {"type": "object", "properties": {"idOfMicroservice": {"type": "integer", "format": "int64", "example": 5, "description": "Id of microservice which use this role."}, "nameOfMicroservice": {"type": "string", "example": "training", "description": "A name of microservice which use this role."}, "description": {"type": "string", "example": "This role will allow you to create and delete groups.", "description": "A description of what the user is capable of with this role."}, "role_type": {"type": "string", "example": "ROLE_USER_AND_GROUP_ADMINISTRATOR", "description": "Role type of role."}, "id": {"type": "integer", "format": "int64", "example": 1, "position": 1, "description": "Main identifier of the role."}}, "description": "The detailed information about role."}, "RoleRestResource": {"type": "object", "properties": {"content": {"type": "array", "description": "Retrieved Roles from databases.", "items": {"$ref": "#/definitions/RoleDTO"}}, "pagination": {"description": "Pagination including: page number, number of elements in page, size, total elements and total pages.", "$ref": "#/definitions/Pagination"}}, "description": "Content (Retrieved data) and meta information about REST API result page. Including page number, number of elements in page, size of elements, total number of elements and total number of pages."}, "UpdateGroupDTO": {"type": "object", "required": ["description", "id", "name"], "properties": {"name": {"type": "string", "example": "Main group.", "description": "A name of the group."}, "description": {"type": "string", "example": "Group for main users.", "description": "A description of the group."}, "expiration_date": {"type": "string", "format": "date-time", "example": "2019-11-20T10:28:02.727Z", "description": "Time until the group is valid."}, "id": {"type": "integer", "format": "int64", "example": 1, "position": 1, "description": "Main identifier of group."}}, "description": "Data that need to be provided to update particular group."}, "UserDTO": {"type": "object", "properties": {"sub": {"type": "string", "example": "mail@mail.example.cz", "description": "Sub of the user."}, "iss": {"type": "string", "example": "https://oidc.example.cz", "description": "Issuer of a user."}, "fullName": {"type": "string", "example": "John Doe", "description": "Full name of the user."}, "mail": {"type": "string", "example": "johndoe@mail.example.cz", "description": "Email of the user."}, "givenName": {"type": "string", "example": "John", "description": "First name of a user."}, "familyName": {"type": "string", "example": "Doe", "description": "Surname of a user."}, "roles": {"type": "array", "description": "Roles of user assigned through the groups which user is in.", "uniqueItems": true, "items": {"$ref": "#/definitions/RoleDTO"}}, "picture": {"type": "array", "example": "iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAYAAAA4TnrqAAACIUlEQVR4Xu3YsY0dSQxAQQUlpXT5Z3CS/YgxSrQa4gLlEOBb9pj/x6//fv7/t/78/XhN3yBWyz3kBX2DWC33kBf0DWK13ENe0DeI1XIPeUHfIFbLPeQFfYNYLfeQF/QNYrXcQ17QN4jVcg95Qd8gVss95AV9g1gt95AX9A1itdxDXtA3iNVyD3lB3yBWyz3kBX2DWC33kBf0DWLERGOiLdGWaEuMgeghoi3RlmhLjIHoIaIt0ZZoS4yB6CGiLdGWaEuMgeghoi3RlmhLjIHoIaIt0ZZoS4yB6CGiLdGWaEuMgeghoi3RlmhLjIHoIaIt0ZZoS4yB6CGiLdGWaEuMgeghoi3RlmhLjIHoIaIt0ZZoS4yB6CGiLdGWaEuMgeghoi3RlmhLjIHoIaIt0ZZoS6z+8b/mPha4jwXuY4H7WOA+FriPBe5jgftY4D4WuI8F7mOB+1jgPha4jwXGbzbn2xicb2Nwvo3B+TYG59sYnG9jcL6Nwfk2BufbGJxvY3C+jcH5Ngbn2xicb2Nwvq1+z2pMtCXaEm2J1XIPEW2JtkRbYrXcQ0Rboi3Rllgt9xDRlmhLtCVWyz1EtCXaEm2J1XIPEW2JtkRbYrXcQ0Rboi3Rllgt9xDRlmhLtCVWyz1EtCXaEm2J1XIPEW2JtkRbYrXcQ0Rboi3Rllgt9xDRlmhLtCVWyz1EtCXaEm2J1XIPEW2JtkRbYrXcQ0Rboi3RlvgNt34wfeJElG8AAAAASUVORK5CYII=", "description": "Identicon of a user.", "items": {"type": "string", "format": "byte"}}, "id": {"type": "integer", "format": "int64", "example": 1, "position": 1, "description": "Main identifier of the user."}}, "description": "Detailed information about user."}, "UserForGroupsDTO": {"type": "object", "properties": {"sub": {"type": "string", "example": "mail@mail.example.cz", "description": "Sub of the user."}, "iss": {"type": "string", "example": "https://oidc.provider.cz", "description": "Issuer of a user."}, "fullName": {"type": "string", "example": "John Doe", "description": "Full name of the user including his titles."}, "givenName": {"type": "string", "example": "John", "description": "First name of a user."}, "familyName": {"type": "string", "example": "Doe", "description": "Surname of a user."}, "mail": {"type": "string", "example": "johndoe@mail.example.cz", "description": "Email of the user."}, "picture": {"type": "array", "example": "iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAYAAAA4TnrqAAACIUlEQVR4Xu3YsY0dSQxAQQUlpXT5Z3CS/YgxSrQa4gLlEOBb9pj/x6//fv7/t/78/XhN3yBWyz3kBX2DWC33kBf0DWK13ENe0DeI1XIPeUHfIFbLPeQFfYNYLfeQF/QNYrXcQ17QN4jVcg95Qd8gVss95AV9g1gt95AX9A1itdxDXtA3iNVyD3lB3yBWyz3kBX2DWC33kBf0DWLERGOiLdGWaEuMgeghoi3RlmhLjIHoIaIt0ZZoS4yB6CGiLdGWaEuMgeghoi3RlmhLjIHoIaIt0ZZoS4yB6CGiLdGWaEuMgeghoi3RlmhLjIHoIaIt0ZZoS4yB6CGiLdGWaEuMgeghoi3RlmhLjIHoIaIt0ZZoS4yB6CGiLdGWaEuMgeghoi3RlmhLjIHoIaIt0ZZoS6z+8b/mPha4jwXuY4H7WOA+FriPBe5jgftY4D4WuI8F7mOB+1jgPha4jwXGbzbn2xicb2Nwvo3B+TYG59sYnG9jcL6Nwfk2BufbGJxvY3C+jcH5Ngbn2xicb2Nwvq1+z2pMtCXaEm2J1XIPEW2JtkRbYrXcQ0Rboi3Rllgt9xDRlmhLtCVWyz1EtCXaEm2J1XIPEW2JtkRbYrXcQ0Rboi3Rllgt9xDRlmhLtCVWyz1EtCXaEm2J1XIPEW2JtkRbYrXcQ0Rboi3Rllgt9xDRlmhLtCVWyz1EtCXaEm2J1XIPEW2JtkRbYrXcQ0Rboi3RlvgNt34wfeJElG8AAAAASUVORK5CYII=", "description": "Identicon of a user.", "items": {"type": "string", "format": "byte"}}, "id": {"type": "integer", "format": "int64", "example": 1, "position": 1, "description": "Main identifiers of the user."}}, "description": "Encapsulates information about a user used in a given groups."}, "UserImportDTO": {"type": "object", "properties": {"sub": {"type": "string", "example": "johndoe@mail.example.cz", "description": "User sub."}, "iss": {"type": "string", "example": "https://oidc.provider.cz/oidc", "description": "OIDC issuer for that user record."}, "full_name": {"type": "string", "example": "John Doe", "description": "User full name."}, "given_name": {"type": "string", "example": "John", "description": "User given name."}, "family_name": {"type": "string", "example": "Doe", "description": "User family name."}}, "description": "Information that are necessary to import a user."}, "UserRestResource": {"type": "object", "properties": {"content": {"type": "array", "description": "Retrieved users from databases.", "items": {"$ref": "#/definitions/UserDTO"}}, "pagination": {"description": "Pagination including: page number, number of elements in page, size, total elements and total pages.", "$ref": "#/definitions/Pagination"}}, "description": "Content (Retrieved data) and meta information about REST API result page. Including page number, number of elements in page, size of elements, total number of elements and total number of pages."}, "UsersImportDTO": {"type": "object", "properties": {"users": {"type": "array", "description": "List of the user to be imported.", "items": {"$ref": "#/definitions/UserImportDTO"}}, "groupName": {"type": "string", "description": "New group to which the user will be assigned."}}, "description": "Information that are necessary to import users."}}};
+  // Build a system
+  const ui = SwaggerUIBundle({
+    spec: spec,
+    dom_id: '#swagger-ui',
+    deepLinking: true,
+    presets: [
+      SwaggerUIBundle.presets.apis,
+      SwaggerUIStandalonePreset
+    ],
+    plugins: [
+      SwaggerUIBundle.plugins.DownloadUrl
+    ],
+    layout: "StandaloneLayout"
+  })
+  window.ui = ui
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2020-2024 Masaryk University<br>Copyright © 2025 CyberSecurity Hub, z.s.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

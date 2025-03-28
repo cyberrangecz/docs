@@ -1,0 +1,2482 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../adaptive-smart-assistant-swagger-open-api/">
+      
+      
+        <link rel="next" href="../answers-storage-swagger-open-api/">
+      
+      
+      <link rel="icon" href="../../img/crczp-symbol.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Training Feedback Service - CyberRangeCZ Platform</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CyberRangeCZ Platform" class="md-header__button md-logo" aria-label="CyberRangeCZ Platform" data-md-component="logo">
+      
+  <img src="../../img/crczp-symbol.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CyberRangeCZ Platform
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Training Feedback Service
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CyberRangeCZ Platform" class="md-nav__button md-logo" aria-label="CyberRangeCZ Platform" data-md-component="logo">
+      
+  <img src="../../img/crczp-symbol.svg" alt="logo">
+
+    </a>
+    CyberRangeCZ Platform
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basic Concepts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basic Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic-concepts/use-cases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Cases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic-concepts/terminology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminology
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic-concepts/conceptual-architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conceptual Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Typical Training Workflow
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Typical Training Workflow
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic-concepts/typical-training-workflow/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic-concepts/typical-training-workflow/training-workflow-cloud/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Training Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Guide (Basic)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide (Basic)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/login-and-logout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Login & Logout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sandbox Agenda
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sandbox Agenda
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/sandbox-agenda/sandbox-agenda-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/sandbox-agenda/sandbox-definition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Definition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/sandbox-agenda/pool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pool
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/sandbox-agenda/images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Training Agenda
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Training Agenda
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-agenda-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Training Definition
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Training Definition
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-definition/linear-training-definition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linear Training Definition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-definition/adaptive-training-definition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adaptive Training Definition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-definition/mitre-attack-matrix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MITRE ATT&CK Matrix
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-definition/instance-simulator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instance Simulator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/cheating-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cheating Detection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-instance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Training Instance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_5" id="__nav_3_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Training Run
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Training Run
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-run/linear-training-run/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linear Training Run
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-run/adaptive-training-run/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adaptive Training Run
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_6" id="__nav_3_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visualization Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Visualization Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/visualizations/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/visualizations/visualizations-for-adaptive/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualizations for Adaptive Training
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualizations for Linear Training
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Administration Agenda
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Administration Agenda
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/administration-agenda/administration-agenda-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/administration-agenda/users/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Users
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/administration-agenda/groups/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Groups
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/administration-agenda/microservices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Guide (Advanced)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide (Advanced)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/user-guide-advanced-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sandboxes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sandboxes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/sandboxes-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/sandbox-definition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Definition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/topology-definition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Topology Definition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/topology-instance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Topology Instance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/sandbox-provisioning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Provisioning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/sandbox-access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/apg-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    APG Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/sandbox_dockers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Containers in Sandbox Definitions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/sandbox-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Monitoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Trainings
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Trainings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/trainings/trainings-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Users and Groups
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Users and Groups
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/users-and-groups/users-and-groups-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/users-and-groups/roles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Roles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Installation Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-guide/installation-guide-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-guide/openstack-requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenStack Requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-guide/setting-up-oidc-provider/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up OIDC Provider
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-guide/platform-components/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Platform Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sandbox-service-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-and-group-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User and Group Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../training-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Training Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adaptive-training-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adaptive Training Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adaptive-smart-assistant-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adaptive Smart Assistant Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Training Feedback Service
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../answers-storage-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Answers Storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elasticsearch-service-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elasticsearch Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mitre-technique-service-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mitre Technique Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables-of-permissions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables of Permissions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Extras
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Extras
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Logging
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Logging
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/logging/logs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/logging/architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/logging/how-to-use-it/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Use It
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/writing-documentation-mkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing Documentation - MkDocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../authors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acknowledgements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledgements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Training Feedback Service</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui.css" >
+  <style>
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    .topbar {
+      display: none !important;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  </style>
+<div id="swagger-ui"></div>
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol viewBox="0 0 20 20" id="unlocked">
+          <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="locked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="close">
+      <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="large-arrow">
+      <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="large-arrow-down">
+      <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/>
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="jump-to">
+      <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="expand">
+      <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+    </symbol>
+  </defs>
+ </svg>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui-bundle.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui-standalone-preset.js"> </script>
+<script>
+window.onload = function() {
+  var spec = {"swagger": "2.0", "info": {"version": "Version: 0.0.1", "title": "Training Feedback Service - API Reference"}, "host": "localhost:8087", "basePath": "/training-feedback/api/v1", "tags": [{"name": "Commands"}, {"name": "Graphs"}, {"name": "Trainees"}], "schemes": ["http", "https"], "paths": {"/commands/correct": {"get": {"tags": ["Commands"], "summary": "Get aggregated correct commands from given trainees", "description": "", "operationId": "getAggregatedCorrectCommands", "produces": ["application/json"], "parameters": [{"name": "runIds", "in": "query", "description": "The trainees training run ids", "required": true, "type": "array", "items": {"type": "integer", "format": "int64"}, "collectionFormat": "multi"}], "responses": {"200": {"description": "Aggregated correct commands have been found.", "schema": {"$ref": "#/definitions/AggregatedCommandsDTO"}}, "404": {"description": "Aggregated correct commands have not been found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}}}, "/commands/incorrect": {"get": {"tags": ["Commands"], "summary": "Get aggregated incorrect commands from given trainees and with specific mistake type", "description": "", "operationId": "getAggregatedIncorrectCommands", "produces": ["application/json"], "parameters": [{"name": "runIds", "in": "query", "description": "The trainees sandbox ids", "required": true, "type": "array", "items": {"type": "integer", "format": "int64"}, "collectionFormat": "multi"}, {"name": "mistakeTypes", "in": "query", "description": "Mistake types", "required": true, "type": "array", "items": {"type": "string", "enum": ["SYNTAX_UNKNOWN_COMMAND", "SYNTAX_INVALID_ARGUMENTS", "SYNTAX_INVALID_OPTION", "SYNTAX_MISSING_OPTION_PARAM", "SYNTAX_INVALID_OPTION_PARAM", "SEMANTIC_UNKNOWN_IP", "SEMANTIC_WRONG_IP"]}, "collectionFormat": "multi"}], "responses": {"200": {"description": "Trainees invalid commands have been found.", "schema": {"$ref": "#/definitions/CommandDTO"}}, "404": {"description": "Trainees invalid commands have not been found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}}}, "/commands/training-runs/{runId}": {"get": {"tags": ["Commands"], "summary": "Get all commands entered in the given training run", "description": "", "operationId": "getCommandsByTrainingRun", "produces": ["application/json"], "parameters": [{"name": "runId", "in": "path", "description": "The trainee's training run id", "required": true, "type": "integer", "format": "int64"}], "responses": {"200": {"description": "Trainee commands have been found.", "schema": {"$ref": "#/definitions/CommandDTO"}}, "404": {"description": "Trainee commands have not been found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}}}, "/commands/training-runs/{runId}/levels/{levelId}": {"get": {"tags": ["Commands"], "summary": "Get all commands entered in the given training run and specified level", "description": "", "operationId": "getCommandsByTrainingRunAndLevel", "produces": ["application/json"], "parameters": [{"name": "runId", "in": "path", "description": "The trainee sandbox id", "required": true, "type": "integer", "format": "int64"}, {"name": "levelId", "in": "path", "description": "The trainees level id", "required": true, "type": "integer", "format": "int64"}], "responses": {"200": {"description": "Trainee commands have been found.", "schema": {"$ref": "#/definitions/CommandDTO"}}, "404": {"description": "Trainee commands have not been found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}}}, "/graphs/reference/training-definitions/{definitionId}": {"delete": {"tags": ["Graphs"], "summary": "Delete reference graph", "description": "", "operationId": "deleteReferenceGraph", "produces": ["application/json"], "parameters": [{"name": "definitionId", "in": "path", "description": "ID of the training definition.", "required": true, "type": "integer", "format": "int64"}], "responses": {"200": {"description": "successful operation", "schema": {"$ref": "#/definitions/GraphDTO"}}, "204": {"description": "Reference graph successfully deleted."}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}}}, "/graphs/summary/training-instances/{instanceId}": {"delete": {"tags": ["Graphs"], "summary": "Delete summary graph", "description": "", "operationId": "deleteSummaryGraph", "produces": ["application/json"], "parameters": [{"name": "instanceId", "in": "path", "description": "ID of the training instance.", "required": true, "type": "integer", "format": "int64"}], "responses": {"200": {"description": "successful operation", "schema": {"$ref": "#/definitions/GraphDTO"}}, "204": {"description": "Trainee graph successfully deleted."}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}}}, "/graphs/trainee/training-runs/{runId}": {"delete": {"tags": ["Graphs"], "summary": "Delete trainee graph", "description": "", "operationId": "deleteTraineeGraph", "produces": ["application/json"], "parameters": [{"name": "runId", "in": "path", "description": "ID of the training instance.", "required": true, "type": "integer", "format": "int64"}], "responses": {"200": {"description": "successful operation", "schema": {"$ref": "#/definitions/GraphDTO"}}, "204": {"description": "Trainee graph successfully deleted."}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}}}, "/graphs/training-definitions/{definitionId}": {"get": {"tags": ["Graphs"], "summary": "Get reference graph by training definition ID", "description": "", "operationId": "getReferenceGraph", "produces": ["application/json"], "parameters": [{"name": "definitionId", "in": "path", "description": "ID of the training definition.", "required": true, "type": "integer", "format": "int64"}], "responses": {"200": {"description": "Reference graph have been found.", "schema": {"$ref": "#/definitions/GraphDTO"}}, "404": {"description": "Reference graph have not been found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}}, "post": {"tags": ["Graphs"], "summary": "Create reference graph for given training definition", "description": "", "operationId": "createReferenceGraph", "produces": ["application/json"], "parameters": [{"name": "definitionId", "in": "path", "description": "ID of the training definition.", "required": true, "type": "integer", "format": "int64"}, {"in": "body", "name": "body", "description": "Reference solutions of levels.", "required": false, "schema": {"type": "array", "items": {"$ref": "#/definitions/DefinitionLevel"}}}], "responses": {"200": {"description": "Reference graph successfully created.", "schema": {"$ref": "#/definitions/GraphDTO"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}}}, "/graphs/training-definitions/{definitionId}/training-instances/{instanceId}": {"post": {"tags": ["Graphs"], "summary": "Create summary graph", "description": "", "operationId": "createSummaryGraph", "produces": ["application/json"], "parameters": [{"name": "definitionId", "in": "path", "description": "ID of the training definition.", "required": true, "type": "integer", "format": "int64"}, {"name": "instanceId", "in": "path", "description": "ID of the training instance.", "required": true, "type": "integer", "format": "int64"}], "responses": {"200": {"description": "Summary graph successfully created.", "schema": {"$ref": "#/definitions/GraphDTO"}}, "404": {"description": "Trainees graphs needed for creation have been not found", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}}}, "/graphs/training-definitions/{definitionId}/training-instances/{instanceId}/training-runs/{runId}": {"post": {"tags": ["Graphs"], "summary": "Create trainee graph with command analysis", "description": "This should be done only once for every user", "operationId": "createTraineeGraph", "produces": ["application/json"], "parameters": [{"name": "definitionId", "in": "path", "description": "The training definition ID", "required": true, "type": "integer", "format": "int64"}, {"name": "instanceId", "in": "path", "description": "The training instance ID", "required": true, "type": "integer", "format": "int64"}, {"name": "runId", "in": "path", "description": "The trainee run ID", "required": true, "type": "integer", "format": "int64"}, {"name": "accessToken", "in": "query", "description": "Access token of the training instance", "required": false, "type": "string"}, {"in": "body", "name": "body", "description": "Reference solutions of levels", "required": true, "schema": {"type": "array", "items": {"$ref": "#/definitions/DefinitionLevel"}}}], "responses": {"200": {"description": "Trainee graph successfully created."}, "404": {"description": "Training run with given ID not found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}}}, "/graphs/training-instances/{instanceId}": {"get": {"tags": ["Graphs"], "summary": "Get summary graph by training instance ID", "description": "", "operationId": "getSummaryGraph", "produces": ["application/json"], "parameters": [{"name": "instanceId", "in": "path", "description": "Id of the training instance.", "required": true, "type": "integer", "format": "int64"}], "responses": {"200": {"description": "Summary graph instance have been found.", "schema": {"$ref": "#/definitions/GraphDTO"}}, "404": {"description": "Summary graph have not been found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}}, "delete": {"tags": ["Graphs"], "summary": "Delete all graphs by training instance", "description": "", "operationId": "deleteGraphsByTrainingInstance", "produces": ["application/json"], "parameters": [{"name": "instanceId", "in": "path", "description": "ID of the training instance.", "required": true, "type": "integer", "format": "int64"}], "responses": {"200": {"description": "successful operation", "schema": {"$ref": "#/definitions/GraphDTO"}}, "204": {"description": "All graphs created for trianing instance successfully deleted."}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}}}, "/graphs/training-runs/{runId}": {"get": {"tags": ["Graphs"], "summary": "Get trainee graph by trainee training run ID", "description": "", "operationId": "getTraineeGraph", "produces": ["application/json"], "parameters": [{"name": "runId", "in": "path", "description": "ID of the training run.", "required": true, "type": "integer", "format": "int64"}], "responses": {"200": {"description": "Trainee graph have been found.", "schema": {"$ref": "#/definitions/GraphDTO"}}, "404": {"description": "Trainee graph have not been found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}}}, "/trainees/training-instances/{instanceId}": {"get": {"tags": ["Trainees"], "summary": "Get all trainees by training instance ID", "description": "", "operationId": "getTraineesByTrainingInstanceId", "produces": ["application/json"], "parameters": [{"name": "instanceId", "in": "path", "description": "ID of the training instance", "required": true, "type": "integer", "format": "int64"}], "responses": {"200": {"description": "Trainees have been found.", "schema": {"$ref": "#/definitions/TraineeDTO"}}, "404": {"description": "None trainee instance have been found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}}}, "/trainees/training-runs/{runId}": {"get": {"tags": ["Trainees"], "summary": "Get trainee by training run ID", "description": "", "operationId": "getTraineeByTrainingRunId", "produces": ["application/json"], "parameters": [{"name": "runId", "in": "path", "description": "ID of the training run", "required": true, "type": "integer", "format": "int64"}], "responses": {"200": {"description": "Trainee has been found.", "schema": {"$ref": "#/definitions/TraineeDTO"}}, "404": {"description": "Trainee has not been found.", "schema": {"$ref": "#/definitions/ApiError"}}, "500": {"description": "Unexpected condition was encountered.", "schema": {"$ref": "#/definitions/ApiError"}}}}}}, "definitions": {"AbstractCommandDTO": {"type": "object", "required": ["cmd", "command_type"], "properties": {"command_type": {"type": "string", "example": "BASH", "description": "Distinguish tool/command line  in which command ran."}, "cmd": {"type": "string", "example": "ls", "description": "Command without arguments/options."}}, "description": "AggregatedCommandsDTO, CommandDTO"}, "AggregatedCommandsDTO": {"allOf": [{"$ref": "#/definitions/AbstractCommandDTO"}, {"type": "object", "required": ["aggregated_commands_per_options", "frequency"], "properties": {"frequency": {"type": "integer", "format": "int64", "example": 25, "description": "Count of all usages of same command regardless to command options."}, "aggregated_commands_per_options": {"type": "array", "example": "-vvv: 12, \n -a: 22", "description": "List of incorrect commands with same command and command type", "items": {"$ref": "#/definitions/CommandPerOptions"}}}, "description": "Contains commands aggregated by command type and command"}]}, "ApiEntityError": {"allOf": [{"$ref": "#/definitions/ApiError"}, {"type": "object", "properties": {"entity_error_detail": {"description": "Detail of the entity which is related to the error.", "$ref": "#/definitions/EntityErrorDetail"}}, "description": "A detailed error information related to the entity."}]}, "ApiError": {"type": "object", "properties": {"timestamp": {"type": "integer", "format": "int64", "example": "1574062900 (different for each type of exception)", "description": "The time when the exception occurred"}, "status": {"type": "string", "example": "404 Not found (different for each type of exception).", "description": "The HTTP response status code", "enum": ["CONTINUE", "SWITCHING_PROTOCOLS", "PROCESSING", "CHECKPOINT", "OK", "CREATED", "ACCEPTED", "NON_AUTHORITATIVE_INFORMATION", "NO_CONTENT", "RESET_CONTENT", "PARTIAL_CONTENT", "MULTI_STATUS", "ALREADY_REPORTED", "IM_USED", "MULTIPLE_CHOICES", "MOVED_PERMANENTLY", "FOUND", "MOVED_TEMPORARILY", "SEE_OTHER", "NOT_MODIFIED", "USE_PROXY", "TEMPORARY_REDIRECT", "PERMANENT_REDIRECT", "BAD_REQUEST", "UNAUTHORIZED", "PAYMENT_REQUIRED", "FORBIDDEN", "NOT_FOUND", "METHOD_NOT_ALLOWED", "NOT_ACCEPTABLE", "PROXY_AUTHENTICATION_REQUIRED", "REQUEST_TIMEOUT", "CONFLICT", "GONE", "LENGTH_REQUIRED", "PRECONDITION_FAILED", "PAYLOAD_TOO_LARGE", "REQUEST_ENTITY_TOO_LARGE", "URI_TOO_LONG", "REQUEST_URI_TOO_LONG", "UNSUPPORTED_MEDIA_TYPE", "REQUESTED_RANGE_NOT_SATISFIABLE", "EXPECTATION_FAILED", "I_AM_A_TEAPOT", "INSUFFICIENT_SPACE_ON_RESOURCE", "METHOD_FAILURE", "DESTINATION_LOCKED", "UNPROCESSABLE_ENTITY", "LOCKED", "FAILED_DEPENDENCY", "UPGRADE_REQUIRED", "PRECONDITION_REQUIRED", "TOO_MANY_REQUESTS", "REQUEST_HEADER_FIELDS_TOO_LARGE", "UNAVAILABLE_FOR_LEGAL_REASONS", "INTERNAL_SERVER_ERROR", "NOT_IMPLEMENTED", "BAD_GATEWAY", "SERVICE_UNAVAILABLE", "GATEWAY_TIMEOUT", "HTTP_VERSION_NOT_SUPPORTED", "VARIANT_ALSO_NEGOTIATES", "INSUFFICIENT_STORAGE", "LOOP_DETECTED", "BANDWIDTH_LIMIT_EXCEEDED", "NOT_EXTENDED", "NETWORK_AUTHENTICATION_REQUIRED"]}, "message": {"type": "string", "example": "The IDMGroup could not be found in database (different for each type of exception).", "description": "The specific description of the ApiError."}, "errors": {"type": "array", "example": "[ \"The requested resource was not found (different for each type of exception). \"]", "description": "The list of main reasons of the ApiError.", "items": {"type": "string"}}, "path": {"type": "string", "example": "/user-and-group/api/v1/groups/1000 (different for each type of exception).", "description": "The requested URI path which caused error."}}, "description": "Superclass for classes ApiEntityError and ApiMicroserviceError"}, "ApiMicroserviceError": {"allOf": [{"$ref": "#/definitions/ApiError"}, {"type": "object", "properties": {"api_sub_error": {"description": "Detailed error from another microservice.", "$ref": "#/definitions/ApiSubError"}}, "description": "A detailed error information related to the microservice."}]}, "ApiSubError": {"type": "object", "properties": {"message": {"type": "string"}}, "description": "Superclass for classes JavaApiError and PythonApiError"}, "CommandDTO": {"allOf": [{"$ref": "#/definitions/AbstractCommandDTO"}, {"type": "object", "required": ["from_host_ip", "options", "timestamp", "training_time"], "properties": {"timestamp": {"type": "string", "format": "date-time", "example": "07:23:43", "description": "Time when command was recorded."}, "training_time": {"example": "07:23:43", "description": "Training time when command was recorded.", "$ref": "#/definitions/Duration"}, "from_host_ip": {"type": "string", "example": "10.10.17.5", "description": "Ip address where command was submitted."}, "options": {"type": "string", "example": "-p 25 -a 20.20.15.18", "description": "Valid command options"}}, "description": "Command with valid syntax and semantic."}]}, "CommandPerOptions": {"type": "object", "required": ["cmd", "command_type", "frequency", "from_host_ip", "mistake", "options"], "properties": {"cmd": {"type": "string", "example": "ls", "description": "Command without arguments/options."}, "command_type": {"type": "string", "example": "BASH", "description": "Distinguish tool/command line  in which command ran."}, "options": {"type": "string", "example": "-p 25 -a 20.20.15.18", "description": "Valid command options"}, "mistake": {"type": "string", "example": "SEMANTIC_WRONG_IP", "description": "Classify command by mistake type into categories.", "enum": ["SYNTAX_UNKNOWN_COMMAND", "SYNTAX_INVALID_ARGUMENTS", "SYNTAX_INVALID_OPTION", "SYNTAX_MISSING_OPTION_PARAM", "SYNTAX_INVALID_OPTION_PARAM", "SEMANTIC_UNKNOWN_IP", "SEMANTIC_WRONG_IP"]}, "from_host_ip": {"type": "string", "example": "10.10.17.5", "description": "Ip address where command was submitted."}, "frequency": {"type": "integer", "format": "int64", "example": 25, "description": "Count of all usages of same command regardless to command options."}}}, "DefinitionLevel": {"type": "object", "properties": {"reference_solution": {"type": "array", "items": {"$ref": "#/definitions/DefinitionReferenceSolution"}}, "id": {"type": "integer", "format": "int64"}, "order": {"type": "integer", "format": "int32"}}}, "DefinitionReferenceSolution": {"type": "object", "properties": {"cmd": {"type": "string"}, "optional": {"type": "boolean"}, "cmd_type": {"type": "string"}, "state_name": {"type": "string"}, "prereq_state": {"type": "array", "items": {"type": "string"}}, "cmd_regex": {"type": "string"}}}, "Duration": {"type": "object", "properties": {"seconds": {"type": "integer", "format": "int64"}, "zero": {"type": "boolean"}, "nano": {"type": "integer", "format": "int32"}, "negative": {"type": "boolean"}, "units": {"type": "array", "items": {"$ref": "#/definitions/TemporalUnit"}}}}, "EntityErrorDetail": {"type": "object", "properties": {"entity": {"type": "string", "example": "IDMGroup", "description": "Class of the entity."}, "identifier": {"type": "string", "example": "id", "description": "Identifier of the entity."}, "identifier_value": {"type": "object", "example": "1", "description": "Value of the identifier."}, "reason": {"type": "string", "example": "Group with same name already exists.", "description": "Detailed message of the exception"}}}, "GraphDTO": {"type": "object", "required": ["graph"], "properties": {"graph": {"type": "string", "example": "'digraph {a -> b}'", "description": "Graph in DOT format."}}, "description": "Graph in DOT format."}, "JavaApiError": {"allOf": [{"$ref": "#/definitions/ApiSubError"}, {"type": "object", "properties": {"message": {"type": "string", "example": "The IDMGroup could not be found in database (different for each type of exception).", "description": "The specific description of the ApiError."}, "timestamp": {"type": "integer", "format": "int64", "example": "1574062900 (different for each type of exception)", "description": "The time when the exception occurred"}, "status": {"type": "string", "example": "404 Not found (different for each type of exception).", "description": "The HTTP response status code", "enum": ["CONTINUE", "SWITCHING_PROTOCOLS", "PROCESSING", "CHECKPOINT", "OK", "CREATED", "ACCEPTED", "NON_AUTHORITATIVE_INFORMATION", "NO_CONTENT", "RESET_CONTENT", "PARTIAL_CONTENT", "MULTI_STATUS", "ALREADY_REPORTED", "IM_USED", "MULTIPLE_CHOICES", "MOVED_PERMANENTLY", "FOUND", "MOVED_TEMPORARILY", "SEE_OTHER", "NOT_MODIFIED", "USE_PROXY", "TEMPORARY_REDIRECT", "PERMANENT_REDIRECT", "BAD_REQUEST", "UNAUTHORIZED", "PAYMENT_REQUIRED", "FORBIDDEN", "NOT_FOUND", "METHOD_NOT_ALLOWED", "NOT_ACCEPTABLE", "PROXY_AUTHENTICATION_REQUIRED", "REQUEST_TIMEOUT", "CONFLICT", "GONE", "LENGTH_REQUIRED", "PRECONDITION_FAILED", "PAYLOAD_TOO_LARGE", "REQUEST_ENTITY_TOO_LARGE", "URI_TOO_LONG", "REQUEST_URI_TOO_LONG", "UNSUPPORTED_MEDIA_TYPE", "REQUESTED_RANGE_NOT_SATISFIABLE", "EXPECTATION_FAILED", "I_AM_A_TEAPOT", "INSUFFICIENT_SPACE_ON_RESOURCE", "METHOD_FAILURE", "DESTINATION_LOCKED", "UNPROCESSABLE_ENTITY", "LOCKED", "FAILED_DEPENDENCY", "UPGRADE_REQUIRED", "PRECONDITION_REQUIRED", "TOO_MANY_REQUESTS", "REQUEST_HEADER_FIELDS_TOO_LARGE", "UNAVAILABLE_FOR_LEGAL_REASONS", "INTERNAL_SERVER_ERROR", "NOT_IMPLEMENTED", "BAD_GATEWAY", "SERVICE_UNAVAILABLE", "GATEWAY_TIMEOUT", "HTTP_VERSION_NOT_SUPPORTED", "VARIANT_ALSO_NEGOTIATES", "INSUFFICIENT_STORAGE", "LOOP_DETECTED", "BANDWIDTH_LIMIT_EXCEEDED", "NOT_EXTENDED", "NETWORK_AUTHENTICATION_REQUIRED"]}, "errors": {"type": "array", "example": "[ \"The requested resource was not found (different for each type of exception).\" ]", "description": "The list of main reasons of the ApiError.", "items": {"type": "string"}}, "path": {"type": "string", "example": "/user-and-group/api/v1/groups/1000 (different for each type of exception).", "description": "The requested URI path which caused error."}, "entity_error_detail": {"description": "Entity detail related to the error.", "$ref": "#/definitions/EntityErrorDetail"}}, "description": "A detailed error from another Java microservice."}]}, "PythonApiError": {"allOf": [{"$ref": "#/definitions/ApiSubError"}, {"type": "object", "properties": {"detail": {"type": "string", "example": "Sandbox could not be found.", "description": "Detail message of the error."}, "parameters": {"type": "object", "example": "name: sandbox", "description": "Parameters to specify details of the error.", "additionalProperties": {"type": "string"}}}, "description": "A detailed error from another Python mircorservice."}]}, "TemporalUnit": {"type": "object", "properties": {"duration_estimated": {"type": "boolean"}, "duration": {"$ref": "#/definitions/Duration"}, "time_based": {"type": "boolean"}, "date_based": {"type": "boolean"}}}, "TraineeDTO": {"type": "object", "required": ["training_instance_id", "training_run_id", "user_ref_id"], "properties": {"training_run_id": {"type": "integer", "format": "int64", "example": 68, "description": "Id of the trainees training run."}, "training_instance_id": {"type": "integer", "format": "int64", "example": 12, "description": "Id of the training instance in which the training has been carried out."}, "user_ref_id": {"type": "integer", "format": "int64", "example": 31, "description": "Id of trainee in the user management service."}, "sub": {"type": "string", "example": "john.doe@mail.com", "description": "Trainee's subject name."}, "full_name": {"type": "string", "example": "Mgr. John Doe", "description": "Trainee's full name."}, "picture": {"type": "array", "example": "iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAYAAAA4TnrqAAACIUlEQVR4Xu3YsY0dSQxAQQUlpXT5Z3CS/YgxSrQa4gLlEOBb9pj/x6//fv7/t/78/XhN3yBWyz3kBX2DWC33kBf0DWK13ENe0DeI1XIPeUHfIFbLPeQFfYNYLfeQF/QNYrXcQ17QN4jVcg95Qd8gVss95AV9g1gt95AX9A1itdxDXtA3iNVyD3lB3yBWyz3kBX2DWC33kBf0DWLERGOiLdGWaEuMgeghoi3RlmhLjIHoIaIt0ZZoS4yB6CGiLdGWaEuMgeghoi3RlmhLjIHoIaIt0ZZoS4yB6CGiLdGWaEuMgeghoi3RlmhLjIHoIaIt0ZZoS4yB6CGiLdGWaEuMgeghoi3RlmhLjIHoIaIt0ZZoS4yB6CGiLdGWaEuMgeghoi3RlmhLjIHoIaIt0ZZoS6z+8b/mPha4jwXuY4H7WOA+FriPBe5jgftY4D4WuI8F7mOB+1jgPha4jwXGbzbn2xicb2Nwvo3B+TYG59sYnG9jcL6Nwfk2BufbGJxvY3C+jcH5Ngbn2xicb2Nwvq1+z2pMtCXaEm2J1XIPEW2JtkRbYrXcQ0Rboi3Rllgt9xDRlmhLtCVWyz1EtCXaEm2J1XIPEW2JtkRbYrXcQ0Rboi3Rllgt9xDRlmhLtCVWyz1EtCXaEm2J1XIPEW2JtkRbYrXcQ0Rboi3Rllgt9xDRlmhLtCVWyz1EtCXaEm2J1XIPEW2JtkRbYrXcQ0Rboi3RlvgNt34wfeJElG8AAAAASUVORK5CYII=", "description": "Trainee's identicon.", "items": {"type": "string", "format": "byte"}}}, "description": "Trainee which absolved training."}}};
+  // Build a system
+  const ui = SwaggerUIBundle({
+    spec: spec,
+    dom_id: '#swagger-ui',
+    deepLinking: true,
+    presets: [
+      SwaggerUIBundle.presets.apis,
+      SwaggerUIStandalonePreset
+    ],
+    plugins: [
+      SwaggerUIBundle.plugins.DownloadUrl
+    ],
+    layout: "StandaloneLayout"
+  })
+  window.ui = ui
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2020-2024 Masaryk University<br>Copyright © 2025 CyberSecurity Hub, z.s.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

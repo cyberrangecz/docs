@@ -1,0 +1,2482 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../faq/">
+      
+      
+        <link rel="next" href="../user-and-group-swagger-open-api/">
+      
+      
+      <link rel="icon" href="../../img/crczp-symbol.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Sandbox Service - CyberRangeCZ Platform</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CyberRangeCZ Platform" class="md-header__button md-logo" aria-label="CyberRangeCZ Platform" data-md-component="logo">
+      
+  <img src="../../img/crczp-symbol.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CyberRangeCZ Platform
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sandbox Service
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CyberRangeCZ Platform" class="md-nav__button md-logo" aria-label="CyberRangeCZ Platform" data-md-component="logo">
+      
+  <img src="../../img/crczp-symbol.svg" alt="logo">
+
+    </a>
+    CyberRangeCZ Platform
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basic Concepts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basic Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic-concepts/use-cases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Cases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic-concepts/terminology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminology
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic-concepts/conceptual-architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conceptual Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Typical Training Workflow
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Typical Training Workflow
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic-concepts/typical-training-workflow/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic-concepts/typical-training-workflow/training-workflow-cloud/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Training Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Guide (Basic)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide (Basic)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/login-and-logout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Login & Logout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sandbox Agenda
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sandbox Agenda
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/sandbox-agenda/sandbox-agenda-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/sandbox-agenda/sandbox-definition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Definition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/sandbox-agenda/pool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pool
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/sandbox-agenda/images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Training Agenda
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Training Agenda
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-agenda-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Training Definition
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Training Definition
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-definition/linear-training-definition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linear Training Definition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-definition/adaptive-training-definition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adaptive Training Definition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-definition/mitre-attack-matrix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MITRE ATT&CK Matrix
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-definition/instance-simulator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instance Simulator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/cheating-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cheating Detection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-instance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Training Instance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_5" id="__nav_3_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Training Run
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Training Run
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-run/linear-training-run/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linear Training Run
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/training-run/adaptive-training-run/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adaptive Training Run
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_6" id="__nav_3_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visualization Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Visualization Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/visualizations/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/visualizations/visualizations-for-adaptive/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualizations for Adaptive Training
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualizations for Linear Training
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Administration Agenda
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Administration Agenda
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/administration-agenda/administration-agenda-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/administration-agenda/users/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Users
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/administration-agenda/groups/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Groups
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-basic/administration-agenda/microservices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Guide (Advanced)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide (Advanced)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/user-guide-advanced-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sandboxes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sandboxes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/sandboxes-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/sandbox-definition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Definition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/topology-definition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Topology Definition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/topology-instance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Topology Instance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/sandbox-provisioning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Provisioning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/sandbox-access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/apg-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    APG Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/sandbox_dockers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Containers in Sandbox Definitions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/sandboxes/sandbox-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Monitoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Trainings
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Trainings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/trainings/trainings-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Users and Groups
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Users and Groups
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/users-and-groups/users-and-groups-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide-advanced/users-and-groups/roles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Roles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Installation Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-guide/installation-guide-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-guide/openstack-requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenStack Requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-guide/setting-up-oidc-provider/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up OIDC Provider
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-guide/platform-components/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Platform Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Service
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-and-group-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User and Group Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../training-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Training Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adaptive-training-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adaptive Training Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adaptive-smart-assistant-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adaptive Smart Assistant Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../training-feedback-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Training Feedback Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../answers-storage-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Answers Storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elasticsearch-service-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elasticsearch Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mitre-technique-service-swagger-open-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mitre Technique Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables-of-permissions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables of Permissions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Extras
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Extras
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Logging
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Logging
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/logging/logs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/logging/architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/logging/how-to-use-it/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Use It
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/writing-documentation-mkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing Documentation - MkDocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../authors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acknowledgements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledgements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Sandbox Service</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui.css" >
+  <style>
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    .topbar {
+      display: none !important;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  </style>
+<div id="swagger-ui"></div>
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol viewBox="0 0 20 20" id="unlocked">
+          <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="locked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="close">
+      <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="large-arrow">
+      <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="large-arrow-down">
+      <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/>
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="jump-to">
+      <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="expand">
+      <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+    </symbol>
+  </defs>
+ </svg>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui-bundle.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui-standalone-preset.js"> </script>
+<script>
+window.onload = function() {
+  var spec = {"swagger": "2.0", "info": {"title": "CyberRangeCZ Platform OpenStack REST API documentation", "description": "", "version": "v1"}, "host": "localhost:8000", "schemes": ["http"], "basePath": "/sandbox-service/api/v1", "consumes": ["application/json"], "produces": ["application/json"], "securityDefinitions": {"Basic": {"type": "basic"}}, "security": [{"Basic": []}], "paths": {"/allocation-requests/{request_id}": {"get": {"operationId": "allocation-requests_read", "description": "Retrieve a Sandbox Allocation Request.", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/AllocationRequest"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["allocation-requests"]}, "parameters": [{"name": "request_id", "in": "path", "required": true, "type": "string"}]}, "/allocation-requests/{request_id}/cancel": {"patch": {"operationId": "allocation-requests_cancel_partial_update", "description": "Cancel given Allocation Request. Returns no data if OK (200).", "parameters": [{"name": "data", "in": "body", "required": true, "schema": {"$ref": "#/definitions/AllocationRequest"}}], "responses": {"200": {"description": "", "schema": {"description": "", "type": "object", "properties": {}}}}, "tags": ["allocation-requests"]}, "parameters": [{"name": "request_id", "in": "path", "required": true, "type": "string"}]}, "/allocation-requests/{request_id}/stages/networking-ansible": {"get": {"operationId": "allocation-requests_stages_networking-ansible_read", "description": "Retrieve a `Networking Ansible` Allocation stage.", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/NetworkingAnsibleAllocationStage"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["allocation-requests"]}, "parameters": [{"name": "request_id", "in": "path", "required": true, "type": "string"}]}, "/allocation-requests/{request_id}/stages/networking-ansible/outputs": {"get": {"operationId": "allocation-requests_stages_networking-ansible_outputs_list", "description": "Retrieve a list of Ansible Outputs.", "parameters": [{"name": "page", "in": "query", "description": "A page number within the paginated result set.", "required": false, "type": "integer"}, {"name": "page_size", "in": "query", "description": "Number of results to return per page.", "required": false, "type": "integer"}, {"name": "sort_by", "in": "query", "description": "Attribute used to sort result set", "required": false, "type": "string"}, {"name": "order", "in": "query", "description": "Sort order", "required": false, "type": "string"}], "responses": {"200": {"description": "", "schema": {"required": ["results", "count"], "type": "object", "properties": {"page": {"type": "integer"}, "page_size": {"type": "integer"}, "page_count": {"type": "integer"}, "count": {"type": "integer", "format": "uri"}, "total_count": {"type": "integer", "format": "uri"}, "results": {"type": "array", "items": {"$ref": "#/definitions/AllocationAnsibleOutput"}}}}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["allocation-requests"]}, "parameters": [{"name": "request_id", "in": "path", "required": true, "type": "string"}]}, "/allocation-requests/{request_id}/stages/terraform": {"get": {"operationId": "allocation-requests_stages_terraform_read", "description": "Retrieve an `openstack` allocation stage.\nNull `status` and `status_reason` attributes mean, that stack does not have them;\nAKA it does not exist in OpenStack.", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/TerraformAllocationStage"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["allocation-requests"]}, "parameters": [{"name": "request_id", "in": "path", "required": true, "type": "string"}]}, "/allocation-requests/{request_id}/stages/terraform/outputs": {"get": {"operationId": "allocation-requests_stages_terraform_outputs_list", "description": "", "parameters": [{"name": "page", "in": "query", "description": "A page number within the paginated result set.", "required": false, "type": "integer"}, {"name": "page_size", "in": "query", "description": "Number of results to return per page.", "required": false, "type": "integer"}, {"name": "sort_by", "in": "query", "description": "Attribute used to sort result set", "required": false, "type": "string"}, {"name": "order", "in": "query", "description": "Sort order", "required": false, "type": "string"}], "responses": {"200": {"description": "", "schema": {"required": ["results", "count"], "type": "object", "properties": {"page": {"type": "integer"}, "page_size": {"type": "integer"}, "page_count": {"type": "integer"}, "count": {"type": "integer", "format": "uri"}, "total_count": {"type": "integer", "format": "uri"}, "results": {"type": "array", "items": {"$ref": "#/definitions/AllocationTerraformOutput"}}}}}}, "tags": ["allocation-requests"]}, "parameters": [{"name": "request_id", "in": "path", "required": true, "type": "string"}]}, "/allocation-requests/{request_id}/stages/user-ansible": {"get": {"operationId": "allocation-requests_stages_user-ansible_read", "description": "Retrieve a `User Ansible` Allocation stage.", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/UserAnsibleAllocationStage"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["allocation-requests"]}, "parameters": [{"name": "request_id", "in": "path", "required": true, "type": "string"}]}, "/allocation-requests/{request_id}/stages/user-ansible/outputs": {"get": {"operationId": "allocation-requests_stages_user-ansible_outputs_list", "description": "Retrieve a list of Ansible Outputs.", "parameters": [{"name": "page", "in": "query", "description": "A page number within the paginated result set.", "required": false, "type": "integer"}, {"name": "page_size", "in": "query", "description": "Number of results to return per page.", "required": false, "type": "integer"}, {"name": "sort_by", "in": "query", "description": "Attribute used to sort result set", "required": false, "type": "string"}, {"name": "order", "in": "query", "description": "Sort order", "required": false, "type": "string"}], "responses": {"200": {"description": "", "schema": {"required": ["results", "count"], "type": "object", "properties": {"page": {"type": "integer"}, "page_size": {"type": "integer"}, "page_count": {"type": "integer"}, "count": {"type": "integer", "format": "uri"}, "total_count": {"type": "integer", "format": "uri"}, "results": {"type": "array", "items": {"$ref": "#/definitions/AllocationAnsibleOutput"}}}}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["allocation-requests"]}, "parameters": [{"name": "request_id", "in": "path", "required": true, "type": "string"}]}, "/cleanup-requests/{request_id}": {"get": {"operationId": "cleanup-requests_read", "description": "Retrieve a Sandbox Cleanup Request.", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/CleanupRequest"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["cleanup-requests"]}, "parameters": [{"name": "request_id", "in": "path", "required": true, "type": "string"}]}, "/cleanup-requests/{request_id}/cancel": {"patch": {"operationId": "cleanup-requests_cancel_partial_update", "description": "Cancel given Cleanup Request. Returns no data if OK (200).", "parameters": [{"name": "data", "in": "body", "required": true, "schema": {"$ref": "#/definitions/CleanupRequest"}}], "responses": {"200": {"description": "", "schema": {"description": "", "type": "object", "properties": {}}}}, "tags": ["cleanup-requests"]}, "parameters": [{"name": "request_id", "in": "path", "required": true, "type": "string"}]}, "/cleanup-requests/{request_id}/stages/networking-ansible": {"get": {"operationId": "cleanup-requests_stages_networking-ansible_read", "description": "Retrieve a `Networking Ansible` Cleanup stage.", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/NetworkingAnsibleCleanupStage"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["cleanup-requests"]}, "parameters": [{"name": "request_id", "in": "path", "required": true, "type": "string"}]}, "/cleanup-requests/{request_id}/stages/terraform": {"get": {"operationId": "cleanup-requests_stages_terraform_read", "description": "Retrieve an `openstack` Cleanup stage.", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/TerraformCleanupStage"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["cleanup-requests"]}, "parameters": [{"name": "request_id", "in": "path", "required": true, "type": "string"}]}, "/cleanup-requests/{request_id}/stages/user-ansible": {"get": {"operationId": "cleanup-requests_stages_user-ansible_read", "description": "Retrieve a `User Ansible` Cleanup stage.", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/UserAnsibleCleanupStage"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["cleanup-requests"]}, "parameters": [{"name": "request_id", "in": "path", "required": true, "type": "string"}]}, "/definitions": {"get": {"operationId": "definitions_list", "description": "Retrieve a list of sandbox definitions.", "parameters": [{"name": "page", "in": "query", "description": "A page number within the paginated result set.", "required": false, "type": "integer"}, {"name": "page_size", "in": "query", "description": "Number of results to return per page.", "required": false, "type": "integer"}, {"name": "sort_by", "in": "query", "description": "Attribute used to sort result set", "required": false, "type": "string"}, {"name": "order", "in": "query", "description": "Sort order", "required": false, "type": "string"}], "responses": {"200": {"description": "Successful response", "schema": {"type": "object", "properties": {"page": {"type": "integer"}, "page_size": {"type": "integer"}, "page_count": {"type": "integer"}, "count": {"type": "integer"}, "total_count": {"type": "integer"}, "results": {"type": "array", "items": {"title": "Definition", "description": "Definition(id, name, url, rev, created_by)", "required": ["url", "rev"], "type": "object", "properties": {"id": {"type": "integer"}, "name": {"type": "string"}, "url": {"description": "SSH git URL of the definition", "type": "string"}, "rev": {"description": "Git revision used", "type": "string"}, "created_by": {"description": "User that created this object", "type": "object", "properties": {"id": {"type": "integer"}, "sub": {"type": "string"}, "full_name": {"type": "string"}, "given_name": {"type": "string"}, "family_name": {"type": "string"}, "mail": {"type": "string"}}}}}}}}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["definitions"]}, "post": {"operationId": "definitions_create", "description": "Create a new sandbox definition. Optional parameter *rev* defaults to master.", "parameters": [{"name": "data", "in": "body", "required": true, "schema": {"required": ["url", "rev"], "type": "object", "properties": {"url": {"description": "SSH git URL of the definition", "type": "string"}, "rev": {"description": "Git revision used", "type": "string"}}}}], "responses": {"201": {"description": "", "schema": {"title": "Definition", "description": "Definition(id, name, url, rev, created_by)", "required": ["url", "rev"], "type": "object", "properties": {"id": {"type": "integer"}, "name": {"type": "string"}, "url": {"description": "SSH git URL of the definition", "type": "string"}, "rev": {"description": "Git revision used", "type": "string"}, "created_by": {"description": "User that created this object", "type": "object", "properties": {"id": {"type": "integer"}, "sub": {"type": "string"}, "full_name": {"type": "string"}, "given_name": {"type": "string"}, "family_name": {"type": "string"}, "mail": {"type": "string"}}}}}}, "400": {"description": "Client sent invalid data.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["definitions"]}, "parameters": []}, "/definitions/{definition_id}": {"get": {"operationId": "definitions_read", "description": "Retrieve the definition.", "parameters": [], "responses": {"200": {"description": "", "schema": {"title": "Definition", "description": "Definition(id, name, url, rev, created_by)", "required": ["url", "rev"], "type": "object", "properties": {"id": {"type": "integer"}, "name": {"type": "string"}, "url": {"description": "SSH git URL of the definition", "type": "string"}, "rev": {"description": "Git revision used", "type": "string"}, "created_by": {"description": "User that created this object", "type": "object", "properties": {"id": {"type": "integer"}, "sub": {"type": "string"}, "full_name": {"type": "string"}, "given_name": {"type": "string"}, "family_name": {"type": "string"}, "mail": {"type": "string"}}}}}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["definitions"]}, "delete": {"operationId": "definitions_delete", "description": "Delete the definition.\nThere can't exist a pool associated with this definition or delete fails.", "parameters": [], "responses": {"204": {"description": ""}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["definitions"]}, "parameters": [{"name": "definition_id", "in": "path", "required": true, "type": "string"}]}, "/definitions/{definition_id}/local-variables": {"post": {"operationId": "definitions_local-variables_create", "description": "Generate variables for local sandboxes, send it to answers-storage.", "parameters": [{"name": "data", "in": "body", "required": true, "schema": {"$ref": "#/definitions/LocalSandboxVariables"}}], "responses": {"201": {"description": "", "schema": {"description": "", "type": "array", "items": {"$ref": "#/definitions/LocalVariable"}}}}, "tags": ["definitions"]}, "parameters": [{"name": "definition_id", "in": "path", "required": true, "type": "string"}]}, "/definitions/{definition_id}/refs": {"get": {"operationId": "definitions_refs_list", "description": "Retrieve a list of definition refs (branches and tags).", "parameters": [{"name": "page", "in": "query", "description": "A page number within the paginated result set.", "required": false, "type": "integer"}, {"name": "page_size", "in": "query", "description": "Number of results to return per page.", "required": false, "type": "integer"}, {"name": "sort_by", "in": "query", "description": "Attribute used to sort result set", "required": false, "type": "string"}, {"name": "order", "in": "query", "description": "Sort order", "required": false, "type": "string"}], "responses": {"200": {"description": "", "schema": {"required": ["results", "count"], "type": "object", "properties": {"page": {"type": "integer"}, "page_size": {"type": "integer"}, "page_count": {"type": "integer"}, "count": {"type": "integer", "format": "uri"}, "total_count": {"type": "integer", "format": "uri"}, "results": {"type": "array", "items": {"$ref": "#/definitions/DefinitionRev"}}}}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["definitions"]}, "parameters": [{"name": "definition_id", "in": "path", "required": true, "type": "string"}]}, "/definitions/{definition_id}/topology": {"get": {"operationId": "definitions_topology_read", "description": "Retrieve topology visualisation data from TopologyDefinition", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/Topology"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["definitions"]}, "parameters": [{"name": "definition_id", "in": "path", "required": true, "type": "string"}]}, "/definitions/{definition_id}/variables": {"get": {"operationId": "definitions_variables_list", "description": "Retrieve APG variables from TopologyDefinition, empty list if variables.yml was not\nfound.", "parameters": [], "responses": {"200": {"description": ""}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["definitions"]}, "parameters": [{"name": "definition_id", "in": "path", "required": true, "type": "string"}]}, "/images": {"get": {"operationId": "images_list", "description": "Get list of images.", "parameters": [{"name": "page", "in": "query", "description": "A page number within the paginated result set.", "required": false, "type": "integer"}, {"name": "page_size", "in": "query", "description": "Number of results to return per page.", "required": false, "type": "integer"}, {"name": "sort_by", "in": "query", "description": "Attribute used to sort result set", "required": false, "type": "string"}, {"name": "order", "in": "query", "description": "Sort order", "required": false, "type": "string"}, {"name": "name", "in": "query", "type": "string"}, {"name": "os_distro", "in": "query", "type": "string"}, {"name": "os_type", "in": "query", "type": "string"}, {"name": "visibility", "in": "query", "type": "string"}, {"name": "default_user", "in": "query", "type": "string"}, {"name": "crczp", "in": "query", "description": "Returns only images with the attribute owner_specified.openstack.created_by set to onlyCustom", "type": "boolean", "default": false}, {"name": "GUI", "in": "query", "description": "Returns only images with the attribute owner_specified.openstack.gui_accessset to true", "type": "boolean", "default": false}, {"name": "cached", "in": "query", "description": "Performs the faster version of this endpoint but does retrieve a fresh list of images.", "type": "boolean", "default": false}], "responses": {"200": {"description": "", "schema": {"required": ["results", "count"], "type": "object", "properties": {"page": {"type": "integer"}, "page_size": {"type": "integer"}, "page_count": {"type": "integer"}, "count": {"type": "integer", "format": "uri"}, "total_count": {"type": "integer", "format": "uri"}, "results": {"type": "array", "items": {"$ref": "#/definitions/Image"}}}}}}, "tags": ["cloud"]}, "parameters": []}, "/info": {"get": {"operationId": "info_read", "description": "Get the quota set and name of project.", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/QuotaSet"}}}, "tags": ["cloud"]}, "parameters": []}, "/limits": {"get": {"operationId": "limits_read", "description": "Get Absolute limits of OpenStack project.", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/ProjectLimits"}}}, "tags": ["cloud"]}, "parameters": []}, "/pools": {"get": {"operationId": "pools_list", "description": "Get a list of pools.", "parameters": [{"name": "page", "in": "query", "description": "A page number within the paginated result set.", "required": false, "type": "integer"}, {"name": "page_size", "in": "query", "description": "Number of results to return per page.", "required": false, "type": "integer"}, {"name": "sort_by", "in": "query", "description": "Attribute used to sort result set", "required": false, "type": "string"}, {"name": "order", "in": "query", "description": "Sort order", "required": false, "type": "string"}], "responses": {"200": {"description": "Successful response", "schema": {"type": "object", "properties": {"page": {"type": "integer"}, "page_size": {"type": "integer"}, "page_count": {"type": "integer"}, "count": {"type": "integer"}, "total_count": {"type": "integer"}, "results": {"type": "array", "items": {"title": "Pool", "description": "Pool(id, definition, max_size, size, private_management_key, public_management_key, management_certificate, uuid, rev, rev_sha, created_by)", "required": ["definition_id", "max_size"], "type": "object", "properties": {"id": {"type": "integer", "readOnly": true}, "definition_id": {"description": "Sandbox definition ID", "type": "integer"}, "size": {"description": "Current number of SandboxAllocationUnits", "type": "integer", "readOnly": true, "default": 0}, "max_size": {"description": "Maximum number of SandboxAllocationUnits", "type": "integer"}, "lock_id": {"type": "integer", "readOnly": true}, "rev": {"description": "Name of used git branch", "type": "string", "readOnly": true}, "rev_sha": {"description": "SHA of used git branch", "type": "string", "readOnly": true}, "created_by": {"description": "User that created this object", "type": "object", "properties": {"id": {"type": "integer"}, "sub": {"type": "string"}, "full_name": {"type": "string"}, "given_name": {"type": "string"}, "family_name": {"type": "string"}, "mail": {"type": "string"}}}, "hardware_usage": {"type": "object", "properties": {"vcpu": {"type": "string"}, "ram": {"type": "string"}, "instances": {"type": "string"}, "network": {"type": "string"}, "subnet": {"type": "string"}, "port": {"type": "string"}}}, "definition": {"title": "Definition", "description": "Definition(id, name, url, rev, created_by)", "required": ["url", "rev"], "type": "object", "properties": {"id": {"type": "integer"}, "name": {"type": "string"}, "url": {"description": "SSH git URL of the definition", "type": "string"}, "rev": {"description": "Git revision used", "type": "string"}, "created_by": {"description": "User that created this object", "type": "object", "properties": {"id": {"type": "integer"}, "sub": {"type": "string"}, "full_name": {"type": "string"}, "given_name": {"type": "string"}, "family_name": {"type": "string"}, "mail": {"type": "string"}}}}}}}}}}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["pools"]}, "post": {"operationId": "pools_create", "description": "Creates new pool.\nAlso creates a new key-pair and certificate, which is then passed to terraform client.\nThe key is then used as management key for this pool, which means that the management\n key-pair is the same for each sandbox in the pool.", "parameters": [{"name": "data", "in": "body", "required": true, "schema": {"required": ["definition_id", "max_size"], "type": "object", "properties": {"definition_id": {"description": "Sandbox definition ID", "type": "integer"}, "max_size": {"description": "Maximum number of SandboxAllocationUnits", "type": "integer"}}}}], "responses": {"201": {"description": "", "schema": {"title": "Pool", "description": "Pool(id, definition, max_size, size, private_management_key, public_management_key, management_certificate, uuid, rev, rev_sha, created_by)", "required": ["definition_id", "max_size"], "type": "object", "properties": {"id": {"type": "integer", "readOnly": true}, "definition_id": {"description": "Sandbox definition ID", "type": "integer"}, "size": {"description": "Current number of SandboxAllocationUnits", "type": "integer", "readOnly": true, "default": 0}, "max_size": {"description": "Maximum number of SandboxAllocationUnits", "type": "integer"}, "lock_id": {"type": "integer", "readOnly": true}, "rev": {"description": "Name of used git branch", "type": "string", "readOnly": true}, "rev_sha": {"description": "SHA of used git branch", "type": "string", "readOnly": true}, "created_by": {"description": "User that created this object", "type": "object", "properties": {"id": {"type": "integer"}, "sub": {"type": "string"}, "full_name": {"type": "string"}, "given_name": {"type": "string"}, "family_name": {"type": "string"}, "mail": {"type": "string"}}}, "hardware_usage": {"type": "object", "properties": {"vcpu": {"type": "string"}, "ram": {"type": "string"}, "instances": {"type": "string"}, "network": {"type": "string"}, "subnet": {"type": "string"}, "port": {"type": "string"}}}, "definition": {"title": "Definition", "description": "Definition(id, name, url, rev, created_by)", "required": ["url", "rev"], "type": "object", "properties": {"id": {"type": "integer"}, "name": {"type": "string"}, "url": {"description": "SSH git URL of the definition", "type": "string"}, "rev": {"description": "Git revision used", "type": "string"}, "created_by": {"description": "User that created this object", "type": "object", "properties": {"id": {"type": "integer"}, "sub": {"type": "string"}, "full_name": {"type": "string"}, "given_name": {"type": "string"}, "family_name": {"type": "string"}, "mail": {"type": "string"}}}}}}}}, "400": {"description": "Client sent invalid data.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["pools"]}, "parameters": []}, "/pools/{pool_id}": {"get": {"operationId": "pools_read", "description": "Retrieve a pool.", "parameters": [], "responses": {"200": {"description": "", "schema": {"title": "Pool", "description": "Pool(id, definition, max_size, size, private_management_key, public_management_key, management_certificate, uuid, rev, rev_sha, created_by)", "required": ["definition_id", "max_size"], "type": "object", "properties": {"id": {"type": "integer", "readOnly": true}, "definition_id": {"description": "Sandbox definition ID", "type": "integer"}, "size": {"description": "Current number of SandboxAllocationUnits", "type": "integer", "readOnly": true, "default": 0}, "max_size": {"description": "Maximum number of SandboxAllocationUnits", "type": "integer"}, "lock_id": {"type": "integer", "readOnly": true}, "rev": {"description": "Name of used git branch", "type": "string", "readOnly": true}, "rev_sha": {"description": "SHA of used git branch", "type": "string", "readOnly": true}, "created_by": {"description": "User that created this object", "type": "object", "properties": {"id": {"type": "integer"}, "sub": {"type": "string"}, "full_name": {"type": "string"}, "given_name": {"type": "string"}, "family_name": {"type": "string"}, "mail": {"type": "string"}}}, "hardware_usage": {"type": "object", "properties": {"vcpu": {"type": "string"}, "ram": {"type": "string"}, "instances": {"type": "string"}, "network": {"type": "string"}, "subnet": {"type": "string"}, "port": {"type": "string"}}}, "definition": {"title": "Definition", "description": "Definition(id, name, url, rev, created_by)", "required": ["url", "rev"], "type": "object", "properties": {"id": {"type": "integer"}, "name": {"type": "string"}, "url": {"description": "SSH git URL of the definition", "type": "string"}, "rev": {"description": "Git revision used", "type": "string"}, "created_by": {"description": "User that created this object", "type": "object", "properties": {"id": {"type": "integer"}, "sub": {"type": "string"}, "full_name": {"type": "string"}, "given_name": {"type": "string"}, "family_name": {"type": "string"}, "mail": {"type": "string"}}}}}}}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["pools"]}, "delete": {"operationId": "pools_delete", "description": "Delete pool. The pool must be empty.\nFirst delete all sandboxes in given Pool.", "parameters": [], "responses": {"204": {"description": ""}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["pools"]}, "parameters": [{"name": "pool_id", "in": "path", "required": true, "type": "string"}]}, "/pools/{pool_id}/allocation-requests": {"get": {"operationId": "pools_allocation-requests_list", "description": "List Allocation Request for this pool.", "parameters": [{"name": "page", "in": "query", "description": "A page number within the paginated result set.", "required": false, "type": "integer"}, {"name": "page_size", "in": "query", "description": "Number of results to return per page.", "required": false, "type": "integer"}, {"name": "sort_by", "in": "query", "description": "Attribute used to sort result set", "required": false, "type": "string"}, {"name": "order", "in": "query", "description": "Sort order", "required": false, "type": "string"}], "responses": {"200": {"description": "", "schema": {"required": ["results", "count"], "type": "object", "properties": {"page": {"type": "integer"}, "page_size": {"type": "integer"}, "page_count": {"type": "integer"}, "count": {"type": "integer", "format": "uri"}, "total_count": {"type": "integer", "format": "uri"}, "results": {"type": "array", "items": {"$ref": "#/definitions/AllocationRequest"}}}}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["pools"]}, "parameters": [{"name": "pool_id", "in": "path", "required": true, "type": "string"}]}, "/pools/{pool_id}/cleanup-failed": {"post": {"operationId": "pools_cleanup-failed_create", "description": "Deletes all failed sandboxes in a pool. With an optional parameter *force*, it forces\nthe deletion.", "parameters": [{"name": "force", "in": "query", "description": "Force the deletion of sandboxes", "type": "boolean", "default": false}], "responses": {"201": {"description": ""}}, "tags": ["pools"]}, "parameters": [{"name": "pool_id", "in": "path", "required": true, "type": "string"}]}, "/pools/{pool_id}/cleanup-requests": {"get": {"operationId": "pools_cleanup-requests_list", "description": "List Cleanup Requests for this pool.", "parameters": [{"name": "page", "in": "query", "description": "A page number within the paginated result set.", "required": false, "type": "integer"}, {"name": "page_size", "in": "query", "description": "Number of results to return per page.", "required": false, "type": "integer"}, {"name": "sort_by", "in": "query", "description": "Attribute used to sort result set", "required": false, "type": "string"}, {"name": "order", "in": "query", "description": "Sort order", "required": false, "type": "string"}], "responses": {"200": {"description": "", "schema": {"required": ["results", "count"], "type": "object", "properties": {"page": {"type": "integer"}, "page_size": {"type": "integer"}, "page_count": {"type": "integer"}, "count": {"type": "integer", "format": "uri"}, "total_count": {"type": "integer", "format": "uri"}, "results": {"type": "array", "items": {"$ref": "#/definitions/CleanupRequest"}}}}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["pools"]}, "post": {"operationId": "pools_cleanup-requests_create", "description": "Deletes all sandboxes in the pool. With an optional parameter *force*,\nit forces the deletion.", "parameters": [{"name": "data", "in": "body", "required": true, "schema": {"$ref": "#/definitions/CleanupRequest"}}, {"name": "force", "in": "query", "description": "Force the deletion of sandboxes", "type": "boolean", "default": false}], "responses": {"201": {"description": "", "schema": {"$ref": "#/definitions/CleanupRequest"}}}, "tags": ["pools"]}, "parameters": [{"name": "pool_id", "in": "path", "required": true, "type": "string"}]}, "/pools/{pool_id}/cleanup-unlocked": {"post": {"operationId": "pools_cleanup-unlocked_create", "description": "Deletes all unlocked sandboxes in a pool. With an optional parameter *force*, it forces\nthe deletion.", "parameters": [{"name": "force", "in": "query", "description": "Force the deletion of sandboxes", "type": "boolean", "default": false}], "responses": {"201": {"description": ""}}, "tags": ["pools"]}, "parameters": [{"name": "pool_id", "in": "path", "required": true, "type": "string"}]}, "/pools/{pool_id}/definition": {"get": {"operationId": "pools_definition_read", "description": "Retrieve the definition associated with a pool.", "parameters": [], "responses": {"200": {"description": "", "schema": {"title": "Definition", "description": "Definition(id, name, url, rev, created_by)", "required": ["url", "rev"], "type": "object", "properties": {"id": {"type": "integer"}, "name": {"type": "string"}, "url": {"description": "SSH git URL of the definition", "type": "string"}, "rev": {"description": "Git revision used", "type": "string"}, "created_by": {"description": "User that created this object", "type": "object", "properties": {"id": {"type": "integer"}, "sub": {"type": "string"}, "full_name": {"type": "string"}, "given_name": {"type": "string"}, "family_name": {"type": "string"}, "mail": {"type": "string"}}}}}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["pools"]}, "parameters": [{"name": "pool_id", "in": "path", "required": true, "type": "string"}]}, "/pools/{pool_id}/locks": {"get": {"operationId": "pools_locks_list", "description": "", "parameters": [{"name": "page", "in": "query", "description": "A page number within the paginated result set.", "required": false, "type": "integer"}, {"name": "page_size", "in": "query", "description": "Number of results to return per page.", "required": false, "type": "integer"}, {"name": "sort_by", "in": "query", "description": "Attribute used to sort result set", "required": false, "type": "string"}, {"name": "order", "in": "query", "description": "Sort order", "required": false, "type": "string"}], "responses": {"200": {"description": "", "schema": {"required": ["results", "count"], "type": "object", "properties": {"page": {"type": "integer"}, "page_size": {"type": "integer"}, "page_count": {"type": "integer"}, "count": {"type": "integer", "format": "uri"}, "total_count": {"type": "integer", "format": "uri"}, "results": {"type": "array", "items": {"$ref": "#/definitions/PoolLock"}}}}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["pools"]}, "post": {"operationId": "pools_locks_create", "description": "Lock given pool.", "parameters": [{"name": "data", "in": "body", "required": true, "schema": {"$ref": "#/definitions/PoolLock"}}], "responses": {"201": {"description": "", "schema": {"$ref": "#/definitions/PoolLock"}}, "400": {"description": "Client sent invalid data.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["pools"]}, "parameters": [{"name": "pool_id", "in": "path", "required": true, "type": "string"}]}, "/pools/{pool_id}/locks/{lock_id}": {"get": {"operationId": "pools_locks_read", "description": "Retrieve details about given lock.", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/PoolLock"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["pools"]}, "delete": {"operationId": "pools_locks_delete", "description": "Delete given lock.", "parameters": [], "responses": {"204": {"description": ""}}, "tags": ["pools"]}, "parameters": [{"name": "lock_id", "in": "path", "required": true, "type": "string"}, {"name": "pool_id", "in": "path", "required": true, "type": "string"}]}, "/pools/{pool_id}/management-ssh-access": {"get": {"operationId": "pools_management-ssh-access_list", "description": "Generate SSH config for User access to this sandbox.\nSome values are user specific, the config contains placeholders for them.", "parameters": [], "responses": {"200": {"description": ""}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["pools"]}, "parameters": [{"name": "pool_id", "in": "path", "required": true, "type": "string"}]}, "/pools/{pool_id}/sandbox-allocation-units": {"get": {"operationId": "pools_sandbox-allocation-units_list", "description": "Get a list of Sandbox Allocation Units.", "parameters": [{"name": "page", "in": "query", "description": "A page number within the paginated result set.", "required": false, "type": "integer"}, {"name": "page_size", "in": "query", "description": "Number of results to return per page.", "required": false, "type": "integer"}, {"name": "sort_by", "in": "query", "description": "Attribute used to sort result set", "required": false, "type": "string"}, {"name": "order", "in": "query", "description": "Sort order", "required": false, "type": "string"}], "responses": {"200": {"description": "", "schema": {"required": ["results", "count"], "type": "object", "properties": {"page": {"type": "integer"}, "page_size": {"type": "integer"}, "page_count": {"type": "integer"}, "count": {"type": "integer", "format": "uri"}, "total_count": {"type": "integer", "format": "uri"}, "results": {"type": "array", "items": {"$ref": "#/definitions/SandboxAllocationUnit"}}}}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["pools"]}, "post": {"operationId": "pools_sandbox-allocation-units_create", "description": "Create Sandbox Allocation Unit.\nFor each Allocation Unit the Allocation Request is created in given pool.\nIf count is not specified, builds *max_size - current size*.\nQuery Parameters:\n- *count:* How many sandboxes to build. Optional (defaults to max_size - current size).", "parameters": [{"name": "data", "in": "body", "required": true, "schema": {"$ref": "#/definitions/SandboxAllocationUnit"}}, {"name": "count", "in": "query", "description": "Sandbox count parameter", "type": "integer"}], "responses": {"201": {"description": "", "schema": {"description": "", "type": "array", "items": {"$ref": "#/definitions/SandboxAllocationUnit"}}}, "400": {"description": "Client sent invalid data.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["pools"]}, "parameters": [{"name": "pool_id", "in": "path", "required": true, "type": "string"}]}, "/pools/{pool_id}/sandboxes": {"get": {"operationId": "pools_sandboxes_list", "description": "", "parameters": [{"name": "page", "in": "query", "description": "A page number within the paginated result set.", "required": false, "type": "integer"}, {"name": "page_size", "in": "query", "description": "Number of results to return per page.", "required": false, "type": "integer"}, {"name": "sort_by", "in": "query", "description": "Attribute used to sort result set", "required": false, "type": "string"}, {"name": "order", "in": "query", "description": "Sort order", "required": false, "type": "string"}], "responses": {"200": {"description": "", "schema": {"required": ["results", "count"], "type": "object", "properties": {"page": {"type": "integer"}, "page_size": {"type": "integer"}, "page_count": {"type": "integer"}, "count": {"type": "integer", "format": "uri"}, "total_count": {"type": "integer", "format": "uri"}, "results": {"type": "array", "items": {"$ref": "#/definitions/Sandbox"}}}}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["pools"]}, "parameters": [{"name": "pool_id", "in": "path", "required": true, "type": "string"}]}, "/pools/{pool_id}/sandboxes/get-and-lock": {"get": {"operationId": "pools_sandboxes_get-and-lock_read", "description": "Get unlocked sandbox in given pool and lock it. Return 409 if all are locked.", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/Sandbox"}}, "409": {"description": "No free sandboxes; all sandboxes are locked.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "400": {"description": "Client sent invalid data.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["pools"]}, "parameters": [{"name": "pool_id", "in": "path", "required": true, "type": "string"}]}, "/pools/{pool_id}/variables": {"get": {"operationId": "pools_variables_list", "description": "Retrieve APG variables from sandbox definition of this pool, empty list if variables.yml\nwas not found.", "parameters": [], "responses": {"200": {"description": ""}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["pools"]}, "parameters": [{"name": "pool_id", "in": "path", "required": true, "type": "string"}]}, "/sandbox-allocation-units/{unit_id}": {"get": {"operationId": "sandbox-allocation-units_read", "description": "Retrieve a Sandbox Allocation Unit.", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/SandboxAllocationUnit"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["sandbox-allocation-units"]}, "parameters": [{"name": "unit_id", "in": "path", "required": true, "type": "string"}]}, "/sandbox-allocation-units/{unit_id}/allocation-request": {"get": {"operationId": "sandbox-allocation-units_allocation-request_read", "description": "Retrieve a Sandbox Allocation Request for an Allocation Unit.\nEach Allocation Unit has exactly one Allocation Request.\n(There may occur a situation where it has none, then it returns 404.)", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/AllocationRequest"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["sandbox-allocation-units"]}, "parameters": [{"name": "unit_id", "in": "path", "required": true, "type": "string"}]}, "/sandbox-allocation-units/{unit_id}/allocation-stages/restart": {"patch": {"operationId": "sandbox-allocation-units_allocation-stages_restart_partial_update", "description": "Restart all failed sandbox allocation stages.", "parameters": [{"name": "data", "in": "body", "required": true, "schema": {"$ref": "#/definitions/SandboxAllocationUnit"}}], "responses": {"201": {"description": "", "schema": {"$ref": "#/definitions/SandboxAllocationUnit"}}, "400": {"description": "Client sent invalid data.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["sandbox-allocation-units"]}, "parameters": [{"name": "unit_id", "in": "path", "required": true, "type": "string"}]}, "/sandbox-allocation-units/{unit_id}/cleanup-request": {"get": {"operationId": "sandbox-allocation-units_cleanup-request_read", "description": "Retrieve a Sandbox Cleanup Request for an Allocation Unit.\nEach Allocation Unit has at most one Cleanup Request.\nIf it has none, then it returns 404.", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/CleanupRequest"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["sandbox-allocation-units"]}, "post": {"operationId": "sandbox-allocation-units_cleanup-request_create", "description": "Create cleanup request.", "parameters": [{"name": "data", "in": "body", "required": true, "schema": {"$ref": "#/definitions/CleanupRequest"}}], "responses": {"201": {"description": "", "schema": {"$ref": "#/definitions/CleanupRequest"}}}, "tags": ["sandbox-allocation-units"]}, "delete": {"operationId": "sandbox-allocation-units_cleanup-request_delete", "description": "Delete cleanup request. Must be finished or cancelled.", "parameters": [], "responses": {"204": {"description": ""}}, "tags": ["sandbox-allocation-units"]}, "parameters": [{"name": "unit_id", "in": "path", "required": true, "type": "string"}]}, "/sandbox-allocation-units/{unit_id}/lock": {"get": {"operationId": "sandbox-allocation-units_lock_read", "description": "Retrieve lock for given sandbox allocation unit if its sandbox exists.", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/SandboxLock"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["sandbox-allocation-units"]}, "post": {"operationId": "sandbox-allocation-units_lock_create", "description": "Lock sandbox of given sandbox allocation unit if the sandbox exists.", "parameters": [{"name": "data", "in": "body", "required": true, "schema": {"$ref": "#/definitions/SandboxLock"}}], "responses": {"201": {"description": "", "schema": {"$ref": "#/definitions/SandboxLock"}}, "400": {"description": "Client sent invalid data.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["sandbox-allocation-units"]}, "delete": {"operationId": "sandbox-allocation-units_lock_delete", "description": "Delete lock of given sandbox allocation unit if it has sandbox.", "parameters": [], "responses": {"204": {"description": ""}}, "tags": ["sandbox-allocation-units"]}, "parameters": [{"name": "unit_id", "in": "path", "required": true, "type": "string"}]}, "/sandboxes/{sandbox_uuid}": {"get": {"operationId": "sandboxes_read", "description": "Retrieve a sandbox.", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/Sandbox"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["sandboxes"]}, "parameters": [{"name": "sandbox_uuid", "in": "path", "required": true, "type": "string"}]}, "/sandboxes/{sandbox_uuid}/consoles": {"get": {"operationId": "sandboxes_consoles_list", "description": "Retrieve spice console urls for all machines in the topology. Returns 202 if\nconsoles are not ready yet.", "parameters": [], "responses": {"200": {"description": ""}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["sandboxes"]}, "parameters": [{"name": "sandbox_uuid", "in": "path", "required": true, "type": "string"}]}, "/sandboxes/{sandbox_uuid}/man-out-port-ip": {"get": {"operationId": "sandboxes_man-out-port-ip_list", "description": "Retrieve a man out port ip address.", "parameters": [], "responses": {"200": {"description": ""}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["sandboxes"]}, "parameters": [{"name": "sandbox_uuid", "in": "path", "required": true, "type": "string"}]}, "/sandboxes/{sandbox_uuid}/topology": {"get": {"operationId": "sandboxes_topology_read", "description": "Get topology data for given sandbox.\nHosts specified as hidden are filtered out, but the network is still visible.", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/Topology"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["sandboxes"]}, "parameters": [{"name": "sandbox_uuid", "in": "path", "required": true, "type": "string"}]}, "/sandboxes/{sandbox_uuid}/user-ssh-access": {"get": {"operationId": "sandboxes_user-ssh-access_list", "description": "Generate SSH config for User access to this sandbox.\nSome values are user specific, the config contains placeholders for them.", "parameters": [], "responses": {"200": {"description": ""}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["sandboxes"]}, "parameters": [{"name": "sandbox_uuid", "in": "path", "required": true, "type": "string"}]}, "/sandboxes/{sandbox_uuid}/vms/{vm_name}": {"get": {"operationId": "sandboxes_vms_read", "description": "Retrieve a VM info.\nImportant Statuses:\n- ACTIVE (vm is active and running)\n- REBOOT (vm rebooting)\n- SUSPENDED (vm suspended)\n- ... https://developer.openstack.org/api-guide/compute/server_concepts.html#server-status", "parameters": [], "responses": {"200": {"description": "", "schema": {"$ref": "#/definitions/Node"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["sandboxes"]}, "patch": {"operationId": "sandboxes_vms_partial_update", "description": "Perform specified action on given VM.\nAvailable actions are:\n- suspend\n- resume\n- reboot", "parameters": [{"name": "data", "in": "body", "required": true, "schema": {"$ref": "#/definitions/NodeAction"}}], "responses": {"200": {"description": "", "schema": {"description": "", "type": "object", "properties": {}}}, "400": {"description": "Client sent invalid data.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["sandboxes"]}, "parameters": [{"name": "sandbox_uuid", "in": "path", "required": true, "type": "string"}, {"name": "vm_name", "in": "path", "required": true, "type": "string"}]}, "/sandboxes/{sandbox_uuid}/vms/{vm_name}/console": {"get": {"operationId": "sandboxes_vms_console_list", "description": "Get a console for given machine. It is active for 2 hours.\nBut when the connection is active, it does not disconnect.", "parameters": [], "responses": {"200": {"description": ""}, "401": {"description": "Authentication failed.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "403": {"description": "You do not have permission to perform this action.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "404": {"description": "Resource not found.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}, "500": {"description": "Server encountered an unexpected error.", "schema": {"$ref": "#/definitions/ErrorSerilizer"}}}, "tags": ["sandboxes"]}, "parameters": [{"name": "sandbox_uuid", "in": "path", "required": true, "type": "string"}, {"name": "vm_name", "in": "path", "required": true, "type": "string"}]}}, "definitions": {"AllocationRequest": {"description": "AllocationRequest(id, created, allocation_unit)", "type": "object", "properties": {"id": {"title": "ID", "type": "integer", "readOnly": true}, "allocation_unit_id": {"title": "Allocation unit id", "type": "integer", "readOnly": true}, "created": {"title": "Created", "type": "string", "format": "date-time", "readOnly": true}, "stages": {"title": "Stages", "type": "string", "readOnly": true}}}, "ErrorSerilizer": {"description": "Serializer for error responses.", "required": ["detail"], "type": "object", "properties": {"detail": {"title": "Detail", "description": "String message describing the error.", "type": "string", "minLength": 1}}}, "NetworkingAnsibleAllocationStage": {"description": "NetworkingAnsibleAllocationStage(id, start, end, failed, error_message, finished, allocation_request_fk_many, allocationstage_ptr, repo_url, rev, allocation_request)", "type": "object", "properties": {"id": {"title": "ID", "type": "integer", "readOnly": true}, "request_id": {"title": "Request id", "type": "integer", "readOnly": true}, "start": {"title": "Start", "description": "Timestamp indicating when the stage execution started.", "type": "string", "format": "date-time", "readOnly": true, "x-nullable": true}, "end": {"title": "End", "description": "Timestamp indicating when the stage execution ended.", "type": "string", "format": "date-time", "readOnly": true, "x-nullable": true}, "failed": {"title": "Failed", "description": "Indicates whether the stage execution failed.", "type": "boolean", "readOnly": true}, "error_message": {"title": "Error message", "description": "Error message describing the potential error.", "type": "string", "readOnly": true, "minLength": 1, "x-nullable": true}, "repo_url": {"title": "Repo url", "description": "URL of the Ansible repository.", "type": "string", "readOnly": true, "minLength": 1}, "rev": {"title": "Rev", "description": "Revision of the Ansible repository.", "type": "string", "readOnly": true, "minLength": 1}}}, "AllocationAnsibleOutput": {"description": "AllocationAnsibleOutput(id, content, allocation_stage)", "type": "object", "properties": {"content": {"title": "Content", "type": "string", "readOnly": true, "minLength": 1}}}, "TerraformAllocationStage": {"description": "StackAllocationStage(id, start, end, failed, error_message, finished, allocation_request_fk_many, allocationstage_ptr, allocation_request, status, status_reason)", "type": "object", "properties": {"id": {"title": "ID", "type": "integer", "readOnly": true}, "request_id": {"title": "Request id", "type": "integer", "readOnly": true}, "start": {"title": "Start", "description": "Timestamp indicating when the stage execution started.", "type": "string", "format": "date-time", "readOnly": true, "x-nullable": true}, "end": {"title": "End", "description": "Timestamp indicating when the stage execution ended.", "type": "string", "format": "date-time", "readOnly": true, "x-nullable": true}, "failed": {"title": "Failed", "description": "Indicates whether the stage execution failed.", "type": "boolean", "readOnly": true}, "error_message": {"title": "Error message", "description": "Error message describing the potential error.", "type": "string", "readOnly": true, "minLength": 1, "x-nullable": true}, "status": {"title": "Status", "description": "Stack status", "type": "string", "readOnly": true, "minLength": 1, "x-nullable": true}, "status_reason": {"title": "Status reason", "description": "Stack status reason", "type": "string", "readOnly": true, "minLength": 1, "x-nullable": true}}}, "AllocationTerraformOutput": {"description": "AllocationTerraformOutput(id, content, allocation_stage)", "type": "object", "properties": {"content": {"title": "Content", "type": "string", "readOnly": true, "minLength": 1}}}, "UserAnsibleAllocationStage": {"description": "UserAnsibleAllocationStage(id, start, end, failed, error_message, finished, allocation_request_fk_many, allocationstage_ptr, repo_url, rev, allocation_request)", "type": "object", "properties": {"id": {"title": "ID", "type": "integer", "readOnly": true}, "request_id": {"title": "Request id", "type": "integer", "readOnly": true}, "start": {"title": "Start", "description": "Timestamp indicating when the stage execution started.", "type": "string", "format": "date-time", "readOnly": true, "x-nullable": true}, "end": {"title": "End", "description": "Timestamp indicating when the stage execution ended.", "type": "string", "format": "date-time", "readOnly": true, "x-nullable": true}, "failed": {"title": "Failed", "description": "Indicates whether the stage execution failed.", "type": "boolean", "readOnly": true}, "error_message": {"title": "Error message", "description": "Error message describing the potential error.", "type": "string", "readOnly": true, "minLength": 1, "x-nullable": true}, "repo_url": {"title": "Repo url", "description": "URL of the Ansible repository.", "type": "string", "readOnly": true, "minLength": 1}, "rev": {"title": "Rev", "description": "Revision of the Ansible repository.", "type": "string", "readOnly": true, "minLength": 1}}}, "CleanupRequest": {"description": "CleanupRequest(id, created, allocation_unit)", "type": "object", "properties": {"id": {"title": "ID", "type": "integer", "readOnly": true}, "allocation_unit_id": {"title": "Allocation unit id", "type": "integer", "readOnly": true}, "created": {"title": "Created", "type": "string", "format": "date-time", "readOnly": true}, "stages": {"title": "Stages", "type": "string", "readOnly": true}}}, "NetworkingAnsibleCleanupStage": {"description": "NetworkingAnsibleCleanupStage(id, start, end, failed, error_message, finished, cleanup_request_fk_many, cleanupstage_ptr, cleanup_request)", "type": "object", "properties": {"id": {"title": "ID", "type": "integer", "readOnly": true}, "request_id": {"title": "Request id", "type": "integer", "readOnly": true}, "start": {"title": "Start", "description": "Timestamp indicating when the stage execution started.", "type": "string", "format": "date-time", "readOnly": true, "x-nullable": true}, "end": {"title": "End", "description": "Timestamp indicating when the stage execution ended.", "type": "string", "format": "date-time", "readOnly": true, "x-nullable": true}, "failed": {"title": "Failed", "description": "Indicates whether the stage execution failed.", "type": "boolean", "readOnly": true}, "error_message": {"title": "Error message", "description": "Error message describing the potential error.", "type": "string", "readOnly": true, "minLength": 1, "x-nullable": true}, "allocation_stage_id": {"title": "Allocation stage id", "type": "string", "readOnly": true}}}, "TerraformCleanupStage": {"description": "StackCleanupStage(id, start, end, failed, error_message, finished, cleanup_request_fk_many, cleanupstage_ptr, cleanup_request)", "type": "object", "properties": {"id": {"title": "ID", "type": "integer", "readOnly": true}, "request_id": {"title": "Request id", "type": "integer", "readOnly": true}, "start": {"title": "Start", "description": "Timestamp indicating when the stage execution started.", "type": "string", "format": "date-time", "readOnly": true, "x-nullable": true}, "end": {"title": "End", "description": "Timestamp indicating when the stage execution ended.", "type": "string", "format": "date-time", "readOnly": true, "x-nullable": true}, "failed": {"title": "Failed", "description": "Indicates whether the stage execution failed.", "type": "boolean", "readOnly": true}, "error_message": {"title": "Error message", "description": "Error message describing the potential error.", "type": "string", "readOnly": true, "minLength": 1, "x-nullable": true}, "allocation_stage_id": {"title": "Allocation stage id", "type": "string", "readOnly": true}}}, "UserAnsibleCleanupStage": {"description": "UserAnsibleCleanupStage(id, start, end, failed, error_message, finished, cleanup_request_fk_many, cleanupstage_ptr, cleanup_request)", "type": "object", "properties": {"id": {"title": "ID", "type": "integer", "readOnly": true}, "request_id": {"title": "Request id", "type": "integer", "readOnly": true}, "start": {"title": "Start", "description": "Timestamp indicating when the stage execution started.", "type": "string", "format": "date-time", "readOnly": true, "x-nullable": true}, "end": {"title": "End", "description": "Timestamp indicating when the stage execution ended.", "type": "string", "format": "date-time", "readOnly": true, "x-nullable": true}, "failed": {"title": "Failed", "description": "Indicates whether the stage execution failed.", "type": "boolean", "readOnly": true}, "error_message": {"title": "Error message", "description": "Error message describing the potential error.", "type": "string", "readOnly": true, "minLength": 1, "x-nullable": true}, "allocation_stage_id": {"title": "Allocation stage id", "type": "string", "readOnly": true}}}, "LocalSandboxVariables": {"description": "", "required": ["user_id", "access_token"], "type": "object", "properties": {"user_id": {"title": "User id", "type": "integer"}, "access_token": {"title": "Access token", "type": "string", "minLength": 1}}}, "LocalVariable": {"description": "", "required": ["name", "type", "min", "max", "length", "prohibited"], "type": "object", "properties": {"name": {"title": "Name", "type": "string", "minLength": 1}, "type": {"title": "Type", "type": "string", "minLength": 1}, "generated_value": {"title": "Generated value", "type": "string", "readOnly": true, "minLength": 1}, "min": {"title": "Min", "type": "string", "minLength": 1}, "max": {"title": "Max", "type": "string", "minLength": 1}, "length": {"title": "Length", "type": "integer"}, "prohibited": {"description": "", "type": "array", "items": {"type": "string"}}}}, "DefinitionRev": {"description": "", "required": ["name"], "type": "object", "properties": {"name": {"title": "Name", "type": "string", "minLength": 1}}}, "LibSpecialNode": {"description": "", "required": ["name"], "type": "object", "properties": {"name": {"title": "Name", "type": "string", "minLength": 1}}}, "Host": {"description": "CRCZP OS lib Host and Router topology serializer", "required": ["name", "os_type", "gui_access", "containers"], "type": "object", "properties": {"name": {"title": "Name", "type": "string", "minLength": 1}, "os_type": {"title": "Os type", "type": "string", "minLength": 1}, "gui_access": {"title": "Gui access", "type": "boolean"}, "containers": {"description": "", "type": "array", "items": {"type": "string", "minLength": 1}}}}, "Router": {"description": "CRCZP OS lib Host and Router topology serializer", "required": ["name", "os_type", "gui_access"], "type": "object", "properties": {"name": {"title": "Name", "type": "string", "minLength": 1}, "os_type": {"title": "Os type", "type": "string", "minLength": 1}, "gui_access": {"title": "Gui access", "type": "boolean"}}}, "LibNetwork": {"description": "CRCZP OS lib Network topology serializer", "required": ["name", "cidr"], "type": "object", "properties": {"name": {"title": "Name", "type": "string", "minLength": 1}, "cidr": {"title": "Cidr", "type": "string", "minLength": 1}}}, "Link": {"description": "", "type": "object", "properties": {"port_a": {"title": "Port a", "type": "string", "readOnly": true}, "port_b": {"title": "Port b", "type": "string", "readOnly": true}}}, "Port": {"description": "", "required": ["ip", "mac", "parent", "name"], "type": "object", "properties": {"ip": {"title": "Ip", "type": "string", "minLength": 1}, "mac": {"title": "Mac", "type": "string", "minLength": 1}, "parent": {"title": "Parent", "type": "string", "minLength": 1}, "name": {"title": "Name", "type": "string", "minLength": 1}}}, "Topology": {"description": "Serializer for topology", "required": ["special_nodes", "hosts", "routers", "switches", "links", "ports"], "type": "object", "properties": {"special_nodes": {"description": "", "type": "array", "items": {"$ref": "#/definitions/LibSpecialNode"}}, "hosts": {"description": "", "type": "array", "items": {"$ref": "#/definitions/Host"}}, "routers": {"description": "", "type": "array", "items": {"$ref": "#/definitions/Router"}}, "switches": {"description": "", "type": "array", "items": {"$ref": "#/definitions/LibNetwork"}}, "links": {"description": "", "type": "array", "items": {"$ref": "#/definitions/Link"}}, "ports": {"description": "", "type": "array", "items": {"$ref": "#/definitions/Port"}}}}, "Image": {"description": "", "required": ["os_distro", "os_type", "disk_format", "container_format", "visibility", "status", "min_ram", "min_disk", "created_at", "updated_at", "tags", "default_user", "name"], "type": "object", "properties": {"os_distro": {"title": "Os distro", "type": "string", "minLength": 1}, "os_type": {"title": "Os type", "type": "string", "minLength": 1}, "disk_format": {"title": "Disk format", "type": "string", "minLength": 1}, "container_format": {"title": "Container format", "type": "string", "minLength": 1}, "visibility": {"title": "Visibility", "type": "string", "minLength": 1}, "size": {"title": "Size", "type": "integer", "readOnly": true}, "status": {"title": "Status", "type": "string", "minLength": 1}, "min_ram": {"title": "Min ram", "type": "integer"}, "min_disk": {"title": "Min disk", "type": "integer"}, "created_at": {"title": "Created at", "type": "string", "minLength": 1}, "updated_at": {"title": "Updated at", "type": "string", "minLength": 1}, "tags": {"description": "", "type": "array", "items": {"type": "string"}}, "default_user": {"title": "Default user", "type": "string", "minLength": 1}, "name": {"title": "Name", "type": "string", "minLength": 1}, "owner_specified": {"title": "Owner specified", "type": "object", "readOnly": true}}}, "Quota": {"title": "Vcpu", "description": "", "required": ["limit", "in_use"], "type": "object", "properties": {"limit": {"title": "Limit", "type": "number"}, "in_use": {"title": "In use", "type": "number"}}}, "QuotaSet": {"description": "", "required": ["vcpu", "ram", "instances", "network", "subnet", "port"], "type": "object", "properties": {"vcpu": {"$ref": "#/definitions/Quota"}, "ram": {"$ref": "#/definitions/Quota"}, "instances": {"$ref": "#/definitions/Quota"}, "network": {"$ref": "#/definitions/Quota"}, "subnet": {"$ref": "#/definitions/Quota"}, "port": {"$ref": "#/definitions/Quota"}}}, "ProjectLimits": {"description": "", "required": ["vcpu", "ram", "instances", "network", "subnet", "port"], "type": "object", "properties": {"vcpu": {"title": "Vcpu", "type": "integer"}, "ram": {"title": "Ram", "type": "number"}, "instances": {"title": "Instances", "type": "integer"}, "network": {"title": "Network", "type": "integer"}, "subnet": {"title": "Subnet", "type": "integer"}, "port": {"title": "Port", "type": "integer"}}}, "PoolLock": {"description": "PoolLock(id, pool)", "type": "object", "properties": {"id": {"title": "ID", "type": "integer", "readOnly": true}, "pool_id": {"title": "Pool id", "type": "integer", "readOnly": true}}}, "SandboxAllocationUnit": {"description": "SandboxAllocationUnit(id, pool, created_by)", "required": ["cleanup_request"], "type": "object", "properties": {"id": {"title": "ID", "type": "integer", "readOnly": true}, "pool_id": {"title": "Pool id", "type": "integer", "readOnly": true}, "allocation_request": {"$ref": "#/definitions/AllocationRequest"}, "cleanup_request": {"$ref": "#/definitions/CleanupRequest"}, "created_by": {"title": "Created by", "type": "string", "readOnly": true}, "locked": {"title": "Locked", "type": "string", "readOnly": true}}}, "Sandbox": {"description": "Sandbox(id, allocation_unit, private_user_key, public_user_key)", "type": "object", "properties": {"id": {"title": "Id", "type": "string", "readOnly": true, "minLength": 1}, "lock_id": {"title": "Lock id", "type": "integer", "readOnly": true}, "allocation_unit_id": {"title": "Allocation unit id", "type": "integer", "readOnly": true}}}, "SandboxLock": {"description": "SandboxLock(id, sandbox, created_by)", "type": "object", "properties": {"id": {"title": "ID", "type": "integer", "readOnly": true}, "sandbox_id": {"title": "Sandbox id", "type": "string", "readOnly": true}, "created_by": {"title": "Created by", "description": "The user that created this lock.", "type": "integer", "readOnly": true, "x-nullable": true}}}, "Node": {"description": "CRCZP OS lib Instance serializer", "required": ["name", "id", "status", "image", "flavor_name"], "type": "object", "properties": {"name": {"title": "Name", "type": "string", "minLength": 1}, "id": {"title": "Id", "type": "string", "minLength": 1}, "status": {"title": "Status", "type": "string", "minLength": 1}, "image": {"$ref": "#/definitions/Image"}, "flavor_name": {"title": "Flavor name", "type": "string", "minLength": 1}}}, "NodeAction": {"description": "", "required": ["action"], "type": "object", "properties": {"action": {"title": "Action", "description": "Action you with to perform on the node.", "type": "string", "enum": ["suspend", "resume", "reboot"]}}}}};
+  // Build a system
+  const ui = SwaggerUIBundle({
+    spec: spec,
+    dom_id: '#swagger-ui',
+    deepLinking: true,
+    presets: [
+      SwaggerUIBundle.presets.apis,
+      SwaggerUIStandalonePreset
+    ],
+    plugins: [
+      SwaggerUIBundle.plugins.DownloadUrl
+    ],
+    layout: "StandaloneLayout"
+  })
+  window.ui = ui
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2020-2024 Masaryk University<br>Copyright © 2025 CyberSecurity Hub, z.s.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
