@@ -92,7 +92,7 @@ This panel is part of the [Create Adaptive Training Definition Panel](#create-ad
 To add a new phase, the instructor can click ![Add-button](../../../img/buttons/add-button.png) that will roll down a menu in which the instructor can choose a type of the new phase:
 
 <p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-definition/adaptive/ATD-add-phase.png">
+  <img src="../../../../img/user-guide-basic/training-agenda/training-definition/adaptive/ATD-add-phase.png" style="width: 30%;">
 </p>
 
 Each change that has been made inside a phase (except create, copy, delete and move task) must be saved with the ![save](../../../img/buttons/save-button.png) button at the top of [Create Adaptive Training Definition Panel](#create-adaptive-training-definition-panel).
