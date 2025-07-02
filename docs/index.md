@@ -28,4 +28,4 @@ If you need professional support, or assistance with setting up an OpenStack clu
 
 Community contributions and feedback are welcome.  
 Technical topics can be discussed in the CyberRangeCZ [organization discussions](https://github.com/orgs/cyberrangecz/discussions).  
-Suggestions for new features or reports of software issues can be submitted as issues in a [dedicated repository](https://github.com/cyberrangecz/public-issues/issues).
+Suggestions for new features or reports of software issues can be submitted as issues in a [dedicated repository](https://github.com/cyberrangecz/issues/issues).
