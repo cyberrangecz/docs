@@ -23,3 +23,9 @@ CyberRangeCZ Platform is an open-source project. We build upon the work of the K
 We tried our best to create the CyberRangeCZ Platform as simple as possible for such a complex piece of software.  All documentation is publicly available here to help you with deployment and operation.
 
 If you need professional support, or assistance with setting up an OpenStack cluster and deploying CyberRangeCZ Platform, [let us know](https://www.cyberrange.cz/contact/).
+
+## Feedback and Feature Requests
+
+Community contributions and feedback are welcome.  
+Technical topics can be discussed in the CyberRangeCZ [organization discussions](https://github.com/orgs/cyberrangecz/discussions).  
+Suggestions for new features or reports of software issues can be submitted as issues in a [dedicated repository](https://github.com/cyberrangecz/public-issues/issues).
