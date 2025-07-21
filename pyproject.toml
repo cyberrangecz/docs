@@ -1,0 +1,17 @@
+[project]
+name = "crczp-docs"
+version = "1.1.0"
+description = "CyberRangeCZ Platform documentation"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "cybersecurityhub.cz" }]
+dependencies = [
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocs-macros-plugin",
+    "mkdocs-swagger-ui-tag"
+]
+
+[project.urls]
+GitHub = "https://github.com/cyberrangecz/docs"
