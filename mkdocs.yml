@@ -66,15 +66,15 @@ nav:
                   - Platform Components: installation-guide/platform-components.md
         - FAQ: faq.md
         - Reference:
-                  - Sandbox Service: reference/sandbox-service-swagger-open-api.yaml
-                  - User and Group Service: reference/user-and-group-swagger-open-api.yaml
-                  - Training Service: reference/training-swagger-open-api.yaml
-                  - Adaptive Training Service: reference/adaptive-training-swagger-open-api.yaml
-                  - Adaptive Smart Assistant Service: reference/adaptive-smart-assistant-swagger-open-api.yaml
-                  - Training Feedback Service: reference/training-feedback-swagger-open-api.yaml
-                  - Answers Storage: reference/answers-storage-swagger-open-api.yaml
-                  - Elasticsearch Service: reference/elasticsearch-service-swagger-open-api.yaml
-                  - Mitre Technique Service: reference/mitre-technique-service-swagger-open-api.yaml
+                  - Sandbox Service1: reference/sandbox-service-swagger-open-api.md
+                  - User and Group Service1: reference/user-and-group-swagger-open-api.md
+                  - Training Service1: reference/training-swagger-open-api.md
+                  - Adaptive Training Service1: reference/adaptive-training-swagger-open-api.md
+                  - Adaptive Smart Assistant Service1: reference/adaptive-smart-assistant-swagger-open-api.md
+                  - Training Feedback Service1: reference/training-feedback-swagger-open-api.md
+                  - Answers Storage1: reference/answers-storage-swagger-open-api.md
+                  - Elasticsearch Service1: reference/elasticsearch-service-swagger-open-api.md
+                  - Mitre Technique Service1: reference/mitre-technique-service-swagger-open-api.md
                   - Tables of Permissions: reference/tables-of-permissions.md
         - Extras:
                   - Logging:
@@ -115,4 +115,4 @@ extra_css:
 plugins:
         - macros
         - search
-        - mkdocs-swagger-ui
+        - swagger-ui-tag

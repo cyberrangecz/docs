@@ -9,7 +9,7 @@ verify_ssl = true
 mkdocs = "*"
 mkdocs-material = "*"
 mkdocs-macros-plugin = "*"
-mkdocs-swagger-ui-plugin = {git = "https://github.com/cyberrangecz/devops-mkdocs-swagger-ui-plugin.git"}
+mkdocs-swagger-ui-tag = "*"
 
 [requires]
-python_version = "3.10"
+python_version = "3.12"
