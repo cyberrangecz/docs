@@ -16,6 +16,6 @@ To access the above-mentioned pages, click the respective button on the front pa
 Or by clicking the respective button in the global navigation in the section **Sandboxes**:
 
 <p align="center">
-  <img src="../../../img/user-guide-basic/sandbox-agenda/overview/sandbox-agenda-overview-panel.png">
+  <img src="../../../img/user-guide-basic/sandbox-agenda/overview/sandbox-agenda-overview-panel.png" style="width: 20%;">
 </p>
 

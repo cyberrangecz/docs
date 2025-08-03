@@ -71,7 +71,7 @@ In the top right corner, there are control buttons:
  * ![allocate-button](../../img/buttons/allocate-some-button.png) If there is one last unallocated sandbox, it automatically run its allocation. Otherwise, it opens up a dialog window for selecting a specific number of sandboxes in the pool for allocation.
     <br/>In the following window, you get to specify the amount of sandboxes you wish to allocate.
 
-    ![allocation-dialog](../../img/user-guide-basic/sandbox-agenda/pool/allocation-dialog.png)
+    <img src="../../../img/user-guide-basic/sandbox-agenda/pool/allocation-dialog.png" style="width:70%;">
 
     After choosing the desired amount either by typing in the field or setting the value with the slider, confirm your choice by clicking **Allocate**.
 

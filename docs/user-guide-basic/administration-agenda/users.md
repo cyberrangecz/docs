@@ -5,7 +5,7 @@ This page is used to list all users that had logged into the CyberRangeCZ Platfo
 To download a YAML file with the credentials (login + password) of the users generated/created in the local OIDC provider click the ![get-users-credentials-button](../../img/buttons/get-users-credentials-button.png) button. In order to import users who haven't been logged in yet and you would like to assign them roles click the ![import-users-button](../../img/buttons/import-users-button.png) button. The following pop up window will be displayed:
 
 <p align="center">
-  <img src="../../../img/user-guide-basic/administration-agenda/users/upload-users.png">
+  <img src="../../../img/user-guide-basic/administration-agenda/users/upload-users.png" style="width: 65%;">
 </p>
 
 Then click **Choose file** and select the file with the following structure:

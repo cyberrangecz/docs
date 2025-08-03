@@ -13,7 +13,7 @@ Instructor can click on the title of each sandbox definition to redirect to the 
 ??? trash-can "Delete"
     Click the button, and the following confirmation window will be opened:
 
-    ![delete-sb](../../img/user-guide-basic/sandbox-agenda/sandbox-definition/sandbox-definition-delete.png)
+    <img src="../../../img/user-guide-basic/sandbox-agenda/sandbox-definition/sandbox-definition-delete.png" style="width: 80%;">
 
     !!! warning
         Only sandbox definitions not assigned to any pool can be deleted!

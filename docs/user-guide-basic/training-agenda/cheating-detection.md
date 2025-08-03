@@ -1,7 +1,7 @@
 This page details the use of cheating detection methods and interpretation of detected results on linear training instance. Detection methods can be easily and freely used on any training instance of linear training definition, however, to fully understand the relevancy and applicability of each detection method, read the whole documentation.
 
 ## Cheating Detection Overview
-To access the main page for cheating detections on a training instance click the ![cheating-detection](../../img/user-guide-basic/training-agenda/cheating-detection/cheating-detection.png) button in training instance overview.
+To access the main page for cheating detections on a training instance click the <img src="../../../img/user-guide-basic/training-agenda/cheating-detection/cheating-detection.png" style="width: 20%;">  button in training instance overview.
 
 <p align="center">
   <img src="../../../img/user-guide-basic/training-agenda/cheating-detection/cheating-detection-overview.png">
