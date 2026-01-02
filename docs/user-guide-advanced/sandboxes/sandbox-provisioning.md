@@ -45,6 +45,7 @@ On top of [Ansible special variables](https://docs.ansible.com/ansible/latest/re
 * **global_head_ip**: the CyberRangeCZ Platform IP address or FQDN.
 * **global_ssh_public_user_key**: the path on Ansible controller to SSH public user key (Since 21.04).
 * **global_ssh_public_mgmt_key**: the path on Ansible controller to SSH public management key (Since 21.04).
+* **global_syslog_destination_port**: the Syslog destination port running on Kubernetes cluster (Since CyberRangeCZ Platform v2025.01).
 
 ### Ansible Inventory
 
