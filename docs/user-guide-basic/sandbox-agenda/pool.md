@@ -121,6 +121,16 @@ Allocation itself consists of **three** stages (allocation of a sandbox in the c
 !!! info "Retry stage"
     If one of the stages fails, you can restart the failed stage by clicking on the retry icon :bootstrap-cached-circle:{ .icon } which appears next to the stages. Keep in mind that as of now only the second and third stage can be restarted.
 
-Stage details of the sandbox are available by clicking on **sandbox name**. To see details of stage execution, click the **Stage detail** button of the given stage. In case that stage fails, the error message should be available there.
+Stage details of the sandbox are available by clicking on **sandbox name**. This page contains log outputs of each stage during the allocation process. This allows you to watch live logs and debug potential issues during the allocation process. 
+
+If scrolled to the bottom of the log output, new log lines will be automatically shown as they arrive. Once the stage finished, the next stage will be automatically focused. 
+
+* To **navigate between stages,** either **click the stage icon** at the top or **click into the contents** of the neighboring stage on either side of screen.
+* To see **metadata of a stage**, expand the detail by clicking on the stage name
+* **Toolbar** under the stage name allows you to:
+    * **Fullscreen** the log output
+    * Toggle **soft wrap** of log lines
+    * **Copy** log content to clipboard
+    * Scroll to **top/bottom** of log output
 
 ![allocation-request-stages](../../img/user-guide-basic/sandbox-agenda/pool/allocation-request-stages.png)
