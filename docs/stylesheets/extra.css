@@ -59,6 +59,13 @@ img {
     bottom: 3px;
 }
 
+.inline-button {
+    height: 1rem;
+    max-height: 1.5rem;
+    vertical-align: middle;
+    display: inline;
+}
+
 td, th {
     vertical-align: middle !important;
 }
@@ -115,6 +122,8 @@ details p, details summary, .admonition p {
   --md-admonition-icon--assessment: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>');
 
   --md-admonition-icon--stacked-bar-chart: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 10h3v10H6zm0-5h3v4H6zm10 11h3v4h-3zm0-3h3v2h-3zm-5 0h3v7h-3zm0-4h3v3h-3z"/></svg>');
+
+  --md-admonition-icon--deprecated: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>');
 }
 
 
@@ -216,4 +225,31 @@ details p, details summary, .admonition p {
     background-color: rgb(64, 81, 181);
     -webkit-mask-image: var(--md-admonition-icon--stacked-bar-chart);
             mask-image: var(--md-admonition-icon--stacked-bar-chart);
+}
+
+.md-typeset .admonition.deprecated,
+.md-typeset details.deprecated {
+    border-left-color: rgb(119, 119, 119);
+    border-color: rgb(119, 119, 119);
+}
+
+.md-typeset .deprecated > .admonition-title,
+.md-typeset .deprecated > summary {
+    background-color: rgba(119, 119, 119, 0.1);
+    border-left-color: rgb(119, 119, 119);
+}
+
+.md-typeset .deprecated > .admonition-title::before,
+.md-typeset .deprecated > summary::before {
+    background-color: rgb(119, 119, 119);
+    -webkit-mask-image: var(--md-admonition-icon--deprecated);
+            mask-image: var(--md-admonition-icon--deprecated);
+}
+
+.md-typeset .deprecated > summary:focus {
+    outline: none;
+}
+
+.md-typeset .deprecated > summary::after {
+    color: rgb(119, 119, 119);
 }
