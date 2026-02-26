@@ -1,8 +1,6 @@
 We have designed the CyberRangeCZ Platform as a cloud platform for achieving maximum flexibility, scalability, and cost-effectiveness. A lot of development effort has been dedicated to user interactions within CyberRangeCZ Platform, allowing us to offer access through a web browser. The following conceptual architecture depicts the key architectural constructs in the designed system.
 
-<p align="center" >
-      <img style="width: 85%" src="../../img/basic-concepts/portal-diagram.svg">
-</p>
+![Diagram of the conceptual architecture of the CyberRangeCZ Platform](/img/basic-concepts/portal-diagram.svg){ .center style="max-height: 420px;" }
 
 ### Git Repositories
 Git repositories are used to store created sandbox definitions. They are loaded by the particular microservice of the CyberRangeCZ Platform portal, so they can be later used to create sandbox instances in the cloud. Access to Git is configured during the CyberRangeCZ Platform deployment.

@@ -2,7 +2,7 @@
 
 The CyberRangeCZ Platform Terraform Client transforms a [Topology Definition](topology-definition.md) (user-defined topology) with the [Topology Instance Management](#topology-instance-management) sub-infrastructure into the Terraform Template, which is then used by [Terraform](https://www.terraform.io) to create a virtual infrastructure we call a Topology Instance.
 
-![topology-instance](../../img/user-guide-advanced/sandboxes/topology-instance.svg)
+![Topology instance infrastructure](/img/user-guide-advanced/sandboxes/topology-instance.svg){: .center style="max-height: 800px;"}
 
 !!! note
     For clarity reasons, there are missing links from **man-network** to the left **Router** and left **Host**.

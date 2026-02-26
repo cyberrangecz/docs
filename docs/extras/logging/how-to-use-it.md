@@ -4,4 +4,4 @@ Command logging was originally enabled on host VMs by using three Ansible roles.
 ## Accessing logged data
 The training organizer can access all logged data (training events or commands) by exporting the training instance in the [Training Instance Overview](../../user-guide-basic/training-agenda/training-instance.md#training-instance-overview). All data can be found in the exported archive in the corresponding files stored in the JSON format.
 
-![Archive](../../img/extras/logging/accessed-logged-data-structure.png)
+![Archive](/img/extras/logging/accessed-logged-data-structure.png)

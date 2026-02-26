@@ -10,50 +10,57 @@ As an instructor, you can see the ongoing course of the training runs and furthe
 
 #### Progress
 
-The interface consists of several sections for interaction with the visualization. Each section (see the figure below) is further described.
+Progress visualization is the main view of the ongoing training instance. It provides an **overview of the trainees' progress in the training** - their current level, the time spent on the level and all events such as submitted answers, used hints or solutions. The x-axis represents time. On the y-axis, there are individual trainee playthroughs visualized by horizontal bars. Each horizontal bar is split into segments representing the time spent on each level.
 
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-progress.png">
-</p>
+![TI-progress](/img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-progress.png){: .center .radius-image .shadow }
 
-!!! info
-    In the visualization, exclamation marks (![exclamation_mark](../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/exclamation.png)) can appear next to trainees or level tiles. They indicate a situation that may need further attention - upon a mouse-over, textual information appears. On a mouse click on the mark, it fades to signal that the issue is being solved and needs to be highlighted.
 
-**Settings**
+***Levels bar***
 
-Serves for automatic or semiautomatic restriction of the full visible timeline -- in case the user needs just a portion of the full progress, these settings can help observe it more efficiently. 
+At the very top of the visualization, there is a line representing the levels of the training. **Hovering** over a level will **highlight the respective segments** of the trainees' bars, allowing the instructor to quickly identify how trainees are progressing on a specific level. **Clicking** on a level **will filter** the visualization to show only the trainees currently on the selected level. 
 
-**Timeline Allocation**
+***Sort***
 
-The time displayed in the upper right corner indicates the estimated end of the session based on the current progression. A small arrow ![arrow](../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/arrow.png) denotes the originally scheduled end time to show the deviation from the schedule. On hover, the exact scheduled end time shows. As the training session progresses, the timeline fills accordingly.
+On the top left of the chart, there is a dropdown menu that allows the instructor to sort the trainees by different criteria. Direction of sorting can be changed by the button next to the dropdown. Sorting can be done by:
 
-**Trainee Selection**
+* **Name**: trainees are sorted **alphabetically** by their names
+* **Current level order**: trainees are sorted by the ordinal number of the **level they are currently on**
+* **Current score**: trainees are sorted by their **total score**
+* **Lag time**: trainees are sorted by the **time difference from the estimated duration** of the current level
+* **Lag time percentage**: trainees are sorted by the **percentage ratio of** their **current lag** time and the **estimated duration** of the current level
+* **Training run start time**: trainees are sorted by the **time they started** the training run
 
-All trainees (their avatars and/or names) are listed in the circles. Each trainee can be selected or deselected upon mouse click to show/hide their training progression in the visualization below. The mouse hovering on a visible trainee runs in the visualization highlights. 
+***Lag behind schedule***
 
-[//]: <> (Above the grid is a text summary with the number of all trainees and the number of those currently displayed in the visualization. On click on the corresponding text on the right, all trainees show or hide accordingly.)
+**If estimated duration for a level is specified** in the [training definition](/user-guide-basic/training-agenda/training-definition/linear-training-definition), the progress visualization can also show **whether** trainees are **lagging behind the schedule** and how are they faring compared to the estimated duration. The estimated duration is visualized by a diagonal dashed bar. If a trainee is lagging behind the schedule, their progress bar will be **transition colors from green to yellow and then to red**. If a bar is red, the trainee may **require the instructor's attention**. Lastly, after a very long time spent on a level, the bar will color black. This means the trainee has completely stopped progressing (or is inactive).
 
-**Level Selection**
+Lag states are also summarized in a legend at the top of the chart. The legend contains all possible lag states:
 
-Tiles that represent individual training levels. Each level tile also holds information regarding the number of trainees who currently solve the level. The level type and correct answer are shown in a tooltip on hover. Additionally, the last tile displays all trainees who have already finished the whole training session. For each level, you can display its trainees on click.
+* <span style="color: #79AA5E; font-weight: bold;">On track</span>: the trainee is progressing according to the schedule.
+* <span style="color: #DEA13B; font-weight: bold;">Warning</span>: the trainee is slightly behind the schedule and may require attention in the near future.
+* <span style="color: #CA5E40; font-weight: bold;">Late</span>: the trainee is behind the schedule and may require immediate attention.
+* <span style="color: #544644; font-weight: bold;">Not progressing</span>: the trainee has stopped progressing for a long time and may require immediate attention.
+* <span style="color: #656FBF; font-weight: bold;">Unknown</span>: the estimate is not available for the level
 
-**Progress Visualization**
+!!! tip
+    **Clicking on the legend** will **toggle the visibility** of the respective **lag state** in the visualization. This allows the instructor to focus on specific lag states and **identify trainees that may require attention**.
 
-It gives a full picture of the trainee's walkthrough. Upon filtering in the preceding sections, the selected trainees are displayed here. 
+***Trainee legend***
 
-Each row represents an individual trainee. Bars of each row are training levels - gray levels are finished levels, current levels are colored green/yellow/red, according to their delay as opposed to the scheduled amount of time. The stripped bars denote the scheduled time for the ongoing or upcoming levels.
+On the left side of each trainee's bar, there is a legend with the trainee's name and image. By **clicking** on the trainee's name, the instructor can **pin the trainee to the top** of the list. This allows the instructor to easily track the progress of specific trainees. To clear all pinned trainees, click the "Clear" button at the top of the legend.
 
-The bars can display the events of the trainees. When taking a hint ![hint](../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/hint.png) or submitting a wrong answer ![wrong-answer](../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/answer.png), the event displays in the visualization, colored the same as its level. Multiple events of the same type triggered in quick succession show as one, with a corresponding number on it. On mouse-over, detailed information tooltip shows.
+***Timeline***
 
-**Individual Trainee Detail**
+At the bottom of the visualization, there is a timeline, matching the x-axis of the main chart. The timeline can be used to **zoom in** on a specific time period. To zoom in, drag the end points of the timeline to the desired time period. A zoomed in view c**an be dragged** by the slider at the bottom. To reset the zoom, click the "Expand" button on the left of the timeline.
 
-More detailed individual trainee progress can be displayed. Upon clicking on a trainee avatar or name on the left side of the training runs visualization, a new window shows:
+***Events***
 
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-progress-detail.png">
-</p>
+Events are represented by small circles on the trainees' bars. Each event corresponds to an **action taken by the trainee**. Events are positioned on the bar according to the time they were recorded. The color of the event corresponds to the type of the event. There are **4 key event types**:
 
-Here, the additional line chart shows the trainee's activity for the ongoing level.
+* :material-close:{: .progress-event style="color: #C0392B;"} <span style="color: #C0392B; font-weight: bold;">Wrong answer submitted</span>: the trainee submitted an incorrect answer for the current level
+* :material-check:{: .progress-event style="color: #27AE60;"} <span style="color: #27AE60; font-weight: bold;">Correct answer submitted</span>: the trainee submitted a correct answer for the current level
+* :material-lightbulb:{: .progress-event style="color: #F1C40F;"} <span style="color: #F1C40F; font-weight: bold;">Hint taken</span>: the trainee revealed a hint for the current level
+* :material-eye:{: .progress-event style="color: #F29328;"} <span style="color: #F29328; font-weight: bold;">Solution displayed</span>: the trainee revealed the solution for the current level
 
 #### Command Timeline
 
@@ -66,9 +73,7 @@ This visualization provides commands ordered by the time of the selected trainee
 !!! note
     Displayed time is a timestamp from training, not real-time.
 
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-command-timeline.png">
-</p>
+![TI-command-timeline](/img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-command-timeline.png){: .center .radius-image .shadow }
 
 ### Results of Training Instance 
 
@@ -80,135 +85,37 @@ The Dashboard tab, which is always present, contains [Score Development](#score-
 
 This visualization unites the previously listed visualizations and provides interactions between them. Visualization filters allow the instructor to filter the available training events and the format in which the trainee selector displays the trainees. The trainees selected by the trainee selector are then shown in the [Progress](#final-training-runs-view) overview graph. The instructor can filter which trainees they want to see in visualizations by this option. Their results are displayed in the progress overview graph upon selecting these trainees. Selecting trainees in the progress overview graph will appear in [Score Development](#score-development) and [Score Scatter Plot](#score-scatter-plot). Hovering over a trainee in any visualization will highlight them in the remaining visualizations.
 
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-dashboard.png">
-</p>
+![TI-dashboard](/img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-dashboard.png){: .center .radius-image .shadow }
 
 ##### Score Development 
 
 The tab displays a graph with the time development of the trainees' scores marked in the table under the graph. The graph also displays various types of events (denoted by a small circle). To visualize events taken by trainees, check/uncheck a checkbox displayed next to the table with participants. Hold Ctrl + Scroll while scrolling with the mouse wheel to zoom in or out.
 
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-score-dev.png">
-</p>
+![TI-score-dev](/img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-score-dev.png){: .center .radius-image .shadow }
 
 ##### Score Scatter Plot 
 
 This visualization provides an overview of the training results. It helps to compare the score and duration of the whole training or individual levels. Dots show the positions of the trainees based on score and time. They indicate the correlation between the two factors and help to pinpoint the outliers or allocate clusters.
 
 
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-score-scatter.png">
-</p>
+![TI-score-scatter](/img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-score-scatter.png){: .center .radius-image .shadow }
 
 ##### Final Training Runs View
 
 This visualization is a view on available data distilled from the "Progress of Training Instance". It supports additional interaction (such as level sorting by their duration) and gives a full picture of the trainee walkthrough. The color scale helps to highlight individual levels for all trainees as well as their usage of hints or submissions of wrong answers for the levels. It helps to find skilled trainees or flaws in the training design by observing the details of its progression.
 
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-score-progress.png">
-</p>
+![TI-score-progress](/img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-score-progress.png){: .center .radius-image .shadow }
 
 #### Assessment
 Displays statistics of individual assessment answers.
  
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-assessment.png">
-</p>
-
-#### Aggregated Dashboard
-
-This dashboard provides overview over 4 different visualizations. All of these present data from selected training instances which share **same** [Training Definition](../../../user-guide-advanced/trainings/trainings-overview.md#training-definition). Data from selected training instances are aggregated and presented in visualizations below. 
-
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-aggregated-dashboard.png">
-</p>
-
-##### Training Instance Result visualization
-
-Presents statistics about obtained points and compares them across several training instances. The combined diagram contains a bar chart representing the number of participants per individual training, which is augmented by two bar graphs showing players' average and median scores. 
-The visualization has a double y-ray axis. The left one corresponds to the number of training participants, while the right axis belongs to the line graphs indicating the score of participants. The x-axis represents the date when the training were organized.
-
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-results.png">
-</p>
-
-##### Time-score-hints Relationship
-
-Helps designers identify a successful game strategy - examines whether it is more appropriate to use point-based hints penalties or whether participants should prefer to solve tasks without assistance. 
-Furthermore, it identifies weak participants who would need help from a training instructor. Moreover, it helps to find the most qualified participants. This information helps to determine the complexity of the training.
-
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-time-score-hints.png">
-</p>
-
-##### Wrong Answers Overview
-
-Visualization is used to analyze the quality of training, thereby helping the training designers. Provides insight into the ratio of correct and incorrect answers entered during each training level and shows whether all participants solved the level. Designers have the opportunity to compare the difficulty of training levels and identify the tasks that caused problems for participants. Significant failure can indicate ambiguities in the training definition. 
-
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-wrong-answers-overview.png">
-</p>
-
-##### Wrong Answers Details
-
-The bubble chart is created for the selected training level to provide a detailed view of the submitted answers. This procedure allows instructors to examine the participants' answers in more detail to find repeating patterns. Each bubble in the diagram corresponds to one answer entered during the currently selected training level. The bubble size indicates the number of times the participant submitted the answer during the selected training - the larger the circle, the more times the selected answer has been entered. Instructors can use this technique to identify frequently occurring incorrect answers, which in certain cases indicate ambiguity of training definition.
-
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-wrong-answers-detail.png">
-</p>
-
-##### Time and Score Aggregations
-
-Time and Score Aggregations is an alternative to the Time-Score Overview scatter plot (see [here](#time-score-hints-relationship)). This view aggregates data from all the selected training instances. However, it does not display individual trainees in the form of the dots, instead it shows the maximum and average values. The maximum is marked by the size of the bars and the maximum values on the coordinates. The averages are denoted by the hatched horizontal and vertical lines.
-
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-time-and-score-aggregations.png">
-</p>
-
-##### Two Clusterable Features Comparison
-
-Line chart containing a radio button to swap between two line chart features:
-
-###### Wrong Flags Submitted
-
-This feature shows the scatter plot visualization of trainees submitting wrong flags per time played.
-
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-wrong-flags-submitted.png">
-</p>
-
-###### Time Spent After Using Hint
-
-Feature containing the information about time spent solving the current level after using a hint for the level.
-
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-time-spent-after-using-hint.png">
-</p>
-
-##### Behavior Correlation Chart
-
-This feature displays more complex but effectively more comparative data than the previous two aggregations. It contains radar charts for clusters of trainees based on five attributes:
-
-* maximal time spent in a level after taking a hint
-* amount of wrong flags submitted
-* total score of the user
-* time played
-* hints taken
-
-The biggest chart shows the correlation between all other clusters.
-
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-behavior-correlation-chart.png">
-</p>
+![TI-assessment](/img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-assessment.png){: .center .radius-image .shadow }
 
 #### Walkthrough
 
 A tab called Walkthrough transforms the data of each game phase into visualizations that provide a quick overview of relative success rates. Each curve corresponds to one player, whose ID is shown on the far left.
 
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-walkthrough.png">
-</p>
+![TI-walkthrough](/img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-walkthrough.png){: .center .radius-image .shadow }
 
 The x-axis captures important game events that are interpreted as either a successful step towards solving a task (e.g., using the correct command or entering the correct answer) or, conversely, a "failed" step (e.g., displaying a hint). This interpretation is reflected by an increasing (successful step) or decreasing tendency of the curve. Players are ranked according to the outcome. The color scale on the right visually distinguishes successful players (shades of green) from less successful players (shades of red) in this relative comparison.
 
@@ -231,14 +138,10 @@ Analysis of the wrong commands specifies the error type of the command. These er
 !!! warning
     The selection must be confirmed by the **Filter** button.
 
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-command-analysis.png">
-</p>
+![TI-command-analysis](/img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TI-command-analysis.png){: .center .radius-image .shadow }
 
 ## For trainees
 
 After trainees finish a training run, a set of visualizations of their behavior is displayed in tabs. Tab Score Development contains [Score Development](#score-development), [Score Scatter Plot](#score-scatter-plot), and table of other trainees. Since the trainees should decode all information easily without further guidance, the interface is straightforward.
 Furthermore, if there any commands collected, the following tabs are displayed: [Command Analysis](#command-analysis), [Command Timeline](#command-timeline).
-<p align="center">
-  <img src="../../../../../img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TR-results.png">
-</p>
+![TR-results](/img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TR-results.png){: .center .radius-image .shadow }

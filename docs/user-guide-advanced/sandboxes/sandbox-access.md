@@ -6,7 +6,7 @@ A Topology Instance of a Sandbox is created in the cloud platform and connected 
 * **Proxy Jump**: The server is used only for SSH access to all sandboxes.
 * **Base Network**: The network where both servers and all sandboxes are connected through MAN ([more about management nodes](topology-instance.md#topology-instance-management)).
 
-![topology-instance](../../img/user-guide-advanced/sandboxes/topology-instance.svg)
+![Topology diagram](/img/user-guide-advanced/sandboxes/topology-instance.svg){: .center style="max-height: 800px;"}
 
 !!! note
     For clarity reasons, there are missing links from **man-network** to the left **Router** and left **Host**.
@@ -135,14 +135,10 @@ Access to the sandbox nodes is through the **Proxy Jump**, and a **MAN** node, a
 Simple access to the sandbox node from within the web browser is available through the CyberRangeCZ Platform portal from the sandbox topology. An instructor can display the topology on the [Pool Detail](../../user-guide-basic/sandbox-agenda/pool.md#pool-detail) page, and for trainees, the topology is always displayed during a training run in [training levels](../../user-guide-basic/training-agenda/training-run/linear-training-run.md#3-training-level). Right-click on the selected network node (host or router) in the network topology will open the menu with the following options (see [VM manipulation](../../user-guide-basic/training-agenda/training-run/linear-training-run.md#vm-manipulation):
 
 * **Open console**: Opens the command-line interface (CLI) in [Apache Guacamole](#apache-guacamole) application using the SSH protocol. This option is available only for routers and hosts with Linux-based operating systems.
-* **Open console (deprecated)**: Opens web browser-based user interface using [Spice](#spice) client. This option is available for all routers and hosts, but it doesn’t support the *Copy & paste* feature, and the response from the machine may be slow, so it seems that the console is freezing. Therefore it was marked as deprecated and we recommend using the other options to access the sandbox node.
 * **Open GUI**: Opens graphical user interface (GUI) in [Apache Guacamole](#apache-guacamole) application using the VNC or RDP protocol. This option can be available for all routers and hosts but depends on whether they are properly configured.
 
-!!! info "Credentials"
-    A user must know the login credentials to access the sandbox node in all cases.
-
-!!! warning "Simultaneous usage of Guacamole and Spice"
-    Once a user logs into the Spice (using Open console (deprecated)), the Guacamole (Open Console) will not let the user log in unless they **log out** of the Spice session (just closing the tab with Spice is **not** enough).
+!!! warning "Credentials"
+    A user must know the login credentials to access the sandbox node in all cases. Upon entering invalid credentials, the [Apache Guacamole](#apache-guacamole) connection will be closed immediately.
 
 #### Apache Guacamole
 An HTML5 web application supports graphical access to remote hosts directly in the browser. It is a clientless remote desktop gateway that supports standard protocols like VNC, RDP, and SSH. In the CyberRangeCZ Platform, all the mentioned protocols can be used, but the following conditions must be satisfied:

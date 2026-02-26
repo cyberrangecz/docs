@@ -1,22 +1,15 @@
 Although the pages for managing linear and adaptive training instances are very similar, they are explicitly divided into two standalone pages for more straightforward and transparent management of both types.
 
 ## Training Instance Overview
-The page lists all training instances available to the instructor (ones that the given instructor created or is co-author of). The page for the linear training instances looks as follows: 
+The page lists all training instances available to the instructor (ones that the given instructor created or is co-author of). The page for the training instances looks as follows:
 
-<p align="center">
-  <img src="../../../img/user-guide-basic/training-agenda/training-instance/LTI-overview.png">
-</p>
-
-and for the adaptive training instance looks as follows:
-
-<p align="center">
-  <img src="../../../img/user-guide-basic/training-agenda/training-instance/ATI-overview.png">
-</p>
+![TI-overview](/img/user-guide-basic/training-agenda/training-instance/TI-overview.png){: .shadow .center .radius-image }
 
 Regardless of the instance type, on the page, the instructor can do the following actions:
 
-* Click ![create-button](../../img/buttons/create-button.png) to redirect to the page [Create/Edit Training Instance](#1-createedit-training-instance).
+* Click ![Create button](/img/buttons/create-button.png){: .inline-button } to redirect to the page [Create/Edit Training Instance](#1-createedit-training-instance).
 * Click on the name of the training instance to redirect to the [Summary of Training Instance](#summary-of-training-instance) page.
+* Hover over the Start/End time to see the exact time.
 * Click on the name of the training definition to redirect to the [Detail of Linear Training Definition](training-definition/linear-training-definition.md#linear-training-definition-detail)/[Detail of Adaptive Training Definition](training-definition/adaptive-training-definition.md#adaptive-training-definition-detail) page.
 * Click the pool's name (if training instance has disabled local environment and has assigned pool) to redirect to the page with pool detail. 
 * Click the access token to copy it into your clipboard. The token cannot be copied if no pool is assigned (:material-alert-circle:{: .red .icon}) or no free sandbox is available (:material-alert:{: .warning .icon}).
@@ -29,11 +22,9 @@ Regardless of the instance type, on the page, the instructor can do the followin
     ??? trash-can "Delete"
     
         Click the button to delete the training instance. In the case some conflict occurs (active training instance with assigned training runs, training instance with an assigned pool), the following confirmation window will be opened:
-    
-        <p align="center">
-          <img src="../../../../img/user-guide-basic/training-agenda/training-instance/TI-delete-confirmation.png">
-        </p>
-    
+
+        ![TI-delete-confirmation](/img/user-guide-basic/training-agenda/training-instance/TI-delete-confirmation.png){: .shadow .center .radius-panel }
+
         Either click the **Ok** button and solve the problems that do not allow the deletion of the training instance, or use the **Force** button, which will delete all data about the training instance.
 
     ??? download "Get Data"
@@ -62,30 +53,22 @@ Regardless of the instance type, on the page, the instructor can do the followin
     ??? insights "Show Progress"
     
         Click the button to redirect to the progress [visualizations for linear training](visualizations/visualizations-for-linear.md#progress-of-training-instance).
-    ``
+    
     ??? assessment "Show Results"
     
-        Click the button to redirect to the post training [visualizations for linear training](#linear) or [visualizations for adaptive training](#adaptive).
-     
-    ??? stacked-bar-chart "Show Aggregated Results"
-      
-        Click the button to redirect to the post training [aggregated dashboard](visualizations/visualizations-for-linear.md#aggregated-dashboard).
+        Click the button to redirect to the post training [visualizations for linear training](#linear).
 
 ## Training Instance Detail
-Lists active training runs. Runs are either in the running or finished state (trainee completed all levels). All active training runs have assigned sandboxes from the pool. There are also columns indicating if there are any events and commands logged from the training run indicated by the icon (:material-check-circle-outline:{: .green .icon}) or if there are no events or commands logged yet (:material-alert:{: .warning .icon}). The instructor can delete the training run along with assigned sandbox from OpenStack by clicking :material-delete:{: .red .icon}. 
+Lists active training runs. Runs are either in the running or finished state (trainee completed all levels). All active training runs have assigned sandboxes from the pool. There are also columns indicating if there are any events and commands logged from the training run indicated by the icon (:material-check-circle-outline:{: .green .icon}) or if there are no events or commands logged yet (:material-alert:{: .warning .icon}). The instructor can delete the training run and purge the sandbox command history using :material-delete:{: .red .icon}.
 
-<p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-instance/ATI-detail.png">
-</p>
+![ATI-detail](/img/user-guide-basic/training-agenda/training-instance/ATI-detail.png){: .shadow .center .radius-image }
 
 ## Create/Edit Training Instance 
 This page consists of two panels allowing an instructor to [create/edit training instance](#1-createedit-training-instance), [assign pool](#assign-pool), and [edit instructors](#2-edit-instructors).
 
-During the creation of the training instance, the second panel is disabled. To make it accessible, the instructor must fill the required fields in the first panel save the training instance by clicking the ![save](../../img/buttons/save-button.png) button. That creates the new training instance. The instructor will be redirected to the [Edit Training Instance](#1-createedit-training-instance) page and will be able to edit co-instructors of the instance in the panel **Organizers**.
+During the creation of the training instance, the second panel is disabled. To make it accessible, the instructor must fill the required fields in the first panel save the training instance by clicking the ![Save button](/img/buttons/save-button.png){: .inline-button } button. That creates the new training instance. The instructor will be redirected to the [Edit Training Instance](#1-createedit-training-instance) page and will be able to edit co-instructors of the instance in the panel **Organizers**.
 
-<p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-instance/TI-edit.png">
-</p>
+![TI-edit](/img/user-guide-basic/training-agenda/training-instance/TI-edit.png){: .shadow .center .radius-image }
 
 ### 1. Create/Edit Training Instance 
 An instructor can use this panel to edit basic information about the training instance. The title identifies a training instance, among others but doesn't have to be unique. The start and end times define the time frame when trainees can access the training run of the appropriate training instance. Both time values must be in the future, and the start time must be before the end time. The trainees use the access token to access training. The instructor must also choose a Linear/Adaptive Training Definition, but they can only choose from:
@@ -96,38 +79,31 @@ An instructor can use this panel to edit basic information about the training in
 An instructor can enable/disable backward mode which allows users to move between already passed levels/phases during the training run.
 Moreover, instructors can choose if they will use local or cloud environment. Based on that they will be able to either **assign pool** or **assign sandbox definition**.
 
-#### Assign Pool 
-If local environment is disabled, instructors can use the subsection **Pools** to assign a pool with sandboxes to the training instance. Sandbox instances created in the pool are assigned to training runs and their topologies are displayed as part of the training levels/phases. The instructor chooses from the list of [pools](../sandbox-agenda/pool.md) created by the sandbox instructor. It is necessary to select the pool properly. Also, a locked pool cannot be assigned to the training instance. To unassign the pool choose the ‘None’ option.
 
-<p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-instance/TI-assign-pool.png">
-</p>
+#### Assing Pool
 
-#### Assign Sandbox Definition 
-If local environment is enabled, instructors can use the subsection **Sandbox Definitions** to assign a sandbox definition to the training instance. Topology of the sandbox definition will be displayed to trainees during the training run. The instructor chooses from the list of [sandbox definitions](../sandbox-agenda/sandbox-definition.md) created by the sandbox instructor. It is necessary to select the sandbox definition properly. To unassign the sandbox definition choose the ‘None’ option.
+Instructors can use the subsection **Pools** to assign a pool with sandboxes to the training instance. Sandbox instances created in the pool are assigned to training runs and their topologies are displayed as part of the training levels/phases. The instructor chooses from the list of [pools](../sandbox-agenda/pool.md) created by the sandbox instructor. It is necessary to select the pool properly. Additionally, a locked pool cannot be assigned to the training instance.
 
-<p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-instance/TI-assign-definition.png">
-</p>
+![TI-assign-pool](/img/user-guide-basic/training-agenda/training-instance/TI-assign-pool.png){: .shadow .center .radius-image style="max-height: 120px;"}
+
+
+??? deprecated "Local Environment" 
+    Local environment has been deprecated and is no longer maintained. If you need to use local environment, you can override the configuration and force the local environment to be available. This can be done via `"enableLocalMode": true` option in the frontend configuration file. Local environments do not have assigned pools. Instead the participants are expected to set up the sandbox on their own. In this mode, the training run serves only for flag verification and assessment.
 
 ### 2. Edit Instructors 
 Allows the instructor to add other instructors to participate in managing training instances. Those instructors have the same rights against the training instance as the author, e.g., co-instructors, can edit training instances or see trainees' progress and training results.
 
 
-## Summary of Training Instance 
+## Summary of Training Instance
 Provides a summary of the entire run of the training instance and allows the instructors to see the state of training runs.
 
-<p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-instance/TI-summary.png">
-</p>
+![TI-summary](/img/user-guide-basic/training-agenda/training-instance/TI-summary.png){: .shadow .center .radius-image }
 
-The first panel displays basic information about training instance, as shown in the above figure. Allows copying access token and provides a link to the detail of the assigned pool and training definition. Click on the ![show-progress](../../img/buttons/show-progess-button.png) button **(only linear training instance)** to redirect to the [Progress of Training Instance](#progress-of-training-instance) page to see the training progress of participants in time. Click on another button ![show-results](../../img/buttons/show-results-button.png) to redirect to the [Results of Training Instance](#results-of-training-instance) page to see summary results of training instance visualized on various graphs and in tables. Click the button ![show-aggregated-results](../../img/buttons/show-aggregated-results-button.png) **(only linear training instance)** to redirect to the [Aggregated results of Training Instance](visualizations/visualizations-for-linear.md#aggregated-dashboard) page to see summary of results of all training instances sharing **the same** training definition visualized on various graphs. The next button ![cheating-detection](../../img/buttons/cheating-detection-button.png) redirects to the page [Cheating Detection Overview](../training-agenda/cheating-detection.md) where you can execute cheating detection methods on the training instance. The last button ![export-score](../../img/buttons/export-score-button.png) downloads an archive with the score of all trainees that played through the training.  
+The first panel displays basic information about training instance, as shown in the above figure. Allows copying access token and provides a link to the detail of the assigned pool and training definition. Click on the ![Show progress button](/img/buttons/show-progess-button.png){: .inline-button } button **(only linear training instance)** to redirect to the [Progress of Training Instance](#progress-of-training-instance) page to see the training progress of participants in time. Click on another button ![Show results button](/img/buttons/show-results-button.png){: .inline-button } to redirect to the [Results of Training Instance](#results-of-training-instance) page to see summary of training instance visualized on various graphs and in tables. The next button ![Cheating detection button](/img/buttons/cheating-detection-button.png){: .inline-button } redirects to the page [Cheating Detection Overview](../training-agenda/cheating-detection.md) where you can execute cheating detection methods on the training instance. The last button ![Export score button](/img/buttons/export-score-button.png){: .inline-button } downloads an archive with the score of all trainees that played through the training.  
 
 The second panel displays basic information about active training runs. These runs are either in the running or finished state. Clicking the expand button :material-chevron-down:{: .grey .icon } (next to the trainee's name) expands the row with additional information about the training run that displays correct answers for every training level and variable name if the training instance was created from [APG training definition](../../user-guide-advanced/trainings/trainings-overview.md#automatic-generation-problem-apg-in-linear-training-definition).
 
-<p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-instance/TI-summary-trainee-detail.png">
-</p>
+![TI-summary-trainee-detail](/img/user-guide-basic/training-agenda/training-instance/TI-summary-trainee-detail.png){: .shadow .center .radius-image }
 
 ## Progress of Training Instance 
 To see how the instance progresses, a dedicated visualization tool is available. It is described in [Visualizations for Linear Training](visualizations/visualizations-for-linear.md#progress-of-training-instance).

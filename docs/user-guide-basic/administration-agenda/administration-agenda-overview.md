@@ -8,11 +8,11 @@ The administration agenda is divided into three sections:
 To access the sections mentioned above, click the respective button on the front page of the CyberRangeCZ Platform portal.
 
 <p align="center">
-  <img src="../../../img/user-guide-basic/administration-agenda/overview/home-page-groups-button.png"> <img src="../../../img/user-guide-basic/administration-agenda/overview/home-page-users-button.png">  <img src="../../../img/user-guide-basic/administration-agenda/overview/home-page-microservices-button.png">
+  <img class="home-page-img" src="/img/user-guide-basic/administration-agenda/overview/home-page-groups-button.png">
+  <img class="home-page-img" src="/img/user-guide-basic/administration-agenda/overview/home-page-users-button.png">
+  <img class="home-page-img" src="/img/user-guide-basic/administration-agenda/overview/home-page-microservices-button.png">
 </p>
 
 Or click the button in the global navigation in the section Administration:
 
-<p align="center">
-  <img src="../../../img/user-guide-basic/administration-agenda/overview/administration-left-panel.png">
-</p>
+![administration-left-panel](/img/user-guide-basic/administration-agenda/overview/administration-left-panel.png){: .center .radius-image .shadow }
