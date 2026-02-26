@@ -8,7 +8,7 @@ When accessing the CyberRangeCZ Platform portal, users are asked to log in via t
 The permission system is based on relations between four types of entities (Users, Groups,  Roles, and Microservices)
 .
 
-![permission-system](../../img/user-guide-advanced/users-and-groups/permission-system.svg)
+![permission-system](/img/user-guide-advanced/users-and-groups/permission-system.svg)
 
 A **user** can be part of **one or more** groups. Each user is part of the special **default group**.
 

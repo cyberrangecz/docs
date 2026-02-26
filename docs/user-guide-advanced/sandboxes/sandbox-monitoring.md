@@ -1,4 +1,4 @@
-CyberRangeCZ Platform supports sandbox monitoring functionality. These resources can be currently monitored:
+oCyberRangeCZ Platform supports sandbox monitoring functionality. These resources can be currently monitored:
 
 * Operating System resources via [Node Exporter](https://github.com/prometheus/node_exporter) respectively [Windows Exporter](https://github.com/prometheus-community/windows_exporter)
 * ICMP network availability of management IP addresses
@@ -6,7 +6,7 @@ CyberRangeCZ Platform supports sandbox monitoring functionality. These resources
 
 This is the architecture of the monitoring solution:
 
-![monitoring-architecture](../../img/user-guide-advanced/monitoring/monitoring-architecture.svg)
+![Monitoring architecture](/img/user-guide-advanced/monitoring/monitoring-architecture.svg){: .center style="max-height: 600px;"}
 
 ## Deployment
 Monitoring can be deployed with [CyberRangeCZ Platform deployment tools](https://github.com/cyberrangecz/devops-tf-deployment) together with the deployment of CyberRangeCZ Platform. To enable monitoring, set the following variables in [tfvars](https://github.com/cyberrangecz/devops-tf-deployment/blob/master/tf-head-services/tfvars/deployment.tfvars-template) file:
@@ -19,16 +19,16 @@ Monitoring can be deployed with [CyberRangeCZ Platform deployment tools](https:/
 ## Operating System Monitoring
 CyberRangeCZ Platform is able to automatically deploy Operating System monitoring based on **monitor-os** group in **topology.yml**. Available settings:
 
-* undefined - no Operating System monitoring will be performed.
-* list of hosts or routers - only specified hosts/routers will be monitored.
-* [] - all hosts and routers will be monitored.
+* `undefined` - no Operating System monitoring will be performed.
+* _a list of hosts or routers_ - only specified hosts/routers will be monitored.
+* `[]` - all hosts and routers will be monitored.
 
 ## ICMP network availability
 CyberRangeCZ Platform is able to automatically check ICMP network availability based on **monitor-icmp** group in **topology.yml**. Available settings:
 
-* undefined - no ICMP monitoring will be performed.
-* list of hosts or routers - only specified hosts/routers will be monitored.
-* [] - all hosts and routers will be monitored.
+* `undefined` - no ICMP monitoring will be performed.
+* _a list of hosts or routers_ - only specified hosts/routers will be monitored.
+* `[]` - all hosts and routers will be monitored.
 
 ## TCP port availability
 CyberRangeCZ Platform is able to check the availability of TCP ports on specified network interfaces of hosts and routers in **topology.yml** by including [monitoring_targets](topology-definition.md#monitoring_targets) section.

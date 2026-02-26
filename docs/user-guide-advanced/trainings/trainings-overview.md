@@ -36,7 +36,7 @@ When creating a training level, a designer can specify either:
 
 The following figure displays the adaptive format of training. This form of training is defined as a graph structure containing a questionnaire (**A**, **Q**), a list of phases, and a list of tasks. **A** represents a pre-training questionnaire before training on which trainees' knowledge is tested for a given training. Furthermore, the other events/metrics are audited to the internal database, such as answers to tasks, commands entered in the command line in the sandbox, time spent in a given phase, events of displaying the solution. These events are assigned to appropriate phases to use the computational model **PD** component properly. For example, the pre-training questions **A** is assigned to the particular phases, so we know what questions are related to what phase.
 Furthermore, after the pre-training question, the first training phase is the **access phase**, which describes how to connect to the sandbox. It is crucial that all the students are connected to the virtual environment before the training begins. Next, the figure contains the **PD** component, which represents the computational node (tutor model) of adaptive trainings, which calculates the theoretical and practical knowledge/skills of the player of the given training. Finally, the component **Q** is a post-training questionnaire collecting feedback from students.
-![adaptive-workflow](../../img/user-guide-advanced/trainings/adaptive-workflow.svg)
+![adaptive-workflow](/img/user-guide-advanced/trainings/adaptive-workflow.svg)
 
 #### Phases
 The *adaptive definition* consist of four types of so-called phases:
@@ -67,6 +67,6 @@ The training run represents a single run of the training of the particular train
 ## Graphical Representation
 
 ### Overall
-The following picture displays interconnection between trainings and [sandboxes](../sandboxes/sandboxes-overview.md).
+The following chart displays interconnection between trainings and [sandboxes](../sandboxes/sandboxes-overview.md).
 
-![basic-elements-training](../../img/user-guide-advanced/trainings/basic-elements.svg)
+![Training-Sandbox relations](/img/user-guide-advanced/trainings/basic-elements.svg){: .center style="max-height: 600px;"}

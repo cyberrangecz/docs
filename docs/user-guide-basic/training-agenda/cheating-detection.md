@@ -1,11 +1,9 @@
 This page details the use of cheating detection methods and interpretation of detected results on linear training instance. Detection methods can be easily and freely used on any training instance of linear training definition, however, to fully understand the relevancy and applicability of each detection method, read the whole documentation.
 
 ## Cheating Detection Overview
-To access the main page for cheating detections on a training instance click the ![cheating-detection](../../img/user-guide-basic/training-agenda/cheating-detection/cheating-detection.png) button in training instance overview.
+To access the main page for cheating detections on a training instance click the ![Cheating detection button](/img/buttons/cheating-detection-button.png){: .inline-button } button in training instance overview.
 
-<p align="center">
-  <img src="../../../img/user-guide-basic/training-agenda/cheating-detection/cheating-detection-overview.png">
-</p>
+![cheating-detection-overview](img/user-guide-basic/training-agenda/cheating-detection/cheating-detection-overview.png)
 
 This page lists all previously executed cheating detections by all organizers on the given training instance. From here you can access pages for creating new cheating detections and viewing detected results. Cheating detections provide additional information in the table:
 
@@ -35,9 +33,7 @@ Each cheating detection has these actions that can be executed:
 
 ## Create Cheating Detection
 
-<p align="center">
-  <img src="../../../img/user-guide-basic/training-agenda/cheating-detection/cheating-detection-create.png">
-</p>
+![cheating-detection-create](/img/user-guide-basic/training-agenda/cheating-detection/cheating-detection-create.png){: .shadow .center .radius-image }
 
 In this page you can create a new cheating detection with specified detection methods. Each of these methods executes an algorithm to detect suspicious activities on logs and data, that was provided by the trainees up to this point in time. Cheating detections can be executed both while the training is still running and after the training was finished. You can execute multiple cheating detections with different methods and parameters, however, it is not advised to execute them at the same time in trainings with a lot of participants (100+) as it may negatively affect performance.
 
@@ -72,9 +68,7 @@ So far the cheating detection supports these methods:
 
 ## Detection Events of Cheating Detection
 
-<p align="center">
-  <img src="../../../img/user-guide-basic/training-agenda/cheating-detection/detection-events-overview.png">
-</p>
+![detection-events-overview](/img/user-guide-basic/training-agenda/cheating-detection/detection-events-overview.png){: .shadow .center .radius-image }
 
 This page lists a table of detected cheating events with basic information about the events. For more specific information, the instructor can click in the action *show details* to move to detection event detail page.
 
@@ -90,9 +84,7 @@ You can access detailed information for a specific event by clicking on the *sho
 
 ### Detection Event Detail
 
-<p align="center">
-  <img src="../../../img/user-guide-basic/training-agenda/cheating-detection/detection-events-detail.png">
-</p>
+![detection-events-detail](/img/user-guide-basic/training-agenda/cheating-detection/detection-events-detail.png){: .shadow .center .radius-image }
 
 This page provides detailed information for a detection event and its participants based on the event type. Most of the information is similar for each type of detection. Below is a list of information that are specific and relevant for each detection event type.
 
