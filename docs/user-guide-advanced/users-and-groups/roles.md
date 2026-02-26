@@ -15,10 +15,6 @@ The administrator is responsible for managing the whole CyberRangeCZ Platform in
 
 This is the preferable option to use the roles in the CyberRangeCZ Platform. But it is possible to use bigger granularity by assigning only some roles of microservices. See the meaning of the individual roles in the next part of the page.
 
-!!! warning
-    The used concept of roles so far will probably be changed in one of the following releases.
-
-
 ## Microservice Roles
 
 Current roles that are used in the CyberRangeCZ Platform portal can be divided into categories ([Training roles](#training-roles), [User and group roles](#user-and-group-roles), and [Sandbox roles](#sandbox-roles)) based on microservice that import them.

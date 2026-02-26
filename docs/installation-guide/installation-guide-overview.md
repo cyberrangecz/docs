@@ -19,6 +19,6 @@ The deployment process is divided into 2 major sections:
     * **CyberRangeCZ Platform Images**: The OpenStack images necessary for CyberRangeCZ Platform to work.
     * Optionally **Flavors**:  The OpenStack flavors necessary for CyberRangeCZ Platform to work. Only for OpenStack deployments with administrator credentials.
 
-    ![base-infrastructure](../img/installation-guide/base-infrastructure.svg)
+    ![Diagram of base infrastructure](/img/installation-guide/base-infrastructure.svg){: .center style="height: 500px;"}
 
 * [Deployment of Helm application](https://github.com/cyberrangecz/devops-tf-deployment/blob/master/HELM.md) contains steps that will help you create configuration files and deploy CyberRangeCZ Platform with Helm to the Kubernetes Cluster node in the OpenStack cloud platform.

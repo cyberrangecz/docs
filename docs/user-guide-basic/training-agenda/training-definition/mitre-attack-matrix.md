@@ -1,14 +1,12 @@
 ## Mitre Technique Service
 This page provides a visualization of [MITRE ATT&CK matrix](https://attack.mitre.org/), extended by additional information about which linear and adaptive training definitions focus on specific tactics. 
 
-<p align="center">
-  <img src="../../../../img/user-guide-basic/training-agenda/training-definition/mitre/mitre-attack-matrix.png">
-</p>
+![mitre-attack-matrix](/img/user-guide-basic/training-agenda/training-definition/mitre/mitre-attack-matrix.png){: .center .radius-image .shadow }
 
 !!! note
     The version of the MITRE ATT&CK matrix is [this one](https://attack.mitre.org/resources/updates/updates-october-2021/index.html) from October 2021.
 
-It can be accessed by clicking the ![upload-button](../../../img/buttons/mitre-attack-techniques-button.png) button, available on the [Linear](linear-training-definition.md#linear-training-definition-overview) / [Adaptive Training Definition Overview page](adaptive-training-definition.md#adaptive-training-definition-overview). It is meant to help instructors when selecting the right training, as well as the creators of training definitions to show which topics are not covered yet.
+It can be accessed by clicking the ![MITRE attack techniques button](/img/buttons/mitre-attack-techniques-button.png){: .inline-button } button, available on the [Linear](linear-training-definition.md#linear-training-definition-overview) / [Adaptive Training Definition Overview page](adaptive-training-definition.md#adaptive-training-definition-overview). It is meant to help instructors when selecting the right training, as well as the creators of training definitions to show which topics are not covered yet.
 
 !!! note
     The MITRE ATT&CK matrix only displays **released** training definitions.

@@ -16,20 +16,18 @@ The purpose of the Training Agenda is to create and manage trainings that are on
 **Training Definition**, **Training Instance**, or **Training Run** can be accessed from the front page of the CyberRangeCZ Platform portal.
 
 <p align="center">
-  <img src="../../../img/user-guide-basic/training-agenda/overview/home-page-training-definition-button.png">  <img src="../../../img/user-guide-basic/training-agenda/overview/home-page-training-instance-button.png"> <img src="../../../img/user-guide-basic/training-agenda/overview/home-page-training-run-button.png">
+  <img class="home-page-img" src="/img/user-guide-basic/training-agenda/overview/home-page-training-definition-button.png">
+  <img class="home-page-img" src="/img/user-guide-basic/training-agenda/overview/home-page-training-instance-button.png">
+  <img class="home-page-img" src="/img/user-guide-basic/training-agenda/overview/home-page-training-run-button.png">
 </p>
 
 Then in the case of definition and instance, choose the respective type.
 
-<p align="center">
-  <img src="../../../img/user-guide-basic/training-agenda/overview/home-page-adaptive-or-linear-menu.png">
-</p>
+![home-page-adaptive-or-linear-menu](/img/user-guide-basic/training-agenda/overview/home-page-adaptive-or-linear-menu.png){: .center .home-page-img .radius-image }
 
 Or click the button in the global navigation in the section Trainings.
 
-<p align="center">
-  <img src="../../../img/user-guide-basic/training-agenda/overview/training-agenda-left-panel.png">
-</p>
+![training-agenda-left-panel](/img/user-guide-basic/training-agenda/overview/training-agenda-left-panel.png){ : .shadow .center .radius-image }
 
 !!! note
     If you only have the role `ROLE_TRAINING_TRAINEE`, you will be directly forwarded to the page [Training Runs Overview](training-run/linear-training-run.md#training-runs-overview) without any further action after a successful login.
