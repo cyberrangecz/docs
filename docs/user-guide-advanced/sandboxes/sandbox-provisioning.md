@@ -29,6 +29,7 @@ On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/
 * **winrm_nodes**: the group containing all the hosts and routers defined in [Topology definition](topology-definition.md) with `base_box.mgmt_protocol` set to `WINRM` (Since 21.04).
 * **user_accessible_nodes**: the group containing all hosts and routers defined in [Topology definition](topology-definition.md), which are connected to a network with attribute `accessible_by_user` set to `True` (Since 21.06).
 * **hidden_hosts**: the group containing all hosts defined in [Topology definition](topology-definition.md) with attribute `hidden` set to `True` (Since 21.06).
+* **windows_hosts**: the group containing all hosts defined in [Topology definition](topology-definition.md) with image os_type windows. This is parameter of image/ami in OpenStack/AWS cloud platform (Since CyberRangeCZ Platform v2025.01).
 
 You can specify additional Ansible host groups in [Topology definition](topology-definition.md#groups) and then use them in a `playbook.yml` file of the Sandbox Provisioning.
 
@@ -45,6 +46,7 @@ On top of [Ansible special variables](https://docs.ansible.com/ansible/latest/re
 * **global_head_ip**: the CyberRangeCZ Platform IP address or FQDN.
 * **global_ssh_public_user_key**: the path on Ansible controller to SSH public user key (Since 21.04).
 * **global_ssh_public_mgmt_key**: the path on Ansible controller to SSH public management key (Since 21.04).
+* **global_syslog_destination_port**: the Syslog destination port running on Kubernetes cluster (Since CyberRangeCZ Platform v2025.01).
 
 ### Ansible Inventory
 
