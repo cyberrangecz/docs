@@ -1,4 +1,4 @@
-oCyberRangeCZ Platform supports sandbox monitoring functionality. These resources can be currently monitored:
+CyberRangeCZ Platform supports sandbox monitoring functionality. These resources can be currently monitored:
 
 * Operating System resources via [Node Exporter](https://github.com/prometheus/node_exporter) respectively [Windows Exporter](https://github.com/prometheus-community/windows_exporter)
 * ICMP network availability of management IP addresses

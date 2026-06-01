@@ -32,7 +32,7 @@ On the top left of the chart, there is a dropdown menu that allows the instructo
 
 ***Lag behind schedule***
 
-**If estimated duration for a level is specified** in the [training definition](/user-guide-basic/training-agenda/training-definition/linear-training-definition), the progress visualization can also show **whether** trainees are **lagging behind the schedule** and how are they faring compared to the estimated duration. The estimated duration is visualized by a diagonal dashed bar. If a trainee is lagging behind the schedule, their progress bar will be **transition colors from green to yellow and then to red**. If a bar is red, the trainee may **require the instructor's attention**. Lastly, after a very long time spent on a level, the bar will color black. This means the trainee has completely stopped progressing (or is inactive).
+ **If an estimated duration for a level is specified** in the [training definition](/user-guide-basic/training-agenda/training-definition/linear-training-definition), the progress visualization can also show **whether** trainees are **lagging behind the schedule** and how they are faring compared to the estimate. The estimated duration is visualized by a diagonal dashed bar. If a trainee is lagging behind the schedule, their progress bar will **transition from green to yellow and then to red**. If a bar is red, the trainee may **require the instructor's attention**. Lastly, after a very long time spent on a level, the bar will turn black. This means the trainee has completely stopped progressing (or is inactive).
 
 Lag states are also summarized in a legend at the top of the chart. The legend contains all possible lag states:
 
@@ -51,7 +51,7 @@ On the left side of each trainee's bar, there is a legend with the trainee's nam
 
 ***Timeline***
 
-At the bottom of the visualization, there is a timeline, matching the x-axis of the main chart. The timeline can be used to **zoom in** on a specific time period. To zoom in, drag the end points of the timeline to the desired time period. A zoomed in view c**an be dragged** by the slider at the bottom. To reset the zoom, click the "Expand" button on the left of the timeline.
+At the bottom of the visualization, there is a timeline, matching the x-axis of the main chart. The timeline can be used to **zoom in** on a specific time period. To zoom in, drag the end points of the timeline to the desired time period. A zoomed in view **can be dragged** by the slider at the bottom. To reset the zoom, click the "Expand" button on the left of the timeline.
 
 ***Events***
 
@@ -66,9 +66,9 @@ Events are represented by small circles on the trainees' bars. Each event corres
 
 This visualization provides commands ordered by the time of the selected trainee. Every command contains the detail of its usage and when it was executed. More precisely:
 
-* **Commands Type**: represents a command type, e.g., bash command.
-* **Options**: states used option for command, e.g., `nmap -h`.
-* **IP**: IP address from which the command was entered.
+* **Command type**: represents a command type, e.g., a bash command.
+* **Options**: states the option(s) used for the command, e.g., `nmap -h`.
+* **IP address**: the IP address from which the command was entered.
 
 !!! note
     Displayed time is a timestamp from training, not real-time.
@@ -143,5 +143,5 @@ Analysis of the wrong commands specifies the error type of the command. These er
 ## For trainees
 
 After trainees finish a training run, a set of visualizations of their behavior is displayed in tabs. Tab Score Development contains [Score Development](#score-development), [Score Scatter Plot](#score-scatter-plot), and table of other trainees. Since the trainees should decode all information easily without further guidance, the interface is straightforward.
-Furthermore, if there any commands collected, the following tabs are displayed: [Command Analysis](#command-analysis), [Command Timeline](#command-timeline).
+Furthermore, if there are any commands collected, the following tabs are displayed: [Command Analysis](#command-analysis), [Command Timeline](#command-timeline).
 ![TR-results](/img/user-guide-basic/training-agenda/visualizations/linear-training-visualizations/TR-results.png){: .center .radius-image .shadow }
