@@ -29,17 +29,16 @@ Access to CyberRangeCZ Platform Portal depends a lot on the role you hold as a u
 ### Trainee's View
 Each trainee will be after a successful log-in directly redirected to the [Training Run Overview](training-agenda/training-run/linear-training-run.md#training-runs-overview) page.
 
-![home-page-trainee](../img/user-guide-basic/home-page-trainee.png)
-
+![Trainee's view of the home page](/img/user-guide-basic/home-page-trainee.png){: .shadow .radius-image }
 
 ### Instructor's View
 The instructor can access both Trainings Agenda and Sandboxes Agenda.
 
-![home-page-trainee](../img/user-guide-basic/home-page-instructor.png)
+![Instructor's view of the home page](/img/user-guide-basic/home-page-instructor.png){: .shadow .radius-image }
 
 ### Administrator's View
 
 An administrator can access any page.
 
-![home-page-admin](../img/user-guide-basic/home-page-admin.png)
+![Administrator's view of the home page](/img/user-guide-basic/home-page-admin.png){: .shadow .radius-image }
 

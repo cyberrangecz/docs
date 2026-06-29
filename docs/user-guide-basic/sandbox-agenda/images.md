@@ -28,4 +28,4 @@ Checkbox **Only CRCZP images** allows filtering of images that are created by th
 
 Checkbox **Only GUI access** allows filtering of images that have graphical user interface installed for the image.
 
-![overview-images](../../img/user-guide-basic/sandbox-agenda/resources/overview-images.png)
+![overview-images](/img/user-guide-basic/sandbox-agenda/images/overview-images.png){: .shadow .center .radius-image }

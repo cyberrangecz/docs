@@ -1,12 +1,10 @@
-This page is used to list all users that had logged into the CyberRangeCZ Platform using arbitrary OIDC Provider. In the following table, each row represents one user. An administrator can view their roles by clicking the user's name that redirects the administrator to the [detail page](#user-detail) of a particular user. One user can be deleted by clicking on the delete button :material-delete:{: .red .icon } or multiple users can be deleted by checking users with checkboxes situated on the left side of the row and clicking the ![delete-button](../../img/buttons/big-delete-button.png) button.
+This page is used to list all users that had logged into the CyberRangeCZ Platform using arbitrary OIDC Provider. In the following table, each row represents one user. An administrator can view their roles by clicking the user's name that redirects the administrator to the [detail page](#user-detail) of a particular user. One user can be deleted by clicking on the delete button :material-delete:{: .red .icon } or multiple users can be deleted by checking users with checkboxes situated on the left side of the row and clicking the ![Delete button](/img/buttons/big-delete-button.png){: .inline-button } button.
 
-![user-overview](../../img/user-guide-basic/administration-agenda/users/users-overview.png)
+![user-overview](/img/user-guide-basic/administration-agenda/users/users-overview.png){: .center .radius-image .shadow }
 
-To download a YAML file with the credentials (login + password) of the users generated/created in the local OIDC provider click the ![get-users-credentials-button](../../img/buttons/get-users-credentials-button.png) button. In order to import users who haven't been logged in yet and you would like to assign them roles click the ![import-users-button](../../img/buttons/import-users-button.png) button. The following pop up window will be displayed:
+To download a YAML file with the credentials (login + password) of the users generated/created in the local OIDC provider click the ![Get users credentials button](/img/buttons/get-users-credentials-button.png){: .inline-button } button. In order to import users who haven't been logged in yet and you would like to assign them roles click the ![Import users button](/img/buttons/import-users-button.png){: .inline-button } button. The following pop up window will be displayed:
 
-<p align="center">
-  <img src="../../../img/user-guide-basic/administration-agenda/users/upload-users.png">
-</p>
+![upload-users](/img/user-guide-basic/administration-agenda/users/upload-users.png){: .center .radius-image .shadow style="max-height: 250px !important;" }
 
 Then click **Choose file** and select the file with the following structure:
 
@@ -35,4 +33,4 @@ Field `group_name` is also optional. If you don't define it, the users will be c
 
 The page consists of two panels. The first panel displays the username, email (if provided), and the user's number of roles. The second panel shows the list of the roles and the microservice name to which the role belongs. Upon clicking on one of the roles, its description is expanded. It is also possible to expand or collapse all these details at once.
 
-![user-detail](../../img/user-guide-basic/administration-agenda/users/users-detail.png)
+![user-detail](/img/user-guide-basic/administration-agenda/users/users-detail.png){: .center .radius-image .shadow }

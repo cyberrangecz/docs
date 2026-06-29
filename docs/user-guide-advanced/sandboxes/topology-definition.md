@@ -1,6 +1,6 @@
 Topology Definition is used for the description of [Topology Instance](topology-instance.md). See the following image to help you visualize what you can define in the topology definition.
 
-![topology-definition-color](../../img/user-guide-advanced/sandboxes/topology-definition-color.png)
+![topology-definition-color](/img/user-guide-advanced/sandboxes/topology-definition-color.png){: .center style="max-height: 400px;" }
 
 ## Attributes
 

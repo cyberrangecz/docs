@@ -10,10 +10,7 @@
     2. Sandboxes are used as part of the trainings. See the [Training Creation](#training-creation) workflow.
 
 
-<p align="center" >
-      <img style="width: 90%" src="../../../img/basic-concepts/workflow-sanboxes-cloud.svg">
-</p>
-
+![Sandboxes workflow diagram](/img/basic-concepts/workflow-sanboxes-cloud.svg){: .center style="max-width: 420px;" }
 
 ## Training Creation
 
@@ -36,7 +33,7 @@
 8. When the training instance is finished, the [results](../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear.md#results-of-training-instance) are available and ready for further evaluation.
 9. The assigned pool is unassigned from the training instance and deleted using the delete button on [Pool Overview](../../user-guide-basic/sandbox-agenda/pool.md#pool-overview) page to free resources in the cloud. The respective training instance can be deleted using delete button on [Training Instances Overview](../../user-guide-basic/training-agenda/training-instance.md#training-instance-overview) page.
 
-![workflow-trainings](../../img/basic-concepts/workflow-trainings-cloud.svg)
+![Trainings workflow diagram](/img/basic-concepts/workflow-trainings-cloud.svg){: .center style="max-width: 420px;" }
 
 
 
