@@ -3,7 +3,7 @@ This page details the use of cheating detection methods and interpretation of de
 ## Cheating Detection Overview
 To access the main page for cheating detections on a training instance click the ![Cheating detection button](/img/buttons/cheating-detection-button.png){: .inline-button } button in training instance overview.
 
-![cheating-detection-overview](img/user-guide-basic/training-agenda/cheating-detection/cheating-detection-overview.png)
+![cheating-detection-overview](/img/user-guide-basic/training-agenda/cheating-detection/cheating-detection-overview.png)
 
 This page lists all previously executed cheating detections by all organizers on the given training instance. From here you can access pages for creating new cheating detections and viewing detected results. Cheating detections provide additional information in the table:
 
