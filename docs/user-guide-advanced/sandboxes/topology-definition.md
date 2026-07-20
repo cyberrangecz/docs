@@ -82,12 +82,58 @@ The following group names are reserved for monitoring - monitor-os (monitoring o
 
 ### monitoring_targets
 
-List of monitoring targets with TCP ports and interfaces to monitor. A monitoring_target has the following attributes.
+Definition of the targets to be monitored. It is split into three independent, optional sections: `tcp`, `icmp`, and `http`.
 
-* **node**: name of host or router defined in [hosts](#hosts) or [routers](#routers)
-* **targets**: list of TCP ports and interfaces to monitor in the following format.
-    * **port**: TCP port to monitor
-    * **interface**: network interface to monitor
+#### tcp
+
+List of nodes with TCP ports to monitor. Each entry has the following attributes.
+
+* **node**: name of host or router defined in [hosts](#hosts) or [routers](#routers). Each node may be listed only once.
+* **targets**: list of TCP ports to monitor. Each target has the following attributes.
+    * **port**: TCP port to monitor (`1`–`65535`).
+    * **interface**: network interface to monitor. Exactly one of `interface` or `address` must be specified.
+    * **address**: IP address or CIDR to monitor. Exactly one of `interface` or `address` must be specified.
+
+The same port may be defined multiple times on a single node, as long as it targets different interfaces or addresses.
+
+#### icmp
+
+List of nodes whose ICMP (ping) availability should be monitored. Each entry has the following attributes.
+
+* **node**: name of host or router defined in [hosts](#hosts) or [routers](#routers). Each node may be listed only once.
+* **targets**: list of targets to monitor. Each target has the following attributes.
+    * **interface**: network interface to monitor. Exactly one of `interface` or `address` must be specified.
+    * **address**: IP address or CIDR to monitor. Exactly one of `interface` or `address` must be specified.
+
+#### http
+
+HTTP endpoints to monitor. Unlike `tcp` and `icmp`, these targets are not bound to a specific node.
+
+* **targets**: list of endpoints to monitor. Each target has the following attributes.
+    * **url**: endpoint to monitor. Must be a valid `http` or `https` URL.
+    * **check_string**: optional string that must be present in the response body for the endpoint to be considered healthy.
+
+```yaml
+monitoring_targets:
+  tcp:
+    - node: server-router
+      targets:
+        - port: 22
+          interface: ens3
+        - port: 22
+          address: 10.10.20.0/24
+  icmp:
+    - node: server
+      targets:
+        - interface: ens3
+    - node: home
+      targets:
+        - address: 10.10.30.5
+  http:
+    targets:
+      - url: https://10.10.20.5
+        check_string: "Hello"
+```
 
 ## Glossary
 
