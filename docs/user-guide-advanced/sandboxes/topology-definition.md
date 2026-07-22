@@ -135,6 +135,42 @@ monitoring_targets:
         check_string: "Hello"
 ```
 
+### vpn
+
+*(Since CyberRangeCZ Platform v2026.07)*
+
+Optional configuration that enables NetBird (WireGuard-based mesh) VPN access to the sandbox. When defined, selected nodes are enrolled as VPN gateways ("entrypoints"), so a VPN client can join the sandbox mesh and reach the declared internal networks directly. It has two independent, optional sections: `entrypoints` and `dns`.
+
+#### entrypoints
+
+List of [hosts](#hosts) or [routers](#routers) that act as VPN gateways. Each entrypoint is enrolled as a NetBird routing peer, and VPN clients reach the listed networks through it. Each entry has the following attributes.
+
+* **name**: name of a host or router defined in [hosts](#hosts) or [routers](#routers). It must reference an existing node.
+* **routes**: non-empty list of networks reachable through this entrypoint, in IPv4 CIDR notation (typically the sandbox internal networks to expose).
+
+#### dns
+
+Optional DNS settings distributed to every VPN client of the sandbox.
+
+* **servers**: non-empty list of IPv4 nameserver addresses the clients should use.
+* **search_domains (optional)**: list of DNS search domains. Each must be a valid domain name.
+
+```yaml
+vpn:
+  entrypoints:
+    - name: server
+      routes:
+        - 10.10.0.0/16
+    - name: server-router
+      routes:
+        - 192.168.0.0/16
+  dns:
+    servers:
+      - 10.10.20.5
+    search_domains:
+      - sandbox.local
+```
+
 ## Glossary
 
 ### Base_box
