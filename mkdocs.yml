@@ -65,7 +65,6 @@ nav:
                   - Setting up OIDC Provider: installation-guide/setting-up-oidc-provider.md
                   - Platform Components: installation-guide/platform-components.md
         - FAQ: faq.md
-        - Release Cycle: release-cycle.md
         - Reference:
                   - Sandbox Service: reference/sandbox-service-swagger-open-api.md
                   - User and Group Service: reference/user-and-group-swagger-open-api.md
@@ -86,6 +85,7 @@ nav:
         - Authors: authors.md
         - Acknowledgements: acknowledgements.md
         - License: license.md
+        - Release Cycle: release-cycle.md
 copyright: Copyright © 2020-2024 Masaryk University<br>Copyright © 2025 CyberSecurity Hub, z.s.
 
 markdown_extensions:
