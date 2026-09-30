@@ -65,6 +65,7 @@ nav:
                   - Setting up OIDC Provider: installation-guide/setting-up-oidc-provider.md
                   - Platform Components: installation-guide/platform-components.md
         - FAQ: faq.md
+        - Release Cycle: release-cycle.md
         - Reference:
                   - Sandbox Service: reference/sandbox-service-swagger-open-api.md
                   - User and Group Service: reference/user-and-group-swagger-open-api.md
