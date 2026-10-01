@@ -86,7 +86,7 @@ nav:
         - Acknowledgements: acknowledgements.md
         - License: license.md
         - Release Cycle: release-cycle.md
-copyright: Copyright © 2020-2024 Masaryk University<br>Copyright © 2025 CyberSecurity Hub, z.s.
+copyright: Copyright © 2025 CyberSecurity Hub, z.s.<br>Copyright © 2020-2024 Masaryk University
 
 markdown_extensions:
         - admonition
