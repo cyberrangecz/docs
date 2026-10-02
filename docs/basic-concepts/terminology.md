@@ -10,7 +10,7 @@ When creating and using an emulated virtual environment, we use the following te
 ## Training
 CyberRangeCZ Platform training is centered around the sandbox, where trainees solve tasks presented in CyberRangeCZ Platform GUI. CyberRangeCZ Platform training can also contain questionnaires to collect feedback from trainees or tests to assess their knowledge. In the context of the training, we use the following terminology:
 
-* **[Training Definition](../user-guide-advanced/trainings/trainings-overview.md#training-definition):** Defines the scenario of the training. Based on their type, definitions can be composed either of levels or phases. Linear definitions can contain Training levels, Assessment levels, and Info levels. Adaptive definitions can be composed of Training phases, Questionnaire phases, and Info phases.
+* **[Training Definition](../user-guide-advanced/trainings/trainings-overview.md#training-definition):** Defines the scenario of the training. Definitions are composed of levels: Training levels, Assessment levels, Info levels, and Access levels.
 * **[Training Instance](../user-guide-advanced/trainings/trainings-overview.md#training-instance):** Specify the time period in which the players can access training. Each training instance is associated with cloud sandbox pool used for the training.
 
 * **[Training Run](../user-guide-advanced/trainings/trainings-overview.md#training-run):** Single run of training of the particular trainee. Each run has an assigned sandbox from the pool or use their own local sandbox.

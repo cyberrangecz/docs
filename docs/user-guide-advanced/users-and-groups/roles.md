@@ -5,10 +5,10 @@ All roles are imported into the CyberRangeCZ Platform portal by registering a [m
 In the CyberRangeCZ Platform context, we are using three abstract roles that are not part of any microservice. We have experienced that most of the users require the functionalities that are privileges of the specific set of [microservice roles](#microservice-roles). Each abstract role is composed of several roles of microservices that must be assigned to users by an administrator.
 
 ### Trainee
-Each user who can log into the CyberRangeCZ Platform automatically acquires this role. It is composed of the default roles of each microservice. For now, these roles are: ``ROLE_TRAINING_TRAINEE``, ``ROLE_ADAPTIVE_TRAINING_TRAINEE``, ``ROLE_USER_AND_GROUP_GUEST``, and ``ROLE_SANDBOX-SERVICE_TRAINEE``.
+Each user who can log into the CyberRangeCZ Platform automatically acquires this role. It is composed of the default roles of each microservice. For now, these roles are: ``ROLE_TRAINING_TRAINEE``, ``ROLE_USER_AND_GROUP_GUEST``, and ``ROLE_SANDBOX-SERVICE_TRAINEE``.
 
 ### Instructor
-The user who is responsible for creating exercises for trainees and for their management is called the instructor. Each instructor should have access to sandbox definitions, pools, cloud resources, training definitions, and training instances. Because of that, the instructor must have assigned the following roles: ``ROLE_TRAINING_ORGANIZER``, ``ROLE_TRAINING_DESIGNER``, ``ROLE_ADAPTIVE_TRAINING_ORGANIZER``, ``ROLE_ADAPTIVE_TRAINING_DESIGNER``, ``ROLE_SANDBOX-SERVICE_ORGANIZER``, and ``ROLE_SANDBOX-SERVICE_DESIGNER``. The role of the trainee is assigned by default.
+The user who is responsible for creating exercises for trainees and for their management is called the instructor. Each instructor should have access to sandbox definitions, pools, cloud resources, training definitions, and training instances. Because of that, the instructor must have assigned the following roles: ``ROLE_TRAINING_ORGANIZER``, ``ROLE_TRAINING_DESIGNER``, ``ROLE_SANDBOX-SERVICE_ORGANIZER``, and ``ROLE_SANDBOX-SERVICE_DESIGNER``. The role of the trainee is assigned by default.
 
 ### Administrator
 The administrator is responsible for managing the whole CyberRangeCZ Platform instance. The administrator must have assigned all the [microservice roles](#microservice-roles) described below.
@@ -21,13 +21,13 @@ Current roles that are used in the CyberRangeCZ Platform portal can be divided i
 
 ### Training Roles
 
-``ROLE_TRAINING_TRAINEE``/``ROLE_ADAPTIVE_TRAINING_TRAINEE``: **Trainees** are allowed to start, resume, and play the [linear training run](../../user-guide-basic/training-agenda/training-run/linear-training-run.md)/[adaptive training run](../../user-guide-basic/training-agenda/training-run/adaptive-training-run.md). After the training is complete, trainees can also check and compare their scores. The role of the trainee is the default role of each CyberRangeCZ Platform user.
+``ROLE_TRAINING_TRAINEE``: **Trainees** are allowed to start, resume, and play the [training run](../../user-guide-basic/training-agenda/training-run/linear-training-run.md). After the training is complete, trainees can also check and compare their scores. The role of the trainee is the default role of each CyberRangeCZ Platform user.
 
-``ROLE_TRAINING_ORGANIZER``/``ROLE_ADAPTIVE_TRAINING_ORGANIZER``: **Training organizers** can create and manage [linear training instances](../../user-guide-basic/training-agenda/training-instance.md)/[adaptive training instances](../../user-guide-basic/training-agenda/training-instance.md), see the progress of trainees during the training, or see the results in the form of graphs and tables. Each organizer can only access training instances in which they are set as an organizer.
+``ROLE_TRAINING_ORGANIZER``: **Training organizers** can create and manage [training instances](../../user-guide-basic/training-agenda/training-instance.md), see the progress of trainees during the training, or see the results in the form of graphs and tables. Each organizer can only access training instances in which they are set as an organizer.
 
-``ROLE_TRAINING_DESIGNER``/``ROLE_ADAPTIVE_TRAINING_DESIGNER``: **Training designers** can create and manage [linear training definitions](../../user-guide-basic/training-agenda/training-definition/linear-training-definition.md)/[adaptive training definitions](../../user-guide-basic/training-agenda/training-definition/adaptive-training-definition.md), that can be used to create training instances by the organizers. In a similar manner to the organizers, these users can only access training definitions that have them set as their designer.
+``ROLE_TRAINING_DESIGNER``: **Training designers** can create and manage [training definitions](../../user-guide-basic/training-agenda/training-definition/linear-training-definition.md), that can be used to create training instances by the organizers. In a similar manner to the organizers, these users can only access training definitions that have them set as their designer.
 
-``ROLE_TRAINING_ADMINISTRATOR``/``ROLE_ADAPTIVE_TRAINING_ADMINISTRATOR``: **Training administrators** have all the privileges of the above roles, with the exception being that they are not restricted by ownership of the training instances and definitions. This means that the training administrator can access all definitions and instances that exist on the CyberRangeCZ Platform.
+``ROLE_TRAINING_ADMINISTRATOR``: **Training administrators** have all the privileges of the above roles, with the exception being that they are not restricted by ownership of the training instances and definitions. This means that the training administrator can access all definitions and instances that exist on the CyberRangeCZ Platform.
 
 ### User and Group Roles
 

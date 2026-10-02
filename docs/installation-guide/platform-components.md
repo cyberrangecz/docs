@@ -19,12 +19,6 @@ Stores unique answers for each sandbox under the specific identifier. Answers ar
 (Obsolete) Provided data necessary to visualize the feedback in the form of three types of graphs: summary, reference, trainee. Currently, the graphs with their dependecies are being reconstructed, so their presence in the portal is hidden.
 
 
-### Adaptive Training Service
-It is used to create, manage, and perform **adaptive** cybersecurity trainings in the form of multi-phases trainings featuring the sandboxe. Sandboxes are used in a similar way as in Training Service. The assignments of phases are adapted to the trainees' skills and experiences. All events recorded and stored in the Elasticsearch database are used to compute the most suitable assignment for the trainee. The computation is done by the [Smart Assistant](#smart-assistant-service).
-
-### Smart Assistant Service
-Based on the input from the Adaptive Training Service and obtained statistics about previous events from Elasticsearch Service, it computes the most suitable assignment for the trainee.
-
 ### Elasticsearch Service
 This service aims to communicate with and obtain queried data (events and commands from the trainings)  from Elasticsearch. Microservice provides several endpoints to get different data portions, e.g., events per one training or multiple trainings.
 

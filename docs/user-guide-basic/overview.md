@@ -14,9 +14,9 @@ Then the User Guide (Basic) section then serves as a manual on how to operate al
 
 Access to CyberRangeCZ Platform Portal depends a lot on the role you hold as a user. There are three main roles we differentiated and depending on them you can access different pages of agendas and perform various functionalities in the CyberRangeCZ Platform Portal.
 
-* **[Trainees](#trainees-view):** Everybody who has access to the CyberRangeCZ Platform Portal and is interested in participating in the training can perform actions inside of the [linear](training-agenda/training-run/linear-training-run.md) or [adaptive](training-agenda/training-run/adaptive-training-run.md) Training run.
+* **[Trainees](#trainees-view):** Everybody who has access to the CyberRangeCZ Platform Portal and is interested in participating in the training can perform actions inside of the [Training run](training-agenda/training-run/linear-training-run.md).
 * **[Instructors](#instructors-view):** Users who are responsible for preparing and creating trainings and corresponding sandboxes can access the following pages:
-    * [Linear Training definitions](training-agenda/training-definition/linear-training-definition.md), [Adaptive Training definitions](training-agenda/training-definition/adaptive-training-definition.md) and [Training instances](training-agenda/training-instance.md) for overview and management of trainings.
+    * [Linear Training definitions](training-agenda/training-definition/linear-training-definition.md) and [Training instances](training-agenda/training-instance.md) for overview and management of trainings.
     * [Sandbox definitions](sandbox-agenda/sandbox-definition.md) and [Pools](sandbox-agenda/pool.md) needed for management of sandboxes, and [Images](sandbox-agenda/images.md) to view available OS images.
 * **[Administrators](#administrators-view):** Users who are responsible for managing the whole CyberRangeCZ Platform instance. They have access to every above-mentioned page in the CyberRangeCZ Platform Portal. Moreover, they can also have the right to manage entities like users, groups, and microservices in [Administration Agenda](administration-agenda/administration-agenda-overview.md).
 

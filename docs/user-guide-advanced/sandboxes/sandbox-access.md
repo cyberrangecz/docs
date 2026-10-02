@@ -89,7 +89,7 @@ Access to the sandbox nodes is through the **Proxy Jump**, and a **MAN** node, a
     !!! warning
         The SSH config file will be generated with the host's directive `User` set to `user-access`, therefore setting variable `user_access_username` to value `user-access` modify the SSH config file later.
 
-1. Download the SSH access zip file from [Training Level](../../user-guide-basic/training-agenda/training-run/linear-training-run.md#3-training-level) of the Linear Training Run page with topology visualization (in case of Adaptive Training Run, download it from the [Training Phase](../../user-guide-basic/training-agenda/training-run/adaptive-training-run.md#3-training-phase)).
+1. Download the SSH access zip file from [Training Level](../../user-guide-basic/training-agenda/training-run/linear-training-run.md#3-training-level) of the Linear Training Run page with topology visualization.
 
 2. Extract the `ssh-access.zip` file to the `~/.ssh/` directory.
 
