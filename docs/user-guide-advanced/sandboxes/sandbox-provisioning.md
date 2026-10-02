@@ -20,7 +20,7 @@ The CyberRangeCZ Platform requires Sandbox Provisioning, but if you do not need 
 
 ### Ansible Host Groups
 
-On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#default-groups), the sandbox-service defines nine more default host groups.
+On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#default-groups), the sandbox-service defines thirteen more default host groups.
 
 * **management**: the group containing the [sandbox management node](topology-instance.md#topology-instance-management), i.e., MAN node.
 * **routers**: the group containing all the routers defined in [Topology definition](topology-definition.md#routers).
@@ -30,6 +30,10 @@ On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/
 * **user_accessible_nodes**: the group containing all hosts and routers defined in [Topology definition](topology-definition.md), which are connected to a network with attribute `accessible_by_user` set to `True` (Since 21.06).
 * **hidden_hosts**: the group containing all hosts defined in [Topology definition](topology-definition.md) with attribute `hidden` set to `True` (Since 21.06).
 * **unmanaged_hosts**: the group containing all hosts defined in [Topology definition](topology-definition.md) with attribute `managed` set to `False` (Since sandbox-service 4.0.0). The group is always present in the inventory, and it is empty when the definition has no such host. The hosts keep their other groups and variables, but the stage one does not configure them, see [managed hosts](topology-definition.md#managed-hosts).
+* **docker_hosts**: the group containing all hosts defined in [Topology definition](topology-definition.md), which run [Docker containers](sandbox_dockers.md) (the hosts of the container mappings). The group is present in the inventory only when the definition contains containers.
+* **monitored_hosts_tcp**: the group containing all hosts and routers listed in the `tcp` section of [monitoring_targets](topology-definition.md#monitoring_targets). The `tcp_targets` variable of each member contains its targets. The group is present in the inventory only when `tcp` is defined.
+* **monitored_hosts_icmp**: the group containing all hosts and routers listed in the `icmp` section of [monitoring_targets](topology-definition.md#monitoring_targets). The `icmp_targets` variable of each member contains its targets. The group is present in the inventory only when `icmp` is defined.
+* **vpn_entrypoints**: the group containing all hosts and routers listed in `entrypoints` of the [vpn](topology-definition.md#vpn) section. The `netbird_setup_key` variable of each member contains the NetBird setup key of the entrypoint. The group is present in the inventory only when the definition has VPN entrypoints.
 * **windows_hosts**: the group containing all hosts defined in [Topology definition](topology-definition.md) with image os_type windows. This is parameter of image/ami in OpenStack/AWS cloud platform (Since CyberRangeCZ Platform v2025.01).
 
 You can specify additional Ansible host groups in [Topology definition](topology-definition.md#groups) and then use them in a `playbook.yml` file of the Sandbox Provisioning.

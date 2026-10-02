@@ -42,7 +42,8 @@ The following rules apply.
 * The first volume (`volumes[0]`) is the system disk. It is always created from `base_box.image`, so `image` cannot be set on it. The author of the definition has to determine how much space the image itself requires to run.
 * A host can have at most 12 volumes.
 * A volume cannot be smaller than the minimum disk size of the image it is created from. On OpenStack, this is the `min_disk` of the Glance image of `base_box.image` for `volumes[0]` and of `image` for the other volumes. On AWS, `volumes[0]` cannot be smaller than the root volume of the AMI, and the snapshot IDs are only checked for the `snap-` format.
-* Volume images on OpenStack must exist in Glance, which is checked when the sandbox definition is registered. The image name prefix of the deployment is rewritten in them the same way as in `base_box.image`.
+* Volume images on OpenStack must exist in Glance, which is checked when the sandbox definition is registered.
+* The image naming strategy of the deployment (`image_naming_strategy` in the sandbox-service configuration) rewrites `image` of the volumes the same way as `base_box.image`, on every cloud provider. On AWS, `image` is a snapshot ID, so the pattern must not match `ami-` and `snap-` IDs.
 * On AWS, `volumes[0]` resizes the root device, and the other volumes are attached as EBS volumes from `/dev/sdf` onwards. Before sandbox-service 4.0.0, `volumes` was ignored on AWS.
 
 ```yaml
@@ -215,6 +216,8 @@ Optional network traffic forwarding (port mirroring). A copy of the traffic on o
 
 The interfaces are referenced by node and network, so each of them has to exist in [net_mappings](#net_mappings) or [router_mappings](#router_mappings). The rule is validated after the whole definition is loaded, so its position in the file does not matter.
 
+Example for OpenStack. The sources are on `server-switch` and the destination is on the separate network `mirror-switch`.
+
 ```yaml
 network_forwarding:
   sources:
@@ -225,6 +228,21 @@ network_forwarding:
   destination:
     host: analyzer
     network: mirror-switch
+  direction: both
+```
+
+Example for AWS. Every source is on the network of the destination, so `analyzer` is connected to `server-switch` as well.
+
+```yaml
+network_forwarding:
+  sources:
+    - host: server
+      network: server-switch
+    - host: server-router
+      network: server-switch
+  destination:
+    host: analyzer
+    network: server-switch
   direction: both
 ```
 
@@ -324,11 +342,11 @@ The host attribute `managed` (default: `True`) controls whether the stage one of
 
 Routers carry the sandbox routing, so they are always managed and have no `managed` attribute. Hosts with `managed: False` belong to the `unmanaged_hosts` [Ansible host group](sandbox-provisioning.md#ansible-host-groups), whose name is reserved.
 
-The stage one does not gather facts from an unmanaged host, so the following is rejected for it.
+The following is rejected for an unmanaged host.
 
-* A TCP or ICMP target in [monitoring_targets](#monitoring_targets).
-* A [vpn](#vpn) entrypoint.
-* A container mapping of [Docker containers](sandbox_dockers.md), because Docker is not installed on the host.
+* A TCP or ICMP target in [monitoring_targets](#monitoring_targets), because the stage one never gathers the facts of the host.
+* A [vpn](#vpn) entrypoint, because the NetBird agent is never installed on the host.
+* A container mapping of [Docker containers](sandbox_dockers.md), because Docker is never installed on the host.
 
 An unmanaged host can be a [network_forwarding](#network_forwarding) destination and can be connected to user-accessible networks.
 
