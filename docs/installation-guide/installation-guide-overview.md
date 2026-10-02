@@ -22,3 +22,24 @@ The deployment process is divided into 2 major sections:
     ![Diagram of base infrastructure](/img/installation-guide/base-infrastructure.svg){: .center style="height: 500px;"}
 
 * [Deployment of Helm application](https://github.com/cyberrangecz/devops-tf-deployment/blob/master/HELM.md) contains steps that will help you create configuration files and deploy CyberRangeCZ Platform with Helm to the Kubernetes Cluster node in the OpenStack cloud platform.
+
+## Upgrading to sandbox-service 4.0.0
+
+sandbox-service 4.0.0 changes the configuration and extends the topology definition. The Helm chart and the Terraform modules render the sandbox-service configuration, so use their releases listed below when you upgrade.
+
+* **OpenStack options moved under `application_configuration.openstack`**: `auth_url`, `application_credential_id`, `application_credential_secret`, and `console_type` replace the flat `os_auth_url`, `os_application_credential_id`, `os_application_credential_secret`, and `os_console_type` keys. The service refuses to start when an old key is present, and the error names the new key.
+* **No `hypervisor_cidr` and `mirror_type` options**: the service does not know them any more and refuses to start when the configuration contains them. The hypervisor CIDR is now set in the `tf-module-openstack-base` module, see [network forwarding](openstack-requirements.md#network-forwarding), and the mirror type is always GRE.
+* **`network_forwarding_enabled`**: new boolean option in `application_configuration` (default: `false`) that allows network forwarding.
+* **Reserved Ansible group**: `unmanaged_hosts` is a reserved group name, so a [group](../user-guide-advanced/sandboxes/topology-definition.md#groups) of that name in a topology definition is rejected.
+* **AWS volumes**: the [`volumes`](../user-guide-advanced/sandboxes/topology-definition.md#volumes) of a host were ignored on AWS before. They are honoured now: `volumes[0].size` resizes the root device, and the other volumes become billed EBS volumes. Check the sizes in existing definitions before you upgrade.
+* **Components released together with the service**: the following versions or newer are needed for the new topology definition features.
+
+| Component                | Version | Needed for                                                                      |
+|--------------------------|---------|---------------------------------------------------------------------------------|
+| sandbox-service          | 4.0.0   |                                                                                 |
+| devops-helm (chart)      | 4.0.0   | configuration with the `openstack` section                                      |
+| tf-module-helm           | v2.0.0  | configuration with the `openstack` section, `network_forwarding_enabled`        |
+| tf-module-openstack-base | v1.3.0  | `sandbox-mirror-sg` and `base-router-public` for network forwarding             |
+| ansible-stage-one        | v2.3.0  | `managed: false` hosts (any release newer than v2.2.1)                          |
+| ansible-role-prometheus  | v2.0.2  | node exporter targets without unmanaged hosts                                   |
+| backend-ansible-runner   | v1.2.0  | `base_box.mgmt_password` (image with `sshpass`)                                 |

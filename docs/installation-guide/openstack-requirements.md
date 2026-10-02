@@ -16,3 +16,19 @@ For every instance of CyberRangeCZ Platform you also need two floating IP addres
 Floating IP addreses need to be unrestricted on any firewalls.
 
 For OpenStack deployment, it is recommended to use open source project [Kolla Ansible](https://github.com/openstack/kolla-ansible), which supports all CyberRangeCZ Platform requirements.
+
+## Network Forwarding
+
+*(Since sandbox-service 4.0.0)*
+
+Network forwarding (port mirroring) of a [topology definition](../user-guide-advanced/sandboxes/topology-definition.md#network_forwarding) is optional and turned off by default. Prepare the following before you set `network_forwarding_enabled` to `true` in the `application_configuration` of the sandbox-service configuration. Otherwise, a definition with `network_forwarding` is rejected.
+
+* **Neutron TaaS**: the Neutron Tap-as-a-Service extension with the OVN driver. The platform mirrors the traffic with `tap_mirror` resources of type GRE.
+* **Base resources**: deploy the `tf-module-openstack-base` module v1.3.0 or newer (see [Deployment of OpenStack base resources](https://github.com/cyberrangecz/devops-tf-deployment/blob/master/BASE.md)) with its `hypervisor_cidr` variable set to the narrowest CIDR covering the addresses from which the compute nodes send the mirrored GRE traffic. The module then creates the following resources.
+    * The security group `sandbox-mirror-sg`, which allows only GRE ingress from `hypervisor_cidr` and no egress. Every port of a topology on the destination network uses it.
+    * The router `base-router-public`. The platform takes the external network of the per-sandbox router from it.
+
+    !!! warning
+        Deploy the base resources before you turn network forwarding on. When `sandbox-mirror-sg` is missing, the definition is still imported, and only the first sandbox build fails.
+* **Quotas**: every sandbox with network forwarding needs additionally 1 router, 2 external IP addresses (the gateway of the router and the floating IP of the destination), and 1 port.
+* **One deployment per project**: the tunnel IDs of the mirrors are derived from the sandbox ID and are unique in a project. Two CyberRangeCZ Platform deployments that share one OpenStack project cannot both use network forwarding.
