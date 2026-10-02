@@ -89,7 +89,7 @@ Access to the sandbox nodes is through the **Proxy Jump**, and a **MAN** node, a
     !!! warning
         The SSH config file will be generated with the host's directive `User` set to `user-access`, therefore setting variable `user_access_username` to value `user-access` modify the SSH config file later.
 
-1. Download the SSH access zip file from [Training Level](../../user-guide-basic/training-agenda/training-run/linear-training-run.md#3-training-level) of the Linear Training Run page with topology visualization (in case of Adaptive Training Run, download it from the [Training Phase](../../user-guide-basic/training-agenda/training-run/adaptive-training-run.md#3-training-phase)).
+1. Download the SSH access zip file from [Training Level](../../user-guide-basic/training-agenda/training-run/linear-training-run.md#4-training-level) of the Linear Training Run page with topology visualization.
 
 2. Extract the `ssh-access.zip` file to the `~/.ssh/` directory.
 
@@ -132,7 +132,7 @@ Access to the sandbox nodes is through the **Proxy Jump**, and a **MAN** node, a
      Then use the RDP client and connect to a virtual machine using the `localhost:12345` address.
 
 ### Web-based Access
-Simple access to the sandbox node from within the web browser is available through the CyberRangeCZ Platform portal from the sandbox topology. An instructor can display the topology on the [Pool Detail](../../user-guide-basic/sandbox-agenda/pool.md#pool-detail) page, and for trainees, the topology is always displayed during a training run in [training levels](../../user-guide-basic/training-agenda/training-run/linear-training-run.md#3-training-level). Right-click on the selected network node (host or router) in the network topology will open the menu with the following options (see [VM manipulation](../../user-guide-basic/training-agenda/training-run/linear-training-run.md#vm-manipulation):
+Simple access to the sandbox node from within the web browser is available through the CyberRangeCZ Platform portal from the sandbox topology. An instructor can display the topology on the [Pool Detail](../../user-guide-basic/sandbox-agenda/pool.md#pool-detail) page, and for trainees, the topology is always displayed during a training run in [training levels](../../user-guide-basic/training-agenda/training-run/linear-training-run.md#4-training-level). Right-click on the selected network node (host or router) in the network topology will open the menu with the following options (see [VM manipulation](../../user-guide-basic/training-agenda/training-run/linear-training-run.md#topology):
 
 * **Open console**: Opens the command-line interface (CLI) in [Apache Guacamole](#apache-guacamole) application using the SSH protocol. This option is available only for routers and hosts with Linux-based operating systems.
 * **Open GUI**: Opens graphical user interface (GUI) in [Apache Guacamole](#apache-guacamole) application using the VNC or RDP protocol. This option can be available for all routers and hosts but depends on whether they are properly configured.

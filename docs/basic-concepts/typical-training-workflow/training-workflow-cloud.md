@@ -15,19 +15,16 @@
 ## Training Creation
 
 ### Before Training
-1. Training definition can be created via the [Create Linear Training Definition](../../user-guide-basic/training-agenda/training-definition/linear-training-definition.md#add-a-new-definition) or the [Create Adaptive Training Definition](../../user-guide-basic/training-agenda/training-definition/adaptive-training-definition.md#add-a-new-definition) page independently on the sandbox definition.
+1. Training definition can be created via the [Create Linear Training Definition](../../user-guide-basic/training-agenda/training-definition/linear-training-definition.md#add-a-new-definition) page independently on the sandbox definition.
 2. Training instance can be created via the [Create/Edit Training Instance](../../user-guide-basic/training-agenda/training-instance.md#createedit-training-instance) page specifically for the selected available training definition. Option [local environment](../terminology.md#training) must be disabled.
 3. An unlocked pool of sandboxes **created for the training** is assigned to the training instance in the second panel [Assign Pool](../../user-guide-basic/training-agenda/training-instance.md#assign-pool) when editing the training instance.
-4. Each training instance has a partially generated access token which the instructor hand over to trainees so they can access [linear](../../user-guide-basic/training-agenda/training-run/linear-training-run.md#training-run) or [adaptive](../../user-guide-basic/training-agenda/training-run/adaptive-training-run.md#training-run) training runs.
+4. Each training instance has a partially generated access token which the instructor hand over to trainees so they can access [training runs](../../user-guide-basic/training-agenda/training-run/linear-training-run.md#training-run).
 
 
 ### During Training
 5. Trainees [access Training Run](../../user-guide-basic/training-agenda/training-run/linear-training-run.md#1-access-training) using the obtained access token. Trainees can resume their accessed training runs if the training instance is still active.
 6. Each training run has assigned a specific sandbox and trainees can access VMs in this sandbox using [Terminal Remote Access](../../user-guide-advanced/sandboxes/sandbox-access.md#terminal-remote-access) (SSH) or [Web-based Access](../../user-guide-advanced/sandboxes/sandbox-access.md#web-based-access) (Apache Guacamole, Spice).
 7. An organizer of training instance can watch the real-time progress of trainees and can see their [linear training run results](../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear.md#progress-of-training-instance) during the training.
-
-!!! note
-    Results for the adaptive training runs will be added in near future.
 
 ### After Training
 8. When the training instance is finished, the [results](../../user-guide-basic/training-agenda/visualizations/visualizations-for-linear.md#results-of-training-instance) are available and ready for further evaluation.

@@ -43,7 +43,7 @@ Instructors can click on the title of each pool to see a more [detailed view](#p
 
  To create a new pool, click on the ![create-button](/img/buttons/create-button.png){: .inline-button } button. The instructor will be redirected to the page [Create Pool](#create-pool).
 
-Resources Overview panel describes [statistics of OpenStack project utilization](#1-usage-statistics-of-cloud-server).
+Resources Overview panel describes [statistics of OpenStack project utilization](#usage-statistics-of-cloud-project).
 
 ### Usage Statistics of Cloud Project
 
