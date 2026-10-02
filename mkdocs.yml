@@ -67,7 +67,6 @@ nav:
                   - Training Service: reference/training-swagger-open-api.md
                   - Training Feedback Service: reference/training-feedback-swagger-open-api.md
                   - Answers Storage: reference/answers-storage-swagger-open-api.md
-                  - Elasticsearch Service: reference/elasticsearch-service-swagger-open-api.md
                   - Mitre Technique Service: reference/mitre-technique-service-swagger-open-api.md
                   - Tables of Permissions: reference/tables-of-permissions.md
         - Extras:

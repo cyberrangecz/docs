@@ -78,7 +78,7 @@ An instructor can enable/disable backward mode which allows users to move betwee
 Moreover, instructors can choose if they will use local or cloud environment. Based on that they will be able to either **assign pool** or **assign sandbox definition**.
 
 
-#### Assing Pool
+#### Assign Pool
 
 Instructors can use the subsection **Pools** to assign a pool with sandboxes to the training instance. Sandbox instances created in the pool are assigned to training runs and their topologies are displayed as part of the training levels. The instructor chooses from the list of [pools](../sandbox-agenda/pool.md) created by the sandbox instructor. It is necessary to select the pool properly. Additionally, a locked pool cannot be assigned to the training instance.
 

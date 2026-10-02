@@ -10,7 +10,7 @@ Kubernetes Cluster node is running all essential services.
 Provides functionality to manage users, groups, roles in the yberRangeCZ Platform and allows registration of other microservices with specific roles. An administrator manages those entities. Administrators can manipulate users (add/remove them to/from created groups) and groups (create or remove them, assign/unassign roles to/from groups) and register new external microservices.
 
 ### Training Service
-It is used to create, manage, and perform **linear** cybersecurity trainings in the form of multi-level trainings featuring the sandboxes. Sandboxes are created by [Sandbox Service](#sandbox-service) via cloud service, and they are accessible using Guacamole console or using SSH. Besides that, all events during the training (training started, solution taken, entered commands in the command line of VMs, etc.) are recorded and stored in the Elasticsearch database. These data are then used to visualize the progress of one particular trainee or all trainees.
+It is used to create, manage, and perform **linear** cybersecurity trainings in the form of multi-level trainings featuring the sandboxes. Sandboxes are created by [Sandbox Service](#sandbox-service) via cloud service, and they are accessible using Guacamole console or using SSH. Besides that, all events during the training (training started, solution taken, entered commands in the command line of VMs, etc.) are recorded and stored in the OpenSearch database. These data are then used to visualize the progress of one particular trainee or all trainees.
 
 ### Answers Storage
 Stores unique answers for each sandbox under the specific identifier. Answers are generated during the allocation of the sandbox, and then they are requested by [Training Service](#training-service) when evaluating a submitted answer of the trainee for a particular level.
@@ -18,9 +18,6 @@ Stores unique answers for each sandbox under the specific identifier. Answers ar
 ### Training Feedback Service
 (Obsolete) Provided data necessary to visualize the feedback in the form of three types of graphs: summary, reference, trainee. Currently, the graphs with their dependecies are being reconstructed, so their presence in the portal is hidden.
 
-
-### Elasticsearch Service
-This service aims to communicate with and obtain queried data (events and commands from the trainings)  from Elasticsearch. Microservice provides several endpoints to get different data portions, e.g., events per one training or multiple trainings.
 
 ### Sandbox Service
 Provides functionality to manage the lifecycle of sandboxes in the CyberRangeCZ Platform. It includes managing sandbox definitions, creating sandboxes, their removal, configuration, networking inside of sandboxes, or user configuration of machines. Description of sandbox topology can be found in section [Sandboxes](../user-guide-advanced/sandboxes/topology-definition.md).

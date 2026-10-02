@@ -190,7 +190,7 @@ The table below contains some examples of possible base_box options.
 | windows-server-2019  | windows |
 
 !!! warning
-    The actual base_box options may differ from the contents of this table. Before using an image, check that it is present in the list of OpenStack images ([How to list OpenStack images](../../installation-guide/installation-guide-overview.md#configuration))
+    The actual base_box options may differ from the contents of this table. Before using an image, check that it is present in the list of OpenStack images ([How to list OpenStack images](https://docs.openstack.org/python-openstackclient/latest/cli/command-objects/flavor.html#flavor-list))
 
 !!! note
     It is strongly recommended to use the `debian-12-x86_64` or `ubuntu-noble-x86_64` images for routers.
@@ -205,7 +205,7 @@ The following flavors can be deployed using the CyberRangeCZ Platform deployment
 !!! warning
     In the case of using a public cloud provider (flavors cannot be created without admin rights), the flavors in the topology definition must be replaced by the available flavors of that provider.
 
-[How to list OpenStack flavors](../../installation-guide/installation-guide-overview.md#configuration)
+[How to list OpenStack flavors](https://docs.openstack.org/python-openstackclient/latest/cli/command-objects/flavor.html#flavor-list)
 
 | flavor          | vCPU | RAM (GB) | disk size (GB) |
 |-----------------|------|----------|----------------|
