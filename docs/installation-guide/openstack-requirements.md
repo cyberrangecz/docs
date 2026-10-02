@@ -29,6 +29,6 @@ Network forwarding (port mirroring) of a [topology definition](../user-guide-adv
     * The router `base-router-public`, which is the existing router of the platform and is not changed by v1.3.0. The platform takes the external network of the per-sandbox forwarding router from it.
 
     !!! warning
-        Deploy the base resources before you turn network forwarding on. When `sandbox-mirror-sg` is missing, the definition is still imported, and only the first sandbox build fails.
+        Deploy the base resources before you turn network forwarding on. A missing `sandbox-mirror-sg` is not detected at import. Every sandbox build with forwarding fails until the group exists.
 * **Quotas**: every sandbox with network forwarding needs additionally 1 router, 2 external IP addresses (the gateway of the router and the floating IP of the destination), and 1 port.
 * **One deployment per project**: the tunnel IDs of the mirrors are derived from the sandbox ID and are unique in a project. Two CyberRangeCZ Platform deployments that share one OpenStack project cannot both use network forwarding.

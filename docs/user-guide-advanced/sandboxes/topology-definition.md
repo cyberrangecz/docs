@@ -41,10 +41,11 @@ The following rules apply.
 
 * The first volume (`volumes[0]`) is the system disk. It is always created from `base_box.image`, so `image` cannot be set on it. The author of the definition has to determine how much space the image itself requires to run.
 * A host can have at most 12 volumes.
-* A volume cannot be smaller than the minimum disk size of the image it is created from. On OpenStack, this is the `min_disk` of the Glance image of `base_box.image` for `volumes[0]` and of `image` for the other volumes. On AWS, `volumes[0]` cannot be smaller than the root volume of the AMI, and the snapshot IDs are only checked for the `snap-` format.
-* Volume images on OpenStack must exist in Glance, which is checked when the sandbox definition is registered.
+* A volume cannot be smaller than the minimum disk size of the image it is created from. On OpenStack, this is the `min_disk` of the Glance image of `base_box.image` for `volumes[0]` and of `image` for the other volumes. On AWS, `volumes[0]` cannot be smaller than the root volume of the AMI.
+* Volume images on OpenStack must exist in Glance, which is checked when the sandbox definition is registered, when a pool is created, and when a sandbox is allocated.
 * The image naming strategy of the deployment (`image_naming_strategy` in the sandbox-service configuration) rewrites `image` of the volumes the same way as `base_box.image`, on every cloud provider. On AWS, `image` is a snapshot ID, so the pattern must not match `ami-` and `snap-` IDs.
 * On AWS, `volumes[0]` resizes the root device, and the other volumes are attached as EBS volumes from `/dev/sdf` onwards. Before sandbox-service 4.0.0, `volumes` was ignored on AWS.
+* On AWS, `image` must be an EBS snapshot owned by the platform account. This is checked when the sandbox definition is registered, when a pool is created, and when a sandbox is allocated. The `size` of the volume cannot be smaller than the snapshot. The platform AWS user needs `ec2:DescribeSnapshots` for the check. Every snapshot of the account can be used by the authors of definitions, so use a dedicated AWS account for sandboxes.
 
 ```yaml
 volumes:
@@ -75,14 +76,14 @@ The list of routers. Routers are the only nodes through which hosts can communic
 A special network that [routers](#routers) uses to communicate with each other and the Internet. [Routers](#routers) are assigned to this network automatically.
 
 * **name**: name of the network (default: `wan`, [names restriction](#names), [unique names restriction](#unique-names))
-* **cidr**: IP address range in CIDR notation (default: `100.100.100.0/24`, [unique cidrs restriction](#disjunct-cidrs))
+* **cidr**: IPv4 address range in CIDR notation (default: `100.100.100.0/24`, [unique cidrs restriction](#disjunct-cidrs))
 
 ### networks
 
 The list of networks. A network is used to connect the router with the end host. It has the following attributes.
 
 * **name**: name of network ([names restriction](#names), [unique names restriction](#unique-names))
-* **cidr**: IP address range in CIDR notation ([unique cidrs restriction](#disjunct-cidrs))
+* **cidr**: IPv4 address range in CIDR notation ([unique cidrs restriction](#disjunct-cidrs))
 * **accessible_by_user**: optional attribute, specifies which networks will be accessible by user (default: `True`), applies to the all hosts of a network
 * **hidden (optional)**: whether the network and its hosts should be hidden in a topology visualization (default: `False`)
 
@@ -92,7 +93,7 @@ The list of net_mappings. A net_mapping is used to connect the host to the netwo
 
 * **host**: name of host defined in [hosts](#hosts)
 * **network**: name of the network defined in [networks](#networks)
-* **ip**: IP address for the host, must be from IP address range of the network [address restriction](#address-restriction)
+* **ip**: IPv4 address for the host, must be from IP address range of the network [address restriction](#address-restriction)
 
 ### router_mappings
 
@@ -100,7 +101,7 @@ The list of router_mappings. A router_mapping is used to connect the router to t
 
 * **router**: name of router defined in [routers](#routers)
 * **network**: name of network defined in [networks](#networks)
-* **ip**: IP address for the router, must be from IP address range of the network [address restriction](#address-restriction)
+* **ip**: IPv4 address for the router, must be from IP address range of the network [address restriction](#address-restriction)
 
 ### groups
 
@@ -209,24 +210,24 @@ vpn:
 Optional network traffic forwarding (port mirroring). A copy of the traffic on one or more source interfaces is delivered to a single destination interface, for example to a host running a traffic analysis tool. The definition can declare at most one rule.
 
 * **sources**: non-empty list of the interfaces to mirror. The interfaces must be unique. Each source has the following attributes.
-    * **host**: name of a host or router defined in [hosts](#hosts) or [routers](#routers).
+    * **node**: name of a host or router defined in [hosts](#hosts) or [routers](#routers).
     * **network**: name of the network defined in [networks](#networks) that the node is connected to.
-* **destination**: the interface that receives the copy of the traffic. It has the same attributes as a source (`host` and `network`), and it cannot also be one of the sources.
+* **destination**: the interface that receives the copy of the traffic. It has the same attributes as a source (`node` and `network`), and it cannot also be one of the sources.
 * **direction (optional)**: which traffic is mirrored, relative to the source. One of `in`, `out`, and `both` (default: `both`).
 
-The interfaces are referenced by node and network, so each of them has to exist in [net_mappings](#net_mappings) or [router_mappings](#router_mappings). The rule is validated after the whole definition is loaded, so its position in the file does not matter.
+The interfaces are referenced by node and network, so each of them has to exist in [net_mappings](#net_mappings) or [router_mappings](#router_mappings), and only once: a node with two interfaces on the same network cannot be a source or the destination. The rule is validated after the whole definition is loaded, so its position in the file does not matter.
 
 Example for OpenStack. The sources are on `server-switch` and the destination is on the separate network `mirror-switch`.
 
 ```yaml
 network_forwarding:
   sources:
-    - host: server
+    - node: server
       network: server-switch
-    - host: server-router
+    - node: server-router
       network: server-switch
   destination:
-    host: analyzer
+    node: analyzer
     network: mirror-switch
   direction: both
 ```
@@ -236,12 +237,12 @@ Example for AWS. Every source is on the network of the destination, so `analyzer
 ```yaml
 network_forwarding:
   sources:
-    - host: server
+    - node: server
       network: server-switch
-    - host: server-router
+    - node: server-router
       network: server-switch
   destination:
-    host: analyzer
+    node: analyzer
     network: server-switch
   direction: both
 ```
@@ -254,7 +255,7 @@ The platform uses Neutron TaaS (with the OVN driver) to mirror the traffic and d
 
 * The destination is a host (not a router) that has another interface in a user network. It uses that interface for its sandbox traffic.
 * No other host is connected to the destination network. The network carries only the mirrored traffic, and nothing on it can send traffic. The topology router of the network is allowed.
-* A TCP or ICMP [monitoring target](#monitoring_targets) of the destination cannot be an `address` inside the destination network.
+* A TCP or ICMP [monitoring target](#monitoring_targets) of the destination cannot be an `address` inside the destination network, and no HTTP monitoring target can be a URL whose host is an IP address inside the destination network.
 * The copy is delivered to the destination as GRE packets, and there is no return route towards the mirroring hypervisors, so the destination should capture the traffic rather than reply to it.
 * A sandbox with network forwarding uses additional resources of the OpenStack project, see [quotas](../../installation-guide/openstack-requirements.md#network-forwarding).
 
@@ -266,9 +267,10 @@ The platform uses VPC Traffic Mirroring.
 * There are at most 10 sources.
 * The instance type (`flavor`) of the sources is from the `t3`, `t3a`, or `t4g` family. Other types, such as `t2`, do not support Traffic Mirroring.
 * The destination receives the traffic as VXLAN on UDP port 4789. The VXLAN network identifier (VNI) is assigned by AWS.
+* The AWS user of the platform needs the EC2 Traffic Mirroring permissions (for the mirror target, filter, filter rule, and session), as listed in the [IAM policy of devops-tf-deployment](https://github.com/cyberrangecz/devops-tf-deployment/blob/master/tf-aws-base/IAM-EC2.md).
 
 !!! warning
-    The OpenStack and AWS rules exclude each other (for example, the OpenStack destination network cannot contain other hosts, while the AWS sources have to be on it). A definition that uses `network_forwarding` is therefore valid on only one of the two cloud providers.
+    The OpenStack and AWS rules conflict (for example, the OpenStack destination network cannot contain other hosts, while the AWS sources have to be on it), so in practice a useful forwarding definition is valid on only one of the two cloud providers.
 
 ## Glossary
 
@@ -309,6 +311,7 @@ base_box:
 ```
 
 * It is supported only with `mgmt_protocol: ssh`, for hosts and routers.
+* It must not be empty.
 * The injected management key is tried first, and the password is used as a fallback.
 * The inventory contains the password as `ansible_password` and also as `ansible_become_password`, so it is used as the `sudo` password too.
 * The Ansible runner image has to contain `sshpass`. Use the Ansible runner image `crczp-ansible-runner` 1.2.0 or newer.
@@ -361,7 +364,7 @@ All names should have only characters: `a-z`, `A-Z`, `1-9`, and `-`, and the fir
 
 ### Unique Names
 
-Names of hosts, networks, and routers should be unique in the context of a Topology Definition (they are used for instance identification).
+Names of hosts, networks, and routers should be unique in the context of a Topology Definition (they are used for instance identification). The names `man` and `man-network` are reserved for the management node and network.
 
 ### Disjunct CIDRs
 
