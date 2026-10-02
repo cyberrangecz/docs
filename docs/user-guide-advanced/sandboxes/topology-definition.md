@@ -95,6 +95,8 @@ The list of net_mappings. A net_mapping is used to connect the host to the netwo
 * **network**: name of the network defined in [networks](#networks)
 * **ip**: IPv4 address for the host, must be from IP address range of the network [address restriction](#address-restriction)
 
+The first net_mapping of a host is its main interface. Its address is the `user_network_ip` of the host in the [Ansible inventory](sandbox-provisioning.md#ansible-inventory), it carries the default route on Ubuntu and Debian 12+, it is the address of the host in the console, and it is the first entry of the host in the user SSH config (when its network is accessible by the user). The order of the other mappings does not matter for these. For a router, its first router_mapping is the main interface for `user_network_ip` and the user SSH config.
+
 ### router_mappings
 
 The list of router_mappings. A router_mapping is used to connect the router to the network. Each network should be connected to one router, but one router can be connected to multiple networks. A router_mapping has the following attributes.
@@ -253,7 +255,7 @@ Network forwarding is available only when the administrator of the platform turn
 
 The platform uses Neutron TaaS (with the OVN driver) to mirror the traffic and delivers it to the destination encapsulated in GRE. See the [OpenStack requirements](../../installation-guide/openstack-requirements.md#network-forwarding) for the prerequisites.
 
-* The destination is a host (not a router) that has another interface in a user network. It uses that interface for its sandbox traffic.
+* The destination is a host (not a router), and its first [net_mapping](#net_mappings) is on a network other than the destination network. The host uses that main interface for its sandbox traffic.
 * No other host is connected to the destination network. The network carries only the mirrored traffic, and nothing on it can send traffic. The topology router of the network is allowed.
 * A TCP or ICMP [monitoring target](#monitoring_targets) of the destination cannot be an `address` inside the destination network, and no HTTP monitoring target can be a URL whose host is an IP address inside the destination network.
 * The copy is delivered to the destination as GRE packets, and there is no return route towards the mirroring hypervisors, so the destination should capture the traffic rather than reply to it.

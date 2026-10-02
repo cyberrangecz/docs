@@ -59,6 +59,8 @@ For each sandbox, the sandbox-service generates an `inventory.yml` file. It adds
 
 A node with [base_box.mgmt_password](topology-definition.md#mgmt_password) also has the `ansible_password` and `ansible_become_password` variables set to the password. A password containing {% raw %}`{{`, `{%`, or `{#`{% endraw %} is tagged `!unsafe` so that Ansible does not template it.
 
+The `user_network_ip` variable of a host or router is the address of its first `net_mappings` entry (for a router, its first `router_mappings` entry) in the [Topology definition](topology-definition.md#net_mappings).
+
 Example of inventory file for [small-sandbox](topology-definition.md#example) defined in [Topology definition](topology-definition.md) example.
 
 ```yaml
