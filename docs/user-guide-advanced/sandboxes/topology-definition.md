@@ -20,9 +20,38 @@ Hosts contains the list of end hosts to be deployed. A host has the following at
     * **image**: name of image
     * **mgmt_user**: name of user with sudo privileges
     * **mgmt_protocol (optional)**: protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
+    * **mgmt_password (optional)**: SSH password for images that cannot receive the injected management key (see [mgmt_password](#mgmt_password))
 * **hidden (optional)**: whether the host should be hidden in a topology visualization (default: `False`)
-* **volumes (optional)**: list of volumes that will be provisioned on the host in the format `- size: X`, where X is volume size in GB. The first volume will be used as a system drive - the author of the definition utilizing this parameter has to determine how much space the image itself requires to run.
+* **managed (optional)**: whether the [stage one](#managed-hosts) of the provisioning configures the host (default: `True`, see [managed hosts](#managed-hosts))
+* **volumes (optional)**: list of volumes that will be provisioned on the host (see [volumes](#volumes))
 * **extra (optional)**: a map used for defining extra values for the host, has no additional effect.
+
+#### volumes
+
+*(Since sandbox-service 4.0.0 for `image`, required `size`, and the limits below)*
+
+The list of disks of the host. Each volume has the following attributes.
+
+* **size**: volume size in GB, required, at least `1`.
+* **image (optional)**: image the volume is created from. The volume is blank when it is not set. The meaning depends on the cloud provider:
+    * OpenStack: name of a Glance image.
+    * AWS: ID of an EBS snapshot (`snap-...`).
+
+The following rules apply.
+
+* The first volume (`volumes[0]`) is the system disk. It is always created from `base_box.image`, so `image` cannot be set on it. The author of the definition has to determine how much space the image itself requires to run.
+* A host can have at most 12 volumes.
+* A volume cannot be smaller than the minimum disk size of the image it is created from. On OpenStack, this is the `min_disk` of the Glance image of `base_box.image` for `volumes[0]` and of `image` for the other volumes. On AWS, `volumes[0]` cannot be smaller than the root volume of the AMI, and the snapshot IDs are only checked for the `snap-` format.
+* Volume images on OpenStack must exist in Glance, which is checked when the sandbox definition is registered. The image name prefix of the deployment is rewritten in them the same way as in `base_box.image`.
+* On AWS, `volumes[0]` resizes the root device, and the other volumes are attached as EBS volumes from `/dev/sdf` onwards. Before sandbox-service 4.0.0, `volumes` was ignored on AWS.
+
+```yaml
+volumes:
+  - size: 16
+  - size: 2
+  - size: 20
+    image: forensic-evidence-disk
+```
 
 ### routers
 
@@ -34,6 +63,7 @@ The list of routers. Routers are the only nodes through which hosts can communic
     * **image**: name of image
     * **mgmt_user**: name of user with sudo privileges
     * **mgmt_protocol (optional)**: protocol used for communication with base_box instance. supported options are `ssh` and `winrm` (default: `ssh`)
+    * **mgmt_password (optional)**: SSH password for images that cannot receive the injected management key (see [mgmt_password](#mgmt_password))
 * **extra (optional)**: a map used for defining extra values for the router, has no additional effect.
 * **hidden (optional)**: whether the router and its networks and hosts should be hidden in a topology visualization (default: `False`)
 
@@ -171,6 +201,57 @@ vpn:
       - sandbox.local
 ```
 
+### network_forwarding
+
+*(Since sandbox-service 4.0.0)*
+
+Optional network traffic forwarding (port mirroring). A copy of the traffic on one or more source interfaces is delivered to a single destination interface, for example to a host running a traffic analysis tool. The definition can declare at most one rule.
+
+* **sources**: non-empty list of the interfaces to mirror. The interfaces must be unique. Each source has the following attributes.
+    * **host**: name of a host or router defined in [hosts](#hosts) or [routers](#routers).
+    * **network**: name of the network defined in [networks](#networks) that the node is connected to.
+* **destination**: the interface that receives the copy of the traffic. It has the same attributes as a source (`host` and `network`), and it cannot also be one of the sources.
+* **direction (optional)**: which traffic is mirrored, relative to the source. One of `in`, `out`, and `both` (default: `both`).
+
+The interfaces are referenced by node and network, so each of them has to exist in [net_mappings](#net_mappings) or [router_mappings](#router_mappings). The rule is validated after the whole definition is loaded, so its position in the file does not matter.
+
+```yaml
+network_forwarding:
+  sources:
+    - host: server
+      network: server-switch
+    - host: server-router
+      network: server-switch
+  destination:
+    host: analyzer
+    network: mirror-switch
+  direction: both
+```
+
+Network forwarding is available only when the administrator of the platform turns it on (`network_forwarding_enabled` in the sandbox-service configuration). Otherwise, a definition with `network_forwarding` is rejected when it is imported, when a pool is created, and when a sandbox is allocated. The rules differ per cloud provider.
+
+#### OpenStack
+
+The platform uses Neutron TaaS (with the OVN driver) to mirror the traffic and delivers it to the destination encapsulated in GRE. See the [OpenStack requirements](../../installation-guide/openstack-requirements.md#network-forwarding) for the prerequisites.
+
+* The destination is a host (not a router) that has another interface in a user network. It uses that interface for its sandbox traffic.
+* No other host is connected to the destination network. The network carries only the mirrored traffic, and nothing on it can send traffic. The topology router of the network is allowed.
+* A TCP or ICMP [monitoring target](#monitoring_targets) of the destination cannot be an `address` inside the destination network.
+* The copy is delivered to the destination as GRE packets, and there is no return route towards the mirroring hypervisors, so the destination should capture the traffic rather than reply to it.
+* A sandbox with network forwarding uses additional resources of the OpenStack project, see [quotas](../../installation-guide/openstack-requirements.md#network-forwarding).
+
+#### AWS
+
+The platform uses VPC Traffic Mirroring.
+
+* Every source is on the network of the destination. Each network is its own VPC, and the traffic cannot be mirrored across VPCs.
+* There are at most 10 sources.
+* The instance type (`flavor`) of the sources is from the `t3`, `t3a`, or `t4g` family. Other types, such as `t2`, do not support Traffic Mirroring.
+* The destination receives the traffic as VXLAN on UDP port 4789. The VXLAN network identifier (VNI) is assigned by AWS.
+
+!!! warning
+    The OpenStack and AWS rules exclude each other (for example, the OpenStack destination network cannot contain other hosts, while the AWS sources have to be on it). A definition that uses `network_forwarding` is therefore valid on only one of the two cloud providers.
+
 ## Glossary
 
 ### Base_box
@@ -196,6 +277,27 @@ The table below contains some examples of possible base_box options.
     It is strongly recommended to use the `debian-12-x86_64` or `ubuntu-noble-x86_64` images for routers.
 
 
+#### mgmt_password
+
+*(Since sandbox-service 4.0.0)*
+
+Some images cannot receive the management SSH key the platform injects into the instance (for example, a network appliance). For them, `mgmt_password` provides an SSH password.
+
+```yaml
+base_box:
+  image: appliance-image
+  mgmt_user: admin
+  mgmt_password: changeme
+```
+
+* It is supported only with `mgmt_protocol: ssh`, for hosts and routers.
+* The injected management key is tried first, and the password is used as a fallback.
+* The inventory contains the password as `ansible_password` and also as `ansible_become_password`, so it is used as the `sudo` password too.
+* The Ansible runner image has to contain `sshpass`. Use the Ansible runner image `crczp-ansible-runner` 1.2.0 or newer.
+
+!!! warning
+    The password is stored in plaintext in the sandbox definition repository and on the platform. SSH host keys are not verified during the provisioning. Use only the default password of an image or a throwaway credential.
+
 ### Flavor
 
 Flavor defines virtual machine hardware parameters (VCPUs, RAM, Disk size).
@@ -213,6 +315,25 @@ The following flavors can be deployed using the CyberRangeCZ Platform deployment
 | standard.medium | 1    | 4        | 80             |
 | standard.large  | 2    | 16       | 80             |
 
+
+### Managed hosts
+
+*(Since sandbox-service 4.0.0)*
+
+The host attribute `managed` (default: `True`) controls whether the stage one of the provisioning configures the host. When it is `False`, the stage one never configures the host: networking, hostname, user access, Docker, NetBird, and monitoring exporters are all left alone. The host is still created, connected to its networks, and part of the Ansible inventory, so the `playbook.yml` of the [Sandbox Provisioning](sandbox-provisioning.md) can configure it. It is intended for appliances and other images that the platform cannot configure.
+
+Routers carry the sandbox routing, so they are always managed and have no `managed` attribute. Hosts with `managed: False` belong to the `unmanaged_hosts` [Ansible host group](sandbox-provisioning.md#ansible-host-groups), whose name is reserved.
+
+The stage one does not gather facts from an unmanaged host, so the following is rejected for it.
+
+* A TCP or ICMP target in [monitoring_targets](#monitoring_targets).
+* A [vpn](#vpn) entrypoint.
+* A container mapping of [Docker containers](sandbox_dockers.md), because Docker is not installed on the host.
+
+An unmanaged host can be a [network_forwarding](#network_forwarding) destination and can be connected to user-accessible networks.
+
+!!! note
+    Unmanaged hosts require a version of the Ansible stage one repository newer than v2.2.1 (v2.3.0 or later).
 
 ## Restrictions
 

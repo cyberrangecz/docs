@@ -20,7 +20,7 @@ The CyberRangeCZ Platform requires Sandbox Provisioning, but if you do not need 
 
 ### Ansible Host Groups
 
-On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#default-groups), the sandbox-service defines seven more default host groups.
+On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#default-groups), the sandbox-service defines nine more default host groups.
 
 * **management**: the group containing the [sandbox management node](topology-instance.md#topology-instance-management), i.e., MAN node.
 * **routers**: the group containing all the routers defined in [Topology definition](topology-definition.md#routers).
@@ -29,6 +29,7 @@ On top of [default Ansible host groups](https://docs.ansible.com/ansible/latest/
 * **winrm_nodes**: the group containing all the hosts and routers defined in [Topology definition](topology-definition.md) with `base_box.mgmt_protocol` set to `WINRM` (Since 21.04).
 * **user_accessible_nodes**: the group containing all hosts and routers defined in [Topology definition](topology-definition.md), which are connected to a network with attribute `accessible_by_user` set to `True` (Since 21.06).
 * **hidden_hosts**: the group containing all hosts defined in [Topology definition](topology-definition.md) with attribute `hidden` set to `True` (Since 21.06).
+* **unmanaged_hosts**: the group containing all hosts defined in [Topology definition](topology-definition.md) with attribute `managed` set to `False` (Since sandbox-service 4.0.0). The group is always present in the inventory, and it is empty when the definition has no such host. The hosts keep their other groups and variables, but the stage one does not configure them, see [managed hosts](topology-definition.md#managed-hosts).
 * **windows_hosts**: the group containing all hosts defined in [Topology definition](topology-definition.md) with image os_type windows. This is parameter of image/ami in OpenStack/AWS cloud platform (Since CyberRangeCZ Platform v2025.01).
 
 You can specify additional Ansible host groups in [Topology definition](topology-definition.md#groups) and then use them in a `playbook.yml` file of the Sandbox Provisioning.
@@ -51,6 +52,8 @@ On top of [Ansible special variables](https://docs.ansible.com/ansible/latest/re
 ### Ansible Inventory
 
 For each sandbox, the sandbox-service generates an `inventory.yml` file. It adds some networking data to it, which you might find useful in your Sandbox Provisioning.
+
+A node with [base_box.mgmt_password](topology-definition.md#mgmt_password) also has the `ansible_password` and `ansible_become_password` variables set to the password. A password containing {% raw %}`{{`, `{%`, or `{#`{% endraw %} is tagged `!unsafe` so that Ansible does not template it.
 
 Example of inventory file for [small-sandbox](topology-definition.md#example) defined in [Topology definition](topology-definition.md) example.
 
@@ -111,6 +114,7 @@ all:
     hidden_hosts:
       hosts:
         server: null
+    unmanaged_hosts: {}
     hosts:
       hosts:
         home: null
