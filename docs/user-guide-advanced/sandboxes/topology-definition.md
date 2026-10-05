@@ -256,7 +256,7 @@ Network forwarding is available only when the administrator of the platform turn
 The platform uses Neutron TaaS (with the OVN driver) to mirror the traffic and delivers it to the destination encapsulated in GRE. See the [OpenStack requirements](../../installation-guide/openstack-requirements.md#network-forwarding) for the prerequisites.
 
 * The destination is a host (not a router), and its first [net_mapping](#net_mappings) is on a network other than the destination network. The host uses that main interface for its sandbox traffic.
-* No other host is connected to the destination network. The network carries only the mirrored traffic, and nothing on it can send traffic. The topology router of the network is allowed.
+* No other host is connected to the destination network. The network carries only the mirrored traffic, and nothing on it can send traffic other than DHCP requests. The topology router of the network is allowed.
 * A TCP or ICMP [monitoring target](#monitoring_targets) of the destination cannot be an `address` inside the destination network, and no HTTP monitoring target can be a URL whose host is an IP address inside the destination network.
 * The copy is delivered to the destination as GRE packets, and there is no return route towards the mirroring hypervisors, so the destination should capture the traffic rather than reply to it.
 * A sandbox with network forwarding uses additional resources of the OpenStack project, see [quotas](../../installation-guide/openstack-requirements.md#network-forwarding).

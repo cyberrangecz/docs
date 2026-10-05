@@ -25,7 +25,7 @@ Network forwarding (port mirroring) of a [topology definition](../user-guide-adv
 
 * **Neutron TaaS**: the Neutron Tap-as-a-Service extension with the OVN driver. The platform mirrors the traffic with `tap_mirror` resources of type GRE.
 * **Base resources**: deploy the `tf-module-openstack-base` module v1.3.0 or newer (see [Deployment of OpenStack base resources](https://github.com/cyberrangecz/devops-tf-deployment/blob/master/BASE.md)) with its `hypervisor_cidr` variable set to the narrowest CIDR covering the addresses from which the compute nodes send the mirrored GRE traffic. The following resources are used.
-    * The security group `sandbox-mirror-sg`, which is new in v1.3.0. The module creates it only when `hypervisor_cidr` is set. It allows only GRE ingress from `hypervisor_cidr` and no egress. Every port of a topology on the destination network uses it.
+    * The security group `sandbox-mirror-sg`, which is new in v1.3.0. The module creates it only when `hypervisor_cidr` is set. It allows only GRE ingress from `hypervisor_cidr` and DHCP requests (UDP to port 67), which the ports on the destination network need for their addresses. The DHCP rule allows any destination address, because the DHCP server address depends on the sandbox subnet, so anything on the destination network can send UDP to port 67 of any address through the forwarding router. Every port of a topology on the destination network uses it.
     * The router `base-router-public`, which is the existing router of the platform and is not changed by v1.3.0. The platform takes the external network of the per-sandbox forwarding router from it.
 
     !!! warning
