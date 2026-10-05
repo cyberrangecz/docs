@@ -21,7 +21,7 @@ For OpenStack deployment, it is recommended to use open source project [Kolla An
 
 *(Since sandbox-service 4.0.0)*
 
-Network forwarding (port mirroring) of a [topology definition](../user-guide-advanced/sandboxes/topology-definition.md#network_forwarding) is optional and turned off by default. Prepare the following before you set `network_forwarding_enabled` to `true` in the `application_configuration` of the sandbox-service configuration. Otherwise, a definition with `network_forwarding` is rejected.
+Network forwarding (port mirroring) of a [topology definition](../user-guide-advanced/sandboxes/topology-definition.md#network_forwarding) is optional and turned off by default. Prepare the following before you set `network_forwarding_enabled` to `true` in the `application_configuration` of the sandbox-service configuration (Helm value `sandbox.networkForwardingEnabled`). Otherwise, a definition with `network_forwarding` is rejected.
 
 * **Neutron TaaS**: the Neutron Tap-as-a-Service extension with the OVN driver. The platform mirrors the traffic with `tap_mirror` resources of type GRE.
 * **Base resources**: deploy the `tf-module-openstack-base` module v1.3.0 or newer (see [Deployment of OpenStack base resources](https://github.com/cyberrangecz/devops-tf-deployment/blob/master/BASE.md)) with its `hypervisor_cidr` variable set to the narrowest CIDR covering the addresses from which the compute nodes send the mirrored GRE traffic. The following resources are used.
