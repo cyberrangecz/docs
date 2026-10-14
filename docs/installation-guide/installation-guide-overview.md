@@ -45,7 +45,6 @@ sandbox-service 4.0.0 changes the configuration and extends the topology definit
 | tf-module-helm           | v2.0.0  | configuration with the `openstack` section                                      |
 | tf-module-openstack-base | v1.3.0  | `sandbox-mirror-sg` and `base-router-public` for network forwarding             |
 | ansible-stage-one        | v2.3.0  | `managed: false` hosts (any release newer than v2.2.1)                          |
-| ansible-role-prometheus  | v2.0.2  | node exporter targets without unmanaged hosts                                   |
 | backend-ansible-runner   | v1.2.0  | `base_box.mgmt_password` (image with `sshpass`)                                 |
 
-The components are released in this order, because each one needs the previous ones: ansible-role-prometheus v2.0.2, ansible-stage-one v2.3.0, backend-ansible-runner v1.2.0, the sandbox-service 4.0.0 image, tf-module-openstack-base v1.3.0, the Helm chart 4.0.0, tf-module-helm v2.0.0, and devops-tf-deployment. To upgrade a deployment, apply tf-module-openstack-base v1.3.0 with `hypervisor_cidr` first, then tf-module-helm v2.0.0 with `head_version = "4.0.0"`, and turn on `sandbox.networkForwardingEnabled` last.
+The components are released in this order, because each one needs the previous ones: ansible-stage-one v2.3.0, backend-ansible-runner v1.2.0, the sandbox-service 4.0.0 image, tf-module-openstack-base v1.3.0, the Helm chart 4.0.0, tf-module-helm v2.0.0, and devops-tf-deployment. To upgrade a deployment, apply tf-module-openstack-base v1.3.0 with `hypervisor_cidr` first, then tf-module-helm v2.0.0 with `head_version = "4.0.0"`, and turn on `sandbox.networkForwardingEnabled` last.
