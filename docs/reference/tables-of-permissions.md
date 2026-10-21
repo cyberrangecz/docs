@@ -62,27 +62,18 @@ The following tables display the actions that can perform the users with the spe
 | ------ | :------------: | :-----: | :-------: | :------: | :-----------: |
 | Create training definition  | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Clone training definition  | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
-| Create level  | CREATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
 | Find training definition by ID  | READ | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Find all training definitions | READ | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Find level by ID | READ | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Get designers | READ | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Get organizers | READ | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Get designers not in given training definition | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
-| Get beta testers | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green }| :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Get authors | READ | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Find all training definitions for  organizers | READ |  :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } |
-| Update training definition | UPDATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
-| Swap levels | UPDATE |  :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
-| Move level | UPDATE |  :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
-| Update multiple levels | UPDATE |  :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
-| Update training level | UPDATE |  :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
-| Update info level | UPDATE |  :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
-| Update assessment level | UPDATE |  :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
+| Update training definition and its levels | UPDATE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
 | Edit authors | UPDATE |  :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Switch state | UPDATE |  :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } | :material-check-bold:{: .icon .green } |
 | Delete training definition | DELETE |  :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
-| Delete one level | DELETE | :material-close-thick:{: .icon .red } | :material-close-thick:{: .icon .red } | :material-check-bold:{: .icon .green } :material-hexagram:{: .green } | :material-check-bold:{: .icon .green } |
 
 
 #### Linear Training Instances Endpoints
