@@ -3,7 +3,9 @@ CyberRangeCZ Platform requires several OpenStack resources and components, that 
 
 ## OpenStack Version
 
-CyberRangeCZ Platform is tested with Open Stack releases from Train to Yoga, but it is possible it will also work on newer releases.
+CyberRangeCZ Platform is deployed and tested with OpenStack 2025.1 (Epoxy), the release the [CRCZP lite deployment](https://github.com/cyberrangecz/devops-crczp-lite) installs by default. OpenStack 2025.2 (Flamingo) has been reported to work as well.
+
+Older releases, from Train to Yoga, were tested in the past. Newer releases are likely to work too.
 
 ## OpenStack Services
 CyberRangeCZ Platform requires the following OpenStack services:
